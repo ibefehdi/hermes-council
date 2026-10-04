@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 # Usage: ~/council/run-council.sh ["optional extra focus for this run"]
+[ -n "${ZSH_VERSION:-}" ] || exec zsh "$0" "$@"
 set -euo pipefail
 
 DIR="${0:A:h}"

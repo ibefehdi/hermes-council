@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 # Idempotent: safe to re-run after pulling changes or editing council.conf.
+[ -n "${ZSH_VERSION:-}" ] || exec zsh "$0" "$@"
 set -euo pipefail
 
 DIR="${0:A:h}"
