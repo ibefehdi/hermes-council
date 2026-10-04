@@ -39,6 +39,7 @@ hermes kanban swarm "$GOAL" \
   --synthesizer chair
 
 hermes config set kanban.dispatch_interval_seconds 15 >/dev/null
+hermes config set kanban.failure_limit 4 >/dev/null
 if ! hermes gateway status 2>&1 | grep -q "is running"; then
   nohup hermes gateway run > "$DIR/gateway.log" 2>&1 &
   sleep 10
