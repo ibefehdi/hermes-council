@@ -4,7 +4,9 @@
 #   ./run-council.sh deep ["optional focus"]   deep technical pass on top of the survey -> output/TECHNICAL_REPORT.md
 #   ./run-council.sh plan ["optional focus"]   design council: phase plan, decisions, conventions, Cursor/Claude skills -> output/plan/
 #   ./run-council.sh review ["optional focus"] adversarial cross-review of the plan, then the chair applies accepted fixes
-#                                               (waits for an unfinished plan chair automatically)
+#   ./run-council.sh final ["optional focus"]  last pass: one self-contained output/plan/PLAN.md (phases and subphases, UML,
+#                                               reasoning, Fresha parity, extra features)
+#                                               (review and final wait for an unfinished plan chair automatically)
 [ -n "${ZSH_VERSION:-}" ] || exec zsh "$0" "$@"
 set -euo pipefail
 
@@ -12,13 +14,14 @@ DIR="${0:A:h}"
 cd "$DIR"
 
 MODE=survey
-if [[ ${1:-} == (deep|plan|review) ]]; then
+if [[ ${1:-} == (deep|plan|review|final) ]]; then
   MODE=$1
   shift
 fi
 FOCUS="${1:-Cover the entire dashboard.}"
 [[ $MODE == plan && -z ${1:-} ]] && FOCUS="Plan the full product, MVP first."
 [[ $MODE == review && -z ${1:-} ]] && FOCUS="Leave nothing missed and no wrong decision standing."
+[[ $MODE == final && -z ${1:-} ]] && FOCUS="One document a team can build the whole product from."
 OUT="$DIR/output"
 TS=$(date +%Y%m%d-%H%M%S)
 
@@ -46,8 +49,8 @@ if [[ $MODE == plan && ! -f "$OUT/TECHNICAL_REPORT.md" ]]; then
 fi
 
 PARENTS=()
-if [[ $MODE == review ]]; then
-  [[ -f "$OUT/plan/briefs/chair.md" ]] || { print "Review mode needs a plan run. Run ./run-council.sh plan first."; exit 1; }
+if [[ $MODE == (review|final) ]]; then
+  [[ -f "$OUT/plan/briefs/chair.md" ]] || { print "$MODE mode needs a plan run. Run ./run-council.sh plan first."; exit 1; }
   # A plan chair that is still working becomes a dependency, so the review starts once it finishes.
   PARENTS=(${=$(hermes kanban list --assignee chair --json | python3 -c "
 import json, sys
@@ -59,7 +62,7 @@ print(' '.join(t['id'] for t in json.load(sys.stdin)
   fi
 fi
 
-if [[ $MODE != (plan|review) ]] && ! node "$DIR/login.mjs" --check; then
+if [[ $MODE != (plan|review|final) ]] && ! node "$DIR/login.mjs" --check; then
   print "A browser window will open: log in (enter your OTP). The session is saved automatically."
   node "$DIR/login.mjs"
 fi
@@ -124,6 +127,28 @@ elif [[ $MODE == review ]]; then
     --worker "linker:Decisions and conventions audit - follow briefs $B/common.md and $B/decisions-audit.md"
     --worker "cartographer:Implementation plan and skills audit - follow briefs $B/common.md and $B/plan-skills-audit.md"
   )
+elif [[ $MODE == final ]]; then
+  P="$OUT/plan"
+  F="$P/final"
+  if [[ -d "$F" ]]; then
+    mkdir -p "runs/$TS-before-final"
+    cp -R "$P/." "runs/$TS-before-final/"
+    mv "$F" "runs/$TS-before-final/final-previous"
+  fi
+  B="$F/briefs"
+  mkdir -p "$B" "$F/drafts" "$F/parts"
+  for f in briefs/final/*.md; do
+    sed "s|{{COUNCIL_DIR}}|$DIR|g" "$f" > "$B/${f:t}"
+  done
+
+  REPORT="$P/PLAN.md"
+  GOAL="Final round for the multi-tenant spa/salon SaaS plan in $P: go over the revised plan once more and produce one self-contained PLAN.md with phases and subphases, UML diagrams, the reasoning behind every decision, the council's findings, the Fresha parity matrix, and extra features beyond Fresha. Every member reads $B/common.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md. $FOCUS Final deliverable: $REPORT."
+  WORKERS=(
+    --worker "cartographer:Fresha parity, extra features and user journeys - follow briefs $B/common.md and $B/parity.md"
+    --worker "linker:Architecture and UML diagrams - follow briefs $B/common.md and $B/architecture-uml.md"
+    --worker "cartographer:Decisions reasoning, council findings and a final independent pass - follow briefs $B/common.md and $B/reasoning.md"
+    --worker "linker:Phases and subphases with backlog, dependencies and timeline - follow briefs $B/common.md and $B/phases.md"
+  )
 else
   mkdir -p "runs/$TS-before-deep"
   cp -R output/. "runs/$TS-before-deep/"
@@ -153,7 +178,7 @@ else
 fi
 
 hermes kanban init >/dev/null
-if [[ $MODE != (deep|review) ]] || [[ $MODE == review && ${#PARENTS} -eq 0 ]]; then
+if [[ $MODE != (deep|review|final) ]] || [[ $MODE == (review|final) && ${#PARENTS} -eq 0 ]]; then
   hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier verifier --synthesizer chair
 else
   # Workers depend on PARENTS (deep: a seed-data task; review: the unfinished plan chair).

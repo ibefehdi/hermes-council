@@ -70,6 +70,14 @@ The council turns the reverse-engineering reports into a clean-room plan for a m
 
 An adversarial cross-review of the plan. Each reviewer audits work it didn't write: the linker checks feature coverage against the reverse-engineering reports, the requirements (including a simulated week at a multi-branch spa), the frontend, and every decision; the cartographer checks the data model, SQL, tenant isolation, booking integrity, money handling, the Edge Functions design, the implementation plan and the skills. Findings go to `output/plan/review2/`, the verifier accepts or rejects each one in `adjudication.md`, and the chair applies the accepted fixes in place and logs every change in `output/plan/REVISION_LOG.md`. Round 1 versions are kept in `output/plan/round1/`. If the plan's chair is still working, the review waits for it automatically.
 
+### Final plan
+
+```sh
+./run-council.sh final
+```
+
+The council goes over the revised plan one last time and produces a single self-contained `output/plan/PLAN.md`. Four drafts are written in parallel: the Fresha parity matrix, extra features beyond Fresha and user journeys per role; architecture and UML diagrams (C4, class, ER, sequence, state, security); the reasoning behind every decision plus the council's findings across all rounds and a fresh independent pass; and every phase broken into subphases with backlog tasks, dependencies and a gantt chart. The verifier cross-checks the drafts against each other, the revised plan and the Fresha evidence, and the chair assembles `PLAN.md` section by section, keeping `decisions.md`, `CONVENTIONS.md` and the skills consistent with it. If the review's chair is still working, this waits for it automatically.
+
 To use the skills, copy both trees into the app repo: `cp -R output/plan/skills/.cursor output/plan/skills/.claude /path/to/app/`. Visual design is left to your own design skill.
 
 ## Safety
