@@ -2,9 +2,7 @@
 
 This plan follows `decisions.md` (ADR references inline) and `CONVENTIONS.md`. It is phase-based: Phase 0 foundation, Phases 1–7 the MVP in dependency order, Phase 8 SpaCorner go-live, Phases 9+ post-MVP toward a sellable multi-tenant product.
 
-**Team assumption for all estimates**: 3 engineers (2 full-stack, 1 frontend-leaning), a part-time QA engineer from Phase 5, the owner as product/design decision-maker, and the Airbnb design skill as the visual source. Estimates are in engineer-weeks (ew) at productive pace including code review and tests. MVP total effort: **72 ew**. The schedule commitment (round 2, F-PLAN-13): the gantt critical path is **22 calendar weeks**; with the ~20% calendar buffer for meetings, onboarding, and unknowns, plan on **~27 weeks (~6.5 months)**. (The naive 72 ew ÷ 3 = 24 weeks assumes perfect parallelism across all phases; the critical path, not the effort ratio, is the binding number.) Post-MVP phases assume the same team unless noted.
-
-**Phase numbering (round 2, F-PLAN-3/F-3)**: this document's Phases 0–17 are the canonical numbering for the whole corpus. The former release-bucket scheme maps as: release "Phase 2" (online presence) = plan Phases 9–11; release "Phase 3" (growth) = plan Phases 12–17.
+**Team assumption for all estimates**: 3 engineers (2 full-stack, 1 frontend-leaning), a part-time QA engineer from Phase 5, the owner as product/design decision-maker, and the Airbnb design skill as the visual source. Estimates are in engineer-weeks (ew) at productive pace including code review and tests; add ~20% calendar buffer for meetings, onboarding, and unknowns. MVP total: **72 ew ≈ 24 calendar weeks (~6 months)** with this team. Post-MVP phases assume the same team unless noted.
 
 ## Phase overview
 
@@ -50,7 +48,6 @@ flowchart LR
   P9 --> P10["Phase 10 Online payments"]
   P10 --> P11["Phase 11 Client depth"]
   P8 --> P12["Phase 12 Marketing & loyalty"]
-  P9 --> P12
   P8 --> P13["Phase 13 Retail & inventory"]
   P13 --> P14["Phase 14 Packages & memberships"]
   P10 --> P14
@@ -82,15 +79,15 @@ gantt
   Phase 9 Online booking        :p9, after p8, 4w
   Phase 10 Online payments      :p10, after p9, 4w
   Phase 11 Client depth         :p11, after p10, 3w
-  Phase 12 Marketing & loyalty  :p12, after p9, 4w
-  Phase 13 Retail & inventory   :p13, after p8, 4w
+  Phase 12 Marketing & loyalty  :p12, after p8, 4w
+  Phase 13 Retail & inventory   :p13, after p12, 4w
   Phase 14 Packages & members   :p14, after p13 p10, 4w
   Phase 15 Resources & groups   :p15, after p8, 3w
-  Phase 16 Timesheets & payroll :p16, after p8, 3w
+  Phase 16 Timesheets & payroll :p16, after p15, 3w
   Phase 17 SaaS self-serve      :p17, after p8, 3w
 ```
 
-Note: post-MVP phases 12–17 assume sequencing by a team that has grown beyond 3 engineers; with the MVP team alone they serialize after Phase 11 in the listed order. Round 2 (F-PLAN-5): the diagram and the gantt now agree — marketing (12) depends on notifications (Phase 9), retail (13) depends on go-live data (Phase 8) and can run parallel to marketing, and payroll (16) depends on Phases 2/6/8, not on resources (15). Post-MVP phases are decision-level only; their per-task backlogs are produced at scheduling time (round-2 ruling, F-PLAN-17; decisions.md conventions block).
+Note: post-MVP phases 12–17 assume sequencing by a team that has grown beyond 3 engineers; with the MVP team alone they serialize after Phase 11 in the listed order.
 
 ---
 
@@ -103,16 +100,16 @@ Note: post-MVP phases 12–17 assume sequencing by a team that has grown beyond 
 **Scope**
 - pnpm monorepo scaffold (ADR-36): `apps/back-office`, `apps/booking` (empty scaffold), six packages, `supabase/`.
 - Supabase projects: `dev` (local via CLI), `staging`, `production`; preview branches wired (backend §6.2). Paid plan for production (wall-clock limits, ADR-27).
-- CI/CD: `ci.yml` (typecheck Deno + TS, lint, `supabase db lint`, pgTAP via `supabase test db`, Deno tests, Vitest, build, size-limit, generated-types drift check) and `deploy.yml` (migrations then functions `--use-api`, frontend build/deploy from the same commit). Round 2 (F-verifier-2): CI carries a **clean-migration acceptance gate** — apply the full active migration set to an empty database on the pinned CLI (`supabase db reset`), `supabase gen types` (drift fails), typecheck/build every function, `supabase test db`, and run the adversarial fixture suite (cross-tenant/cross-branch/money/booking negatives); the gate fails if anything under `sql/drafts-v1/` is referenced by the active migration path.
+- CI/CD: `ci.yml` (typecheck Deno + TS, lint, `supabase db lint`, pgTAP via `supabase test db`, Deno tests, Vitest, build, size-limit, generated-types drift check) and `deploy.yml` (migrations then functions `--use-api`, frontend build/deploy from the same commit).
 - Auth: Supabase email+password sign-in, session persistence, `onAuthStateChange`, password reset; login screen; route guards skeleton (UX only, ADR-42).
-- Tenancy/RLS skeleton: migrations for `tenants, profiles, memberships, settings, currencies, audit_log, idempotency_keys`; helper functions `current_tenant_ids()`, `current_branch_scope()`, `has_tenant_role()` (explicit branch parameter, no default) and `has_tenant_role_any_branch()` (ADR-19, ADR-20 rule 4 round 2); the four-policy pattern + branch-scoped pattern (ADR-20); the all-branches representation (`branch_id NULL` + `all_branches` flag + partial unique indexes — ADR-20 rule 6 round 2; the sentinel UUID is withdrawn); audit trigger machinery (ADR-22); pgTAP harness with role-switching fixtures (this is the security regression harness every later phase extends).
+- Tenancy/RLS skeleton: migrations for `tenants, profiles, memberships, settings, currencies, audit_log, idempotency_keys`; helper functions `current_tenant_ids()`, `current_branch_scope()`, `has_tenant_role()` (ADR-19); the four-policy pattern + branch-scoped pattern (ADR-20); sentinel branch UUID convention; audit trigger machinery (ADR-22); pgTAP harness with role-switching fixtures (this is the security regression harness every later phase extends).
 - Edge Function skeleton: `_shared/` (our own thin server wrapper per ADR-35, errors/envelope per ADR-29, logging, cors, idempotency per ADR-31), a `ping`-style health route in every future function's template, Sentry wiring, structured logs.
 - i18n/RTL baseline: Lingui setup, `en`/`ar` catalogs, `I18nProvider` setting `dir`/`lang`, stylelint logical-properties rule, `useFormat()` with money (minor units + currency exponent) and branch-tz date helpers (ADR-40).
 - Design-skill integration: `packages/ui` wrapping the Airbnb design skill primitives (Button, Field, Drawer, DataTable, AsyncBoundary, Toast); token import boundary enforced by lint.
 - Observability: Sentry (frontend + Deno), external uptime monitor pinging `/health`, log-drain decision recorded.
 - **schedule-x spike (ADR-41 go/no-go)**: one week, timeboxed — premium resource scheduler evaluated against NFR-4 render budget, keyboard operation, RTL mirroring, ≥8 staff columns. Outcome recorded by updating ADR-41; fallback path scoped if no-go.
 
-**Database work**: migrations `000001` extensions (`btree_gist`, `pgcrypto`, `pg_trgm` plain; `pg_cron` via `CREATE EXTENSION pg_cron WITH SCHEMA pg_catalog;` plus the cron-schema grants per the official install doc; `pgmq` per the Supabase Queues doc — round 2, F-DB-10) → core tenancy tables listed above, all with RLS per ADR-20; `profiles` trigger on `auth.users`; audit triggers on `memberships`/`settings`; pgTAP suite v1 (tenant isolation, all-branches representation, explicit-branch role helper — manager of branch A fails the check for branch B, cross-tenant composite-FK attack inserts, profiles self-only, tenants no-direct-insert, revocation-immediate test). Every `SECURITY DEFINER` helper sets `search_path` (ADR-20 rule 10).
+**Database work**: migrations `000001` extensions (`btree_gist`, `pgcrypto`, `pg_trgm`, `pg_cron`, `pgmq`) → core tenancy tables listed above, all with RLS per ADR-20; `profiles` trigger on `auth.users`; audit triggers on `memberships`/`settings`; pgTAP suite v1 (tenant isolation, branch sentinel, role helper, profiles self-only, tenants no-direct-insert, revocation-immediate test).
 
 **Edge Functions**: `onboarding` (skeleton: platform-admin service-role tenant provisioning path, ADR-20 rule 3) — full features land in Phase 1.
 
@@ -122,7 +119,6 @@ Note: post-MVP phases 12–17 assume sequencing by a team that has grown beyond 
 - A user with a membership can log in and see the shell in EN and AR with correct `dir`; with no membership they see a "no access" state.
 - pgTAP suite proves: cross-tenant reads empty; `profiles` not world-readable; `tenants` not insertable by `authenticated`; revoking a membership cuts access immediately (no token refresh).
 - CI is green on a trivial PR touching both a function and a component; deploy pipeline promotes `staging` → `production` with functions and migrations.
-- The clean-migration gate passes end to end from an empty database on the pinned CLI (reset → migrate → gen types → functions build → `supabase test db` → adversarial fixtures), and fails on any `sql/drafts-v1/` reference (round 2, F-verifier-2).
 - Money helper formats 12500 minor units as `KWD 12.500` (en) and the AR equivalent; date helper renders a UTC timestamp in `Asia/Kuwait`.
 - Spike verdict recorded in ADR-41 with evidence (screenshots, perf trace).
 
@@ -136,21 +132,19 @@ Note: post-MVP phases 12–17 assume sequencing by a team that has grown beyond 
 
 Epic 0.1 Repository & environments (Ops)
 - [Ops] Init pnpm monorepo, workspace graph, `pnpm verify` script
-- [Ops] Supabase projects (staging/production) + preview branches; pin CLI version; production region per ADR-48 with the legal verification gate tracked for Phase 8
+- [Ops] Supabase projects (staging/production) + preview branches; pin CLI version
 - [Ops] `ci.yml`: typecheck/lint/unit/build/size-limit/gen-types drift
-- [Ops] `ci.yml` clean-migration acceptance gate: `supabase db reset` on pinned CLI → `supabase gen types` drift → functions typecheck/build → `supabase test db` → adversarial fixture suite; fails on any `sql/drafts-v1/` reference (F-verifier-2)
 - [Ops] `deploy.yml`: migrations, functions (`--use-api`), frontend, same-commit rule
 - [Ops] Sentry + uptime monitor + log drain wiring
 - [Ops] Secrets bootstrap (`supabase secrets set`) and naming per CONVENTIONS §3.3
 
 Epic 0.2 Tenancy & security skeleton (DB)
-- [DB] Migration: extensions (`pg_cron` in the hosted `WITH SCHEMA pg_catalog` + grants form, `pgmq` per Queues doc — F-DB-10)
-- [DB] Migration: `tenants`, `currencies`, `profiles` (+ trigger), `memberships` (nullable `branch_id` + `all_branches` flag, composite uniques — F-DB-1; role CHECK without `platform_admin` — F-DB-4)
-- [DB] Migration: helpers `current_tenant_ids`, `current_branch_scope`, `has_tenant_role` (explicit branch param, no default), `has_tenant_role_any_branch` — all `SET search_path = public` (F-DB-2, F-DB-13)
-- [DB] Migration: `settings` (partial unique index for tenant-wide rows `WHERE branch_id IS NULL`), `audit_log` + trigger machinery + revoked DML
+- [DB] Migration: extensions
+- [DB] Migration: `tenants`, `currencies`, `profiles` (+ trigger), `memberships` (sentinel branch, composite uniques)
+- [DB] Migration: helpers `current_tenant_ids`, `current_branch_scope`, `has_tenant_role` (+ branch param)
+- [DB] Migration: `settings` (sentinel branch unique), `audit_log` + trigger machinery + revoked DML
 - [DB] Migration: `idempotency_keys`
-- [DB] Composite `(id, tenant_id)` uniques on tenant-owned parents + composite child FKs per ADR-20 rule 5 enumeration (F-DB-3)
-- [DB] pgTAP harness: role fixtures + suite v1 (isolation, profiles, tenants, revocation, all-branches representation, branch-A manager fails branch-B role check, cross-tenant FK attack inserts fail)
+- [DB] pgTAP harness: role fixtures + suite v1 (isolation, profiles, tenants, revocation)
 - [DB] RLS policy template docs in `supabase-database` skill validated against real migrations
 
 Epic 0.3 Edge Function platform (Edge Function)
@@ -178,14 +172,14 @@ Epic 0.5 Calendar library spike (Frontend)
 **Scope**
 - Platform onboarding flow: `onboarding` function provisions tenant + owner user + default branch + currency + plan row + seeded defaults (cancellation reasons, block types) — service role, platform-admin-only, audit-logged (ADR-20 rule 3, ADR-18).
 - Tenant settings: business details, currency lock after first sale (US-ON-2), default language.
-- Branch CRUD: create/archive (never delete with history, invariant §2.5.4), address/phone/timezone, opening hours per weekday incl. overnight + split intervals (ADR-26), closed periods, invoice prefix + starting number (ADR-14), receipt header/footer EN+AR, tip defaults, checkout-method enablement (ADR-34), calendar defaults — first day of week (default Saturday for Arabic-first tenants), time format 12/24 (default 24), slot step 5/10/15/30 (default 15) (ADR-52, round 2 F-cov-7/F-PLAN-12).
+- Branch CRUD: create/archive (never delete with history, invariant §2.5.4), address/phone/timezone, opening hours per weekday incl. overnight + split intervals (ADR-26), closed periods, invoice prefix + starting number (ADR-14), receipt header/footer EN+AR, tip defaults, checkout-method enablement (ADR-34).
 - Roles & memberships UI: owner assigns roles with branch scope (US-T-4); membership changes take effect immediately (ADR-19); all changes audited (ADR-22).
 - Cancellation reasons and blocked-time types management (bilingual, ADR-16).
 - Setup checklist landing for new owners (US-ON-1).
 
-**Database work**: migrations for `branches` (bilingual names, `invoice_prefix`, timezone, `first_day_of_week`, `time_format`, `slot_step_minutes` — ADR-52), `branch_opening_hours` (overnight/split per ADR-26), `closed_periods`, `cancellation_reasons`, `blocked_time_types`, `invoice_counters`, `plan_features` + `tenants.plan`; RLS per ADR-20 (branches: owner-write; settings: role-gated); branch-scoped policies on hours/closures; audit triggers on all settings tables; pgTAP suite extension (role matrix rows for settings, branch manager cannot touch tenant settings, receptionist cannot write settings).
+**Database work**: migrations for `branches` (bilingual names, `invoice_prefix`, timezone), `branch_opening_hours` (overnight/split per ADR-26), `closed_periods`, `cancellation_reasons`, `blocked_time_types`, `invoice_counters`, `plan_features` + `tenants.plan`; RLS per ADR-20 (branches: owner-write; settings: role-gated); branch-scoped policies on hours/closures; audit triggers on all settings tables; pgTAP suite extension (role matrix rows for settings, branch manager cannot touch tenant settings, receptionist cannot write settings).
 
-**Edge Functions**: `onboarding` (provision tenant, provision branch, seed defaults). Settings mutations stay single-table and role-gated and go direct per the ADR-28 allowlist; provisioning and transactional multi-table changes (branch + hours + counter + seeds, invites) go through `onboarding`. (Round 2, F-PLAN-14: this replaces the round-1 drafting prose.)
+**Edge Functions**: `onboarding` (provision tenant, provision branch, seed defaults); `settings` actions live in `catalogue`/`staff`? No — settings mutations that are single-table and role-gated go direct (ADR-28 allowlist); provisioning and anything transactional (branch + hours + counter + seeds) go through `onboarding`.
 
 **Frontend screens**: setup checklist; tenant settings; branches list + branch editor (tabs: details, hours, closures, invoicing, receipt, tips & methods); members & roles screen; reasons/block-types editors; branch switcher fully wired (persist default branch).
 
@@ -193,7 +187,7 @@ Epic 0.5 Calendar library spike (Frontend)
 - Platform ops script provisions SpaCorner: owner logs in, sees checklist, creates a second branch with overnight hours (e.g. 18:00→02:00) and a split-interval day, both render correctly in branch-local time.
 - A branch manager sees only their branches in the switcher and cannot read tenant settings (pgTAP + UI); a receptionist cannot write any settings.
 - Archiving a branch hides it from operations and keeps its rows (invariant 4).
-- Changing currency is blocked in the UI once any sale exists (predicate unit-tested here); the DB enforcement trigger ships with `sales` in Phase 6 (Epic 6.1) — one cross-phase acceptance reference, round 2 F-PLAN-4.
+- Changing currency is blocked once any sale exists (test with seeded sale in staging).
 - Role change is effective on the target user's next request without re-login (ADR-19 test).
 - All of the above work in EN and AR/RTL.
 
@@ -214,7 +208,6 @@ Epic 1.1 Provisioning (DB + Edge Function + Ops)
 
 Epic 1.2 Settings hub (DB + Frontend)
 - [DB] Migration: `cancellation_reasons`, `blocked_time_types` (bilingual, RLS, audit)
-- [DB/Frontend] Branch calendar defaults: `first_day_of_week`, `time_format`, `slot_step_minutes` fields + branch-editor UI (US-CAL-3, ADR-52 — consumed by the Phase 5 slot engine and calendar/shift-grid locale options)
 - [Frontend] Tenant settings screen (business details, currency lock, default language)
 - [Frontend] Branch editor: details / hours (overnight + split UI) / closures
 - [Frontend] Branch editor: invoicing, receipt text EN+AR, tips, checkout methods
@@ -223,11 +216,9 @@ Epic 1.2 Settings hub (DB + Frontend)
 
 Epic 1.3 Roles & memberships (DB + Frontend)
 - [DB] pgTAP: settings/branches matrix rows; immediate-revocation extension
-- [DB] pgTAP: role-grant rules — manager cannot grant owner/manager; nobody can set `platform_admin` (it is not in the enum); owner-only owner grants; all grants audited (ADR-20 rule 9, F-DB-4)
 - [Frontend] Members & roles screen (assign role + branch scope, invite user flow)
 - [Frontend] Branch/tenant switcher final behavior (locked states, persistence)
 - [Edge Function] Invite flow: create auth user + membership atomically (staff function or onboarding — decided: `onboarding/invite-user`)
-- [Edge Function] Role-grant enforcement in `onboarding`/`staff` membership mutations (granter-role checks per ADR-20 rule 9)
 
 ## Phase 2: Staff & shifts (7 ew)
 
@@ -236,12 +227,12 @@ Epic 1.3 Roles & memberships (DB + Frontend)
 **Scope**
 - Staff CRUD: bilingual names, contact, job title, bookable flag, branch assignments with default-branch flag and per-branch bookable toggle (ADR-12); optional login (nullable `user_id`) with invitation when a login is wanted.
 - Shift grid: per branch, per week, per staff member; draw/edit/delete dated shift rows; copy-previous-week (ADR-26); overnight shifts.
-- Blocked time: block a staff member's time with a type from the configurable list; branch-scoped blocks and all-branches time off via the `all_branches` representation (ADR-20 rule 6, ADR-26). Creation rights per requirements §3 (round 2, F-DB-6/F-PLAN-18): receptionist and manager create own-branch blocks; staff request time off and a manager approves (creates it); all-branches blocks are manager+. Every write goes through the locked `staff`/blocked-time RPC (advisory lock + cross-entity appointment check, ADR-24) — `blocked_times` is not a direct-write table.
+- Blocked time: block a staff member's time with a type from the configurable list; branch-scoped blocks and all-branches time off via sentinel (ADR-26); manager-created in MVP (requirements §3).
 - Staff list/search per branch; "my day" data endpoints for staff logins (own assignments across branches, labelled).
 
-**Database work**: `staff_members` (nullable `user_id`, bilingual names, search normalization column ADR-40, partial unique `(tenant_id, user_id) WHERE user_id IS NOT NULL` — F-DB-9), `staff_branch_assignments` (composite FKs, ADR-20 rule 5), `shifts` (dated timestamptz rows), `blocked_times` (+ exclusion constraint on `(staff_id, blocked_range)` per ADR-24, `btree_gist`, `all_branches` representation); RLS: staff/assignments owner+manager(branch)-write, receptionist read (branch), staff self-read; shifts manager-write branch-scoped, receptionist read, staff self-read; blocked_times select-only under RLS with all mutations through the locked staff RPC (receptionist may create own-branch via the RPC, staff inserts denied, manager+ for all-branches); audit triggers; pgTAP matrix rows + cross-branch invisibility tests (manager A cannot read shifts/blocks of branch B) + blocked-time role rows.
+**Database work**: `staff_members` (nullable `user_id`, bilingual names, search normalization column ADR-40), `staff_branch_assignments` (composite FKs, ADR-20 rule 5), `shifts` (dated timestamptz rows), `blocked_times` (+ exclusion constraint on `(staff_id, blocked_range)` per ADR-24, `btree_gist`); RLS: staff/assignments owner+manager(branch)-write, receptionist read (branch), staff self-read; shifts manager-write branch-scoped, receptionist read, staff self-read; blocked_times per allowlist direct-write (own branch, constraint-protected) + manager writes; audit triggers; pgTAP matrix rows + cross-branch invisibility tests (manager A cannot read shifts/blocks of branch B).
 
-**Edge Functions**: `staff` function: create/update staff with assignments (transactional), invite-login (create auth user + link + membership), bulk shift-week materialization (copy-previous-week), blocked-time RPC (locked: advisory lock → check appointments + blocks → insert/move/delete), staff import stub (CSV via queue, reused in Phase 4 pattern; the full import software is built in Epic 8.0 — round 2, F-PLAN-6).
+**Edge Functions**: `staff` function: create/update staff with assignments (transactional), invite-login (create auth user + link + membership), bulk shift-week materialization (copy-previous-week), staff import stub (CSV via queue, reused in Phase 4 pattern).
 
 **Frontend screens**: staff list (branch filter), staff editor (details, assignments, login), shift grid (week view per branch, drag-to-draw, copy week), blocked-time editor (calendar-less form + type picker), my-day view for staff logins.
 
@@ -249,7 +240,7 @@ Epic 1.3 Roles & memberships (DB + Frontend)
 - A staff member assigned to two branches appears in both branches' staff lists and both shift grids; a branch manager of A cannot see branch B's shifts (pgTAP + UI).
 - Non-login staff can be created and scheduled; login staff get an invitation and can sign in to see only their own day across their branches.
 - Copy-previous-week materializes dated rows correctly across an overnight shift and a DST-free Kuwait week (plus a synthetic DST-zone branch test, ADR-45).
-- Blocked time with a type is created and shows in the (upcoming) calendar data endpoint; overlapping blocks for one staff member are rejected by the exclusion constraint (concurrency test); a block overlapping an existing appointment is rejected by the locked RPC's cross-entity check (test, F-DB-6).
+- Blocked time with a type is created and shows in the (upcoming) calendar data endpoint; overlapping blocks for one staff member are rejected by the exclusion constraint (concurrency test).
 - Arabic staff names are searchable with normalization (alef variants, diacritics).
 
 **Test plan**: pgTAP matrix + cross-branch; Deno tests for shift materialization and invite; Vitest for shift-grid mappers (week ↔ rows, overnight); Playwright staff CRUD + shift drawing in both locales; concurrency test on blocked_times exclusion.
@@ -261,7 +252,7 @@ Epic 1.3 Roles & memberships (DB + Frontend)
 **Backlog**
 
 Epic 2.1 Staff records (DB + Edge Function + Frontend)
-- [DB] Migration: `staff_members` (+ partial unique `(tenant_id, user_id) WHERE user_id IS NOT NULL`, F-DB-9), `staff_branch_assignments` (composite FKs, search normalization, RLS, audit)
+- [DB] Migration: `staff_members`, `staff_branch_assignments` (composite FKs, search normalization, RLS, audit)
 - [Edge Function] `staff/upsert` (staff + assignments transactional)
 - [Edge Function] `staff/invite-login` (auth user + link + membership)
 - [Frontend] Staff list + editor screens
@@ -274,11 +265,9 @@ Epic 2.2 Shifts (DB + Edge Function + Frontend)
 - [Frontend] Copy-previous-week action
 
 Epic 2.3 Blocked time (DB + Frontend)
-- [DB] Migration: `blocked_times` + exclusion constraint + `all_branches` representation for all-branches time off (F-DB-1)
-- [DB] Locked blocked-time RPC (advisory lock + cross-entity appointment check, ADR-24/26) — all writes route through it (F-DB-6)
-- [DB] Concurrency pgTAP: overlapping blocks rejected; block over an existing appointment rejected
-- [DB] pgTAP role rows: receptionist own-branch create allowed (via RPC), staff direct insert denied, manager+ all-branches allowed (F-PLAN-18)
-- [Frontend] Block-time form + list (per staff, per branch) calling the staff/blocked-time RPC — no direct writes
+- [DB] Migration: `blocked_times` + exclusion constraint + sentinel branch for all-branches time off
+- [DB] Concurrency pgTAP: overlapping blocks rejected
+- [Frontend] Block-time form + list (per staff, per branch)
 
 ## Phase 3: Service catalogue (6 ew)
 
@@ -333,12 +322,12 @@ Epic 3.3 Catalogue UI (Frontend)
 
 **Scope**
 - Client CRUD with duplicate warning on create (tenant-wide name/phone/email match; proceed-and-record choice, ADR-9); `merged_into` column present but merge tool is Phase 11.
-- Profile: contact, birthday, gender, preferred language, tags, notes (timestamped, author), allergies/alerts with visible flagging contract for the appointment drawer (Phase 5 consumes it), block/unblock (manager, audited, routed through the `clients` function — `is_blocked`/`is_deleted`/`merged_into` are not direct-write columns, F-4), cross-branch visit history placeholder — real data is wired by named tasks: Epic 5.3 (appointment history + no-show count) and Epic 6.4 (sales history), round 2 F-PLAN-7.
+- Profile: contact, birthday, gender, preferred language, tags, notes (timestamped, author), allergies/alerts with visible flagging contract for the appointment drawer (Phase 5 consumes it), block/unblock (manager, audited), cross-branch visit history placeholder wired to real data in Phases 5–7.
 - Search: tenant-wide, EN+AR normalization, partial phone (ADR-40); global search entry point (narrow MVP scope: clients here, appointments/sales added in their phases).
-- CSV import (US-CL-7): template download, dry-run validation report (row + reason), duplicate policy choice (skip/merge-later-mark/create), queued processing via pgmq (ADR-33), audit-logged, owner-run (owner-only permission — round 2, F-perm-3; template gains an optional `source` column, ADR-52).
+- CSV import (US-CL-7): template download, dry-run validation report (row + reason), duplicate policy choice (skip/merge-later-mark/create), queued processing via pgmq (ADR-33), audit-logged, owner-run.
 - Privacy groundwork: anonymize-on-request procedure defined (NFR-11) — implemented as an RPC that replaces personal fields, keeps financial rows.
 
-**Database work**: `clients` (bilingual name columns + `*_alt`, `merged_into`, `is_blocked`, `is_deleted`, `source` nullable with import defaults — ADR-52/F-cov-8, tags jsonb, normalized `search_text` generated column + GIN/trigram index), `client_notes`; partial unique indexes (ADR-46); RLS: tenant-wide read for client-facing roles per matrix, financial aggregates NOT on this table (ADR-11); notes direct-write per allowlist (receptionist+); audit triggers (client + notes); pgTAP: staff role reads only basic fields (name, phone, allergy flags) through a column-restricted secured view limited to clients with appointments at their assigned branches, and has no client/notes writes (ADR-11 round 2, F-perm-2); receptionist full tenant read; cross-tenant empty.
+**Database work**: `clients` (bilingual name columns + `*_alt`, `merged_into`, `is_blocked`, `is_deleted`, tags jsonb, normalized `search_text` generated column + GIN/trigram index), `client_notes`; partial unique indexes (ADR-46); RLS: tenant-wide read for client-facing roles per matrix, financial aggregates NOT on this table (ADR-11); notes direct-write per allowlist; audit triggers (client + notes); pgTAP: staff role sees only basic profile fields policy (column grants or view), receptionist full tenant read, cross-tenant empty.
 
 **Edge Functions**: `clients` function: duplicate-check RPC/action, block/unblock (audit + role), CSV import (queue producer + consumer, idempotent per batch), anonymize RPC.
 
@@ -360,10 +349,9 @@ Epic 3.3 Catalogue UI (Frontend)
 **Backlog**
 
 Epic 4.1 Client data (DB)
-- [DB] Migration: `clients` (+ `merged_into`, `source`, normalization column/index, partial uniques, RLS, audit)
-- [DB] Migration: `client_notes` (allowlist direct-write for receptionist+, RLS, audit)
-- [DB] Column-restricted staff client view (basic fields, own-branch-appointment clients only) + pgTAP (F-perm-2)
-- [DB] Anonymize RPC (NFR-11; reused by the ADR-50 offboarding contract)
+- [DB] Migration: `clients` (+ `merged_into`, normalization column/index, partial uniques, RLS, audit)
+- [DB] Migration: `client_notes` (allowlist direct-write, RLS, audit)
+- [DB] Anonymize RPC (NFR-11)
 - [DB] pgTAP: role/column visibility, cross-tenant
 
 Epic 4.2 Client function (Edge Function)
@@ -384,14 +372,14 @@ Epic 4.3 Client UI (Frontend)
 **Goal**: the heart of the product: the slot engine, the race-free conflict engine, the appointment lifecycle, and the calendar UI with realtime (US-CAL-1..11). The highest-risk phase; sized with 30% contingency inside the 14 ew.
 
 **Scope**
-- Slot engine: availability = opening hours ∩ shifts ∩ (duration + buffers) − appointments − blocked time − closed periods, in branch-local time, 5/10/15/30-min steps from the branch's `slot_step_minutes` (created in Phase 1, ADR-52; US-CAL-3); computed, never stored; ≤300ms p95 (NFR-4).
+- Slot engine: availability = opening hours ∩ shifts ∩ (duration + buffers) − appointments − blocked time − closed periods, in branch-local time, 5/10/15/30-min steps per branch config (US-CAL-3); computed, never stored; ≤300ms p95 (NFR-4).
 - Booking RPC + `bookings` function: create appointment (client or walk-in), multi-item visits with per-item staff and spans, sequential or parallel (ADR-23); resolved price/duration/buffer snapshots from `resolve_service` (ADR-13/25); soft-rule overrides (outside shift/hours) manager-confirmed and recorded in `booking_overrides` (US-CAL-9); blocked-client rejection (US-CL-8).
 - Conflict engine: exclusion constraints on `appointment_items.busy_range` + per-staff advisory locks in the transaction + pre-check for friendly `CONFLICT` errors (ADR-24); cross-branch by construction (constraint has no branch dimension).
 - Lifecycle: reschedule (same locked path), cancel with reason, mark no-show, status transitions with the legal-transition state machine (ADR-7); original times kept in audit history.
 - Calendar UI: day view (per-staff columns), week view, my-day; date navigation; staff/category filters; branch switcher driving everything; new-booking drawer (client picker with duplicate/walk-in paths, service pre-filtered by eligibility, slot picker); appointment drawer (items, statuses, allergies flag, notes, reschedule/cancel, later checkout hook); drag-to-reschedule with optimistic update + `CONFLICT` rollback (ADR-41).
 - Realtime: `postgres_changes` on appointments/items scoped to branch → cache patches (ADR-38); ≤5s staleness (NFR-5); channel-authorization tests.
 
-**Database work**: `appointments` (envelope, `ref_number` generated by the booking RPC from the per-branch appointments counter with `UNIQUE (branch_id, ref_number)` — ADR-14 round 2/F-DB-7, status enum with `in_progress`, branch-scoped RLS, audit trigger), `appointment_items` (staff, `effective_start/end`, generated `busy_range`, `status_active` flag for the partial exclusion, snapshots incl. bilingual service names, `created_at/updated_at`), `booking_overrides`; **no direct writes to any of them** (ADR-28) — RLS select-only for branch-scoped reads, all mutations via the locked RPC; booking RPC (`book_appointment`, `reschedule_appointment`, `cancel_appointment`, `set_appointment_status`) as `SECURITY DEFINER` with `SET search_path = public` (ADR-20 rule 10), internal scope verification + advisory locking + audit writes; indexes: items `(staff_id, effective_start)`, appointments `(tenant_id, branch_id, scheduled_start)`, status partials; pgTAP: branch isolation on reads, mutation paths denied direct, constraint behavior.
+**Database work**: `appointments` (envelope, `ref_number`, status enum with `in_progress`, branch-scoped RLS, audit trigger), `appointment_items` (staff, `effective_start/end`, generated `busy_range`, `status_active` flag for the partial exclusion, snapshots incl. bilingual service names, `created_at/updated_at`), `booking_overrides`; **no direct writes to any of them** (ADR-28) — RLS select-only for branch-scoped reads, all mutations via the locked RPC; booking RPC (`book_appointment`, `reschedule_appointment`, `cancel_appointment`, `set_appointment_status`) as `SECURITY DEFINER` with internal scope verification + advisory locking + audit writes; indexes: items `(staff_id, effective_start)`, appointments `(tenant_id, branch_id, scheduled_start)`, status partials; pgTAP: branch isolation on reads, mutation paths denied direct, constraint behavior.
 
 **Edge Functions**: `bookings`: `create`, `reschedule`, `cancel`, `no-show` (status action), `set-status`, `slots` (availability query for a staff/service/date window), `day`/`week` (calendar reads — may also be direct RLS reads; decision: direct reads for lists, function `slots` for computed availability).
 
@@ -402,14 +390,13 @@ Epic 4.3 Client UI (Frontend)
 - Cross-branch: staff booked 10:00–11:00 at branch A cannot be booked 10:30 at branch B (test); shift at branch A produces a soft warning for a branch B booking, overridable by a manager and recorded (US-CAL-9).
 - Buffers block adjacent slots correctly (service 60min + 15min after → next start ≥ +75min).
 - Multi-service visit: two items, different staff, sequential spans; each staff conflict-checked on their own span (US-CAL-8); total = sum of item snapshots.
-- Reschedule into an occupied slot fails closed; reschedule keeps original time in audit (US-CAL-4). Cross-branch reschedule re-prices: an appointment for a service with different branch overrides moved from A to B carries B's resolved price/duration/buffers in the new snapshots, with old and new values in the audit record (ADR-13 round 2, F-walk-1).
-- Appointment references: concurrent bookings produce unique per-branch `ref_number` values from the booking RPC counter (`UNIQUE (branch_id, ref_number)` concurrency test — ADR-14 round 2, F-DB-7).
+- Reschedule into an occupied slot fails closed; reschedule keeps original time in audit (US-CAL-4).
 - Cancel requires a reason; slot frees immediately for others (constraint + realtime).
 - Status machine rejects illegal transitions (e.g. `completed → booked` without manager override).
 - Walk-in booking works and can attach a client later (US-CAL-11); blocked client rejected with clear message.
 - Day view, busy branch fixture (30 staff, 200 appointments, 8h): ≤2s p95 render; two browser sessions see each other's changes ≤5s (NFR-4/5).
 - Full RTL: calendar mirrors, drag works in RTL, Arabic service/client names render and search.
-- Realtime channel authorization: a branch B session receives no branch A payloads (CI test).
+- Realtime channel authorization: branch B session receives no branch A payloads (CI test).
 
 **Test plan**: the concurrency suite above is the phase gate; pgTAP for read isolation and denied direct writes; `packages/core` unit tests for slot engine (≥95% coverage, DST + overnight + closed-period cases); Deno tests for each RPC path incl. advisory-lock behavior under parallel requests; Playwright journeys: create (form + drag), reschedule with conflict rollback, cancel, no-show, override; performance fixture benchmark in CI.
 
@@ -423,8 +410,8 @@ Epic 5.1 Booking data layer (DB)
 - [DB] Migration: `appointments`, `appointment_items` (spans, busy_range, snapshots, status_active)
 - [DB] Migration: `booking_overrides`
 - [DB] Exclusion constraints + indexes + audit triggers
-- [DB] RPC `book_appointment` (advisory lock, scope verify, snapshots, override recording, `ref_number` assignment from the per-branch counter, audit)
-- [DB] RPC `reschedule_appointment` (locked path; cross-branch moves re-resolve via `resolve_service(target_branch)` and re-snapshot price/duration/buffers, audit records old+new — F-walk-1), `cancel_appointment`, `set_appointment_status` (state machine)
+- [DB] RPC `book_appointment` (advisory lock, scope verify, snapshots, override recording, audit)
+- [DB] RPC `reschedule_appointment`, `cancel_appointment`, `set_appointment_status` (state machine)
 - [DB] pgTAP: isolation, denied direct writes, constraint behavior
 - [DB] Concurrency test suite (same-slot races, block races, reschedule races)
 
@@ -441,10 +428,9 @@ Epic 5.3 Calendar UI (Frontend)
 - [Frontend] Appointment drawer: items, allergies flag, statuses, actions
 - [Frontend] Drag-to-reschedule (optimistic + rollback)
 - [Frontend] Override-confirm + cancel-with-reason dialogs
-- [Frontend] Client profile: cross-branch appointment history (branch-labelled) + client no-show count (US-CL-2, US-CAL-6 — completes the Phase 4 stub, F-PLAN-7)
 
 Epic 5.4 Realtime & performance (Frontend + Ops)
-- [Frontend] `useRealtime('appointments', tenantId, branchId)` cache patching (canonical signature, ADR-38 round 2 / F-PLAN-8)
+- [Frontend] `useRealtime('appointments', branchId)` cache patching
 - [DB] Realtime publication config + channel authorization tests
 - [Ops] Performance fixture + CI benchmark (30 staff/200 appts)
 - [Frontend] Global search adds appointments
@@ -455,14 +441,14 @@ Epic 5.4 Realtime & performance (Frontend + Ops)
 
 **Scope**
 - Checkout flow from an appointment or walk-in/quick sale: cart from appointment items (or manual service lines), `manual_item` lines (ADR-2), line/sale discounts with reason, tips per staff (ADR-15 `tips` table), tax (tenant rates, Kuwait zero-rated today — model ready, ADR-15 table `tax_rates`), split payments across enabled manual methods (ADR-34), part-paid/unpaid completion (US-CO-6).
-- Sale creation RPC: transactional — invoice number from `invoice_counters` (ADR-14), totals derived from lines + reconciliation checks (verifier finding), calculation order and rounding exactly per ADR-51 (golden fixtures; client-supplied totals that differ from the server recomputation are rejected), status machine (`unpaid/part_paid/completed/voided`), links appointment → sale, all audited, idempotent via `Idempotency-Key` (ADR-31).
+- Sale creation RPC: transactional — invoice number from `invoice_counters` (ADR-14), totals derived from lines + reconciliation checks (verifier finding), status machine (`unpaid/part_paid/completed/voided`), links appointment → sale, all audited, idempotent via `Idempotency-Key` (ADR-31).
 - Settle-balance flow for part-paid sales (later payment rows).
-- Refund (full, **owner/manager-only — receptionist forbidden**, cap-enforced trigger, positive `amount_minor` on a `payment_type='refund'` row per ADR-34 round 2) and same-day void with reason (ADR-10, ADR-34). Cash refunds outside an open register session are recorded unlinked (`register_session_id IS NULL`), manager-approved, and flagged in the daily summary/audit (ADR-6 round 2, F-walk-2).
+- Refund (full, manager-only, cap-enforced trigger) and same-day void with reason (ADR-10, ADR-34).
 - Register: open with starting cash, close with counted cash, difference recorded; payments during a session link to it; one open session per branch (ADR-6).
 - Receipt: print-ready, branch-branded, EN/AR per client language, sequential number, lines/discounts/tips/payments/tax, configurable header/footer (US-CO-8).
 - Sales list (filters, search by client/number), sale detail (lines, payments, history), payments list with per-method totals (US-SAL-1/2), daily sales summary screen matching sales-list figures exactly (US-SAL-3 reconciliation).
 
-**Database work**: `sales` (`invoice_seq`, unique `(branch_id, invoice_seq)`, `_minor` totals + `due_minor` generated, status enum, branch-scoped RLS select-only, audit), `sale_items` (item_type `service|manual_item`, snapshots, discount/tax columns `_minor`), `payments` (canonical ledger: `payment_type payment|refund`, `refunds_payment_id`, **positive `amount_minor` on refund rows with `CHECK (amount_minor >= 0)`** — ADR-34 round 2, cap trigger, `register_session_id`, method enum, branch RLS select-only), `tips`, `register_sessions`, `tax_rates`; staff sales visibility via a `report_own_sales` secured RPC/view over their own `sale_items`/`tips` — the `sales` SELECT policy excludes the plain staff role (ADR-11 round 2, F-DB-5); checkout/settle/refund/void RPCs (`SECURITY DEFINER`, `SET search_path = public`, scope-verified, idempotent); trigger blocking `tenants.currency` updates once any sale exists (cross-phase reference from Phase 1, F-PLAN-4); pgTAP: branch isolation, refund cap, refund sign/enum conformance, invoice-sequence race, direct-write denial, staff own-sales-only visibility.
+**Database work**: `sales` (`invoice_seq`, unique `(branch_id, invoice_seq)`, `_minor` totals + `due_minor` generated, status enum, branch-scoped RLS select-only, audit), `sale_items` (item_type `service|manual_item`, snapshots, discount/tax columns `_minor`), `payments` (canonical ledger: `payment_type payment|refund`, `refunds_payment_id`, cap trigger, `register_session_id`, method enum, branch RLS select-only), `tips`, `register_sessions`, `tax_rates`; checkout/settle/refund/void RPCs (`SECURITY DEFINER`, scope-verified, idempotent); pgTAP: branch isolation, refund cap, invoice-sequence race, direct-write denial.
 
 **Edge Functions**: `checkout`: `create-sale`, `settle`, `refund`, `void`, `register/open`, `register/close`, `receipt` (print data assembly).
 
@@ -472,16 +458,14 @@ Epic 5.4 Realtime & performance (Frontend + Ops)
 - Checkout of an appointment with 2 items, 1 line discount, a tip for each of 2 staff, split cash+KNET-terminal payment: sale completes with `PREFIX-SEQ`, totals reconcile to the fils against lines+payments (automated reconciliation test), appointment marked `completed`.
 - Double-clicking complete (same idempotency key) creates exactly one sale (CI test).
 - Invoice numbers: 20 parallel checkouts on one branch produce 20 unique sequential numbers, gaps only from failed transactions (concurrency test).
-- Refund of a cash payment: manager-only (receptionist gets `FORBIDDEN` on refunds **and voids** while keeping checkout/discounts/tips — ADR-10 round 2, F-perm-1), original untouched, refund row linked with a positive `amount_minor` and `payment_type='refund'`, total refunded ≤ paid enforced (trigger test), daily summary nets it.
-- Cash refund with no open register session (next-day refund): recorded manager-approved with `register_session_id IS NULL` and flagged in the daily summary and audit (F-walk-2).
-- Money math: checkout totals match the ADR-51 golden fixtures to the fil for discount+tax+tip combinations; a tampered client-supplied total is rejected (negative test).
+- Refund of a cash payment: manager-only (receptionist gets `FORBIDDEN`), original untouched, refund row linked, total refunded ≤ paid enforced (trigger test), daily summary nets it.
 - Void same-day with reason keeps the record with status `voided`.
 - Register: open 50 KWD → take cash sales → close counted 180 KWD → difference recorded and shown; cash payments outside a session are rejected or flagged (decision: rejected while a session is required per branch config — documented in branch settings).
 - Part-paid sale shows balance on the client profile (branch-scoped aggregate RPC, ADR-11) and settles later.
 - Receipt prints correctly in EN and AR with all mandated elements.
 - Daily summary equals sales-list totals for identical filters (US-SAL-3 reconciliation gate).
 
-**Test plan**: pgTAP incl. all races above; Deno tests per checkout action (envelope, idempotency replay, scope denial); Vitest money math in `packages/core` (ADR-51 calculation order, half-up rounding, discount/tax/tip golden fixtures) at ≥95%; Playwright: full checkout journey, refund, void, register day, receipt print — both locales; reconciliation fixture comparing summary vs list.
+**Test plan**: pgTAP incl. all races above; Deno tests per checkout action (envelope, idempotency replay, scope denial); Vitest money math in `packages/core` (rounding half-up at line level, discount/tax/tip combinations) at ≥95%; Playwright: full checkout journey, refund, void, register day, receipt print — both locales; reconciliation fixture comparing summary vs list.
 
 **Dependencies**: Phases 4, 5. **Risks**: money-math bugs (mitigate: integer-only arithmetic, one rounding rule, property-based tests on totals); register-session semantics edge cases (mitigate: explicit branch config + tests); receipt layout in RTL print (mitigate: print-CSS tests early).
 
@@ -491,13 +475,11 @@ Epic 5.4 Realtime & performance (Frontend + Ops)
 
 Epic 6.1 Money data layer (DB)
 - [DB] Migration: `tax_rates`, `sales`, `sale_items` (manual_item, `_minor`, RLS select-only, audit)
-- [DB] Migration: `payments` (ledger model — `payment_type payment|refund`, positive refund amounts, refund cap trigger, method enum, register link), `tips`
+- [DB] Migration: `payments` (ledger model, refund cap trigger, method enum, register link), `tips`
 - [DB] Migration: `register_sessions`, `invoice_counters` wiring
-- [DB] Trigger blocking `tenants.currency` updates when any sale exists for the tenant + pgTAP test (US-ON-2; the Phase 1 UI predicate references this task — F-PLAN-4)
-- [DB] `report_own_sales` secured RPC/view for the staff role + pgTAP (staff see own lines only, F-DB-5)
-- [DB] RPC `create_sale` (transactional: number, lines, totals reconcile per ADR-51 order, payments, tips, status, audit, idempotent)
-- [DB] RPCs `settle_balance`, `refund_payment`, `void_sale`, `open_register`, `close_register` (all `SET search_path = public`)
-- [DB] pgTAP: isolation, caps, refund sign/enum, sequence race, write denial, out-of-session cash refund flagging
+- [DB] RPC `create_sale` (transactional: number, lines, totals reconcile, payments, tips, status, audit, idempotent)
+- [DB] RPCs `settle_balance`, `refund_payment`, `void_sale`, `open_register`, `close_register`
+- [DB] pgTAP: isolation, caps, sequence race, write denial
 
 Epic 6.2 Checkout function (Edge Function)
 - [Edge Function] `checkout/create-sale|settle|refund|void` (+ idempotency)
@@ -518,32 +500,29 @@ Epic 6.4 Sales & register UI (Frontend)
 - [Frontend] Payments list + per-method totals
 - [Frontend] Daily sales summary + reconciliation test fixture
 - [Frontend] Client profile balance section (branch-scoped RPC)
-- [Frontend] Client profile: sales history section (branch-labelled, US-CL-2 — completes the Phase 4 stub, F-PLAN-7)
 
 ## Phase 7: Reports, exports & hardening (8 ew)
 
 **Goal**: the six MVP reports, CSV exports, the audit-log viewer, global search completion, and the security/performance hardening pass that makes the MVP shippable (US-RPT-1..6, US-SAL-2/3 exports, US-SEC-1..4).
 
 **Scope**
-- Home/today screen (requirements §1.1, reduced; story **US-DASH-1 "Today at a glance"**, added in round 2 — F-PLAN-1/F-cov-1): today's appointments (branch-scoped, links into the calendar), today's sales total and count, and the no-show count; role-scoped per the §3 matrix (receptionist sees own-branch operational numbers only); day boundaries use the branch-local date per ADR-45. This screen is the **default post-login route** of `apps/back-office`.
-- Report framework: date presets, branch filter (role-scoped), CSV export, EN/AR labels, RTL, generic filter bar; six reports per ADR-5 with requirements §4.8 metric definitions, plus the additive **taxes summary report** (by rate, by period, collected vs refunded — round 2, F-cov-3).
-- Report data: `security_invoker` views + secured `report_*` RPCs, branch-local date grouping (ADR-21, ADR-45 round-2 boundary semantics); branch-scoped client financial aggregates (ADR-11). Round 2 (F-DB-8): the top-services report joins `sale_items.item_id = services.id AND sale_items.item_type = 'service'` (there is no `sale_items.service_id` column), and client-summary counts pre-aggregate sales per client (or use `count(DISTINCT ...)`) so multi-sale clients are not inflated; every view migration ships explicit grants for `authenticated` on the view and its base tables (F-6) and the claim "including tenant_id in the SELECT makes a view RLS-safe" is false and must not reappear.
-- Exports: every core entity CSV (UTF-8 BOM), role-scoped (owner tenant-wide incl. contacts; manager own-branch operational only; client-contact export owner-only; allergy detail redacted from ordinary aggregate reports — ADR-11/43 round 2, F-verifier-3), streamed from `reports`, queued for large jobs (ADR-43), audited.
+- Report framework: date presets, branch filter (role-scoped), CSV export, EN/AR labels, RTL, generic filter bar; six reports per ADR-5 with requirements §4.8 metric definitions.
+- Report data: `security_invoker` views + secured `report_*` RPCs, branch-local date grouping (ADR-21); branch-scoped client financial aggregates (ADR-11).
+- Exports: every core entity CSV (UTF-8 BOM), role-scoped (owner tenant-wide incl. contacts; manager own-branch operational only; client-contact export owner-only), streamed from `reports`, queued for large jobs (ADR-43), audited.
 - Audit log viewer: owner tenant-wide, manager branch-scoped (US-SEC-2).
 - Global search: clients + appointments + sales (narrow MVP scope, requirements §1.1).
 - Hardening: complete the pgTAP matrix across every table (no gaps), Realtime authorization sweep, NFR performance benchmarks on production-like data, WCAG 2.1 AA audit (axe + manual keyboard passes) on all MVP screens, rate limiting review, dependency audit in CI, backup/restore drill (NFR-14).
 
-**Database work**: report views/RPCs (`report_daily_sales`, `report_sales_summary`, `report_payments_summary`, `report_appointments_summary`, `report_client_list`, `report_staff_performance`, `report_shifts`, `report_taxes_summary` — round 2 F-cov-3, plus `report_own_sales` from Phase 6) with timezone-correct grouping per ADR-45 boundary semantics and indexes per data-model §7.2 (rewritten for `_minor` and branch scope; the F-DB-8 join/aggregation corrections applied); export RPCs; pgTAP completion; CI check that every view has `security_invoker` (ADR-21) and explicit grants (F-6).
+**Database work**: report views/RPCs (`report_daily_sales`, `report_sales_summary`, `report_payments_summary`, `report_appointments_summary`, `report_client_list`, `report_staff_performance`, `report_shifts`) with timezone-correct grouping and indexes per data-model §7.2 (rewritten for `_minor` and branch scope); export RPCs; pgTAP completion; CI check that every view has `security_invoker` (ADR-21).
 
 **Edge Functions**: `reports`: report queries orchestration (thin — SQL does the work), `export` (queued CSV generation, streaming download), audit-log read endpoint (or direct RLS read — decision: direct read under a branch-scoped view).
 
-**Frontend screens**: home/today screen (US-DASH-1, default post-login route), reports hub + six report screens + taxes summary (table + chart where the design skill provides one, filters, export button), audit log screen, global search palette, export progress/downloads UX.
+**Frontend screens**: reports hub + six report screens (table + chart where the design skill provides one, filters, export button), audit log screen, global search palette, export progress/downloads UX.
 
 **Acceptance criteria**
-- Home screen shows correct today's numbers (appointments, sales total/count, no-show count) for the seeded branch fixture in both locales, scopes by role (receptionist: operational only), and uses branch-local day boundaries (US-DASH-1; round 2, F-PLAN-1/F-cov-1).
-- Each report matches hand-computed fixtures to the fils on a seeded branch dataset, in both locales, with correct branch-local day boundaries (a 23:30 UTC sale lands on the right Kuwait day). Report fixtures include a multi-sale client and a service sold via sale items; client-summary counts and top-services figures match hand computation (round 2, F-DB-8). Midnight-boundary and DST fixtures pass for every daily metric (ADR-45 round 2, F-verifier-4).
+- Each report matches hand-computed fixtures to the fils on a seeded branch dataset, in both locales, with correct branch-local day boundaries (a 23:30 UTC sale lands on the right Kuwait day).
 - Branch manager sees only their branches' numbers everywhere; receptionist sees only the daily summary (matrix rows tested per report).
-- Exports: BOM-prefixed CSV opens correctly in Excel with Arabic; owner full-tenant export of the 100k-client/1M-appointment fixture completes ≤10 min (NFR-10 benchmark); every export writes an audit record; manager attempting a contacts export gets `FORBIDDEN`; aggregate reports contain no allergy detail (negative export tests — round 2, F-verifier-3).
+- Exports: BOM-prefixed CSV opens correctly in Excel with Arabic; owner full-tenant export of the 100k-client/1M-appointment fixture completes ≤10 min (NFR-10 benchmark); every export writes an audit record; manager attempting a contacts export gets `FORBIDDEN`.
 - Audit viewer shows actor/action/entity/branch/time; rows immutable (no UI path, revoked DML).
 - Global search finds a client by Arabic name, an appointment by ref, a sale by invoice number.
 - Accessibility audit: zero serious axe violations on MVP screens; keyboard-complete calendar and checkout.
@@ -558,17 +537,14 @@ Epic 6.4 Sales & register UI (Frontend)
 **Backlog**
 
 Epic 7.1 Report data (DB)
-- [DB] Migrations: report views (`security_invoker` + explicit grants) + `report_*` RPCs + indexes
-- [DB] Taxes summary report view/RPC (by rate, by period, collected vs refunded — F-cov-3)
-- [DB] F-DB-8 corrections in the rewrite: top-services joins `sale_items.item_id/item_type='service'`; client-summary pre-aggregates sales per client
-- [DB] Branch-local grouping conversions per ADR-45 boundary semantics + fixture reconciliation tests (incl. multi-sale client, midnight-boundary, DST)
+- [DB] Migrations: report views (`security_invoker`) + `report_*` RPCs + indexes
+- [DB] Branch-local grouping conversions + fixture reconciliation tests
 - [DB] CI view-audit (security_invoker presence)
 - [DB] pgTAP: per-report scope rows for every role
 
 Epic 7.2 Reports UI (Frontend)
-- [Frontend] Home/today screen (today's appointments, sales total/count, no-show count; role-scoped, EN/AR) — default post-login route (US-DASH-1, F-PLAN-1)
 - [Frontend] Report framework (filters, presets, branch scope, export button)
-- [Frontend] Six report screens + taxes summary screen
+- [Frontend] Six report screens
 - [Frontend] Audit log viewer
 - [Frontend] Global search palette (clients/appointments/sales)
 
@@ -582,16 +558,15 @@ Epic 7.4 Hardening (Ops + DB + Frontend)
 - [Ops] Backup/restore drill + runbook (NFR-14)
 - [DB] pgTAP matrix completion sweep
 - [Frontend] WCAG audit + fixes; RTL visual sweep
-- [Ops] Dependency audit + rate-limit review (NFR-12, ADR-47: verify platform/Auth limits against current Supabase docs; confirm no fictional config keys are referenced)
-- [Ops] Backup/PITR configuration per ADR-49 (RPO/RTO targets, retention) verified on the production project
+- [Ops] Dependency audit + rate-limit review (NFR-12)
 
 ## Phase 8: SpaCorner go-live (4 ew)
 
 **Goal**: real data, real staff, real clients — live operation with a rollback path.
 
 **Scope & plan**
-1. **Data migration** (requirements §6): collect CSVs (branches, staff, services + overrides, clients; skip historical sales/appointments for cleanliness); dry-run imports in staging with the validation report; owner sign-off on row counts and spot checks; production import in a scheduled freeze window (sequence: tenant → branches → staff → services → clients → shift grid); all imports audit-logged and idempotent (ADR-31/33). The import software this step executes is built in Epic 8.0 (round 2, F-PLAN-6 — Phase 8 assumes working import functions, not a runbook alone).
-2. **Training**: role-based sessions (owner: settings/roles/reports; manager: shifts/overrides/refunds/reports; receptionist: calendar/checkout/clients/register) in Arabic-first material; printed quick-reference for checkout and register; superuser list for the pilot branch. Manager training states explicitly that client records/allergies/notes are tenant-visible by design while operational and financial data are branch-scoped (round 2, F-walk-3).
+1. **Data migration** (requirements §6): collect CSVs (branches, staff, services + overrides, clients; skip historical sales/appointments for cleanliness); dry-run imports in staging with the validation report; owner sign-off on row counts and spot checks; production import in a scheduled freeze window (sequence: tenant → branches → staff → services → clients → shift grid); all imports audit-logged and idempotent (ADR-31/33).
+2. **Training**: role-based sessions (owner: settings/roles/reports; manager: shifts/overrides/refunds/reports; receptionist: calendar/checkout/clients/register) in Arabic-first material; printed quick-reference for checkout and register; superuser list for the pilot branch.
 3. **Pilot**: one branch runs one full business week on GlowDesk in parallel with the old process; daily reconciliation of sales totals and register differences; issue triage each evening; exit pilot when two consecutive days show zero reconciliation deltas and no P1 issues.
 4. **Cutover**: remaining branches onboarded one at a time (import + training + 2-day parallel run each); old system moves to read-only archive.
 5. **Rollback plan**: cutover is per branch; rolling back = branch stops using GlowDesk and resumes the old process (its data stays intact — nothing is deleted, ADR-46); production DB snapshots taken before each branch import; worst case restore-from-snapshot drill rehearsed in Phase 7.
@@ -608,8 +583,6 @@ Epic 7.4 Hardening (Ops + DB + Frontend)
 - [ ] Every staff member trained; reception shifts covered by trained users.
 - [ ] Rollback path rehearsed once in staging.
 - [ ] Owner has export of all imported data (portability check, NFR-10/11).
-- [ ] Legal/privacy: client-data privacy notice published (AR+EN) and data-processing terms agreed with SpaCorner (NFR-11); ADR-48 region assumption confirmed by legal; audit-log access and export paths demonstrated to the owner (round 2, F-PLAN-11).
-- [ ] Arabic content review: migrated client/service names, receipt header/footer text, and UI copy reviewed by an Arabic-speaking reviewer for every cutover branch (NFR-7; round 2, F-PLAN-11).
 
 **Acceptance criteria / exit**: all SpaCorner branches operating one full week with: zero reconciliation deltas, no P1 issues, NFR-4/5 observed under real load, owner signs the go-live report. **What SpaCorner can do**: run its entire daily operation — roster, book, serve, charge, refund, close the register, report, export — in Arabic or English.
 
@@ -617,17 +590,11 @@ Epic 7.4 Hardening (Ops + DB + Frontend)
 
 **Backlog**
 
-Epic 8.0 Import software (Edge Function + DB) — round 2, F-PLAN-6: the build tasks Phase 8 step 1 executes
-- [Edge Function] `onboarding/import-branches`, `import-staff`, `import-services` (incl. per-branch overrides), `import-shifts` (service-role ops path): template validation, dry-run report (row + reason), idempotent batches keyed per ADR-31, audit-logged; staff.csv roles create memberships under the ADR-20 rule 9 grant discipline
-- [DB] Import staging/validation RPCs shared with the clients-import pattern (ADR-33 queue)
-- [Ops] Staging rehearsal of all five imports (branches → staff → services → clients → shifts) before the freeze window
-
 Epic 8.1 Migration & cutover (Ops + Edge Function)
 - [Ops] CSV collection + template validation with owner
 - [Ops] Staging dry-run + sign-off record
-- [Edge Function] Production import runbook (freeze window, sequence, idempotent re-run) — execution documentation for the Epic 8.0 software
+- [Edge Function] Production import runbook (freeze window, sequence, idempotent re-run)
 - [Ops] Snapshot + restore drill (timed, documented)
-- [Ops] Legal/privacy sign-off + Arabic content review coordination (F-PLAN-11)
 - [Ops] Per-branch cutover checklist execution
 
 Epic 8.2 Training & pilot (Frontend + Ops)
@@ -644,21 +611,21 @@ Post-MVP phases are specified to decision level here; each gets its own detailed
 
 ## Phase 9: Online booking & notifications (12 ew)
 - Goal: clients book themselves; reminders reduce no-shows.
-- Scope: `apps/booking` public page per branch (service → staff → time → confirm, no account), booking links/QR, `online-booking` function reusing the MVP slot/conflict engine as a service (ADR-1 consequence); public-booking threat model: rate limiting per branch/IP, abuse prevention, no PII enumeration (verifier requirement on PD-scope-1) — this threat model **owns the per-tenant application rate-limiter design** (endpoint coverage, quotas, failure mode) per ADR-47 (round 2, G-1); `notifications` function + pgmq (ADR-33) with email (Resend/SendGrid) and SMS/WhatsApp (Twilio/WATI — provider decision re-verified at discovery); reminder scheduling via pg_cron; notification history; email receipts; client self-service data access (privacy right, NFR-11). Storage design task per ADR-43 (tenant/branch-prefixed paths, bucket policies mirroring RLS, private buckets) is **unconditional and ships before any upload feature**; actual upload capability (avatars/assets) remains conditional on the first upload feature being scheduled (round 2, F-PLAN-16).
-- Key deps: Phase 8. Storage is introduced here when the first upload feature is scheduled; the ADR-43 design task above ships first either way.
+- Scope: `apps/booking` public page per branch (service → staff → time → confirm, no account), booking links/QR, `online-booking` function reusing the MVP slot/conflict engine as a service (ADR-1 consequence); public-booking threat model: rate limiting per branch/IP, abuse prevention, no PII enumeration (verifier requirement on PD-scope-1); `notifications` function + pgmq (ADR-33) with email (Resend/SendGrid) and SMS/WhatsApp (Twilio/WATI — provider decision re-verified at discovery); reminder scheduling via pg_cron; notification history; email receipts; client self-service data access (privacy right, NFR-11).
+- Key deps: Phase 8. Storage introduced here if avatars/assets are needed — with the tenant/branch path + bucket policy design from ADR-43 first.
 - Size: 12 ew. Risks: public traffic hardening (mitigate: threat-model review gate before launch).
 
 ## Phase 10: Online payments & deposits (10 ew)
 - Goal: KNET + cards online at booking and checkout; deposits and no-show fees.
-- Scope: provider abstraction (intent → redirect/webhook → capture → refund) with MyFatoorah first, Tap adapter interface defined (ADR-34); **gateway facts re-verified against official provider docs at discovery (binding)** — including the KNET-no-recurring constraint, which is labeled a provider-specific assumption until an official source confirms it (ADR-34 round 2, F-DB-12); `webhooks` function (signature verification, idempotent processing keyed by gateway reference, amount/currency reconciliation); online payment at booking (deposit or full), settle-online for part-paid sales; partial refunds (unlocked by the ledger model, ADR-10 — discount/tax reallocation per ADR-51 step 7); no-show/late-cancellation fees; merchant onboarding (CR, IBAN) started before code freeze.
+- Scope: provider abstraction (intent → redirect/webhook → capture → refund) with MyFatoorah first, Tap adapter interface defined (ADR-34); **gateway facts re-verified against official provider docs at discovery (binding)**; `webhooks` function (signature verification, idempotent processing keyed by gateway reference, amount/currency reconciliation); online payment at booking (deposit or full), settle-online for part-paid sales; partial refunds (unlocked by the ledger model, ADR-10); no-show/late-cancellation fees; merchant onboarding (CR, IBAN) started before code freeze.
 - Key deps: Phase 9 for booking-time payment; Phase 6 ledger. Size: 10 ew + merchant KYC lead time. Risks: gateway sandbox quirks (mitigate: contract tests against recorded fixtures).
 
 ## Phase 11: Client experience depth (8 ew)
-- Scope: client portal (history, rebook, data management); interactive client merge tool (re-point appointments/sales/notes, tombstone via `merged_into`, ADR-9); repeating appointment series (`appointment_series` + per-occurrence edit/cancel, ADR-8); waitlist (auto-offer freed slots via notifications). Client forms (consent/intake): non-committed candidate for this phase — scheduled only when a concrete privacy/consent requirement demands it (round 2, F-cov-6).
+- Scope: client portal (history, rebook, data management); interactive client merge tool (re-point appointments/sales/notes, tombstone via `merged_into`, ADR-9); repeating appointment series (`appointment_series` + per-occurrence edit/cancel, ADR-8); waitlist (auto-offer freed slots via notifications).
 - Key deps: Phases 9–10 for notifications/payments context. Size: 8 ew.
 
 ## Phase 12: Marketing & loyalty (10 ew)
-- Scope: client segments (saved filters on tags + behavior), blast campaigns (email/SMS via Phase 9 providers, consent-gated per NFR-11), deals/promo codes at checkout, loyalty points (earn/redeem, liability-aware accounting). Custom appointment statuses: non-committed candidate if automations need them (round 2, F-cov-5, ADR-7). Client-source segmentation reporting: candidate consumer of `clients.source` (ADR-52). Rich KPI dashboards/comparison-period reports remain deferred non-committed; if scheduled they form a separate "dashboards & analytics" workstream after this phase's data exists (round 2, F-cov-2, ADR-5).
+- Scope: client segments (saved filters on tags + behavior), blast campaigns (email/SMS via Phase 9 providers, consent-gated per NFR-11), deals/promo codes at checkout, loyalty points (earn/redeem, liability-aware accounting).
 - Key deps: Phase 8 (data), Phase 9 (messaging). Size: 10 ew. Note: messaging costs are pass-through per ADR-18 (no wallet).
 
 ## Phase 13: Retail & inventory (10 ew)
@@ -679,26 +646,24 @@ Post-MVP phases are specified to decision level here; each gets its own detailed
 
 ## Phase 17: SaaS self-serve & subscription billing (8 ew)
 - Goal: sellable to other companies without us in the loop.
-- Scope: public marketing/pricing surface; self-serve tenant signup (owner creates tenant via a hardened public onboarding path — replaces the platform-admin-only MVP path, keeping provisioning internals from ADR-20 rule 3); plan management + entitlement enforcement via `plan_features` (ADR-18); subscription billing for tenants (card tokenization reuse from Phase 14 machinery or a billing provider — decide at plan time); multi-currency activation (the `currencies` exponent table already supports it, ADR-17); tenant offboarding per the ADR-50 contract (export → 28-day soft-archive → anonymize → financial retention), with the NFR-10/11 export machinery already shipped.
+- Scope: public marketing/pricing surface; self-serve tenant signup (owner creates tenant via a hardened public onboarding path — replaces the platform-admin-only MVP path, keeping provisioning internals from ADR-20 rule 3); plan management + entitlement enforcement via `plan_features` (ADR-18); subscription billing for tenants (card tokenization reuse from Phase 14 machinery or a billing provider — decide at plan time); multi-currency activation (the `currencies` exponent table already supports it, ADR-17); tenant offboarding export (NFR-10/11 already shipped).
 - Key deps: Phase 8 (single-tenant proof), Phase 10 (payment machinery patterns). Size: 8 ew.
 
 ---
 
 # Risk register (program-level)
 
-| # | Risk | Phase(s) | Likelihood | Impact | Mitigation | Owner (role) | Owner signal |
-|---|---|---|---|---|---|---|---|
-| R1 | Branch-scoped RLS gaps leak data across branches | all | Medium | Critical | ADR-20 binding rules; pgTAP full-matrix gate in CI; no phase exits with uncovered cells; verifier-style review of every migration PR | DB lead | pgTAP matrix coverage report |
-| R2 | Double-booking race survives to production | 5 | Medium | Critical | Constraints + advisory locks (ADR-24); concurrency suite is a phase gate; load test pre-GA | DB lead | CI concurrency suite |
-| R3 | Money bugs (rounding, reconciliation) | 6, 7 | Medium | High | Integer minor units only (ADR-17); ADR-51 calculation order + golden fixtures; property tests; daily-summary reconciliation gate | Checkout owner (full-stack lead) | Reconciliation fixture results |
-| R4 | schedule-x premium fails RTL/perf needs | 0, 5 | Medium | Medium | Phase 0 spike with go/no-go and scoped fallback (ADR-41) | Frontend lead | Spike verdict in ADR-41 |
-| R5 | Arabic UX quality lags English | all | Medium | High | RTL is a release gate (ADR-40); both-locale Playwright; missing translations fail CI; AR-first training material | Frontend lead | Locale-parity E2E run |
-| R6 | Gateway assumptions wrong (fees, recurring, APIs) | 10, 14 | Medium | High | ADR-34 binding re-verification at discovery (incl. the KNET-no-recurring assumption); provider abstraction; tokenized-card design already avoids KNET recurring | Payments lead (full-stack) | Phase 10 discovery doc |
-| R7 | SpaCorner data quality blocks go-live | 8 | High | Medium | Dry-run reports + owner sign-off gate; import idempotent; skip historical sales; Epic 8.0 import software | Ops/owner liaison | Dry-run validation report |
-| R8 | Realtime channel leakage | 5 | Low | Critical | Channel-authorization tests in CI before Phase 5 exit (ADR-38); polling fallback ready | DB lead | Realtime auth test suite |
-| R9 | `_shared` change breaks all functions at once | all | Medium | Medium | All-functions redeploy in one CI run + stricter review of `_shared` (ADR-32); per-function rollback via `--slug` | Ops | Deploy logs |
-| R10 | Scope creep into post-MVP features (plan Phases 9–17) during MVP | 1–8 | High | Medium | ADR-1..10 phase placements are contractual; backlog tasks reference ADRs; chair re-rules if a task challenges placement | Product owner | Plan review each phase exit |
-| R11 | Key-person dependency (small team) | all | Medium | Medium | Skills + CONVENTIONS make context portable; PR reviews cross-pollinate; runbooks for ops paths | Engineering manager | Skill/doc coverage in PRs |
-| R12 | Supabase platform limits/behavior changes | all | Low | Medium | Pinned CLI/package versions; limits documented in ADR-27 (incl. both bundle-size limits); CI smoke tests against real platform | Ops | Dependency audit job |
-
-Round 2 (F-PLAN-10): the "Owner" column names an accountable role per risk; "Owner signal" remains the monitoring artifact, which is not ownership.
+| # | Risk | Phase(s) | Likelihood | Impact | Mitigation | Owner signal |
+|---|---|---|---|---|---|---|
+| R1 | Branch-scoped RLS gaps leak data across branches | all | Medium | Critical | ADR-20 binding rules; pgTAP full-matrix gate in CI; no phase exits with uncovered cells; verifier-style review of every migration PR | pgTAP matrix coverage report |
+| R2 | Double-booking race survives to production | 5 | Medium | Critical | Constraints + advisory locks (ADR-24); concurrency suite is a phase gate; load test pre-GA | CI concurrency suite |
+| R3 | Money bugs (rounding, reconciliation) | 6, 7 | Medium | High | Integer minor units only (ADR-17); one rounding rule; property tests; daily-summary reconciliation gate | Reconciliation fixture results |
+| R4 | schedule-x premium fails RTL/perf needs | 0, 5 | Medium | Medium | Phase 0 spike with go/no-go and scoped fallback (ADR-41) | Spike verdict in ADR-41 |
+| R5 | Arabic UX quality lags English | all | Medium | High | RTL is a release gate (ADR-40); both-locale Playwright; missing translations fail CI; AR-first training material | Locale-parity E2E run |
+| R6 | Gateway assumptions wrong (fees, recurring, APIs) | 10, 14 | Medium | High | ADR-34 binding re-verification at discovery; provider abstraction; KNET-no-recurring already designed around | Phase 10 discovery doc |
+| R7 | SpaCorner data quality blocks go-live | 8 | High | Medium | Dry-run reports + owner sign-off gate; import idempotent; skip historical sales | Dry-run validation report |
+| R8 | Realtime channel leakage | 5 | Low | Critical | Channel-authorization tests in CI before Phase 5 exit (ADR-38); polling fallback ready | Realtime auth test suite |
+| R9 | `_shared` change breaks all functions at once | all | Medium | Medium | All-functions redeploy in one CI run + stricter review of `_shared` (ADR-32); per-function rollback via `--slug` | Deploy logs |
+| R10 | Scope creep into Phase 2/3 features during MVP | 1–8 | High | Medium | ADR-1..10 phase placements are contractual; backlog tasks reference ADRs; chair re-rules if a task challenges placement | Plan review each phase exit |
+| R11 | Key-person dependency (small team) | all | Medium | Medium | Skills + CONVENTIONS make context portable; PR reviews cross-pollinate; runbooks for ops paths | Skill/doc coverage in PRs |
+| R12 | Supabase platform limits/behavior changes | all | Low | Medium | Pinned CLI/package versions; limits documented in ADR-27; CI smoke tests against real platform | Dependency audit job |

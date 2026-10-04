@@ -2,8 +2,6 @@
 
 This is the single reference for how we build the multi-tenant spa/salon SaaS. It follows `decisions.md` (ADRs are cited inline); where a member draft and this file disagree, this file and `decisions.md` win. The companion skills in `plan/skills/` carry the operational detail for each area; this document is the map.
 
-**Document precedence (round 2, F-verifier-1)**: `decisions.md` (binding ADRs) and the current `IMPLEMENTATION_PLAN.md` govern. `requirements.md` is product intent. This file, the active SQL, and the skills must conform to the ADRs. The round-1 member drafts — `backend.md`, `frontend.md`, `data-model.md`, `review.md` — are historical inputs and are superseded wherever they disagree with the ADRs (known stale areas: the `auth-hook` function and JWT-claim authorization, per-action function slugs like `booking-create`, the old `VALIDATION_ERROR`/`UNAUTHORIZED` error codes, `withSupabase`, integer IDs, "exactly-once" queue delivery, materialized views for reports, query keys without tenant scope, raw `scaleX(-1)` icon advice, `platform_admin` as a frontend role, "one tenant per user", a per-function `rate_limit` config key, and `supabase db test` — the correct pgTAP command is `supabase test db`, pinned to the project CLI version). The round-1 SQL drafts live in `sql/drafts-v1/` under a superseded banner and are never applied; active migrations exist only under `supabase/migrations/`.
-
 **Visual design is not defined here.** Colours, typography, spacing, radii, shadows, and component look come from the owner's separate **Airbnb design skill**. `packages/ui` is the only layer allowed to import that skill's primitives and tokens (ADR-36). Everything below is architecture, structure, naming, data access, testing, and workflow.
 
 ## 1. Architecture overview
@@ -55,7 +53,7 @@ pnpm workspaces monorepo (ADR-36). Frontend and backend deploy from the same com
 repo/
   apps/
     back-office/            # MVP staff/manager/owner SPA (Vite + React 18)
-    booking/                # plan Phase 9 client-facing booking app (scaffold only in MVP)
+    booking/                # Phase 2 client-facing booking app (scaffold only in MVP)
   packages/
     ui/                     # wraps the Airbnb design skill; only layer touching tokens
     db/                     # generated database.types.ts + createTypedClient
@@ -87,13 +85,12 @@ The `spa-domain-glossary` skill is the naming authority (ADR-15). Never invent s
 
 ### 3.2 Database
 - Tables: plural `snake_case` (`clients`, `appointment_items`, `service_branch_overrides`). Junction tables: `{a}_{b}` (`staff_branch_assignments`, `service_staff`).
-- Columns: `snake_case`, no table prefix (`name_en`, not `service_name_en`), except the FK-id and money conventions below. Exception (round 2, F-5): snapshot columns on items tables (`appointment_items`, `sale_items`) that capture an entity's name at write time use `{entity}_name_{locale}` for disambiguation (`service_name_en`, `service_name_ar`, ADR-23).
+- Columns: `snake_case`, no table prefix (`name_en`, not `service_name_en`), except the FK-id and money conventions below.
 - Primary keys: `id uuid PRIMARY KEY DEFAULT gen_random_uuid()` (ADR-44).
-- Foreign keys: `{entity}_id uuid`. Denormalized parents expose `UNIQUE (id, tenant_id)`; **every** FK to another tenant-owned table is composite on `(parent_id, tenant_id)` to keep tenant consistency (ADR-20 rule 5 with its round-2 enumeration).
+- Foreign keys: `{entity}_id uuid REFERENCES {entities}(id)`. Denormalized parents expose `UNIQUE (id, tenant_id)`; children reference the pair to keep tenant consistency (ADR-20 rule 5).
 - Tenant key: `tenant_id uuid NOT NULL REFERENCES tenants(id)` on every tenant-scoped table.
-- Branch key: `branch_id uuid` on branch-scoped tables. "All branches"/"tenant-wide" is `branch_id NULL` plus `all_branches boolean NOT NULL DEFAULT false` with `CHECK (all_branches = (branch_id IS NULL))`; tenant-wide uniqueness uses partial unique indexes `WHERE branch_id IS NULL` (ADR-20 rule 6, round 2 — the sentinel UUID is withdrawn and must not appear in any migration, policy, or helper).
-- Money: `bigint` counting minor units, column name ends `_minor` (`total_minor`, `amount_minor`, `price_minor`). Never `float`/`numeric` (ADR-17). Calculation order and rounding are bound by ADR-51.
-- SECURITY DEFINER: every `SECURITY DEFINER` function (helpers, RPCs, triggers) declares `SET search_path = public` or uses fully schema-qualified names; `supabase db lint` enforces this in CI (ADR-20 rule 10, round 2 F-DB-13).
+- Branch key: `branch_id uuid` on branch-scoped tables; sentinel `00000000-0000-0000-0000-000000000000` means "all branches"/"tenant-wide" (never NULL in a unique constraint — ADR-20 rule 6).
+- Money: `bigint` counting minor units, column name ends `_minor` (`total_minor`, `amount_minor`, `price_minor`). Never `float`/`numeric` (ADR-17).
 - Timestamps: `created_at`/`updated_at` `timestamptz NOT NULL DEFAULT now()`; audit `created_by`/`updated_by uuid REFERENCES auth.users(id)`.
 - Bilingual text: `name_en` + `name_ar` for operator-facing entities; people use `*_en`/`*_ar` or `*`/`*_alt` (ADR-16).
 - Enums: fixed `CHECK` constraints listing the canonical values (appointment status uses `in_progress`, ADR-7). No status strings outside the enum.
@@ -149,14 +146,12 @@ Every Edge Function response uses one versioned envelope:
 ## 5. Tenancy rules
 
 - Tenant = company; branch = physical location. A tenant has many branches; a branch belongs to exactly one tenant.
-- `memberships(user_id, tenant_id, role, branch_id, all_branches, is_active)` is the authorization source. `all_branches = true` (with `branch_id IS NULL`) means all branches; a specific branch scopes the role to it (round 2, F-DB-1 — the sentinel UUID is withdrawn). A user may hold different roles at different branches; the union of capabilities applies, scoped per branch (requirements §3 matrix). A user may hold memberships in multiple tenants; the active tenant is application context and the server re-derives membership on every request (ADR-37 round 2).
-- Roles: `tenant_owner`, `branch_manager`, `receptionist`, `staff`. The memberships role enum contains **no other value** — `platform_admin` is an ops path, never a standing data role or a frontend route-guard role; impersonation is explicit, time-boxed, audit-logged, visible to the tenant owner, and rendered as a persistent impersonation banner (NFR-1, ADR-20 rule 9). Role grants: `tenant_owner` grants are owner-only; branch managers may grant only `receptionist`/`staff` in their own branch; all grants are audited.
-- Refunds and voids are owner/manager-only; receptionists keep checkout, discounts, and tips (ADR-10 round 2, F-perm-1). The client CSV import is owner-only (round 2, F-perm-3).
-- Feature gating uses `plan_features` entitlements (ADR-18); **runtime feature flags are not used in MVP** (round 2, G-5). Introducing runtime flags requires a new ADR.
+- `memberships(user_id, tenant_id, role, branch_id, is_active)` is the authorization source. `branch_id = sentinel` means all branches; a specific branch scopes the role to it. A user may hold different roles at different branches; the union of capabilities applies, scoped per branch (requirements §3 matrix).
+- Roles: `tenant_owner`, `branch_manager`, `receptionist`, `staff`. Platform admin is an ops path, never a standing data role; impersonation is explicit, time-boxed, audit-logged, and visible to the tenant owner (NFR-1).
 - Isolation invariants (requirements §2.5), each with a pgTAP test:
   1. No query path returns another tenant's rows — enforced by RLS.
   2. Branch-scoped roles never read/write another branch's appointments, shifts, sales, payments, or financial reports, even by guessing IDs.
-  3. Client records read tenant-wide; their financial aggregates respect the caller's branch scope (ADR-11). Stated explicitly (round 2, F-walk-3): branch isolation applies to appointments, sales, payments, shifts, and reports, while client records — including allergies and notes — are intentionally tenant-visible for safety (a therapist at branch B must see allergies recorded at branch A). This is by design, not a leak; training material and QA scripts say so.
+  3. Client records read tenant-wide; their financial aggregates respect the caller's branch scope (ADR-11).
   4. Archiving a branch never deletes its history (ADR-46).
 - Clients are tenant-scoped and shared across branches; appointments and sales always record their branch (ADR-11).
 - Staff are single tenant records with per-branch assignments; conflict checks span all branches (ADR-12, ADR-24).
@@ -168,11 +163,10 @@ Default reads and simple writes go through supabase-js under RLS; invariant-bear
 | Path | Allowed directly (supabase-js under RLS) | Must use Edge Function / RPC |
 |---|---|---|
 | Reads | Lists, details, calendar reads, own profile, report views (`security_invoker`), report RPCs | Heavy aggregation not expressible as a view/RPC |
-| Writes | `profiles` (self), `client_notes` (receptionist+), `clients` (contact/profile fields only, receptionist+ — `is_blocked`, `is_deleted`, `merged_into` are carved out and route through the `clients` function with role checks + audit; the staff role has no direct client writes, round 2 F-4/F-perm-2), `settings` (role-gated), `shifts` (manager-gated) | `appointments`, `appointment_items`, `booking_overrides`, `sales`, `sale_items`, `payments`, `register_sessions`, `invoice_counters`, `tips`, `blocked_times` (locked staff RPC only — cross-entity booking lock, round 2 F-DB-6), `memberships`, `tenants`, `branches`, `service_branch_overrides`/`services` when pricing changes, `audit_log` |
+| Writes | `profiles` (self), `client_notes`, `clients` (non-financial fields), `settings` (role-gated), `blocked_times` (own branch), `shifts` (manager-gated) | `appointments`, `appointment_items`, `booking_overrides`, `sales`, `sale_items`, `payments`, `register_sessions`, `invoice_counters`, `tips`, `memberships`, `tenants`, `branches`, `service_branch_overrides`/`services` when pricing changes, `audit_log` |
 
 Rules of thumb:
 - If a write touches money, a conflict/constraint, a cross-table transaction, a side effect (notification, external API), or a secret → Edge Function.
-- Refunds and voids are owner/manager-only, enforced server-side in the `checkout` function — never UI-only gating (ADR-10 round 2, F-perm-1).
 - If RLS + check constraints fully express the authorization on a single table and nothing else must stay consistent → direct write is fine.
 - Direct writes still produce audit rows (triggers fire regardless of path — ADR-22).
 - Adding a table to the direct-write allowlist requires a PR showing the RLS policies and constraints that make it safe.
@@ -183,9 +177,8 @@ Rules of thumb:
 - **RLS / tenancy (pgTAP)**: every policy tested per table, per operation (SELECT/INSERT/UPDATE/DELETE), per role, plus cross-tenant, cross-branch, and anon cases; Realtime channel authorization tested for tenant/branch leakage (ADR-20, ADR-38). Runs in CI on every migration.
 - **Database integrity**: concurrency tests are acceptance tests for booking — two simultaneous bookings of the same staff/slot, booking into a blocked span, reschedule into an occupied slot must all fail closed (ADR-24). Money rounding and invoice-sequence races covered. Time-zone/DST and overnight-span conversion tests for the availability engine and report grouping (ADR-26, ADR-45).
 - **Backend (Deno)**: `deno test --allow-all supabase/functions/`; per-handler tests against a local Supabase with seeded fixtures; envelope and error-code contract tests; idempotency replay tests.
-- **Frontend (Vitest + Testing Library)**: `packages/core` (time/price/booking math) ≥ 95% coverage; feature logic (queries/mutations/mappers) ≥ 70%; no snapshot tests except design-skill wrappers. Money math tests use the ADR-51 golden fixtures. Degraded-network UX (round 2, F-fe-3): a mutation that times out surfaces a "Reconnecting…" banner and its retry reuses the same idempotency key so re-submission never duplicates a charge; queries fall back to stale cache with a "trying again in N seconds" indicator; **no offline-first writes in MVP** — a clear network error message is acceptable, full offline is a later decision.
-- **E2E (Playwright)**: one suite per critical journey — login, create booking (drag + form), reschedule-drag with conflict rollback, cash checkout, refund/void, client CRUD, register open/close, branch switch, a report reconciliation. Critical journeys run in both `en`/LTR and `ar`/RTL (ADR-40). Missing Arabic translations fail CI. Mixed-direction rendering has its own case (round 2, F-i18n-1): an Arabic name containing a Latin phone number/email renders with bidi isolation (`<bdi>` / `dir="auto"` / `unicode-bidi: isolate`, i18n-rtl skill) in receipts, client lists, and appointment cards.
-- **Clean-migration gate (round 2, F-verifier-2)**: CI applies the full active migration set to an empty database on the pinned CLI (`supabase db reset`), regenerates types (`supabase gen types` — drift fails), typechecks/builds every function, runs `supabase test db` (pgTAP) and the adversarial fixture suite (cross-tenant, cross-branch, money, and booking negatives). The job fails if any path under `sql/drafts-v1/` is referenced by the active migration path (CI greps for it).
+- **Frontend (Vitest + Testing Library)**: `packages/core` (time/price/booking math) ≥ 95% coverage; feature logic (queries/mutations/mappers) ≥ 70%; no snapshot tests except design-skill wrappers.
+- **E2E (Playwright)**: one suite per critical journey — login, create booking (drag + form), reschedule-drag with conflict rollback, cash checkout, refund/void, client CRUD, register open/close, branch switch, a report reconciliation. Critical journeys run in both `en`/LTR and `ar`/RTL (ADR-40). Missing Arabic translations fail CI.
 - **Accessibility**: axe-core assertions on main flows; keyboard-complete calendar and checkout (WCAG 2.1 AA, NFR-13).
 - **Performance budgets** (size-limit + interaction budgets in CI): back-office initial JS ≤ 250 kB gzip; calendar chunk ≤ 150 kB; drag frame ≤ 16 ms; day view of a busy branch ≤ 2 s p95; slot computation ≤ 300 ms p95; booking round-trip ≤ 1 s p95 (NFR-4).
 - `pnpm verify` = typecheck + lint + unit + build; it must pass locally before a PR and runs in CI on the diff graph. E2E nightly and pre-release.
@@ -193,7 +186,6 @@ Rules of thumb:
 ## 8. Git workflow
 
 - **Branches**: `main` (production, protected), `staging` (preview branch, protected), short-lived feature branches `feat/<area>-<slug>`, fixes `fix/<slug>`, migrations `db/<slug>`. Supabase preview branches back `staging`.
-- **Environments (round 2, G-6)**: local dev = Supabase CLI stack; `staging` = a Supabase preview-branch project; `production` = a paid-plan Supabase project in the ADR-48 region. CI deploys migrations/functions/frontend to staging on merges to `staging` and to production **only from `main`**; feature branches get ephemeral preview-branch databases for migration testing.
 - **Commits**: Conventional Commits — `type(scope): subject`, imperative, ≤ 72 chars. Types: `feat`, `fix`, `db`, `fn` (Edge Function), `refactor`, `test`, `docs`, `chore`, `i18n`. Scope is the bounded context or package (`bookings`, `checkout`, `clients`, `ui`, `api`). Example: `db(bookings): add exclusion constraint on appointment_items busy_range`.
 - **PRs**: one PR per backlog task (small enough to review in one sitting). A PR that changes a function's API includes the frontend change (same monorepo). PR checklist below; reviewers enforce the allowlist (section 6), the naming authority (ADR-15), and money-as-integers (ADR-17).
 - **PR checklist**:

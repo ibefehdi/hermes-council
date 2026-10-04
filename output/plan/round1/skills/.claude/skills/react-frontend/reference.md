@@ -4,7 +4,7 @@
 
 ```
 apps/back-office/          Vite SPA (staff/manager/owner) - MVP
-apps/booking/              client-facing booking app (plan Phase 9, scaffold only)
+apps/booking/              client-facing booking app (Phase 2, scaffold only)
 packages/ui/               wraps Airbnb design-skill primitives/tokens - only layer allowed to import them
 packages/db/               database.types.ts (supabase gen types, committed, CI drift-checked) + createTypedClient
 packages/api/              typed Edge Function invoke wrappers + ApiError + useRealtime
@@ -45,7 +45,7 @@ Branch scope lives in the URL search param `?branch=<uuid>|all` (TanStack Router
 
 ## Calendar integration notes
 
-schedule-x (premium resource views if the ADR-41 spike said go; otherwise core + custom resource columns) is wrapped by `features/calendar/components/BookingCalendar`; never imported outside `features/calendar`. `mappers.ts` converts `Appointment` (UTC timestamptz envelope + item spans) ↔ calendar events (branch-local datetimes, `resourceId: staffId`); the library never sees timezone math. Week start, time format, and slot step come from the branch's `first_day_of_week` / `time_format` / `slot_step_minutes` (ADR-52, round 2 F-cov-7) threaded into the schedule-x locale config and the shift grid. Drag-to-reschedule: the drag is the optimistic update; `bookingApi.reschedule` confirms or the event rolls back on `CONFLICT` with `details.conflicting_appointment_id` shown in the toast. Views: day (one column per working staff member of the selected branch, honouring shifts), week, and "my day" for single-staff logins (all assigned branches merged, labelled). Staff columns virtualize beyond ~8. Performance budgets: drag frame ≤ 16ms; busy-branch day view (30 staff / 200 appointments) ≤ 2s p95; calendar chunk ≤ 150kB gzip.
+schedule-x (premium resource views if the ADR-41 spike said go; otherwise core + custom resource columns) is wrapped by `features/calendar/components/BookingCalendar`; never imported outside `features/calendar`. `mappers.ts` converts `Appointment` (UTC timestamptz envelope + item spans) ↔ calendar events (branch-local datetimes, `resourceId: staffId`); the library never sees timezone math. Drag-to-reschedule: the drag is the optimistic update; `bookingApi.reschedule` confirms or the event rolls back on `CONFLICT` with `details.conflicting_appointment_id` shown in the toast. Views: day (one column per working staff member of the selected branch, honouring shifts), week, and "my day" for single-staff logins (all assigned branches merged, labelled). Staff columns virtualize beyond ~8. Performance budgets: drag frame ≤ 16ms; busy-branch day view (30 staff / 200 appointments) ≤ 2s p95; calendar chunk ≤ 150kB gzip.
 
 ## Money and time in components
 
