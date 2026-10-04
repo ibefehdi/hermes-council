@@ -63,7 +63,7 @@ for role in $ROLES; do
   [[ $p == openrouter ]] && needs_openrouter=true
 done
 
-OR_KEY=${OPENROUTER_API_KEY:-}
+OR_KEY=${OPENROUTER_API_KEY:-$(grep '^OPENROUTER_API_KEY=' .env 2>/dev/null | tail -1 | cut -d= -f2- | tr -d "\"'")}
 if $needs_openrouter && [[ -z $OR_KEY ]]; then
   for role in $ROLES; do
     f="$HOME/.hermes/profiles/$role/.env"
@@ -73,8 +73,9 @@ if $needs_openrouter && [[ -z $OR_KEY ]]; then
   if [[ -z $OR_KEY && -t 0 ]]; then
     read -s "OR_KEY?OpenRouter API key (input hidden): " && print
   fi
-  [[ -z $OR_KEY ]] && print "!! No OpenRouter key set. Re-run with OPENROUTER_API_KEY=... ./setup.sh"
+  [[ -z $OR_KEY ]] && print "!! No OpenRouter key set. Add OPENROUTER_API_KEY to $DIR/.env and re-run ./setup.sh"
 fi
+[[ -n $OR_KEY ]] && set_env .env OPENROUTER_API_KEY "$OR_KEY"
 
 for role in $ROLES; do
   print "==> Configuring profile: $role"

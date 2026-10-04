@@ -7,6 +7,14 @@ cd "$DIR"
 DASHBOARD_URL=$(grep '^DASHBOARD_URL=' "$DIR/.env" 2>/dev/null | tail -1 | cut -d= -f2- | tr -d "\"'")
 : "${DASHBOARD_URL:?Set DASHBOARD_URL in $DIR/.env}"
 
+OR_KEY=$(grep '^OPENROUTER_API_KEY=' "$DIR/.env" | tail -1 | cut -d= -f2- | tr -d "\"'")
+: "${OR_KEY:?Set OPENROUTER_API_KEY in $DIR/.env}"
+for role in cartographer linker verifier chair; do
+  f="${$(hermes -p $role config path):h}/.env"
+  { grep -v '^OPENROUTER_API_KEY=' "$f" 2>/dev/null || true; print -r -- "OPENROUTER_API_KEY=$OR_KEY"; } > "$f.tmp"
+  mv "$f.tmp" "$f" && chmod 600 "$f"
+done
+
 if ! node "$DIR/login.mjs" --check; then
   print "A browser window will open: log in (enter your OTP). The session is saved automatically."
   node "$DIR/login.mjs"
