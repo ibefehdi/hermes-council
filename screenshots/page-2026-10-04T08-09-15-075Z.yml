@@ -1,0 +1,209 @@
+- generic [active] [ref=f24e1]:
+  - generic [ref=f24e2]:
+    - generic [ref=f24e3]:
+      - generic [ref=f24e4]:
+        - link "Fresha" [ref=f24e6] [cursor=pointer]:
+          - /url: /calendar
+          - img "Fresha"
+        - generic [ref=f24e7]:
+          - button [ref=f24e9] [cursor=pointer]:
+            - paragraph [ref=f24e11]: Continue setup
+          - button "Search" [ref=f24e13] [cursor=pointer]
+          - button "Performance insights" [ref=f24e15] [cursor=pointer]
+          - button "Notifications" [ref=f24e18] [cursor=pointer]
+          - link "Fresha Connect" [ref=f24e20] [cursor=pointer]:
+            - /url: /connect
+          - button "Open user menu" [ref=f24e22] [cursor=pointer]:
+            - generic [ref=f24e23]: FA
+      - generic [ref=f24e25]:
+        - generic [ref=f24e26]:
+          - generic [ref=f24e29]:
+            - generic [ref=f24e30]:
+              - link [ref=f24e33] [cursor=pointer]:
+                - /url: /dashboard
+              - link [ref=f24e37] [cursor=pointer]:
+                - /url: /calendar
+              - button [ref=f24e41] [cursor=pointer]
+              - button [ref=f24e45] [cursor=pointer]
+              - button [ref=f24e49] [cursor=pointer]
+              - button [ref=f24e53] [cursor=pointer]
+              - button [ref=f24e57] [cursor=pointer]
+              - button [ref=f24e61] [cursor=pointer]
+              - link [ref=f24e65] [cursor=pointer]:
+                - /url: /reports
+              - link [ref=f24e69] [cursor=pointer]:
+                - /url: /add-ons
+              - link [ref=f24e73] [cursor=pointer]:
+                - /url: /setup
+            - button [ref=f24e77] [cursor=pointer]
+          - generic [ref=f24e80]:
+            - button "Collapse Navigation Menu" [ref=f24e82] [cursor=pointer]
+            - generic [ref=f24e88]:
+              - generic [ref=f24e89]:
+                - paragraph [ref=f24e90]: Catalog
+                - link [ref=f24e92] [cursor=pointer]:
+                  - /url: /catalogue/services
+                  - paragraph [ref=f24e93]: Service menu
+                - link [ref=f24e95] [cursor=pointer]:
+                  - /url: /catalogue/packages
+                  - paragraph [ref=f24e96]: Packages
+                - link [ref=f24e98] [cursor=pointer]:
+                  - /url: /catalogue/products
+                  - paragraph [ref=f24e99]: Products
+              - separator [ref=f24e101]
+              - generic [ref=f24e102]:
+                - paragraph [ref=f24e103]: Inventory
+                - link [ref=f24e105] [cursor=pointer]:
+                  - /url: /catalogue/stocktakes
+                  - paragraph [ref=f24e106]: Stocktakes
+                - link [ref=f24e108] [cursor=pointer]:
+                  - /url: /catalogue/orders
+                  - paragraph [ref=f24e109]: Stock orders
+                - link [ref=f24e111] [cursor=pointer]:
+                  - /url: /catalogue/suppliers
+                  - paragraph [ref=f24e112]: Suppliers
+        - generic [ref=f24e618]:
+          - generic [ref=f24e620]:
+            - generic [ref=f24e621]:
+              - generic [ref=f24e622]:
+                - paragraph [ref=f24e623]: Product list
+                - generic [ref=f24e624]: "1"
+              - paragraph [ref=f24e625]:
+                - paragraph [ref=f24e626]:
+                  - text: Add and manage your products in stock.
+                  - link "Learn more" [ref=f24e627] [cursor=pointer]:
+                    - /url: https://www.fresha.com/help-center/knowledge-base/inventory/153-add-products-to-your-inventory
+            - generic [ref=f24e629]:
+              - button "Options" [ref=f24e632] [cursor=pointer]
+              - button "Add" [ref=f24e637] [cursor=pointer]
+          - generic [ref=f24e642]:
+            - generic [ref=f24e644]:
+              - generic [ref=f24e645]:
+                - generic [ref=f24e646]:
+                  - generic [ref=f24e647]: Search
+                  - textbox "Search" [ref=f24e652]:
+                    - /placeholder: Search by product name or barcode
+                - button "Filters" [ref=f24e653] [cursor=pointer]
+              - button "Updated (newest first)" [ref=f24e662] [cursor=pointer]
+            - region [ref=f24e667]:
+              - generic [ref=f24e668]:
+                - table [ref=f24e671]:
+                  - rowgroup [ref=f24e679]:
+                    - row [ref=f24e680]:
+                      - columnheader "Select all displayed products Select all displayed products" [ref=f24e681]:
+                        - generic [ref=f24e683] [cursor=pointer]:
+                          - paragraph [ref=f24e686]: Select all displayed products
+                          - checkbox "Select all displayed products" [ref=f24e687]
+                      - columnheader [ref=f24e688]:
+                        - button "Product name" [ref=f24e691] [cursor=pointer]
+                      - columnheader [ref=f24e693]:
+                        - button "Category" [ref=f24e696] [cursor=pointer]
+                      - columnheader [ref=f24e698]:
+                        - button "Supplier" [ref=f24e701] [cursor=pointer]
+                      - columnheader [ref=f24e703]:
+                        - button "Quantity" [ref=f24e706] [cursor=pointer]
+                      - columnheader [ref=f24e708]:
+                        - button "Retail price" [ref=f24e711] [cursor=pointer]
+                - table [ref=f24e714]:
+                  - rowgroup [ref=f24e722]:
+                    - button [ref=f24e723] [cursor=pointer]:
+                      - cell "Select COUNCIL-TEST Product1 Select COUNCIL-TEST Product1" [ref=f24e724]:
+                        - generic [ref=f24e725]:
+                          - paragraph [ref=f24e728]: Select COUNCIL-TEST Product1
+                          - checkbox "Select COUNCIL-TEST Product1" [ref=f24e729]
+                      - cell [ref=f24e730]:
+                        - paragraph [ref=f24e734]: COUNCIL-TEST Product1
+                      - cell [ref=f24e735]:
+                        - paragraph [ref=f24e736]: "-"
+                      - cell [ref=f24e737]:
+                        - paragraph [ref=f24e738]: "-"
+                      - cell "0" [ref=f24e739]
+                      - cell "-" [ref=f24e740]
+            - generic [ref=f24e742]:
+              - generic [ref=f24e743]: Viewing results 1 to 1 of 1
+              - paragraph [ref=f24e745]: Viewing 1 - 1 of 1 results
+    - status [ref=f24e746]:
+      - paragraph [ref=f24e748]: Product edited
+      - button "Close Toast" [ref=f24e750] [cursor=pointer]
+  - dialog [ref=f24e755]:
+    - generic [ref=f24e756]:
+      - button "Close Drawer" [ref=f24e758] [cursor=pointer]
+      - generic [ref=f24e764]:
+        - generic [ref=f24e767]:
+          - generic [ref=f24e776]:
+            - paragraph [ref=f24e777]: COUNCIL-TEST Product1
+            - generic [ref=f24e778]: 0 in stock
+          - button "Actions" [ref=f24e782] [cursor=pointer]
+        - separator [ref=f24e787]
+        - list [ref=f24e790]:
+          - listitem [ref=f24e791]:
+            - list [ref=f24e792]:
+              - listitem [ref=f24e793] [cursor=pointer]:
+                - button [ref=f24e794]
+                - paragraph [ref=f24e797]: Product details
+              - listitem [ref=f24e798] [cursor=pointer]:
+                - button [ref=f24e799]
+                - paragraph [ref=f24e802]: Stock orders
+              - listitem [ref=f24e803] [cursor=pointer]:
+                - button [ref=f24e804]
+                - paragraph [ref=f24e807]: Sales
+              - listitem [ref=f24e808] [cursor=pointer]:
+                - button [ref=f24e809]
+                - paragraph [ref=f24e812]: Stock history
+      - generic [ref=f24e814]:
+        - generic [ref=f24e818]:
+          - link "Edit" [ref=f24e820] [cursor=pointer]:
+            - /url: /catalogue/products/13279305/edit
+          - heading "Product details" [level=1] [ref=f24e827]
+        - generic [ref=f24e830]:
+          - generic [ref=f24e833]:
+            - paragraph [ref=f24e834]: Basic info
+            - generic [ref=f24e835]:
+              - generic [ref=f24e837]:
+                - paragraph [ref=f24e838]: Product barcode
+                - paragraph [ref=f24e839]: "-"
+              - generic [ref=f24e841]:
+                - paragraph [ref=f24e842]: Brand
+                - paragraph [ref=f24e843]: "-"
+              - generic [ref=f24e845]:
+                - paragraph [ref=f24e846]: Product category
+                - paragraph [ref=f24e847]: "-"
+              - generic [ref=f24e849]:
+                - paragraph [ref=f24e850]: Supplier
+                - paragraph [ref=f24e851]: "-"
+              - generic [ref=f24e853]:
+                - paragraph [ref=f24e854]: Amount
+                - paragraph [ref=f24e855]: "-"
+            - generic [ref=f24e856]:
+              - paragraph [ref=f24e858]: Short description
+              - generic [ref=f24e859]: "-"
+            - generic [ref=f24e861]:
+              - paragraph [ref=f24e862]: Product description
+              - paragraph [ref=f24e864]: "COUNCIL-TEST: verified edit for link mapping"
+          - generic [ref=f24e867]:
+            - paragraph [ref=f24e868]: Stock info
+            - generic [ref=f24e869]:
+              - generic [ref=f24e871]:
+                - paragraph [ref=f24e872]: Primary SKU
+                - paragraph [ref=f24e873]: "-"
+              - generic [ref=f24e875]:
+                - paragraph [ref=f24e876]: Stock on hand
+                - paragraph [ref=f24e877]: "0"
+              - generic [ref=f24e879]:
+                - paragraph [ref=f24e880]: Retail price
+                - paragraph [ref=f24e881]: "-"
+              - generic [ref=f24e883]:
+                - paragraph [ref=f24e884]: Total retail value
+                - paragraph [ref=f24e885]: "-"
+              - generic [ref=f24e887]:
+                - paragraph [ref=f24e888]: Supply price
+                - paragraph [ref=f24e889]: "-"
+              - generic [ref=f24e891]:
+                - paragraph [ref=f24e892]: Total supply value
+                - paragraph [ref=f24e893]: "-"
+              - generic [ref=f24e895]:
+                - paragraph [ref=f24e896]: Average cost
+                - paragraph [ref=f24e897]: KWD 0
+              - generic [ref=f24e899]:
+                - paragraph [ref=f24e900]: Total cost
+                - paragraph [ref=f24e901]: KWD 0

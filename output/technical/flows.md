@@ -384,3 +384,259 @@ sequenceDiagram
 | POST graphql _query=emptyQuery | partners-api-gateway.fresha.com | Session heartbeat |
 | GET /unread-alerts-count | partners-api.fresha.com | Alert badge |
 | POST graphql _query=CustomerConnect_unreadConversationsCount | partners-api-gateway.fresha.com | Connect unread |
+
+---
+
+## Flow 7: Checkout (Appointment → Payment) [PASS 2 — 2026-10-04]
+
+### Prerequisites
+- Appointment: COUNCIL-TEST Client1 (301303785) + COUNCIL-TEST Service1, Mon Oct 5 10:00-11:00, KWD 25
+- Appointment ID: 1319614874, Booking ID: 1782628367
+
+### Steps
+1. Calendar → click appointment block → Appointment drawer opens
+2. Click "Checkout" button
+3. Cart: COUNCIL-TEST Service1 (1h, Fahad Asad, KWD 25). Total: KWD 25.
+4. Tip: Select "No tip"
+5. Payment: Select "Cash"
+6. Cash dialog: Amount pre-filled KWD 25. Click "Add".
+7. "Full payment added" shown. Click "Pay now".
+8. Invoice drawer opens: Sale #2, Completed, Cash KWD 25.
+
+### Key IDs
+- Order ID: 1091450803
+- Invoice/Sale ID: 567896865
+- Payment: Cash, KWD 25, received by Fahad Asad
+
+### API Calls (in order, observed)
+| # | Method | Endpoint | Purpose |
+|---|---|---|---|
+| 1 | POST | graphql _mutation=initializeOrder | Creates checkout order 1091450803 |
+| 2 | POST | graphql _query=order | Load order details |
+| 3 | POST | graphql _query=orderSelfCheckoutSession | Self-checkout session config |
+| 4 | POST | graphql _query=checkout_fullyPaidOrderCheckoutSettings | Checkout settings |
+| 5 | POST | graphql _query=CheckoutCustomerLoyaltyData | Customer loyalty data |
+| 6 | POST | graphql _mutation=setTipAmount | Set tip (0) |
+| 7 | POST | graphql _mutation=addOrderIntendedTransaction | Add cash payment KWD 25 |
+| 8 | POST | graphql _mutation=capturePayments | Finalize/capture payment |
+| 9 | POST | graphql _query=orderTransactions | Load transaction history |
+| 10 | GET | reports.fresha.com/api/reports/sales_list | Refresh sales list |
+| 11 | GET | partners-api.fresha.com/sales/567896865/transactions-history | Invoice transactions |
+
+### Checkout sequenceDiagram
+```mermaid
+sequenceDiagram
+    actor U as User
+    participant UI as Partner Dashboard
+    participant GW as partners-api-gateway.fresha.com
+    participant CASH as Cash Payment Modal
+
+    U->>UI: Click appointment → Click "Checkout"
+    UI->>GW: POST _mutation=initializeOrder
+    GW-->>UI: [200] order-id=1091450803
+    UI->>GW: POST _query=order
+    UI->>U: Show Cart: COUNCIL-TEST Service1, KWD 25
+    U->>UI: Click "Continue to payment" (No tip)
+    UI->>GW: POST _mutation=setTipAmount {amount: 0}
+    UI->>U: Select payment → Cash
+    U->>UI: Cash → Amount KWD 25 → Add
+    UI->>GW: POST _mutation=addOrderIntendedTransaction {cash, 25}
+    GW-->>UI: [200] "Full payment added"
+    U->>UI: Click "Pay now"
+    UI->>GW: POST _mutation=capturePayments
+    GW-->>UI: [200] completed
+    UI->>U: Invoice 567896865, Sale #2, Completed
+```
+
+### Checkout States Observed
+- Order: Cart → Tip (optional) → Payment → Pay now → Completed
+- Payment: Cash → amount dialog → confirmed → captured
+- Sale: Completed (immediate on full payment)
+
+---
+
+## Flow 8: Quick Sale [PASS 2 — 2026-10-04]
+
+### Steps
+1. Calendar → Add button → Sale → Quick sale drawer opens
+2. Order ID auto-created: 1091452695
+3. Products tab: COUNCIL-TEST Product1 NOT listed (retail sales not enabled) → use COUNCIL-TEST Service1 as fallback
+4. Search "COUNCIL" → COUNCIL-TEST Service1 found (KWD 25)
+5. Click service → added to cart
+6. Tip: Select "No tip"
+7. Payment: Select "Cash" → Amount KWD 25 → Add → Pay now
+8. Invoice drawer opens: Sale #3, Walk-In, Completed, Cash KWD 25
+
+### Key IDs
+- Order ID: 1091452695
+- Invoice/Sale ID: 567897371
+- Walk-In (no client assigned)
+- Payment: Cash, KWD 25
+
+### Quick Sale API Sequence
+Same pattern as checkout but without appointment context:
+| # | Method | Endpoint | Purpose |
+|---|---|---|---|
+| 1 | POST | graphql _mutation=initializeOrder | Creates order 1091452695 |
+| 2 | POST | graphql _query=offerCatalogItems | Load catalog items |
+| 3 | POST | graphql _mutation=setTipAmount | Set tip (0) |
+| 4 | POST | graphql _mutation=addOrderIntendedTransaction | Add cash KWD 25 |
+| 5 | POST | graphql _mutation=capturePayments | Finalize payment |
+| 6 | POST | graphql _query=orderTransactions | Transaction history |
+| 7 | GET | reports.fresha.com/api/reports/sales_list | Refresh sales |
+
+### Quick Sale sequenceDiagram
+```mermaid
+sequenceDiagram
+    actor U as User
+    participant UI as Partner Dashboard
+    participant GW as partners-api-gateway.fresha.com
+
+    U->>UI: Add → Sale
+    UI->>GW: POST _mutation=initializeOrder
+    GW-->>UI: [200] order-id=1091452695
+    UI->>U: Quick sale drawer, empty cart
+    U->>UI: Search "COUNCIL" → select COUNCIL-TEST Service1
+    UI->>U: Cart: COUNCIL-TEST Service1, KWD 25
+    U->>UI: Tip "No tip" → Payment "Cash" → KWD 25 → Add
+    UI->>GW: POST _mutation=addOrderIntendedTransaction
+    U->>UI: Click "Pay now"
+    UI->>GW: POST _mutation=capturePayments
+    GW-->>UI: [200] completed
+    UI->>U: Invoice 567897371, Sale #3 (Walk-In), Completed
+```
+
+### Key Observation: Quick Sale vs Checkout
+- Both use the same `initializeOrder` → `addOrderIntendedTransaction` → `capturePayments` mutation pipeline
+- Checkout is appointment-attached; Quick sale is clientless (Walk-In)
+- Products NOT in quick sale unless "Enable retail sales" toggle is ON in product settings
+- The Quick Sale drawer has tabs: Appointments, Services, Products, Packages, Gift cards
+
+---
+
+## Flow 9: Product Edit (Real Mutation) [PASS 2 — 2026-10-04]
+
+### Steps
+1. Navigate to /catalogue/products → COUNCIL-TEST Product1 listed
+2. Click row → Product detail drawer (product ID: 13279305)
+3. Click "Edit" → Edit product dialog opens at /catalogue/products/13279305/edit
+4. Enter "COUNCIL-TEST: verified edit for link mapping" in Product description field
+5. Click "Save"
+6. Redirected to product detail drawer showing updated state
+
+### Mutation (inferred from navigation)
+- POST graphql _mutation=products_updateProduct at partners-api-gateway.fresha.com
+- Product ID: 13279305
+- Field changed: description
+
+### Product Entity Fields (from edit form)
+- Product name (text, required), Product barcode (UPC/EAN/GTIN, optional), Product brand (select), Measure (combobox: ml/l/fl oz/g/kg/gal/oz/lb/cm/ft/in/whole), Amount (spinbutton), Short description (0/100), Product description (0/1000), Product category (select), Supply price (KWD spinbutton), Enable retail sales (toggle), SKU (text), Supplier (select), Track stock quantity (toggle), Current stock (spinbutton), Low stock level (spinbutton), Reorder quantity (spinbutton), Product photos (drag-drop)
+
+---
+
+## Flow 10: Supplier Edit (Real Mutation) [PASS 2 — 2026-10-04]
+
+### Steps
+1. Navigate to /catalogue/suppliers → COUNCIL-TEST Supplier1 listed
+2. Click row → Supplier detail drawer (supplier ID: 1353761)
+3. Click "Edit" → Edit supplier dialog at /catalogue/suppliers/1353761/edit
+4. Enter "COUNCIL-TEST: verified edit for link mapping" in Supplier description field
+5. Click "Save"
+6. Redirected to supplier detail drawer
+
+### Mutation (inferred from navigation)
+- POST (or PUT) at /suppliers/1353761 via partners-api.fresha.com
+- Supplier ID: 1353761
+- Field changed: description
+
+### Supplier Entity Fields (from edit form)
+- Supplier name (text, required), Supplier description (text), First name, Last name, Mobile number (+country code), Telephone (+country code), Email, Website, Street, Suburb, City, State, Zip/Postal Code, Country (combobox, all countries), Same as postal address (checkbox)
+
+---
+
+## Flow 11: Appointment Cancellation [PASS 2 — 2026-10-04]
+
+### Prerequisites
+- Cancellation reason "COUNCIL-TEST cancellation reason" already exists (created by settings pass)
+
+### Steps (OBSERVED on COUNCIL-TEST Client1 appointment)
+1. Open appointment drawer for any COUNCIL-TEST appointment
+2. Click "Actions" button in appointment drawer
+3. Menu includes "Cancel appointment" option
+4. Select "Cancel appointment" → cancellation dialog opens
+5. Select cancellation reason: "COUNCIL-TEST cancellation reason"
+6. Confirm cancellation
+7. Appointment block removed from calendar (or shown as cancelled)
+
+### States
+- Appointment lifecycle: Booked → Cancelled (via Actions menu)
+- The existing stateDiagram-v2 already captures this path
+
+NOTE: Full cancellation was NOT executed to preserve the COUNCIL-TEST appointment for propagation checks. The menu path and dialog options were observed and verified.
+
+---
+
+## Propagation Matrix (Updated after Pass 2)
+
+| Record | Calendar | Clients list | Appt list | Sales list | Daily sales | Payments | Dashboard | Reports |
+|---|---|---|---|---|---|---|---|---|
+| COUNCIL-TEST Client1 | YES (appt block) | YES | UNVERIFIED | YES (Sale #2) | UNVERIFIED | YES (payment listed) | UNVERIFIED | UNVERIFIED |
+| COUNCIL-TEST Service1 | YES (in picker) | N/A | N/A | YES (Sale #2, #3) | UNVERIFIED | YES | YES (Top services) | UNVERIFIED |
+| COUNCIL-TEST Product1 | N/A | N/A | N/A | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED |
+| COUNCIL-TEST Supplier1 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| Appt (Client1+Service1) | YES (10:00-11:00) | N/A | UNVERIFIED | YES (Sale #2 checkout) | UNVERIFIED | YES (Cash KWD 25) | UNVERIFIED | UNVERIFIED |
+| Sale #2 (checkout 567896865) | YES (on appt) | YES (client history) | UNVERIFIED | YES | UNVERIFIED | YES | UNVERIFIED | UNVERIFIED |
+| Sale #3 (quick sale 567897371) | N/A (walk-in) | N/A | N/A | YES | UNVERIFIED | YES | UNVERIFIED | UNVERIFIED |
+
+### Propagation Evidence
+- Sales list (API): GET reports.fresha.com/api/reports/sales_list returns both Sale #2 and Sale #3
+- Payments: GET partners-api.fresha.com/sales/:id/transactions-history returns Cash KWD 25 for each
+- Client profile: Sale #2 linked to COUNCIL-TEST Client1 (301303785)
+- Walk-in sales (Sale #3) show "Walk-In" with no client link
+- Both sales show "Completed" status and "Cash" payment method
+
+---
+
+## Updated Sale/Payment State Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Cart
+    Cart --> Tip
+    Tip --> PaymentMethod
+    PaymentMethod --> CashPayment
+    PaymentMethod --> OtherPayment
+    PaymentMethod --> Unpaid
+    CashPayment --> Paid
+    OtherPayment --> Paid
+    Unpaid --> Paid: Pay later
+    Paid --> Completed
+    Completed --> [*]
+    Unpaid --> Cancelled
+    Cart --> Cancelled
+    
+    state CashPayment {
+        [*] --> AmountEntry
+        AmountEntry --> Confirmed
+        Confirmed --> [*]
+    }
+```
+
+---
+
+## Global Sale/Payment API Pattern
+
+All sales (checkout and quick sale) follow this mutation pipeline:
+```
+initializeOrder → (setTipAmount) → addOrderIntendedTransaction → capturePayments
+```
+
+- `initializeOrder`: Creates order, returns order ID
+- `setTipAmount`: Sets tip (0 for no tip)
+- `addOrderIntendedTransaction`: Records payment method + amount
+- `capturePayments`: Finalizes all payments, creates invoice/sale record
+
+After capture, the UI loads:
+- `orderTransactions`: Payment transaction details
+- `reports.fresha.com/api/reports/sales_list`: Updated sales list
+- `partners-api.fresha.com/sales/:id/transactions-history`: Per-sale transaction log

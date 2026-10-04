@@ -1,0 +1,1253 @@
+- generic [ref=f65e1]:
+  - generic [ref=f65e941]:
+    - log [ref=f65e942]:
+      - generic [ref=f65e943]: 869 options available.
+      - generic [ref=f65e944]: Hair consultation, selected
+    - log
+  - generic [ref=f65e12]:
+    - generic [ref=f65e13]:
+      - link [ref=f65e945] [cursor=pointer]:
+        - /url: /calendar
+      - generic [ref=f65e16]:
+        - button [ref=f65e946] [cursor=pointer]:
+          - paragraph [ref=f65e20]: Continue setup
+        - button [ref=f65e947] [cursor=pointer]
+        - button [ref=f65e948] [cursor=pointer]
+        - button [ref=f65e949] [cursor=pointer]
+        - link [ref=f65e950] [cursor=pointer]:
+          - /url: /connect
+        - button [ref=f65e951] [cursor=pointer]:
+          - generic [ref=f65e32]: FA
+    - generic [ref=f65e34]:
+      - generic [ref=f65e35]:
+        - generic [ref=f65e38]:
+          - generic [ref=f65e39]:
+            - link [ref=f65e42] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f65e46] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f65e50] [cursor=pointer]
+            - button [ref=f65e54] [cursor=pointer]
+            - button [ref=f65e58] [cursor=pointer]
+            - button [ref=f65e62] [cursor=pointer]
+            - button [ref=f65e66] [cursor=pointer]
+            - button [ref=f65e70] [cursor=pointer]
+            - link [ref=f65e74] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f65e78] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f65e82] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f65e86] [cursor=pointer]
+        - generic [ref=f65e195]:
+          - button [ref=f65e952] [cursor=pointer]:
+            - generic [ref=f65e198]: Collapse Navigation Menu
+          - generic [ref=f65e203]:
+            - generic [ref=f65e204]:
+              - paragraph [ref=f65e205]: Catalog
+              - link [ref=f65e953] [cursor=pointer]:
+                - /url: /catalogue/services
+                - paragraph [ref=f65e208]: Service menu
+              - link [ref=f65e954] [cursor=pointer]:
+                - /url: /catalogue/packages
+                - paragraph [ref=f65e211]: Packages
+              - link [ref=f65e955] [cursor=pointer]:
+                - /url: /catalogue/products
+                - paragraph [ref=f65e214]: Products
+            - separator [ref=f65e216]
+            - generic [ref=f65e217]:
+              - paragraph [ref=f65e218]: Inventory
+              - link [ref=f65e956] [cursor=pointer]:
+                - /url: /catalogue/stocktakes
+                - paragraph [ref=f65e221]: Stocktakes
+              - link [ref=f65e957] [cursor=pointer]:
+                - /url: /catalogue/orders
+                - paragraph [ref=f65e224]: Stock orders
+              - link [ref=f65e958] [cursor=pointer]:
+                - /url: /catalogue/suppliers
+                - paragraph [ref=f65e227]: Suppliers
+      - generic [ref=f65e236]:
+        - generic [ref=f65e238]:
+          - generic [ref=f65e239]:
+            - paragraph [ref=f65e241]: Service menu
+            - paragraph [ref=f65e242]:
+              - text: View and manage the services offered by your business.
+              - link [ref=f65e959] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/catalog
+                - text: Learn more
+          - generic [ref=f65e245]:
+            - button [ref=f65e960] [cursor=pointer]:
+              - generic [ref=f65e248]: Options
+            - button [ref=f65e961] [cursor=pointer]:
+              - generic [ref=f65e255]: Add
+        - generic [ref=f65e260]:
+          - generic [ref=f65e264]:
+            - generic [ref=f65e266]:
+              - textbox [ref=f65e272]:
+                - /placeholder: Search service name
+              - button [ref=f65e962] [cursor=pointer]:
+                - generic [ref=f65e274]: Filters
+            - button [ref=f65e963] [cursor=pointer]:
+              - generic [ref=f65e281]: Manage order
+          - list [ref=f65e316]:
+            - listitem [ref=f65e317]:
+              - generic [ref=f65e318]: Categories
+              - list [ref=f65e320]:
+                - listitem [ref=f65e321] [cursor=pointer]:
+                  - button [ref=f65e322]
+                  - generic [ref=f65e323]: All categories
+                  - generic: "6"
+                - listitem [ref=f65e621] [cursor=pointer]:
+                  - button [ref=f65e622]
+                  - generic [ref=f65e623]: COUNCIL-TEST Category
+                  - generic: "0"
+                - listitem [ref=f65e325] [cursor=pointer]:
+                  - button [ref=f65e326]
+                  - generic [ref=f65e327]: Hair & styling
+                  - generic: "5"
+                - listitem [ref=f65e329] [cursor=pointer]:
+                  - button [ref=f65e330]
+                  - generic [ref=f65e331]: Eyebrows & eyelashes
+                  - generic: "1"
+                - listitem [ref=f65e333] [cursor=pointer]:
+                  - button [ref=f65e334]
+                  - generic [ref=f65e335]: Add category
+          - generic [ref=f65e338]:
+            - button [ref=f65e964]:
+              - generic [ref=f65e628]:
+                - generic [ref=f65e629]:
+                  - generic [ref=f65e630]:
+                    - paragraph [ref=f65e632]: COUNCIL-TEST Category
+                    - paragraph [ref=f65e633]: Test category for council verification
+                  - button [ref=f65e965] [cursor=pointer]:
+                    - generic [ref=f65e637]: Actions
+                - paragraph [ref=f65e645]: No services
+            - button [ref=f65e966]:
+              - generic [ref=f65e343]:
+                - paragraph [ref=f65e346]: Hair & styling
+                - button [ref=f65e967] [cursor=pointer]:
+                  - generic [ref=f65e350]: Actions
+            - button [ref=f65e968]:
+              - generic [ref=f65e361]:
+                - button [ref=f65e969] [cursor=pointer]
+                - generic [ref=f65e368]:
+                  - generic [ref=f65e370]:
+                    - paragraph [ref=f65e371]: COUNCIL-TEST Service1
+                    - paragraph [ref=f65e372]: 1 hr
+                  - generic [ref=f65e373]:
+                    - generic [ref=f65e374]: KWD 25
+                    - button [ref=f65e970] [cursor=pointer]:
+                      - generic [ref=f65e378]: More
+            - button [ref=f65e971]:
+              - generic [ref=f65e391]:
+                - button [ref=f65e972] [cursor=pointer]
+                - generic [ref=f65e398]:
+                  - generic [ref=f65e400]:
+                    - paragraph [ref=f65e401]: Haircut
+                    - paragraph [ref=f65e402]: 45 min
+                  - generic [ref=f65e403]:
+                    - generic [ref=f65e404]: KWD 40
+                    - button [ref=f65e973] [cursor=pointer]:
+                      - generic [ref=f65e408]: More
+            - button [ref=f65e974]:
+              - generic [ref=f65e421]:
+                - button [ref=f65e975] [cursor=pointer]
+                - generic [ref=f65e428]:
+                  - generic [ref=f65e430]:
+                    - paragraph [ref=f65e431]: Hair Color
+                    - paragraph [ref=f65e432]: 1 hr, 15 min
+                  - generic [ref=f65e433]:
+                    - generic [ref=f65e434]: KWD 57
+                    - button [ref=f65e976] [cursor=pointer]:
+                      - generic [ref=f65e438]: More
+            - button [ref=f65e977]:
+              - generic [ref=f65e451]:
+                - button [ref=f65e978] [cursor=pointer]
+                - generic [ref=f65e458]:
+                  - generic [ref=f65e460]:
+                    - paragraph [ref=f65e461]: Blow Dry
+                    - paragraph [ref=f65e462]: 35 min
+                  - generic [ref=f65e463]:
+                    - generic [ref=f65e464]: KWD 35
+                    - button [ref=f65e979] [cursor=pointer]:
+                      - generic [ref=f65e468]: More
+            - button [ref=f65e980]:
+              - generic [ref=f65e481]:
+                - button [ref=f65e981] [cursor=pointer]
+                - generic [ref=f65e488]:
+                  - generic [ref=f65e490]:
+                    - paragraph [ref=f65e491]: Balayage
+                    - paragraph [ref=f65e492]: 2 hr, 30 min
+                  - generic [ref=f65e493]:
+                    - generic [ref=f65e494]: KWD 150
+                    - button [ref=f65e982] [cursor=pointer]:
+                      - generic [ref=f65e498]: More
+            - button [ref=f65e983]:
+              - generic [ref=f65e508]:
+                - paragraph [ref=f65e511]: Eyebrows & eyelashes
+                - button [ref=f65e984] [cursor=pointer]:
+                  - generic [ref=f65e515]: Actions
+            - button [ref=f65e985]:
+              - generic [ref=f65e526]:
+                - button [ref=f65e986] [cursor=pointer]
+                - generic [ref=f65e533]:
+                  - generic [ref=f65e535]:
+                    - paragraph [ref=f65e536]: Classic Fill
+                    - paragraph [ref=f65e537]: 1 hr
+                  - generic [ref=f65e538]:
+                    - generic [ref=f65e539]: KWD 60
+                    - button [ref=f65e987] [cursor=pointer]:
+                      - generic [ref=f65e543]: More
+  - status [aria-hidden] [ref=f65e549]
+  - dialog "Add new service" [ref=f65e737]:
+    - generic [ref=f65e739]:
+      - generic [ref=f65e740]: Add new service
+      - generic [ref=f65e743]:
+        - button [ref=f65e988] [cursor=pointer]:
+          - generic [ref=f65e745]: Close
+        - button [ref=f65e989] [cursor=pointer]:
+          - generic [ref=f65e749]: Save
+    - generic [ref=f65e756]:
+      - heading [level=1] [ref=f65e990]: Add new service
+      - list [ref=f65e765]:
+        - listitem [ref=f65e766]:
+          - list [ref=f65e767]:
+            - listitem [ref=f65e768] [cursor=pointer]:
+              - button [ref=f65e769]
+              - generic [ref=f65e770]: Basic details
+            - listitem [ref=f65e772] [cursor=pointer]:
+              - button [ref=f65e773]
+              - generic [ref=f65e774]: Team members
+              - generic: "1"
+            - listitem [ref=f65e776] [cursor=pointer]:
+              - button [ref=f65e777]
+              - generic [ref=f65e778]: Resources
+            - listitem [ref=f65e780] [cursor=pointer]:
+              - button [ref=f65e781]
+              - generic [ref=f65e782]: Service add-ons
+          - separator [ref=f65e785]
+        - listitem [ref=f65e786]:
+          - generic [ref=f65e787]: Settings
+          - list [ref=f65e789]:
+            - listitem [ref=f65e790] [cursor=pointer]:
+              - button [ref=f65e791]
+              - generic [ref=f65e792]: Online booking
+            - listitem [ref=f65e794] [cursor=pointer]:
+              - button [ref=f65e795]
+              - generic [ref=f65e796]: Portfolio images
+            - listitem [ref=f65e798] [cursor=pointer]:
+              - button [ref=f65e799]
+              - generic [ref=f65e800]: Forms
+              - generic: "1"
+            - listitem [ref=f65e802] [cursor=pointer]:
+              - button [ref=f65e803]
+              - generic [ref=f65e804]: Commissions
+            - listitem [ref=f65e806] [cursor=pointer]:
+              - button [ref=f65e807]
+              - generic [ref=f65e808]: Settings
+      - generic [ref=f65e811]:
+        - generic [ref=f65e812]:
+          - paragraph [ref=f65e816]: Basic details
+          - generic [ref=f65e817]:
+            - generic [aria-hidden] [ref=f65e818]:
+              - generic [ref=f65e819]:
+                - generic [ref=f65e820]: Service name
+                - generic [ref=f65e821]: 21/255
+              - textbox [ref=f65e991]:
+                - /placeholder: Add a service name, e.g. Men's Haircut
+                - text: COUNCIL-TEST Service2
+            - generic [ref=f65e825]:
+              - generic [aria-hidden] [ref=f65e826]:
+                - generic [ref=f65e827]: Menu category
+                - combobox [ref=f65e831]
+                - button [ref=f65e992] [cursor=pointer]:
+                  - generic [ref=f65e833]: Hair & styling
+                - paragraph [ref=f65e836]: The category displayed to you, and to clients online
+              - generic [ref=f65e839]:
+                - generic [ref=f65e841]: Treatment type
+                - combobox "Treatment type" [expanded] [active] [ref=f65e844]
+                - paragraph [aria-hidden] [ref=f65e845]: Used to help clients find your service on the Fresha marketplace
+            - generic [aria-hidden] [ref=f65e846]:
+              - generic [ref=f65e847]:
+                - generic [ref=f65e848]:
+                  - generic [ref=f65e849]:
+                    - text: Description
+                    - generic [ref=f65e850]: (Optional)
+                  - generic [ref=f65e851]: 0/1000
+                - textbox [ref=f65e993]:
+                  - /placeholder: Add a short description
+              - button [ref=f65e994] [cursor=pointer]:
+                - generic [ref=f65e938]: Generate with AI
+        - generic [aria-hidden] [ref=f65e854]:
+          - paragraph [ref=f65e858]: Pricing and duration
+          - generic [ref=f65e862]:
+            - generic [ref=f65e863]:
+              - generic [ref=f65e864]:
+                - generic [ref=f65e865]: Price type
+                - combobox [ref=f65e869]
+                - button [ref=f65e995] [cursor=pointer]:
+                  - generic [ref=f65e871]: Fixed
+              - generic [ref=f65e874]:
+                - generic [ref=f65e875]: Price
+                - generic [ref=f65e878]:
+                  - generic [ref=f65e879]: KWD
+                  - spinbutton [ref=f65e996]: "15.00"
+              - generic [ref=f65e881]:
+                - generic [ref=f65e882]: Duration
+                - combobox [ref=f65e886]
+                - button [ref=f65e997] [cursor=pointer]:
+                  - generic [ref=f65e888]: 1 hr
+            - generic [ref=f65e892]:
+              - button [ref=f65e998] [cursor=pointer]:
+                - generic [ref=f65e895]: Add extra time
+              - button [ref=f65e999] [cursor=pointer]:
+                - generic [ref=f65e901]: Options
+  - generic [ref=f65e1001]:
+    - listbox "Suggestions Treatment type" [ref=f65e1002]:
+      - generic [ref=f65e1003]: Suggestions
+      - group "Suggestions" [ref=f65e1004]:
+        - option "Hair consultation Hair & styling" [selected] [ref=f65e1005] [cursor=pointer]:
+          - generic [ref=f65e1006]:
+            - generic [ref=f65e1007]: Hair consultation
+            - generic [ref=f65e1008]: Hair & styling
+        - option "Hair replacement consultation Hair & styling" [ref=f65e1009] [cursor=pointer]:
+          - generic [ref=f65e1010]:
+            - generic [ref=f65e1011]: Hair replacement consultation
+            - generic [ref=f65e1012]: Hair & styling
+        - option "Hair styling Hair & styling" [ref=f65e1013] [cursor=pointer]:
+          - generic [ref=f65e1014]:
+            - generic [ref=f65e1015]: Hair styling
+            - generic [ref=f65e1016]: Hair & styling
+        - option "Hair color Hair & styling" [ref=f65e1017] [cursor=pointer]:
+          - generic [ref=f65e1018]:
+            - generic [ref=f65e1019]: Hair color
+            - generic [ref=f65e1020]: Hair & styling
+        - option "Hair system maintenance Hair & styling" [ref=f65e1021] [cursor=pointer]:
+          - generic [ref=f65e1022]:
+            - generic [ref=f65e1023]: Hair system maintenance
+            - generic [ref=f65e1024]: Hair & styling
+        - separator [ref=f65e1026]
+      - generic [ref=f65e1027]: Aesthetics
+      - group "Aesthetics" [ref=f65e1028]:
+        - option "Juvederm filler" [ref=f65e1029] [cursor=pointer]
+        - option "Polynucleotide injection" [ref=f65e1032] [cursor=pointer]
+        - option "Fat dissolving injections" [ref=f65e1035] [cursor=pointer]
+        - option "Lemon bottle treatment" [ref=f65e1038] [cursor=pointer]
+        - option "Restylane filler" [ref=f65e1041] [cursor=pointer]
+        - option "Plasma fibroblast therapy" [ref=f65e1044] [cursor=pointer]
+        - option "Face filler" [ref=f65e1047] [cursor=pointer]
+        - option "B12 injection" [ref=f65e1050] [cursor=pointer]
+        - option "Thread lift" [ref=f65e1053] [cursor=pointer]
+        - option "Botox" [ref=f65e1056] [cursor=pointer]
+        - option "Dysport" [ref=f65e1059] [cursor=pointer]
+        - option "Xeomin" [ref=f65e1062] [cursor=pointer]
+        - option "Anti-wrinkle injections" [ref=f65e1065] [cursor=pointer]
+        - option "Lip filler" [ref=f65e1068] [cursor=pointer]
+        - option "Aqualyx treatment" [ref=f65e1071] [cursor=pointer]
+        - option "Hyaluronic acid filler" [ref=f65e1074] [cursor=pointer]
+        - option "Dermal filler" [ref=f65e1077] [cursor=pointer]
+        - option "Cheek filler" [ref=f65e1080] [cursor=pointer]
+        - option "Chin filler" [ref=f65e1083] [cursor=pointer]
+        - option "Aesthetic medicine consultation" [ref=f65e1086] [cursor=pointer]
+        - separator [ref=f65e1090]
+      - generic [ref=f65e1091]: Barbering
+      - group "Barbering" [ref=f65e1092]:
+        - option "Buzz cut" [ref=f65e1093] [cursor=pointer]
+        - option "Fringe trim" [ref=f65e1096] [cursor=pointer]
+        - option "Beard trim" [ref=f65e1099] [cursor=pointer]
+        - option "Skin fade" [ref=f65e1102] [cursor=pointer]
+        - option "Mustache trim" [ref=f65e1105] [cursor=pointer]
+        - option "Black mask" [ref=f65e1108] [cursor=pointer]
+        - option "Haircut" [ref=f65e1111] [cursor=pointer]
+        - option "Wash, haircut & styling" [ref=f65e1114] [cursor=pointer]
+        - option "Line up" [ref=f65e1117] [cursor=pointer]
+        - option "Mustache & beard trim" [ref=f65e1120] [cursor=pointer]
+        - option "Wet haircut" [ref=f65e1123] [cursor=pointer]
+        - option "Beard coloring" [ref=f65e1126] [cursor=pointer]
+        - option "Beard shave" [ref=f65e1129] [cursor=pointer]
+        - option "Wash & haircut" [ref=f65e1132] [cursor=pointer]
+        - option "Afro haircut" [ref=f65e1135] [cursor=pointer]
+        - option "Haircut & beard trim" [ref=f65e1138] [cursor=pointer]
+        - option "Beard grooming" [ref=f65e1141] [cursor=pointer]
+        - option "Wash, haircut, styling & beard trim" [ref=f65e1144] [cursor=pointer]
+        - option "Hot towel shave" [ref=f65e1147] [cursor=pointer]
+        - option "Dry haircut" [ref=f65e1150] [cursor=pointer]
+        - option "Crew cut" [ref=f65e1153] [cursor=pointer]
+        - option "Clipper haircut" [ref=f65e1156] [cursor=pointer]
+        - option "Beard shaping" [ref=f65e1159] [cursor=pointer]
+        - option "Head shave" [ref=f65e1162] [cursor=pointer]
+        - option "Straight razor shave" [ref=f65e1165] [cursor=pointer]
+        - separator [ref=f65e1169]
+      - generic [ref=f65e1170]: Body & skin
+      - group "Body & skin" [ref=f65e1171]:
+        - option "Anti-acne body treatment" [ref=f65e1172] [cursor=pointer]
+        - option "Hyperhidrosis treatment" [ref=f65e1175] [cursor=pointer]
+        - option "Body contouring" [ref=f65e1178] [cursor=pointer]
+        - option "Hand microdermabrasion" [ref=f65e1181] [cursor=pointer]
+        - option "Wart removal" [ref=f65e1184] [cursor=pointer]
+        - option "HIFU body treatment" [ref=f65e1187] [cursor=pointer]
+        - option "Radiofrequency skin tightening - body" [ref=f65e1190] [cursor=pointer]
+        - option "Dermarolling body treatment" [ref=f65e1193] [cursor=pointer]
+        - option "Hand treatment" [ref=f65e1196] [cursor=pointer]
+        - option "Acne scar removal" [ref=f65e1199] [cursor=pointer]
+        - option "Endermologie" [ref=f65e1202] [cursor=pointer]
+        - option "Skin tag removal" [ref=f65e1205] [cursor=pointer]
+        - option "i-Lipo" [ref=f65e1208] [cursor=pointer]
+        - option "Body sculpting" [ref=f65e1211] [cursor=pointer]
+        - option "Lipo injection" [ref=f65e1214] [cursor=pointer]
+        - option "Laser lipo" [ref=f65e1217] [cursor=pointer]
+        - option "Mole removal" [ref=f65e1220] [cursor=pointer]
+        - option "Ultrasonic cavitation" [ref=f65e1223] [cursor=pointer]
+        - option "Scar removal" [ref=f65e1226] [cursor=pointer]
+        - option "Infrared therapy" [ref=f65e1229] [cursor=pointer]
+        - option "CACI body treatment" [ref=f65e1232] [cursor=pointer]
+        - option "Stretch mark removal" [ref=f65e1235] [cursor=pointer]
+        - option "Cellulite treatment" [ref=f65e1238] [cursor=pointer]
+        - option "Carboxytherapy" [ref=f65e1241] [cursor=pointer]
+        - option "Non surgical tummy tuck" [ref=f65e1244] [cursor=pointer]
+        - option "Cryolipolysis" [ref=f65e1247] [cursor=pointer]
+        - option "Photorejuvenating treatments" [ref=f65e1250] [cursor=pointer]
+        - option "Lipodissolve" [ref=f65e1253] [cursor=pointer]
+        - option "Liposuction" [ref=f65e1256] [cursor=pointer]
+        - separator [ref=f65e1260]
+      - generic [ref=f65e1261]: Counseling & therapy
+      - group "Counseling & therapy" [ref=f65e1262]:
+        - option "Mental health evaluation" [ref=f65e1263] [cursor=pointer]
+        - option "Couples therapy" [ref=f65e1266] [cursor=pointer]
+        - option "Mental health therapy" [ref=f65e1269] [cursor=pointer]
+        - option "Family therapy" [ref=f65e1272] [cursor=pointer]
+        - option "Mindfulness session" [ref=f65e1275] [cursor=pointer]
+        - option "Life coaching" [ref=f65e1278] [cursor=pointer]
+        - option "Speech therapy" [ref=f65e1281] [cursor=pointer]
+        - option "Counseling session" [ref=f65e1284] [cursor=pointer]
+        - separator [ref=f65e1288]
+      - generic [ref=f65e1289]: Dental
+      - group "Dental" [ref=f65e1290]:
+        - option "Dental implants" [ref=f65e1291] [cursor=pointer]
+        - option "Crowns" [ref=f65e1294] [cursor=pointer]
+        - option "Dental X-ray" [ref=f65e1297] [cursor=pointer]
+        - option "Root canal" [ref=f65e1300] [cursor=pointer]
+        - option "Braces" [ref=f65e1303] [cursor=pointer]
+        - option "Teeth whitening" [ref=f65e1306] [cursor=pointer]
+        - option "Teeth straightening" [ref=f65e1309] [cursor=pointer]
+        - option "Tooth gems" [ref=f65e1312] [cursor=pointer]
+        - option "Dental consultation" [ref=f65e1315] [cursor=pointer]
+        - option "Dental cleaning" [ref=f65e1318] [cursor=pointer]
+        - option "Invisalign" [ref=f65e1321] [cursor=pointer]
+        - option "Tooth filling" [ref=f65e1324] [cursor=pointer]
+        - option "Veneers" [ref=f65e1327] [cursor=pointer]
+        - option "Dentures" [ref=f65e1330] [cursor=pointer]
+        - separator [ref=f65e1334]
+      - generic [ref=f65e1335]: Eyebrows & eyelashes
+      - group "Eyebrows & eyelashes" [ref=f65e1336]:
+        - option "Bottom lash extensions" [ref=f65e1337] [cursor=pointer]
+        - option "Eyebrow shape" [ref=f65e1340] [cursor=pointer]
+        - option "Definition brows" [ref=f65e1343] [cursor=pointer]
+        - option "Classic lash extensions" [ref=f65e1346] [cursor=pointer]
+        - option "Henna brows" [ref=f65e1349] [cursor=pointer]
+        - option "Eyelash extensions" [ref=f65e1352] [cursor=pointer]
+        - option "Eyelash lift" [ref=f65e1355] [cursor=pointer]
+        - option "Eyebrow lamination" [ref=f65e1358] [cursor=pointer]
+        - option "Eyelash lamination & tint" [ref=f65e1361] [cursor=pointer]
+        - option "Volume lash extension infills" [ref=f65e1364] [cursor=pointer]
+        - option "Mega volume lash extensions" [ref=f65e1367] [cursor=pointer]
+        - option "Eye trio (brow & lash tint with eyebrow shape)" [ref=f65e1370] [cursor=pointer]
+        - option "Mega volume lash extension infill" [ref=f65e1373] [cursor=pointer]
+        - option "Eyebrow & eyelash tinting" [ref=f65e1376] [cursor=pointer]
+        - option "Cluster lashes" [ref=f65e1379] [cursor=pointer]
+        - option "Bottom lash extension infills" [ref=f65e1382] [cursor=pointer]
+        - option "Hybrid lash extension infill" [ref=f65e1385] [cursor=pointer]
+        - option "Magnetic lash extensions" [ref=f65e1388] [cursor=pointer]
+        - option "Eyelash perm" [ref=f65e1391] [cursor=pointer]
+        - option "Eyebrow extensions" [ref=f65e1394] [cursor=pointer]
+        - option "Powder brows" [ref=f65e1397] [cursor=pointer]
+        - option "Party lashes" [ref=f65e1400] [cursor=pointer]
+        - option "Strip lashes" [ref=f65e1403] [cursor=pointer]
+        - option "Eyebrow feathering" [ref=f65e1406] [cursor=pointer]
+        - option "Eyelash lamination" [ref=f65e1409] [cursor=pointer]
+        - option "Eyelash extension infills" [ref=f65e1412] [cursor=pointer]
+        - option "Eyelash removal" [ref=f65e1415] [cursor=pointer]
+        - option "Eyebrow lamination & tint" [ref=f65e1418] [cursor=pointer]
+        - option "Eyebrow tint" [ref=f65e1421] [cursor=pointer]
+        - option "Classic lash extension infills" [ref=f65e1424] [cursor=pointer]
+        - option "Volume lash extensions" [ref=f65e1427] [cursor=pointer]
+        - option "Eyelash tint" [ref=f65e1430] [cursor=pointer]
+        - option "Russian lashes" [ref=f65e1433] [cursor=pointer]
+        - option "Hybrid lash extensions" [ref=f65e1436] [cursor=pointer]
+        - option "Eyelash perm & tint" [ref=f65e1439] [cursor=pointer]
+        - option "Eyebrow thread & tint" [ref=f65e1442] [cursor=pointer]
+        - option "Eyebrow wax & tint" [ref=f65e1445] [cursor=pointer]
+        - option "Express lashes" [ref=f65e1448] [cursor=pointer]
+        - option "Eyelash lift & tint" [ref=f65e1451] [cursor=pointer]
+        - option "Russian lash infills" [ref=f65e1454] [cursor=pointer]
+        - option "Eyebrow shape & tint" [ref=f65e1457] [cursor=pointer]
+        - separator [ref=f65e1461]
+      - generic [ref=f65e1462]: Facials & skincare
+      - group "Facials & skincare" [ref=f65e1463]:
+        - option "TCA peel" [ref=f65e1464] [cursor=pointer]
+        - option "Eye bag removal" [ref=f65e1467] [cursor=pointer]
+        - option "Dermapen" [ref=f65e1470] [cursor=pointer]
+        - option "Non-surgical facelift" [ref=f65e1473] [cursor=pointer]
+        - option "Diamond facial" [ref=f65e1476] [cursor=pointer]
+        - option "Acne treatment" [ref=f65e1479] [cursor=pointer]
+        - option "Galvanic facial" [ref=f65e1482] [cursor=pointer]
+        - option "Microcurrent facial" [ref=f65e1485] [cursor=pointer]
+        - option "Facial peel" [ref=f65e1488] [cursor=pointer]
+        - option "Laser skin resurfacing" [ref=f65e1491] [cursor=pointer]
+        - option "Teens facial" [ref=f65e1494] [cursor=pointer]
+        - option "IPL skin rejuvenation" [ref=f65e1497] [cursor=pointer]
+        - option "Chemical peel" [ref=f65e1500] [cursor=pointer]
+        - option "BHA peel" [ref=f65e1503] [cursor=pointer]
+        - option "Hydrafacial" [ref=f65e1506] [cursor=pointer]
+        - option "No needle mesotherapy" [ref=f65e1509] [cursor=pointer]
+        - option "CACI non-surgical face lift" [ref=f65e1512] [cursor=pointer]
+        - option "Classic facial" [ref=f65e1515] [cursor=pointer]
+        - option "High frequency facial" [ref=f65e1518] [cursor=pointer]
+        - option "Facial rejuvenation" [ref=f65e1521] [cursor=pointer]
+        - option "Eye treatment" [ref=f65e1524] [cursor=pointer]
+        - option "Eye mask" [ref=f65e1527] [cursor=pointer]
+        - option "Dermaroller" [ref=f65e1530] [cursor=pointer]
+        - option "Skin whitening" [ref=f65e1533] [cursor=pointer]
+        - option "Facial extractions" [ref=f65e1536] [cursor=pointer]
+        - option "Facial" [ref=f65e1539] [cursor=pointer]
+        - option "Gold facial" [ref=f65e1542] [cursor=pointer]
+        - option "Rosacea facial" [ref=f65e1545] [cursor=pointer]
+        - option "Carbon laser peel" [ref=f65e1548] [cursor=pointer]
+        - option "Skin peel" [ref=f65e1551] [cursor=pointer]
+        - option "Mesotherapy" [ref=f65e1554] [cursor=pointer]
+        - option "PRP facial" [ref=f65e1557] [cursor=pointer]
+        - option "Vitamin C facial" [ref=f65e1560] [cursor=pointer]
+        - option "CACI eye revive" [ref=f65e1563] [cursor=pointer]
+        - option "Oxygen facial" [ref=f65e1566] [cursor=pointer]
+        - option "Nano facial" [ref=f65e1569] [cursor=pointer]
+        - option "Million dollar facial" [ref=f65e1572] [cursor=pointer]
+        - option "Retinol peel" [ref=f65e1575] [cursor=pointer]
+        - option "LED light therapy" [ref=f65e1578] [cursor=pointer]
+        - option "Jessner peel" [ref=f65e1581] [cursor=pointer]
+        - option "Micropigmentation scar treatment" [ref=f65e1584] [cursor=pointer]
+        - option "Scalp microneedling" [ref=f65e1587] [cursor=pointer]
+        - option "Microneedling" [ref=f65e1590] [cursor=pointer]
+        - option "Deep cleansing facial" [ref=f65e1593] [cursor=pointer]
+        - option "Salicylic peel" [ref=f65e1596] [cursor=pointer]
+        - option "Skin rejuvenation" [ref=f65e1599] [cursor=pointer]
+        - option "AHA peel" [ref=f65e1602] [cursor=pointer]
+        - option "Non-surgical jowl lift" [ref=f65e1605] [cursor=pointer]
+        - option "BB glow" [ref=f65e1608] [cursor=pointer]
+        - option "Non-surgical eye lift" [ref=f65e1611] [cursor=pointer]
+        - option "Glycolic peel" [ref=f65e1614] [cursor=pointer]
+        - option "Glass skin facial" [ref=f65e1617] [cursor=pointer]
+        - option "Men's facial" [ref=f65e1620] [cursor=pointer]
+        - option "Anti-ageing facial" [ref=f65e1623] [cursor=pointer]
+        - option "Microdermabrasion" [ref=f65e1626] [cursor=pointer]
+        - option "Spa facial" [ref=f65e1629] [cursor=pointer]
+        - option "CACI hydratone" [ref=f65e1632] [cursor=pointer]
+        - option "Vitamin C peel" [ref=f65e1635] [cursor=pointer]
+        - option "Lactic peel" [ref=f65e1638] [cursor=pointer]
+        - option "CACI jowl lift" [ref=f65e1641] [cursor=pointer]
+        - option "Peach fuzz removal" [ref=f65e1644] [cursor=pointer]
+        - option "HIFU full face" [ref=f65e1647] [cursor=pointer]
+        - option "Cosmelan" [ref=f65e1650] [cursor=pointer]
+        - option "Herbal facial" [ref=f65e1653] [cursor=pointer]
+        - option "Azelaic acid peel" [ref=f65e1656] [cursor=pointer]
+        - option "Radiofrequency skin tightening - face" [ref=f65e1659] [cursor=pointer]
+        - option "Pumpkin peel" [ref=f65e1662] [cursor=pointer]
+        - option "Acne facial" [ref=f65e1665] [cursor=pointer]
+        - option "Luxury facial" [ref=f65e1668] [cursor=pointer]
+        - option "Peptide peel" [ref=f65e1671] [cursor=pointer]
+        - option "Hydrating facial" [ref=f65e1674] [cursor=pointer]
+        - option "Mandelic peel" [ref=f65e1677] [cursor=pointer]
+        - option "Collagen facial" [ref=f65e1680] [cursor=pointer]
+        - option "Pigmentation treatment" [ref=f65e1683] [cursor=pointer]
+        - option "Dermaplaning" [ref=f65e1686] [cursor=pointer]
+        - option "Express facial" [ref=f65e1689] [cursor=pointer]
+        - option "Skin care consultation" [ref=f65e1692] [cursor=pointer]
+        - option "Mini facial" [ref=f65e1695] [cursor=pointer]
+        - option "Discolouration" [ref=f65e1698] [cursor=pointer]
+        - option "CACI skin rejuvenation" [ref=f65e1701] [cursor=pointer]
+        - option "Carboxytherapy facial" [ref=f65e1704] [cursor=pointer]
+        - separator [ref=f65e1708]
+      - generic [ref=f65e1709]: Hair & styling
+      - group "Hair & styling" [ref=f65e1710]:
+        - option "Smartbond treatment" [ref=f65e1711] [cursor=pointer]
+        - option "Children's wash & haircut" [ref=f65e1714] [cursor=pointer]
+        - option "Lemonade braids" [ref=f65e1717] [cursor=pointer]
+        - option "Hair toner" [ref=f65e1720] [cursor=pointer]
+        - option "Men's blowout" [ref=f65e1723] [cursor=pointer]
+        - option "Women's wash, haircut & blow dry" [ref=f65e1726] [cursor=pointer]
+        - option "Root drag" [ref=f65e1729] [cursor=pointer]
+        - option "Hair conditioning & scalp treatment" [ref=f65e1732] [cursor=pointer]
+        - option "Nano ring hair extensions" [ref=f65e1735] [cursor=pointer]
+        - option "Clip-in hair extensions" [ref=f65e1738] [cursor=pointer]
+        - option "Sombre" [ref=f65e1741] [cursor=pointer]
+        - option "Scalp treatment" [ref=f65e1744] [cursor=pointer]
+        - option "Babylights" [ref=f65e1747] [cursor=pointer]
+        - option "Nubian twist" [ref=f65e1750] [cursor=pointer]
+        - option "Hair tint" [ref=f65e1753] [cursor=pointer]
+        - option "Root touch up" [ref=f65e1756] [cursor=pointer]
+        - option "Hair extension touch-up" [ref=f65e1759] [cursor=pointer]
+        - option "Full head pre-lightening" [ref=f65e1762] [cursor=pointer]
+        - option "Locs" [ref=f65e1765] [cursor=pointer]
+        - option "Full head highlights" [ref=f65e1768] [cursor=pointer]
+        - option "Dreadlocks" [ref=f65e1771] [cursor=pointer]
+        - option "Children's wash & haircut for girls" [ref=f65e1774] [cursor=pointer]
+        - option "Wash & haircut (afro hair)" [ref=f65e1777] [cursor=pointer]
+        - option "Olaplex treatment" [ref=f65e1780] [cursor=pointer]
+        - option "Hair extensions" [ref=f65e1783] [cursor=pointer]
+        - option "Bomba twist" [ref=f65e1786] [cursor=pointer]
+        - option "Ghana braids" [ref=f65e1789] [cursor=pointer]
+        - option "Jumbo box braids" [ref=f65e1792] [cursor=pointer]
+        - option "Kinky twist" [ref=f65e1795] [cursor=pointer]
+        - option "Updo" [ref=f65e1798] [cursor=pointer]
+        - option "Blow dry with extensions" [ref=f65e1801] [cursor=pointer]
+        - option "Grey blending" [ref=f65e1804] [cursor=pointer]
+        - option "Root color" [ref=f65e1807] [cursor=pointer]
+        - option "Full head color & full highlights" [ref=f65e1810] [cursor=pointer]
+        - option "Men's wash, haircut & blow dry" [ref=f65e1813] [cursor=pointer]
+        - option "Passion twist" [ref=f65e1816] [cursor=pointer]
+        - option "Full head tint" [ref=f65e1819] [cursor=pointer]
+        - option "Haircut (afro hair)" [ref=f65e1822] [cursor=pointer]
+        - option "Partial highlights with toner" [ref=f65e1825] [cursor=pointer]
+        - option "Full head babylights" [ref=f65e1828] [cursor=pointer]
+        - option "Half head highlights with tint" [ref=f65e1831] [cursor=pointer]
+        - option "Wig install" [ref=f65e1834] [cursor=pointer]
+        - option "Weave refit" [ref=f65e1837] [cursor=pointer]
+        - option "Men's wash & haircut" [ref=f65e1840] [cursor=pointer]
+        - option "Bridal hair" [ref=f65e1843] [cursor=pointer]
+        - option "Marley twist" [ref=f65e1846] [cursor=pointer]
+        - option "GHD straightening" [ref=f65e1849] [cursor=pointer]
+        - option "Root bleach" [ref=f65e1852] [cursor=pointer]
+        - option "Curly haircut" [ref=f65e1855] [cursor=pointer]
+        - option "Braids" [ref=f65e1858] [cursor=pointer]
+        - option "Color removal" [ref=f65e1861] [cursor=pointer]
+        - option "Ombré" [ref=f65e1864] [cursor=pointer]
+        - option "Balayage" [ref=f65e1867] [cursor=pointer]
+        - option "Scattered highlights" [ref=f65e1870] [cursor=pointer]
+        - option "Starter locs" [ref=f65e1873] [cursor=pointer]
+        - option "Goddess braids" [ref=f65e1876] [cursor=pointer]
+        - option "Loc retwist" [ref=f65e1879] [cursor=pointer]
+        - option "Permanent color" [ref=f65e1882] [cursor=pointer]
+        - option "Semi-permanent color" [ref=f65e1885] [cursor=pointer]
+        - option "Full head bleach & tone" [ref=f65e1888] [cursor=pointer]
+        - option "Color touch up with partial highlights" [ref=f65e1891] [cursor=pointer]
+        - option "Haircut" [ref=f65e1894] [cursor=pointer]
+        - option "Root bleach & tone" [ref=f65e1897] [cursor=pointer]
+        - option "Weave removal" [ref=f65e1900] [cursor=pointer]
+        - option "GHD curls" [ref=f65e1903] [cursor=pointer]
+        - option "Feed-in braids" [ref=f65e1906] [cursor=pointer]
+        - option "Highlights" [ref=f65e1909] [cursor=pointer]
+        - option "Afro relaxer" [ref=f65e1912] [cursor=pointer]
+        - option "Relaxer" [ref=f65e1915] [cursor=pointer]
+        - option "Natural braids" [ref=f65e1918] [cursor=pointer]
+        - option "Jumbo knotless braids" [ref=f65e1921] [cursor=pointer]
+        - option "Fusion hair extensions" [ref=f65e1924] [cursor=pointer]
+        - option "Children's wash, haircut & blow dry for girls" [ref=f65e1927] [cursor=pointer]
+        - option "Sew in weave" [ref=f65e1930] [cursor=pointer]
+        - option "Deep conditioning treatment" [ref=f65e1933] [cursor=pointer]
+        - option "Hair mask" [ref=f65e1936] [cursor=pointer]
+        - option "Hair loss treatment" [ref=f65e1939] [cursor=pointer]
+        - option "Bantu knots" [ref=f65e1942] [cursor=pointer]
+        - option "Loc detox" [ref=f65e1945] [cursor=pointer]
+        - option "Hair up" [ref=f65e1948] [cursor=pointer]
+        - option "Pixie cut" [ref=f65e1951] [cursor=pointer]
+        - option "Children's haircut for boys" [ref=f65e1954] [cursor=pointer]
+        - option "Loc retwist & style" [ref=f65e1957] [cursor=pointer]
+        - option "Men's haircut" [ref=f65e1960] [cursor=pointer]
+        - option "Rope twist" [ref=f65e1963] [cursor=pointer]
+        - option "Senegalese twist" [ref=f65e1966] [cursor=pointer]
+        - option "Children's wash, haircut & blow dry for boys" [ref=f65e1969] [cursor=pointer]
+        - option "Hair straightening" [ref=f65e1972] [cursor=pointer]
+        - option "Women's wash & haircut" [ref=f65e1975] [cursor=pointer]
+        - option "Root pre-lightening" [ref=f65e1978] [cursor=pointer]
+        - option "Hair pre-lightening" [ref=f65e1981] [cursor=pointer]
+        - option "Loc maintenance" [ref=f65e1984] [cursor=pointer]
+        - option "Children's wash & haircut for boys" [ref=f65e1987] [cursor=pointer]
+        - option "Men's haircut & blow dry" [ref=f65e1990] [cursor=pointer]
+        - option "Lace front wig install" [ref=f65e1993] [cursor=pointer]
+        - option "Wet haircut" [ref=f65e1996] [cursor=pointer]
+        - option "Base bump" [ref=f65e1999] [cursor=pointer]
+        - option "T-section highlights with tint" [ref=f65e2002] [cursor=pointer]
+        - option "Women's haircut" [ref=f65e2005] [cursor=pointer]
+        - option "Bob haircut" [ref=f65e2008] [cursor=pointer]
+        - option "Regrowth tint" [ref=f65e2011] [cursor=pointer]
+        - option "Hair botox" [ref=f65e2014] [cursor=pointer]
+        - option "Crochet braids" [ref=f65e2017] [cursor=pointer]
+        - option "Micro braids" [ref=f65e2020] [cursor=pointer]
+        - option "T-section highlights" [ref=f65e2023] [cursor=pointer]
+        - option "Knotless braids" [ref=f65e2026] [cursor=pointer]
+        - option "Wash, haircut & blow dry (afro hair)" [ref=f65e2029] [cursor=pointer]
+        - option "Fulani braids" [ref=f65e2032] [cursor=pointer]
+        - option "Wig re-install" [ref=f65e2035] [cursor=pointer]
+        - option "Partial foils" [ref=f65e2038] [cursor=pointer]
+        - option "Fringe trim" [ref=f65e2041] [cursor=pointer]
+        - option "Pick & drop braids" [ref=f65e2044] [cursor=pointer]
+        - option "Chemical straightening" [ref=f65e2047] [cursor=pointer]
+        - option "Pin curls" [ref=f65e2050] [cursor=pointer]
+        - option "Children's wash, haircut & blow dry" [ref=f65e2053] [cursor=pointer]
+        - option "T-section highlights with toner" [ref=f65e2056] [cursor=pointer]
+        - option "Root tint" [ref=f65e2059] [cursor=pointer]
+        - option "Dry haircut" [ref=f65e2062] [cursor=pointer]
+        - option "Wash, haircut & blow dry" [ref=f65e2065] [cursor=pointer]
+        - option "Women's blowout" [ref=f65e2068] [cursor=pointer]
+        - option "Perm" [ref=f65e2071] [cursor=pointer]
+        - option "Curly blow dry" [ref=f65e2074] [cursor=pointer]
+        - option "Wash & blow dry (afro hair)" [ref=f65e2077] [cursor=pointer]
+        - option "Weave" [ref=f65e2080] [cursor=pointer]
+        - option "Full head color" [ref=f65e2083] [cursor=pointer]
+        - option "Half head highlights with toner" [ref=f65e2086] [cursor=pointer]
+        - option "Wig consultation" [ref=f65e2089] [cursor=pointer]
+        - option "Half head highlights" [ref=f65e2092] [cursor=pointer]
+        - option "Women's haircut & blow dry" [ref=f65e2095] [cursor=pointer]
+        - option "Half head babylights" [ref=f65e2098] [cursor=pointer]
+        - option "Bob braids" [ref=f65e2101] [cursor=pointer]
+        - option "Glossing" [ref=f65e2104] [cursor=pointer]
+        - option "Stitch braids" [ref=f65e2107] [cursor=pointer]
+        - option "Women's blow dry" [ref=f65e2110] [cursor=pointer]
+        - option "Hair wash" [ref=f65e2113] [cursor=pointer]
+        - option "Spring twist" [ref=f65e2116] [cursor=pointer]
+        - option "Shampoo & set" [ref=f65e2119] [cursor=pointer]
+        - option "Bridal hair up" [ref=f65e2122] [cursor=pointer]
+        - option "Partial highlights" [ref=f65e2125] [cursor=pointer]
+        - option "Hair color (afro hair)" [ref=f65e2128] [cursor=pointer]
+        - option "Rough dry" [ref=f65e2131] [cursor=pointer]
+        - option "Permanent straightening" [ref=f65e2134] [cursor=pointer]
+        - option "Full head highlights with toner" [ref=f65e2137] [cursor=pointer]
+        - option "Color touch up with full highlights" [ref=f65e2140] [cursor=pointer]
+        - option "Full head highlights with tint" [ref=f65e2143] [cursor=pointer]
+        - option "Hair bleach & tone" [ref=f65e2146] [cursor=pointer]
+        - option "Children's haircut" [ref=f65e2149] [cursor=pointer]
+        - option "Twists" [ref=f65e2152] [cursor=pointer]
+        - option "Faux locs" [ref=f65e2155] [cursor=pointer]
+        - option "Japanese straightening" [ref=f65e2158] [cursor=pointer]
+        - option "Hair bleach" [ref=f65e2161] [cursor=pointer]
+        - option "Shampoo" [ref=f65e2164] [cursor=pointer]
+        - option "Butterfly locs" [ref=f65e2167] [cursor=pointer]
+        - option "Bridal hair trial" [ref=f65e2170] [cursor=pointer]
+        - option "Conditioning treatment" [ref=f65e2173] [cursor=pointer]
+        - option "Loc repair" [ref=f65e2176] [cursor=pointer]
+        - option "Hair system" [ref=f65e2179] [cursor=pointer]
+        - option "Restyle haircut" [ref=f65e2182] [cursor=pointer]
+        - option "Cap highlights" [ref=f65e2185] [cursor=pointer]
+        - option "Silk press" [ref=f65e2188] [cursor=pointer]
+        - option "Hair extension removal" [ref=f65e2191] [cursor=pointer]
+        - option "Hair color & partial highlights" [ref=f65e2194] [cursor=pointer]
+        - option "Quick weave" [ref=f65e2197] [cursor=pointer]
+        - option "Havana twist" [ref=f65e2200] [cursor=pointer]
+        - option "Hair color & full highlights" [ref=f65e2203] [cursor=pointer]
+        - option "Wig install & styling" [ref=f65e2206] [cursor=pointer]
+        - option "Loc extensions" [ref=f65e2209] [cursor=pointer]
+        - option "Men's blow dry" [ref=f65e2212] [cursor=pointer]
+        - option "Micro ring hair extensions" [ref=f65e2215] [cursor=pointer]
+        - option "Haircut & blow dry" [ref=f65e2218] [cursor=pointer]
+        - option "Wash & haircut" [ref=f65e2221] [cursor=pointer]
+        - option "Relaxer retouch" [ref=f65e2224] [cursor=pointer]
+        - option "Cornrows" [ref=f65e2227] [cursor=pointer]
+        - option "Sisterlocks" [ref=f65e2230] [cursor=pointer]
+        - option "Loc style" [ref=f65e2233] [cursor=pointer]
+        - option "Bohemian twist" [ref=f65e2236] [cursor=pointer]
+        - option "Highlights with toner" [ref=f65e2239] [cursor=pointer]
+        - option "Highlights with tint" [ref=f65e2242] [cursor=pointer]
+        - option "Box braids" [ref=f65e2245] [cursor=pointer]
+        - option "Partial highlights with tint" [ref=f65e2248] [cursor=pointer]
+        - option "Children's haircut for girls" [ref=f65e2251] [cursor=pointer]
+        - option "Creative color" [ref=f65e2254] [cursor=pointer]
+        - option "Flat twist" [ref=f65e2257] [cursor=pointer]
+        - option "Balayage & ombré" [ref=f65e2260] [cursor=pointer]
+        - option "Color touch up" [ref=f65e2263] [cursor=pointer]
+        - option "French curl braids" [ref=f65e2266] [cursor=pointer]
+        - option "Wash & blow dry" [ref=f65e2269] [cursor=pointer]
+        - option "Micro locs" [ref=f65e2272] [cursor=pointer]
+        - option "Tape-in hair extensions" [ref=f65e2275] [cursor=pointer]
+        - option "Brazilian blowout" [ref=f65e2278] [cursor=pointer]
+        - option "Hair straightening with iron" [ref=f65e2281] [cursor=pointer]
+        - option "Weft extensions" [ref=f65e2284] [cursor=pointer]
+        - option "Interlocking locs" [ref=f65e2287] [cursor=pointer]
+        - option "Keratin treatment" [ref=f65e2290] [cursor=pointer]
+        - option "Full head color & partial highlights" [ref=f65e2293] [cursor=pointer]
+        - option "Bouncy blow dry" [ref=f65e2296] [cursor=pointer]
+        - option "Full head bleach" [ref=f65e2299] [cursor=pointer]
+        - option "Color correction" [ref=f65e2302] [cursor=pointer]
+        - separator [ref=f65e2306]
+      - generic [ref=f65e2307]: Hair removal
+      - group "Hair removal" [ref=f65e2308]:
+        - option "Hollywood laser hair removal" [ref=f65e2309] [cursor=pointer]
+        - option "Back laser hair removal" [ref=f65e2312] [cursor=pointer]
+        - option "Back sugaring" [ref=f65e2315] [cursor=pointer]
+        - option "Sideburn threading" [ref=f65e2318] [cursor=pointer]
+        - option "Brazilian laser hair removal" [ref=f65e2321] [cursor=pointer]
+        - option "Ear hair wax" [ref=f65e2324] [cursor=pointer]
+        - option "Neck laser hair removal" [ref=f65e2327] [cursor=pointer]
+        - option "Hollywood wax" [ref=f65e2330] [cursor=pointer]
+        - option "Feet & toes sugaring" [ref=f65e2333] [cursor=pointer]
+        - option "Chest IPL hair removal" [ref=f65e2336] [cursor=pointer]
+        - option "Full face sugaring" [ref=f65e2339] [cursor=pointer]
+        - option "Lip IPL hair removal" [ref=f65e2342] [cursor=pointer]
+        - option "Buttock sugaring" [ref=f65e2345] [cursor=pointer]
+        - option "Sideburn laser hair removal" [ref=f65e2348] [cursor=pointer]
+        - option "Half arm laser hair removal" [ref=f65e2351] [cursor=pointer]
+        - option "Full face wax" [ref=f65e2354] [cursor=pointer]
+        - option "Lip & chin sugaring" [ref=f65e2357] [cursor=pointer]
+        - option "Full body laser hair removal" [ref=f65e2360] [cursor=pointer]
+        - option "Chin IPL hair removal" [ref=f65e2363] [cursor=pointer]
+        - option "Brazilian sugaring" [ref=f65e2366] [cursor=pointer]
+        - option "Lip & chin wax" [ref=f65e2369] [cursor=pointer]
+        - option "Stomach wax" [ref=f65e2372] [cursor=pointer]
+        - option "Eyebrow laser hair removal" [ref=f65e2375] [cursor=pointer]
+        - option "Half arm IPL hair removal" [ref=f65e2378] [cursor=pointer]
+        - option "Full leg IPL hair removal" [ref=f65e2381] [cursor=pointer]
+        - option "Bikini IPL hair removal" [ref=f65e2384] [cursor=pointer]
+        - option "Chin sugaring" [ref=f65e2387] [cursor=pointer]
+        - option "Electrolysis hair removal" [ref=f65e2390] [cursor=pointer]
+        - option "Stomach sugaring" [ref=f65e2393] [cursor=pointer]
+        - option "Buttock IPL hair removal" [ref=f65e2396] [cursor=pointer]
+        - option "Chin wax" [ref=f65e2399] [cursor=pointer]
+        - option "Underarm laser hair removal" [ref=f65e2402] [cursor=pointer]
+        - option "Buttock wax" [ref=f65e2405] [cursor=pointer]
+        - option "Eyebrow sugaring" [ref=f65e2408] [cursor=pointer]
+        - option "Chin laser hair removal" [ref=f65e2411] [cursor=pointer]
+        - option "Lip laser hair removal" [ref=f65e2414] [cursor=pointer]
+        - option "Hollywood sugaring" [ref=f65e2417] [cursor=pointer]
+        - option "Lip sugaring" [ref=f65e2420] [cursor=pointer]
+        - option "Feet & toes laser hair removal" [ref=f65e2423] [cursor=pointer]
+        - option "Full leg sugaring" [ref=f65e2426] [cursor=pointer]
+        - option "Lip & chin threading" [ref=f65e2429] [cursor=pointer]
+        - option "Half leg laser hair removal" [ref=f65e2432] [cursor=pointer]
+        - option "Brazilian IPL hair removal" [ref=f65e2435] [cursor=pointer]
+        - option "Bikini laser hair removal" [ref=f65e2438] [cursor=pointer]
+        - option "Full face IPL hair removal" [ref=f65e2441] [cursor=pointer]
+        - option "Half leg wax" [ref=f65e2444] [cursor=pointer]
+        - option "Back IPL hair removal" [ref=f65e2447] [cursor=pointer]
+        - option "Chest wax" [ref=f65e2450] [cursor=pointer]
+        - option "Full leg laser hair removal" [ref=f65e2453] [cursor=pointer]
+        - option "Full body sugaring" [ref=f65e2456] [cursor=pointer]
+        - option "Lip wax" [ref=f65e2459] [cursor=pointer]
+        - option "Neck wax" [ref=f65e2462] [cursor=pointer]
+        - option "Underarm sugaring" [ref=f65e2465] [cursor=pointer]
+        - option "Men's waxing" [ref=f65e2468] [cursor=pointer]
+        - option "Hand laser hair removal" [ref=f65e2471] [cursor=pointer]
+        - option "Chin threading" [ref=f65e2474] [cursor=pointer]
+        - option "Neck sugaring" [ref=f65e2477] [cursor=pointer]
+        - option "Brazilian wax" [ref=f65e2480] [cursor=pointer]
+        - option "Hand sugaring" [ref=f65e2483] [cursor=pointer]
+        - option "Sideburn wax" [ref=f65e2486] [cursor=pointer]
+        - option "Lip threading" [ref=f65e2489] [cursor=pointer]
+        - option "Half arm sugaring" [ref=f65e2492] [cursor=pointer]
+        - option "Chest sugaring" [ref=f65e2495] [cursor=pointer]
+        - option "Buttock laser hair removal" [ref=f65e2498] [cursor=pointer]
+        - option "Bikini wax" [ref=f65e2501] [cursor=pointer]
+        - option "Lip & chin IPL hair removal" [ref=f65e2504] [cursor=pointer]
+        - option "Eyebrow IPL hair removal" [ref=f65e2507] [cursor=pointer]
+        - option "Men's sugaring" [ref=f65e2510] [cursor=pointer]
+        - option "Full face laser hair removal" [ref=f65e2513] [cursor=pointer]
+        - option "Feet & toes IPL hair removal" [ref=f65e2516] [cursor=pointer]
+        - option "Full arm IPL hair removal" [ref=f65e2519] [cursor=pointer]
+        - option "Bikini sugaring" [ref=f65e2522] [cursor=pointer]
+        - option "Chest laser hair removal" [ref=f65e2525] [cursor=pointer]
+        - option "Underarm IPL hair removal" [ref=f65e2528] [cursor=pointer]
+        - option "Eyebrow wax" [ref=f65e2531] [cursor=pointer]
+        - option "Hand wax" [ref=f65e2534] [cursor=pointer]
+        - option "Nose wax" [ref=f65e2537] [cursor=pointer]
+        - option "Half leg sugaring" [ref=f65e2540] [cursor=pointer]
+        - option "Half arm wax" [ref=f65e2543] [cursor=pointer]
+        - option "Half leg IPL hair removal" [ref=f65e2546] [cursor=pointer]
+        - option "Full face threading" [ref=f65e2549] [cursor=pointer]
+        - option "Full arm wax" [ref=f65e2552] [cursor=pointer]
+        - option "Full body wax" [ref=f65e2555] [cursor=pointer]
+        - option "Sideburn sugaring" [ref=f65e2558] [cursor=pointer]
+        - option "Lip & chin laser hair removal" [ref=f65e2561] [cursor=pointer]
+        - option "Stomach laser hair removal" [ref=f65e2564] [cursor=pointer]
+        - option "Underarm wax" [ref=f65e2567] [cursor=pointer]
+        - option "Sideburn IPL hair removal" [ref=f65e2570] [cursor=pointer]
+        - option "Feet & toes wax" [ref=f65e2573] [cursor=pointer]
+        - option "Full leg wax" [ref=f65e2576] [cursor=pointer]
+        - option "Full arm sugaring" [ref=f65e2579] [cursor=pointer]
+        - option "Neck threading" [ref=f65e2582] [cursor=pointer]
+        - option "Full body IPL hair removal" [ref=f65e2585] [cursor=pointer]
+        - option "Back wax" [ref=f65e2588] [cursor=pointer]
+        - option "Eyebrow threading" [ref=f65e2591] [cursor=pointer]
+        - option "Hollywood IPL hair removal" [ref=f65e2594] [cursor=pointer]
+        - option "Stomach IPL hair removal" [ref=f65e2597] [cursor=pointer]
+        - option "Full arm laser hair removal" [ref=f65e2600] [cursor=pointer]
+        - separator [ref=f65e2604]
+      - generic [ref=f65e2605]: Fitness
+      - group "Fitness" [ref=f65e2606]:
+        - option "Personal training consultation" [ref=f65e2607] [cursor=pointer]
+        - option "Fitness classes" [ref=f65e2610] [cursor=pointer]
+        - option "Body composition" [ref=f65e2613] [cursor=pointer]
+        - option "Diabetes specialist" [ref=f65e2616] [cursor=pointer]
+        - option "Weight loss injection" [ref=f65e2619] [cursor=pointer]
+        - option "Weight loss session" [ref=f65e2622] [cursor=pointer]
+        - option "Nutrition consultation" [ref=f65e2625] [cursor=pointer]
+        - option "Qi gong" [ref=f65e2628] [cursor=pointer]
+        - option "Personal training session" [ref=f65e2631] [cursor=pointer]
+        - option "Yoga" [ref=f65e2634] [cursor=pointer]
+        - option "Dietitian consultation" [ref=f65e2637] [cursor=pointer]
+        - separator [ref=f65e2641]
+      - generic [ref=f65e2642]: Holistic health
+      - group "Holistic health" [ref=f65e2643]:
+        - option "Energy healing" [ref=f65e2644] [cursor=pointer]
+        - option "Chinese medicine" [ref=f65e2647] [cursor=pointer]
+        - option "Pranayama" [ref=f65e2650] [cursor=pointer]
+        - option "Ear candling" [ref=f65e2653] [cursor=pointer]
+        - option "Acupressure" [ref=f65e2656] [cursor=pointer]
+        - option "Aromatherapy" [ref=f65e2659] [cursor=pointer]
+        - option "Magnetic therapy" [ref=f65e2662] [cursor=pointer]
+        - option "Homeopathy" [ref=f65e2665] [cursor=pointer]
+        - option "Cupping" [ref=f65e2668] [cursor=pointer]
+        - option "Naturopathy" [ref=f65e2671] [cursor=pointer]
+        - option "Chiropractic consultation" [ref=f65e2674] [cursor=pointer]
+        - option "Psychotherapy" [ref=f65e2677] [cursor=pointer]
+        - option "Meditation" [ref=f65e2680] [cursor=pointer]
+        - option "Acupuncture" [ref=f65e2683] [cursor=pointer]
+        - option "Chiropractic treatment" [ref=f65e2686] [cursor=pointer]
+        - option "Psychic reading" [ref=f65e2689] [cursor=pointer]
+        - option "Ayurvedic treatment" [ref=f65e2692] [cursor=pointer]
+        - option "Hypnotherapy" [ref=f65e2695] [cursor=pointer]
+        - option "Herbal medicine" [ref=f65e2698] [cursor=pointer]
+        - separator [ref=f65e2702]
+      - generic [ref=f65e2703]: Makeup
+      - group "Makeup" [ref=f65e2704]:
+        - option "Bridal makeup" [ref=f65e2705] [cursor=pointer]
+        - option "Permanent lip blush" [ref=f65e2708] [cursor=pointer]
+        - option "Eye makeup" [ref=f65e2711] [cursor=pointer]
+        - option "Permanent makeup" [ref=f65e2714] [cursor=pointer]
+        - option "Microblading top-up" [ref=f65e2717] [cursor=pointer]
+        - option "Eye makeup with lashes" [ref=f65e2720] [cursor=pointer]
+        - option "Henna designs" [ref=f65e2723] [cursor=pointer]
+        - option "Microblading" [ref=f65e2726] [cursor=pointer]
+        - option "Full glam" [ref=f65e2729] [cursor=pointer]
+        - option "Festival makeup" [ref=f65e2732] [cursor=pointer]
+        - option "Scalp micropigmentation" [ref=f65e2735] [cursor=pointer]
+        - option "Beauty spot tattoo" [ref=f65e2738] [cursor=pointer]
+        - option "Full face" [ref=f65e2741] [cursor=pointer]
+        - option "Special occassion makeup" [ref=f65e2744] [cursor=pointer]
+        - option "Permanent eyebrows" [ref=f65e2747] [cursor=pointer]
+        - option "Traditional makeup" [ref=f65e2750] [cursor=pointer]
+        - option "Microshading" [ref=f65e2753] [cursor=pointer]
+        - option "Bridal makeup trial" [ref=f65e2756] [cursor=pointer]
+        - option "Brow micropigmentation" [ref=f65e2759] [cursor=pointer]
+        - option "Permanent eyeliner" [ref=f65e2762] [cursor=pointer]
+        - option "Airbrush makeup" [ref=f65e2765] [cursor=pointer]
+        - option "Micropigmentation top-up" [ref=f65e2768] [cursor=pointer]
+        - option "Makeup" [ref=f65e2771] [cursor=pointer]
+        - option "Permanent lip liner" [ref=f65e2774] [cursor=pointer]
+        - option "Micropigmentation" [ref=f65e2777] [cursor=pointer]
+        - option "Natural makeup" [ref=f65e2780] [cursor=pointer]
+        - option "Freckle tattoo" [ref=f65e2783] [cursor=pointer]
+        - option "Lip micropigmentation" [ref=f65e2786] [cursor=pointer]
+        - option "Makeup consultation" [ref=f65e2789] [cursor=pointer]
+        - option "Ombré brows" [ref=f65e2792] [cursor=pointer]
+        - separator [ref=f65e2796]
+      - generic [ref=f65e2797]: Massage
+      - group "Massage" [ref=f65e2798]:
+        - option "Hawaiian massage" [ref=f65e2799] [cursor=pointer]
+        - option "Pregnancy massage" [ref=f65e2802] [cursor=pointer]
+        - option "Postnatal massage" [ref=f65e2805] [cursor=pointer]
+        - option "Swedish massage" [ref=f65e2808] [cursor=pointer]
+        - option "Lymphatic drainage massage" [ref=f65e2811] [cursor=pointer]
+        - option "Hand massage" [ref=f65e2814] [cursor=pointer]
+        - option "Hand & arm massage" [ref=f65e2817] [cursor=pointer]
+        - option "Thai foot massage" [ref=f65e2820] [cursor=pointer]
+        - option "Reflexology" [ref=f65e2823] [cursor=pointer]
+        - option "Thai massage" [ref=f65e2826] [cursor=pointer]
+        - option "Body massage" [ref=f65e2829] [cursor=pointer]
+        - option "Full body massage" [ref=f65e2832] [cursor=pointer]
+        - option "Four/six hands massage" [ref=f65e2835] [cursor=pointer]
+        - option "Aromatherapy massage" [ref=f65e2838] [cursor=pointer]
+        - option "Therapeutic massage" [ref=f65e2841] [cursor=pointer]
+        - option "Chair massage" [ref=f65e2844] [cursor=pointer]
+        - option "Back, neck & shoulders massage" [ref=f65e2847] [cursor=pointer]
+        - option "Deep tissue massage" [ref=f65e2850] [cursor=pointer]
+        - option "Wood therapy" [ref=f65e2853] [cursor=pointer]
+        - option "Baby massage" [ref=f65e2856] [cursor=pointer]
+        - option "Korean massage" [ref=f65e2859] [cursor=pointer]
+        - option "Hot stone massage" [ref=f65e2862] [cursor=pointer]
+        - option "Couples massage" [ref=f65e2865] [cursor=pointer]
+        - option "Lava shells massage" [ref=f65e2868] [cursor=pointer]
+        - option "Oil massage" [ref=f65e2871] [cursor=pointer]
+        - option "Elderly clients massage" [ref=f65e2874] [cursor=pointer]
+        - option "Ashiatsu oriental bar massage" [ref=f65e2877] [cursor=pointer]
+        - option "Shiatsu massage" [ref=f65e2880] [cursor=pointer]
+        - option "Bamboo massage" [ref=f65e2883] [cursor=pointer]
+        - option "Shoulder massage" [ref=f65e2886] [cursor=pointer]
+        - option "Trigger point therapy" [ref=f65e2889] [cursor=pointer]
+        - option "Relaxing massage" [ref=f65e2892] [cursor=pointer]
+        - option "Remedial massage" [ref=f65e2895] [cursor=pointer]
+        - option "Chinese massage" [ref=f65e2898] [cursor=pointer]
+        - option "Foot & leg massage" [ref=f65e2901] [cursor=pointer]
+        - option "Ayurvedic massage" [ref=f65e2904] [cursor=pointer]
+        - option "Reiki" [ref=f65e2907] [cursor=pointer]
+        - option "Anti-cellulite massage" [ref=f65e2910] [cursor=pointer]
+        - option "Back massage" [ref=f65e2913] [cursor=pointer]
+        - option "Pressotherapy" [ref=f65e2916] [cursor=pointer]
+        - option "Detoxification massage" [ref=f65e2919] [cursor=pointer]
+        - option "Neck massage" [ref=f65e2922] [cursor=pointer]
+        - option "Indian head massage" [ref=f65e2925] [cursor=pointer]
+        - option "Balinese massage" [ref=f65e2928] [cursor=pointer]
+        - option "Head massage" [ref=f65e2931] [cursor=pointer]
+        - option "Foot massage" [ref=f65e2934] [cursor=pointer]
+        - option "Energy healing massage" [ref=f65e2937] [cursor=pointer]
+        - option "Medical massage" [ref=f65e2940] [cursor=pointer]
+        - option "Prenatal massage" [ref=f65e2943] [cursor=pointer]
+        - option "Oncology massage" [ref=f65e2946] [cursor=pointer]
+        - option "Lomi lomi massage" [ref=f65e2949] [cursor=pointer]
+        - option "Sports massage" [ref=f65e2952] [cursor=pointer]
+        - option "Herbal compress massage" [ref=f65e2955] [cursor=pointer]
+        - option "Face massage" [ref=f65e2958] [cursor=pointer]
+        - option "Japanese massage" [ref=f65e2961] [cursor=pointer]
+        - separator [ref=f65e2965]
+      - generic [ref=f65e2966]: Medical
+      - group "Medical" [ref=f65e2967]:
+        - option "Hyperbaric oxygen therapy" [ref=f65e2968] [cursor=pointer]
+        - option "Breast lift" [ref=f65e2971] [cursor=pointer]
+        - option "Vaccine" [ref=f65e2974] [cursor=pointer]
+        - option "IV drip" [ref=f65e2977] [cursor=pointer]
+        - option "Face lift surgery" [ref=f65e2980] [cursor=pointer]
+        - option "Tummy tuck surgery" [ref=f65e2983] [cursor=pointer]
+        - option "Dermatologist appointment" [ref=f65e2986] [cursor=pointer]
+        - option "Earwax removal" [ref=f65e2989] [cursor=pointer]
+        - option "Hearing assessment" [ref=f65e2992] [cursor=pointer]
+        - option "Podiatry" [ref=f65e2995] [cursor=pointer]
+        - option "Child eye test" [ref=f65e2998] [cursor=pointer]
+        - option "Breast reduction" [ref=f65e3001] [cursor=pointer]
+        - option "Hair transplants" [ref=f65e3004] [cursor=pointer]
+        - option "Vein reduction treatment" [ref=f65e3007] [cursor=pointer]
+        - option "Occupational therapist appointment" [ref=f65e3010] [cursor=pointer]
+        - option "Hormone replacement therapy" [ref=f65e3013] [cursor=pointer]
+        - option "Breast augmentation" [ref=f65e3016] [cursor=pointer]
+        - option "Neck lift surgery" [ref=f65e3019] [cursor=pointer]
+        - option "Plastic surgery consultation" [ref=f65e3022] [cursor=pointer]
+        - option "Eye lift surgery" [ref=f65e3025] [cursor=pointer]
+        - option "Adult eye test" [ref=f65e3028] [cursor=pointer]
+        - option "Contact lens appointment" [ref=f65e3031] [cursor=pointer]
+        - option "Thread vein removal" [ref=f65e3034] [cursor=pointer]
+        - option "Ultrasound" [ref=f65e3037] [cursor=pointer]
+        - option "Optometrist appointment" [ref=f65e3040] [cursor=pointer]
+        - option "Colonic hydrotherapy" [ref=f65e3043] [cursor=pointer]
+        - option "Sclerotherapy" [ref=f65e3046] [cursor=pointer]
+        - option "Labiaplasty" [ref=f65e3049] [cursor=pointer]
+        - separator [ref=f65e3053]
+      - generic [ref=f65e3054]: Nails
+      - group "Nails" [ref=f65e3055]:
+        - option "Nail polish - hands & toes" [ref=f65e3056] [cursor=pointer]
+        - option "Gel extensions removal" [ref=f65e3059] [cursor=pointer]
+        - option "Gel infill - hands" [ref=f65e3062] [cursor=pointer]
+        - option "Polish change - hands" [ref=f65e3065] [cursor=pointer]
+        - option "Classic manicure" [ref=f65e3068] [cursor=pointer]
+        - option "Shellac manicure" [ref=f65e3071] [cursor=pointer]
+        - option "BIAB nails - toes" [ref=f65e3074] [cursor=pointer]
+        - option "Cat eye nails" [ref=f65e3077] [cursor=pointer]
+        - option "Polish change" [ref=f65e3080] [cursor=pointer]
+        - option "Nail extensions infill" [ref=f65e3083] [cursor=pointer]
+        - option "Gel pedicure" [ref=f65e3086] [cursor=pointer]
+        - option "Paraffin wax treatment" [ref=f65e3089] [cursor=pointer]
+        - option "Acrylic extensions" [ref=f65e3092] [cursor=pointer]
+        - option "Deluxe manicure" [ref=f65e3095] [cursor=pointer]
+        - option "Paraffin wax treatment - hands" [ref=f65e3098] [cursor=pointer]
+        - option "Silk repair" [ref=f65e3101] [cursor=pointer]
+        - option "Nail repair" [ref=f65e3104] [cursor=pointer]
+        - option "Shellac overlay" [ref=f65e3107] [cursor=pointer]
+        - option "BIAB infill - hands" [ref=f65e3110] [cursor=pointer]
+        - option "Gel removal" [ref=f65e3113] [cursor=pointer]
+        - option "BIAB infill - hands & toes" [ref=f65e3116] [cursor=pointer]
+        - option "Deluxe manicure & pedicure" [ref=f65e3119] [cursor=pointer]
+        - option "Acrylic infill - hands & toes" [ref=f65e3122] [cursor=pointer]
+        - option "Nail extensions" [ref=f65e3125] [cursor=pointer]
+        - option "BIAB nails" [ref=f65e3128] [cursor=pointer]
+        - option "Gel infill - hands & toes" [ref=f65e3131] [cursor=pointer]
+        - option "File & polish - hands" [ref=f65e3134] [cursor=pointer]
+        - option "Gel polish - toes" [ref=f65e3137] [cursor=pointer]
+        - option "Gel extensions infill" [ref=f65e3140] [cursor=pointer]
+        - option "Silk wrap" [ref=f65e3143] [cursor=pointer]
+        - option "Acrylic extensions removal" [ref=f65e3146] [cursor=pointer]
+        - option "IBX nail treatment" [ref=f65e3149] [cursor=pointer]
+        - option "Deluxe pedicure" [ref=f65e3152] [cursor=pointer]
+        - option "French manicure" [ref=f65e3155] [cursor=pointer]
+        - option "Russian manicure" [ref=f65e3158] [cursor=pointer]
+        - option "File & polish - hands & toes" [ref=f65e3161] [cursor=pointer]
+        - option "File & polish" [ref=f65e3164] [cursor=pointer]
+        - option "Gel infill - toes" [ref=f65e3167] [cursor=pointer]
+        - option "Acrylic nails - toes" [ref=f65e3170] [cursor=pointer]
+        - option "Gel overlay" [ref=f65e3173] [cursor=pointer]
+        - option "Acrylic nails" [ref=f65e3176] [cursor=pointer]
+        - option "Nail art" [ref=f65e3179] [cursor=pointer]
+        - option "Spa manicure & pedicure" [ref=f65e3182] [cursor=pointer]
+        - option "Polish change - hands & toes" [ref=f65e3185] [cursor=pointer]
+        - option "Dip powder nails" [ref=f65e3188] [cursor=pointer]
+        - option "Spa manicure" [ref=f65e3191] [cursor=pointer]
+        - option "Manicure" [ref=f65e3194] [cursor=pointer]
+        - option "SNS powder extensions" [ref=f65e3197] [cursor=pointer]
+        - option "Callus peel" [ref=f65e3200] [cursor=pointer]
+        - option "Nail extensions removal" [ref=f65e3203] [cursor=pointer]
+        - option "Pedicure" [ref=f65e3206] [cursor=pointer]
+        - option "BIAB nails - hands & toes" [ref=f65e3209] [cursor=pointer]
+        - option "BIAB extensions" [ref=f65e3212] [cursor=pointer]
+        - option "Shellac polish - toes" [ref=f65e3215] [cursor=pointer]
+        - option "BIAB manicure" [ref=f65e3218] [cursor=pointer]
+        - option "SNS powder nails" [ref=f65e3221] [cursor=pointer]
+        - option "Gel polish - hands" [ref=f65e3224] [cursor=pointer]
+        - option "Men's pedicure" [ref=f65e3227] [cursor=pointer]
+        - option "BIAB extensions removal" [ref=f65e3230] [cursor=pointer]
+        - option "Shellac manicure & pedicure" [ref=f65e3233] [cursor=pointer]
+        - option "Gel polish - hands & toes" [ref=f65e3236] [cursor=pointer]
+        - option "BIAB infill - toes" [ref=f65e3239] [cursor=pointer]
+        - option "French manicure & pedicure" [ref=f65e3242] [cursor=pointer]
+        - option "Japanese manicure" [ref=f65e3245] [cursor=pointer]
+        - option "French pedicure" [ref=f65e3248] [cursor=pointer]
+        - option "Acrylic nails - hands & toes" [ref=f65e3251] [cursor=pointer]
+        - option "Shellac polish - hands" [ref=f65e3254] [cursor=pointer]
+        - option "Nail polish - toes" [ref=f65e3257] [cursor=pointer]
+        - option "Shellac polish" [ref=f65e3260] [cursor=pointer]
+        - option "Wedding nails" [ref=f65e3263] [cursor=pointer]
+        - option "Ombre nails" [ref=f65e3266] [cursor=pointer]
+        - option "Foot peel" [ref=f65e3269] [cursor=pointer]
+        - option "Paraffin wax treatment - feet" [ref=f65e3272] [cursor=pointer]
+        - option "Gel manicure & pedicure" [ref=f65e3275] [cursor=pointer]
+        - option "BIAB pedicure" [ref=f65e3278] [cursor=pointer]
+        - option "Natural nail strengthening" [ref=f65e3281] [cursor=pointer]
+        - option "Dip powder extensions" [ref=f65e3284] [cursor=pointer]
+        - option "BIAB extensions infill" [ref=f65e3287] [cursor=pointer]
+        - option "SNS powder infills" [ref=f65e3290] [cursor=pointer]
+        - option "Shellac polish - hands & toes" [ref=f65e3293] [cursor=pointer]
+        - option "Gel polish" [ref=f65e3296] [cursor=pointer]
+        - option "Classic pedicure" [ref=f65e3299] [cursor=pointer]
+        - option "Shellac pedicure" [ref=f65e3302] [cursor=pointer]
+        - option "Acrylic overlay" [ref=f65e3305] [cursor=pointer]
+        - option "Men's manicure & pedicure" [ref=f65e3308] [cursor=pointer]
+        - option "BIAB overlay" [ref=f65e3311] [cursor=pointer]
+        - option "Polish change - feet" [ref=f65e3314] [cursor=pointer]
+        - option "Spa pedicure" [ref=f65e3317] [cursor=pointer]
+        - option "Acrylic extensions infill" [ref=f65e3320] [cursor=pointer]
+        - option "Acrylic infill - toes" [ref=f65e3323] [cursor=pointer]
+        - option "Shellac removal" [ref=f65e3326] [cursor=pointer]
+        - option "Gel extensions" [ref=f65e3329] [cursor=pointer]
+        - option "Nail polish" [ref=f65e3332] [cursor=pointer]
+        - option "File & polish - toes" [ref=f65e3335] [cursor=pointer]
+        - option "Manicure & pedicure" [ref=f65e3338] [cursor=pointer]
+        - option "Classic manicure & pedicure" [ref=f65e3341] [cursor=pointer]
+        - option "Nail polish - hands" [ref=f65e3344] [cursor=pointer]
+        - option "Dip powder infills" [ref=f65e3347] [cursor=pointer]
+        - option "Men's manicure" [ref=f65e3350] [cursor=pointer]
+        - option "Acrylic nails - hands" [ref=f65e3353] [cursor=pointer]
+        - option "Gel manicure" [ref=f65e3356] [cursor=pointer]
+        - option "Acrylic removal" [ref=f65e3359] [cursor=pointer]
+        - option "BIAB manicure & pedicure" [ref=f65e3362] [cursor=pointer]
+        - option "BIAB removal" [ref=f65e3365] [cursor=pointer]
+        - option "Acrylic infill - hands" [ref=f65e3368] [cursor=pointer]
+        - option "BIAB nails - hands" [ref=f65e3371] [cursor=pointer]
+        - separator [ref=f65e3375]
+      - generic [ref=f65e3376]: Other
+      - group "Other" [ref=f65e3377]:
+        - option "Photoshoot" [ref=f65e3378] [cursor=pointer]
+        - option "Other" [ref=f65e3381] [cursor=pointer]
+        - option "Tutoring" [ref=f65e3384] [cursor=pointer]
+        - separator [ref=f65e3388]
+      - generic [ref=f65e3389]: Pets
+      - group "Pets" [ref=f65e3390]:
+        - option "Cat medicated shampoo" [ref=f65e3391] [cursor=pointer]
+        - option "Dog de-matting" [ref=f65e3394] [cursor=pointer]
+        - option "Dog breed styling" [ref=f65e3397] [cursor=pointer]
+        - option "Dog nail care" [ref=f65e3400] [cursor=pointer]
+        - option "Basic pet health check" [ref=f65e3403] [cursor=pointer]
+        - option "Cat de-matting" [ref=f65e3406] [cursor=pointer]
+        - option "Cat basic trim" [ref=f65e3409] [cursor=pointer]
+        - option "Veterinarian appointment" [ref=f65e3412] [cursor=pointer]
+        - option "Dog bath & tidy" [ref=f65e3415] [cursor=pointer]
+        - option "Dog hand stripping" [ref=f65e3418] [cursor=pointer]
+        - option "Cat training" [ref=f65e3421] [cursor=pointer]
+        - option "Cat teeth care" [ref=f65e3424] [cursor=pointer]
+        - option "Doggie day care" [ref=f65e3427] [cursor=pointer]
+        - option "Cat bath & dry" [ref=f65e3430] [cursor=pointer]
+        - option "Cat bath & tidy" [ref=f65e3433] [cursor=pointer]
+        - option "Pet vaccination" [ref=f65e3436] [cursor=pointer]
+        - option "Dog medicated shampoo" [ref=f65e3439] [cursor=pointer]
+        - option "Puppy intro groom" [ref=f65e3442] [cursor=pointer]
+        - option "Cat breed styling" [ref=f65e3445] [cursor=pointer]
+        - option "Dog de-shedding" [ref=f65e3448] [cursor=pointer]
+        - option "Dog teeth care" [ref=f65e3451] [cursor=pointer]
+        - option "Dog bath & dry" [ref=f65e3454] [cursor=pointer]
+        - option "Cat creative styling" [ref=f65e3457] [cursor=pointer]
+        - option "Full cat groom" [ref=f65e3460] [cursor=pointer]
+        - option "Dog flea & tick treatment" [ref=f65e3463] [cursor=pointer]
+        - option "Full dog groom" [ref=f65e3466] [cursor=pointer]
+        - option "Dog creative styling" [ref=f65e3469] [cursor=pointer]
+        - option "Cat flea & tick treatment" [ref=f65e3472] [cursor=pointer]
+        - option "Dog basic trim" [ref=f65e3475] [cursor=pointer]
+        - option "Dog walking" [ref=f65e3478] [cursor=pointer]
+        - option "Dog training" [ref=f65e3481] [cursor=pointer]
+        - option "Cat de-shedding" [ref=f65e3484] [cursor=pointer]
+        - option "Kitten intro groom" [ref=f65e3487] [cursor=pointer]
+        - option "Cat nail care" [ref=f65e3490] [cursor=pointer]
+        - separator [ref=f65e3494]
+      - generic [ref=f65e3495]: Physical therapy
+      - group "Physical therapy" [ref=f65e3496]:
+        - option "Dry needling" [ref=f65e3497] [cursor=pointer]
+        - option "Localized cryotherapy" [ref=f65e3500] [cursor=pointer]
+        - option "Ozone therapy" [ref=f65e3503] [cursor=pointer]
+        - option "Sports rehabilitation" [ref=f65e3506] [cursor=pointer]
+        - option "Injury rehabilitation" [ref=f65e3509] [cursor=pointer]
+        - option "Physical therapy consultation" [ref=f65e3512] [cursor=pointer]
+        - option "Myofascial release" [ref=f65e3515] [cursor=pointer]
+        - option "Physical therapy" [ref=f65e3518] [cursor=pointer]
+        - option "Paediatric physical therapy" [ref=f65e3521] [cursor=pointer]
+        - option "Kinesiology taping" [ref=f65e3524] [cursor=pointer]
+        - option "Soft tissue therapy" [ref=f65e3527] [cursor=pointer]
+        - option "Osteopathy" [ref=f65e3530] [cursor=pointer]
+        - option "Kinesiology" [ref=f65e3533] [cursor=pointer]
+        - option "Aquatic therapy" [ref=f65e3536] [cursor=pointer]
+        - option "Physiotherapy" [ref=f65e3539] [cursor=pointer]
+        - option "Hydrotherapy" [ref=f65e3542] [cursor=pointer]
+        - option "Craniosacral therapy" [ref=f65e3545] [cursor=pointer]
+        - option "Muscle recovery" [ref=f65e3548] [cursor=pointer]
+        - option "Cryotherapy" [ref=f65e3551] [cursor=pointer]
+        - option "Manual therapy" [ref=f65e3554] [cursor=pointer]
+        - separator [ref=f65e3558]
+      - generic [ref=f65e3559]: Spa & wellness
+      - group "Spa & wellness" [ref=f65e3560]:
+        - option "Body scrub" [ref=f65e3561] [cursor=pointer]
+        - option "Hammam" [ref=f65e3564] [cursor=pointer]
+        - option "Sauna" [ref=f65e3567] [cursor=pointer]
+        - option "Universal contour wrap" [ref=f65e3570] [cursor=pointer]
+        - option "Spray tan" [ref=f65e3573] [cursor=pointer]
+        - option "Milk bath" [ref=f65e3576] [cursor=pointer]
+        - option "Body brushing" [ref=f65e3579] [cursor=pointer]
+        - option "Body wrap" [ref=f65e3582] [cursor=pointer]
+        - option "Moroccan bath" [ref=f65e3585] [cursor=pointer]
+        - option "Salt therapy" [ref=f65e3588] [cursor=pointer]
+        - option "Banya" [ref=f65e3591] [cursor=pointer]
+        - option "Infrared sauna" [ref=f65e3594] [cursor=pointer]
+        - option "Couples spa" [ref=f65e3597] [cursor=pointer]
+        - option "Body exfoliation" [ref=f65e3600] [cursor=pointer]
+        - option "Floatation" [ref=f65e3603] [cursor=pointer]
+        - option "Spa package" [ref=f65e3606] [cursor=pointer]
+        - option "Airbrush tanning" [ref=f65e3609] [cursor=pointer]
+        - option "Onsen" [ref=f65e3612] [cursor=pointer]
+        - option "Mud wrap" [ref=f65e3615] [cursor=pointer]
+        - option "Turkish bath" [ref=f65e3618] [cursor=pointer]
+        - option "Ice bath" [ref=f65e3621] [cursor=pointer]
+        - option "Steam bath" [ref=f65e3624] [cursor=pointer]
+        - option "Mud bath" [ref=f65e3627] [cursor=pointer]
+        - option "Vajacial" [ref=f65e3630] [cursor=pointer]
+        - option "Sensory deprivation tank" [ref=f65e3633] [cursor=pointer]
+        - option "Sunbed" [ref=f65e3636] [cursor=pointer]
+        - option "Back facial" [ref=f65e3639] [cursor=pointer]
+        - separator [ref=f65e3643]
+      - generic [ref=f65e3644]: Tattoo & piercing
+      - group "Tattoo & piercing" [ref=f65e3645]:
+        - option "Nose piercing" [ref=f65e3646] [cursor=pointer]
+        - option "Facial piercing" [ref=f65e3649] [cursor=pointer]
+        - option "Cartilage piercing" [ref=f65e3652] [cursor=pointer]
+        - option "Ear piercing" [ref=f65e3655] [cursor=pointer]
+        - option "Tattoo session" [ref=f65e3658] [cursor=pointer]
+        - option "Temporary tattoos" [ref=f65e3661] [cursor=pointer]
+        - option "Tongue piercing" [ref=f65e3664] [cursor=pointer]
+        - option "Lip piercing" [ref=f65e3667] [cursor=pointer]
+        - option "Surface piercing" [ref=f65e3670] [cursor=pointer]
+        - option "Conch piercing" [ref=f65e3673] [cursor=pointer]
+        - option "Tragus piercing" [ref=f65e3676] [cursor=pointer]
+        - option "Nipple piercing" [ref=f65e3679] [cursor=pointer]
+        - option "Tattoo removal" [ref=f65e3682] [cursor=pointer]
+        - option "Body piercing" [ref=f65e3685] [cursor=pointer]
+        - option "Helix piercing" [ref=f65e3688] [cursor=pointer]
+        - option "Tattoo consultation" [ref=f65e3691] [cursor=pointer]
+        - option "Belly button piercing" [ref=f65e3694] [cursor=pointer]
+    - button "Dismiss" [ref=f65e3698]

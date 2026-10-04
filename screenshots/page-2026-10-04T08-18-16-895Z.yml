@@ -1,0 +1,148 @@
+- generic [ref=f85e12]:
+  - generic [ref=f85e13]:
+    - link "Fresha" [ref=f85e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f85e16]:
+      - button [ref=f85e18] [cursor=pointer]:
+        - paragraph [ref=f85e20]: Continue setup
+      - button "Search" [ref=f85e22] [cursor=pointer]
+      - button "Performance insights" [ref=f85e24] [cursor=pointer]
+      - button "Notifications" [ref=f85e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f85e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f85e31] [cursor=pointer]:
+        - generic [ref=f85e32]: FA
+  - generic [ref=f85e34]:
+    - generic [ref=f85e35]:
+      - generic [ref=f85e38]:
+        - generic [ref=f85e39]:
+          - link [ref=f85e42] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f85e46] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f85e50] [cursor=pointer]
+          - button [ref=f85e54] [cursor=pointer]
+          - button [ref=f85e58] [cursor=pointer]
+          - button [ref=f85e62] [cursor=pointer]
+          - button [ref=f85e66] [cursor=pointer]
+          - button [ref=f85e70] [cursor=pointer]
+          - link [ref=f85e74] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f85e78] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f85e82] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f85e86] [cursor=pointer]
+      - generic [ref=f85e89]:
+        - button "Collapse Navigation Menu" [ref=f85e91] [cursor=pointer]
+        - generic [ref=f85e97]:
+          - generic [ref=f85e98]:
+            - paragraph [ref=f85e99]: Catalog
+            - link [ref=f85e101] [cursor=pointer]:
+              - /url: /catalogue/services
+              - paragraph [ref=f85e102]: Service menu
+            - link [ref=f85e104] [cursor=pointer]:
+              - /url: /catalogue/packages
+              - paragraph [ref=f85e105]: Packages
+            - link [ref=f85e107] [cursor=pointer]:
+              - /url: /catalogue/products
+              - paragraph [ref=f85e108]: Products
+          - separator [ref=f85e110]
+          - generic [ref=f85e111]:
+            - paragraph [ref=f85e112]: Inventory
+            - link [ref=f85e114] [cursor=pointer]:
+              - /url: /catalogue/stocktakes
+              - paragraph [ref=f85e115]: Stocktakes
+            - link [ref=f85e117] [cursor=pointer]:
+              - /url: /catalogue/orders
+              - paragraph [ref=f85e118]: Stock orders
+            - link [ref=f85e120] [cursor=pointer]:
+              - /url: /catalogue/suppliers
+              - paragraph [ref=f85e121]: Suppliers
+    - generic [ref=f85e403]:
+      - generic [ref=f85e405]:
+        - generic [ref=f85e406]:
+          - generic [ref=f85e407]:
+            - paragraph [ref=f85e408]: Product list
+            - generic [ref=f85e409]: "3"
+          - paragraph [ref=f85e410]:
+            - paragraph [ref=f85e411]:
+              - text: Add and manage your products in stock.
+              - link "Learn more" [ref=f85e412] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/inventory/153-add-products-to-your-inventory
+        - generic [ref=f85e414]:
+          - button "Options" [ref=f85e417] [cursor=pointer]
+          - button "Add" [ref=f85e422] [cursor=pointer]
+      - generic [ref=f85e427]:
+        - generic [ref=f85e429]:
+          - generic [ref=f85e430]:
+            - generic [ref=f85e431]:
+              - generic [ref=f85e432]: Search
+              - textbox "Search" [ref=f85e437]:
+                - /placeholder: Search by product name or barcode
+            - button "Filters" [ref=f85e438] [cursor=pointer]
+          - button "Updated (newest first)" [ref=f85e447] [cursor=pointer]
+        - region [ref=f85e452]:
+          - generic [ref=f85e453]:
+            - table [ref=f85e456]:
+              - rowgroup [ref=f85e464]:
+                - row [ref=f85e465]:
+                  - columnheader "Select all displayed products Select all displayed products" [ref=f85e466]:
+                    - generic [ref=f85e468] [cursor=pointer]:
+                      - paragraph [ref=f85e471]: Select all displayed products
+                      - checkbox "Select all displayed products" [ref=f85e472]
+                  - columnheader [ref=f85e473]:
+                    - button "Product name" [ref=f85e476] [cursor=pointer]
+                  - columnheader [ref=f85e478]:
+                    - button "Category" [ref=f85e481] [cursor=pointer]
+                  - columnheader [ref=f85e483]:
+                    - button "Supplier" [ref=f85e486] [cursor=pointer]
+                  - columnheader [ref=f85e488]:
+                    - button "Quantity" [ref=f85e491] [cursor=pointer]
+                  - columnheader [ref=f85e493]:
+                    - button "Retail price" [ref=f85e496] [cursor=pointer]
+            - table [ref=f85e499]:
+              - rowgroup [ref=f85e507]:
+                - button [ref=f85e508] [cursor=pointer]:
+                  - cell "Select COUNCIL-TEST Product3 Select COUNCIL-TEST Product3" [ref=f85e509]:
+                    - generic [ref=f85e510]:
+                      - paragraph [ref=f85e513]: Select COUNCIL-TEST Product3
+                      - checkbox "Select COUNCIL-TEST Product3" [ref=f85e514]
+                  - cell [ref=f85e515]:
+                    - paragraph [ref=f85e519]: COUNCIL-TEST Product3
+                  - cell [ref=f85e520]:
+                    - paragraph [ref=f85e521]: "-"
+                  - cell [ref=f85e522]:
+                    - paragraph [ref=f85e523]: COUNCIL-TEST Supplier1
+                  - cell "0" [ref=f85e524]
+                  - cell "KWD 10" [ref=f85e525]
+                - button [ref=f85e526] [cursor=pointer]:
+                  - cell "Select COUNCIL-TEST Product2 Select COUNCIL-TEST Product2" [ref=f85e527]:
+                    - generic [ref=f85e528]:
+                      - paragraph [ref=f85e531]: Select COUNCIL-TEST Product2
+                      - checkbox "Select COUNCIL-TEST Product2" [ref=f85e532]
+                  - cell [ref=f85e533]:
+                    - paragraph [ref=f85e537]: COUNCIL-TEST Product2
+                  - cell [ref=f85e538]:
+                    - paragraph [ref=f85e539]: "-"
+                  - cell [ref=f85e540]:
+                    - paragraph [ref=f85e541]: COUNCIL-TEST Supplier1
+                  - cell "Unlimited" [ref=f85e542]
+                  - cell "KWD 8" [ref=f85e543]
+                - button [ref=f85e544] [cursor=pointer]:
+                  - cell "Select COUNCIL-TEST Product1 Select COUNCIL-TEST Product1" [ref=f85e545]:
+                    - generic [ref=f85e546]:
+                      - paragraph [ref=f85e549]: Select COUNCIL-TEST Product1
+                      - checkbox "Select COUNCIL-TEST Product1" [ref=f85e550]
+                  - cell [ref=f85e551]:
+                    - paragraph [ref=f85e555]: COUNCIL-TEST Product1
+                  - cell [ref=f85e556]:
+                    - paragraph [ref=f85e557]: "-"
+                  - cell [ref=f85e558]:
+                    - paragraph [ref=f85e559]: "-"
+                  - cell "0" [ref=f85e560]
+                  - cell "-" [ref=f85e561]
+        - generic [ref=f85e563]:
+          - generic [ref=f85e564]: Viewing results 1 to 3 of 3
+          - paragraph [ref=f85e566]: Viewing 1 - 3 of 3 results

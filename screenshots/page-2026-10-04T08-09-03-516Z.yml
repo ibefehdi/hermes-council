@@ -1,0 +1,299 @@
+- generic [ref=f22e2]:
+  - generic [ref=f22e12]:
+    - generic [ref=f22e13]:
+      - link "Fresha" [ref=f22e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f22e16]:
+        - button [ref=f22e18] [cursor=pointer]:
+          - paragraph [ref=f22e20]: Continue setup
+        - button "Search" [ref=f22e22] [cursor=pointer]
+        - button "Performance insights" [ref=f22e24] [cursor=pointer]
+        - button "Notifications" [ref=f22e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f22e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f22e31] [cursor=pointer]:
+          - generic [ref=f22e32]: FA
+    - generic [ref=f22e34]:
+      - generic [ref=f22e35]:
+        - generic [ref=f22e38]:
+          - generic [ref=f22e39]:
+            - link [ref=f22e42] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f22e46] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f22e50] [cursor=pointer]
+            - button [ref=f22e54] [cursor=pointer]
+            - button [ref=f22e58] [cursor=pointer]
+            - button [ref=f22e62] [cursor=pointer]
+            - button [ref=f22e66] [cursor=pointer]
+            - button [ref=f22e70] [cursor=pointer]
+            - link [ref=f22e74] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f22e78] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f22e82] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f22e86] [cursor=pointer]
+        - generic [ref=f22e89]:
+          - button "Collapse Navigation Menu" [ref=f22e91] [cursor=pointer]
+          - generic [ref=f22e97]:
+            - generic [ref=f22e98]:
+              - paragraph [ref=f22e99]: Clients
+              - link [ref=f22e101] [cursor=pointer]:
+                - /url: /clients/list
+                - paragraph [ref=f22e102]: Clients list
+              - link [ref=f22e104] [cursor=pointer]:
+                - /url: /clients/segments
+                - paragraph [ref=f22e105]: Client segments
+            - separator [ref=f22e107]
+            - generic [ref=f22e108]:
+              - paragraph [ref=f22e109]: Engage
+              - link [ref=f22e111] [cursor=pointer]:
+                - /url: /clients/loyalty
+                - paragraph [ref=f22e112]: Client loyalty
+              - link [ref=f22e114] [cursor=pointer]:
+                - /url: /clients/online-reputation
+                - paragraph [ref=f22e115]: Online reputation
+      - generic [ref=f22e122]:
+        - generic [ref=f22e124]:
+          - generic [ref=f22e125]:
+            - generic [ref=f22e126]:
+              - heading "Clients list" [level=1] [ref=f22e127]
+              - generic [ref=f22e128]: "10"
+            - paragraph [ref=f22e129]:
+              - text: View, add, edit and delete your client's details.
+              - link "Learn more" [ref=f22e130] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/clients/320-create-client-profiles
+          - generic [ref=f22e132]:
+            - button "Options" [ref=f22e135] [cursor=pointer]
+            - button "Add" [ref=f22e140] [cursor=pointer]
+        - generic [ref=f22e147]:
+          - generic [ref=f22e148]:
+            - generic [ref=f22e149]:
+              - generic [ref=f22e150]:
+                - paragraph [ref=f22e151]: Import your client list
+                - paragraph [ref=f22e152]: Takes a few minutes and prevents new client fees for existing clients who book online
+              - generic [ref=f22e153]:
+                - button "Start import" [ref=f22e154] [cursor=pointer]
+                - link "Learn more" [ref=f22e158] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/clients/101243-import-your-existing-client-list
+            - img "Import clients" [ref=f22e162]
+          - button "Close" [ref=f22e163] [cursor=pointer]
+        - generic [ref=f22e168]:
+          - generic [ref=f22e170]:
+            - generic [ref=f22e171]:
+              - generic [ref=f22e172]:
+                - generic [ref=f22e173]: Search
+                - textbox "Search" [ref=f22e178]:
+                  - /placeholder: Name, email or phone
+              - button "Filters" [ref=f22e179] [cursor=pointer]
+            - button "Created at (newest first)" [ref=f22e188] [cursor=pointer]
+          - region [ref=f22e193]:
+            - generic [ref=f22e194]:
+              - table [ref=f22e197]:
+                - rowgroup [ref=f22e205]:
+                  - row [ref=f22e206]:
+                    - columnheader "selectAll selectAll" [ref=f22e207]:
+                      - generic [ref=f22e209] [cursor=pointer]:
+                        - paragraph [ref=f22e212]: selectAll
+                        - checkbox "selectAll" [ref=f22e213]
+                    - columnheader [ref=f22e214]:
+                      - button "Client name" [ref=f22e217] [cursor=pointer]
+                    - columnheader "Mobile number" [ref=f22e219]
+                    - columnheader [ref=f22e223]:
+                      - button "Reviews" [ref=f22e226] [cursor=pointer]
+                    - columnheader [ref=f22e228]:
+                      - button "Sales" [ref=f22e231] [cursor=pointer]
+                    - columnheader [ref=f22e233]:
+                      - button "Created at" [ref=f22e236] [cursor=pointer]
+              - table [ref=f22e239]:
+                - rowgroup [ref=f22e247]:
+                  - button [ref=f22e248] [cursor=pointer]:
+                    - cell "select-row-301305152 select-row-301305152" [ref=f22e249]:
+                      - generic [ref=f22e250]:
+                        - paragraph [ref=f22e253]: select-row-301305152
+                        - checkbox "select-row-301305152" [ref=f22e254]
+                    - cell "C COUNCIL-TEST Frank Taylor council-test+7@example.com" [ref=f22e255]:
+                      - generic [ref=f22e256]:
+                        - generic [ref=f22e257]: C
+                        - generic [ref=f22e260]:
+                          - paragraph [ref=f22e261]: COUNCIL-TEST Frank Taylor
+                          - paragraph [ref=f22e262]: council-test+7@example.com
+                    - cell [ref=f22e263]:
+                      - paragraph [ref=f22e264]: "-"
+                    - cell [ref=f22e265]:
+                      - paragraph [ref=f22e266]: "-"
+                    - cell "KWD 0" [ref=f22e267]:
+                      - paragraph [ref=f22e268]:
+                        - generic [ref=f22e269]: KWD 0
+                    - cell [ref=f22e270]:
+                      - paragraph [ref=f22e271]: Oct 4, 2026
+                  - button [ref=f22e272] [cursor=pointer]:
+                    - cell "select-row-301305133 select-row-301305133" [ref=f22e273]:
+                      - generic [ref=f22e274]:
+                        - paragraph [ref=f22e277]: select-row-301305133
+                        - checkbox "select-row-301305133" [ref=f22e278]
+                    - cell [ref=f22e279]:
+                      - generic [ref=f22e282]:
+                        - paragraph [ref=f22e283]: COUNCIL-TEST Emma Brown
+                        - paragraph [ref=f22e284]: council-test+6@example.com
+                    - cell [ref=f22e285]:
+                      - paragraph [ref=f22e286]: "-"
+                    - cell [ref=f22e287]:
+                      - paragraph [ref=f22e288]: "-"
+                    - cell "KWD 0" [ref=f22e289]:
+                      - paragraph [ref=f22e290]:
+                        - generic [ref=f22e291]: KWD 0
+                    - cell [ref=f22e292]:
+                      - paragraph [ref=f22e293]: Oct 4, 2026
+                  - button [ref=f22e294] [cursor=pointer]:
+                    - cell "select-row-301305107 select-row-301305107" [ref=f22e295]:
+                      - generic [ref=f22e296]:
+                        - paragraph [ref=f22e299]: select-row-301305107
+                        - checkbox "select-row-301305107" [ref=f22e300]
+                    - cell [ref=f22e301]:
+                      - generic [ref=f22e304]:
+                        - paragraph [ref=f22e305]: COUNCIL-TEST David Wilson
+                        - paragraph [ref=f22e306]: council-test+5@example.com
+                    - cell [ref=f22e307]:
+                      - paragraph [ref=f22e308]: "-"
+                    - cell [ref=f22e309]:
+                      - paragraph [ref=f22e310]: "-"
+                    - cell "KWD 0" [ref=f22e311]:
+                      - paragraph [ref=f22e312]:
+                        - generic [ref=f22e313]: KWD 0
+                    - cell [ref=f22e314]:
+                      - paragraph [ref=f22e315]: Oct 4, 2026
+                  - button [ref=f22e316] [cursor=pointer]:
+                    - cell "select-row-301305069 select-row-301305069" [ref=f22e317]:
+                      - generic [ref=f22e318]:
+                        - paragraph [ref=f22e321]: select-row-301305069
+                        - checkbox "select-row-301305069" [ref=f22e322]
+                    - cell [ref=f22e323]:
+                      - generic [ref=f22e326]:
+                        - paragraph [ref=f22e327]: COUNCIL-TEST Carol Davis
+                        - paragraph [ref=f22e328]: council-test+4@example.com
+                    - cell [ref=f22e329]:
+                      - paragraph [ref=f22e330]: "-"
+                    - cell [ref=f22e331]:
+                      - paragraph [ref=f22e332]: "-"
+                    - cell "KWD 0" [ref=f22e333]:
+                      - paragraph [ref=f22e334]:
+                        - generic [ref=f22e335]: KWD 0
+                    - cell [ref=f22e336]:
+                      - paragraph [ref=f22e337]: Oct 4, 2026
+                  - button [ref=f22e338] [cursor=pointer]:
+                    - cell "select-row-301305013 select-row-301305013" [ref=f22e339]:
+                      - generic [ref=f22e340]:
+                        - paragraph [ref=f22e343]: select-row-301305013
+                        - checkbox "select-row-301305013" [ref=f22e344]
+                    - cell [ref=f22e345]:
+                      - generic [ref=f22e348]:
+                        - paragraph [ref=f22e349]: COUNCIL-TEST Bob Smith
+                        - paragraph [ref=f22e350]: council-test+3@example.com
+                    - cell [ref=f22e351]:
+                      - paragraph [ref=f22e352]: "-"
+                    - cell [ref=f22e353]:
+                      - paragraph [ref=f22e354]: "-"
+                    - cell "KWD 0" [ref=f22e355]:
+                      - paragraph [ref=f22e356]:
+                        - generic [ref=f22e357]: KWD 0
+                    - cell [ref=f22e358]:
+                      - paragraph [ref=f22e359]: Oct 4, 2026
+                  - button [ref=f22e360] [cursor=pointer]:
+                    - cell "select-row-301304885 select-row-301304885" [ref=f22e361]:
+                      - generic [ref=f22e362]:
+                        - paragraph [ref=f22e365]: select-row-301304885
+                        - checkbox "select-row-301304885" [ref=f22e366]
+                    - cell [ref=f22e367]:
+                      - generic [ref=f22e370]:
+                        - paragraph [ref=f22e371]: COUNCIL-TEST Alice Johnson
+                        - paragraph [ref=f22e372]: council-test+2@example.com
+                    - cell [ref=f22e373]:
+                      - paragraph [ref=f22e374]: "-"
+                    - cell [ref=f22e375]:
+                      - paragraph [ref=f22e376]: "-"
+                    - cell "KWD 0" [ref=f22e377]:
+                      - paragraph [ref=f22e378]:
+                        - generic [ref=f22e379]: KWD 0
+                    - cell [ref=f22e380]:
+                      - paragraph [ref=f22e381]: Oct 4, 2026
+                  - button [ref=f22e382] [cursor=pointer]:
+                    - cell "select-row-301303785 select-row-301303785" [ref=f22e383]:
+                      - generic [ref=f22e384]:
+                        - paragraph [ref=f22e387]: select-row-301303785
+                        - checkbox "select-row-301303785" [ref=f22e388]
+                    - cell [ref=f22e389]:
+                      - generic [ref=f22e392]:
+                        - paragraph [ref=f22e393]: COUNCIL-TEST Client1
+                        - paragraph [ref=f22e394]: council-test+1@example.com
+                    - cell [ref=f22e395]:
+                      - paragraph [ref=f22e396]: "-"
+                    - cell [ref=f22e397]:
+                      - paragraph [ref=f22e398]: "-"
+                    - cell "KWD 25" [ref=f22e399]:
+                      - paragraph [ref=f22e400]:
+                        - generic [ref=f22e401]: KWD 25
+                    - cell [ref=f22e402]:
+                      - paragraph [ref=f22e403]: Oct 4, 2026
+                  - button [ref=f22e404] [cursor=pointer]:
+                    - cell "select-row-301298884 select-row-301298884" [ref=f22e405]:
+                      - generic [ref=f22e406]:
+                        - paragraph [ref=f22e409]: select-row-301298884
+                        - checkbox "select-row-301298884" [ref=f22e410]
+                    - cell [ref=f22e411]:
+                      - generic [ref=f22e414]:
+                        - paragraph [ref=f22e415]: Jack Doe
+                        - paragraph [ref=f22e416]: jack@example.com
+                    - cell [ref=f22e417]:
+                      - paragraph [ref=f22e418]: "-"
+                    - cell [ref=f22e419]:
+                      - paragraph [ref=f22e420]: "-"
+                    - cell "KWD 0" [ref=f22e421]:
+                      - paragraph [ref=f22e422]:
+                        - generic [ref=f22e423]: KWD 0
+                    - cell [ref=f22e424]:
+                      - paragraph [ref=f22e425]: Oct 4, 2026
+                  - button [ref=f22e426] [cursor=pointer]:
+                    - cell "select-row-301298878 select-row-301298878" [ref=f22e427]:
+                      - generic [ref=f22e428]:
+                        - paragraph [ref=f22e431]: select-row-301298878
+                        - checkbox "select-row-301298878" [ref=f22e432]
+                    - cell [ref=f22e433]:
+                      - generic [ref=f22e436]:
+                        - paragraph [ref=f22e437]: Jane Doe
+                        - paragraph [ref=f22e438]: jane@example.com
+                    - cell [ref=f22e439]:
+                      - paragraph [ref=f22e440]: "-"
+                    - cell [ref=f22e441]:
+                      - paragraph [ref=f22e442]: "-"
+                    - cell "KWD 0" [ref=f22e443]:
+                      - paragraph [ref=f22e444]:
+                        - generic [ref=f22e445]: KWD 0
+                    - cell [ref=f22e446]:
+                      - paragraph [ref=f22e447]: Oct 4, 2026
+                  - button [ref=f22e448] [cursor=pointer]:
+                    - cell "select-row-301298877 select-row-301298877" [ref=f22e449]:
+                      - generic [ref=f22e450]:
+                        - paragraph [ref=f22e453]: select-row-301298877
+                        - checkbox "select-row-301298877" [ref=f22e454]
+                    - cell [ref=f22e455]:
+                      - generic [ref=f22e458]:
+                        - paragraph [ref=f22e459]: John Doe
+                        - paragraph [ref=f22e460]: john@example.com
+                    - cell [ref=f22e461]:
+                      - paragraph [ref=f22e462]: "-"
+                    - cell [ref=f22e463]:
+                      - paragraph [ref=f22e464]: "-"
+                    - cell "KWD 0" [ref=f22e465]:
+                      - paragraph [ref=f22e466]:
+                        - generic [ref=f22e467]: KWD 0
+                    - cell [ref=f22e468]:
+                      - paragraph [ref=f22e469]: Oct 4, 2026
+          - generic [ref=f22e471]:
+            - generic [ref=f22e472]: Viewing results 1 to 10 of 10
+            - paragraph [ref=f22e474]: Viewing 1 - 10 of 10 results
+  - status [ref=f22e475]:
+    - paragraph [ref=f22e477]: Client created
+    - button "Close Toast" [ref=f22e479] [cursor=pointer]

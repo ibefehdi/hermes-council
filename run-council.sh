@@ -22,11 +22,13 @@ DASHBOARD_URL=$(grep '^DASHBOARD_URL=' "$DIR/.env" 2>/dev/null | tail -1 | cut -
 
 OR_KEY=$(grep '^OPENROUTER_API_KEY=' "$DIR/.env" | tail -1 | cut -d= -f2- | tr -d "\"'")
 : "${OR_KEY:?Set OPENROUTER_API_KEY in $DIR/.env}"
-for role in cartographer linker verifier chair; do
-  f="${$(hermes -p $role config path):h}/.env"
+for f in ${$(hermes config path):h}/.env ${^${(f)"$(for r in cartographer linker verifier chair; do print -r -- "${$(hermes -p $r config path):h}"; done)"}}/.env; do
   { grep -v '^OPENROUTER_API_KEY=' "$f" 2>/dev/null || true; print -r -- "OPENROUTER_API_KEY=$OR_KEY"; } > "$f.tmp"
   mv "$f.tmp" "$f" && chmod 600 "$f"
 done
+# The gateway (default profile) uses this helper to triage stuck tasks; keep it off slow local models.
+hermes config set auxiliary.kanban_decomposer.provider openrouter >/dev/null
+hermes config set auxiliary.kanban_decomposer.model deepseek/deepseek-v4-flash >/dev/null
 
 if [[ $MODE == deep && ! -f "$OUT/FINAL_REPORT.md" ]]; then
   print "Deep mode builds on a survey. Run ./run-council.sh first to produce $OUT/FINAL_REPORT.md."

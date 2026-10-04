@@ -1,0 +1,79 @@
+- generic [ref=f65e12]:
+  - generic [ref=f65e13]:
+    - link "Fresha" [ref=f65e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f65e16]:
+      - button [ref=f65e18] [cursor=pointer]:
+        - paragraph [ref=f65e20]: Continue setup
+      - button "Search" [ref=f65e22] [cursor=pointer]
+      - button "Performance insights" [ref=f65e24] [cursor=pointer]
+      - button "Notifications" [ref=f65e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f65e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f65e31] [cursor=pointer]:
+        - generic [ref=f65e32]: FA
+  - generic [ref=f65e34]:
+    - generic [ref=f65e35]:
+      - generic [ref=f65e38]:
+        - generic [ref=f65e39]:
+          - link [ref=f65e42] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f65e46] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f65e50] [cursor=pointer]
+          - button [ref=f65e54] [cursor=pointer]
+          - button [ref=f65e58] [cursor=pointer]
+          - button [ref=f65e62] [cursor=pointer]
+          - button [ref=f65e66] [cursor=pointer]
+          - button [ref=f65e70] [cursor=pointer]
+          - link [ref=f65e74] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f65e78] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f65e82] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f65e86] [cursor=pointer]
+      - generic [ref=f65e195]:
+        - button "Collapse Navigation Menu" [ref=f65e197] [cursor=pointer]
+        - generic [ref=f65e203]:
+          - generic [ref=f65e204]:
+            - paragraph [ref=f65e205]: Catalog
+            - link [ref=f65e207] [cursor=pointer]:
+              - /url: /catalogue/services
+              - paragraph [ref=f65e208]: Service menu
+            - link [ref=f65e210] [cursor=pointer]:
+              - /url: /catalogue/packages
+              - paragraph [ref=f65e211]: Packages
+            - link [ref=f65e213] [cursor=pointer]:
+              - /url: /catalogue/products
+              - paragraph [ref=f65e214]: Products
+          - separator [ref=f65e216]
+          - generic [ref=f65e217]:
+            - paragraph [ref=f65e218]: Inventory
+            - link [ref=f65e220] [cursor=pointer]:
+              - /url: /catalogue/stocktakes
+              - paragraph [ref=f65e221]: Stocktakes
+            - link [ref=f65e223] [cursor=pointer]:
+              - /url: /catalogue/orders
+              - paragraph [ref=f65e224]: Stock orders
+            - link [ref=f65e226] [cursor=pointer]:
+              - /url: /catalogue/suppliers
+              - paragraph [ref=f65e227]: Suppliers
+    - generic [ref=f65e236]:
+      - generic [ref=f65e238]:
+        - generic [ref=f65e239]:
+          - paragraph [ref=f65e241]: Service menu
+          - paragraph [ref=f65e242]:
+            - text: View and manage the services offered by your business.
+            - link "Learn more" [ref=f65e243] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/catalog
+        - generic [ref=f65e245]:
+          - button "Options" [ref=f65e247] [cursor=pointer]
+          - button "Add" [ref=f65e254] [cursor=pointer]
+      - generic [ref=f65e264]:
+        - generic [ref=f65e266]:
+          - textbox [ref=f65e272]:
+            - /placeholder: Search service name
+          - button "Filters" [ref=f65e273] [cursor=pointer]
+        - button "Manage order" [ref=f65e280] [cursor=pointer]

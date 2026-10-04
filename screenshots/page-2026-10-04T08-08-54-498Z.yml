@@ -1,0 +1,178 @@
+- generic [ref=f24e3]:
+  - generic [ref=f24e4]:
+    - link "Fresha" [ref=f24e6] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f24e7]:
+      - button [ref=f24e9] [cursor=pointer]:
+        - paragraph [ref=f24e11]: Continue setup
+      - button "Search" [ref=f24e13] [cursor=pointer]
+      - button "Performance insights" [ref=f24e15] [cursor=pointer]
+      - button "Notifications" [ref=f24e18] [cursor=pointer]
+      - link "Fresha Connect" [ref=f24e20] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f24e22] [cursor=pointer]:
+        - generic [ref=f24e23]: FA
+  - generic [ref=f24e25]:
+    - generic [ref=f24e26]:
+      - generic [ref=f24e29]:
+        - generic [ref=f24e30]:
+          - link [ref=f24e33] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f24e37] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f24e41] [cursor=pointer]
+          - button [ref=f24e45] [cursor=pointer]
+          - button [ref=f24e49] [cursor=pointer]
+          - button [ref=f24e53] [cursor=pointer]
+          - button [ref=f24e57] [cursor=pointer]
+          - button [ref=f24e61] [cursor=pointer]
+          - link [ref=f24e65] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f24e69] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f24e73] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f24e77] [cursor=pointer]
+      - generic [ref=f24e80]:
+        - button "Collapse Navigation Menu" [ref=f24e82] [cursor=pointer]
+        - generic [ref=f24e88]:
+          - generic [ref=f24e89]:
+            - paragraph [ref=f24e90]: Catalog
+            - link [ref=f24e92] [cursor=pointer]:
+              - /url: /catalogue/services
+              - paragraph [ref=f24e93]: Service menu
+            - link [ref=f24e95] [cursor=pointer]:
+              - /url: /catalogue/packages
+              - paragraph [ref=f24e96]: Packages
+            - link [ref=f24e98] [cursor=pointer]:
+              - /url: /catalogue/products
+              - paragraph [ref=f24e99]: Products
+          - separator [ref=f24e101]
+          - generic [ref=f24e102]:
+            - paragraph [ref=f24e103]: Inventory
+            - link [ref=f24e105] [cursor=pointer]:
+              - /url: /catalogue/stocktakes
+              - paragraph [ref=f24e106]: Stocktakes
+            - link [ref=f24e108] [cursor=pointer]:
+              - /url: /catalogue/orders
+              - paragraph [ref=f24e109]: Stock orders
+            - link [ref=f24e111] [cursor=pointer]:
+              - /url: /catalogue/suppliers
+              - paragraph [ref=f24e112]: Suppliers
+    - dialog [ref=f24e428]:
+      - generic [ref=f24e430]:
+        - generic [ref=f24e431]:
+          - button "Close" [ref=f24e433] [cursor=pointer]
+          - paragraph [ref=f24e439]: Edit product
+          - generic [ref=f24e440]:
+            - button "Delete" [ref=f24e441] [cursor=pointer]
+            - button "Save" [ref=f24e445] [cursor=pointer]
+        - paragraph [ref=f24e452]: Edit product
+        - generic [ref=f24e455]:
+          - generic [ref=f24e456]:
+            - generic [ref=f24e457]:
+              - paragraph [ref=f24e461]: Basic info
+              - generic [ref=f24e464]:
+                - generic [ref=f24e465]:
+                  - generic [ref=f24e466]: Product name
+                  - textbox "Product name" [ref=f24e470]: COUNCIL-TEST Product1
+                - generic [ref=f24e471]:
+                  - generic [ref=f24e473]:
+                    - text: Product barcode
+                    - generic [ref=f24e474]: (Optional)
+                  - textbox "Product barcode (Optional)" [ref=f24e477]:
+                    - /placeholder: UPC, EAN, GTIN
+                - generic [ref=f24e478]:
+                  - generic [ref=f24e479]: Product brand
+                  - button "Select a brand" [ref=f24e481] [cursor=pointer]
+                - generic [ref=f24e482]:
+                  - generic [ref=f24e483]:
+                    - generic [ref=f24e484]: Measure
+                    - generic [ref=f24e486]:
+                      - generic [ref=f24e487]: Milliliters (ml)
+                      - combobox "Measure" [ref=f24e489] [cursor=pointer]:
+                        - option "Milliliters (ml)" [selected]
+                        - option "Liters (l)"
+                        - option "Fluid ounces (Fl. oz.)"
+                        - option "Grams (g)"
+                        - option "Kilograms (kg)"
+                        - option "Gallons (gal)"
+                        - option "Ounces (oz)"
+                        - option "Pounds (lb)"
+                        - option "Centimeters (cm)"
+                        - option "Feet (ft)"
+                        - option "Inches (in)"
+                        - option "A whole product"
+                      - generic [ref=f24e490] [cursor=pointer]
+                  - generic [ref=f24e491]:
+                    - generic [ref=f24e492]: Amount
+                    - generic [ref=f24e495]:
+                      - generic [ref=f24e496]: ml
+                      - spinbutton "Amount" [ref=f24e498]
+                - generic [ref=f24e499]:
+                  - generic [ref=f24e500]:
+                    - generic [ref=f24e501]: Short description
+                    - generic [ref=f24e502]: 0/100
+                  - textbox "Short description 0/100" [ref=f24e505]
+                - generic [ref=f24e506]:
+                  - generic [ref=f24e507]:
+                    - generic [ref=f24e508]: Product description
+                    - generic [ref=f24e509]: 0/1000
+                  - textbox "Product description 0/1000" [ref=f24e511]
+                - generic [ref=f24e512]:
+                  - generic [ref=f24e513]: Product category
+                  - button "Select a category" [ref=f24e515] [cursor=pointer]
+            - generic [ref=f24e516]:
+              - paragraph [ref=f24e520]: Pricing
+              - generic [ref=f24e524]:
+                - generic [ref=f24e525]: Supply price
+                - generic [ref=f24e528]:
+                  - generic [ref=f24e529]: KWD
+                  - spinbutton "Supply price" [ref=f24e531]
+              - generic [ref=f24e533]:
+                - generic [ref=f24e534]:
+                  - paragraph [ref=f24e535]: Retail sales
+                  - paragraph [ref=f24e536]: Allow sales of this product at checkout.
+                - generic [ref=f24e537]: Enable retail sales
+            - generic [ref=f24e542]:
+              - generic [ref=f24e544]:
+                - paragraph [ref=f24e546]: Inventory
+                - paragraph [ref=f24e547]: Manage stock levels of this product through Fresha.
+              - generic [ref=f24e550]:
+                - generic [ref=f24e551]:
+                  - generic [ref=f24e552]: SKU (Stock Keeping Unit)
+                  - textbox "SKU (Stock Keeping Unit)" [ref=f24e556]
+                - button "Generate SKU automatically" [ref=f24e557] [cursor=pointer]
+                - button "Add another SKU code" [ref=f24e559] [cursor=pointer]
+              - generic [ref=f24e563]:
+                - generic [ref=f24e564]: Supplier
+                - button "Select a supplier" [ref=f24e566] [cursor=pointer]
+              - generic [ref=f24e568]:
+                - paragraph [ref=f24e570]: Stock quantity
+                - generic [ref=f24e571]: Track stock quantity
+              - generic [ref=f24e577]:
+                - generic [ref=f24e578]:
+                  - paragraph [ref=f24e579]: Low stock and reordering
+                  - paragraph [ref=f24e580]:
+                    - text: Fresha will automatically notify you and pre-fill the reorder quantity set for future stock orders.
+                    - link "Learn more" [ref=f24e581] [cursor=pointer]:
+                      - /url: https://www.fresha.com/help-center/knowledge-base/inventory/156-set-up-stock-quantity-tracking
+                - generic [ref=f24e582]:
+                  - generic [ref=f24e583]:
+                    - generic [ref=f24e584]:
+                      - generic [ref=f24e585]: Low stock level
+                      - spinbutton "Low stock level" [ref=f24e589]
+                      - paragraph [ref=f24e590]: The level to get notified to reorder
+                    - generic [ref=f24e591]:
+                      - generic [ref=f24e592]: Reorder quantity
+                      - spinbutton "Reorder quantity" [ref=f24e596]
+                      - paragraph [ref=f24e597]: The default amount to order
+                  - generic [ref=f24e598] [cursor=pointer]: Receive low stock notifications.
+          - generic [ref=f24e603]:
+            - generic [ref=f24e605]:
+              - paragraph [ref=f24e607]: Product photos
+              - paragraph [ref=f24e608]: Drag and drop a photo to change the order.
+            - generic [ref=f24e613] [cursor=pointer]:
+              - paragraph [ref=f24e615]: Add a photo
+              - button "Add a photo" [ref=f24e616]
