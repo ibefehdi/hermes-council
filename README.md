@@ -62,6 +62,14 @@ The council turns the reverse-engineering reports into a clean-room plan for a m
 - `output/plan/CONVENTIONS.md`
 - `output/plan/skills/.cursor/skills/<name>/SKILL.md` and identical `output/plan/skills/.claude/skills/<name>/SKILL.md`, checked with `node check-skills.mjs output/plan/skills`
 
+### Plan review (round 2)
+
+```sh
+./run-council.sh review
+```
+
+An adversarial cross-review of the plan. Each reviewer audits work it didn't write: the linker checks feature coverage against the reverse-engineering reports, the requirements (including a simulated week at a multi-branch spa), the frontend, and every decision; the cartographer checks the data model, SQL, tenant isolation, booking integrity, money handling, the Edge Functions design, the implementation plan and the skills. Findings go to `output/plan/review2/`, the verifier accepts or rejects each one in `adjudication.md`, and the chair applies the accepted fixes in place and logs every change in `output/plan/REVISION_LOG.md`. Round 1 versions are kept in `output/plan/round1/`. If the plan's chair is still working, the review waits for it automatically.
+
 To use the skills, copy both trees into the app repo: `cp -R output/plan/skills/.cursor output/plan/skills/.claude /path/to/app/`. Visual design is left to your own design skill.
 
 ## Safety

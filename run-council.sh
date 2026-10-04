@@ -3,6 +3,8 @@
 #   ./run-council.sh ["optional focus"]        survey: map pages/features/links -> output/FINAL_REPORT.md
 #   ./run-council.sh deep ["optional focus"]   deep technical pass on top of the survey -> output/TECHNICAL_REPORT.md
 #   ./run-council.sh plan ["optional focus"]   design council: phase plan, decisions, conventions, Cursor/Claude skills -> output/plan/
+#   ./run-council.sh review ["optional focus"] adversarial cross-review of the plan, then the chair applies accepted fixes
+#                                               (waits for an unfinished plan chair automatically)
 [ -n "${ZSH_VERSION:-}" ] || exec zsh "$0" "$@"
 set -euo pipefail
 
@@ -10,12 +12,13 @@ DIR="${0:A:h}"
 cd "$DIR"
 
 MODE=survey
-if [[ ${1:-} == (deep|plan) ]]; then
+if [[ ${1:-} == (deep|plan|review) ]]; then
   MODE=$1
   shift
 fi
 FOCUS="${1:-Cover the entire dashboard.}"
 [[ $MODE == plan && -z ${1:-} ]] && FOCUS="Plan the full product, MVP first."
+[[ $MODE == review && -z ${1:-} ]] && FOCUS="Leave nothing missed and no wrong decision standing."
 OUT="$DIR/output"
 TS=$(date +%Y%m%d-%H%M%S)
 
@@ -42,7 +45,21 @@ if [[ $MODE == plan && ! -f "$OUT/TECHNICAL_REPORT.md" ]]; then
   exit 1
 fi
 
-if [[ $MODE != plan ]] && ! node "$DIR/login.mjs" --check; then
+PARENTS=()
+if [[ $MODE == review ]]; then
+  [[ -f "$OUT/plan/briefs/chair.md" ]] || { print "Review mode needs a plan run. Run ./run-council.sh plan first."; exit 1; }
+  # A plan chair that is still working becomes a dependency, so the review starts once it finishes.
+  PARENTS=(${=$(hermes kanban list --assignee chair --json | python3 -c "
+import json, sys
+print(' '.join(t['id'] for t in json.load(sys.stdin)
+               if t['status'] not in ('done', 'archived') and '/output/plan/' in t.get('body', '')))")})
+  if (( ! ${#PARENTS} )) && [[ ! -f "$OUT/plan/IMPLEMENTATION_PLAN.md" ]]; then
+    print "No plan chair is running and $OUT/plan/IMPLEMENTATION_PLAN.md is missing. Re-run ./run-council.sh plan."
+    exit 1
+  fi
+fi
+
+if [[ $MODE != (plan|review) ]] && ! node "$DIR/login.mjs" --check; then
   print "A browser window will open: log in (enter your OTP). The session is saved automatically."
   node "$DIR/login.mjs"
 fi
@@ -85,6 +102,28 @@ elif [[ $MODE == plan ]]; then
     --worker "linker:Edge Functions backend architecture and conventions - follow briefs $B/common.md and $B/backend.md"
     --worker "cartographer:Frontend architecture, i18n and RTL conventions - follow briefs $B/common.md and $B/frontend.md"
   )
+elif [[ $MODE == review ]]; then
+  P="$OUT/plan"
+  R="$P/review2"
+  if [[ -d "$R" ]]; then
+    mkdir -p "runs/$TS-before-review"
+    cp -R "$P/." "runs/$TS-before-review/"
+    mv "$R" "runs/$TS-before-review/review2-previous"
+  fi
+  B="$R/briefs"
+  mkdir -p "$B"
+  for f in briefs/plan-review/*.md; do
+    sed "s|{{COUNCIL_DIR}}|$DIR|g" "$f" > "$B/${f:t}"
+  done
+
+  REPORT="$P/REVISION_LOG.md"
+  GOAL="Round 2 adversarial review of the multi-tenant spa/salon SaaS plan in $P. Reviewers audit work they did not write and only write to $R. Every member reads $B/common.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md and applies the accepted fixes to decisions.md, IMPLEMENTATION_PLAN.md, CONVENTIONS.md, the SQL drafts and the skills. $FOCUS Final deliverables: the revised plan files and $REPORT."
+  WORKERS=(
+    --worker "linker:Coverage, requirements and frontend audit - follow briefs $B/common.md and $B/coverage.md"
+    --worker "cartographer:Data model, SQL, security and Edge Functions audit - follow briefs $B/common.md and $B/data-backend.md"
+    --worker "linker:Decisions and conventions audit - follow briefs $B/common.md and $B/decisions-audit.md"
+    --worker "cartographer:Implementation plan and skills audit - follow briefs $B/common.md and $B/plan-skills-audit.md"
+  )
 else
   mkdir -p "runs/$TS-before-deep"
   cp -R output/. "runs/$TS-before-deep/"
@@ -114,20 +153,23 @@ else
 fi
 
 hermes kanban init >/dev/null
-if [[ $MODE != deep ]]; then
+if [[ $MODE != (deep|review) ]] || [[ $MODE == review && ${#PARENTS} -eq 0 ]]; then
   hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier verifier --synthesizer chair
 else
-  # Seed data first; workers depend on it. Dispatch is paused while dependencies are wired so nothing starts early.
+  # Workers depend on PARENTS (deep: a seed-data task; review: the unfinished plan chair).
+  # Dispatch is paused while dependencies are wired so nothing starts early.
   hermes pause --reason "wiring council dependencies" >/dev/null
   trap 'hermes resume >/dev/null 2>&1' EXIT
   json_field() { python3 -c "import json,sys; d=json.load(sys.stdin); v=d$1; print(' '.join(v) if isinstance(v, list) else v)"; }
-  SEED=$(hermes kanban create "Seed realistic COUNCIL-TEST data - follow briefs $B/common.md and $B/seed.md" \
-    --assignee linker --body-file "$B/seed.md" --json | json_field '["id"]')
+  if [[ $MODE == deep ]]; then
+    PARENTS=($(hermes kanban create "Seed realistic COUNCIL-TEST data - follow briefs $B/common.md and $B/seed.md" \
+      --assignee linker --body-file "$B/seed.md" --json | json_field '["id"]'))
+  fi
   SWARM=$(hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier verifier --synthesizer chair --json)
   for w in ${=$(print -r -- "$SWARM" | json_field '["worker_ids"]')}; do
-    hermes kanban link "$SEED" "$w" >/dev/null
+    for p in $PARENTS; do hermes kanban link "$p" "$w" >/dev/null; done
   done
-  print "Seed: $SEED  Workers: $(print -r -- "$SWARM" | json_field '["worker_ids"]')  Verifier: $(print -r -- "$SWARM" | json_field '["verifier_id"]')  Chair: $(print -r -- "$SWARM" | json_field '["synthesizer_id"]')"
+  print "Waits on: $PARENTS  Workers: $(print -r -- "$SWARM" | json_field '["worker_ids"]')  Verifier: $(print -r -- "$SWARM" | json_field '["verifier_id"]')  Chair: $(print -r -- "$SWARM" | json_field '["synthesizer_id"]')"
   hermes resume >/dev/null
   trap - EXIT
 fi
