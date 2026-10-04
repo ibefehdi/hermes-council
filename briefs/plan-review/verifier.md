@@ -9,3 +9,5 @@ Read the four reviewer files in `{{COUNCIL_DIR}}/output/plan/review2/` (`coverag
 3. Do your own sweep for anything all four reviewers missed, especially tenant isolation, double booking, money, RTL, and contradictions between documents. Add these as `F-verifier-<n>` findings with fixes.
 4. If a reviewer file is missing or clearly incomplete, block the task with a note naming it instead of passing.
 5. End with the ordered fix list for the chair: blockers first, then majors, then minors, each with the finding id, the files to change, and the exact change.
+
+Your gate is the adjudication itself, not the state of the plan. Once `adjudication.md` is complete, complete your task even if there are blocker findings: applying the fixes is the chair's job, and the chair cannot start until you complete. Block only for item 4.
