@@ -28,11 +28,12 @@ fi
 mkdir -p output screenshots
 
 FOCUS="${1:-Cover the entire dashboard.}"
+# Worker cards are parsed as PROFILE:TITLE:SKILLS, so titles must not contain ':' (keep URLs in the goal only).
 GOAL="Map the dashboard at $DASHBOARD_URL: every page, every feature on each page, and how features link to each other. $FOCUS Final deliverable: $DIR/output/FINAL_REPORT.md"
 
 hermes kanban init >/dev/null
 hermes kanban swarm "$GOAL" \
-  --worker "cartographer:Inventory every page and feature of $DASHBOARD_URL into $DIR/output/pages.md and pages.json" \
+  --worker "cartographer:Inventory every page and feature of the dashboard into $DIR/output/pages.md and pages.json" \
   --worker "linker:Map how features connect (navigation, shared entities, data flows, shared APIs) into $DIR/output/links.md" \
   --verifier verifier \
   --synthesizer chair

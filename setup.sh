@@ -30,6 +30,14 @@ print "==> Installing Playwright and Chromium"
 npm install --silent
 npx playwright install chromium
 mkdir -p output screenshots runs
+
+# Prefer installed Google Chrome: no browser-version coupling with @playwright/mcp, and a less bot-like fingerprint.
+if [[ -e "/Applications/Google Chrome.app" ]] || command -v google-chrome >/dev/null; then
+  MCP_BROWSER=chrome
+else
+  MCP_BROWSER=chromium
+fi
+print "==> Agents will browse with: $MCP_BROWSER"
 [[ -f auth.json ]] || print -r '{"cookies":[],"origins":[]}' > auth.json
 
 if [[ ! -f .env ]]; then
@@ -98,10 +106,11 @@ for role in $ROLES; do
 
   hermes -p $role mcp remove playwright >/dev/null 2>&1 || true
   print Y | hermes -p $role mcp add playwright --command npx --connect-timeout 120 --args \
-    -y @playwright/mcp@latest --browser chromium --headless --isolated \
+    -y @playwright/mcp@latest --browser $MCP_BROWSER --headless --isolated \
     --storage-state "$DIR/auth.json" --output-dir "$DIR/screenshots" >/dev/null
 
   hermes -p $role tools enable kanban >/dev/null
+  hermes -p $role tools disable browser computer_use >/dev/null
 done
 
 hermes tools enable kanban >/dev/null
