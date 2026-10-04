@@ -2,7 +2,9 @@
 
 Output: `{{COUNCIL_DIR}}/output/plan/final/verification.md`
 
-Read the four drafts in `{{COUNCIL_DIR}}/output/plan/final/drafts/` (`parity.md`, `architecture-uml.md`, `reasoning.md`, `phases.md`) against the revised plan files and the Fresha evidence.
+Read the drafts in `{{COUNCIL_DIR}}/output/plan/final/drafts/` (`parity.md`, `architecture-uml.md`, `reasoning.md`, `phases.md`, `sql.md`) and the corrected migrations in `{{COUNCIL_DIR}}/output/plan/sql/v2/` against the revised plan files and the Fresha evidence.
+
+For the SQL: run `node {{COUNCIL_DIR}}/check-sql.mjs {{COUNCIL_DIR}}/output/plan/sql/v2/migrations {{COUNCIL_DIR}}/output/plan/sql/v2/tests` yourself, check the migrations follow every relevant ADR, and look for tenant isolation, branch scope, double-booking or money cases the tests do not cover. Write extra tests into your verification file as findings with the test SQL.
 
 1. Consistency: the drafts must agree with each other and with the revised `decisions.md` and `sql/` (names, phase.subphase numbers, roles, enforcement points, money and time-zone rules). List every mismatch with both locations.
 2. Fresha claims: spot-check at least 20 parity rows and every "Fresha does X" statement in the reasoning digest against the evidence files. Wrong or unsupported claims are findings.

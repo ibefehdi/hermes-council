@@ -14,7 +14,7 @@ Sections, in order:
 4. Beyond Fresha: the extra features, with the problem each solves and its phase.subphase.
 5. User journeys per role.
 6. Architecture: context, containers, deployment, environments, Edge Function isolation.
-7. Domain model: class and ER diagrams per area.
+7. Domain model: class and ER diagrams per area, matching the corrected migrations in `sql/v2/` (list them with what each does, and the checker result).
 8. Key flows: sequence and state diagrams.
 9. Security and multi-tenancy: roles x actions x enforcement, isolation attack paths and how each is closed, data access map.
 10. Decisions and reasoning: every ADR in plain language with why, alternatives, and the Fresha comparison.
@@ -30,6 +30,6 @@ If an accepted fix changes a decision, a convention, or what a skill teaches, al
 
 ## Validate
 
-Run `node {{COUNCIL_DIR}}/check-mermaid.mjs {{COUNCIL_DIR}}/output/plan/PLAN.md` and on every other file you changed, and `node {{COUNCIL_DIR}}/check-skills.mjs {{COUNCIL_DIR}}/output/plan/skills`. Fix until both pass. Check that PLAN.md contains every section above and that no phase is missing subphases.
+Run `node {{COUNCIL_DIR}}/check-mermaid.mjs {{COUNCIL_DIR}}/output/plan/PLAN.md` and on every other file you changed, `node {{COUNCIL_DIR}}/check-skills.mjs {{COUNCIL_DIR}}/output/plan/skills`, and, if you changed any SQL, `node {{COUNCIL_DIR}}/check-sql.mjs {{COUNCIL_DIR}}/output/plan/sql/v2/migrations {{COUNCIL_DIR}}/output/plan/sql/v2/tests`. Fix until both pass. Check that PLAN.md contains every section above and that no phase is missing subphases.
 
 Never modify the Fresha reports (`output/*.md`, `output/*.json`, `output/technical/`), the round 1 member files, `round1/`, `review2/`, or the drafts.

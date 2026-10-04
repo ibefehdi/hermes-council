@@ -148,6 +148,7 @@ elif [[ $MODE == final ]]; then
     --worker "linker:Architecture and UML diagrams - follow briefs $B/common.md and $B/architecture-uml.md"
     --worker "cartographer:Decisions reasoning, council findings and a final independent pass - follow briefs $B/common.md and $B/reasoning.md"
     --worker "linker:Phases and subphases with backlog, dependencies and timeline - follow briefs $B/common.md and $B/phases.md"
+    --worker "linker:Corrected SQL migrations and RLS tests - follow briefs $B/common.md and $B/sql.md"
   )
 else
   mkdir -p "runs/$TS-before-deep"
