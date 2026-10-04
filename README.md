@@ -35,6 +35,17 @@ The script checks the saved session in `auth.json`. If it's missing or expired, 
 
 To refresh the session by hand: `npm run login:headed`. To test it: `node login.mjs --check`.
 
+### Deep technical pass
+
+After a survey, run a second pass that builds on it:
+
+```bash
+./run-council.sh deep
+./run-council.sh deep "Extra focus for this pass"
+```
+
+Five workers run in parallel, each with a brief in `briefs/deep/`: Setup and every settings page, every report, everything the survey missed, create/edit flows with `COUNCIL-TEST` data, and architecture (API catalogue, data model, page connectivity). Each brief asks for full technical detail and Mermaid UML diagrams (class, ER, sequence, state, flowchart), validated with `node check-mermaid.mjs <file.md>`. Worker outputs go to `output/technical/`, the verifier checks them against the live dashboard, and the chair writes `output/TECHNICAL_REPORT.md`. The survey's `FINAL_REPORT.md` and its source files are made read-only and backed up to `runs/` first; they are never changed.
+
 ## Safety
 
 Agents are told the target is staging: they may click anything, but created records are prefixed `COUNCIL-TEST`, existing records are never modified or deleted, and the final report lists everything to clean up. Do not point it at production.

@@ -1,10 +1,22 @@
 #!/usr/bin/env zsh
-# Usage: ~/council/run-council.sh ["optional extra focus for this run"]
+# Usage:
+#   ./run-council.sh ["optional focus"]        survey: map pages/features/links -> output/FINAL_REPORT.md
+#   ./run-council.sh deep ["optional focus"]   deep technical pass on top of the survey -> output/TECHNICAL_REPORT.md
 [ -n "${ZSH_VERSION:-}" ] || exec zsh "$0" "$@"
 set -euo pipefail
 
 DIR="${0:A:h}"
 cd "$DIR"
+
+MODE=survey
+if [[ ${1:-} == deep ]]; then
+  MODE=deep
+  shift
+fi
+FOCUS="${1:-Cover the entire dashboard.}"
+OUT="$DIR/output"
+TS=$(date +%Y%m%d-%H%M%S)
+
 DASHBOARD_URL=$(grep '^DASHBOARD_URL=' "$DIR/.env" 2>/dev/null | tail -1 | cut -d= -f2- | tr -d "\"'")
 : "${DASHBOARD_URL:?Set DASHBOARD_URL in $DIR/.env}"
 
@@ -16,34 +28,69 @@ for role in cartographer linker verifier chair; do
   mv "$f.tmp" "$f" && chmod 600 "$f"
 done
 
+if [[ $MODE == deep && ! -f "$OUT/FINAL_REPORT.md" ]]; then
+  print "Deep mode builds on a survey. Run ./run-council.sh first to produce $OUT/FINAL_REPORT.md."
+  exit 1
+fi
+
 if ! node "$DIR/login.mjs" --check; then
   print "A browser window will open: log in (enter your OTP). The session is saved automatically."
   node "$DIR/login.mjs"
 fi
 
-mkdir -p runs
-if [[ -d output && -n "$(ls -A output 2>/dev/null)" ]]; then
-  mv output "runs/$(date +%Y%m%d-%H%M%S)"
-fi
-mkdir -p output screenshots
+mkdir -p runs screenshots
 
-FOCUS="${1:-Cover the entire dashboard.}"
 # Worker cards are parsed as PROFILE:TITLE:SKILLS, so titles must not contain ':' (keep URLs in the goal only).
-GOAL="Map the dashboard at $DASHBOARD_URL: every page, every feature on each page, and how features link to each other. $FOCUS Final deliverable: $DIR/output/FINAL_REPORT.md"
+if [[ $MODE == survey ]]; then
+  if [[ -d output && -n "$(ls -A output 2>/dev/null)" ]]; then
+    chmod -R u+w output
+    mv output "runs/$TS"
+  fi
+  mkdir -p output
+  REPORT="$OUT/FINAL_REPORT.md"
+  GOAL="Map the dashboard at $DASHBOARD_URL: every page, every feature on each page, and how features link to each other. $FOCUS Final deliverable: $REPORT"
+  WORKERS=(
+    --worker "cartographer:Inventory every page and feature of the dashboard into $OUT/pages.md and pages.json"
+    --worker "linker:Map how features connect (navigation, shared entities, data flows, shared APIs) into $OUT/links.md"
+  )
+else
+  mkdir -p "runs/$TS-before-deep"
+  cp -R output/. "runs/$TS-before-deep/"
+  if [[ -d output/technical ]]; then
+    chmod -R u+w output/technical
+    mv output/technical "runs/$TS-before-deep/technical-previous"
+  fi
+  [[ -f output/TECHNICAL_REPORT.md ]] && mv output/TECHNICAL_REPORT.md "runs/$TS-before-deep/TECHNICAL_REPORT-previous.md"
+  chmod a-w output/*.md output/*.json 2>/dev/null || true
+
+  B="$OUT/technical/briefs"
+  mkdir -p "$B"
+  for f in briefs/deep/*.md; do
+    sed "s|{{COUNCIL_DIR}}|$DIR|g" "$f" > "$B/${f:t}"
+  done
+  : > "$OUT/technical/test-records.md"
+
+  REPORT="$OUT/TECHNICAL_REPORT.md"
+  GOAL="Deep technical pass over the dashboard at $DASHBOARD_URL, building on the first survey in $OUT (FINAL_REPORT.md, pages.json, links.md, review.md are read-only baseline). Every member reads $B/common.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md. $FOCUS Final deliverable: $REPORT (FINAL_REPORT.md must remain unchanged)."
+  WORKERS=(
+    --worker "cartographer:Deep pass on Setup and all settings pages - follow briefs $B/common.md and $B/settings.md"
+    --worker "cartographer:Deep pass on every report - follow briefs $B/common.md and $B/reports.md"
+    --worker "cartographer:Resolve everything the first survey missed - follow briefs $B/common.md and $B/gaps.md"
+    --worker "linker:Exercise create and edit flows with COUNCIL-TEST data - follow briefs $B/common.md and $B/flows.md"
+    --worker "linker:Architecture, API catalogue, data model, page connectivity - follow briefs $B/common.md and $B/architecture.md"
+  )
+fi
 
 hermes kanban init >/dev/null
-hermes kanban swarm "$GOAL" \
-  --worker "cartographer:Inventory every page and feature of the dashboard into $DIR/output/pages.md and pages.json" \
-  --worker "linker:Map how features connect (navigation, shared entities, data flows, shared APIs) into $DIR/output/links.md" \
-  --verifier verifier \
-  --synthesizer chair
+hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier verifier --synthesizer chair
 
 hermes config set kanban.dispatch_interval_seconds 15 >/dev/null
 hermes config set kanban.failure_limit 4 >/dev/null
+hermes config set kanban.max_in_progress 6 >/dev/null
 if ! hermes gateway status 2>&1 | grep -q "is running"; then
   nohup hermes gateway run > "$DIR/gateway.log" 2>&1 &
   sleep 10
 fi
 
-echo "Council started. Report will be at: $DIR/output/FINAL_REPORT.md (Ctrl-C stops watching, not the council)"
+echo "Council started ($MODE). Report will be at: $REPORT (Ctrl-C stops watching, not the council)"
 hermes kanban watch
