@@ -60,14 +60,14 @@ d55f183 docs(skills): document the _shared platform and function template
 | # | Gate | Exit Code | Result | Log File | Key Lines |
 |---|------|-----------|--------|----------|-----------|
 | 1 | pnpm install --frozen-lockfile | 0 | PASS | pnpm-install.log | "Scope: all 9 workspace projects", "Already up to date", "Done in 225ms" |
-| 2 | pnpm db:reset (initial) | 0 | PASS | db-reset.log | 11 migrations applied, seed.sql loaded successfully |
+| 2 | pnpm db:reset (initial) | 0 | PASS | db-reset.log | 10 migrations applied, seed.sql loaded successfully |
 | 3 | pnpm db:test (pgTAP) | 0 | PASS | db-test.log | "5 files, 149 Tests, All tests successful" |
 | 4 | pnpm db:lint (supabase db lint --level warning) | 0 | PASS | db-lint.log | "No schema errors found" |
 | 5 | Type drift (gen types vs committed) | 0 | PASS | type-drift.log | No drift. Generated types match committed file exactly (after stripping stderr header) |
 | 6 | pnpm fn:test (Deno) | 1 | FAIL | fn-test.log | _shared: 35/35 passed; _template: 3/3 passed; health: 0/2 passed. Health tests fail because local functions server returns 503 (not serving functions by default) |
 | 7 | pnpm verify | 0 | PASS | verify.log | i18n:compile OK, typecheck OK (8/9), lint OK, lint:css OK, test OK (16 files, 79 tests), build OK, size-limit OK (196.75 kB / 84.04 kB) |
 | 8 | Playwright suite | 0 | PASS | playwright.log | 20 passed (10 en + 10 ar), 13.7s, projects: en, ar |
-| 9 | pnpm db:reset (final) | 0 | PASS | db-reset.log | Same as initial -- 11 migrations, seed loaded cleanly |
+| 9 | pnpm db:reset (final) | 0 | PASS | db-reset.log | Same as initial -- 10 migrations, seed loaded cleanly |
 
 ### Test Counts
 
