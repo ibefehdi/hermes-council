@@ -14,13 +14,13 @@ One task = one PR (small enough to review in one sitting). Order of work matters
 - Check `spa-domain-glossary` for every noun in the task. New concept? Add the glossary entry in the same PR, before using the term.
 
 ### 2. Migration (tag: DB)
-- `supabase migration new <description>`; follow `supabase-database` skill conventions: glossary names, uuid PKs, `tenant_id`/`branch_id` with composite FKs, `_minor bigint` money, `timestamptz`, bilingual `name_en`/`name_ar` where operator-facing, sentinel branch UUID instead of NULL, `updated_at` trigger.
+- `supabase migration new <description>`; follow `supabase-database` skill conventions: glossary names, uuid PKs, `tenant_id`/`branch_id` with composite FKs (every FK to a tenant-owned table is composite — ADR-20 rule 5), `_minor bigint` money, `timestamptz`, bilingual `name_en`/`name_ar` where operator-facing, the all-branches representation (`branch_id NULL` + `all_branches` flag + partial unique indexes — never the withdrawn sentinel UUID), `updated_at` trigger, `SET search_path = public` on every SECURITY DEFINER function.
 - Constraints before code: CHECK enums (canonical values only), unique indexes (with soft-delete partials where relevant), exclusion constraints for busy-time tables.
 - Never edit an applied migration. `supabase db reset` must pass locally.
 
 ### 3. RLS + audit (tag: DB, same or follow-up migration)
 - Enable RLS; apply the tenant or branch-scoped policy template; role-gate writes per the requirements matrix.
-- Decide the write path per ADR-28: allowlisted direct write, or RPC/Edge-Function-only (money, conflicts, cross-table, side effects → RPC-only, select-only RLS). Adding a table to the allowlist requires showing the policies/constraints that make it safe in the PR description.
+- Decide the write path per ADR-28: allowlisted direct write, or RPC/Edge-Function-only (money, conflicts, cross-table, side effects → RPC-only, select-only RLS). `blocked_times` is RPC-only (locked staff RPC — round 2, F-DB-6); on `clients`, the columns `is_blocked`, `is_deleted`, `merged_into` are function-only even though contact fields are allowlisted (round 2, F-4). Adding a table to the allowlist requires showing the policies/constraints that make it safe in the PR description.
 - Audited entities get the audit trigger; `audit_log` DML stays revoked from clients.
 - Report-visible data: views get `WITH (security_invoker = true)`; day grouping uses the branch time zone.
 
@@ -34,7 +34,7 @@ One task = one PR (small enough to review in one sitting). Order of work matters
 - Add/extend the operation's Zod schema in `packages/validation` (pure JS, integer money, uuid strings). One schema serves the form and the function; DTO types are `z.infer`.
 
 ### 6. Server logic (tag: Edge Function / DB)
-- SQL-heavy invariants: SECURITY DEFINER RPC (scope-checked internally, advisory locks where busy time is written, reconciliation checks where money is written, audit writes inside the transaction).
+- SQL-heavy invariants: SECURITY DEFINER RPC (scope-checked internally, `SET search_path = public`, advisory locks where busy time is written, reconciliation checks where money is written, audit writes inside the transaction).
 - Orchestration/external effects: handler in the owning bounded-context function; `requireScope()` before privileged steps; envelope + error catalogue; `Idempotency-Key` on money mutations; heavy work to pgmq, never a long request.
 - Deno tests: happy path, validation rejection, scope denial (wrong tenant/branch/role → FORBIDDEN), idempotent replay, concurrency case where applicable.
 
@@ -72,5 +72,6 @@ One task = one PR (small enough to review in one sitting). Order of work matters
 - Check-then-insert conflict logic in triggers (race). Use the exclusion constraint + advisory lock pattern.
 - `numeric` money creeping back in, or decimals crossing the API boundary.
 - Client-sent `tenant_id`/`branch_id` trusted without `requireScope`.
-- A "quick" direct write to a money/booking table because RLS "mostly covers it". The allowlist is binary.
+- A "quick" direct write to a money/booking/blocked-time table because RLS "mostly covers it". The allowlist is binary.
+- The withdrawn sentinel branch UUID (`00000000-...`) reappearing in a migration, policy, or helper — all-branches is the `all_branches` flag (ADR-20 rule 6 round 2).
 - Arabic copy added later "once it stabilizes". Both locales ship in the same PR or the PR is incomplete.

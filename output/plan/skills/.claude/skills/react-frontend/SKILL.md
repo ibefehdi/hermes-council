@@ -10,8 +10,8 @@ All visual decisions (colours, typography, spacing, component look) come from th
 ## Quick start / rules
 
 1. Import boundaries: features import `@repo/{ui,api,db,i18n,validation,core}` and other features' `index.ts` only - never internals. Cycles fail lint.
-2. Data access (ADR-28): reads use the typed supabase client under RLS; report aggregates call `report_*` RPCs; invariant writes (bookings, checkout, refunds, register, role/membership changes) go through `@repo/api` typed Edge Function wrappers. Direct single-table writes only for the allowlist (`profiles` self, `client_notes`, `clients` non-financial fields, `settings`, `blocked_times`, `shifts`).
-3. Query keys come from key factories and always include tenant and branch scope (ADR-38):
+2. Data access (ADR-28, round 2): reads use the typed supabase client under RLS; report aggregates call `report_*` RPCs; invariant writes (bookings, checkout, refunds, register, blocked time, role/membership changes) go through `@repo/api` typed Edge Function wrappers. Direct single-table writes only for the allowlist (`profiles` self, `client_notes` receptionist+, `clients` contact/profile fields only — never `is_blocked`/`is_deleted`/`merged_into`, which route through the `clients` function, `settings`, `shifts`). `blocked_times` is NOT direct-write (locked staff RPC only). Refunds/voids are owner/manager-only, enforced server-side (ADR-10).
+3. Query keys come from key factories and always carry scope (ADR-38, round 2): tenant segment for tenant-scoped entities, `[tenantId, branchId]` for branch-scoped entities, `[tenantId, id]` for client detail — a detail key without the tenant segment is prohibited:
 
 ```ts
 export const qk = {
@@ -22,7 +22,7 @@ export const qk = {
   clients: {
     all: (tenantId: string) => ['clients', tenantId] as const,
     list: (tenantId: string, f: ClientFilters) => ['clients', 'list', tenantId, f] as const,
-    detail: (id: string) => ['clients', 'detail', id] as const,
+    detail: (tenantId: string, id: string) => ['clients', 'detail', tenantId, id] as const,
   },
 }
 ```
@@ -32,8 +32,8 @@ export const qk = {
 6. Forms: React Hook Form + `zodResolver(schema)`; the schema lives in `@repo/validation` and is imported unchanged by the Edge Function. Zod errors map to fields via `fieldErrors`.
 7. Errors: one `ApiError` with codes `NETWORK | UNAUTHENTICATED | FORBIDDEN | VALIDATION | NOT_FOUND | CONFLICT | IDEMPOTENCY_MISMATCH | RATE_LIMITED | INTERNAL | UNAVAILABLE` (ADR-29). Toast for transient, redirect for `UNAUTHENTICATED`, inline fields for `VALIDATION`, explanatory toast for `CONFLICT`. `NETWORK` is client-side only.
 8. Money moves through state/cache as integer minor units (fils); durations as integer minutes; formatting only at render via `useFormat()` (ADR-17/40).
-9. Every async view renders through `<AsyncBoundary>` (skeleton / actionable empty / error) - never conflate "empty" with "failed".
-10. Route guards (`beforeLoad`) are UX only; RLS is the security boundary. Branch lives in `?branch=` search param; tenant is session context with a switcher for multi-tenant users; switching tenant clears the query cache (ADR-37).
+9. Every async view renders through `<AsyncBoundary>` (skeleton / actionable empty / error) - never conflate "empty" with "failed". Degraded network (round 2, F-fe-3): a timed-out mutation surfaces a "Reconnecting…" banner and its retry reuses the same idempotency key (never a duplicate charge); queries show stale cache with a "trying again in N seconds" indicator; no offline-first writes in MVP - a clear network error message is acceptable.
+10. Route guards (`beforeLoad`) are UX only; RLS is the security boundary. Guards know only the membership roles (`tenant_owner`, `branch_manager`, `receptionist`, `staff`) - `platform_admin` is not a frontend role (round 2, F-perm-4); platform impersonation is an audited session mode that renders a persistent "Impersonating [tenant]" banner (ADR-20 rule 9). Branch lives in `?branch=` search param; tenant is session context with a switcher for multi-tenant users; switching tenant clears the query cache (ADR-37).
 
 ## Adding a feature screen, step by step
 

@@ -5,7 +5,7 @@ description: Use when creating, editing, or deploying Supabase Edge Functions (D
 
 # Supabase Edge Functions
 
-Rules follow ADR-19/24/27/28/29/30/31/32/33/35. One function per bounded context; MVP functions: `bookings`, `checkout`, `catalogue`, `clients`, `staff`, `reports`, `onboarding` (Phase 2 adds `notifications`, `webhooks`, `online-booking`). There is no `auth-hook` function (ADR-19).
+Rules follow ADR-19/24/27/28/29/30/31/32/33/35. One function per bounded context; MVP functions: `bookings`, `checkout`, `catalogue`, `clients`, `staff`, `reports`, `onboarding` (plan Phase 9 adds `notifications`, `webhooks`, `online-booking`). There is no `auth-hook` function (ADR-19).
 
 ## Layout
 
@@ -97,12 +97,12 @@ Throw `AppError(code, message, status, details?)`; the wrapper maps to the envel
 ## Logging, limits, timeouts
 
 - One structured JSON line per request (`event: 'request'|'response'|'error'`, method, path, tenantId, userId, requestId); request IDs threaded through nested calls; ≤10k chars per line; no per-row logging (100 events/10s threshold).
-- Platform limits shape the design: 256MB memory, 2s CPU/request (push computation into SQL), 150s/400s wall clock (background work goes to queues), 5MB deployed size (keep `_shared` lean).
+- Platform limits shape the design: 256MB memory, 2s CPU/request (push computation into SQL), 150s/400s wall clock (background work goes to queues), bundle size 20MB CLI-bundled (local) / 5MB server-side bundled (keep `_shared` lean) — round 2, F-BE-1: both documented limits, per https://supabase.com/docs/guides/functions/limits.
 - Handler timeouts: 30s user-facing, 120s cron; long jobs (exports, imports) enqueue to pgmq and return immediately (ADR-33). Queue consumers are idempotent - pgmq delivery is at-least-once within the visibility window.
 
 ## Async and scheduled work (ADR-33)
 
-pg_cron → pg_net → function with `auth: 'secret'`; queues via Supabase Queues (pgmq): import/export jobs in MVP, notifications/webhooks Phase 2. No Supabase Database Webhooks in MVP. Failed messages land in the archive queue; the ops runbook covers inspection and replay.
+pg_cron → pg_net → function with `auth: 'secret'`; queues via Supabase Queues (pgmq): import/export jobs in MVP, notifications/webhooks plan Phase 9+. No Supabase Database Webhooks in MVP. Failed messages land in the archive queue; the ops runbook covers inspection and replay.
 
 ## Testing
 

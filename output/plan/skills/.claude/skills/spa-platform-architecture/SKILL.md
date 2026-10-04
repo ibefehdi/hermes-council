@@ -9,23 +9,23 @@ Entry point for the GlowDesk spa/salon SaaS codebase. Read this first; the other
 
 ## Stack
 
-- **Supabase**: Postgres (RLS is the security boundary), Auth (JWT = identity only, ADR-19), Realtime (postgres_changes), Queues (pgmq) + pg_cron, Storage (Phase 2+, ADR-43), CLI migrations.
+- **Supabase**: Postgres (RLS is the security boundary), Auth (JWT = identity only, ADR-19), Realtime (postgres_changes), Queues (pgmq) + pg_cron, Storage (plan Phase 9+, ADR-43), CLI migrations. Production project region per ADR-48 with a legal verification gate before go-live.
 - **Edge Functions**: Deno + TypeScript, one function per bounded context (ADR-27). MVP functions: `bookings`, `checkout`, `catalogue`, `clients`, `staff`, `reports`, `onboarding`.
 - **Frontend**: React 18 + TypeScript strict, Vite SPAs, TanStack Router/Query, Lingui (en/ar + RTL), schedule-x calendar. Visual design comes from the owner's **Airbnb design skill** - never define colors/typography/spacing in feature code.
 
 ## Tenancy model (the part everything depends on)
 
 - Tenant = company (first tenant: SpaCorner, Kuwait). Branch = physical location with its own hours, staff assignments, service overrides, register, invoice sequence, money records.
-- `memberships(user_id, tenant_id, role, branch_id, is_active)` is the **only** authorization source. `branch_id` sentinel `00000000-0000-0000-0000-000000000000` = all branches. Roles: `tenant_owner`, `branch_manager`, `receptionist`, `staff`. A user may hold memberships in multiple tenants and different roles at different branches.
+- `memberships(user_id, tenant_id, role, branch_id, all_branches, is_active)` is the **only** authorization source. All-branches = `all_branches true` with `branch_id NULL` (the sentinel UUID is withdrawn - ADR-20 rule 6 round 2). Roles: `tenant_owner`, `branch_manager`, `receptionist`, `staff` - the enum has **no `platform_admin`**; platform ops use explicit, time-boxed, audit-logged impersonation rendered as a persistent banner (ADR-20 rule 9). A user may hold memberships in multiple tenants and different roles at different branches.
 - Authorization is a **live database lookup** per request via `STABLE SECURITY DEFINER` helpers (`current_tenant_ids()`, `current_branch_scope()`, `has_tenant_role(tenant, roles, branch)`). JWT claims never authorize anything (ADR-19). Membership revocation takes effect immediately - there is a pgTAP test proving it.
-- Clients are tenant-scoped (shared across branches); appointments/sales/payments are branch-scoped. Client financial aggregates are branch-scoped via secured RPCs (ADR-11).
+- Clients are tenant-scoped (shared across branches); appointments/sales/payments are branch-scoped. Client financial aggregates are branch-scoped via secured RPCs (ADR-11). Client records - including allergies and notes - are intentionally tenant-visible for safety while operational/financial data is branch-scoped (round 2, F-walk-3); the staff role reads only basic client fields via a column-restricted secured view and sees sales only through `report_own_sales` (round 2, F-DB-5/F-perm-2).
 - Isolation invariants, each CI-tested: no cross-tenant rows ever; branch-scoped roles never touch other branches' operational/financial rows; archiving a branch never deletes history.
 
 ## Repository layout and where code lives
 
 ```
 apps/back-office        staff/manager/owner SPA (MVP)
-apps/booking            public booking app (Phase 2, scaffold only)
+apps/booking            public booking app (plan Phase 9, scaffold only)
 packages/ui             wraps the Airbnb design skill - ONLY layer touching design tokens
 packages/db             generated database.types.ts + createTypedClient
 packages/api            typed Edge Function wrappers + ApiError + useRealtime
@@ -50,8 +50,8 @@ Placement rules:
 | Situation | Path |
 |---|---|
 | Reads (lists, details, calendar, report views/RPCs) | supabase-js under RLS, typed via `packages/db` |
-| Simple single-table writes fully expressed by RLS+constraints, on the allowlist (`profiles` self, `client_notes`, `clients` non-financial, `settings`, `blocked_times`, `shifts`) | supabase-js direct |
-| Appointments, sales, payments, register, refunds, memberships, tenants/branches, invoice counters, tips, pricing changes | Edge Function or SECURITY DEFINER RPC only - **never direct** |
+| Simple single-table writes fully expressed by RLS+constraints, on the allowlist (`profiles` self, `client_notes` receptionist+, `clients` contact/profile fields only receptionist+ - never `is_blocked`/`is_deleted`/`merged_into`, `settings`, `shifts`) | supabase-js direct |
+| Appointments, sales, payments, register, refunds, memberships, tenants/branches, invoice counters, tips, pricing changes, **blocked times** (locked staff RPC only, round 2 F-DB-6) | Edge Function or SECURITY DEFINER RPC only - **never direct** |
 | Heavy aggregation | Postgres RPC (`report_*`), SQL does the work (2s CPU/request limit) |
 | Scheduled/background (imports, exports, cleanup) | pg_cron -> Edge Function, pgmq queues, idempotent consumers (ADR-33) |
 

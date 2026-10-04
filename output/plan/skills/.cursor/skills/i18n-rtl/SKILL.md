@@ -15,7 +15,15 @@ EN + AR with full RTL is a release gate for every user-facing change (ADR-40, NF
 import { Trans, Plural } from '@lingui/macro'
 
 <Trans>Book new appointment</Trans>
-<Plural value={count} one="1 client" other="# clients" />  // provide every Arabic category the message needs
+<Plural
+  value={count}
+  zero="No clients"
+  one="1 client"
+  two="# clients"
+  few="# clients"
+  many="# clients"
+  other="# clients"
+/>  // every Arabic category the message needs - the quick-start example matches the reference
 ```
 
 2. Keys: Lingui auto-generates ids from source text; explicit dotted `id` (`booking.conflict.title`) only for stable programmatic references. Catalogs: `packages/i18n/locales/{en,ar}/messages.po`. After adding messages run `pnpm i18n:extract && pnpm i18n:compile`; missing Arabic entries fail CI.
@@ -43,6 +51,8 @@ relative(appointment.effective_start)  // "in 2 hours"
 10. Arabic search: user input passes `normalizeSearch()` from `@repo/i18n` before querying; searchable tables have a normalized `search_text` column (diacritics stripped, alef/ya/ta-marbuta unified, digits unified) - the same normalization on both sides (ADR-40). EN and AR input both match (US-CL-6).
 11. Date math near DST or midnight boundaries requires a Vitest case using `Intl` with the branch zone - no manual hour arithmetic.
 12. Both locales are release-blocking: Playwright runs critical journeys in `en`/LTR and `ar`/RTL.
+13. Mixed-direction text (round 2, F-i18n-1): wrap embedded LTR runs inside RTL copy - phone numbers, emails, Latin handles inside Arabic names - in `<bdi>` (or `dir="auto"` with `unicode-bidi: isolate` in CSS) so they do not reorder the surrounding line. Receipts, client lists, and appointment cards carry a Vitest/RTL-screenshot case with an Arabic name plus a Western phone number.
+14. Calendar/shift-grid locale (round 2, F-cov-7): week start and 12/24-hour rendering come from the branch's `first_day_of_week`/`time_format` settings (ADR-52; Gulf default Saturday, 24h) - never hardcode a week start or rely on the `Intl` default.
 
 ## Examples
 
