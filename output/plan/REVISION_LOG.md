@@ -105,3 +105,23 @@ The round-2 revisions close four blocker-class contradictions and harden the mon
 5. **Financial-retention period (ADR-50, 10-year default)** awaits legal confirmation at plan Phase 17 scheduling.
 6. **Rich KPI dashboards / comparison reports** are deferred non-committed (F-cov-2, ADR-5); scheduling them requires a dedicated analytics workstream plan.
 7. **`supabase test db` command form** is to be re-confirmed against the pinned Supabase CLI version at Phase 0 (the adjudication notes current Supabase docs themselves use `supabase test db`; backend.md's `supabase db test` remains superseded via the precedence rule).
+
+## Final round (round 3): PLAN.md assembly and chair fixes
+
+The final round produced `/Users/fahad/council/output/plan/PLAN.md` — the single self-contained build document — from five member drafts (`final/drafts/`) gated by `final/verification.md` (PASS WITH REQUIRED CHAIR FIXES). Every change the chair made while assembling:
+
+**SQL v2 (validated set), re-checked after each change (`check-sql.mjs`: 12 migrations OK, 33/33 tables RLS, 3 tests OK):**
+- `000001_enable_extensions.sql`: added `pg_net` (skip-blocked for PGlite) — pg_cron invokes Edge Functions through pg_net (F-final-db-1; ADR-33 revised).
+- `000003_create_branches.sql`: added `boh_nonzero_length` check — `opens_at = closes_at` rejected unless `is_closed`; overnight is strictly `closes_at < opens_at`; 24-hour day = 00:00–23:59 (F-final-db-5; ADR-26 revised).
+- `000009_create_sales.sql`: idempotency uniqueness widened to `UNIQUE (tenant_id, key, function_name)`; dropped the now-redundant `idx_ik_key` (F-final-db-3; ADR-31 revised).
+- New `tests/003_final_round_fixes.sql`: zero-length interval rejection, `is_closed` equality acceptance, overnight acceptance, per-function idempotency replay boundary (5 cases, all pass).
+
+**decisions.md:** ADR-26 revised (opening-hours equality; time-off creation rights per ADR-53); ADR-31 revised (per-function replay boundary, deny-all RLS note); ADR-33 revised (pg_net in Phase 0); ADR-43 revised (chunked/resumable export job, wall-clock limits, end-to-end benchmark); new ADR-53 (MVP staff time-off = manager-created blocked time; in-app request/approval deferred post-MVP); summary table gained row 53; header conventions note the final-round revision marks and the illustrative status of expanded post-MVP backlogs.
+
+**CONVENTIONS.md:** §3.2 opening-hours semantics bullet; §4.3 idempotency per-function scope; §5 staff time-off rule (ADR-53); §7 clean-migration gate extension list incl. `pg_net`.
+
+**Skills (edited in `.claude`, copied to `.cursor`, verified identical):** supabase-database (pg_net in extension list; idempotency unique scope + deny-all note; opening-hours semantics; `due_minor` wording aligned to derived-not-generated pending active migrations); supabase-edge-functions (idempotency scope; wall-clock limit + chunked export rule); spa-domain-glossary (busy_range trigger-maintained; opening-hours equality semantics); spa-platform-architecture (pg_net in stack line).
+
+**PLAN.md (new, assembled from the drafts with fixes):** 15 sections; 40 Mermaid diagrams validated. Verifier corrections 1–10 all applied: pg_net in Phase 0 (11); Phase 7.3 chunked/resumable export (11); trigger-maintained `during`/`busy_range` + `status_active` RPC contract with Phase 5 cancellation/no-show race tests (7, 8, 11); F-final-db-2/db-4 closed as stale with named Phase 6 concurrency tests (11, 13); per-function idempotency + Phase 6 mismatch test (7, 11); opening-hours equality semantics + Phase 1/5 fixtures (7, 11); ADR-53 time-off decision swept through product, parity, journeys, phases, decisions, conventions, skills (2–5, 10–11); corporate accounts marked uncommitted/unplaced (4, 14); post-MVP backlogs labeled illustrative per F-PLAN-17 (11); platform ops normalized to the audited impersonation path (6, 8). Also fixed: the draft's glued Phase 10 heading (missing newline in `drafts/phases.md` line 1776, corrected in PLAN.md only — drafts are never modified); `P6 --> P16` dependency edge added (F-final-plan-1); `resolve_service` RETURNS TABLE production task noted (F-final-sql-4).
+
+**Deliberately not changed:** the Fresha evidence corpus, round-1 member files, `round1/`, `review2/`, the final-round briefs and drafts, and `IMPLEMENTATION_PLAN.md` (superseded in detail by PLAN.md's Delivery plan section per the precedence rule; its diagrams' P6→P16 note inconsistency lives on there and is fixed in PLAN.md).

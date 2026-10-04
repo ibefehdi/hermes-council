@@ -9,7 +9,7 @@ Entry point for the GlowDesk spa/salon SaaS codebase. Read this first; the other
 
 ## Stack
 
-- **Supabase**: Postgres (RLS is the security boundary), Auth (JWT = identity only, ADR-19), Realtime (postgres_changes), Queues (pgmq) + pg_cron, Storage (plan Phase 9+, ADR-43), CLI migrations. Production project region per ADR-48 with a legal verification gate before go-live.
+- **Supabase**: Postgres (RLS is the security boundary), Auth (JWT = identity only, ADR-19), Realtime (postgres_changes), Queues (pgmq) + pg_cron + pg_net (final round, F-final-db-1), Storage (plan Phase 9+, ADR-43), CLI migrations. Production project region per ADR-48 with a legal verification gate before go-live.
 - **Edge Functions**: Deno + TypeScript, one function per bounded context (ADR-27). MVP functions: `bookings`, `checkout`, `catalogue`, `clients`, `staff`, `reports`, `onboarding`.
 - **Frontend**: React 18 + TypeScript strict, Vite SPAs, TanStack Router/Query, Lingui (en/ar + RTL), schedule-x calendar. Visual design comes from the owner's **Airbnb design skill** - never define colors/typography/spacing in feature code.
 

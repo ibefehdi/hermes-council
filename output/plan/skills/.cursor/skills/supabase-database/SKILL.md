@@ -13,7 +13,7 @@ All rules follow `decisions.md` (ADR-15/17/19/20/21/22/24/44/45/46). The domain 
 - One logical change group per file (a table + its indexes + triggers + policies).
 - Never modify a migration applied to any shared environment. Seed data only in `supabase/seed.sql`.
 - Validate locally with `supabase db reset`; run pgTAP with `supabase test db`.
-- Extensions are enabled once in `000001`: `btree_gist`, `pgcrypto`, `pg_trgm` plain; `pg_cron` in the hosted form `CREATE EXTENSION pg_cron WITH SCHEMA pg_catalog;` plus `GRANT USAGE ON SCHEMA cron TO postgres;` and `GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cron TO postgres;` (official install doc: https://supabase.com/docs/guides/cron/install); `pgmq` per the Supabase Queues doc (own schema).
+- Extensions are enabled once in `000001`: `btree_gist`, `pgcrypto`, `pg_trgm` plain; `pg_cron` in the hosted form `CREATE EXTENSION pg_cron WITH SCHEMA pg_catalog;` plus `GRANT USAGE ON SCHEMA cron TO postgres;` and `GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cron TO postgres;` (official install doc: https://supabase.com/docs/guides/cron/install); `pgmq` per the Supabase Queues doc (own schema); `pg_net` because pg_cron invokes Edge Functions through it (https://supabase.com/docs/guides/functions/schedule-functions — final round, F-final-db-1).
 
 ## Naming and column conventions
 
@@ -181,11 +181,11 @@ Client financial aggregates are secured RPCs, never columns or unscoped views (A
 - Invoice numbers: `invoice_counters(branch_id, kind, next_number)` with `kind ∈ {invoice, appointment_ref}` (round 2, F-DB-7); assign inside the sale/booking transaction with `UPDATE ... SET next_number = next_number + 1 ... RETURNING next_number - 1` (row lock; gaps allowed, never reuse). Appointment `ref_number` = `<branch invoice_prefix>-A<seq>` with `UNIQUE (branch_id, ref_number)`.
 - Refund cap trigger on `payments`: sum of `refund` rows referencing a payment ≤ its `amount_minor`. Refund rows carry a **positive** `amount_minor` and `payment_type = 'refund'` - no negative amounts, no separate refunds table (ADR-34 round 2).
 - `staff_members`: partial unique index `(tenant_id, user_id) WHERE user_id IS NOT NULL` (one identity per tenant, round 2 F-DB-9).
-- Sale totals reconciliation: `create_sale` RPC recomputes totals from lines and rejects mismatches; `due_minor` is a generated column.
-- `idempotency_keys(tenant_id, key, function, status, response_status, response_body)` unique `(tenant_id, key)`; 30-day expiry via pg_cron.
+- Sale totals reconciliation: `create_sale` RPC recomputes totals from lines and rejects mismatches; `due_minor` is derived (`total - sum(payments)`) and never hand-edited — stored generated vs computed-at-read is settled by the active migration set (the v2 validation set does not carry the column; final round, F-final-arch-1).
+- `idempotency_keys(tenant_id, key, function_name, status, response_status, response_body)` unique `(tenant_id, key, function_name)` — the replay boundary is per function (final round, F-final-db-3); 30-day expiry via pg_cron. RLS deny-all with a select-only grant: the table is client-inaccessible and the replay protocol runs inside Edge Functions.
 - Soft delete: `clients.is_deleted` + `merged_into`; `is_active` on services/staff/branches; status-based retention for appointments/sales; partial unique indexes exclude deleted rows; no hard deletes of referenced history.
 - Settings uniqueness uses the all-branches representation: `UNIQUE (tenant_id, branch_id, key)` governs branch rows, and a partial unique index `ON settings(tenant_id, key) WHERE branch_id IS NULL` guarantees one tenant-wide row per key (round 2, F-DB-1).
-- Overnight opening hours: `closes_at <= opens_at` means next-day close; split intervals via `seq` (ADR-26). Cover both in availability tests, plus a synthetic DST-zone branch.
+- Overnight opening hours: `closes_at < opens_at` means next-day close; `opens_at = closes_at` is rejected by the `boh_nonzero_length` check unless the row is `is_closed` (closed day = `is_closed`, 24-hour day = 00:00–23:59 — ADR-26, final round F-final-db-5); split intervals via `seq` (ADR-26). Cover overnight, zero-length rejection, and a synthetic DST-zone branch in availability tests.
 
 ## How to add a tenant-scoped table
 

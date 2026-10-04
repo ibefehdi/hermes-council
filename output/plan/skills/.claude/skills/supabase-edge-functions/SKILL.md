@@ -70,7 +70,7 @@ Handlers take the target `tenant_id`/`branch_id` from the request, then `require
 | Privileged transactional writes | service role **inside RPCs** | Prefer `supabase.rpc('book_appointment', ...)` etc.: the RPC does scope checks, advisory locks, constraints, audit (ADR-24). Raw service-role table writes are the exception and must filter `tenant_id`/`branch_id` derived from `requireScope` on every statement |
 | Cron/webhook | admin only (`auth: 'secret'` / signature-verified) | No user context; idempotent by design |
 
-Money mutations (checkout create-sale/settle/refund/void, register open/close, webhook captures) require the `Idempotency-Key` header and use `_shared/idempotency.ts` against the `idempotency_keys` table (unique `(tenant_id, key)`; replay returns the cached response; `processing` collision → 409) (ADR-31).
+Money mutations (checkout create-sale/settle/refund/void, register open/close, webhook captures) require the `Idempotency-Key` header and use `_shared/idempotency.ts` against the `idempotency_keys` table (unique `(tenant_id, key, function_name)` — the replay boundary is per function, final round F-final-db-3; replay returns the cached response; `processing` collision → 409) (ADR-31).
 
 ## Validation
 
@@ -98,7 +98,7 @@ Throw `AppError(code, message, status, details?)`; the wrapper maps to the envel
 
 - One structured JSON line per request (`event: 'request'|'response'|'error'`, method, path, tenantId, userId, requestId); request IDs threaded through nested calls; ≤10k chars per line; no per-row logging (100 events/10s threshold).
 - Platform limits shape the design: 256MB memory, 2s CPU/request (push computation into SQL), 150s/400s wall clock (background work goes to queues), bundle size 20MB CLI-bundled (local) / 5MB server-side bundled (keep `_shared` lean) — round 2, F-BE-1: both documented limits, per https://supabase.com/docs/guides/functions/limits.
-- Handler timeouts: 30s user-facing, 120s cron; long jobs (exports, imports) enqueue to pgmq and return immediately (ADR-33). Queue consumers are idempotent - pgmq delivery is at-least-once within the visibility window.
+- Handler timeouts: 30s user-facing, 120s cron; long jobs (exports, imports) enqueue to pgmq and return immediately (ADR-33). No single invocation may exceed the plan wall-clock limit (150s free / 400s paid) — the full-tenant export is therefore a chunked, resumable pgmq job whose ≤10-minute benchmark measures the whole end-to-end job, not one invocation (ADR-43, final round F-final-backend-1). Queue consumers are idempotent - pgmq delivery is at-least-once within the visibility window.
 
 ## Async and scheduled work (ADR-33)
 
