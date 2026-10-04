@@ -44,8 +44,11 @@ create table public.branch_opening_hours (
   day_of_week smallint not null check (day_of_week between 0 and 6),  -- 0=Sun..6=Sat
   seq         smallint not null default 1,                -- discriminator for split intervals
   opens_at    time not null,
-  closes_at   time not null,                              -- closes_at <= opens_at means overnight
+  closes_at   time not null,                              -- closes_at < opens_at means overnight; opens_at = closes_at is only allowed on is_closed rows (final round, F-final-db-5)
   is_closed   boolean not null default false,
+  -- Zero-length intervals are meaningless: a closed day is is_closed = true;
+  -- a 24-hour day is expressed as 00:00 - 23:59. Equality is rejected otherwise.
+  constraint boh_nonzero_length check (is_closed or opens_at <> closes_at),
   created_at  timestamptz not null default now(),
   updated_at  timestamptz not null default now(),
   -- ADR-20 rule 5: composite FK

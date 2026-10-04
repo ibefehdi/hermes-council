@@ -17,6 +17,9 @@ grant usage on schema cron to postgres;
 grant all privileges on all tables in schema cron to postgres;
 -- pgmq: Supabase Queues
 create extension if not exists pgmq with schema extensions;
+-- pg_net: required for pg_cron -> Edge Function invocation (ADR-33, revised in
+-- final round per verifier finding F-final-db-1)
+create extension if not exists pg_net with schema extensions;
 -- check-sql: skip-end
 
 -- Base grants for the public schema (roles are created by Supabase; stubbed in check-sql)

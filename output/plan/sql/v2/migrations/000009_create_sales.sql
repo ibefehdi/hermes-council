@@ -248,8 +248,9 @@ create table public.idempotency_keys (
   response_status smallint,
   response_body   text,
   created_at      timestamptz not null default now(),
-  unique (tenant_id, key)
+  -- Final round (F-final-db-3): the key is scoped per function so the same
+  -- client-generated key cannot collide across different money mutations.
+  unique (tenant_id, key, function_name)
 );
 
-create index idx_ik_key on public.idempotency_keys(tenant_id, key);
 create index idx_ik_created on public.idempotency_keys(created_at);
