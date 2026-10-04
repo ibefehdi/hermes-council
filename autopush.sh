@@ -52,7 +52,12 @@ loop() {
 case "${1:-status}" in
   start)
     if running; then print "autopush already running (pid $(<$PIDFILE))"; exit 0; fi
-    nohup "$0" run >/dev/null 2>&1 &
+    # New session, so it survives the terminal or tool that started it closing.
+    if command -v python3 >/dev/null; then
+      nohup python3 -c 'import os, sys; os.setsid(); os.execv(sys.argv[1], sys.argv[1:])' "$0" run >/dev/null 2>&1 &
+    else
+      nohup "$0" run >/dev/null 2>&1 &
+    fi
     print $! > "$PIDFILE"
     print "autopush started (pid $!, every ${INTERVAL}s, log: $LOG)"
     ;;
