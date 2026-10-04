@@ -1,0 +1,13 @@
+ M apps/back-office/.env.example
+ M apps/back-office/package.json
+ M apps/back-office/src/App.tsx
+ M apps/back-office/src/features/shell/index.ts
+ M apps/back-office/src/main.tsx
+ M apps/back-office/src/router.tsx
+ M apps/back-office/src/vite-env.d.ts
+ M packages/i18n/locales/ar/messages.po
+ M packages/i18n/locales/en/messages.po
+ M pnpm-lock.yaml
+?? apps/back-office/src/features/shell/components/CrashPage.tsx
+?? apps/back-office/src/lib/sentry.test.ts
+?? apps/back-office/src/lib/sentry.ts
