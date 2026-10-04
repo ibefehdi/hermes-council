@@ -18,7 +18,7 @@ Hermes Agent, Node.js 20+, and an OpenRouter API key.
 ## Setup on a new machine
 
 ```bash
-git clone git@github.com:fahadasnan/hermes-council.git ~/council && cd ~/council
+git clone git@github.com:ibefehdi/hermes-council.git ~/council && cd ~/council
 ./setup.sh
 ```
 
