@@ -1,0 +1,151 @@
+- generic [ref=e12]:
+  - generic [ref=e13]:
+    - link "Fresha" [ref=e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=e16]:
+      - button [ref=e18] [cursor=pointer]:
+        - paragraph [ref=e20]: Continue setup
+      - button "Search" [ref=e22] [cursor=pointer]
+      - button "Performance insights" [ref=e24] [cursor=pointer]
+      - button "Notifications" [ref=e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=e31] [cursor=pointer]:
+        - generic [ref=e32]: FA
+  - generic [ref=e34]:
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - link [ref=e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=e50] [cursor=pointer]
+        - button [ref=e54] [cursor=pointer]
+        - button [ref=e58] [cursor=pointer]
+        - button [ref=e62] [cursor=pointer]
+        - button [ref=e66] [cursor=pointer]
+        - button [ref=e70] [cursor=pointer]
+        - link [ref=e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=e86] [cursor=pointer]
+    - generic [ref=e91]:
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - button "Back" [ref=e95] [cursor=pointer]
+          - navigation [ref=e100]:
+            - list [ref=e101]:
+              - listitem [ref=e102]:
+                - link "All reports •" [ref=e103] [cursor=pointer]:
+                  - /url: /reports
+              - listitem [ref=e104]:
+                - link "Sales •" [ref=e105] [cursor=pointer]:
+                  - /url: /reports/report-group/1?category=salesPerformance
+              - listitem [ref=e106]:
+                - generic [ref=e107]: Sales summary
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - paragraph [ref=e111]: Sales summary
+              - button "Add to favorites" [ref=e114] [cursor=pointer]
+            - paragraph [ref=e119]:
+              - text: Sales quantities and value, excluding tips and gift card sales.
+              - generic [ref=e120]: Data from 16 mins ago
+          - button "Options" [ref=e125] [cursor=pointer]
+      - generic [ref=e130]:
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - button "Type" [ref=e135] [cursor=pointer]
+            - button "Month to date" [ref=e140] [cursor=pointer]
+            - button "Filters" [ref=e145] [cursor=pointer]
+            - button "Advanced filters" [ref=e150] [cursor=pointer]
+          - button "Customize" [ref=e158] [cursor=pointer]
+        - generic [ref=e163]:
+          - region [ref=e164]:
+            - generic [ref=e165]:
+              - table [ref=e168]:
+                - rowgroup [ref=e179]:
+                  - row [ref=e180]:
+                    - columnheader [ref=e181]:
+                      - button "Type" [ref=e186] [cursor=pointer]
+                    - button [ref=e188] [cursor=pointer]:
+                      - button "Sales qty" [ref=e193]
+                    - button [ref=e195] [cursor=pointer]:
+                      - button "Items sold" [ref=e200]
+                    - button [ref=e202] [cursor=pointer]:
+                      - button "Gross sales" [ref=e207]
+                    - button [ref=e209] [cursor=pointer]:
+                      - button "Total discounts" [ref=e214]
+                    - button [ref=e216] [cursor=pointer]:
+                      - button "Refunds" [ref=e221]
+                    - button [ref=e223] [cursor=pointer]:
+                      - button "Net sales" [ref=e228]
+                    - button [ref=e230] [cursor=pointer]:
+                      - button "Taxes" [ref=e234]
+                    - button [ref=e236] [cursor=pointer]:
+                      - button "Total sales" [ref=e241]
+              - table [ref=e244]:
+                - rowgroup [ref=e255]:
+                  - row [ref=e256]:
+                    - cell [ref=e257]:
+                      - paragraph [ref=e258]: Total
+                    - cell [ref=e259]:
+                      - paragraph [ref=e260]:
+                        - paragraph [ref=e261]: "3"
+                    - cell [ref=e262]:
+                      - paragraph [ref=e263]:
+                        - paragraph [ref=e264]: "4"
+                    - cell [ref=e265]:
+                      - paragraph [ref=e266]:
+                        - paragraph [ref=e267]: KWD 240.000
+                    - cell [ref=e268]:
+                      - paragraph [ref=e269]:
+                        - paragraph [ref=e270]: KWD 0.000
+                    - cell [ref=e271]:
+                      - paragraph [ref=e272]:
+                        - paragraph [ref=e273]: KWD 0.000
+                    - cell [ref=e274]:
+                      - paragraph [ref=e275]:
+                        - paragraph [ref=e276]: KWD 240.000
+                    - cell [ref=e277]:
+                      - paragraph [ref=e278]:
+                        - paragraph [ref=e279]: KWD 0.000
+                    - cell [ref=e280]:
+                      - paragraph [ref=e281]:
+                        - paragraph [ref=e282]: KWD 240.000
+                  - row [ref=e283]:
+                    - cell [ref=e284]:
+                      - link "Service" [ref=e286] [cursor=pointer]:
+                        - /url: /reports/table/sales-summary?groupBy=item_name&item_type=service&shortcut=month_to_date
+                    - cell [ref=e288]:
+                      - paragraph [ref=e289]:
+                        - paragraph [ref=e290]: "3"
+                    - cell [ref=e291]:
+                      - paragraph [ref=e292]:
+                        - paragraph [ref=e293]: "4"
+                    - cell [ref=e294]:
+                      - paragraph [ref=e295]:
+                        - paragraph [ref=e296]: KWD 240.000
+                    - cell [ref=e297]:
+                      - paragraph [ref=e298]:
+                        - paragraph [ref=e299]: KWD 0.000
+                    - cell [ref=e300]:
+                      - paragraph [ref=e301]:
+                        - paragraph [ref=e302]: KWD 0.000
+                    - cell [ref=e303]:
+                      - paragraph [ref=e304]:
+                        - paragraph [ref=e305]: KWD 240.000
+                    - cell [ref=e306]:
+                      - paragraph [ref=e307]:
+                        - paragraph [ref=e308]: KWD 0.000
+                    - cell [ref=e309]:
+                      - paragraph [ref=e310]:
+                        - paragraph [ref=e311]: KWD 240.000
+          - status [ref=e312]
+          - generic [ref=e314]:
+            - generic [ref=e315]: Viewing results 1 to 1 of 1
+            - paragraph [ref=e317]: Viewing 1 - 1 of 1 results
