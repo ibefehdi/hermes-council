@@ -1,0 +1,10 @@
+supabase status -- redacted keys
+
+Stopped services: [supabase_imgproxy_glowdesk supabase_pooler_glowdesk]
+DB_URL:          postgresql://postgres:***@127.0.0.1:54322/postgres
+API_URL:         http://127.0.0.1:54321
+REST_URL:        http://127.0.0.1:54321/rest/v1
+GRAPHQL_URL:     http://127.0.0.1:54321/graphql/v1
+FUNCTIONS_URL:   http://127.0.0.1:54321/functions/v1
+STUDIO_URL:      http://127.0.0.1:54323
+MAILPIT_URL:     http://127.0.0.1:54324
