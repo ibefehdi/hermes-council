@@ -2,7 +2,7 @@
 
 Output: {{COUNCIL_DIR}}/output/technical/architecture.md
 
-Revisit every page in output/pages.json (plus any new pages you find) to build the technical picture of the whole application.
+Revisit every page in output/pages.json (plus any new pages you find) to build the technical picture of the whole application. Do not finish until every page in pages.json has its own entry in a "Per-page API map" section (route, API calls with method and path/operation, entities, outgoing links), based on network requests you captured on that page in this pass, not on the survey files.
 
 1. Page connectivity: for EVERY page, list all outgoing navigation (links, buttons, menu items, row clicks, drawers) and incoming routes. Produce a full adjacency list table (from page | to page | trigger | type: navigate / drawer / modal / redirect) and a flowchart grouped by module.
 2. API catalogue: capture the network calls on every page. One table row per endpoint: method, normalized path or GraphQL operation, API style (REST/GraphQL/RPC), purpose, pages that call it, entity, key request params, key response fields. Identify API hosts/base URLs and versioning.
