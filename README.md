@@ -82,6 +82,15 @@ Every run starts `autopush.sh`, which commits and pushes `output/` and `screensh
 
 The council goes over the revised plan one last time and produces a single self-contained `output/plan/PLAN.md`. Four drafts are written in parallel: the Fresha parity matrix, extra features beyond Fresha and user journeys per role; architecture and UML diagrams (C4, class, ER, sequence, state, security); the reasoning behind every decision plus the council's findings across all rounds and a fresh independent pass; every phase broken into subphases with backlog tasks, dependencies and a gantt chart; and corrected MVP SQL migrations with RLS tests in `output/plan/sql/v2/`. The SQL is checked with `node check-sql.mjs <migrations-dir> [tests-dir]`, which applies the migrations to a fresh in-memory Postgres (PGlite, with stand-ins for Supabase's `auth.uid()`, `auth.jwt()` and roles), fails on tables without RLS and on `SECURITY DEFINER` functions without a fixed `search_path`, and runs the tests. The verifier cross-checks the drafts against each other, the revised plan and the Fresha evidence, and the chair assembles `PLAN.md` section by section, keeping `decisions.md`, `CONVENTIONS.md` and the skills consistent with it. If the review's chair is still working, this waits for it automatically.
 
+### Phase audit
+
+```sh
+./run-council.sh audit 0 ~/glowdesk
+./run-council.sh audit 5 ~/glowdesk "Extra focus for this audit"
+```
+
+Checks whether a full plan phase is properly implemented in a local app repo: every subphase of it plus the phase's exit criteria. A subphase id such as `0.2` is widened to its whole phase. The repo must contain the plan at `plan/parts/11-delivery-plan.md`, and the local Supabase stack must be able to start there. A gates task runs every check once: install, `db:reset`, `db:test`, `db:lint`, type drift, Deno tests, `verify` and Playwright. Then four auditors work in parallel: database and security (including live attacks on tenant and branch isolation through the local API), Edge Functions, frontend with English and Arabic walkthroughs and screenshots, and conformance to every bullet of the phase and its ADRs. The verifier re-checks their findings and decides the verdict (`PASS`, `PASS WITH FIXES` or `FAIL`), and the chair writes `output/audit/phase-<phase>/AUDIT_REPORT.md`, ending with a ready-to-paste fix prompt for Cursor. To keep a scan-through cheap, the audit runs on its own two profiles instead of the four council members: `auditor` (`AUDITOR_MODEL` in `council.conf`, default `deepseek/deepseek-v4-flash`) runs the gates and all four audit passes, and `audit-lead` (`AUDIT_LEAD_MODEL`, default `openai/gpt-6-luna`) verifies and writes the report. Run `./setup.sh` once to create them. The repo is treated as read-only, but the gates reset and reseed its local database. The audit covers whatever is checked out, so check out the branch you want audited first.
+
 To use the skills, install them into the app repo with `./install-skills.sh /path/to/app`. It validates them, then copies them to the app's `.cursor/skills/` and `.claude/skills/`. Visual design is left to your own design skill.
 
 ## Safety

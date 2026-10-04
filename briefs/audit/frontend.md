@@ -1,0 +1,13 @@
+# Frontend, i18n and RTL audit
+
+Output: `{{AUDIT_DIR}}/frontend.md`. Screenshots: `{{AUDIT_DIR}}/screenshots/`.
+
+Scope: everything under `{{REPO}}/apps/` and `packages/{ui,i18n,db,api,core}` that belongs to phase {{PHASE}}, judged against the phase's Screens and i18n/RTL sections, ADR-16, ADR-36 to ADR-42, CONVENTIONS.md §2, §3.4, §3.5 and §7, and the `react-frontend`, `i18n-rtl` and `airbnb-design` skills. Start by reading `{{AUDIT_DIR}}/gates/GATES.md`.
+
+If the phase has no frontend work, write a short file that says so with the evidence, confirm the frontend gates in the logs still pass, and stop.
+
+1. **Structure.** Feature folder contract, import boundaries (apps import packages and feature `index.ts` only), typed Supabase client from generated types, query keys carrying tenant and branch scope (ADR-38), invariant-bearing writes through `packages/api` wrappers rather than direct table writes outside the ADR-28 allowlist, route guards treated as UX only (ADR-42) with RLS as the real boundary.
+2. **Run it.** If `http://127.0.0.1:5173` is not reachable, start the back office from the repo with `pnpm dev` in the background (stop it when you finish). With the Playwright MCP tools, walk every screen the phase delivers, signed in as each relevant seed user from the README, in English and in Arabic. For each screen record: it renders, `<html lang dir>` is correct, the layout mirrors in RTL, no untranslated strings or raw message ids appear, loading, empty and error states exist, keyboard navigation works and focus is visible. Take one screenshot per screen per locale. Exercise the journeys the phase lists (for example sign in, wrong password, password reset, sign out, deep-link restore, a user without access).
+3. **i18n.** Every user-visible string goes through Lingui; the `en` and `ar` catalogs are both complete (check the `i18n:compile --strict` result in the gates); no concatenated translated fragments; numbers, money and dates go through the formatting helpers; mixed-direction text (emails, phone numbers inside Arabic) is isolated.
+4. **Design skill.** CSS uses logical properties only (no `left`/`right`, `margin-left` and the like); tokens come from `packages/ui` only, with no raw hex or off-scale pixel values in feature code; colour contrast rules and focus styles from `airbnb-design` hold; icon-only buttons have labels.
+5. **Tests.** Check the Playwright suite covers the phase's Tests section in both `en` and `ar`, that its assertions would fail if the feature broke, and that results in `GATES.md` show both projects running. Check Vitest coverage where the phase or CONVENTIONS requires it.

@@ -7,13 +7,17 @@ DIR="${0:A:h}"
 cd "$DIR"
 source "$DIR/council.conf"
 
-ROLES=(cartographer linker verifier chair)
+ROLES=(cartographer linker verifier chair auditor audit-lead)
 typeset -A DESC=(
   cartographer "Crawls every dashboard page with Playwright and inventories each page's features, controls, and data shown"
   linker       "Maps how dashboard features connect: navigation paths, shared entities, shared API endpoints, cross-page data flows"
   verifier     "Council reviewer: cross-checks other members' findings against the live dashboard and flags errors, gaps, and disagreements"
   chair        "Council chair: merges verified findings into the final feature map and report"
+  auditor      "Phase audit: runs the gates and audits a local repo against one phase of the implementation plan"
+  audit-lead   "Phase audit lead: verifies the auditors' findings, decides the verdict, and writes the audit report"
 )
+# council.conf key prefix for a role: audit-lead -> AUDIT_LEAD
+conf_key() { local k=${(U)1}; print -r -- ${k//-/_}; }
 
 set_env() {
   local file=$1 key=$2 value=$3 rest
@@ -68,7 +72,7 @@ fi
 
 needs_openrouter=false
 for role in $ROLES; do
-  eval "p=\${${(U)role}_PROVIDER}"
+  eval "p=\${$(conf_key $role)_PROVIDER}"
   [[ $p == openrouter ]] && needs_openrouter=true
 done
 
@@ -93,7 +97,7 @@ for role in $ROLES; do
 
   sed "s|{{COUNCIL_DIR}}|$DIR|g" "roles/$role.md" > "$home/SOUL.md"
 
-  eval "provider=\${${(U)role}_PROVIDER}; model=\${${(U)role}_MODEL}"
+  eval "provider=\${$(conf_key $role)_PROVIDER}; model=\${$(conf_key $role)_MODEL}"
   hermes -p $role config set model.provider "$provider" >/dev/null
   hermes -p $role config set model.default "$model" >/dev/null
   if [[ $provider == custom ]]; then

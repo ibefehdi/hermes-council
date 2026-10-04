@@ -7,6 +7,10 @@
 #   ./run-council.sh final ["optional focus"]  last pass: one self-contained output/plan/PLAN.md (phases and subphases, UML,
 #                                               reasoning, Fresha parity, extra features)
 #                                               (review and final wait for an unfinished plan chair automatically)
+#   ./run-council.sh audit <phase> <repo> ["optional focus"]
+#                                               audit whether a full plan phase (e.g. 0 or 5, every subphase plus the exit
+#                                               criteria) is properly implemented in a local app repo
+#                                               -> output/audit/phase-<phase>/AUDIT_REPORT.md
 [ -n "${ZSH_VERSION:-}" ] || exec zsh "$0" "$@"
 set -euo pipefail
 
@@ -14,23 +18,53 @@ DIR="${0:A:h}"
 cd "$DIR"
 
 MODE=survey
-if [[ ${1:-} == (deep|plan|review|final) ]]; then
+if [[ ${1:-} == (deep|plan|review|final|audit) ]]; then
   MODE=$1
   shift
+fi
+if [[ $MODE == audit ]]; then
+  AUDIT_USAGE='Usage: ./run-council.sh audit <phase> <repo-path> ["optional focus"]   e.g. ./run-council.sh audit 0 ~/glowdesk'
+  PHASE="${1:?$AUDIT_USAGE}"
+  REPO="${2:?$AUDIT_USAGE}"
+  shift 2
+  REPO="${REPO:A}"
+  PHASE=${PHASE#[Pp]hase}
+  [[ $PHASE =~ '^[0-9]+(\.[0-9]+)?$' ]] || { print "Phase must be a number like 0 or 5, got: $PHASE"; exit 1; }
+  if [[ $PHASE == *.* ]]; then
+    print "Audits always cover a full phase: auditing phase ${PHASE%%.*} (all its subphases), not just $PHASE."
+    PHASE=${PHASE%%.*}
+  fi
+  [[ -d $REPO/.git ]] || { print "Not a git repository: $REPO"; exit 1; }
+  SPEC="$REPO/plan/parts/11-delivery-plan.md"
+  [[ -f $SPEC ]] || { print "Missing $SPEC. Copy the plan into the repo first."; exit 1; }
+  grep -Eq "^### Phase $PHASE:" "$SPEC" || { print "Phase $PHASE not found in $SPEC (expected a heading '### Phase $PHASE:')."; exit 1; }
+  print "Auditing phase $PHASE: $(grep -E "^#### Subphase $PHASE\." "$SPEC" | sed -E 's/^#### Subphase ([0-9.]+):.*/\1/' | paste -sd ' ' -)"
 fi
 FOCUS="${1:-Cover the entire dashboard.}"
 [[ $MODE == plan && -z ${1:-} ]] && FOCUS="Plan the full product, MVP first."
 [[ $MODE == review && -z ${1:-} ]] && FOCUS="Leave nothing missed and no wrong decision standing."
 [[ $MODE == final && -z ${1:-} ]] && FOCUS="One document a team can build the whole product from."
+[[ $MODE == audit && -z ${1:-} ]] && FOCUS="Decide whether the phase is complete, correct and safe."
 OUT="$DIR/output"
 TS=$(date +%Y%m%d-%H%M%S)
 
 DASHBOARD_URL=$(grep '^DASHBOARD_URL=' "$DIR/.env" 2>/dev/null | tail -1 | cut -d= -f2- | tr -d "\"'")
-: "${DASHBOARD_URL:?Set DASHBOARD_URL in $DIR/.env}"
+[[ $MODE == (survey|deep) ]] && : "${DASHBOARD_URL:?Set DASHBOARD_URL in $DIR/.env}"
 
 OR_KEY=$(grep '^OPENROUTER_API_KEY=' "$DIR/.env" | tail -1 | cut -d= -f2- | tr -d "\"'")
 : "${OR_KEY:?Set OPENROUTER_API_KEY in $DIR/.env}"
-for f in ${$(hermes config path):h}/.env ${^${(f)"$(for r in cartographer linker verifier chair; do print -r -- "${$(hermes -p $r config path):h}"; done)"}}/.env; do
+PROFILES=(cartographer linker verifier chair)
+VERIFIER=verifier
+SYNTHESIZER=chair
+if [[ $MODE == audit ]]; then
+  PROFILES=(auditor audit-lead)
+  VERIFIER=audit-lead
+  SYNTHESIZER=audit-lead
+  for r in $PROFILES; do
+    hermes profile show $r >/dev/null 2>&1 || { print "Profile $r is missing. Run ./setup.sh to create the audit profiles."; exit 1; }
+  done
+fi
+for f in ${$(hermes config path):h}/.env ${^${(f)"$(for r in $PROFILES; do print -r -- "${$(hermes -p $r config path):h}"; done)"}}/.env; do
   { grep -v '^OPENROUTER_API_KEY=' "$f" 2>/dev/null || true; print -r -- "OPENROUTER_API_KEY=$OR_KEY"; } > "$f.tmp"
   mv "$f.tmp" "$f" && chmod 600 "$f"
 done
@@ -62,7 +96,7 @@ print(' '.join(t['id'] for t in json.load(sys.stdin)
   fi
 fi
 
-if [[ $MODE != (plan|review|final) ]] && ! node "$DIR/login.mjs" --check; then
+if [[ $MODE != (plan|review|final|audit) ]] && ! node "$DIR/login.mjs" --check; then
   print "A browser window will open: log in (enter your OTP). The session is saved automatically."
   node "$DIR/login.mjs"
 fi
@@ -150,6 +184,27 @@ elif [[ $MODE == final ]]; then
     --worker "linker:Phases and subphases with backlog, dependencies and timeline - follow briefs $B/common.md and $B/phases.md"
     --worker "linker:Corrected SQL migrations and RLS tests - follow briefs $B/common.md and $B/sql.md"
   )
+elif [[ $MODE == audit ]]; then
+  A="$OUT/audit/phase-$PHASE"
+  if [[ -d "$A" ]]; then
+    mkdir -p "runs/$TS-audit"
+    mv "$A" "runs/$TS-audit/phase-$PHASE-previous"
+  fi
+  B="$A/briefs"
+  mkdir -p "$B" "$A/gates" "$A/screenshots"
+  for f in briefs/audit/*.md; do
+    sed -e "s|{{COUNCIL_DIR}}|$DIR|g" -e "s|{{REPO}}|$REPO|g" -e "s|{{PHASE}}|$PHASE|g" -e "s|{{AUDIT_DIR}}|$A|g" \
+      "$f" > "$B/${f:t}"
+  done
+
+  REPORT="$A/AUDIT_REPORT.md"
+  GOAL="Audit whether plan phase $PHASE is properly implemented in the git repository at $REPO. The repository is read-only: never edit, commit, stash or switch branches there. A gates task runs every stateful check first and shares its logs in $A/gates. Every member reads $B/common.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md. $FOCUS Final deliverable: $REPORT."
+  WORKERS=(
+    --worker "auditor:Database and security audit of phase $PHASE - follow briefs $B/common.md and $B/database.md"
+    --worker "auditor:Edge Functions and backend audit of phase $PHASE - follow briefs $B/common.md and $B/backend.md"
+    --worker "auditor:Frontend, i18n and RTL audit of phase $PHASE - follow briefs $B/common.md and $B/frontend.md"
+    --worker "auditor:Plan conformance audit of phase $PHASE - follow briefs $B/common.md and $B/conformance.md"
+  )
 else
   mkdir -p "runs/$TS-before-deep"
   cp -R output/. "runs/$TS-before-deep/"
@@ -179,10 +234,10 @@ else
 fi
 
 hermes kanban init >/dev/null
-if [[ $MODE != (deep|review|final) ]] || [[ $MODE == (review|final) && ${#PARENTS} -eq 0 ]]; then
-  hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier verifier --synthesizer chair
+if [[ $MODE != (deep|review|final|audit) ]] || [[ $MODE == (review|final) && ${#PARENTS} -eq 0 ]]; then
+  hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier $VERIFIER --synthesizer $SYNTHESIZER
 else
-  # Workers depend on PARENTS (deep: a seed-data task; review: the unfinished plan chair).
+  # Workers depend on PARENTS (deep: a seed-data task; audit: the gates task; review/final: the unfinished plan chair).
   # Dispatch is paused while dependencies are wired so nothing starts early.
   hermes pause --reason "wiring council dependencies" >/dev/null
   trap 'hermes resume >/dev/null 2>&1' EXIT
@@ -190,8 +245,11 @@ else
   if [[ $MODE == deep ]]; then
     PARENTS=($(hermes kanban create "Seed realistic COUNCIL-TEST data - follow briefs $B/common.md and $B/seed.md" \
       --assignee linker --body-file "$B/seed.md" --json | json_field '["id"]'))
+  elif [[ $MODE == audit ]]; then
+    PARENTS=($(hermes kanban create "Run the phase $PHASE gates and capture logs - follow briefs $B/common.md and $B/gates.md" \
+      --assignee auditor --body-file "$B/gates.md" --json | json_field '["id"]'))
   fi
-  SWARM=$(hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier verifier --synthesizer chair --json)
+  SWARM=$(hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier $VERIFIER --synthesizer $SYNTHESIZER --json)
   for w in ${=$(print -r -- "$SWARM" | json_field '["worker_ids"]')}; do
     for p in $PARENTS; do hermes kanban link "$p" "$w" >/dev/null; done
   done

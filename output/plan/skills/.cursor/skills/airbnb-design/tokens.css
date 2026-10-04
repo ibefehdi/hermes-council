@@ -3,7 +3,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
 
+/* Theme: <html data-theme="light|dark"> forces a theme; no attribute follows the OS setting.
+   Colour and shadow tokens are the only values that change between themes. */
+
 :root {
+  color-scheme: light;
+
   /* Brand */
   --color-primary: #ff385c;
   --color-primary-strong: #e00b41;
@@ -12,9 +17,11 @@
 
   /* Neutrals */
   --color-canvas: #ffffff;
+  --color-surface-raised: #ffffff;
   --color-surface-soft: #f7f7f7;
   --color-surface-strong: #f2f2f2;
   --color-ink: #222222;
+  --color-on-ink: #ffffff;
   --color-body: #3f3f3f;
   --color-muted: #6a6a6a;
   --color-muted-soft: #929292;
@@ -25,9 +32,13 @@
   /* Semantic (error from Airbnb; success, warning, info are product extensions) */
   --color-error: #c13515;
   --color-error-hover: #b32505;
+  --color-on-error: #ffffff;
   --color-success: #0b7a3e;
   --color-warning: #a15c00;
   --color-info: #1d5fd1;
+
+  /* Elevation: one tier */
+  --shadow-float: rgb(0 0 0 / 0.02) 0 0 0 1px, rgb(0 0 0 / 0.04) 0 2px 6px 0, rgb(0 0 0 / 0.1) 0 4px 8px 0;
 
   /* Typography */
   --font-sans: "Inter", "IBM Plex Sans Arabic", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
@@ -57,9 +68,6 @@
   --radius-xl: 32px;
   --radius-full: 9999px;
 
-  /* Elevation: one tier */
-  --shadow-float: rgb(0 0 0 / 0.02) 0 0 0 1px, rgb(0 0 0 / 0.04) 0 2px 6px 0, rgb(0 0 0 / 0.1) 0 4px 8px 0;
-
   /* Sizes */
   --control-height: 48px;
   --control-height-dense: 44px;
@@ -74,6 +82,66 @@
 
   /* Breakpoints (for reference; use in media queries as literals) */
   /* mobile < 744px, tablet 744-1127px, desktop 1128-1439px, wide >= 1440px */
+}
+
+/* Dark palette (product extension; Airbnb has no dark mode). Screen only, so print stays light.
+   The two blocks below must stay identical. */
+@media screen {
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --color-primary: #ff385c;
+    --color-primary-strong: #e00b41;
+    --color-primary-disabled: #5a1f2c;
+    --color-on-primary: #ffffff;
+    --color-canvas: #141414;
+    --color-surface-raised: #1c1c1c;
+    --color-surface-soft: #242424;
+    --color-surface-strong: #2e2e2e;
+    --color-ink: #f2f2f2;
+    --color-on-ink: #141414;
+    --color-body: #d6d6d6;
+    --color-muted: #a3a3a3;
+    --color-muted-soft: #7c7c7c;
+    --color-hairline: #3a3a3a;
+    --color-hairline-soft: #2a2a2a;
+    --color-scrim: rgb(0 0 0 / 0.7);
+    --color-error: #ff6b4a;
+    --color-error-hover: #ff8a70;
+    --color-on-error: #141414;
+    --color-success: #3ccf7e;
+    --color-warning: #f0a33a;
+    --color-info: #6ea0ff;
+    --shadow-float: rgb(255 255 255 / 0.06) 0 0 0 1px, rgb(0 0 0 / 0.4) 0 2px 6px 0, rgb(0 0 0 / 0.5) 0 4px 8px 0;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-primary: #ff385c;
+    --color-primary-strong: #e00b41;
+    --color-primary-disabled: #5a1f2c;
+    --color-on-primary: #ffffff;
+    --color-canvas: #141414;
+    --color-surface-raised: #1c1c1c;
+    --color-surface-soft: #242424;
+    --color-surface-strong: #2e2e2e;
+    --color-ink: #f2f2f2;
+    --color-on-ink: #141414;
+    --color-body: #d6d6d6;
+    --color-muted: #a3a3a3;
+    --color-muted-soft: #7c7c7c;
+    --color-hairline: #3a3a3a;
+    --color-hairline-soft: #2a2a2a;
+    --color-scrim: rgb(0 0 0 / 0.7);
+    --color-error: #ff6b4a;
+    --color-error-hover: #ff8a70;
+    --color-on-error: #141414;
+    --color-success: #3ccf7e;
+    --color-warning: #f0a33a;
+    --color-info: #6ea0ff;
+    --shadow-float: rgb(255 255 255 / 0.06) 0 0 0 1px, rgb(0 0 0 / 0.4) 0 2px 6px 0, rgb(0 0 0 / 0.5) 0 4px 8px 0;
+  }
 }
 
 html {
