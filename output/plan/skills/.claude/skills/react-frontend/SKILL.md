@@ -5,7 +5,7 @@ description: Builds feature screens in the back-office React/TypeScript SPA of t
 
 # React frontend conventions
 
-All visual decisions (colours, typography, spacing, component look) come from the owner's **Airbnb design skill**, wrapped exclusively by `packages/ui`. This skill defines everything around it: structure, data, forms, testing. Rules follow ADR-36..42.
+All visual decisions (colours, typography, spacing, component look) come from the **Airbnb design skill** (`airbnb-design`), wrapped exclusively by `packages/ui`. This skill defines everything around it: structure, data, forms, testing. Rules follow ADR-36..42.
 
 ## Quick start / rules
 

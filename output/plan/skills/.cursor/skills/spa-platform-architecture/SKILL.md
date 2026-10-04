@@ -11,7 +11,7 @@ Entry point for the GlowDesk spa/salon SaaS codebase. Read this first; the other
 
 - **Supabase**: Postgres (RLS is the security boundary), Auth (JWT = identity only, ADR-19), Realtime (postgres_changes), Queues (pgmq) + pg_cron + pg_net (final round, F-final-db-1), Storage (plan Phase 9+, ADR-43), CLI migrations. Production project region per ADR-48 with a legal verification gate before go-live.
 - **Edge Functions**: Deno + TypeScript, one function per bounded context (ADR-27). MVP functions: `bookings`, `checkout`, `catalogue`, `clients`, `staff`, `reports`, `onboarding`.
-- **Frontend**: React 18 + TypeScript strict, Vite SPAs, TanStack Router/Query, Lingui (en/ar + RTL), schedule-x calendar. Visual design comes from the owner's **Airbnb design skill** - never define colors/typography/spacing in feature code.
+- **Frontend**: React 18 + TypeScript strict, Vite SPAs, TanStack Router/Query, Lingui (en/ar + RTL), schedule-x calendar. Visual design comes from the **Airbnb design skill** (`airbnb-design`) - never define colors/typography/spacing in feature code.
 
 ## Tenancy model (the part everything depends on)
 
@@ -26,7 +26,7 @@ Entry point for the GlowDesk spa/salon SaaS codebase. Read this first; the other
 ```
 apps/back-office        staff/manager/owner SPA (MVP)
 apps/booking            public booking app (plan Phase 9, scaffold only)
-packages/ui             wraps the Airbnb design skill - ONLY layer touching design tokens
+packages/ui             wraps the `airbnb-design` skill - ONLY layer touching design tokens
 packages/db             generated database.types.ts + createTypedClient
 packages/api            typed Edge Function wrappers + ApiError + useRealtime
 packages/validation     Zod schemas shared with Deno functions (pure JS, no Node APIs)

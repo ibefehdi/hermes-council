@@ -5,7 +5,7 @@
 ```
 apps/back-office/          Vite SPA (staff/manager/owner) - MVP
 apps/booking/              client-facing booking app (plan Phase 9, scaffold only)
-packages/ui/               wraps Airbnb design-skill primitives/tokens - only layer allowed to import them
+packages/ui/               wraps `airbnb-design` tokens (tokens.css) - only layer allowed to import them
 packages/db/               database.types.ts (supabase gen types, committed, CI drift-checked) + createTypedClient
 packages/api/              typed Edge Function invoke wrappers + ApiError + useRealtime
 packages/validation/       Zod schemas shared with Edge Functions (pure JS, Deno-importable) + error code catalogue
