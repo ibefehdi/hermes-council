@@ -2,7 +2,7 @@
 
 Roles per requirements §3: platform admin (ops path), tenant owner, branch manager, receptionist, staff member, and the end client (from Phase 9). Screens are named per the IMPLEMENTATION_PLAN frontend backlogs; each step carries its phase.subphase.
 
-#### Platform admin
+### Platform admin
 
 1. Provision SpaCorner (and later tenants) via the ops runbook + `onboarding/provision-tenant` — tenant, owner user, default branch, currency, plan row, seeded defaults (1.1; ADR-20 rule 3).
 2. Watch health: uptime monitor + Sentry (0.1); audit log available per tenant on request (0.2 machinery, 7.2 viewer).
@@ -19,7 +19,7 @@ flowchart LR
     B --> F["Phase 17: self-serve signup +<br/>plans, billing, offboarding ADR-50"]
 ```
 
-#### Tenant owner
+### Tenant owner
 
 1. Log in → setup checklist (1.2; US-ON-1); create branches with hours, closures, receipt text, invoice prefix (1.2).
 2. Invite the manager and receptionists with branch-scoped roles (1.3; US-T-4).
@@ -39,7 +39,7 @@ flowchart LR
     G --> H["Export everything 7.3"]
 ```
 
-#### Branch manager
+### Branch manager
 
 1. Open the branch (switcher locks to own branches, 0.4/1.3) → shift grid for the week, copy previous week (2.2).
 2. Create time-off blocks on behalf of staff (MVP has no in-app request flow, ADR-53): the block becomes all-branches blocked time (2.3).
@@ -60,7 +60,7 @@ flowchart LR
     G --> H["Close day: summary =<br/>sales list to the fils 6.4"]
 ```
 
-#### Receptionist
+### Receptionist
 
 1. Log in → home "today at a glance" (7.2, default route).
 2. Client calls: search (Arabic or English, partial phone, 4.3) → duplicate warning honored → new-booking drawer with slot picker (5.3; US-CAL-1).
@@ -80,7 +80,7 @@ flowchart LR
     G --> H["Register open/close 6.4"]
 ```
 
-#### Staff member
+### Staff member
 
 1. Receive invitation → log in → "my day" view: own assignments across branches, branch-labelled (2.1; ADR-12).
 2. Ask the manager for time off (in person or by phone); the manager creates the block and it appears on every branch calendar (2.3, ADR-53 — an in-app request flow is a post-MVP candidate).
@@ -98,7 +98,7 @@ flowchart LR
     F --> G["Phase 16: clock in/out,<br/>hours + commissions 16"]
 ```
 
-#### End client (from Phase 9)
+### End client (from Phase 9)
 
 1. Opens the branch booking link/QR (9) → picks service → staff ("any" resolves round-robin, 3.3/9) → time (live slot engine, 5.2 reused) → confirms. No account (9).
 2. Receives a WhatsApp/SMS/email reminder before the visit (9; ADR-33) — no-show protection begins here.

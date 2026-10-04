@@ -2,7 +2,7 @@
 
 Features Fresha does not have (or does not have in a Kuwait/GCC-usable form) that would make the product better here and more sellable. Sizes are rough engineer-weeks (ew) for the same team as IMPLEMENTATION_PLAN.md. **The MVP scope is unchanged by this section** — nothing below is added to Phases 0–8; items marked "go-live need" would be the only exceptions, and there are none.
 
-#### Already decided (post-MVP phases carry these) — listed for completeness
+### Already decided (post-MVP phases carry these) — listed for completeness
 
 These appear in the parity matrix but are worth calling out as beyond-Fresha-in-execution because our target market differs:
 
@@ -15,7 +15,7 @@ These appear in the parity matrix but are worth calling out as beyond-Fresha-in-
 | WhatsApp-first reminders | SMS is ignored in Kuwait; WhatsApp is the default channel. Meta bills per delivered template message, utility category (reminders) is the cheapest tier, and replies inside the 24-hour customer window are free — so reminders are cheap and two-way replies are free (https://business.whatsapp.com / Meta rate card; see also https://setsmart.io/blog/whatsapp-business-api-pricing for the per-message model since July 2025) | Clients | Within Phase 9's 12 ew (provider decision Twilio/WATI re-verified at discovery, IMPLEMENTATION_PLAN Phase 9) | 9 |
 | Arabic-first experience | RTL-everything, Arabic search normalization, AR-first training material — a differentiator Fresha cannot retrofit cheaply | All users | Already in MVP (ADR-40); keep as release gate | 0–8 |
 
-#### New proposals
+### New proposals
 
 | # | Feature | Problem it solves | Who uses it | Size | Dependencies | Proposed phase.subphase |
 |---|---|---|---|---|---|---|

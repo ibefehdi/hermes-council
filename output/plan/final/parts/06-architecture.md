@@ -2,7 +2,7 @@
 
 This section covers the system context, the containers, deployment and environments, the CI/CD pipeline, and Edge Function isolation.
 
-#### C4 Level 1: System context
+### C4 Level 1: System context
 
 Who uses GlowDesk and what external systems does it connect to.
 
@@ -39,7 +39,7 @@ flowchart TB
 
 Context explanation: The system has four in-app roles (`tenant_owner`, `branch_manager`, `receptionist`, `staff`) plus a platform operations path (`platform_admin` via audited impersonation — never a membership role, per ADR-20 rule 9). All notification and payment integrations are post-MVP (plan Phases 9-10); the MVP is back-office only with manual/cash payments (ADR-1, ADR-34). External services are connected through Edge Functions behind provider abstractions so no provider-specific code leaks into the domain model (ADR-34).
 
-#### C4 Level 2: Container diagram
+### C4 Level 2: Container diagram
 
 The runtime containers and their communication paths.
 
@@ -103,7 +103,7 @@ Container explanation: Three rules define the system (per CONVENTIONS §1): (1) 
 
 ### Deployment and environments
 
-#### Environment topology
+### Environment topology
 
 ```mermaid
 flowchart LR
@@ -133,7 +133,7 @@ flowchart LR
 
 Environment explanation: Local development uses the Supabase CLI stack (`supabase start`, `supabase functions serve`, Vite). Feature branches get ephemeral preview-branch databases for migration testing. CI deploys migrations, functions, and the frontend to staging on merges to `staging`, and to production only from `main` (CONVENTIONS §8). Production runs on a paid-plan Supabase project with managed daily backups and PITR (ADR-49). The region defaults to `eu-central-1` as an assumption, with a legal verification gate before Phase 8 go-live (ADR-48).
 
-#### CI/CD pipeline
+### CI/CD pipeline
 
 ```mermaid
 flowchart TB
@@ -168,7 +168,7 @@ flowchart TB
 
 Pipeline explanation: CI gates every PR on typecheck, lint, unit tests, and build. The clean-migration gate (`F-verifier-2`) applies the full active migration set to an empty database on the pinned CLI version, regenerates types (drift fails CI), typechecks/builds every function, runs `supabase test db` (pgTAP), and executes the adversarial fixture suite (cross-tenant, cross-branch, money, and booking negatives). The gate fails if anything under `sql/drafts-v1/` is referenced by the active migration path. Frontend and backend deploy from the same commit (monorepo rule, ADR-30). E2E tests run nightly and pre-release.
 
-#### Edge Function isolation
+### Edge Function isolation
 
 Each Edge Function is an independent Deno deployable. A failing or redeploying function never takes down another domain because:
 

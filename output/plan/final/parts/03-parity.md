@@ -18,7 +18,7 @@ One row per Fresha feature, grouped by area. "Our equivalent" gives the module a
 
 Fresha's own model is single-tenant-first with paid add-ons and a consumer marketplace (TECHNICAL_REPORT.md §2.5, §2.3). Ours is multi-tenant B2B SaaS with branch-level isolation (ADR-20), no add-on storefront (plan tiers instead, ADR-18), and no consumer marketplace. Several Fresha features therefore have no equivalent by design, and several of our features (branch scoping, cross-branch conflict, audit log, tenant portability) have no Fresha equivalent — those appear in §2.
 
-#### Calendar & booking
+### Calendar & booking
 
 | Fresha feature | What it does for the business | Evidence | Our equivalent | Difference / why |
 |---|---|---|---|---|
@@ -45,7 +45,7 @@ Fresha's own model is single-tenant-first with paid add-ons and a consumer marke
 
 Coverage: 20 rows — MVP 14, later phases 4 (11: ×2, 15: ×2), candidate-only 2 (dynamic assignment 9, custom statuses 12), not planned 0.
 
-#### Sales & checkout
+### Sales & checkout
 
 | Fresha feature | What it does for the business | Evidence | Our equivalent | Difference / why |
 |---|---|---|---|---|
@@ -74,7 +74,7 @@ Coverage: 20 rows — MVP 14, later phases 4 (11: ×2, 15: ×2), candidate-only 
 
 Coverage: 22 rows — MVP 15, later phases 5 (10: ×2, 14: ×3), not planned 2 (drafts, service charges).
 
-#### Clients
+### Clients
 
 | Fresha feature | What it does for the business | Evidence | Our equivalent | Difference / why |
 |---|---|---|---|---|
@@ -97,7 +97,7 @@ Coverage: 22 rows — MVP 15, later phases 5 (10: ×2, 14: ×3), not planned 2 (
 
 Coverage: 16 rows — MVP 10, later phases 3 (11, 12: ×2), not planned 3.
 
-#### Catalogue & inventory
+### Catalogue & inventory
 
 | Fresha feature | What it does for the business | Evidence | Our equivalent | Difference / why |
 |---|---|---|---|---|
@@ -113,7 +113,7 @@ Coverage: 16 rows — MVP 10, later phases 3 (11, 12: ×2), not planned 3.
 
 Coverage: 9 rows — MVP 4, later phases 4, not planned 1.
 
-#### Team
+### Team
 
 | Fresha feature | What it does for the business | Evidence | Our equivalent | Difference / why |
 |---|---|---|---|---|
@@ -128,7 +128,7 @@ Coverage: 9 rows — MVP 4, later phases 4, not planned 1.
 
 Coverage: 8 rows — MVP 4, later phases 3, not planned 1.
 
-#### Reports & analytics
+### Reports & analytics
 
 Fresha ships a catalogue of 59 reports (technical/reports.md §5; pages.md §35 lists 58 cards — count discrepancy noted in F-final-parity-5), many gated behind the Premium/Insights add-on (technical/reports.md §3). Our principle (ADR-5, PD-scope-5): the six MVP reports are the desk's daily/monthly contract; every later feature brings its own reports with it; rich comparison dashboards are deferred non-committed (round-2 F-cov-2).
 
@@ -147,7 +147,7 @@ Fresha ships a catalogue of 59 reports (technical/reports.md §5; pages.md §35 
 
 Coverage: 10 rows — MVP 6, later phases 4 (13, 12/14, 17 plan tiers), not planned 0. Two sub-decisions inside rows: Excel/PDF export formats are rejected within the export row (CSV is MVP), and Premium gating is replaced by plan tiers (ADR-18), not omitted.
 
-#### Marketing & messaging
+### Marketing & messaging
 
 | Fresha feature | What it does for the business | Evidence | Our equivalent | Difference / why |
 |---|---|---|---|---|
@@ -160,7 +160,7 @@ Coverage: 10 rows — MVP 6, later phases 4 (13, 12/14, 17 plan tiers), not plan
 
 Coverage: 6 rows — MVP 0, later phases 4, candidates 1, not planned 1.
 
-#### Online booking & presence
+### Online booking & presence
 
 | Fresha feature | What it does for the business | Evidence | Our equivalent | Difference / why |
 |---|---|---|---|---|
@@ -174,7 +174,7 @@ Coverage: 6 rows — MVP 0, later phases 4, candidates 1, not planned 1.
 
 Coverage: 7 rows — later phases 3 (9: ×2, 11), not planned 4.
 
-#### Payments & billing
+### Payments & billing
 
 | Fresha feature | What it does for the business | Evidence | Our equivalent | Difference / why |
 |---|---|---|---|---|
@@ -185,7 +185,7 @@ Coverage: 7 rows — later phases 3 (9: ×2, 11), not planned 4.
 
 Coverage: 4 rows — MVP 1, later phases 3.
 
-#### Settings & platform
+### Settings & platform
 
 | Fresha feature | What it does for the business | Evidence | Our equivalent | Difference / why |
 |---|---|---|---|---|
@@ -205,7 +205,7 @@ Coverage: 4 rows — MVP 1, later phases 3.
 
 Coverage: 13 rows — MVP 7, later phases 1 (scheduling pieces land with their features), not planned 5.
 
-#### Coverage summary
+### Coverage summary
 
 | Area | Rows | MVP | Later phases | Candidates | Not planned |
 |---|---|---|---|---|---|

@@ -2,7 +2,7 @@
 
 The roles-by-actions-by-enforcement-point matrix, every tenant/branch isolation attack path with its defence, and the data access map (what the frontend may do directly versus what must go through a function or RPC).
 
-#### Roles x actions x enforcement point
+### Roles x actions x enforcement point
 
 | Action | tenant_owner | branch_manager | receptionist | staff | Enforcement point |
 |---|---|---|---|---|---|
@@ -35,7 +35,7 @@ The roles-by-actions-by-enforcement-point matrix, every tenant/branch isolation 
 | Export client contacts | Yes | **FORBIDDEN** | **FORBIDDEN** | **FORBIDDEN** | `reports` Edge Function (owner-only, F-verifier-3) |
 | Provision new tenant | No | No | No | No | `onboarding` Edge Function (service role, platform ops, ADR-20 rule 3) |
 
-#### Tenant isolation attack paths and defences
+### Tenant isolation attack paths and defences
 
 ```mermaid
 flowchart TB
@@ -79,7 +79,7 @@ Security explanation: The database is the security boundary — RLS enforces ten
 
 For every MVP write path: whether it goes through supabase-js (RLS), an SECURITY DEFINER RPC, or an Edge Function, and why.
 
-#### Direct supabase-js writes (ADR-28 allowlist)
+### Direct supabase-js writes (ADR-28 allowlist)
 
 | Entity | Operations allowed directly | Roles | Why direct is safe |
 |---|---|---|---|
@@ -89,7 +89,7 @@ For every MVP write path: whether it goes through supabase-js (RLS), an SECURITY
 | `settings` | INSERT, UPDATE, DELETE | tenant_owner (tenant-wide), branch_manager (own branch) | Role-gated RLS; single-key mutations |
 | `shifts` | INSERT, UPDATE, DELETE | branch_manager (own branch), tenant_owner | Branch-scoped RLS; dated rows, no cross-entity invariants |
 
-#### Edge Function / RPC only writes
+### Edge Function / RPC only writes
 
 | Entity | Path | Why Edge Function / RPC is required |
 |---|---|---|
@@ -107,7 +107,7 @@ For every MVP write path: whether it goes through supabase-js (RLS), an SECURITY
 | `invoice_counters` | `checkout` / `bookings` RPC | Row-locked `UPDATE ... RETURNING` must run inside the sale/booking transaction (ADR-14) |
 | `audit_log` | Triggers + Edge Function code paths | Direct DML revoked from `anon` and `authenticated` (ADR-22) |
 
-#### Reads (all direct supabase-js under RLS, except heavy aggregation)
+### Reads (all direct supabase-js under RLS, except heavy aggregation)
 
 | Entity | Path | Notes |
 |---|---|---|
@@ -117,7 +117,7 @@ For every MVP write path: whether it goes through supabase-js (RLS), an SECURITY
 | Client financial aggregates | Secured RPCs | Branch-scoped per ADR-11; never raw client columns |
 | Realtime subscriptions | `useRealtime(entity, tenantId, branchId)` | Channel authorization tested per table/role/branch (ADR-38) |
 
-#### Data access flow diagram
+### Data access flow diagram
 
 ```mermaid
 flowchart TB
