@@ -1,0 +1,8 @@
+.env
+auth.json
+output/
+runs/
+screenshots/
+node_modules/
+*.log
+.DS_Store

@@ -1,0 +1,13 @@
+{
+  "name": "hermes-council",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-agent Hermes council that maps a dashboard's pages, features, and feature relationships with Playwright",
+  "scripts": {
+    "login": "node login.mjs",
+    "login:headed": "node login.mjs --headed"
+  },
+  "dependencies": {
+    "playwright": "^1.63.0"
+  }
+}
