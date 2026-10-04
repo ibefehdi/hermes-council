@@ -4,13 +4,23 @@
 //   node login.mjs --check   exit 0 if the saved session in auth.json is still logged in, 1 if not
 import { chromium } from 'playwright';
 import { readFileSync, existsSync } from 'node:fs';
+import { spawn } from 'node:child_process';
 import { createInterface } from 'node:readline/promises';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const DIR = dirname(fileURLToPath(import.meta.url));
 const STATE = `${DIR}/auth.json`;
+const CHROME_PROFILE = `${DIR}/chrome-profile`;
+const CDP_PORT = 9333;
 const INTERACTIVE_TIMEOUT_MS = 10 * 60 * 1000;
+const CHROME_PATHS = [
+  process.env.CHROME_PATH,
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  '/usr/bin/google-chrome',
+  '/usr/bin/google-chrome-stable',
+  'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+].filter(Boolean);
 
 function loadEnv(path) {
   if (!existsSync(path)) return {};
@@ -77,7 +87,88 @@ if (mode === 'check') {
   process.exit(ok ? 0 : 1);
 }
 
-const browser = await chromium.launch({ headless: mode !== 'interactive' });
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function cdpTabs() {
+  const res = await fetch(`http://127.0.0.1:${CDP_PORT}/json/list`);
+  return (await res.json()).filter((t) => t.type === 'page');
+}
+
+// Real Chrome, started as a normal process: no automation flags and nothing attached to the page
+// while the user logs in, so reCAPTCHA sees an ordinary browser. Tabs are watched over the plain
+// HTTP /json endpoint; Playwright only connects after login to export the session.
+async function interactiveLoginWithRealChrome(chromePath) {
+  const chrome = spawn(
+    chromePath,
+    [
+      `--remote-debugging-port=${CDP_PORT}`,
+      `--user-data-dir=${CHROME_PROFILE}`,
+      '--no-first-run',
+      '--no-default-browser-check',
+      loginUrl,
+    ],
+    { stdio: 'ignore' },
+  );
+
+  for (let i = 0; i < 30; i++) {
+    if (await cdpTabs().then(() => true, () => false)) break;
+    await sleep(500);
+  }
+
+  const host = new URL(dashboardUrl).host;
+  console.log('Log in in the Chrome window (enter the OTP when it arrives).');
+  console.log('The session is saved automatically once the dashboard loads, or press Enter here to save now.');
+
+  const rl = createInterface({ input: process.stdin, output: process.stdout });
+  const manual = rl.question('').then(() => 'enter');
+  const auto = (async () => {
+    const deadline = Date.now() + INTERACTIVE_TIMEOUT_MS;
+    let streak = 0;
+    while (Date.now() < deadline) {
+      await sleep(2000);
+      const tabs = await cdpTabs().catch(() => []);
+      const inDashboard = tabs.some((t) => {
+        try {
+          const u = new URL(t.url);
+          return u.host === host && !LOGIN_PATH_RE.test(u.pathname);
+        } catch {
+          return false;
+        }
+      });
+      streak = inDashboard ? streak + 1 : 0;
+      if (streak >= 3) return 'auto';
+    }
+    return 'timeout';
+  })();
+
+  const result = await Promise.race([manual, auto]);
+  rl.close();
+  if (result === 'timeout') {
+    chrome.kill();
+    throw new Error('Timed out waiting for login (10 minutes).');
+  }
+
+  const browser = await chromium.connectOverCDP(`http://127.0.0.1:${CDP_PORT}`);
+  const context = browser.contexts()[0];
+  await context.storageState({ path: STATE, indexedDB: true });
+  const landed = context.pages().map((p) => p.url()).find((u) => u.includes(host)) || '';
+  console.log(`Saved session to ${STATE} (landed on ${landed})`);
+  await browser.close().catch(() => {});
+  chrome.kill();
+  process.exit(0);
+}
+
+if (mode === 'interactive') {
+  const chromePath = CHROME_PATHS.find((p) => existsSync(p));
+  if (chromePath) await interactiveLoginWithRealChrome(chromePath);
+  console.log('Google Chrome not found (set CHROME_PATH); falling back to Playwright Chromium.');
+}
+
+const browser = await chromium.launch({
+  headless: mode !== 'interactive',
+  ignoreDefaultArgs: ['--enable-automation'],
+  args: ['--disable-blink-features=AutomationControlled'],
+});
 const context = await browser.newContext();
 const page = await context.newPage();
 await page.goto(loginUrl, { waitUntil: 'domcontentloaded' });
