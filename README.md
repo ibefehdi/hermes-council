@@ -6,7 +6,7 @@ Each member runs on a different model family (set in `council.conf`) so no singl
 
 | Member | Model (OpenRouter) | Job |
 |---|---|---|
-| cartographer | `z-ai/glm-5.3-flash` | Inventory every page and feature |
+| cartographer | `z-ai/glm-5.3` | Inventory every page and feature |
 | linker | `deepseek/deepseek-v4-pro` | Map relationships: navigation, shared entities, data flows, shared APIs |
 | verifier | `openai/gpt-5.6-luna` | Cross-check both reports in the live dashboard, rule on disagreements |
 | chair | `qwen/qwen3.8-max-0902` | Write `output/FINAL_REPORT.md` |
