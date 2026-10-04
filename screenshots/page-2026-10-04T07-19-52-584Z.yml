@@ -1,0 +1,65 @@
+- generic [ref=f279e12]:
+  - generic [ref=f279e13]:
+    - link "Fresha" [ref=f279e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f279e16]:
+      - button [ref=f279e18] [cursor=pointer]:
+        - paragraph [ref=f279e20]: Continue setup
+      - button "Search" [ref=f279e22] [cursor=pointer]
+      - button "Performance insights" [ref=f279e24] [cursor=pointer]
+      - button "Notifications" [ref=f279e27] [cursor=pointer]:
+        - generic [ref=f279e28]: "4"
+      - link "Fresha Connect" [ref=f279e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f279e34] [cursor=pointer]:
+        - generic [ref=f279e35]: FA
+  - generic [ref=f279e37]:
+    - generic [ref=f279e38]:
+      - generic [ref=f279e41]:
+        - generic [ref=f279e42]:
+          - link [ref=f279e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f279e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f279e53] [cursor=pointer]
+          - button [ref=f279e57] [cursor=pointer]
+          - button [ref=f279e61] [cursor=pointer]
+          - button [ref=f279e65] [cursor=pointer]
+          - button [ref=f279e69] [cursor=pointer]
+          - button [ref=f279e73] [cursor=pointer]
+          - link [ref=f279e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f279e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f279e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f279e89] [cursor=pointer]
+      - generic [ref=f279e92]:
+        - button "Collapse Navigation Menu" [ref=f279e94] [cursor=pointer]
+        - generic [ref=f279e101]:
+          - paragraph [ref=f279e102]: Team
+          - link [ref=f279e104] [cursor=pointer]:
+            - /url: /team/team-members
+            - paragraph [ref=f279e105]: Team members
+          - link [ref=f279e107] [cursor=pointer]:
+            - /url: /team/scheduled-shifts
+            - paragraph [ref=f279e108]: Scheduled shifts
+          - link [ref=f279e110] [cursor=pointer]:
+            - /url: /team/timesheets
+            - paragraph [ref=f279e111]: Timesheets
+          - link [ref=f279e113] [cursor=pointer]:
+            - /url: /team/payrun/overview
+            - paragraph [ref=f279e114]: Pay runs
+    - generic [ref=f279e123]:
+      - paragraph [ref=f279e125]: Included in your plan
+      - generic [ref=f279e126]: Put an end to your payroll struggles
+      - generic [ref=f279e127]: Make paying your team easy, so you can spend time on the things that matter
+      - generic [ref=f279e128]:
+        - generic [ref=f279e129]: Combine wages, commissions, and tips into a single pay run
+        - generic [ref=f279e133]: Adjust the amount owed to include bonuses
+        - generic [ref=f279e137]: Share detailed earning reports for each team member
+      - generic [ref=f279e141]:
+        - button "Start now" [ref=f279e142] [cursor=pointer]
+        - link "Learn more" [ref=f279e146] [cursor=pointer]:
+          - /url: https://www.fresha.com/help-center/knowledge-base/team/101641-enable-pay-runs-and-set-your-pay-period

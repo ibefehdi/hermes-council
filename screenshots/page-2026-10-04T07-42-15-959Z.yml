@@ -1,0 +1,103 @@
+- generic [ref=f9e12]:
+  - generic [ref=f9e13]:
+    - link "Fresha" [ref=f9e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f9e16]:
+      - button [ref=f9e18] [cursor=pointer]:
+        - paragraph [ref=f9e20]: Continue setup
+      - button "Search" [ref=f9e22] [cursor=pointer]
+      - button "Performance insights" [ref=f9e24] [cursor=pointer]
+      - button "Notifications" [ref=f9e27] [cursor=pointer]:
+        - generic [ref=f9e28]: "4"
+      - link "Fresha Connect" [ref=f9e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f9e34] [cursor=pointer]:
+        - generic [ref=f9e35]: FA
+  - generic [ref=f9e37]:
+    - generic [ref=f9e41]:
+      - generic [ref=f9e42]:
+        - link [ref=f9e45] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f9e49] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f9e53] [cursor=pointer]
+        - button [ref=f9e57] [cursor=pointer]
+        - button [ref=f9e61] [cursor=pointer]
+        - button [ref=f9e65] [cursor=pointer]
+        - button [ref=f9e69] [cursor=pointer]
+        - button [ref=f9e73] [cursor=pointer]
+        - link [ref=f9e77] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f9e81] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f9e85] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f9e89] [cursor=pointer]
+    - generic [ref=f9e97]:
+      - generic [ref=f9e99]:
+        - button "Back" [ref=f9e100] [cursor=pointer]
+        - navigation [ref=f9e105]:
+          - list [ref=f9e106]:
+            - listitem [ref=f9e107]:
+              - link "Workspace settings •" [ref=f9e108] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f9e109]:
+              - link "Business setup" [ref=f9e110] [cursor=pointer]:
+                - /url: /setup/business-setup
+      - generic [ref=f9e115]:
+        - paragraph [ref=f9e117]: Business setup
+        - list [ref=f9e118]:
+          - listitem [ref=f9e119]:
+            - list [ref=f9e120]:
+              - listitem [ref=f9e121] [cursor=pointer]:
+                - link [ref=f9e122]:
+                  - /url: /setup/business-setup/business-details
+                - generic [ref=f9e123]: Business details
+              - listitem [ref=f9e125] [cursor=pointer]:
+                - link [ref=f9e126]:
+                  - /url: /setup/business-setup/location-details
+                - generic [ref=f9e127]: Locations
+        - separator [ref=f9e129]
+        - list [ref=f9e130]:
+          - listitem [ref=f9e131]:
+            - list [ref=f9e132]:
+              - listitem [ref=f9e133] [cursor=pointer]:
+                - button [ref=f9e134]
+                - generic [ref=f9e135]: Service menu
+              - listitem [ref=f9e137] [cursor=pointer]:
+                - button [ref=f9e138]
+                - generic [ref=f9e139]: Product list
+              - listitem [ref=f9e141] [cursor=pointer]:
+                - button [ref=f9e142]
+                - generic [ref=f9e143]: Memberships
+              - listitem [ref=f9e145] [cursor=pointer]:
+                - button [ref=f9e146]
+                - generic [ref=f9e147]: Packages
+              - listitem [ref=f9e149] [cursor=pointer]:
+                - button [ref=f9e150]
+                - generic [ref=f9e151]: Clients list
+      - generic [ref=f9e154]:
+        - generic [ref=f9e155]:
+          - generic [ref=f9e156]:
+            - paragraph [ref=f9e158]: Locations
+            - paragraph [ref=f9e159]:
+              - text: Manage info and preferences of locations within your business.
+              - link "Learn more" [ref=f9e160] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/workspace-settings/244-create-and-manage-business-locations
+              - text: .
+          - generic [ref=f9e162]:
+            - button "Options" [ref=f9e164] [cursor=pointer]
+            - button "Add" [ref=f9e169] [cursor=pointer]
+        - generic [ref=f9e174]:
+          - link [ref=f9e175] [cursor=pointer]:
+            - /url: /setup/location/3216614
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Test Salon
+                - generic:
+                  - paragraph: No reviews yet
+                - paragraph: Bneid al gar, 3, bneid al gar (3), asimah
+                - button "Actions" [ref=f9e176] [cursor=pointer]

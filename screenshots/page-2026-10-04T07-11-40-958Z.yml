@@ -1,0 +1,65 @@
+- generic [ref=f161e12]:
+  - generic [ref=f161e13]:
+    - link "Fresha" [ref=f161e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - button "Open user menu" [ref=f161e18] [cursor=pointer]:
+      - generic [ref=f161e19]: FA
+  - generic [ref=f161e23]:
+    - list [ref=f161e28]:
+      - listitem [ref=f161e29] [cursor=pointer]:
+        - button [ref=f161e30]
+        - generic [ref=f161e31]: Back
+      - listitem [ref=f161e33]:
+        - paragraph [ref=f161e36]: Your account
+        - list [ref=f161e37]:
+          - listitem [ref=f161e38] [cursor=pointer]:
+            - button [ref=f161e39]
+            - generic [ref=f161e40]: My profile
+          - listitem [ref=f161e41] [cursor=pointer]:
+            - button [ref=f161e42]
+            - generic [ref=f161e43]: Portfolio
+          - listitem [ref=f161e45] [cursor=pointer]:
+            - button [ref=f161e46]
+            - generic [ref=f161e47]: Reviews
+          - listitem [ref=f161e49] [cursor=pointer]:
+            - button [ref=f161e50]
+            - generic [ref=f161e51]: Pay runs
+          - listitem [ref=f161e53] [cursor=pointer]:
+            - button [ref=f161e54]
+            - generic [ref=f161e55]: Workspaces
+          - listitem [ref=f161e56] [cursor=pointer]:
+            - button [ref=f161e57]
+            - generic [ref=f161e58]: Personal settings
+    - generic [ref=f161e65]:
+      - generic [ref=f161e68]:
+        - paragraph [ref=f161e70]: Account settings
+        - paragraph [ref=f161e71]:
+          - text: Manage settings for your personal area.
+          - link "Learn more." [ref=f161e72] [cursor=pointer]:
+            - /url: https://www.fresha.com/help-center/knowledge-base/personal-account
+      - generic [ref=f161e75]:
+        - generic [ref=f161e76]:
+          - link [ref=f161e77] [cursor=pointer]:
+            - /url: /user-account/personal-settings/personal-info
+          - generic:
+            - generic:
+              - generic:
+                - paragraph: Personal info
+                - paragraph: Customize your personal details and how we can contact you
+        - generic [ref=f161e78]:
+          - link [ref=f161e79] [cursor=pointer]:
+            - /url: /user-account/personal-settings/login-security
+          - generic:
+            - generic:
+              - generic:
+                - paragraph: Login & security
+                - paragraph: Update your password and secure your account
+        - generic [ref=f161e80]:
+          - link [ref=f161e81] [cursor=pointer]:
+            - /url: /user-account/personal-settings/appearance
+          - generic:
+            - generic:
+              - generic:
+                - paragraph: Appearance
+                - paragraph: Select the look and feel of your platform

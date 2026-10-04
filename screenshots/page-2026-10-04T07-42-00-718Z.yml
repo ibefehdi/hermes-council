@@ -1,0 +1,68 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - link "Fresha" [ref=e6] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=e7]:
+      - button [ref=e9] [cursor=pointer]:
+        - paragraph [ref=e11]: Continue setup
+      - button "Search" [ref=e13] [cursor=pointer]
+      - button "Performance insights" [ref=e15] [cursor=pointer]
+      - button "Notifications" [ref=e18] [cursor=pointer]:
+        - generic [ref=e19]: "4"
+      - link "Fresha Connect" [ref=e23] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=e25] [cursor=pointer]:
+        - generic [ref=e26]: FA
+  - generic [ref=e28]:
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - link [ref=e36] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=e40] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=e44] [cursor=pointer]
+        - button [ref=e48] [cursor=pointer]
+        - button [ref=e52] [cursor=pointer]
+        - button [ref=e56] [cursor=pointer]
+        - button [ref=e60] [cursor=pointer]
+        - button [ref=e64] [cursor=pointer]
+        - link [ref=e68] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=e72] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=e76] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=e80] [cursor=pointer]
+    - generic [ref=e1473]:
+      - generic [ref=e1475]:
+        - generic [ref=e1476]:
+          - button "Back" [ref=e1477] [cursor=pointer]
+          - navigation [ref=e1482]:
+            - list [ref=e1483]:
+              - listitem [ref=e1484]:
+                - link "All reports •" [ref=e1485] [cursor=pointer]:
+                  - /url: /reports
+              - listitem [ref=e1486]:
+                - link "Sales •" [ref=e1487] [cursor=pointer]:
+                  - /url: /reports/report-group/1?category=salesPerformance
+              - listitem [ref=e1488]:
+                - generic [ref=e1489]: Sales summary
+        - generic [ref=e1490]:
+          - generic [ref=e1491]:
+            - generic [ref=e1492]:
+              - paragraph [ref=e1493]: Sales summary
+              - button "Add to favorites" [ref=e1496] [cursor=pointer]
+            - paragraph [ref=e1501]: Sales quantities and value, excluding tips and gift card sales.
+          - button "Options" [ref=e1506] [cursor=pointer]
+      - generic [ref=e1511]:
+        - generic [ref=e1513]:
+          - generic [ref=e1514]:
+            - button "Type" [ref=e1516] [cursor=pointer]
+            - button "Month to date" [ref=e1521] [cursor=pointer]
+            - button "Filters" [ref=e1526] [cursor=pointer]
+            - button "Advanced filters" [ref=e1531] [cursor=pointer]
+          - button "Customize" [ref=e1538] [cursor=pointer]
+        - generic [ref=e1549]:
+          - generic "animation" [ref=e1550]
+          - text: Loading...

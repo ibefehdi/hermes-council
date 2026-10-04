@@ -1,0 +1,94 @@
+- generic [ref=f122e12]:
+  - generic [ref=f122e13]:
+    - link "Fresha" [ref=f122e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f122e16]:
+      - button [ref=f122e18] [cursor=pointer]:
+        - paragraph [ref=f122e20]: Continue setup
+      - button "Search" [ref=f122e22] [cursor=pointer]
+      - button "Performance insights" [ref=f122e24] [cursor=pointer]
+      - button "Notifications" [ref=f122e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f122e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f122e31] [cursor=pointer]:
+        - generic [ref=f122e32]: FA
+  - generic [ref=f122e34]:
+    - generic [ref=f122e38]:
+      - generic [ref=f122e39]:
+        - link [ref=f122e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f122e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f122e50] [cursor=pointer]
+        - button [ref=f122e54] [cursor=pointer]
+        - button [ref=f122e58] [cursor=pointer]
+        - button [ref=f122e62] [cursor=pointer]
+        - button [ref=f122e66] [cursor=pointer]
+        - button [ref=f122e70] [cursor=pointer]
+        - link [ref=f122e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f122e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f122e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f122e86] [cursor=pointer]
+    - generic [ref=f122e92]:
+      - generic [ref=f122e95]:
+        - button "Back" [ref=f122e96] [cursor=pointer]
+        - navigation [ref=f122e101]:
+          - list [ref=f122e102]:
+            - listitem [ref=f122e103]:
+              - link "Workspace settings •" [ref=f122e104] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f122e105]:
+              - generic [ref=f122e106]: Billing
+      - generic [ref=f122e111]:
+        - paragraph [ref=f122e115]: Billing
+        - list [ref=f122e116]:
+          - listitem [ref=f122e117]:
+            - list [ref=f122e118]:
+              - listitem [ref=f122e119] [cursor=pointer]:
+                - button [ref=f122e120]
+                - generic [ref=f122e121]: Billing
+              - listitem [ref=f122e123] [cursor=pointer]:
+                - button [ref=f122e124]
+                - generic [ref=f122e125]: Payment methods
+              - listitem [ref=f122e127] [cursor=pointer]:
+                - button [ref=f122e128]
+                - generic [ref=f122e129]: Communication balance
+              - listitem [ref=f122e131] [cursor=pointer]:
+                - button [ref=f122e132]
+                - generic [ref=f122e133]: Invoices and fees
+            - separator [ref=f122e136]
+          - listitem [ref=f122e137]:
+            - list [ref=f122e138]:
+              - listitem [ref=f122e139] [cursor=pointer]:
+                - button [ref=f122e140]
+                - generic [ref=f122e141]: Subscriptions
+            - separator [ref=f122e144]
+          - listitem [ref=f122e145]:
+            - list [ref=f122e146]:
+              - listitem [ref=f122e147] [cursor=pointer]:
+                - link [ref=f122e148]:
+                  - /url: /setup/business-setup/location-details
+                - generic [ref=f122e149]: Locations
+      - list [ref=f122e152]:
+        - listitem [ref=f122e153]:
+          - generic [ref=f122e155]:
+            - paragraph [ref=f122e157]: Billing details
+            - paragraph [ref=f122e158]:
+              - text: These details are used for invoices issued to you from Fresha, and for collecting payments.
+              - link "Learn more" [ref=f122e159] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/billing-and-fees
+        - listitem [ref=f122e160]:
+          - generic [ref=f122e165]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img "Card illustration"
+            - generic [ref=f122e166]:
+              - generic [ref=f122e167]: Add your billing details
+              - generic [ref=f122e168]: These details are used for invoices from Fresha and accepting client payments
+            - button "Set up now" [ref=f122e170] [cursor=pointer]

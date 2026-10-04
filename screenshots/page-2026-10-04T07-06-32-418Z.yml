@@ -1,0 +1,58 @@
+- generic [ref=f46e3]:
+  - generic [ref=f46e4]:
+    - link "Fresha" [ref=f46e6] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f46e7]:
+      - button "Search" [ref=f46e9] [cursor=pointer]
+      - button "Performance insights" [ref=f46e11] [cursor=pointer]
+      - button "News" [ref=f46e13] [cursor=pointer]:
+        - generic [ref=f46e14]: "3"
+      - button "Notifications" [ref=f46e19] [cursor=pointer]:
+        - generic [ref=f46e20]: "4"
+      - link "Fresha Connect" [ref=f46e24] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f46e29] [cursor=pointer]:
+        - generic [ref=f46e30]: FA
+  - generic [ref=f46e32]:
+    - generic [ref=f46e33]:
+      - generic [ref=f46e36]:
+        - generic [ref=f46e37]:
+          - link [ref=f46e40] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f46e44] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f46e48] [cursor=pointer]
+          - button [ref=f46e52] [cursor=pointer]
+          - button [ref=f46e56] [cursor=pointer]
+          - button [ref=f46e60] [cursor=pointer]
+          - button [ref=f46e64] [cursor=pointer]
+          - button [ref=f46e68] [cursor=pointer]
+          - link [ref=f46e72] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f46e76] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f46e80] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f46e84] [cursor=pointer]
+      - generic [ref=f46e87]:
+        - button "Collapse Navigation Menu" [ref=f46e89] [cursor=pointer]
+        - generic [ref=f46e95]:
+          - generic [ref=f46e96]:
+            - paragraph [ref=f46e97]: Clients
+            - link [ref=f46e99] [cursor=pointer]:
+              - /url: /clients/list
+              - paragraph [ref=f46e100]: Clients list
+            - link [ref=f46e102] [cursor=pointer]:
+              - /url: /clients/segments
+              - paragraph [ref=f46e103]: Client segments
+          - separator [ref=f46e105]
+          - generic [ref=f46e106]:
+            - paragraph [ref=f46e107]: Engage
+            - link [ref=f46e109] [cursor=pointer]:
+              - /url: /clients/loyalty
+              - paragraph [ref=f46e110]: Client loyalty
+            - link [ref=f46e112] [cursor=pointer]:
+              - /url: /clients/online-reputation
+              - paragraph [ref=f46e113]: Online reputation
+    - img "spinner" [ref=f46e117]

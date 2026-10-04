@@ -1,0 +1,111 @@
+- generic [ref=f17e1]:
+  - generic [ref=f17e12]:
+    - generic [ref=f17e13]:
+      - link "Fresha" [ref=f17e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f17e16]:
+        - button [ref=f17e18] [cursor=pointer]:
+          - paragraph [ref=f17e20]: Continue setup
+        - button "Search" [ref=f17e22] [cursor=pointer]
+        - button "Performance insights" [ref=f17e24] [cursor=pointer]
+        - button "Notifications" [ref=f17e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f17e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f17e31] [cursor=pointer]:
+          - generic [ref=f17e32]: FA
+    - generic [ref=f17e35]:
+      - generic [ref=f17e38]:
+        - generic [ref=f17e39]:
+          - link [ref=f17e42] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f17e46] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f17e50] [cursor=pointer]
+          - button [ref=f17e54] [cursor=pointer]
+          - button [ref=f17e58] [cursor=pointer]
+          - button [ref=f17e62] [cursor=pointer]
+          - button [ref=f17e66] [cursor=pointer]
+          - button [ref=f17e70] [cursor=pointer]
+          - link [ref=f17e74] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f17e78] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f17e82] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f17e86] [cursor=pointer]
+      - generic [ref=f17e89]:
+        - button "Collapse Navigation Menu" [ref=f17e91] [cursor=pointer]
+        - generic [ref=f17e97]:
+          - generic [ref=f17e98]:
+            - paragraph [ref=f17e99]: Clients
+            - link [ref=f17e101] [cursor=pointer]:
+              - /url: /clients/list
+              - paragraph [ref=f17e102]: Clients list
+            - link [ref=f17e104] [cursor=pointer]:
+              - /url: /clients/segments
+              - paragraph [ref=f17e105]: Client segments
+          - separator [ref=f17e107]
+          - generic [ref=f17e108]:
+            - paragraph [ref=f17e109]: Engage
+            - link [ref=f17e111] [cursor=pointer]:
+              - /url: /clients/loyalty
+              - paragraph [ref=f17e112]: Client loyalty
+            - link [ref=f17e114] [cursor=pointer]:
+              - /url: /clients/online-reputation
+              - paragraph [ref=f17e115]: Online reputation
+  - dialog "Add a new client" [ref=f17e425]:
+    - generic [ref=f17e427]:
+      - generic [ref=f17e428]: Add a new client
+      - generic [ref=f17e431]:
+        - button "Close" [ref=f17e432] [cursor=pointer]
+        - button "Save" [ref=f17e436] [cursor=pointer]
+    - generic [ref=f17e442]:
+      - heading "Add a new client" [level=1] [ref=f17e446]
+      - generic [ref=f17e663]:
+        - paragraph [ref=f17e667]: Settings
+        - generic [ref=f17e668]:
+          - generic [ref=f17e669]:
+            - generic [ref=f17e671]:
+              - paragraph [ref=f17e673]: Client notifications
+              - paragraph [ref=f17e674]: Choose which channels are used when sending notifications to this client
+            - generic [ref=f17e675] [cursor=pointer]:
+              - paragraph [ref=f17e681]: Send email notifications
+              - checkbox "Send email notifications" [checked] [ref=f17e682]
+            - generic [ref=f17e683] [cursor=pointer]:
+              - paragraph [ref=f17e689]: Send text message notifications
+              - checkbox "Send text message notifications" [checked] [ref=f17e690]
+            - generic [ref=f17e691] [cursor=pointer]:
+              - paragraph [ref=f17e697]: Send WhatsApp message notifications
+              - checkbox "Send WhatsApp message notifications" [checked] [ref=f17e698]
+          - separator [ref=f17e699]
+          - generic [ref=f17e700]:
+            - generic [ref=f17e702]:
+              - paragraph [ref=f17e704]: Marketing messages
+              - paragraph [ref=f17e705]: Choose which channels are used when sending marketing message to this client. You confirm they have agreed to receive messages from your business that Fresha may send on your behalf.
+            - generic [ref=f17e706] [cursor=pointer]:
+              - paragraph [ref=f17e712]: Send email messages
+              - checkbox "Send email messages" [checked] [ref=f17e713]
+            - generic [ref=f17e714] [cursor=pointer]:
+              - paragraph [ref=f17e720]: Send text messages
+              - checkbox "Send text messages" [checked] [ref=f17e721]
+            - generic [ref=f17e722] [cursor=pointer]:
+              - paragraph [ref=f17e728]: Send WhatsApp messages
+              - checkbox "Send WhatsApp messages" [checked] [ref=f17e729]
+      - list [ref=f17e627]:
+        - listitem [ref=f17e628]:
+          - generic [ref=f17e629]: Personal
+          - list [ref=f17e631]:
+            - listitem [ref=f17e632] [cursor=pointer]:
+              - button [ref=f17e633]
+              - paragraph [ref=f17e636]: Profile
+            - listitem [ref=f17e637] [cursor=pointer]:
+              - button [ref=f17e638]
+              - paragraph [ref=f17e641]: Addresses
+            - listitem [ref=f17e642] [cursor=pointer]:
+              - button [ref=f17e643]
+              - paragraph [ref=f17e646]: Emergency contacts
+            - separator [ref=f17e648]
+            - listitem [ref=f17e649] [cursor=pointer]:
+              - button [active] [ref=f17e650]
+              - paragraph [ref=f17e653]: Settings

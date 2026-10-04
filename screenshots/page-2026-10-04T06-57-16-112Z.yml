@@ -1,0 +1,135 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "Fresha" [ref=e6] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=e7]:
+        - button [ref=e9] [cursor=pointer]:
+          - paragraph [ref=e11]: Continue setup
+        - button "Search" [ref=e13] [cursor=pointer]
+        - button "Performance insights" [ref=e15] [cursor=pointer]
+        - button "Notifications" [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]: "4"
+        - link "Fresha Connect" [ref=e23] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: FA
+    - generic [ref=e31]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - link [ref=e39] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=e43] [cursor=pointer]:
+            - /url: /calendar?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working
+          - button [ref=e47] [cursor=pointer]
+          - button [ref=e51] [cursor=pointer]
+          - button [ref=e55] [cursor=pointer]
+          - button [ref=e59] [cursor=pointer]
+          - button [ref=e63] [cursor=pointer]
+          - button [ref=e67] [cursor=pointer]
+          - link [ref=e71] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=e75] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=e79] [cursor=pointer]:
+            - /url: /setup
+        - button [active] [ref=e83] [cursor=pointer]
+      - generic [ref=e86]:
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - button "Today" [ref=e90] [cursor=pointer]
+            - group [ref=e94]:
+              - button "Go to previous month" [ref=e95] [cursor=pointer]
+              - button "Sun, Oct 4" [ref=e100] [cursor=pointer]
+              - button "Go to next month" [ref=e104] [cursor=pointer]
+            - paragraph [ref=e109]: Button group
+            - button "Scheduled team" [ref=e110] [cursor=pointer]
+            - link "Visibility Filters" [ref=e117] [cursor=pointer]:
+              - /url: /calendar/drawer/visibility-filters?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working
+          - generic [ref=e122]:
+            - link "Calendar Settings" [ref=e125] [cursor=pointer]:
+              - /url: /calendar/drawer/settings?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working
+            - link "Waitlist" [ref=e131] [cursor=pointer]:
+              - /url: /calendar/drawer/waitlist?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working
+            - group [ref=e136]:
+              - button "Reset calendar to default view" [ref=e138] [cursor=pointer]
+              - button "Day" [ref=e143] [cursor=pointer]
+            - paragraph [ref=e148]: Button group
+            - button "Add" [ref=e149] [cursor=pointer]
+        - generic [ref=e159]:
+          - generic [ref=e161]:
+            - generic [ref=e162]: 00:00
+            - generic [ref=e164]: 01:00
+            - generic [ref=e166]: 02:00
+            - generic [ref=e168]: 03:00
+            - generic [ref=e170]: 04:00
+            - generic [ref=e172]: 05:00
+            - generic [ref=e174]: 06:00
+            - generic [ref=e176]: 07:00
+            - generic [ref=e178]: 08:00
+            - generic [ref=e180]: 09:00
+            - generic [ref=e182]: 10:00
+            - generic [ref=e184]: 11:00
+            - generic [ref=e186]: 12:00
+            - generic [ref=e188]: 13:00
+            - generic [ref=e190]: 14:00
+            - generic [ref=e192]: 15:00
+            - generic [ref=e194]: 16:00
+            - generic [ref=e196]: 17:00
+            - generic [ref=e198]: 18:00
+            - generic [ref=e200]: 19:00
+            - generic [ref=e202]: 20:00
+            - generic [ref=e204]: 21:00
+            - generic [ref=e206]: 22:00
+            - generic [ref=e208]: 23:00
+            - generic [ref=e210]: 09:57
+          - button
+          - button
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - button "FA Fahad Asad" [ref=e217] [cursor=pointer]:
+                - generic [ref=e218]:
+                  - generic [ref=e219]: FA
+                  - paragraph [ref=e223]: Fahad Asad
+              - button "FA Fahad Asad" [ref=e228] [cursor=pointer]:
+                - generic [ref=e229]:
+                  - generic [ref=e230]: FA
+                  - paragraph [ref=e234]: Fahad Asad
+              - button "FA Fahad Asad" [ref=e239] [cursor=pointer]:
+                - generic [ref=e240]:
+                  - generic [ref=e241]: FA
+                  - paragraph [ref=e245]: Fahad Asad
+            - generic [ref=e252]:
+              - generic [ref=e253] [cursor=pointer]:
+                - generic [ref=e254]:
+                  - generic [ref=e255]: 09:00 - 09:45
+                  - strong [ref=e256]: John Doe
+                - generic [ref=e257]: Haircut
+              - generic [ref=e258] [cursor=pointer]:
+                - generic [ref=e259]:
+                  - generic [ref=e260]: 10:00 - 10:35
+                  - strong [ref=e261]: Jack Doe
+                - generic [ref=e262]: Blow Dry
+              - generic [ref=e263] [cursor=pointer]:
+                - generic [ref=e264]:
+                  - generic [ref=e265]: 11:00 - 12:15
+                  - strong [ref=e266]: Jane Doe
+                - generic [ref=e267]: Hair Color
+  - dialog [ref=e270]:
+    - generic [ref=e271]:
+      - button "Close Drawer" [ref=e273] [cursor=pointer]
+      - generic [ref=e282]:
+        - generic: Hey Fahad, how can we help?
+        - heading "Hey Fahad, how can we help?" [level=1] [ref=e289]
+        - img "spinner" [ref=e294]
+      - list [ref=e301]:
+        - listitem [ref=e302]:
+          - button [ref=e303] [cursor=pointer]:
+            - paragraph [ref=e307]: News
+        - listitem [ref=e308]:
+          - button [ref=e309] [cursor=pointer]:
+            - paragraph [ref=e313]: Help
+        - listitem [ref=e314]:
+          - button [ref=e315] [cursor=pointer]:
+            - paragraph [ref=e319]: Guides

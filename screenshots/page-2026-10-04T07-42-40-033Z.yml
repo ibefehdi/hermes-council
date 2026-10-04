@@ -1,0 +1,119 @@
+- generic [ref=f18e12]:
+  - generic [ref=f18e13]:
+    - link "Fresha" [ref=f18e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f18e16]:
+      - button [ref=f18e18] [cursor=pointer]:
+        - paragraph [ref=f18e20]: Continue setup
+      - button "Search" [ref=f18e22] [cursor=pointer]
+      - button "Performance insights" [ref=f18e24] [cursor=pointer]
+      - button "Notifications" [ref=f18e27] [cursor=pointer]:
+        - generic [ref=f18e28]: "4"
+      - link "Fresha Connect" [ref=f18e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f18e34] [cursor=pointer]:
+        - generic [ref=f18e35]: FA
+  - generic [ref=f18e37]:
+    - generic [ref=f18e41]:
+      - generic [ref=f18e42]:
+        - link [ref=f18e45] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f18e49] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f18e53] [cursor=pointer]
+        - button [ref=f18e57] [cursor=pointer]
+        - button [ref=f18e61] [cursor=pointer]
+        - button [ref=f18e65] [cursor=pointer]
+        - button [ref=f18e69] [cursor=pointer]
+        - button [ref=f18e73] [cursor=pointer]
+        - link [ref=f18e77] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f18e81] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f18e85] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f18e89] [cursor=pointer]
+    - generic [ref=f18e97]:
+      - generic [ref=f18e100]:
+        - generic [ref=f18e101]:
+          - button "Back" [ref=f18e102] [cursor=pointer]
+          - navigation [ref=f18e107]:
+            - list [ref=f18e108]:
+              - listitem [ref=f18e109]:
+                - link "Workspace settings •" [ref=f18e110] [cursor=pointer]:
+                  - /url: /setup
+              - listitem [ref=f18e111]:
+                - link "Locations •" [ref=f18e112] [cursor=pointer]:
+                  - /url: /setup/business-setup/location-details
+              - listitem [ref=f18e113]:
+                - link "Test Salon" [ref=f18e114] [cursor=pointer]:
+                  - /url: /setup/location/3216614
+        - generic [ref=f18e115]:
+          - generic [ref=f18e116]:
+            - paragraph [ref=f18e117]: Test Salon
+            - paragraph [ref=f18e118]: Closed • 3, bneid al gar
+          - button "Options" [ref=f18e122] [cursor=pointer]
+      - generic [ref=f18e131]:
+        - paragraph [ref=f18e132]: Location settings
+        - list [ref=f18e133]:
+          - listitem [ref=f18e134]:
+            - list [ref=f18e135]:
+              - listitem [ref=f18e136] [cursor=pointer]:
+                - link [ref=f18e137]:
+                  - /url: /setup/location/3216614/business-details
+                - generic [ref=f18e138]: Business details
+              - listitem [ref=f18e140] [cursor=pointer]:
+                - link [ref=f18e141]:
+                  - /url: /setup/location/3216614/business-location
+                - generic [ref=f18e142]: Business location
+              - listitem [ref=f18e144] [cursor=pointer]:
+                - link [ref=f18e145]:
+                  - /url: /setup/location/3216614/opening-hours
+                - generic [ref=f18e146]: Opening hours
+              - listitem [ref=f18e148] [cursor=pointer]:
+                - link [ref=f18e149]:
+                  - /url: /setup/location/3216614/sales
+                - generic [ref=f18e150]: Sales
+            - separator [ref=f18e153]
+          - listitem [ref=f18e154]:
+            - list [ref=f18e155]:
+              - listitem [ref=f18e156] [cursor=pointer]:
+                - button [ref=f18e157]
+                - generic [ref=f18e158]: Marketplace profile settings
+              - listitem [ref=f18e160] [cursor=pointer]:
+                - button [ref=f18e161]
+                - generic [ref=f18e162]: Manage billing profiles
+      - generic [ref=f18e168]:
+        - generic [ref=f18e169]:
+          - generic [ref=f18e170]:
+            - paragraph [ref=f18e172]: Opening hours
+            - paragraph [ref=f18e174]:
+              - text: Opening hours are displayed on your profile and are the default working hours for your team. You can amend business closed periods for events like Bank Holidays in
+              - link "Settings" [ref=f18e175] [cursor=pointer]:
+                - /url: /setup/scheduling/closed-periods
+              - text: .
+          - link "Edit" [ref=f18e177] [cursor=pointer]:
+            - /url: /setup/location/3216614/opening-hours/edit/
+        - generic [ref=f18e181]:
+          - generic [ref=f18e185]:
+            - heading "Saturday" [level=3] [ref=f18e189]
+            - paragraph [ref=f18e192]: 10:00 to 17:00
+          - generic [ref=f18e196]:
+            - heading "Sunday" [level=3] [ref=f18e200]
+            - paragraph [ref=f18e202]: Closed
+          - generic [ref=f18e206]:
+            - heading "Monday" [level=3] [ref=f18e210]
+            - paragraph [ref=f18e213]: 10:00 to 19:00
+          - generic [ref=f18e217]:
+            - heading "Tuesday" [level=3] [ref=f18e221]
+            - paragraph [ref=f18e224]: 10:00 to 19:00
+          - generic [ref=f18e228]:
+            - heading "Wednesday" [level=3] [ref=f18e232]
+            - paragraph [ref=f18e235]: 10:00 to 19:00
+          - generic [ref=f18e239]:
+            - heading "Thursday" [level=3] [ref=f18e243]
+            - paragraph [ref=f18e246]: 10:00 to 19:00
+          - generic [ref=f18e250]:
+            - heading "Friday" [level=3] [ref=f18e254]
+            - paragraph [ref=f18e257]: 10:00 to 19:00

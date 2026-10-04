@@ -1,0 +1,216 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "Fresha" [ref=e6] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=e7]:
+        - button [ref=e9] [cursor=pointer]:
+          - paragraph [ref=e11]: Continue setup
+        - button "Search" [ref=e13] [cursor=pointer]
+        - button "Performance insights" [ref=e15] [cursor=pointer]
+        - button "Notifications" [ref=e18] [cursor=pointer]
+        - link "Fresha Connect" [ref=e20] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: FA
+    - generic [ref=e25]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - link [ref=e33] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=e37] [cursor=pointer]:
+            - /url: /calendar?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working&checkout-order-id=1091452695
+          - button [ref=e41] [cursor=pointer]
+          - button [ref=e45] [cursor=pointer]
+          - button [ref=e49] [cursor=pointer]
+          - button [ref=e53] [cursor=pointer]
+          - button [ref=e57] [cursor=pointer]
+          - button [ref=e61] [cursor=pointer]
+          - link [ref=e65] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=e69] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=e73] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=e77] [cursor=pointer]
+      - generic [ref=e80]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - button "Today" [ref=e84] [cursor=pointer]
+            - group [ref=e88]:
+              - button "Go to previous month" [ref=e89] [cursor=pointer]
+              - button "Mon, Oct 5" [ref=e686] [cursor=pointer]
+              - button "Go to next month" [ref=e98] [cursor=pointer]
+            - paragraph [ref=e103]: Button group
+            - button "Scheduled team" [ref=e104] [cursor=pointer]
+            - link "Visibility Filters" [ref=e111] [cursor=pointer]:
+              - /url: /calendar/drawer/visibility-filters?date=2026-10-05&view=day&location_id=3216614&calendar_selected_resources=e-working&checkout-order-id=1091452695
+          - generic [ref=e116]:
+            - link "Calendar Settings" [ref=e119] [cursor=pointer]:
+              - /url: /calendar/drawer/settings?date=2026-10-05&view=day&location_id=3216614&calendar_selected_resources=e-working&checkout-order-id=1091452695
+            - link "Waitlist" [ref=e125] [cursor=pointer]:
+              - /url: /calendar/drawer/waitlist?date=2026-10-05&view=day&location_id=3216614&calendar_selected_resources=e-working&checkout-order-id=1091452695
+            - group [ref=e130]:
+              - button "Reset calendar to default view" [ref=e132] [cursor=pointer]
+              - button "Day" [ref=e137] [cursor=pointer]
+            - paragraph [ref=e142]: Button group
+            - button "Add" [active] [ref=e143] [cursor=pointer]
+        - generic [ref=e153]:
+          - generic [ref=e155]:
+            - generic [ref=e156]: 00:00
+            - generic [ref=e158]: 01:00
+            - generic [ref=e160]: 02:00
+            - generic [ref=e162]: 03:00
+            - generic [ref=e164]: 04:00
+            - generic [ref=e166]: 05:00
+            - generic [ref=e168]: 06:00
+            - generic [ref=e170]: 07:00
+            - generic [ref=e172]: 08:00
+            - generic [ref=e174]: 09:00
+            - generic [ref=e176]: 10:00
+            - generic [ref=e178]: 11:00
+            - generic [ref=e180]: 12:00
+            - generic [ref=e182]: 13:00
+            - generic [ref=e184]: 14:00
+            - generic [ref=e186]: 15:00
+            - generic [ref=e188]: 16:00
+            - generic [ref=e190]: 17:00
+            - generic [ref=e192]: 18:00
+            - generic [ref=e194]: 19:00
+            - generic [ref=e196]: 20:00
+            - generic [ref=e198]: 21:00
+            - generic [ref=e200]: 22:00
+            - generic [ref=e202]: 23:00
+          - button
+          - button
+          - generic [ref=e206]:
+            - generic [ref=e207]:
+              - button "FA Fahad Asad" [ref=e222] [cursor=pointer]:
+                - generic [ref=e223]:
+                  - generic [ref=e224]: FA
+                  - paragraph [ref=e228]: Fahad Asad
+              - button "FA Fahad Asad" [ref=e233] [cursor=pointer]:
+                - generic [ref=e234]:
+                  - generic [ref=e235]: FA
+                  - paragraph [ref=e239]: Fahad Asad
+              - button "FA Fahad Asad" [ref=e690] [cursor=pointer]:
+                - generic [ref=e691]:
+                  - generic [ref=e692]: FA
+                  - paragraph [ref=e696]: Fahad Asad
+            - generic [ref=e242]:
+              - generic [ref=e698]:
+                - generic [ref=e699] [cursor=pointer]:
+                  - generic [ref=e700]:
+                    - generic [ref=e701]: 09:00 - 09:45
+                    - strong [ref=e702]: John Doe
+                  - generic [ref=e703]: Haircut
+                - generic [ref=e704] [cursor=pointer]:
+                  - generic [ref=e705]:
+                    - generic [ref=e706]: 10:00 - 10:35
+                    - strong [ref=e707]: Jack Doe
+                  - generic [ref=e708]: Blow Dry
+                - generic [ref=e709] [cursor=pointer]:
+                  - generic [ref=e710]:
+                    - generic [ref=e711]: 11:00 - 12:15
+                    - strong [ref=e712]: Jane Doe
+                  - generic [ref=e713]: Hair Color
+              - generic [ref=e936] [cursor=pointer]:
+                - generic [ref=e1291]:
+                  - generic [ref=e1292]: 10:00 - 11:00
+                  - strong [ref=e1293]: COUNCIL-TEST Client1
+                - generic [ref=e940]: COUNCIL-TEST Service1
+              - generic [ref=e720]:
+                - generic [ref=e721] [cursor=pointer]: 14:00 - 16:30
+                - generic [ref=e726] [cursor=pointer]: 16:30 - 17:15
+  - dialog [ref=e1422]:
+    - generic [ref=e1423]:
+      - button "Close Drawer" [ref=e1425] [cursor=pointer]
+      - generic [ref=e1431]:
+        - generic [ref=e1435]:
+          - button "Add client" [ref=e1436] [cursor=pointer]
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Add client
+                    - paragraph: Leave empty for walk-ins
+                  - button [ref=e1437] [cursor=pointer]
+        - generic [ref=e1440]:
+          - img "Empty cart" [ref=e1442]
+          - generic [ref=e1443]:
+            - paragraph [ref=e1445]: Your cart is empty
+            - paragraph [ref=e1448]: Tap an item to add to cart or add an existing client for smart recommendations
+      - generic [ref=e1450]:
+        - generic: Add to cart
+        - generic [ref=e1454]:
+          - heading "Add to cart" [level=1] [ref=e1458]
+          - list [ref=e1460]:
+            - listitem [ref=e1461]:
+              - link "Cart" [ref=e1462] [cursor=pointer]:
+                - /url: /calendar/drawer/new-sale/?date=2026-10-05&view=day&location_id=3216614&calendar_selected_resources=e-working&checkout-order-id=1091452695
+            - listitem [ref=e1464]:
+              - generic [ref=e1465]: Tip
+            - listitem [ref=e1467]:
+              - generic [ref=e1468]: Payment
+        - generic [ref=e1471]:
+          - generic [ref=e1473]:
+            - generic "Search" [ref=e1477]:
+              - textbox "Search" [ref=e1479]
+            - generic [ref=e1482]:
+              - generic [ref=e1483]:
+                - button "Appointments" [ref=e1484] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - paragraph: Appointments
+              - generic [ref=e1485]:
+                - button "Services" [ref=e1486] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - paragraph: Services
+              - generic [ref=e1487]:
+                - button "Products" [ref=e1488] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - paragraph: Products
+              - generic [ref=e1489]:
+                - button "Packages" [ref=e1490] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - paragraph: Packages
+              - generic [ref=e1491]:
+                - button "Gift cards" [ref=e1492] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - paragraph: Gift cards
+          - generic [ref=e1494]:
+            - generic [ref=e1495]:
+              - paragraph [ref=e1496]: Quick sale
+              - button "Edit" [ref=e1497] [cursor=pointer]
+            - generic [ref=e1499]:
+              - generic [ref=e1500]:
+                - button "Hair Color" [ref=e1501] [cursor=pointer]
+                - generic [ref=e1505]:
+                  - paragraph [ref=e1506]: Hair Color
+                  - paragraph [ref=e1507]: KWD 57
+              - generic [ref=e1509]:
+                - button "Blow Dry" [ref=e1510] [cursor=pointer]
+                - generic [ref=e1514]:
+                  - paragraph [ref=e1515]: Blow Dry
+                  - paragraph [ref=e1516]: KWD 35
+              - generic [ref=e1518]:
+                - button "Classic Fill" [ref=e1519] [cursor=pointer]
+                - generic [ref=e1523]:
+                  - paragraph [ref=e1524]: Classic Fill
+                  - paragraph [ref=e1525]: KWD 60
+              - generic [ref=e1527]:
+                - button "Haircut" [ref=e1528] [cursor=pointer]
+                - generic [ref=e1532]:
+                  - paragraph [ref=e1533]: Haircut
+                  - paragraph [ref=e1534]: KWD 40
+              - generic [ref=e1536]:
+                - button "Balayage" [ref=e1537] [cursor=pointer]
+                - generic [ref=e1541]:
+                  - paragraph [ref=e1542]: Balayage
+                  - paragraph [ref=e1543]: KWD 150

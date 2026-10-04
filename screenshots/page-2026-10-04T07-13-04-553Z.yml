@@ -1,0 +1,154 @@
+- generic [ref=f177e12]:
+  - generic [ref=f177e13]:
+    - link "Fresha" [ref=f177e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f177e16]:
+      - button [ref=f177e18] [cursor=pointer]:
+        - paragraph [ref=f177e20]: Continue setup
+      - button "Search" [ref=f177e22] [cursor=pointer]
+      - button "Performance insights" [ref=f177e24] [cursor=pointer]
+      - button "Notifications" [ref=f177e27] [cursor=pointer]:
+        - generic [ref=f177e28]: "4"
+      - link "Fresha Connect" [ref=f177e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f177e34] [cursor=pointer]:
+        - generic [ref=f177e35]: FA
+  - generic [ref=f177e37]:
+    - generic [ref=f177e38]:
+      - generic [ref=f177e41]:
+        - generic [ref=f177e42]:
+          - link [ref=f177e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f177e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f177e53] [cursor=pointer]
+          - button [ref=f177e57] [cursor=pointer]
+          - button [ref=f177e61] [cursor=pointer]
+          - button [ref=f177e65] [cursor=pointer]
+          - button [ref=f177e69] [cursor=pointer]
+          - button [ref=f177e73] [cursor=pointer]
+          - link [ref=f177e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f177e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f177e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f177e89] [cursor=pointer]
+      - generic [ref=f177e92]:
+        - button "Collapse Navigation Menu" [ref=f177e94] [cursor=pointer]
+        - generic [ref=f177e100]:
+          - generic [ref=f177e101]:
+            - paragraph [ref=f177e102]: Sales
+            - link [ref=f177e104] [cursor=pointer]:
+              - /url: /sales/daily-sales
+              - paragraph [ref=f177e105]: Daily sales summary
+            - link [ref=f177e107] [cursor=pointer]:
+              - /url: /sales/register
+              - paragraph [ref=f177e108]: Register
+            - link [ref=f177e110] [cursor=pointer]:
+              - /url: /sales/appointments-list
+              - paragraph [ref=f177e111]: Appointments
+            - link [ref=f177e113] [cursor=pointer]:
+              - /url: /sales/sales-list
+              - paragraph [ref=f177e114]: Sales
+            - link [ref=f177e116] [cursor=pointer]:
+              - /url: /sales/payment-transactions
+              - paragraph [ref=f177e117]: Payments
+          - separator [ref=f177e119]
+          - generic [ref=f177e120]:
+            - paragraph [ref=f177e121]: Sold items
+            - link [ref=f177e123] [cursor=pointer]:
+              - /url: /sales/gift-cards
+              - paragraph [ref=f177e124]: Gift cards sold
+            - link [ref=f177e126] [cursor=pointer]:
+              - /url: /sales/packages-sold
+              - paragraph [ref=f177e127]: Packages sold
+            - link [ref=f177e129] [cursor=pointer]:
+              - /url: /sales/paid-plans
+              - paragraph [ref=f177e130]: Memberships sold
+    - generic [ref=f177e136]:
+      - generic [ref=f177e138]:
+        - generic [ref=f177e139]:
+          - paragraph [ref=f177e141]: Appointments
+          - paragraph [ref=f177e142]: View, filter and export appointments booked by your clients.
+        - button "Export" [ref=f177e147] [cursor=pointer]
+      - generic [ref=f177e153]:
+        - generic [ref=f177e156]:
+          - generic [ref=f177e158]:
+            - generic [ref=f177e159]:
+              - generic [ref=f177e160]: Search
+              - textbox "Search" [ref=f177e165]:
+                - /placeholder: Search by Reference or Client
+            - button "Month to date" [ref=f177e166] [cursor=pointer]
+            - button "Filters" [ref=f177e171] [cursor=pointer]
+          - button "Scheduled Date (newest first)" [ref=f177e180] [cursor=pointer]
+        - generic [ref=f177e185]:
+          - region [ref=f177e186]:
+            - generic [ref=f177e187]:
+              - table [ref=f177e190]:
+                - rowgroup [ref=f177e202]:
+                  - row [ref=f177e203]:
+                    - 'columnheader "Ref #" [ref=f177e204]'
+                    - columnheader "Client" [ref=f177e208]
+                    - columnheader "Service" [ref=f177e212]
+                    - columnheader "Created by" [ref=f177e216]
+                    - columnheader [ref=f177e220]:
+                      - button "Created Date" [ref=f177e223] [cursor=pointer]
+                    - columnheader [ref=f177e225]:
+                      - button "Scheduled Date" [ref=f177e228] [cursor=pointer]
+                    - columnheader [ref=f177e230]:
+                      - button "Duration" [ref=f177e233] [cursor=pointer]
+                    - columnheader "Team member" [ref=f177e235]
+                    - columnheader "Price" [ref=f177e239]
+                    - columnheader "Status" [ref=f177e243]
+              - table [ref=f177e248]:
+                - rowgroup [ref=f177e260]:
+                  - row [ref=f177e261]:
+                    - cell [ref=f177e262]:
+                      - link "#F89566BD" [ref=f177e264] [cursor=pointer]:
+                        - /url: /sales/appointments-list/drawer/view-appointment/1319586691?resetAppointmentState=true
+                    - cell [ref=f177e266]:
+                      - link "Jane Doe" [ref=f177e268] [cursor=pointer]:
+                        - /url: /sales/appointments-list/drawer/clients/301298878
+                    - cell "Hair Color" [ref=f177e270]
+                    - cell "Fahad Asad" [ref=f177e273]
+                    - cell "4 Oct 2026, 08:57" [ref=f177e276]
+                    - cell "4 Oct 2026, 11:00" [ref=f177e279]
+                    - cell "1h 15min" [ref=f177e282]
+                    - cell "Fahad Asad" [ref=f177e285]
+                    - cell "KWD 57.000" [ref=f177e288]
+                    - cell "Booked" [ref=f177e291]
+                  - row [ref=f177e295]:
+                    - cell [ref=f177e296]:
+                      - link "#B2BEB92A" [ref=f177e298] [cursor=pointer]:
+                        - /url: /sales/appointments-list/drawer/view-appointment/1319586715?resetAppointmentState=true
+                    - cell [ref=f177e300]:
+                      - link "Jack Doe" [ref=f177e302] [cursor=pointer]:
+                        - /url: /sales/appointments-list/drawer/clients/301298884
+                    - cell "Blow Dry" [ref=f177e304]
+                    - cell "Fahad Asad" [ref=f177e307]
+                    - cell "4 Oct 2026, 08:57" [ref=f177e310]
+                    - cell "4 Oct 2026, 10:00" [ref=f177e313]
+                    - cell "35min" [ref=f177e316]
+                    - cell "Fahad Asad" [ref=f177e319]
+                    - cell "KWD 35.000" [ref=f177e322]
+                    - cell "Booked" [ref=f177e325]
+                  - row [ref=f177e329]:
+                    - cell [ref=f177e330]:
+                      - link "#20EC8788" [ref=f177e332] [cursor=pointer]:
+                        - /url: /sales/appointments-list/drawer/view-appointment/1319586688?resetAppointmentState=true
+                    - cell [ref=f177e334]:
+                      - link "John Doe" [ref=f177e336] [cursor=pointer]:
+                        - /url: /sales/appointments-list/drawer/clients/301298877
+                    - cell "Haircut" [ref=f177e338]
+                    - cell "Fahad Asad" [ref=f177e341]
+                    - cell "4 Oct 2026, 08:57" [ref=f177e344]
+                    - cell "4 Oct 2026, 09:00" [ref=f177e347]
+                    - cell "45min" [ref=f177e350]
+                    - cell "Fahad Asad" [ref=f177e353]
+                    - cell "KWD 40.000" [ref=f177e356]
+                    - cell "Booked" [ref=f177e359]
+          - generic [ref=f177e364]:
+            - generic [ref=f177e365]: Viewing results 1 to 3 of 3
+            - paragraph [ref=f177e367]: Viewing 1 - 3 of 3 results

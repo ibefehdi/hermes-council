@@ -1,0 +1,117 @@
+- generic [ref=f165e98]:
+  - generic [ref=f165e99]:
+    - link "Fresha" [ref=f165e101] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f165e102]:
+      - button [ref=f165e104] [cursor=pointer]:
+        - paragraph [ref=f165e106]: Continue setup
+      - button "Search" [ref=f165e108] [cursor=pointer]
+      - button "Performance insights" [ref=f165e110] [cursor=pointer]
+      - button "Notifications" [ref=f165e113] [cursor=pointer]:
+        - generic [ref=f165e114]: "4"
+      - link "Fresha Connect" [ref=f165e118] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f165e120] [cursor=pointer]:
+        - generic [ref=f165e121]: FA
+  - generic [ref=f165e123]:
+    - generic [ref=f165e127]:
+      - generic [ref=f165e128]:
+        - link [ref=f165e131] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f165e135] [cursor=pointer]:
+          - /url: /calendar?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working
+        - button [ref=f165e139] [cursor=pointer]
+        - button [ref=f165e143] [cursor=pointer]
+        - button [ref=f165e147] [cursor=pointer]
+        - button [ref=f165e151] [cursor=pointer]
+        - button [ref=f165e155] [cursor=pointer]
+        - button [ref=f165e159] [cursor=pointer]
+        - link [ref=f165e163] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f165e167] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f165e171] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f165e175] [cursor=pointer]
+    - generic [ref=f165e178]:
+      - generic [ref=f165e180]:
+        - generic [ref=f165e181]:
+          - button "Today" [ref=f165e182] [cursor=pointer]
+          - group [ref=f165e186]:
+            - button "Go to previous month" [ref=f165e187] [cursor=pointer]
+            - button "Sun, Oct 4" [ref=f165e192] [cursor=pointer]
+            - button "Go to next month" [ref=f165e196] [cursor=pointer]
+          - paragraph [ref=f165e201]: Button group
+          - button "Scheduled team" [ref=f165e202] [cursor=pointer]
+          - link "Visibility Filters" [ref=f165e209] [cursor=pointer]:
+            - /url: /calendar/drawer/visibility-filters?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working
+        - generic [ref=f165e214]:
+          - link "Calendar Settings" [ref=f165e217] [cursor=pointer]:
+            - /url: /calendar/drawer/settings?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working
+          - link "Waitlist" [ref=f165e223] [cursor=pointer]:
+            - /url: /calendar/drawer/waitlist?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working
+          - group [ref=f165e228]:
+            - button "Reset calendar to default view" [ref=f165e230] [cursor=pointer]
+            - button "Day" [ref=f165e235] [cursor=pointer]
+          - paragraph [ref=f165e240]: Button group
+          - button "Add" [ref=f165e241] [cursor=pointer]
+      - generic [ref=f165e251]:
+        - generic [ref=f165e253]:
+          - generic [ref=f165e254]: 00:00
+          - generic [ref=f165e256]: 01:00
+          - generic [ref=f165e258]: 02:00
+          - generic [ref=f165e260]: 03:00
+          - generic [ref=f165e262]: 04:00
+          - generic [ref=f165e264]: 05:00
+          - generic [ref=f165e266]: 06:00
+          - generic [ref=f165e268]: 07:00
+          - generic [ref=f165e270]: 08:00
+          - generic [ref=f165e272]: 09:00
+          - generic [ref=f165e274]: 10:00
+          - generic [ref=f165e276]: 11:00
+          - generic [ref=f165e278]: 12:00
+          - generic [ref=f165e280]: 13:00
+          - generic [ref=f165e282]: 14:00
+          - generic [ref=f165e284]: 15:00
+          - generic [ref=f165e286]: 16:00
+          - generic [ref=f165e288]: 17:00
+          - generic [ref=f165e290]: 18:00
+          - generic [ref=f165e292]: 19:00
+          - generic [ref=f165e294]: 20:00
+          - generic [ref=f165e296]: 21:00
+          - generic [ref=f165e298]: 22:00
+          - generic [ref=f165e300]: 23:00
+          - generic [ref=f165e302]: 10:12
+        - button
+        - button
+        - generic [ref=f165e304]:
+          - generic [ref=f165e305]:
+            - button "FA Fahad Asad" [ref=f165e309] [cursor=pointer]:
+              - generic [ref=f165e310]:
+                - generic [ref=f165e311]: FA
+                - paragraph [ref=f165e315]: Fahad Asad
+            - button "FA Fahad Asad" [ref=f165e320] [cursor=pointer]:
+              - generic [ref=f165e321]:
+                - generic [ref=f165e322]: FA
+                - paragraph [ref=f165e326]: Fahad Asad
+            - button "FA Fahad Asad" [ref=f165e331] [cursor=pointer]:
+              - generic [ref=f165e332]:
+                - generic [ref=f165e333]: FA
+                - paragraph [ref=f165e337]: Fahad Asad
+          - generic [ref=f165e344]:
+            - generic [ref=f165e345] [cursor=pointer]:
+              - generic [ref=f165e346]:
+                - generic [ref=f165e347]: 09:00 - 09:45
+                - strong [ref=f165e348]: John Doe
+              - generic [ref=f165e349]: Haircut
+            - generic [ref=f165e350] [cursor=pointer]:
+              - generic [ref=f165e351]:
+                - generic [ref=f165e352]: 10:00 - 10:35
+                - strong [ref=f165e353]: Jack Doe
+              - generic [ref=f165e354]: Blow Dry
+            - generic [ref=f165e355] [cursor=pointer]:
+              - generic [ref=f165e356]:
+                - generic [ref=f165e357]: 11:00 - 12:15
+                - strong [ref=f165e358]: Jane Doe
+              - generic [ref=f165e359]: Hair Color

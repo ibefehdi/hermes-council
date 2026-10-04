@@ -1,0 +1,79 @@
+- generic [ref=f226e12]:
+  - generic [ref=f226e13]:
+    - link "Fresha" [ref=f226e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f226e16]:
+      - button [ref=f226e18] [cursor=pointer]:
+        - paragraph [ref=f226e20]: Continue setup
+      - button "Search" [ref=f226e22] [cursor=pointer]
+      - button "Performance insights" [ref=f226e24] [cursor=pointer]
+      - button "Notifications" [ref=f226e27] [cursor=pointer]:
+        - generic [ref=f226e28]: "4"
+      - link "Fresha Connect" [ref=f226e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f226e34] [cursor=pointer]:
+        - generic [ref=f226e35]: FA
+  - generic [ref=f226e37]:
+    - generic [ref=f226e38]:
+      - generic [ref=f226e41]:
+        - generic [ref=f226e42]:
+          - link [ref=f226e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f226e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f226e53] [cursor=pointer]
+          - button [ref=f226e57] [cursor=pointer]
+          - button [ref=f226e61] [cursor=pointer]
+          - button [ref=f226e65] [cursor=pointer]
+          - button [ref=f226e69] [cursor=pointer]
+          - button [ref=f226e73] [cursor=pointer]
+          - link [ref=f226e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f226e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f226e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f226e89] [cursor=pointer]
+      - generic [ref=f226e92]:
+        - button "Collapse Navigation Menu" [ref=f226e94] [cursor=pointer]
+        - generic [ref=f226e100]:
+          - generic [ref=f226e101]:
+            - paragraph [ref=f226e102]: Catalog
+            - link [ref=f226e104] [cursor=pointer]:
+              - /url: /catalogue/services
+              - paragraph [ref=f226e105]: Service menu
+            - link [ref=f226e107] [cursor=pointer]:
+              - /url: /catalogue/packages
+              - paragraph [ref=f226e108]: Packages
+            - link [ref=f226e110] [cursor=pointer]:
+              - /url: /catalogue/products
+              - paragraph [ref=f226e111]: Products
+          - separator [ref=f226e113]
+          - generic [ref=f226e114]:
+            - paragraph [ref=f226e115]: Inventory
+            - link [ref=f226e117] [cursor=pointer]:
+              - /url: /catalogue/stocktakes
+              - paragraph [ref=f226e118]: Stocktakes
+            - link [ref=f226e120] [cursor=pointer]:
+              - /url: /catalogue/orders
+              - paragraph [ref=f226e121]: Stock orders
+            - link [ref=f226e123] [cursor=pointer]:
+              - /url: /catalogue/suppliers
+              - paragraph [ref=f226e124]: Suppliers
+    - generic [ref=f226e133]:
+      - generic [ref=f226e134]: Free to use
+      - generic [ref=f226e137]: Manage your inventory with Fresha product list
+      - generic [ref=f226e138]: "Manage your inventory and stock levels for easy ordering, tracking and selling:"
+      - generic [ref=f226e139]:
+        - generic [ref=f226e143]:
+          - text: Start with a single product or
+          - link "import many at once" [ref=f226e144] [cursor=pointer]:
+            - /url: /catalogue/products/import/:subview?
+        - generic [ref=f226e145]: Organize your list by adding brands and categories
+        - generic [ref=f226e149]: Keep quantity at the right level with low stock reminders
+        - generic [ref=f226e153]: Sell products online and during checkout at Point of Sale
+      - generic [ref=f226e157]:
+        - button "Start now" [ref=f226e158] [cursor=pointer]
+        - link "Learn more" [ref=f226e162] [cursor=pointer]:
+          - /url: https://www.fresha.com/help-center/knowledge-base/inventory/153-add-products-to-your-inventory

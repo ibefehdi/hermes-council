@@ -1,0 +1,115 @@
+- generic [ref=f67e12]:
+  - generic [ref=f67e13]:
+    - link "Fresha" [ref=f67e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f67e16]:
+      - button [ref=f67e18] [cursor=pointer]:
+        - paragraph [ref=f67e20]: Continue setup
+      - button "Search" [ref=f67e22] [cursor=pointer]
+      - button "Performance insights" [ref=f67e24] [cursor=pointer]
+      - button "Notifications" [ref=f67e27] [cursor=pointer]:
+        - generic [ref=f67e28]: "4"
+      - link "Fresha Connect" [ref=f67e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f67e37] [cursor=pointer]:
+        - generic [ref=f67e38]: FA
+  - generic [ref=f67e40]:
+    - generic [ref=f67e41]:
+      - generic [ref=f67e44]:
+        - generic [ref=f67e45]:
+          - link [ref=f67e48] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f67e52] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f67e56] [cursor=pointer]
+          - button [ref=f67e60] [cursor=pointer]
+          - button [ref=f67e64] [cursor=pointer]
+          - button [ref=f67e68] [cursor=pointer]
+          - button [ref=f67e72] [cursor=pointer]
+          - button [ref=f67e76] [cursor=pointer]
+          - link [ref=f67e80] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f67e84] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f67e88] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f67e92] [cursor=pointer]
+      - generic [ref=f67e95]:
+        - button "Collapse Navigation Menu" [ref=f67e97] [cursor=pointer]
+        - generic [ref=f67e104]:
+          - paragraph [ref=f67e105]: Team
+          - link [ref=f67e107] [cursor=pointer]:
+            - /url: /team/team-members
+            - paragraph [ref=f67e108]: Team members
+          - link [ref=f67e110] [cursor=pointer]:
+            - /url: /team/scheduled-shifts
+            - paragraph [ref=f67e111]: Scheduled shifts
+          - link [ref=f67e113] [cursor=pointer]:
+            - /url: /team/timesheets
+            - paragraph [ref=f67e114]: Timesheets
+          - link [ref=f67e116] [cursor=pointer]:
+            - /url: /team/payrun/overview
+            - paragraph [ref=f67e117]: Pay runs
+    - generic [ref=f67e123]:
+      - generic [ref=f67e125]:
+        - generic [ref=f67e127]:
+          - paragraph [ref=f67e128]: Team members
+          - generic [ref=f67e129]: "1"
+        - generic [ref=f67e131]:
+          - button "Options" [ref=f67e134] [cursor=pointer]
+          - button "Add" [ref=f67e139] [cursor=pointer]
+      - generic [ref=f67e143]:
+        - generic [ref=f67e146]:
+          - paragraph [ref=f67e149]:
+            - text: Activate your plan to ensure uninterrupted access after your free trial ends in
+            - strong [ref=f67e150]: 7 days
+          - button "Activate plan" [ref=f67e153] [cursor=pointer]
+        - generic [ref=f67e157]:
+          - generic [ref=f67e160]:
+            - generic [ref=f67e161]:
+              - generic [ref=f67e162]:
+                - generic [ref=f67e163]: Search
+                - textbox "Search" [ref=f67e168]:
+                  - /placeholder: Search team members
+              - button "Filters" [ref=f67e169] [cursor=pointer]
+            - button "Custom order" [ref=f67e178] [cursor=pointer]
+          - generic [ref=f67e184]:
+            - table [ref=f67e186]:
+              - rowgroup [ref=f67e193]:
+                - row [ref=f67e194]:
+                  - columnheader [ref=f67e195]:
+                    - generic [ref=f67e197] [cursor=pointer]:
+                      - checkbox
+                  - columnheader [ref=f67e198] [cursor=pointer]:
+                    - paragraph [ref=f67e201]: Name
+                  - columnheader [ref=f67e203]:
+                    - paragraph [ref=f67e206]: Contact
+                  - columnheader [ref=f67e207]:
+                    - paragraph [ref=f67e210]: Permission role
+                  - columnheader [ref=f67e211]
+            - table [ref=f67e212]:
+              - rowgroup [ref=f67e219]:
+                - row [ref=f67e220] [cursor=pointer]:
+                  - cell [ref=f67e221]:
+                    - generic [ref=f67e223]:
+                      - checkbox
+                  - cell "FA Fahad Asad" [ref=f67e224]:
+                    - generic [ref=f67e225]:
+                      - generic [ref=f67e226]: FA
+                      - generic [ref=f67e229]:
+                        - paragraph [ref=f67e230]: Fahad Asad
+                        - paragraph
+                  - cell [ref=f67e231]:
+                    - generic [ref=f67e233]:
+                      - link "fahad.asad2016@gmail.com" [ref=f67e234]:
+                        - /url: mailto:fahad.asad2016@gmail.com
+                      - link "+965 506 10221" [ref=f67e236]:
+                        - /url: tel:+965 506 10221
+                  - cell [ref=f67e238]:
+                    - paragraph [ref=f67e240]: Workspace owner
+                  - cell [ref=f67e241]:
+                    - button "Actions" [ref=f67e243]
+              - rowgroup [ref=f67e248]:
+                - row [ref=f67e249]:
+                  - cell [ref=f67e250]

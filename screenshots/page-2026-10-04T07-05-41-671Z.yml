@@ -1,0 +1,8 @@
+- generic [ref=f95e12]:
+  - generic [ref=f95e22]: "404"
+  - generic [ref=f95e24]:
+    - generic [ref=f95e25]:
+      - generic [ref=f95e26]: Something's missing
+      - generic [ref=f95e27]: The page is missing or you assembled the link incorrectly
+    - link "Go to home page" [ref=f95e29] [cursor=pointer]:
+      - /url: /

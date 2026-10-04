@@ -1,0 +1,131 @@
+- generic [ref=f4e12]:
+  - generic [ref=f4e13]:
+    - link "Fresha" [ref=f4e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f4e16]:
+      - button [ref=f4e18] [cursor=pointer]:
+        - paragraph [ref=f4e20]: Continue setup
+      - button "Search" [ref=f4e22] [cursor=pointer]
+      - button "Performance insights" [ref=f4e24] [cursor=pointer]
+      - button "Notifications" [ref=f4e27] [cursor=pointer]:
+        - generic [ref=f4e28]: "4"
+      - link "Fresha Connect" [ref=f4e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f4e34] [cursor=pointer]:
+        - generic [ref=f4e35]: FA
+  - generic [ref=f4e37]:
+    - generic [ref=f4e41]:
+      - generic [ref=f4e42]:
+        - link [ref=f4e45] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f4e49] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f4e53] [cursor=pointer]
+        - button [ref=f4e57] [cursor=pointer]
+        - button [ref=f4e61] [cursor=pointer]
+        - button [ref=f4e65] [cursor=pointer]
+        - button [ref=f4e69] [cursor=pointer]
+        - button [ref=f4e73] [cursor=pointer]
+        - link [ref=f4e77] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f4e81] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f4e85] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f4e89] [cursor=pointer]
+    - generic [ref=f4e97]:
+      - generic [ref=f4e99]:
+        - button "Back" [ref=f4e100] [cursor=pointer]
+        - navigation [ref=f4e105]:
+          - list [ref=f4e106]:
+            - listitem [ref=f4e107]:
+              - link "Workspace settings •" [ref=f4e108] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f4e109]:
+              - link "Business setup" [ref=f4e110] [cursor=pointer]:
+                - /url: /setup/business-setup
+      - generic [ref=f4e115]:
+        - paragraph [ref=f4e117]: Business setup
+        - list [ref=f4e118]:
+          - listitem [ref=f4e119]:
+            - list [ref=f4e120]:
+              - listitem [ref=f4e121] [cursor=pointer]:
+                - link [ref=f4e122]:
+                  - /url: /setup/business-setup/business-details
+                - generic [ref=f4e123]: Business details
+              - listitem [ref=f4e125] [cursor=pointer]:
+                - link [ref=f4e126]:
+                  - /url: /setup/business-setup/location-details
+                - generic [ref=f4e127]: Locations
+        - separator [ref=f4e129]
+        - list [ref=f4e130]:
+          - listitem [ref=f4e131]:
+            - list [ref=f4e132]:
+              - listitem [ref=f4e133] [cursor=pointer]:
+                - button [ref=f4e134]
+                - generic [ref=f4e135]: Service menu
+              - listitem [ref=f4e137] [cursor=pointer]:
+                - button [ref=f4e138]
+                - generic [ref=f4e139]: Product list
+              - listitem [ref=f4e141] [cursor=pointer]:
+                - button [ref=f4e142]
+                - generic [ref=f4e143]: Memberships
+              - listitem [ref=f4e145] [cursor=pointer]:
+                - button [ref=f4e146]
+                - generic [ref=f4e147]: Packages
+              - listitem [ref=f4e149] [cursor=pointer]:
+                - button [ref=f4e150]
+                - generic [ref=f4e151]: Clients list
+      - generic [ref=f4e154]:
+        - generic [ref=f4e156]:
+          - paragraph [ref=f4e158]: Business details
+          - paragraph [ref=f4e159]:
+            - text: Set your business name, tax and language preferences, and manage external links.
+            - link "Learn more" [ref=f4e160] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/workspace-settings/101236-update-your-business-details
+            - text: .
+        - generic [ref=f4e163]:
+          - generic [ref=f4e164]:
+            - heading "Business Info" [level=2] [ref=f4e166]
+            - button "Edit" [ref=f4e167] [cursor=pointer]
+          - generic [ref=f4e171]:
+            - generic [ref=f4e173]:
+              - paragraph [ref=f4e174]: Business name
+              - paragraph [ref=f4e175]: Test Salon
+            - generic [ref=f4e177]:
+              - paragraph [ref=f4e178]: Country
+              - paragraph [ref=f4e179]: Kuwait
+            - generic [ref=f4e181]:
+              - paragraph [ref=f4e182]: Currency
+              - paragraph [ref=f4e183]: KWD
+            - generic [ref=f4e185]:
+              - paragraph [ref=f4e186]: Tax calculation
+              - paragraph [ref=f4e187]: Retail prices include tax
+            - generic [ref=f4e189]:
+              - paragraph [ref=f4e190]: Team default language
+              - paragraph [ref=f4e191]: 🇺🇸 English (US)
+            - generic [ref=f4e193]:
+              - paragraph [ref=f4e194]: Client default language
+              - paragraph [ref=f4e195]: 🇺🇸 English (US)
+          - separator [ref=f4e196]
+          - heading "External links" [level=2] [ref=f4e199]
+          - generic [ref=f4e200]:
+            - generic [ref=f4e202]:
+              - paragraph [ref=f4e203]: Facebook
+              - paragraph [ref=f4e204]:
+                - link "Add" [ref=f4e205] [cursor=pointer]:
+                  - /url: /setup/business-setup/business-details/edit/?field=facebookPage
+            - generic [ref=f4e207]:
+              - paragraph [ref=f4e208]: X (Twitter)
+              - paragraph [ref=f4e209]:
+                - link "Add" [ref=f4e210] [cursor=pointer]:
+                  - /url: /setup/business-setup/business-details/edit/?field=twitterPage
+            - generic [ref=f4e212]:
+              - paragraph [ref=f4e213]: Instagram
+              - paragraph [ref=f4e214]:
+                - link "Add" [ref=f4e215] [cursor=pointer]:
+                  - /url: /setup/business-setup/business-details/edit/?field=instagramPage
+            - generic [ref=f4e217]:
+              - paragraph [ref=f4e218]: Website
+              - paragraph [ref=f4e219]: https://ibefehdi.com

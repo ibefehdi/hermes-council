@@ -1,0 +1,74 @@
+- generic [ref=f210e12]:
+  - generic [ref=f210e13]:
+    - link "Fresha" [ref=f210e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f210e16]:
+      - button [ref=f210e18] [cursor=pointer]:
+        - paragraph [ref=f210e20]: Continue setup
+      - button "Search" [ref=f210e22] [cursor=pointer]
+      - button "Performance insights" [ref=f210e24] [cursor=pointer]
+      - button "Notifications" [ref=f210e27] [cursor=pointer]:
+        - generic [ref=f210e28]: "4"
+      - link "Fresha Connect" [ref=f210e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f210e34] [cursor=pointer]:
+        - generic [ref=f210e35]: FA
+  - generic [ref=f210e37]:
+    - generic [ref=f210e38]:
+      - generic [ref=f210e41]:
+        - generic [ref=f210e42]:
+          - link [ref=f210e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f210e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f210e53] [cursor=pointer]
+          - button [ref=f210e57] [cursor=pointer]
+          - button [ref=f210e61] [cursor=pointer]
+          - button [ref=f210e65] [cursor=pointer]
+          - button [ref=f210e69] [cursor=pointer]
+          - button [ref=f210e73] [cursor=pointer]
+          - link [ref=f210e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f210e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f210e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f210e89] [cursor=pointer]
+      - generic [ref=f210e92]:
+        - button "Collapse Navigation Menu" [ref=f210e94] [cursor=pointer]
+        - generic [ref=f210e100]:
+          - generic [ref=f210e101]:
+            - paragraph [ref=f210e102]: Clients
+            - link [ref=f210e104] [cursor=pointer]:
+              - /url: /clients/list
+              - paragraph [ref=f210e105]: Clients list
+            - link [ref=f210e107] [cursor=pointer]:
+              - /url: /clients/segments
+              - paragraph [ref=f210e108]: Client segments
+          - separator [ref=f210e110]
+          - generic [ref=f210e111]:
+            - paragraph [ref=f210e112]: Engage
+            - link [ref=f210e114] [cursor=pointer]:
+              - /url: /clients/loyalty
+              - paragraph [ref=f210e115]: Client loyalty
+            - link [ref=f210e117] [cursor=pointer]:
+              - /url: /clients/online-reputation
+              - paragraph [ref=f210e118]: Online reputation
+    - generic [ref=f210e127]:
+      - generic [ref=f210e130]:
+        - img "Loyalty add-on" [ref=f210e132]
+        - paragraph [ref=f210e133]: Client Loyalty add-on
+      - generic [ref=f210e134]: Turn all clients into regulars
+      - generic [ref=f210e135]: Watch your sales skyrocket with a custom loyalty program - encouraging repeat visits and larger purchases.
+      - generic [ref=f210e136]:
+        - generic [ref=f210e137]: Offer the ultimate loyalty experience with points, tiers and referrals
+        - generic [ref=f210e141]: Reward your clients with exclusive offers, discounts and incentives to celebrate their loyalty
+        - generic [ref=f210e145]: Allow clients to easily track their progress and redeem rewards online
+      - generic [ref=f210e150]:
+        - generic [ref=f210e151]: KWD 32.95 per location, per month
+        - paragraph [ref=f210e153]: Try it FREE for 7 days!
+      - generic [ref=f210e154]:
+        - button "Start now" [ref=f210e155] [cursor=pointer]
+        - link "Learn more" [ref=f210e159] [cursor=pointer]:
+          - /url: https://www.fresha.com/help-center/knowledge-base/clients/101619-client-loyalty-overview

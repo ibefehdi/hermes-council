@@ -1,0 +1,74 @@
+- generic [ref=f146e12]:
+  - generic [ref=f146e13]:
+    - link "Fresha" [ref=f146e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - button "Open user menu" [ref=f146e18] [cursor=pointer]:
+      - generic [ref=f146e19]: FA
+  - generic [ref=f146e23]:
+    - list [ref=f146e28]:
+      - listitem [ref=f146e29] [cursor=pointer]:
+        - button [ref=f146e30]
+        - generic [ref=f146e31]: Back
+      - listitem [ref=f146e33]:
+        - paragraph [ref=f146e36]: Your account
+        - list [ref=f146e37]:
+          - listitem [ref=f146e38] [cursor=pointer]:
+            - button [ref=f146e39]
+            - generic [ref=f146e40]: My profile
+          - listitem [ref=f146e41] [cursor=pointer]:
+            - button [ref=f146e42]
+            - generic [ref=f146e43]: Portfolio
+          - listitem [ref=f146e45] [cursor=pointer]:
+            - button [ref=f146e46]
+            - generic [ref=f146e47]: Reviews
+          - listitem [ref=f146e49] [cursor=pointer]:
+            - button [ref=f146e50]
+            - generic [ref=f146e51]: Pay runs
+          - listitem [ref=f146e53] [cursor=pointer]:
+            - button [ref=f146e54]
+            - generic [ref=f146e55]: Workspaces
+          - listitem [ref=f146e56] [cursor=pointer]:
+            - button [ref=f146e57]
+            - generic [ref=f146e58]: Personal settings
+    - generic [ref=f146e65]:
+      - generic [ref=f146e67]:
+        - generic [ref=f146e68]:
+          - button "Back" [ref=f146e69] [cursor=pointer]
+          - navigation [ref=f146e74]:
+            - list [ref=f146e75]:
+              - listitem [ref=f146e76]:
+                - link "Account settings •" [ref=f146e77] [cursor=pointer]:
+                  - /url: /user-account/personal-settings
+              - listitem [ref=f146e78]:
+                - link "Personal info" [ref=f146e79] [cursor=pointer]:
+                  - /url: /user-account/personal-settings/personal-info
+        - generic [ref=f146e81]:
+          - paragraph [ref=f146e83]: Personal info
+          - paragraph [ref=f146e84]:
+            - text: Customize your personal details and how we can contact you.
+            - link "Learn more." [ref=f146e85] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/personal-account
+      - generic [ref=f146e87]:
+        - generic [ref=f146e89]:
+          - generic [ref=f146e90]:
+            - paragraph [ref=f146e93]: Contact
+            - button "Edit" [ref=f146e95] [cursor=pointer]
+          - generic [ref=f146e100]:
+            - generic [ref=f146e101]:
+              - paragraph [ref=f146e102]: Legal Name
+              - paragraph [ref=f146e103]: Fahad Asad
+            - generic [ref=f146e104]:
+              - paragraph [ref=f146e105]: Mobile number
+              - paragraph [ref=f146e106]: +965 ******221
+            - generic [ref=f146e107]:
+              - paragraph [ref=f146e108]: Email address
+              - paragraph [ref=f146e109]: f************6@gmail.com
+        - generic [ref=f146e111]:
+          - generic [ref=f146e113]:
+            - paragraph [ref=f146e115]: Online profile visibility
+            - paragraph [ref=f146e116]: Hide your professional profile on the marketplace.
+          - button "Hide profile" [ref=f146e119] [cursor=pointer]
+        - generic [ref=f146e126]:
+          - paragraph [ref=f146e127]: Which info can be edited?
+          - paragraph [ref=f146e128]: Details Fresha uses to verify your identity can't be changed. Contact info and some personal details can be edited.

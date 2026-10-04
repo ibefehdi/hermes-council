@@ -1,0 +1,123 @@
+- generic [ref=f12e12]:
+  - generic [ref=f12e13]:
+    - link "Fresha" [ref=f12e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f12e16]:
+      - button [ref=f12e18] [cursor=pointer]:
+        - paragraph [ref=f12e20]: Continue setup
+      - button "Search" [ref=f12e22] [cursor=pointer]
+      - button "Performance insights" [ref=f12e24] [cursor=pointer]
+      - button "Notifications" [ref=f12e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f12e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f12e31] [cursor=pointer]:
+        - generic [ref=f12e32]: FA
+  - generic [ref=f12e34]:
+    - generic [ref=f12e35]:
+      - generic [ref=f12e38]:
+        - generic [ref=f12e39]:
+          - link [ref=f12e42] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f12e46] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f12e50] [cursor=pointer]
+          - button [ref=f12e54] [cursor=pointer]
+          - button [ref=f12e58] [cursor=pointer]
+          - button [ref=f12e62] [cursor=pointer]
+          - button [ref=f12e66] [cursor=pointer]
+          - button [ref=f12e70] [cursor=pointer]
+          - link [ref=f12e74] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f12e78] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f12e82] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f12e86] [cursor=pointer]
+      - generic [ref=f12e89]:
+        - button "Collapse Navigation Menu" [ref=f12e91] [cursor=pointer]
+        - generic [ref=f12e97]:
+          - generic [ref=f12e98]:
+            - paragraph [ref=f12e99]: Sales
+            - link [ref=f12e101] [cursor=pointer]:
+              - /url: /sales/daily-sales
+              - paragraph [ref=f12e102]: Daily sales summary
+            - link [ref=f12e104] [cursor=pointer]:
+              - /url: /sales/register
+              - paragraph [ref=f12e105]: Register
+            - link [ref=f12e107] [cursor=pointer]:
+              - /url: /sales/appointments-list
+              - paragraph [ref=f12e108]: Appointments
+            - link [ref=f12e110] [cursor=pointer]:
+              - /url: /sales/sales-list
+              - paragraph [ref=f12e111]: Sales
+            - link [ref=f12e113] [cursor=pointer]:
+              - /url: /sales/payment-transactions
+              - paragraph [ref=f12e114]: Payments
+          - separator [ref=f12e116]
+          - generic [ref=f12e117]:
+            - paragraph [ref=f12e118]: Sold items
+            - link [ref=f12e120] [cursor=pointer]:
+              - /url: /sales/gift-cards
+              - paragraph [ref=f12e121]: Gift cards sold
+            - link [ref=f12e123] [cursor=pointer]:
+              - /url: /sales/packages-sold
+              - paragraph [ref=f12e124]: Packages sold
+            - link [ref=f12e126] [cursor=pointer]:
+              - /url: /sales/paid-plans
+              - paragraph [ref=f12e127]: Memberships sold
+    - generic [ref=f12e133]:
+      - generic [ref=f12e135]:
+        - generic [ref=f12e136]:
+          - paragraph [ref=f12e138]: Sales
+          - paragraph [ref=f12e139]:
+            - text: View, filter and export the history of your sales.
+            - link "Learn more" [ref=f12e140] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/sales
+        - generic [ref=f12e142]:
+          - button "Options" [ref=f12e145] [cursor=pointer]
+          - button "Add new" [ref=f12e150] [cursor=pointer]
+      - generic [ref=f12e155]:
+        - tablist [ref=f12e160]:
+          - tab "Sales" [selected] [ref=f12e161] [cursor=pointer]
+          - tab "Drafts" [ref=f12e163] [cursor=pointer]
+        - generic [ref=f12e167]:
+          - generic [ref=f12e169]:
+            - generic [ref=f12e170]:
+              - generic [ref=f12e171]: Search
+              - textbox "Search" [ref=f12e176]:
+                - /placeholder: Search by Sale or Client
+            - button "Today" [ref=f12e177] [cursor=pointer]
+            - button "Filters" [ref=f12e182] [cursor=pointer]
+          - button "Sort by" [ref=f12e191] [cursor=pointer]
+        - generic [ref=f12e196]:
+          - region [ref=f12e197]:
+            - generic [ref=f12e198]:
+              - table [ref=f12e201]:
+                - rowgroup [ref=f12e209]:
+                  - row [ref=f12e210]:
+                    - columnheader [ref=f12e211]:
+                      - 'button "Sale #" [ref=f12e214] [cursor=pointer]'
+                    - columnheader [ref=f12e216]:
+                      - button "Client" [ref=f12e219] [cursor=pointer]
+                    - columnheader "Status" [ref=f12e221]
+                    - columnheader [ref=f12e225]:
+                      - button "Sale date" [ref=f12e228] [cursor=pointer]
+                    - columnheader [ref=f12e230]:
+                      - button "Tips" [ref=f12e233] [cursor=pointer]
+                    - columnheader [ref=f12e235]:
+                      - button "Gross total" [ref=f12e238] [cursor=pointer]
+              - table [ref=f12e241]:
+                - rowgroup [ref=f12e249]:
+                  - row [ref=f12e250]:
+                    - cell [ref=f12e251]:
+                      - link "1" [ref=f12e253] [cursor=pointer]:
+                        - /url: /sales/sales-list/drawer/invoice/567884984
+                    - cell "Walk-In" [ref=f12e255]
+                    - cell "Completed" [ref=f12e258]
+                    - cell "4 Oct 2026, 09:02" [ref=f12e262]
+                    - cell "KWD 0.000" [ref=f12e265]
+                    - cell "KWD 190.000" [ref=f12e268]
+          - generic [ref=f12e272]:
+            - generic [ref=f12e273]: Viewing results 1 to 1 of 1
+            - paragraph [ref=f12e275]: Viewing 1 - 1 of 1 results

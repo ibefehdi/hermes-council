@@ -1,0 +1,345 @@
+- generic [ref=f17e1]:
+  - generic [ref=f17e12]:
+    - generic [ref=f17e13]:
+      - link "Fresha" [ref=f17e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f17e16]:
+        - button [ref=f17e18] [cursor=pointer]:
+          - paragraph [ref=f17e20]: Continue setup
+        - button "Search" [ref=f17e22] [cursor=pointer]
+        - button "Performance insights" [ref=f17e24] [cursor=pointer]
+        - button "Notifications" [ref=f17e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f17e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f17e31] [cursor=pointer]:
+          - generic [ref=f17e32]: FA
+    - generic [ref=f17e34]:
+      - generic [ref=f17e35]:
+        - generic [ref=f17e38]:
+          - generic [ref=f17e39]:
+            - link [ref=f17e42] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f17e46] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f17e50] [cursor=pointer]
+            - button [ref=f17e54] [cursor=pointer]
+            - button [ref=f17e58] [cursor=pointer]
+            - button [ref=f17e62] [cursor=pointer]
+            - button [ref=f17e66] [cursor=pointer]
+            - button [ref=f17e70] [cursor=pointer]
+            - link [ref=f17e74] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f17e78] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f17e82] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f17e86] [cursor=pointer]
+        - generic [ref=f17e89]:
+          - button "Collapse Navigation Menu" [ref=f17e91] [cursor=pointer]
+          - generic [ref=f17e97]:
+            - generic [ref=f17e98]:
+              - paragraph [ref=f17e99]: Clients
+              - link [ref=f17e101] [cursor=pointer]:
+                - /url: /clients/list
+                - paragraph [ref=f17e102]: Clients list
+              - link [ref=f17e104] [cursor=pointer]:
+                - /url: /clients/segments
+                - paragraph [ref=f17e105]: Client segments
+            - separator [ref=f17e107]
+            - generic [ref=f17e108]:
+              - paragraph [ref=f17e109]: Engage
+              - link [ref=f17e111] [cursor=pointer]:
+                - /url: /clients/loyalty
+                - paragraph [ref=f17e112]: Client loyalty
+              - link [ref=f17e114] [cursor=pointer]:
+                - /url: /clients/online-reputation
+                - paragraph [ref=f17e115]: Online reputation
+      - generic [ref=f17e732]:
+        - generic [ref=f17e734]:
+          - generic [ref=f17e735]:
+            - generic [ref=f17e736]:
+              - heading "Clients list" [level=1] [ref=f17e737]
+              - generic [ref=f17e738]: "4"
+            - paragraph [ref=f17e739]:
+              - text: View, add, edit and delete your client's details.
+              - link "Learn more" [ref=f17e740] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/clients/320-create-client-profiles
+          - generic [ref=f17e742]:
+            - button "Options" [ref=f17e745] [cursor=pointer]
+            - button "Add" [ref=f17e750] [cursor=pointer]
+        - generic [ref=f17e757]:
+          - generic [ref=f17e758]:
+            - generic [ref=f17e759]:
+              - generic [ref=f17e760]:
+                - paragraph [ref=f17e761]: Import your client list
+                - paragraph [ref=f17e762]: Takes a few minutes and prevents new client fees for existing clients who book online
+              - generic [ref=f17e763]:
+                - button "Start import" [ref=f17e764] [cursor=pointer]
+                - link "Learn more" [ref=f17e768] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/clients/101243-import-your-existing-client-list
+            - img "Import clients" [ref=f17e772]
+          - button "Close" [ref=f17e773] [cursor=pointer]
+        - generic [ref=f17e778]:
+          - generic [ref=f17e780]:
+            - generic [ref=f17e781]:
+              - generic [ref=f17e782]:
+                - generic [ref=f17e783]: Search
+                - textbox "Search" [ref=f17e788]:
+                  - /placeholder: Name, email or phone
+              - button "Filters" [ref=f17e789] [cursor=pointer]
+            - button "Created at (newest first)" [ref=f17e798] [cursor=pointer]
+          - region [ref=f17e803]:
+            - generic [ref=f17e804]:
+              - table [ref=f17e807]:
+                - rowgroup [ref=f17e815]:
+                  - row [ref=f17e816]:
+                    - columnheader "selectAll selectAll" [ref=f17e817]:
+                      - generic [ref=f17e819] [cursor=pointer]:
+                        - paragraph [ref=f17e822]: selectAll
+                        - checkbox "selectAll" [ref=f17e823]
+                    - columnheader [ref=f17e824]:
+                      - button "Client name" [ref=f17e827] [cursor=pointer]
+                    - columnheader "Mobile number" [ref=f17e829]
+                    - columnheader [ref=f17e833]:
+                      - button "Reviews" [ref=f17e836] [cursor=pointer]
+                    - columnheader [ref=f17e838]:
+                      - button "Sales" [ref=f17e841] [cursor=pointer]
+                    - columnheader [ref=f17e843]:
+                      - button "Created at" [ref=f17e846] [cursor=pointer]
+              - table [ref=f17e849]:
+                - rowgroup [ref=f17e857]:
+                  - button [ref=f17e1134] [cursor=pointer]:
+                    - cell "select-row-301303785 select-row-301303785" [ref=f17e1135]:
+                      - generic [ref=f17e1136]:
+                        - paragraph [ref=f17e1139]: select-row-301303785
+                        - checkbox "select-row-301303785" [ref=f17e1140]
+                    - cell "C COUNCIL-TEST Client1 council-test+1@example.com" [ref=f17e1141]:
+                      - generic [ref=f17e1142]:
+                        - generic [ref=f17e1143]: C
+                        - generic [ref=f17e1146]:
+                          - paragraph [ref=f17e1147]: COUNCIL-TEST Client1
+                          - paragraph [ref=f17e1148]: council-test+1@example.com
+                    - cell [ref=f17e1149]:
+                      - paragraph [ref=f17e1150]: "-"
+                    - cell [ref=f17e1151]:
+                      - paragraph [ref=f17e1152]: "-"
+                    - cell "KWD 0" [ref=f17e1153]:
+                      - paragraph [ref=f17e1154]:
+                        - generic [ref=f17e1155]: KWD 0
+                    - cell [ref=f17e1156]:
+                      - paragraph [ref=f17e1157]: Oct 4, 2026
+                  - button [ref=f17e1158] [cursor=pointer]:
+                    - cell "select-row-301298884 select-row-301298884" [ref=f17e1159]:
+                      - generic [ref=f17e1160]:
+                        - paragraph [ref=f17e1163]: select-row-301298884
+                        - checkbox "select-row-301298884" [ref=f17e1164]
+                    - cell "J Jack Doe jack@example.com" [ref=f17e1165]:
+                      - generic [ref=f17e1166]:
+                        - generic [ref=f17e1167]: J
+                        - generic [ref=f17e1170]:
+                          - paragraph [ref=f17e1171]: Jack Doe
+                          - paragraph [ref=f17e1172]: jack@example.com
+                    - cell [ref=f17e1173]:
+                      - paragraph [ref=f17e1174]: "-"
+                    - cell [ref=f17e1175]:
+                      - paragraph [ref=f17e1176]: "-"
+                    - cell "KWD 0" [ref=f17e1177]:
+                      - paragraph [ref=f17e1178]:
+                        - generic [ref=f17e1179]: KWD 0
+                    - cell [ref=f17e1180]:
+                      - paragraph [ref=f17e1181]: Oct 4, 2026
+                  - button [ref=f17e1182] [cursor=pointer]:
+                    - cell "select-row-301298878 select-row-301298878" [ref=f17e1183]:
+                      - generic [ref=f17e1184]:
+                        - paragraph [ref=f17e1187]: select-row-301298878
+                        - checkbox "select-row-301298878" [ref=f17e1188]
+                    - cell "J Jane Doe jane@example.com" [ref=f17e1189]:
+                      - generic [ref=f17e1190]:
+                        - generic [ref=f17e1191]: J
+                        - generic [ref=f17e1194]:
+                          - paragraph [ref=f17e1195]: Jane Doe
+                          - paragraph [ref=f17e1196]: jane@example.com
+                    - cell [ref=f17e1197]:
+                      - paragraph [ref=f17e1198]: "-"
+                    - cell [ref=f17e1199]:
+                      - paragraph [ref=f17e1200]: "-"
+                    - cell "KWD 0" [ref=f17e1201]:
+                      - paragraph [ref=f17e1202]:
+                        - generic [ref=f17e1203]: KWD 0
+                    - cell [ref=f17e1204]:
+                      - paragraph [ref=f17e1205]: Oct 4, 2026
+                  - button [ref=f17e1206] [cursor=pointer]:
+                    - cell "select-row-301298877 select-row-301298877" [ref=f17e1207]:
+                      - generic [ref=f17e1208]:
+                        - paragraph [ref=f17e1211]: select-row-301298877
+                        - checkbox "select-row-301298877" [ref=f17e1212]
+                    - cell "J John Doe john@example.com" [ref=f17e1213]:
+                      - generic [ref=f17e1214]:
+                        - generic [ref=f17e1215]: J
+                        - generic [ref=f17e1218]:
+                          - paragraph [ref=f17e1219]: John Doe
+                          - paragraph [ref=f17e1220]: john@example.com
+                    - cell [ref=f17e1221]:
+                      - paragraph [ref=f17e1222]: "-"
+                    - cell [ref=f17e1223]:
+                      - paragraph [ref=f17e1224]: "-"
+                    - cell "KWD 0" [ref=f17e1225]:
+                      - paragraph [ref=f17e1226]:
+                        - generic [ref=f17e1227]: KWD 0
+                    - cell [ref=f17e1228]:
+                      - paragraph [ref=f17e1229]: Oct 4, 2026
+          - generic [ref=f17e1231]:
+            - generic [ref=f17e1232]: Viewing results 1 to 4 of 4
+            - paragraph [ref=f17e1234]: Viewing 1 - 4 of 4 results
+  - dialog [ref=f17e1235]:
+    - generic [ref=f17e1236]:
+      - button "Close Drawer" [ref=f17e1238] [cursor=pointer]
+      - generic [ref=f17e1244]:
+        - generic [ref=f17e1247]:
+          - generic [ref=f17e1352]:
+            - generic [ref=f17e1353]: J
+            - paragraph [ref=f17e1357]: Jack Doe
+            - paragraph [ref=f17e1359]:
+              - button "jack@example.com" [ref=f17e1360] [cursor=pointer]
+            - generic [ref=f17e1362]:
+              - button "First visit" [ref=f17e1363] [cursor=pointer]
+              - button "Add tag" [ref=f17e1366] [cursor=pointer]
+          - generic [ref=f17e1256]:
+            - button "Actions" [ref=f17e1258] [cursor=pointer]
+            - button "Book now" [ref=f17e1264] [cursor=pointer]
+        - separator [ref=f17e1268]
+        - generic [ref=f17e1370]:
+          - paragraph [ref=f17e1373]:
+            - link "Add pronouns" [ref=f17e1374] [cursor=pointer]:
+              - /url: /clients/list/301298884/edit?focus=pronoun
+          - paragraph [ref=f17e1377]:
+            - link "Add date of birth" [ref=f17e1378] [cursor=pointer]:
+              - /url: /clients/list/301298884/edit?focus=birthday
+          - paragraph [ref=f17e1382]: Created Oct 4, 2026
+        - list [ref=f17e1282]:
+          - listitem [ref=f17e1283]:
+            - list [ref=f17e1284]:
+              - listitem [ref=f17e1285] [cursor=pointer]:
+                - button [ref=f17e1286]
+                - paragraph [ref=f17e1289]: Overview
+              - listitem [ref=f17e1290] [cursor=pointer]:
+                - button [active] [ref=f17e1291]
+                - paragraph [ref=f17e1294]: Appointments
+                - generic: "2"
+              - listitem [ref=f17e1295] [cursor=pointer]:
+                - button [ref=f17e1296]
+                - paragraph [ref=f17e1299]: Sales
+              - listitem [ref=f17e1300] [cursor=pointer]:
+                - button [ref=f17e1301]
+                - paragraph [ref=f17e1304]: Client details
+              - listitem [ref=f17e1305] [cursor=pointer]:
+                - button [ref=f17e1306]
+                - paragraph [ref=f17e1309]: Items
+              - listitem [ref=f17e1310]:
+                - generic [ref=f17e1311] [cursor=pointer]:
+                  - button [ref=f17e1312]
+                  - generic [ref=f17e1313]: Records
+              - listitem [ref=f17e1315] [cursor=pointer]:
+                - button [ref=f17e1316]
+                - paragraph [ref=f17e1319]: Wallet
+              - listitem [ref=f17e1320] [cursor=pointer]:
+                - button [ref=f17e1321]
+                - paragraph [ref=f17e1324]: Loyalty
+              - listitem [ref=f17e1325] [cursor=pointer]:
+                - button [ref=f17e1326]
+                - paragraph [ref=f17e1329]: Reviews
+      - generic [ref=f17e1523]:
+        - generic: Appointments
+        - heading "Appointments" [level=1] [ref=f17e1530]
+        - generic [ref=f17e1532]:
+          - generic [ref=f17e1534]:
+            - tablist [ref=f17e1536]:
+              - tab "All" [selected] [ref=f17e1537] [cursor=pointer]
+              - tab "Booked" [ref=f17e1539] [cursor=pointer]
+              - tab "Confirmed" [ref=f17e1541] [cursor=pointer]
+            - tab "More" [ref=f17e1544] [cursor=pointer]
+          - tabpanel "All" [ref=f17e1546]:
+            - generic [ref=f17e1547]:
+              - list [ref=f17e1549]:
+                - listitem [ref=f17e1550]:
+                  - generic [ref=f17e1551]: Upcoming
+                  - list [ref=f17e1552]:
+                    - listitem [ref=f17e1553]:
+                      - generic [ref=f17e1557]:
+                        - button [ref=f17e1558] [cursor=pointer]
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - paragraph: Appointment
+                                    - generic: Booked
+                                  - generic:
+                                    - paragraph: Tue, Oct 6, 14:00
+                                    - generic:
+                                      - paragraph: •
+                                      - paragraph: Test Salon
+                                - generic:
+                                  - generic:
+                                    - generic: "1"
+                                    - generic:
+                                      - generic:
+                                        - generic:
+                                          - paragraph: Balayage
+                                          - paragraph: KWD 150
+                                        - generic:
+                                          - paragraph: 14:00
+                                          - paragraph: •
+                                          - paragraph: 2 hr, 30 min
+                                          - paragraph: •
+                                          - paragraph: Fahad Asad
+                                  - generic:
+                                    - generic: "2"
+                                    - generic:
+                                      - generic:
+                                        - generic:
+                                          - paragraph: Haircut
+                                          - paragraph: KWD 40
+                                        - generic:
+                                          - paragraph: 16:30
+                                          - paragraph: •
+                                          - paragraph: 45 min
+                                          - paragraph: •
+                                          - paragraph: Fahad Asad
+                                - button "Checkout" [ref=f17e1559] [cursor=pointer]
+              - list [ref=f17e1563]:
+                - listitem [ref=f17e1564]:
+                  - generic [ref=f17e1565]: October
+                  - list [ref=f17e1566]:
+                    - listitem [ref=f17e1567]:
+                      - generic [ref=f17e1571]:
+                        - button [ref=f17e1572] [cursor=pointer]
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - paragraph: Appointment
+                                    - generic: Booked
+                                  - generic:
+                                    - paragraph: Sun, Oct 4, 10:00
+                                    - generic:
+                                      - paragraph: •
+                                      - paragraph: Test Salon
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - generic:
+                                          - paragraph: Blow Dry
+                                          - paragraph: KWD 35
+                                        - generic:
+                                          - paragraph: 10:00
+                                          - paragraph: •
+                                          - paragraph: 35 min
+                                          - paragraph: •
+                                          - paragraph: Fahad Asad
+                                - button "Checkout" [ref=f17e1573] [cursor=pointer]

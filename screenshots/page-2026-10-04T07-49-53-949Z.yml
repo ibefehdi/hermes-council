@@ -1,0 +1,235 @@
+- generic [ref=f62e12]:
+  - generic [ref=f62e13]:
+    - link "Fresha" [ref=f62e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f62e16]:
+      - button [ref=f62e18] [cursor=pointer]:
+        - paragraph [ref=f62e20]: Continue setup
+      - button "Search" [ref=f62e22] [cursor=pointer]
+      - button "Performance insights" [ref=f62e24] [cursor=pointer]
+      - button "Notifications" [ref=f62e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f62e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f62e31] [cursor=pointer]:
+        - generic [ref=f62e32]: FA
+  - generic [ref=f62e34]:
+    - generic [ref=f62e38]:
+      - generic [ref=f62e39]:
+        - link [ref=f62e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f62e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f62e50] [cursor=pointer]
+        - button [ref=f62e54] [cursor=pointer]
+        - button [ref=f62e58] [cursor=pointer]
+        - button [ref=f62e62] [cursor=pointer]
+        - button [ref=f62e66] [cursor=pointer]
+        - button [ref=f62e70] [cursor=pointer]
+        - link [ref=f62e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f62e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f62e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f62e86] [cursor=pointer]
+    - generic [ref=f62e464]:
+      - generic [ref=f62e467]:
+        - heading "Fresha add-ons" [level=1] [ref=f62e469]
+        - paragraph [ref=f62e470]: Take your business to the next level with Fresha add-ons.
+      - tablist [ref=f62e475]:
+        - tab "Add-ons" [selected] [ref=f62e476] [cursor=pointer]
+        - tab "Integrations" [ref=f62e478] [cursor=pointer]
+      - generic [ref=f62e480]:
+        - generic [ref=f62e483]:
+          - generic [ref=f62e486]:
+            - generic [ref=f62e487]:
+              - generic [ref=f62e488]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Payments"
+              - generic [ref=f62e489]:
+                - paragraph [ref=f62e490]: Payments
+                - paragraph [ref=f62e491]: Get paid by clients online and in-store with low cost, safe and simple payments integrated directly to your workspace.
+            - button "View" [ref=f62e493] [cursor=pointer]
+          - generic [ref=f62e499]:
+            - generic [ref=f62e500]:
+              - generic [ref=f62e501]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Premium Support"
+                - generic [ref=f62e502]: On free trial
+              - generic [ref=f62e504]:
+                - paragraph [ref=f62e505]: Premium Support
+                - paragraph [ref=f62e506]: Get the most out of the Fresha platform and it's features with help from our experienced business support specialists.
+            - button "View" [ref=f62e508] [cursor=pointer]
+          - generic [ref=f62e514]:
+            - generic [ref=f62e515]:
+              - generic [ref=f62e516]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Insights"
+              - generic [ref=f62e517]:
+                - paragraph [ref=f62e518]: Insights
+                - paragraph [ref=f62e519]: Unlock additional reports and create your own unique reports which you can share with your team
+            - button "View" [ref=f62e521] [cursor=pointer]
+          - generic [ref=f62e527]:
+            - generic [ref=f62e528]:
+              - generic [ref=f62e529]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Google Rating Boost"
+              - generic [ref=f62e530]:
+                - paragraph [ref=f62e531]: Google Rating Boost
+                - paragraph [ref=f62e532]: Prompt your clients to leave a Google review after they've had a positive experience and increase your footfall.
+            - button "View" [ref=f62e534] [cursor=pointer]
+          - generic [ref=f62e540]:
+            - generic [ref=f62e541]:
+              - generic [ref=f62e542]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Client Loyalty"
+              - generic [ref=f62e543]:
+                - paragraph [ref=f62e544]: Client Loyalty
+                - paragraph [ref=f62e545]: Encourage repeat visits and larger purchases by rewarding clients with exclusive offers that celebrate their loyalty
+            - button "View" [ref=f62e547] [cursor=pointer]
+          - generic [ref=f62e553]:
+            - generic [ref=f62e554]:
+              - generic [ref=f62e555]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Data Connector"
+              - generic [ref=f62e556]:
+                - paragraph [ref=f62e557]: Data Connector
+                - paragraph [ref=f62e558]: Connect the power of Fresha data to your external spreadsheets, systems and other software
+            - button "View" [ref=f62e560] [cursor=pointer]
+          - generic [ref=f62e566]:
+            - generic [ref=f62e567]:
+              - generic [ref=f62e568]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Client Connect"
+                - generic [ref=f62e569]: Active
+              - generic [ref=f62e571]:
+                - paragraph [ref=f62e572]: Client Connect
+                - paragraph [ref=f62e573]: Keep clients close with two-way messaging and a shared inbox across web and app, all in one place
+            - button "View" [ref=f62e575] [cursor=pointer]
+          - generic [ref=f62e581]:
+            - generic [ref=f62e582]:
+              - generic [ref=f62e583]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Smart Website"
+              - generic [ref=f62e584]:
+                - paragraph [ref=f62e585]: Smart Website
+                - paragraph [ref=f62e586]: Your own professional website that updates itself as your business evolves
+            - button "View" [ref=f62e588] [cursor=pointer]
+          - generic [ref=f62e594]:
+            - generic [ref=f62e595]:
+              - generic [ref=f62e596]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Team Connect"
+              - generic [ref=f62e597]:
+                - paragraph [ref=f62e598]: Team Connect
+                - paragraph [ref=f62e599]: Give your team a dedicated space to collaborate, create group chats, and share files without leaving Fresha
+            - button "View" [ref=f62e601] [cursor=pointer]
+          - generic [ref=f62e607]:
+            - generic [ref=f62e608]:
+              - generic [ref=f62e609]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Bookable Resources"
+              - generic [ref=f62e610]:
+                - paragraph [ref=f62e611]: Bookable Resources
+                - paragraph [ref=f62e612]: Manage resources like rooms and equipment. Assign them to services and track usage with detailed reports.
+            - button "View" [ref=f62e614] [cursor=pointer]
+        - generic [ref=f62e619]:
+          - paragraph [ref=f62e620]: Integrations
+          - generic [ref=f62e621]:
+            - generic [ref=f62e624]:
+              - generic [ref=f62e625]:
+                - generic [ref=f62e626]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "Xero Accounting"
+                - generic [ref=f62e627]:
+                  - paragraph [ref=f62e628]: Xero Accounting
+                  - paragraph [ref=f62e629]: Streamline your sales and accounting with Fresha by connecting Xero
+              - button "View" [ref=f62e631] [cursor=pointer]
+            - generic [ref=f62e637]:
+              - generic [ref=f62e638]:
+                - generic [ref=f62e639]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "QuickBooks Accounting"
+                - generic [ref=f62e640]:
+                  - paragraph [ref=f62e641]: QuickBooks Accounting
+                  - paragraph [ref=f62e642]: Streamline your sales and accounting with Fresha by connecting QuickBooks
+              - button "View" [ref=f62e644] [cursor=pointer]
+            - generic [ref=f62e650]:
+              - generic [ref=f62e651]:
+                - generic [ref=f62e652]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "Facebook and Instagram bookings"
+                - generic [ref=f62e653]:
+                  - paragraph [ref=f62e654]: Facebook and Instagram bookings
+                  - paragraph [ref=f62e655]: Add online booking to your social media pages.
+              - button "View" [ref=f62e657] [cursor=pointer]
+            - generic [ref=f62e664]:
+              - generic [ref=f62e665]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Meta Pixel Ads"
+              - generic [ref=f62e666]:
+                - paragraph [ref=f62e667]: Meta Pixel Ads
+                - paragraph [ref=f62e668]: Use your Facebook Ads Pixel to track events, and create audiences based on their activities.
+            - generic [ref=f62e672]:
+              - generic [ref=f62e673]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Google Analytics"
+              - generic [ref=f62e674]:
+                - paragraph [ref=f62e675]: Google Analytics
+                - paragraph [ref=f62e676]: Send events about certain actions to Google Analytics, and create goals based on events to track conversions
+            - generic [ref=f62e680]:
+              - generic [ref=f62e681]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "Google Ads"
+              - generic [ref=f62e682]:
+                - paragraph [ref=f62e683]: Google Ads
+                - paragraph [ref=f62e684]: Track booking conversions from your Google Ads campaigns, optimize bidding, and retarget potential clients based on their activity.

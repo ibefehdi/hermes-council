@@ -1,0 +1,116 @@
+- generic [ref=f109e12]:
+  - generic [ref=f109e13]:
+    - link "Fresha" [ref=f109e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f109e16]:
+      - button [ref=f109e18] [cursor=pointer]:
+        - paragraph [ref=f109e20]: Continue setup
+      - button "Search" [ref=f109e22] [cursor=pointer]
+      - button "Performance insights" [ref=f109e24] [cursor=pointer]
+      - button "Notifications" [ref=f109e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f109e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f109e31] [cursor=pointer]:
+        - generic [ref=f109e32]: FA
+  - generic [ref=f109e34]:
+    - generic [ref=f109e38]:
+      - generic [ref=f109e39]:
+        - link [ref=f109e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f109e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f109e50] [cursor=pointer]
+        - button [ref=f109e54] [cursor=pointer]
+        - button [ref=f109e58] [cursor=pointer]
+        - button [ref=f109e62] [cursor=pointer]
+        - button [ref=f109e66] [cursor=pointer]
+        - button [ref=f109e70] [cursor=pointer]
+        - link [ref=f109e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f109e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f109e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f109e86] [cursor=pointer]
+    - generic [ref=f109e94]:
+      - generic [ref=f109e96]:
+        - button "Back" [ref=f109e97] [cursor=pointer]
+        - navigation [ref=f109e102]:
+          - list [ref=f109e103]:
+            - listitem [ref=f109e104]:
+              - link "Workspace settings •" [ref=f109e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f109e106]:
+              - link "Clients" [ref=f109e107] [cursor=pointer]:
+                - /url: /setup/clients
+      - generic [ref=f109e112]:
+        - paragraph [ref=f109e114]: Clients
+        - list [ref=f109e115]:
+          - listitem [ref=f109e116]:
+            - list [ref=f109e117]:
+              - listitem [ref=f109e118] [cursor=pointer]:
+                - link [ref=f109e119]:
+                  - /url: /setup/clients/client-sources
+                - generic [ref=f109e120]: Client sources
+              - listitem [ref=f109e122] [cursor=pointer]:
+                - link [ref=f109e123]:
+                  - /url: /setup/clients/client-tags
+                - generic [ref=f109e124]: Client tags
+              - listitem [ref=f109e126] [cursor=pointer]:
+                - link [ref=f109e127]:
+                  - /url: /setup/clients/messages
+                - generic [ref=f109e128]: Client Connect
+        - separator [ref=f109e130]
+        - list [ref=f109e131]:
+          - listitem [ref=f109e132]:
+            - list [ref=f109e133]:
+              - listitem [ref=f109e134] [cursor=pointer]:
+                - button [ref=f109e135]
+                - generic [ref=f109e136]: Clients list
+              - listitem [ref=f109e138] [cursor=pointer]:
+                - button [ref=f109e139]
+                - generic [ref=f109e140]: Client segments
+              - listitem [ref=f109e142] [cursor=pointer]:
+                - button [ref=f109e143]
+                - generic [ref=f109e144]: Client loyalty
+      - generic [ref=f109e147]:
+        - generic [ref=f109e148]:
+          - generic [ref=f109e149]:
+            - paragraph [ref=f109e151]: Client sources
+            - paragraph [ref=f109e152]:
+              - text: Manage sources to track how clients found your business.
+              - link "Learn more" [ref=f109e153] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/clients/15-track-how-clients-discover-your-business
+              - text: .
+          - generic [ref=f109e155]:
+            - button "Options" [ref=f109e157] [cursor=pointer]
+            - button "Add" [ref=f109e162] [cursor=pointer]
+        - generic [ref=f109e166]:
+          - generic [ref=f109e169]:
+            - heading "Contact page" [level=3] [ref=f109e170]
+            - heading "Active" [level=4] [ref=f109e171]
+          - generic [ref=f109e177]:
+            - heading "Referral Link" [level=3] [ref=f109e178]
+            - heading "Active" [level=4] [ref=f109e179]
+          - generic [ref=f109e185]:
+            - heading "Walk-In" [level=3] [ref=f109e186]
+            - heading "Active" [level=4] [ref=f109e187]
+          - generic [ref=f109e193]:
+            - heading "Instagram" [level=3] [ref=f109e194]
+            - heading "Active" [level=4] [ref=f109e195]
+          - generic [ref=f109e201]:
+            - heading "Imported" [level=3] [ref=f109e202]
+            - heading "Active" [level=4] [ref=f109e203]
+          - generic [ref=f109e209]:
+            - heading "Google" [level=3] [ref=f109e210]
+            - heading "Active" [level=4] [ref=f109e211]
+          - generic [ref=f109e217]:
+            - heading "Fresha Marketplace" [level=3] [ref=f109e218]
+            - heading "Active" [level=4] [ref=f109e219]
+          - generic [ref=f109e225]:
+            - heading "Facebook" [level=3] [ref=f109e226]
+            - heading "Active" [level=4] [ref=f109e227]
+          - generic [ref=f109e233]:
+            - heading "Book Now Link" [level=3] [ref=f109e234]
+            - heading "Active" [level=4] [ref=f109e235]

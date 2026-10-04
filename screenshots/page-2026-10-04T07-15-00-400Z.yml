@@ -1,0 +1,64 @@
+- generic [ref=f218e3]:
+  - generic [ref=f218e4]:
+    - link "Fresha" [ref=f218e6] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f218e7]:
+      - button [ref=f218e119] [cursor=pointer]:
+        - paragraph [ref=f218e121]: Continue setup
+      - button "Search" [ref=f218e9] [cursor=pointer]
+      - button "Performance insights" [ref=f218e11] [cursor=pointer]
+      - button "Notifications" [ref=f218e16] [cursor=pointer]:
+        - generic [ref=f218e122]: "4"
+      - link "Fresha Connect" [ref=f218e18] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f218e20] [cursor=pointer]:
+        - generic [ref=f218e21]: FA
+  - generic [ref=f218e23]:
+    - generic [ref=f218e24]:
+      - generic [ref=f218e27]:
+        - generic [ref=f218e28]:
+          - link [ref=f218e31] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f218e35] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f218e39] [cursor=pointer]
+          - button [ref=f218e43] [cursor=pointer]
+          - button [ref=f218e47] [cursor=pointer]
+          - button [ref=f218e51] [cursor=pointer]
+          - button [ref=f218e55] [cursor=pointer]
+          - button [ref=f218e59] [cursor=pointer]
+          - link [ref=f218e63] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f218e67] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f218e71] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f218e75] [cursor=pointer]
+      - generic [ref=f218e78]:
+        - button "Collapse Navigation Menu" [ref=f218e80] [cursor=pointer]
+        - generic [ref=f218e86]:
+          - generic [ref=f218e87]:
+            - paragraph [ref=f218e88]: Catalog
+            - link [ref=f218e90] [cursor=pointer]:
+              - /url: /catalogue/services
+              - paragraph [ref=f218e91]: Service menu
+            - link [ref=f218e93] [cursor=pointer]:
+              - /url: /catalogue/packages
+              - paragraph [ref=f218e94]: Packages
+            - link [ref=f218e96] [cursor=pointer]:
+              - /url: /catalogue/products
+              - paragraph [ref=f218e97]: Products
+          - separator [ref=f218e99]
+          - generic [ref=f218e100]:
+            - paragraph [ref=f218e101]: Inventory
+            - link [ref=f218e103] [cursor=pointer]:
+              - /url: /catalogue/stocktakes
+              - paragraph [ref=f218e104]: Stocktakes
+            - link [ref=f218e106] [cursor=pointer]:
+              - /url: /catalogue/orders
+              - paragraph [ref=f218e107]: Stock orders
+            - link [ref=f218e109] [cursor=pointer]:
+              - /url: /catalogue/suppliers
+              - paragraph [ref=f218e110]: Suppliers
+    - img "spinner" [ref=f218e114]

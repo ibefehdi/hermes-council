@@ -1,0 +1,138 @@
+- generic [ref=f214e12]:
+  - generic [ref=f214e13]:
+    - link "Fresha" [ref=f214e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f214e16]:
+      - button [ref=f214e18] [cursor=pointer]:
+        - paragraph [ref=f214e20]: Continue setup
+      - button "Search" [ref=f214e22] [cursor=pointer]
+      - button "Performance insights" [ref=f214e24] [cursor=pointer]
+      - button "Notifications" [ref=f214e27] [cursor=pointer]:
+        - generic [ref=f214e28]: "4"
+      - link "Fresha Connect" [ref=f214e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f214e34] [cursor=pointer]:
+        - generic [ref=f214e35]: FA
+  - generic [ref=f214e37]:
+    - generic [ref=f214e38]:
+      - generic [ref=f214e41]:
+        - generic [ref=f214e42]:
+          - link [ref=f214e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f214e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f214e53] [cursor=pointer]
+          - button [ref=f214e57] [cursor=pointer]
+          - button [ref=f214e61] [cursor=pointer]
+          - button [ref=f214e65] [cursor=pointer]
+          - button [ref=f214e69] [cursor=pointer]
+          - button [ref=f214e73] [cursor=pointer]
+          - link [ref=f214e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f214e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f214e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f214e89] [cursor=pointer]
+      - generic [ref=f214e92]:
+        - button "Collapse Navigation Menu" [ref=f214e94] [cursor=pointer]
+        - generic [ref=f214e100]:
+          - generic [ref=f214e101]:
+            - paragraph [ref=f214e102]: Clients
+            - link [ref=f214e104] [cursor=pointer]:
+              - /url: /clients/list
+              - paragraph [ref=f214e105]: Clients list
+            - link [ref=f214e107] [cursor=pointer]:
+              - /url: /clients/segments
+              - paragraph [ref=f214e108]: Client segments
+          - separator [ref=f214e110]
+          - generic [ref=f214e111]:
+            - paragraph [ref=f214e112]: Engage
+            - link [ref=f214e114] [cursor=pointer]:
+              - /url: /clients/loyalty
+              - paragraph [ref=f214e115]: Client loyalty
+            - link [ref=f214e117] [cursor=pointer]:
+              - /url: /clients/online-reputation
+              - paragraph [ref=f214e118]: Online reputation
+    - generic [ref=f214e124]:
+      - generic [ref=f214e126]:
+        - paragraph [ref=f214e128]: Online reputation
+        - paragraph [ref=f214e129]:
+          - text: Manage reviews across Fresha and Google in one place.
+          - link "Learn more" [ref=f214e130] [cursor=pointer]:
+            - /url: https://www.fresha.com/help-center/knowledge-base/clients/103752-ratings-and-reviews-overview
+      - generic [ref=f214e131]:
+        - generic [ref=f214e132]:
+          - paragraph [ref=f214e133]: Explore Fresha's powerful tools to get client reviews that grow your business. Watch the handy video guides now.
+          - generic [ref=f214e134]:
+            - button "Watch now" [ref=f214e135] [cursor=pointer]
+            - button "Dismiss" [ref=f214e140] [cursor=pointer]
+        - generic [ref=f214e144]:
+          - button "Watch Discover ratings and reviews" [ref=f214e146] [cursor=pointer]
+          - paragraph [ref=f214e151]: 1 video
+      - tablist [ref=f214e155]:
+        - tab "Overview" [selected] [ref=f214e156] [cursor=pointer]
+        - tab "All reviews" [ref=f214e158] [cursor=pointer]
+      - generic [ref=f214e163]:
+        - generic [ref=f214e164]:
+          - list [ref=f214e168]:
+            - listitem [ref=f214e169]:
+              - paragraph [ref=f214e170]: Overall rating
+            - listitem [ref=f214e171]:
+              - generic [ref=f214e172]:
+                - paragraph [ref=f214e173]: "0.0"
+                - paragraph [ref=f214e176]: 1 rating
+          - list [ref=f214e181]:
+            - listitem [ref=f214e182]:
+              - paragraph [ref=f214e183]: Total reviews
+            - listitem [ref=f214e184]:
+              - paragraph [ref=f214e186]: "0"
+          - list [ref=f214e190]:
+            - listitem [ref=f214e191]:
+              - paragraph [ref=f214e192]: Response rate
+            - listitem [ref=f214e193]:
+              - paragraph [ref=f214e195]: —
+        - generic [ref=f214e196]:
+          - generic [ref=f214e199]:
+            - generic [ref=f214e200]:
+              - img "Fresha"
+            - generic [ref=f214e201]:
+              - list [ref=f214e202]:
+                - listitem [ref=f214e203]:
+                  - paragraph [ref=f214e204]: "0.0"
+                - listitem [ref=f214e205]:
+                  - generic [ref=f214e206]:
+                    - generic "star rating" [ref=f214e207]:
+                      - paragraph [ref=f214e209]: 1 rating
+                    - paragraph [ref=f214e211]: (0)
+                - listitem [ref=f214e212]:
+                  - paragraph [ref=f214e213]: No reviews yet
+              - generic [ref=f214e215]:
+                - paragraph [ref=f214e216]: "5"
+                - progressbar [ref=f214e217]:
+                  - paragraph [ref=f214e218]: 5 star rating
+                - paragraph [ref=f214e220]: "0"
+                - paragraph [ref=f214e221]: "4"
+                - progressbar [ref=f214e222]:
+                  - paragraph [ref=f214e223]: 4 star rating
+                - paragraph [ref=f214e225]: "0"
+                - paragraph [ref=f214e226]: "3"
+                - progressbar [ref=f214e227]:
+                  - paragraph [ref=f214e228]: 3 star rating
+                - paragraph [ref=f214e230]: "0"
+                - paragraph [ref=f214e231]: "2"
+                - progressbar [ref=f214e232]:
+                  - paragraph [ref=f214e233]: 2 star rating
+                - paragraph [ref=f214e235]: "0"
+                - paragraph [ref=f214e236]: "1"
+                - progressbar [ref=f214e237]:
+                  - paragraph [ref=f214e238]: 1 star rating
+                - paragraph [ref=f214e240]: "0"
+          - generic [ref=f214e243]:
+            - generic [ref=f214e244]:
+              - img "Google" [ref=f214e246]
+              - generic [ref=f214e247]:
+                - paragraph [ref=f214e248]: Link your Google account
+                - paragraph [ref=f214e249]: View and manage your Google reviews in one place
+            - button "Connect" [ref=f214e250] [cursor=pointer]

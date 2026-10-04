@@ -1,0 +1,151 @@
+- generic [ref=f118e12]:
+  - generic [ref=f118e13]:
+    - link "Fresha" [ref=f118e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f118e16]:
+      - button [ref=f118e18] [cursor=pointer]:
+        - paragraph [ref=f118e20]: Continue setup
+      - button "Search" [ref=f118e22] [cursor=pointer]
+      - button "Performance insights" [ref=f118e24] [cursor=pointer]
+      - button "Notifications" [ref=f118e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f118e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f118e31] [cursor=pointer]:
+        - generic [ref=f118e32]: FA
+  - generic [ref=f118e34]:
+    - generic [ref=f118e38]:
+      - generic [ref=f118e39]:
+        - link [ref=f118e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f118e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f118e50] [cursor=pointer]
+        - button [ref=f118e54] [cursor=pointer]
+        - button [ref=f118e58] [cursor=pointer]
+        - button [ref=f118e62] [cursor=pointer]
+        - button [ref=f118e66] [cursor=pointer]
+        - button [ref=f118e70] [cursor=pointer]
+        - link [ref=f118e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f118e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f118e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f118e86] [cursor=pointer]
+    - generic [ref=f118e94]:
+      - generic [ref=f118e96]:
+        - button "Back" [ref=f118e97] [cursor=pointer]
+        - navigation [ref=f118e102]:
+          - list [ref=f118e103]:
+            - listitem [ref=f118e104]:
+              - link "Workspace settings •" [ref=f118e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f118e106]:
+              - link "Clients" [ref=f118e107] [cursor=pointer]:
+                - /url: /setup/clients
+      - generic [ref=f118e112]:
+        - paragraph [ref=f118e114]: Clients
+        - list [ref=f118e115]:
+          - listitem [ref=f118e116]:
+            - list [ref=f118e117]:
+              - listitem [ref=f118e118] [cursor=pointer]:
+                - link [ref=f118e119]:
+                  - /url: /setup/clients/client-sources
+                - generic [ref=f118e120]: Client sources
+              - listitem [ref=f118e122] [cursor=pointer]:
+                - link [ref=f118e123]:
+                  - /url: /setup/clients/client-tags
+                - generic [ref=f118e124]: Client tags
+              - listitem [ref=f118e126] [cursor=pointer]:
+                - link [ref=f118e127]:
+                  - /url: /setup/clients/messages
+                - generic [ref=f118e128]: Client Connect
+        - separator [ref=f118e130]
+        - list [ref=f118e131]:
+          - listitem [ref=f118e132]:
+            - list [ref=f118e133]:
+              - listitem [ref=f118e134] [cursor=pointer]:
+                - button [ref=f118e135]
+                - generic [ref=f118e136]: Clients list
+              - listitem [ref=f118e138] [cursor=pointer]:
+                - button [ref=f118e139]
+                - generic [ref=f118e140]: Client segments
+              - listitem [ref=f118e142] [cursor=pointer]:
+                - button [ref=f118e143]
+                - generic [ref=f118e144]: Client loyalty
+      - generic [ref=f118e147]:
+        - generic [ref=f118e149]:
+          - paragraph [ref=f118e151]: Client Connect
+          - paragraph [ref=f118e152]:
+            - text: Manage how clients can contact and interact with your business through Client Connect.
+            - link "Learn more" [ref=f118e153] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/messaging/101840-chat-with-clients-using-client-connect
+        - generic [ref=f118e154]:
+          - generic [ref=f118e155]:
+            - generic [ref=f118e156]:
+              - paragraph [ref=f118e157]: Included in your plan
+              - generic [ref=f118e158]:
+                - paragraph [ref=f118e159]: Connect to clients with two-way messaging
+                - paragraph [ref=f118e160]: An integrated inbox built for effortless client communication. Makes it easy for clients to reach you and seamless for your team to reply, all within Fresha.
+            - link "View inbox" [ref=f118e162] [cursor=pointer]:
+              - /url: /connect/customers
+          - img "Client Connect announcement" [ref=f118e168]
+          - button "Dismiss banner" [ref=f118e170] [cursor=pointer]
+        - generic [ref=f118e177]:
+          - generic [ref=f118e178]:
+            - generic [ref=f118e179]:
+              - heading "Messaging settings" [level=2] [ref=f118e180]
+              - paragraph [ref=f118e181]:
+                - text: Choose how clients can contact you and how conversations appear to them.
+                - link "Learn more" [ref=f118e182] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/messaging/101842-update-messaging-settings-for-client-connect
+            - button "Edit" [ref=f118e183] [cursor=pointer]
+          - list [ref=f118e187]:
+            - listitem [ref=f118e188]:
+              - generic [ref=f118e190]:
+                - text: Client messaging is
+                - strong [ref=f118e191]: enabled
+            - listitem [ref=f118e192]:
+              - generic [ref=f118e194]: Clients can start new conversations
+            - listitem [ref=f118e195]:
+              - generic [ref=f118e197]:
+                - text: Read receipts are
+                - strong [ref=f118e198]: visible
+                - text: to clients
+            - listitem [ref=f118e199]:
+              - generic [ref=f118e201]:
+                - text: Typing indicators are
+                - strong [ref=f118e202]: visible
+                - text: to clients
+        - generic [ref=f118e205]:
+          - generic [ref=f118e206]:
+            - generic [ref=f118e207]:
+              - heading "Instant replies" [level=2] [ref=f118e208]
+              - paragraph [ref=f118e209]:
+                - text: Instant replies are sent automatically as your first response to new messages. For example you can use instant replies to let clients know you will get back to them soon or to thank them for contacting you.
+                - link "Learn more" [ref=f118e210] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/messaging/101842-update-messaging-settings-for-client-connect#set-up-instant-replies
+            - button "Edit" [ref=f118e211] [cursor=pointer]
+          - list [ref=f118e216]:
+            - listitem [ref=f118e217]:
+              - generic [ref=f118e219]: Instant replies are not sending to clients
+        - generic [ref=f118e222]:
+          - generic [ref=f118e223]:
+            - generic [ref=f118e224]:
+              - heading "Contact page settings" [level=2] [ref=f118e225]
+              - paragraph [ref=f118e226]:
+                - text: Accept general inquiry messages via your own public contact page with a dedicated link.
+                - link "Learn more" [ref=f118e227] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/messaging/101842-update-messaging-settings-for-client-connect
+            - button "Edit" [ref=f118e228] [cursor=pointer]
+          - generic [ref=f118e232]:
+            - list [ref=f118e233]:
+              - listitem [ref=f118e234]:
+                - generic [ref=f118e236]:
+                  - text: Contact page enabled
+                  - paragraph [ref=f118e237]: fresha.com/q/9vFJ_mLU-Y-o4g
+            - generic [ref=f118e238]:
+              - button "Copy link" [ref=f118e239] [cursor=pointer]
+              - button "Generate QR" [ref=f118e244] [cursor=pointer]
+              - button "Preview" [ref=f118e249] [cursor=pointer]

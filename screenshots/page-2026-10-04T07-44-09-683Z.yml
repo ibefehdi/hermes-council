@@ -1,0 +1,145 @@
+- generic [ref=f48e1]:
+  - generic [ref=f48e12]:
+    - generic [ref=f48e13]:
+      - link "Fresha" [ref=f48e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f48e16]:
+        - button [ref=f48e18] [cursor=pointer]:
+          - paragraph [ref=f48e20]: Continue setup
+        - button "Search" [ref=f48e22] [cursor=pointer]
+        - button "Performance insights" [ref=f48e24] [cursor=pointer]
+        - button "Notifications" [ref=f48e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f48e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f48e31] [cursor=pointer]:
+          - generic [ref=f48e32]: FA
+    - generic [ref=f48e34]:
+      - generic [ref=f48e38]:
+        - generic [ref=f48e39]:
+          - link [ref=f48e42] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f48e46] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f48e50] [cursor=pointer]
+          - button [ref=f48e54] [cursor=pointer]
+          - button [ref=f48e58] [cursor=pointer]
+          - button [ref=f48e62] [cursor=pointer]
+          - button [ref=f48e66] [cursor=pointer]
+          - button [ref=f48e70] [cursor=pointer]
+          - link [ref=f48e74] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f48e78] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f48e82] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f48e86] [cursor=pointer]
+      - generic [ref=f48e94]:
+        - generic [ref=f48e96]:
+          - button "Back" [ref=f48e97] [cursor=pointer]
+          - navigation [ref=f48e102]:
+            - list [ref=f48e103]:
+              - listitem [ref=f48e104]:
+                - link "Workspace settings •" [ref=f48e105] [cursor=pointer]:
+                  - /url: /setup
+              - listitem [ref=f48e106]:
+                - link "Scheduling" [ref=f48e107] [cursor=pointer]:
+                  - /url: /setup/scheduling
+        - generic [ref=f48e112]:
+          - paragraph [ref=f48e114]: Scheduling
+          - list [ref=f48e115]:
+            - listitem [ref=f48e116]:
+              - list [ref=f48e117]:
+                - listitem [ref=f48e118] [cursor=pointer]:
+                  - link [ref=f48e119]:
+                    - /url: /setup/scheduling/time-and-calendar
+                  - generic [ref=f48e120]: Time and calendar
+                - listitem [ref=f48e122] [cursor=pointer]:
+                  - link [ref=f48e123]:
+                    - /url: /setup/scheduling/waitlist
+                  - generic [ref=f48e124]: Waitlist appointments
+                - listitem [ref=f48e126] [cursor=pointer]:
+                  - link [ref=f48e127]:
+                    - /url: /setup/scheduling/blocked-time-types
+                  - generic [ref=f48e128]: Blocked time types
+                - listitem [ref=f48e130] [cursor=pointer]:
+                  - link [ref=f48e131]:
+                    - /url: /setup/scheduling/resources
+                  - generic [ref=f48e132]: Resources
+                - listitem [ref=f48e134] [cursor=pointer]:
+                  - link [ref=f48e135]:
+                    - /url: /setup/scheduling/cancellation-reasons
+                  - generic [ref=f48e136]: Cancellation reasons
+                - listitem [ref=f48e138] [cursor=pointer]:
+                  - link [ref=f48e139]:
+                    - /url: /setup/scheduling/appointment-statuses
+                  - generic [ref=f48e140]: Appointment statuses
+                - listitem [ref=f48e142] [cursor=pointer]:
+                  - link [ref=f48e143]:
+                    - /url: /setup/scheduling/closed-periods
+                  - generic [ref=f48e144]: Closed periods
+              - separator [ref=f48e147]
+            - listitem [ref=f48e148]:
+              - generic [ref=f48e149]: Online booking
+              - list [ref=f48e151]:
+                - listitem [ref=f48e152] [cursor=pointer]:
+                  - link [ref=f48e153]:
+                    - /url: /setup/scheduling/dynamic-assignment
+                  - generic [ref=f48e154]: Dynamic assignment
+                - listitem [ref=f48e156] [cursor=pointer]:
+                  - link [ref=f48e157]:
+                    - /url: /setup/scheduling/availability
+                  - generic [ref=f48e158]: Availability
+                - listitem [ref=f48e160] [cursor=pointer]:
+                  - link [ref=f48e161]:
+                    - /url: /setup/scheduling/booking-options
+                  - generic [ref=f48e162]: Booking options
+          - separator [ref=f48e164]
+          - list [ref=f48e165]:
+            - listitem [ref=f48e166]:
+              - list [ref=f48e167]:
+                - listitem [ref=f48e168] [cursor=pointer]:
+                  - button [ref=f48e169]
+                  - generic [ref=f48e170]: Marketplace profile
+                - listitem [ref=f48e172] [cursor=pointer]:
+                  - button [ref=f48e173]
+                  - generic [ref=f48e174]: Service menu
+                - listitem [ref=f48e176] [cursor=pointer]:
+                  - button [ref=f48e177]
+                  - generic [ref=f48e178]: Scheduled shifts
+        - generic [ref=f48e181]:
+          - generic [ref=f48e182]:
+            - generic [ref=f48e183]:
+              - paragraph [ref=f48e185]: Cancellation reasons
+              - paragraph [ref=f48e186]:
+                - text: Manage reasons for your team members to choose when cancelling client appointments.
+                - link "Learn more" [ref=f48e187] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/calendar/286-cancel-appointments
+                - text: .
+            - generic [ref=f48e189]:
+              - button "Options" [ref=f48e191] [cursor=pointer]
+              - button "Add" [ref=f48e196] [cursor=pointer]
+          - generic [ref=f48e200]:
+            - generic [ref=f48e201] [cursor=pointer]:
+              - button [ref=f48e202]
+              - generic [ref=f48e203]:
+                - heading "Duplicate appointment" [level=3] [ref=f48e207]
+                - button "Actions" [ref=f48e211]
+            - heading "Appointment made by mistake" [level=3] [ref=f48e221]
+            - generic [ref=f48e226] [cursor=pointer]:
+              - button [ref=f48e227]
+              - generic [ref=f48e228]:
+                - heading "Client not available" [level=3] [ref=f48e232]
+                - button "Actions" [ref=f48e236]
+  - dialog "Add cancellation reason" [active] [ref=f48e244]:
+    - generic [ref=f48e246]:
+      - generic [ref=f48e247]: Add cancellation reason
+      - generic [ref=f48e250]:
+        - button "Close" [ref=f48e251] [cursor=pointer]
+        - button "Add" [ref=f48e255] [cursor=pointer]
+    - generic [ref=f48e261]:
+      - heading "Add cancellation reason" [level=1] [ref=f48e265]
+      - generic [ref=f48e273]:
+        - generic [ref=f48e274]: Name
+        - textbox "Name" [ref=f48e278]:
+          - /placeholder: e.g. Local promotion

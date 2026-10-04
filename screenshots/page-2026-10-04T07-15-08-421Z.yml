@@ -1,0 +1,100 @@
+- generic [ref=f222e12]:
+  - generic [ref=f222e13]:
+    - link "Fresha" [ref=f222e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f222e16]:
+      - button [ref=f222e18] [cursor=pointer]:
+        - paragraph [ref=f222e20]: Continue setup
+      - button "Search" [ref=f222e22] [cursor=pointer]
+      - button "Performance insights" [ref=f222e24] [cursor=pointer]
+      - button "Notifications" [ref=f222e27] [cursor=pointer]:
+        - generic [ref=f222e28]: "4"
+      - link "Fresha Connect" [ref=f222e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f222e34] [cursor=pointer]:
+        - generic [ref=f222e35]: FA
+  - generic [ref=f222e37]:
+    - generic [ref=f222e38]:
+      - generic [ref=f222e41]:
+        - generic [ref=f222e42]:
+          - link [ref=f222e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f222e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f222e53] [cursor=pointer]
+          - button [ref=f222e57] [cursor=pointer]
+          - button [ref=f222e61] [cursor=pointer]
+          - button [ref=f222e65] [cursor=pointer]
+          - button [ref=f222e69] [cursor=pointer]
+          - button [ref=f222e73] [cursor=pointer]
+          - link [ref=f222e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f222e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f222e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f222e89] [cursor=pointer]
+      - generic [ref=f222e92]:
+        - button "Collapse Navigation Menu" [ref=f222e94] [cursor=pointer]
+        - generic [ref=f222e100]:
+          - generic [ref=f222e101]:
+            - paragraph [ref=f222e102]: Catalog
+            - link [ref=f222e104] [cursor=pointer]:
+              - /url: /catalogue/services
+              - paragraph [ref=f222e105]: Service menu
+            - link [ref=f222e107] [cursor=pointer]:
+              - /url: /catalogue/packages
+              - paragraph [ref=f222e108]: Packages
+            - link [ref=f222e110] [cursor=pointer]:
+              - /url: /catalogue/products
+              - paragraph [ref=f222e111]: Products
+          - separator [ref=f222e113]
+          - generic [ref=f222e114]:
+            - paragraph [ref=f222e115]: Inventory
+            - link [ref=f222e117] [cursor=pointer]:
+              - /url: /catalogue/stocktakes
+              - paragraph [ref=f222e118]: Stocktakes
+            - link [ref=f222e120] [cursor=pointer]:
+              - /url: /catalogue/orders
+              - paragraph [ref=f222e121]: Stock orders
+            - link [ref=f222e123] [cursor=pointer]:
+              - /url: /catalogue/suppliers
+              - paragraph [ref=f222e124]: Suppliers
+    - generic [ref=f222e131]:
+      - generic [ref=f222e133]:
+        - paragraph [ref=f222e135]: Included in your plan
+        - generic [ref=f222e136]: Increase your average order value with packages
+        - generic [ref=f222e137]: Encourage clients to spend more and keep coming back by bundling services, products and discounts together.
+        - generic [ref=f222e138]:
+          - generic [ref=f222e139]: Incentivize clients to spend more with package purchases
+          - generic [ref=f222e143]: Smartly upsell your packages to clients booking online
+          - generic [ref=f222e147]: Easily track redemption of benefits and control their limits
+        - generic [ref=f222e151]:
+          - button "Start now" [ref=f222e152] [cursor=pointer]
+          - link "Learn more" [ref=f222e156] [cursor=pointer]:
+            - /url: https://www.fresha.com/help-center/knowledge-base/packages-memberships-and-gift-cards/100670-packages-overview
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Spa Package
+                          - paragraph: 6 sessions included
+                      - generic:
+                        - paragraph: KWD 120
+                        - paragraph: Save up to KWD 30
+                  - generic:
+                    - generic:
+                      - generic:
+                        - paragraph: Full body massage
+                        - paragraph: 5 sessions
+                    - generic:
+                      - generic:
+                        - paragraph: Head massage
+                        - paragraph: 1 session

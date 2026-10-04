@@ -1,0 +1,227 @@
+- generic [ref=f4e1]:
+  - generic [ref=f4e12]:
+    - generic [ref=f4e13]:
+      - link "Fresha" [ref=f4e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f4e16]:
+        - button [ref=f4e18] [cursor=pointer]:
+          - paragraph [ref=f4e20]: Continue setup
+        - button "Search" [ref=f4e22] [cursor=pointer]
+        - button "Performance insights" [ref=f4e24] [cursor=pointer]
+        - button "Notifications" [ref=f4e27] [cursor=pointer]:
+          - generic [ref=f4e28]: "4"
+        - link "Fresha Connect" [ref=f4e32] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f4e34] [cursor=pointer]:
+          - generic [ref=f4e35]: FA
+    - generic [ref=f4e38]:
+      - generic [ref=f4e41]:
+        - generic [ref=f4e42]:
+          - link [ref=f4e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f4e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f4e53] [cursor=pointer]
+          - button [ref=f4e57] [cursor=pointer]
+          - button [ref=f4e61] [cursor=pointer]
+          - button [ref=f4e65] [cursor=pointer]
+          - button [ref=f4e69] [cursor=pointer]
+          - button [ref=f4e73] [cursor=pointer]
+          - link [ref=f4e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f4e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f4e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f4e89] [cursor=pointer]
+      - generic [ref=f4e92]:
+        - button "Collapse Navigation Menu" [ref=f4e94] [cursor=pointer]
+        - generic [ref=f4e100]:
+          - generic [ref=f4e101]:
+            - paragraph [ref=f4e102]: Clients
+            - link [ref=f4e104] [cursor=pointer]:
+              - /url: /clients/list
+              - paragraph [ref=f4e105]: Clients list
+            - link [ref=f4e107] [cursor=pointer]:
+              - /url: /clients/segments
+              - paragraph [ref=f4e108]: Client segments
+          - separator [ref=f4e110]
+          - generic [ref=f4e111]:
+            - paragraph [ref=f4e112]: Engage
+            - link [ref=f4e114] [cursor=pointer]:
+              - /url: /clients/loyalty
+              - paragraph [ref=f4e115]: Client loyalty
+            - link [ref=f4e117] [cursor=pointer]:
+              - /url: /clients/online-reputation
+              - paragraph [ref=f4e118]: Online reputation
+  - dialog "Add a new client" [active] [ref=f4e331]:
+    - generic [ref=f4e333]:
+      - generic [ref=f4e334]: Add a new client
+      - generic [ref=f4e337]:
+        - button "Close" [ref=f4e338] [cursor=pointer]
+        - button "Save" [ref=f4e342] [cursor=pointer]
+    - generic [ref=f4e348]:
+      - heading "Add a new client" [level=1] [ref=f4e352]
+      - generic [ref=f4e355]:
+        - generic [ref=f4e356]:
+          - generic [ref=f4e358]:
+            - paragraph [ref=f4e360]: Profile
+            - paragraph [ref=f4e361]: Manage your client's personal profile
+          - generic [ref=f4e362]:
+            - button [ref=f4e363] [cursor=pointer]
+            - generic [ref=f4e367]:
+              - generic [ref=f4e368]:
+                - generic [ref=f4e369]: First name
+                - textbox "First name" [ref=f4e373]:
+                  - /placeholder: e.g. John
+              - generic [ref=f4e374]:
+                - generic [ref=f4e375]: Last name
+                - textbox "Last name" [ref=f4e379]:
+                  - /placeholder: e.g. Hancock
+            - generic [ref=f4e380]:
+              - generic [ref=f4e381]:
+                - generic [ref=f4e382]: Email
+                - textbox "Email" [ref=f4e386]:
+                  - /placeholder: example@domain.com
+              - generic [ref=f4e387]:
+                - generic [ref=f4e388]: Phone
+                - combobox [ref=f4e392]
+                - generic [ref=f4e393]:
+                  - button "+965" [ref=f4e394] [cursor=pointer]
+                  - generic "Country code" [ref=f4e398]:
+                    - textbox "Country code" [ref=f4e399]:
+                      - /placeholder: e.g. ‎+1 234 567 8901
+            - generic [ref=f4e400]:
+              - generic [ref=f4e401]: Birthday
+              - generic [ref=f4e403]:
+                - generic [ref=f4e405]:
+                  - generic [ref=f4e406]: Month
+                  - combobox "Month" [ref=f4e408] [cursor=pointer]:
+                    - option "Month" [selected]
+                    - option "Jan"
+                    - option "Feb"
+                    - option "Mar"
+                    - option "Apr"
+                    - option "May"
+                    - option "Jun"
+                    - option "Jul"
+                    - option "Aug"
+                    - option "Sep"
+                    - option "Oct"
+                    - option "Nov"
+                    - option "Dec"
+                  - generic [ref=f4e409] [cursor=pointer]
+                - spinbutton "Birthday" [ref=f4e412]
+                - spinbutton "Year" [ref=f4e415]
+            - generic [ref=f4e416]:
+              - generic [ref=f4e417]:
+                - generic [ref=f4e418]: Gender
+                - generic [ref=f4e420]:
+                  - generic [ref=f4e421]: Select an option
+                  - combobox "Gender" [ref=f4e423] [cursor=pointer]:
+                    - option "Select an option" [disabled] [selected]
+                    - option "Female"
+                    - option "Male"
+                    - option "Non-binary"
+                    - option "Prefer not to say"
+                  - generic [ref=f4e424] [cursor=pointer]
+              - generic [ref=f4e425]:
+                - generic [ref=f4e426]: Pronouns
+                - generic [ref=f4e428]:
+                  - generic [ref=f4e429]: Select an option
+                  - combobox "Pronouns" [ref=f4e431] [cursor=pointer]:
+                    - option "Select an option" [disabled] [selected]
+                    - option "She/Her"
+                    - option "He/Him"
+                    - option "They/Them"
+                    - option "Prefer not to say"
+                  - generic [ref=f4e432] [cursor=pointer]
+        - separator [ref=f4e433]
+        - generic [ref=f4e434]:
+          - generic [ref=f4e436]:
+            - paragraph [ref=f4e438]: Additional info
+            - paragraph [ref=f4e439]: Edit additional information about the client
+          - generic [ref=f4e440]:
+            - generic [ref=f4e441]:
+              - generic [ref=f4e442]:
+                - generic [ref=f4e443]: Client source
+                - generic [ref=f4e445]:
+                  - generic [ref=f4e446]: Walk-In
+                  - combobox "Client source" [ref=f4e448] [cursor=pointer]:
+                    - option "Walk-In" [selected]
+                  - generic [ref=f4e449] [cursor=pointer]
+                - paragraph [ref=f4e450]:
+                  - text: Choose how this client found your business.
+                  - button "Learn more" [ref=f4e451] [cursor=pointer]
+              - generic [ref=f4e452]:
+                - generic [ref=f4e453]: Referred by
+                - button "Referred by" [ref=f4e455] [cursor=pointer]:
+                  - generic [ref=f4e460]: Select a client
+                  - button "Add" [ref=f4e463]
+                - paragraph [ref=f4e464]:
+                  - text: Choose who referred this client to your business.
+                  - link "Learn more" [ref=f4e465] [cursor=pointer]:
+                    - /url: https://www.fresha.com/help-center/knowledge-base/clients/603-add-client-referrals-manually
+            - generic [ref=f4e466]:
+              - generic [ref=f4e467]:
+                - generic [ref=f4e468]: Preferred language
+                - generic [ref=f4e471]:
+                  - textbox "Preferred language" [ref=f4e472]:
+                    - /placeholder: Select language
+                  - button "Add" [ref=f4e474] [cursor=pointer]
+                - paragraph [ref=f4e475]:
+                  - text: Set the language of automated client notifications.
+                  - link "Learn more" [ref=f4e476] [cursor=pointer]:
+                    - /url: https://www.fresha.com/help-center/knowledge-base/marketing/101299-automated-messages-overview
+              - generic [ref=f4e477]:
+                - generic [ref=f4e478]:
+                  - generic [ref=f4e479]: Occupation
+                  - generic [ref=f4e480]: 0/255
+                - textbox "Occupation 0/255" [ref=f4e483]:
+                  - /placeholder: Enter client job information
+            - generic [ref=f4e485]:
+              - generic [ref=f4e486]: Country
+              - combobox [ref=f4e490]
+              - button "Select country Country" [ref=f4e491] [cursor=pointer]:
+                - generic [ref=f4e492]: Select country
+            - generic [ref=f4e495]:
+              - generic [ref=f4e496]:
+                - generic [ref=f4e497]: Additional email
+                - textbox "Additional email" [ref=f4e501]:
+                  - /placeholder: example+1@domain.com
+              - generic [ref=f4e502]:
+                - generic [ref=f4e503]: Additional phone
+                - combobox [ref=f4e507]
+                - generic [ref=f4e508]:
+                  - button "+965" [ref=f4e509] [cursor=pointer]
+                  - generic "Country code" [ref=f4e513]:
+                    - textbox "Country code" [ref=f4e514]:
+                      - /placeholder: e.g. ‎+1 234 567 8901
+            - generic [ref=f4e516]:
+              - generic [ref=f4e518]:
+                - generic [ref=f4e519]: Tags
+                - generic [ref=f4e521]:
+                  - textbox "Select or create a tag" [ref=f4e524]
+                  - generic [ref=f4e525] [cursor=pointer]
+              - paragraph [ref=f4e526]:
+                - text: Add tags to group clients and filter them across Fresha. Manage tags in
+                - button "client settings" [ref=f4e527] [cursor=pointer]
+                - text: .
+      - list [ref=f4e533]:
+        - listitem [ref=f4e534]:
+          - generic [ref=f4e535]: Personal
+          - list [ref=f4e537]:
+            - listitem [ref=f4e538] [cursor=pointer]:
+              - button [ref=f4e539]
+              - paragraph [ref=f4e542]: Profile
+            - listitem [ref=f4e543] [cursor=pointer]:
+              - button [ref=f4e544]
+              - paragraph [ref=f4e547]: Addresses
+            - listitem [ref=f4e548] [cursor=pointer]:
+              - button [ref=f4e549]
+              - paragraph [ref=f4e552]: Emergency contacts
+            - separator [ref=f4e554]
+            - listitem [ref=f4e555] [cursor=pointer]:
+              - button [ref=f4e556]
+              - paragraph [ref=f4e559]: Settings

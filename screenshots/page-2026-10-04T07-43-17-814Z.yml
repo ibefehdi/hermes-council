@@ -1,0 +1,145 @@
+- generic [ref=f31e12]:
+  - generic [ref=f31e13]:
+    - link "Fresha" [ref=f31e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f31e16]:
+      - button [ref=f31e18] [cursor=pointer]:
+        - paragraph [ref=f31e20]: Continue setup
+      - button "Search" [ref=f31e22] [cursor=pointer]
+      - button "Performance insights" [ref=f31e24] [cursor=pointer]
+      - button "Notifications" [ref=f31e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f31e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f31e31] [cursor=pointer]:
+        - generic [ref=f31e32]: FA
+  - generic [ref=f31e34]:
+    - generic [ref=f31e38]:
+      - generic [ref=f31e39]:
+        - link [ref=f31e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f31e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f31e50] [cursor=pointer]
+        - button [ref=f31e54] [cursor=pointer]
+        - button [ref=f31e58] [cursor=pointer]
+        - button [ref=f31e62] [cursor=pointer]
+        - button [ref=f31e66] [cursor=pointer]
+        - button [ref=f31e70] [cursor=pointer]
+        - link [ref=f31e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f31e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f31e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f31e86] [cursor=pointer]
+    - generic [ref=f31e94]:
+      - generic [ref=f31e96]:
+        - button "Back" [ref=f31e97] [cursor=pointer]
+        - navigation [ref=f31e102]:
+          - list [ref=f31e103]:
+            - listitem [ref=f31e104]:
+              - link "Workspace settings •" [ref=f31e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f31e106]:
+              - link "Scheduling" [ref=f31e107] [cursor=pointer]:
+                - /url: /setup/scheduling
+      - generic [ref=f31e112]:
+        - paragraph [ref=f31e114]: Scheduling
+        - list [ref=f31e115]:
+          - listitem [ref=f31e116]:
+            - list [ref=f31e117]:
+              - listitem [ref=f31e118] [cursor=pointer]:
+                - link [ref=f31e119]:
+                  - /url: /setup/scheduling/time-and-calendar
+                - generic [ref=f31e120]: Time and calendar
+              - listitem [ref=f31e122] [cursor=pointer]:
+                - link [ref=f31e123]:
+                  - /url: /setup/scheduling/waitlist
+                - generic [ref=f31e124]: Waitlist appointments
+              - listitem [ref=f31e126] [cursor=pointer]:
+                - link [ref=f31e127]:
+                  - /url: /setup/scheduling/blocked-time-types
+                - generic [ref=f31e128]: Blocked time types
+              - listitem [ref=f31e130] [cursor=pointer]:
+                - link [ref=f31e131]:
+                  - /url: /setup/scheduling/resources
+                - generic [ref=f31e132]: Resources
+              - listitem [ref=f31e134] [cursor=pointer]:
+                - link [ref=f31e135]:
+                  - /url: /setup/scheduling/cancellation-reasons
+                - generic [ref=f31e136]: Cancellation reasons
+              - listitem [ref=f31e138] [cursor=pointer]:
+                - link [ref=f31e139]:
+                  - /url: /setup/scheduling/appointment-statuses
+                - generic [ref=f31e140]: Appointment statuses
+              - listitem [ref=f31e142] [cursor=pointer]:
+                - link [ref=f31e143]:
+                  - /url: /setup/scheduling/closed-periods
+                - generic [ref=f31e144]: Closed periods
+            - separator [ref=f31e147]
+          - listitem [ref=f31e148]:
+            - generic [ref=f31e149]: Online booking
+            - list [ref=f31e151]:
+              - listitem [ref=f31e152] [cursor=pointer]:
+                - link [ref=f31e153]:
+                  - /url: /setup/scheduling/dynamic-assignment
+                - generic [ref=f31e154]: Dynamic assignment
+              - listitem [ref=f31e156] [cursor=pointer]:
+                - link [ref=f31e157]:
+                  - /url: /setup/scheduling/availability
+                - generic [ref=f31e158]: Availability
+              - listitem [ref=f31e160] [cursor=pointer]:
+                - link [ref=f31e161]:
+                  - /url: /setup/scheduling/booking-options
+                - generic [ref=f31e162]: Booking options
+        - separator [ref=f31e164]
+        - list [ref=f31e165]:
+          - listitem [ref=f31e166]:
+            - list [ref=f31e167]:
+              - listitem [ref=f31e168] [cursor=pointer]:
+                - button [ref=f31e169]
+                - generic [ref=f31e170]: Marketplace profile
+              - listitem [ref=f31e172] [cursor=pointer]:
+                - button [ref=f31e173]
+                - generic [ref=f31e174]: Service menu
+              - listitem [ref=f31e176] [cursor=pointer]:
+                - button [ref=f31e177]
+                - generic [ref=f31e178]: Scheduled shifts
+      - generic [ref=f31e181]:
+        - generic [ref=f31e183]:
+          - paragraph [ref=f31e185]: Time and calendar
+          - paragraph [ref=f31e186]:
+            - text: Choose the time and date format for your business.
+            - link "Learn more" [ref=f31e187] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/calendar/486-set-up-your-calendar-time-and-date
+            - text: .
+        - generic [ref=f31e190]:
+          - generic [ref=f31e191]:
+            - heading "Date and time settings" [level=2] [ref=f31e193]
+            - button "Edit" [ref=f31e194] [cursor=pointer]
+          - generic [ref=f31e198]:
+            - generic [ref=f31e200]:
+              - paragraph [ref=f31e201]: Time zone
+              - paragraph [ref=f31e202]: (GMT +03:00) Kuwait
+            - generic [ref=f31e204]:
+              - paragraph [ref=f31e205]: Time format
+              - paragraph [ref=f31e206]: 24 hours (e.g. 21:00)
+            - generic [ref=f31e208]:
+              - paragraph [ref=f31e209]: First day of the week
+              - paragraph [ref=f31e210]: Saturday
+          - paragraph [ref=f31e214]: Daylight savings changes will automatically apply based on your selected time zone
+        - generic [ref=f31e217]:
+          - generic [ref=f31e218]:
+            - heading "Calendar settings" [level=2] [ref=f31e220]
+            - button "Edit" [ref=f31e221] [cursor=pointer]
+          - generic [ref=f31e225]:
+            - generic [ref=f31e227]:
+              - paragraph [ref=f31e228]: Appointment color source
+              - paragraph [ref=f31e229]: Category
+            - generic [ref=f31e231]:
+              - paragraph [ref=f31e232]: Display processing time
+              - paragraph [ref=f31e233]: Enabled
+            - generic [ref=f31e235]:
+              - paragraph [ref=f31e236]: Display blocked time
+              - paragraph [ref=f31e237]: Enabled

@@ -1,0 +1,211 @@
+- generic [ref=f45e1]:
+  - generic [ref=f45e12]:
+    - generic [ref=f45e13]:
+      - link "Fresha" [ref=f45e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f45e16]:
+        - button [ref=f45e18] [cursor=pointer]:
+          - paragraph [ref=f45e20]: Continue setup
+        - button "Search" [ref=f45e22] [cursor=pointer]
+        - button "Performance insights" [ref=f45e24] [cursor=pointer]
+        - button "Notifications" [ref=f45e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f45e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f45e31] [cursor=pointer]:
+          - generic [ref=f45e32]: FA
+    - generic [ref=f45e34]:
+      - generic [ref=f45e35]:
+        - generic [ref=f45e38]:
+          - generic [ref=f45e39]:
+            - link [ref=f45e42] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f45e46] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f45e50] [cursor=pointer]
+            - button [ref=f45e54] [cursor=pointer]
+            - button [ref=f45e58] [cursor=pointer]
+            - button [ref=f45e62] [cursor=pointer]
+            - button [ref=f45e66] [cursor=pointer]
+            - button [ref=f45e70] [cursor=pointer]
+            - link [ref=f45e74] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f45e78] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f45e82] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f45e86] [cursor=pointer]
+        - generic [ref=f45e89]:
+          - button "Collapse Navigation Menu" [ref=f45e91] [cursor=pointer]
+          - generic [ref=f45e98]:
+            - paragraph [ref=f45e99]: Team
+            - link [ref=f45e101] [cursor=pointer]:
+              - /url: /team/team-members
+              - paragraph [ref=f45e102]: Team members
+            - link [ref=f45e104] [cursor=pointer]:
+              - /url: /team/scheduled-shifts
+              - paragraph [ref=f45e105]: Scheduled shifts
+            - link [ref=f45e107] [cursor=pointer]:
+              - /url: /team/timesheets
+              - paragraph [ref=f45e108]: Timesheets
+            - link [ref=f45e110] [cursor=pointer]:
+              - /url: /team/payrun/overview
+              - paragraph [ref=f45e111]: Pay runs
+      - generic [ref=f45e117]:
+        - generic [ref=f45e119]:
+          - generic [ref=f45e121]:
+            - paragraph [ref=f45e122]: Team members
+            - generic [ref=f45e123]: "1"
+          - generic [ref=f45e125]:
+            - button "Options" [ref=f45e128] [cursor=pointer]
+            - button "Add" [ref=f45e133] [cursor=pointer]
+        - generic [ref=f45e137]:
+          - generic [ref=f45e140]:
+            - paragraph [ref=f45e143]:
+              - text: Activate your plan to ensure uninterrupted access after your free trial ends in
+              - strong [ref=f45e144]: 7 days
+            - button "Activate plan" [ref=f45e147] [cursor=pointer]
+          - generic [ref=f45e151]:
+            - generic [ref=f45e154]:
+              - generic [ref=f45e155]:
+                - generic [ref=f45e156]:
+                  - generic [ref=f45e157]: Search
+                  - textbox "Search" [ref=f45e162]:
+                    - /placeholder: Search team members
+                - button "Filters" [ref=f45e163] [cursor=pointer]
+              - button "Custom order" [ref=f45e172] [cursor=pointer]
+            - generic [ref=f45e178]:
+              - table [ref=f45e180]:
+                - rowgroup [ref=f45e187]:
+                  - row [ref=f45e188]:
+                    - columnheader [ref=f45e189]:
+                      - generic [ref=f45e191] [cursor=pointer]:
+                        - checkbox
+                    - columnheader [ref=f45e192] [cursor=pointer]:
+                      - paragraph [ref=f45e195]: Name
+                    - columnheader [ref=f45e197]:
+                      - paragraph [ref=f45e200]: Contact
+                    - columnheader [ref=f45e201]:
+                      - paragraph [ref=f45e204]: Permission role
+                    - columnheader [ref=f45e205]
+              - table [ref=f45e206]:
+                - rowgroup [ref=f45e213]:
+                  - row [ref=f45e214] [cursor=pointer]:
+                    - cell [ref=f45e215]:
+                      - generic [ref=f45e217]:
+                        - checkbox
+                    - cell "FA Fahad Asad" [ref=f45e218]:
+                      - generic [ref=f45e219]:
+                        - generic [ref=f45e220]: FA
+                        - generic [ref=f45e223]:
+                          - paragraph [ref=f45e224]: Fahad Asad
+                          - paragraph
+                    - cell [ref=f45e225]:
+                      - generic [ref=f45e227]:
+                        - link "fahad.asad2016@gmail.com" [ref=f45e228]:
+                          - /url: mailto:fahad.asad2016@gmail.com
+                        - link "+965 506 10221" [ref=f45e230]:
+                          - /url: tel:+965 506 10221
+                    - cell [ref=f45e232]:
+                      - paragraph [ref=f45e234]: Workspace owner
+                    - cell [ref=f45e235]:
+                      - button "Actions" [ref=f45e237]
+                - rowgroup [ref=f45e242]:
+                  - row [ref=f45e243]:
+                    - cell [ref=f45e244]
+  - dialog [ref=f45e245]:
+    - generic [ref=f45e246]:
+      - button "Close Drawer" [ref=f45e248] [cursor=pointer]
+      - generic [ref=f45e254]:
+        - generic: Overview
+        - heading "Overview" [level=1] [ref=f45e261]
+        - generic [ref=f45e313]:
+          - generic [ref=f45e314]:
+            - generic [ref=f45e315]:
+              - paragraph [ref=f45e316]: Performance dashboard
+              - link "View full dashboard" [ref=f45e317] [cursor=pointer]:
+                - /url: /reports/table/performance?employee_id=5621666&shortcut=week_to_date
+            - button "Week to date" [ref=f45e319] [cursor=pointer]
+          - generic [ref=f45e326]:
+            - generic [ref=f45e330]:
+              - generic [ref=f45e331]:
+                - generic [ref=f45e332]:
+                  - paragraph [ref=f45e335]: Sales
+                  - paragraph [ref=f45e340]: KWD 190.000
+                - generic [ref=f45e341]:
+                  - generic [ref=f45e342]: 0%
+                  - paragraph [ref=f45e344]: vs prev period
+              - application [ref=f45e348]:
+                - generic [ref=f45e358]:
+                  - generic [ref=f45e359]:
+                    - paragraph [ref=f45e363]: Sep 28
+                    - paragraph [ref=f45e367]: Sep 30
+                    - paragraph [ref=f45e371]: Oct 2
+                    - paragraph [ref=f45e375]: Oct 3
+                    - paragraph [ref=f45e379]: Oct 4
+                  - generic [ref=f45e380]:
+                    - generic [ref=f45e381]: KWD 0
+                    - generic [ref=f45e383]: KWD 50
+                    - generic [ref=f45e385]: KWD 100
+                    - generic [ref=f45e387]: KWD 150
+                    - generic [ref=f45e389]: KWD 200
+            - generic [ref=f45e395]:
+              - generic [ref=f45e396]:
+                - paragraph [ref=f45e399]: Appointments
+                - paragraph [ref=f45e404]: "0"
+              - generic [ref=f45e405]:
+                - generic [ref=f45e406]: 0%
+                - paragraph [ref=f45e408]: vs prev period
+            - generic [ref=f45e413]:
+              - generic [ref=f45e414]:
+                - paragraph [ref=f45e417]: Clients
+                - paragraph [ref=f45e422]: "0"
+              - generic [ref=f45e423]:
+                - generic [ref=f45e424]: 0%
+                - paragraph [ref=f45e426]: vs prev period
+            - generic [ref=f45e431]:
+              - generic [ref=f45e432]:
+                - paragraph [ref=f45e435]: Occupancy
+                - paragraph [ref=f45e440]: 0%
+              - generic [ref=f45e441]:
+                - generic [ref=f45e442]: 0%
+                - paragraph [ref=f45e444]: vs prev period
+            - generic [ref=f45e449]:
+              - generic [ref=f45e450]:
+                - paragraph [ref=f45e453]: Retention
+                - paragraph [ref=f45e458]: 0%
+              - generic [ref=f45e459]:
+                - generic [ref=f45e460]: 0%
+                - paragraph [ref=f45e462]: vs prev period
+        - generic [ref=f45e271]:
+          - generic [ref=f45e275]:
+            - generic [ref=f45e276]:
+              - paragraph [ref=f45e278]: Fahad
+              - button "Actions" [expanded] [ref=f45e280] [cursor=pointer]
+            - generic [ref=f45e285]: FA
+          - separator [ref=f45e291]
+          - list [ref=f45e294]:
+            - listitem [ref=f45e295]:
+              - list [ref=f45e296]:
+                - listitem [ref=f45e297] [cursor=pointer]:
+                  - button [ref=f45e298]
+                  - generic [ref=f45e299]: Overview
+                - listitem [ref=f45e301] [cursor=pointer]:
+                  - button [ref=f45e302]
+                  - generic [ref=f45e303]: Personal
+                - listitem [ref=f45e305] [cursor=pointer]:
+                  - button [ref=f45e306]
+                  - generic [ref=f45e307]: Workspace
+                - listitem [ref=f45e309] [cursor=pointer]:
+                  - button [ref=f45e310]
+                  - generic [ref=f45e311]: Pay
+  - generic [aria-hidden] [ref=f45e463]: Oct 3
+  - generic [ref=f45e465]:
+    - menu [active] [ref=f45e467]:
+      - listitem [ref=f45e468]:
+        - list [ref=f45e469]:
+          - menuitem "Edit" [ref=f45e470] [cursor=pointer]
+          - menuitem "View calendar" [ref=f45e473] [cursor=pointer]
+          - menuitem "View scheduled shifts" [ref=f45e476] [cursor=pointer]
+          - menuitem "Add time off" [ref=f45e479] [cursor=pointer]
+    - button "Dismiss" [ref=f45e483]

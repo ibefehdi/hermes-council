@@ -1,0 +1,92 @@
+- generic [ref=f114e12]:
+  - generic [ref=f114e13]:
+    - link "Fresha" [ref=f114e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f114e16]:
+      - button [ref=f114e18] [cursor=pointer]:
+        - paragraph [ref=f114e20]: Continue setup
+      - button "Search" [ref=f114e22] [cursor=pointer]
+      - button "Performance insights" [ref=f114e24] [cursor=pointer]
+      - button "Notifications" [ref=f114e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f114e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f114e31] [cursor=pointer]:
+        - generic [ref=f114e32]: FA
+  - generic [ref=f114e34]:
+    - generic [ref=f114e38]:
+      - generic [ref=f114e39]:
+        - link [ref=f114e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f114e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f114e50] [cursor=pointer]
+        - button [ref=f114e54] [cursor=pointer]
+        - button [ref=f114e58] [cursor=pointer]
+        - button [ref=f114e62] [cursor=pointer]
+        - button [ref=f114e66] [cursor=pointer]
+        - button [ref=f114e70] [cursor=pointer]
+        - link [ref=f114e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f114e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f114e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f114e86] [cursor=pointer]
+    - generic [ref=f114e94]:
+      - generic [ref=f114e96]:
+        - button "Back" [ref=f114e97] [cursor=pointer]
+        - navigation [ref=f114e102]:
+          - list [ref=f114e103]:
+            - listitem [ref=f114e104]:
+              - link "Workspace settings •" [ref=f114e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f114e106]:
+              - link "Clients" [ref=f114e107] [cursor=pointer]:
+                - /url: /setup/clients
+      - generic [ref=f114e112]:
+        - paragraph [ref=f114e114]: Clients
+        - list [ref=f114e115]:
+          - listitem [ref=f114e116]:
+            - list [ref=f114e117]:
+              - listitem [ref=f114e118] [cursor=pointer]:
+                - link [ref=f114e119]:
+                  - /url: /setup/clients/client-sources
+                - generic [ref=f114e120]: Client sources
+              - listitem [ref=f114e122] [cursor=pointer]:
+                - link [ref=f114e123]:
+                  - /url: /setup/clients/client-tags
+                - generic [ref=f114e124]: Client tags
+              - listitem [ref=f114e126] [cursor=pointer]:
+                - link [ref=f114e127]:
+                  - /url: /setup/clients/messages
+                - generic [ref=f114e128]: Client Connect
+        - separator [ref=f114e130]
+        - list [ref=f114e131]:
+          - listitem [ref=f114e132]:
+            - list [ref=f114e133]:
+              - listitem [ref=f114e134] [cursor=pointer]:
+                - button [ref=f114e135]
+                - generic [ref=f114e136]: Clients list
+              - listitem [ref=f114e138] [cursor=pointer]:
+                - button [ref=f114e139]
+                - generic [ref=f114e140]: Client segments
+              - listitem [ref=f114e142] [cursor=pointer]:
+                - button [ref=f114e143]
+                - generic [ref=f114e144]: Client loyalty
+      - generic [ref=f114e147]:
+        - generic [ref=f114e148]:
+          - generic [ref=f114e149]:
+            - paragraph [ref=f114e151]: Client tags
+            - paragraph [ref=f114e152]:
+              - text: Manually tag clients for easier management.
+              - link "Learn more" [ref=f114e153] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/clients/100679-assign-tags-to-clients
+              - text: .
+          - button "Add" [ref=f114e156] [cursor=pointer]
+        - generic [ref=f114e164]:
+          - img "Client tags example" [ref=f114e165]
+          - generic [ref=f114e166]:
+            - generic [ref=f114e167]: Set up client tags
+            - generic [ref=f114e168]: Organize clients into groups for easier management and insights
+          - button "Add tag" [ref=f114e170] [cursor=pointer]

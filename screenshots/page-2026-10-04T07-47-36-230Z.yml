@@ -1,0 +1,423 @@
+- generic [active] [ref=f33e1]:
+  - generic [ref=f33e12]:
+    - generic [ref=f33e13]:
+      - link "Fresha" [ref=f33e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f33e16]:
+        - button [ref=f33e18] [cursor=pointer]:
+          - paragraph [ref=f33e20]: Continue setup
+        - button "Search" [ref=f33e22] [cursor=pointer]
+        - button "Performance insights" [ref=f33e24] [cursor=pointer]
+        - button "Notifications" [ref=f33e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f33e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f33e31] [cursor=pointer]:
+          - generic [ref=f33e32]: FA
+    - generic [ref=f33e34]:
+      - generic [ref=f33e318]:
+        - generic [ref=f33e319]:
+          - link [ref=f33e322] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f33e326] [cursor=pointer]:
+            - /url: /calendar?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working&appt_startDate=2026-10-04&appt_employeeId=5621666&appt_roomId=&appt_locationId=3216614&appt_customerId=&appt_groupId=&appt_startTime=&appt_flow=pickFromCalendar
+          - button [ref=f33e330] [cursor=pointer]
+          - button [ref=f33e334] [cursor=pointer]
+          - button [ref=f33e338] [cursor=pointer]
+          - button [ref=f33e342] [cursor=pointer]
+          - button [ref=f33e346] [cursor=pointer]
+          - button [ref=f33e350] [cursor=pointer]
+          - link [ref=f33e354] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f33e358] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f33e362] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f33e366] [cursor=pointer]
+      - generic [ref=f33e89]:
+        - generic [ref=f33e91]:
+          - generic [ref=f33e92]:
+            - button "Today" [ref=f33e93] [cursor=pointer]
+            - group [ref=f33e97]:
+              - button "Go to previous month" [ref=f33e98] [cursor=pointer]
+              - button "Sun, Oct 4" [ref=f33e103] [cursor=pointer]
+              - button "Go to next month" [ref=f33e107] [cursor=pointer]
+            - paragraph [ref=f33e112]: Button group
+            - button "Scheduled team" [ref=f33e113] [cursor=pointer]
+            - link "Visibility Filters" [ref=f33e120] [cursor=pointer]:
+              - /url: /calendar/drawer/visibility-filters?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working&appt_startDate=2026-10-04&appt_employeeId=5621666&appt_roomId=&appt_locationId=3216614&appt_customerId=&appt_groupId=&appt_startTime=&appt_flow=pickFromCalendar
+          - generic [ref=f33e125]:
+            - link "Calendar Settings" [ref=f33e128] [cursor=pointer]:
+              - /url: /calendar/drawer/settings?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working&appt_startDate=2026-10-04&appt_employeeId=5621666&appt_roomId=&appt_locationId=3216614&appt_customerId=&appt_groupId=&appt_startTime=&appt_flow=pickFromCalendar
+            - link "Waitlist" [ref=f33e134] [cursor=pointer]:
+              - /url: /calendar/drawer/waitlist?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working&appt_startDate=2026-10-04&appt_employeeId=5621666&appt_roomId=&appt_locationId=3216614&appt_customerId=&appt_groupId=&appt_startTime=&appt_flow=pickFromCalendar
+            - group [ref=f33e139]:
+              - button "Reset calendar to default view" [ref=f33e141] [cursor=pointer]
+              - button "Day" [ref=f33e146] [cursor=pointer]
+            - paragraph [ref=f33e151]: Button group
+            - button "Add" [ref=f33e152] [cursor=pointer]
+        - generic [ref=f33e162]:
+          - generic [ref=f33e164]:
+            - generic [ref=f33e165]: 00:00
+            - generic [ref=f33e167]: 01:00
+            - generic [ref=f33e169]: 02:00
+            - generic [ref=f33e171]: 03:00
+            - generic [ref=f33e173]: 04:00
+            - generic [ref=f33e175]: 05:00
+            - generic [ref=f33e177]: 06:00
+            - generic [ref=f33e179]: 07:00
+            - generic [ref=f33e181]: 08:00
+            - generic [ref=f33e183]: 09:00
+            - generic [ref=f33e185]: 10:00
+            - generic [ref=f33e187]: 11:00
+            - generic [ref=f33e189]: 12:00
+            - generic [ref=f33e191]: 13:00
+            - generic [ref=f33e193]: 14:00
+            - generic [ref=f33e195]: 15:00
+            - generic [ref=f33e197]: 16:00
+            - generic [ref=f33e199]: 17:00
+            - generic [ref=f33e201]: 18:00
+            - generic [ref=f33e203]: 19:00
+            - generic [ref=f33e205]: 20:00
+            - generic [ref=f33e207]: 21:00
+            - generic [ref=f33e209]: 22:00
+            - generic [ref=f33e211]: 23:00
+            - generic [ref=f33e213]: 10:47
+          - button
+          - button
+          - generic [ref=f33e215]:
+            - generic [ref=f33e216]:
+              - button "FA Fahad Asad" [ref=f33e220] [cursor=pointer]:
+                - generic [ref=f33e221]:
+                  - generic [ref=f33e222]: FA
+                  - paragraph [ref=f33e226]: Fahad Asad
+              - button "FA Fahad Asad" [ref=f33e231] [cursor=pointer]:
+                - generic [ref=f33e232]:
+                  - generic [ref=f33e233]: FA
+                  - paragraph [ref=f33e237]: Fahad Asad
+              - button "FA Fahad Asad" [ref=f33e242] [cursor=pointer]:
+                - generic [ref=f33e243]:
+                  - generic [ref=f33e244]: FA
+                  - paragraph [ref=f33e248]: Fahad Asad
+            - generic [ref=f33e255]:
+              - generic [ref=f33e256] [cursor=pointer]:
+                - generic [ref=f33e257]:
+                  - generic [ref=f33e258]: 09:00 - 09:45
+                  - strong [ref=f33e259]: John Doe
+                - generic [ref=f33e260]: Haircut
+              - generic [ref=f33e261] [cursor=pointer]:
+                - generic [ref=f33e262]:
+                  - generic [ref=f33e263]: 10:00 - 10:35
+                  - strong [ref=f33e264]: Jack Doe
+                - generic [ref=f33e265]: Blow Dry
+              - generic [ref=f33e266] [cursor=pointer]:
+                - generic [ref=f33e267]:
+                  - generic [ref=f33e268]: 11:00 - 12:15
+                  - strong [ref=f33e269]: Jane Doe
+                - generic [ref=f33e270]: Hair Color
+  - dialog [ref=f33e368]:
+    - generic [ref=f33e369]:
+      - generic [ref=f33e370]:
+        - button "Close Drawer" [ref=f33e371] [cursor=pointer]
+        - button "Minimize Drawer" [ref=f33e376] [cursor=pointer]
+        - button "Focus appointment" [ref=f33e381] [cursor=pointer]
+      - generic [ref=f33e390]:
+        - button [ref=f33e391] [cursor=pointer]
+        - generic:
+          - generic:
+            - generic:
+              - paragraph: Add client
+              - paragraph: Or leave empty for walk-ins
+      - generic [ref=f33e393]:
+        - paragraph [ref=f33e1178]: Select a time
+        - generic [ref=f33e609]:
+          - list [ref=f33e610]:
+            - listitem [ref=f33e611]:
+              - button "Services" [ref=f33e612] [cursor=pointer]
+            - listitem [ref=f33e614]:
+              - button "Time" [ref=f33e615] [cursor=pointer]
+          - heading "Select a time" [level=1] [ref=f33e618]
+        - generic [ref=f33e620]:
+          - generic [ref=f33e621]:
+            - button [ref=f33e622] [cursor=pointer]:
+              - generic [ref=f33e623]:
+                - generic [ref=f33e624]: F
+                - paragraph [ref=f33e629]: Fahad
+            - button "2026-10-05" [ref=f33e1179] [cursor=pointer]
+          - generic [ref=f33e636]:
+            - generic [ref=f33e638]:
+              - button "Go to earlier date" [disabled]
+              - button "Go to later date" [ref=f33e941] [cursor=pointer]
+            - generic [ref=f33e640]:
+              - generic: October
+              - button [ref=f33e946] [cursor=pointer]:
+                - paragraph [ref=f33e947]: 4 Sun
+                - generic [aria-hidden] [ref=f33e949]: "4"
+                - generic [aria-hidden] [ref=f33e950]: Sun
+              - button [ref=f33e951] [cursor=pointer]:
+                - paragraph [ref=f33e952]: 5 Mon
+                - generic [aria-hidden] [ref=f33e954]: "5"
+                - generic [aria-hidden] [ref=f33e955]: Mon
+              - button [ref=f33e956] [cursor=pointer]:
+                - paragraph [ref=f33e957]: 6 Tue
+                - generic [aria-hidden] [ref=f33e959]: "6"
+                - generic [aria-hidden] [ref=f33e960]: Tue
+              - button [ref=f33e961] [cursor=pointer]:
+                - paragraph [ref=f33e962]: 7 Wed
+                - generic [aria-hidden] [ref=f33e964]: "7"
+                - generic [aria-hidden] [ref=f33e965]: Wed
+              - button [ref=f33e966] [cursor=pointer]:
+                - paragraph [ref=f33e967]: 8 Thu
+                - generic [aria-hidden] [ref=f33e969]: "8"
+                - generic [aria-hidden] [ref=f33e970]: Thu
+              - button [ref=f33e971] [cursor=pointer]:
+                - paragraph [ref=f33e972]: 9 Fri
+                - generic [aria-hidden] [ref=f33e974]: "9"
+                - generic [aria-hidden] [ref=f33e975]: Fri
+              - button [ref=f33e976] [cursor=pointer]:
+                - paragraph [ref=f33e977]: 10 Sat
+                - generic [aria-hidden] [ref=f33e979]: "10"
+                - generic [aria-hidden] [ref=f33e980]: Sat
+              - button [ref=f33e981] [cursor=pointer]:
+                - paragraph [ref=f33e982]: 11 Sun
+                - generic [aria-hidden] [ref=f33e984]: "11"
+                - generic [aria-hidden] [ref=f33e985]: Sun
+              - button [ref=f33e986] [cursor=pointer]:
+                - paragraph [ref=f33e987]: 12 Mon
+                - generic [aria-hidden] [ref=f33e989]: "12"
+                - generic [aria-hidden] [ref=f33e990]: Mon
+              - button [ref=f33e991] [cursor=pointer]:
+                - paragraph [ref=f33e992]: 13 Tue
+                - generic [aria-hidden] [ref=f33e994]: "13"
+                - generic [aria-hidden] [ref=f33e995]: Tue
+              - button [ref=f33e996] [cursor=pointer]:
+                - paragraph [ref=f33e997]: 14 Wed
+                - generic [aria-hidden] [ref=f33e999]: "14"
+                - generic [aria-hidden] [ref=f33e1000]: Wed
+              - button [ref=f33e1001] [cursor=pointer]:
+                - paragraph [ref=f33e1002]: 15 Thu
+                - generic [aria-hidden] [ref=f33e1004]: "15"
+                - generic [aria-hidden] [ref=f33e1005]: Thu
+              - button [ref=f33e1006] [cursor=pointer]:
+                - paragraph [ref=f33e1007]: 16 Fri
+                - generic [aria-hidden] [ref=f33e1009]: "16"
+                - generic [aria-hidden] [ref=f33e1010]: Fri
+              - button [ref=f33e1011] [cursor=pointer]:
+                - paragraph [ref=f33e1012]: 17 Sat
+                - generic [aria-hidden] [ref=f33e1014]: "17"
+                - generic [aria-hidden] [ref=f33e1015]: Sat
+              - button [ref=f33e1016] [cursor=pointer]:
+                - paragraph [ref=f33e1017]: 18 Sun
+                - generic [aria-hidden] [ref=f33e1019]: "18"
+                - generic [aria-hidden] [ref=f33e1020]: Sun
+              - button [ref=f33e1021] [cursor=pointer]:
+                - paragraph [ref=f33e1022]: 19 Mon
+                - generic [aria-hidden] [ref=f33e1024]: "19"
+                - generic [aria-hidden] [ref=f33e1025]: Mon
+              - button [ref=f33e1026] [cursor=pointer]:
+                - paragraph [ref=f33e1027]: 20 Tue
+                - generic [aria-hidden] [ref=f33e1029]: "20"
+                - generic [aria-hidden] [ref=f33e1030]: Tue
+              - button [ref=f33e1031] [cursor=pointer]:
+                - paragraph [ref=f33e1032]: 21 Wed
+                - generic [aria-hidden] [ref=f33e1034]: "21"
+                - generic [aria-hidden] [ref=f33e1035]: Wed
+              - button [ref=f33e1036] [cursor=pointer]:
+                - paragraph [ref=f33e1037]: 22 Thu
+                - generic [aria-hidden] [ref=f33e1039]: "22"
+                - generic [aria-hidden] [ref=f33e1040]: Thu
+              - button [ref=f33e1041] [cursor=pointer]:
+                - paragraph [ref=f33e1042]: 23 Fri
+                - generic [aria-hidden] [ref=f33e1044]: "23"
+                - generic [aria-hidden] [ref=f33e1045]: Fri
+              - button [ref=f33e1046] [cursor=pointer]:
+                - paragraph [ref=f33e1047]: 24 Sat
+                - generic [aria-hidden] [ref=f33e1049]: "24"
+                - generic [aria-hidden] [ref=f33e1050]: Sat
+              - button [ref=f33e1051] [cursor=pointer]:
+                - paragraph [ref=f33e1052]: 25 Sun
+                - generic [aria-hidden] [ref=f33e1054]: "25"
+                - generic [aria-hidden] [ref=f33e1055]: Sun
+              - button [ref=f33e1056] [cursor=pointer]:
+                - paragraph [ref=f33e1057]: 26 Mon
+                - generic [aria-hidden] [ref=f33e1059]: "26"
+                - generic [aria-hidden] [ref=f33e1060]: Mon
+              - button [ref=f33e1061] [cursor=pointer]:
+                - paragraph [ref=f33e1062]: 27 Tue
+                - generic [aria-hidden] [ref=f33e1064]: "27"
+                - generic [aria-hidden] [ref=f33e1065]: Tue
+              - button [ref=f33e1066] [cursor=pointer]:
+                - paragraph [ref=f33e1067]: 28 Wed
+                - generic [aria-hidden] [ref=f33e1069]: "28"
+                - generic [aria-hidden] [ref=f33e1070]: Wed
+              - button [ref=f33e1071] [cursor=pointer]:
+                - paragraph [ref=f33e1072]: 29 Thu
+                - generic [aria-hidden] [ref=f33e1074]: "29"
+                - generic [aria-hidden] [ref=f33e1075]: Thu
+              - button [ref=f33e1076] [cursor=pointer]:
+                - paragraph [ref=f33e1077]: 30 Fri
+                - generic [aria-hidden] [ref=f33e1081]: "30"
+                - generic [aria-hidden] [ref=f33e1082]: Fri
+              - button [ref=f33e1083] [cursor=pointer]:
+                - paragraph [ref=f33e1084]: 31 Sat
+                - generic [aria-hidden] [ref=f33e1088]: "31"
+                - generic [aria-hidden] [ref=f33e1089]: Sat
+              - generic: November
+              - button [ref=f33e1090] [cursor=pointer]:
+                - paragraph [ref=f33e1091]: 1 Sun
+                - generic [aria-hidden] [ref=f33e1095]: "1"
+                - generic [aria-hidden] [ref=f33e1096]: Sun
+              - button [ref=f33e1097] [cursor=pointer]:
+                - paragraph [ref=f33e1098]: 2 Mon
+                - generic [aria-hidden] [ref=f33e1102]: "2"
+                - generic [aria-hidden] [ref=f33e1103]: Mon
+              - button [ref=f33e1104] [cursor=pointer]:
+                - paragraph [ref=f33e1105]: 3 Tue
+                - generic [aria-hidden] [ref=f33e1109]: "3"
+                - generic [aria-hidden] [ref=f33e1110]: Tue
+              - button [ref=f33e1111] [cursor=pointer]:
+                - paragraph [ref=f33e1112]: 4 Wed
+                - generic [aria-hidden] [ref=f33e1116]: "4"
+                - generic [aria-hidden] [ref=f33e1117]: Wed
+              - button [ref=f33e1118] [cursor=pointer]:
+                - paragraph [ref=f33e1119]: 5 Thu
+                - generic [aria-hidden] [ref=f33e1123]: "5"
+                - generic [aria-hidden] [ref=f33e1124]: Thu
+              - button [ref=f33e1125] [cursor=pointer]:
+                - paragraph [ref=f33e1126]: 6 Fri
+                - generic [aria-hidden] [ref=f33e1130]: "6"
+                - generic [aria-hidden] [ref=f33e1131]: Fri
+              - button [ref=f33e1132] [cursor=pointer]:
+                - paragraph [ref=f33e1133]: 7 Sat
+                - generic [aria-hidden] [ref=f33e1137]: "7"
+                - generic [aria-hidden] [ref=f33e1138]: Sat
+              - button [ref=f33e1139] [cursor=pointer]:
+                - paragraph [ref=f33e1140]: 8 Sun
+                - generic [aria-hidden] [ref=f33e1144]: "8"
+                - generic [aria-hidden] [ref=f33e1145]: Sun
+              - button [ref=f33e1146] [cursor=pointer]:
+                - paragraph [ref=f33e1147]: 9 Mon
+                - generic [aria-hidden] [ref=f33e1151]: "9"
+                - generic [aria-hidden] [ref=f33e1152]: Mon
+              - button [ref=f33e1153] [cursor=pointer]:
+                - paragraph [ref=f33e1154]: 10 Tue
+                - generic [aria-hidden] [ref=f33e1158]: "10"
+                - generic [aria-hidden] [ref=f33e1159]: Tue
+          - generic [ref=f33e909]:
+            - paragraph [ref=f33e910]: Available times
+            - button "Pick from calendar" [ref=f33e911] [cursor=pointer]
+          - generic [ref=f33e916]:
+            - generic [ref=f33e1180] [cursor=pointer]:
+              - button [ref=f33e1181]
+              - heading "10:00" [level=3] [ref=f33e1186]
+            - generic [ref=f33e1187] [cursor=pointer]:
+              - button [ref=f33e1188]
+              - heading "10:15" [level=3] [ref=f33e1193]
+            - generic [ref=f33e1194] [cursor=pointer]:
+              - button [ref=f33e1195]
+              - heading "10:30" [level=3] [ref=f33e1200]
+            - generic [ref=f33e1201] [cursor=pointer]:
+              - button [ref=f33e1202]
+              - heading "10:45" [level=3] [ref=f33e1207]
+            - generic [ref=f33e1208] [cursor=pointer]:
+              - button [ref=f33e1209]
+              - heading "11:00" [level=3] [ref=f33e1214]
+            - generic [ref=f33e1215] [cursor=pointer]:
+              - button [ref=f33e1216]
+              - heading "11:15" [level=3] [ref=f33e1221]
+            - generic [ref=f33e1222] [cursor=pointer]:
+              - button [ref=f33e1223]
+              - heading "11:30" [level=3] [ref=f33e1228]
+            - generic [ref=f33e1229] [cursor=pointer]:
+              - button [ref=f33e1230]
+              - heading "11:45" [level=3] [ref=f33e1235]
+            - generic [ref=f33e1236] [cursor=pointer]:
+              - button [ref=f33e1237]
+              - heading "12:00" [level=3] [ref=f33e1242]
+            - generic [ref=f33e1243] [cursor=pointer]:
+              - button [ref=f33e1244]
+              - heading "12:15" [level=3] [ref=f33e1249]
+            - generic [ref=f33e1250] [cursor=pointer]:
+              - button [ref=f33e1251]
+              - heading "12:30" [level=3] [ref=f33e1256]
+            - generic [ref=f33e1257] [cursor=pointer]:
+              - button [ref=f33e1258]
+              - heading "12:45" [level=3] [ref=f33e1263]
+            - generic [ref=f33e1264] [cursor=pointer]:
+              - button [ref=f33e1265]
+              - heading "13:00" [level=3] [ref=f33e1270]
+            - generic [ref=f33e1271] [cursor=pointer]:
+              - button [ref=f33e1272]
+              - heading "13:15" [level=3] [ref=f33e1277]
+            - generic [ref=f33e1278] [cursor=pointer]:
+              - button [ref=f33e1279]
+              - heading "13:30" [level=3] [ref=f33e1284]
+            - generic [ref=f33e1285] [cursor=pointer]:
+              - button [ref=f33e1286]
+              - heading "13:45" [level=3] [ref=f33e1291]
+            - generic [ref=f33e1292] [cursor=pointer]:
+              - button [ref=f33e1293]
+              - heading "14:00" [level=3] [ref=f33e1298]
+            - generic [ref=f33e1299] [cursor=pointer]:
+              - button [ref=f33e1300]
+              - heading "14:15" [level=3] [ref=f33e1305]
+            - generic [ref=f33e1306] [cursor=pointer]:
+              - button [ref=f33e1307]
+              - heading "14:30" [level=3] [ref=f33e1312]
+            - generic [ref=f33e1313] [cursor=pointer]:
+              - button [ref=f33e1314]
+              - heading "14:45" [level=3] [ref=f33e1319]
+            - generic [ref=f33e1320] [cursor=pointer]:
+              - button [ref=f33e1321]
+              - heading "15:00" [level=3] [ref=f33e1326]
+            - generic [ref=f33e1327] [cursor=pointer]:
+              - button [ref=f33e1328]
+              - heading "15:15" [level=3] [ref=f33e1333]
+            - generic [ref=f33e1334] [cursor=pointer]:
+              - button [ref=f33e1335]
+              - heading "15:30" [level=3] [ref=f33e1340]
+            - generic [ref=f33e1341] [cursor=pointer]:
+              - button [ref=f33e1342]
+              - heading "15:45" [level=3] [ref=f33e1347]
+            - generic [ref=f33e1348] [cursor=pointer]:
+              - button [ref=f33e1349]
+              - heading "16:00" [level=3] [ref=f33e1354]
+            - generic [ref=f33e1355] [cursor=pointer]:
+              - button [ref=f33e1356]
+              - heading "16:15" [level=3] [ref=f33e1361]
+            - generic [ref=f33e1362] [cursor=pointer]:
+              - button [ref=f33e1363]
+              - heading "16:30" [level=3] [ref=f33e1368]
+            - generic [ref=f33e1369] [cursor=pointer]:
+              - button [ref=f33e1370]
+              - heading "16:45" [level=3] [ref=f33e1375]
+            - generic [ref=f33e1376] [cursor=pointer]:
+              - button [ref=f33e1377]
+              - heading "17:00" [level=3] [ref=f33e1382]
+            - generic [ref=f33e1383] [cursor=pointer]:
+              - button [ref=f33e1384]
+              - heading "17:15" [level=3] [ref=f33e1389]
+            - generic [ref=f33e1390] [cursor=pointer]:
+              - button [ref=f33e1391]
+              - heading "17:30" [level=3] [ref=f33e1396]
+            - generic [ref=f33e1397] [cursor=pointer]:
+              - button [ref=f33e1398]
+              - heading "17:45" [level=3] [ref=f33e1403]
+            - generic [ref=f33e1404] [cursor=pointer]:
+              - button [ref=f33e1405]
+              - heading "18:00" [level=3] [ref=f33e1410]
+        - generic [ref=f33e923]:
+          - generic [ref=f33e924]:
+            - generic:
+              - button "Collapse"
+            - generic [ref=f33e925]:
+              - generic [ref=f33e927]:
+                - generic [ref=f33e928]:
+                  - paragraph [ref=f33e930]: Total
+                  - paragraph [ref=f33e931]: KWD 25
+                - separator [ref=f33e933]
+              - button "Toggle" [ref=f33e935] [cursor=pointer]:
+                - generic [ref=f33e936]:
+                  - paragraph [ref=f33e938]: To pay
+                  - paragraph [ref=f33e940]: KWD 25
+          - button "Continue" [disabled]

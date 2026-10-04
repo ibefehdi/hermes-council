@@ -1,0 +1,57 @@
+- generic [ref=f98e12]:
+  - generic [ref=f98e13]:
+    - link "Fresha" [ref=f98e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f98e16]:
+      - button "Search" [ref=f98e18] [cursor=pointer]
+      - button "Performance insights" [ref=f98e20] [cursor=pointer]
+      - button "News" [ref=f98e22] [cursor=pointer]
+      - button "Notifications" [ref=f98e25] [cursor=pointer]
+      - link "Fresha Connect" [ref=f98e27] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f98e29] [cursor=pointer]:
+        - generic [ref=f98e30]: FA
+  - generic [ref=f98e33]:
+    - generic [ref=f98e36]:
+      - generic [ref=f98e37]:
+        - link [ref=f98e40] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f98e44] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f98e48] [cursor=pointer]
+        - button [ref=f98e52] [cursor=pointer]
+        - button [ref=f98e56] [cursor=pointer]
+        - button [ref=f98e60] [cursor=pointer]
+        - button [ref=f98e64] [cursor=pointer]
+        - button [ref=f98e68] [cursor=pointer]
+        - link [ref=f98e72] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f98e76] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f98e80] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f98e84] [cursor=pointer]
+    - generic [ref=f98e87]:
+      - button "Collapse Navigation Menu" [ref=f98e89] [cursor=pointer]
+      - generic [ref=f98e95]:
+        - generic [ref=f98e96]:
+          - paragraph [ref=f98e97]: Online bookings
+          - link [ref=f98e99] [cursor=pointer]:
+            - /url: /fresha/online-booking/locations
+            - paragraph [ref=f98e100]: Marketplace profile
+          - link [ref=f98e102] [cursor=pointer]:
+            - /url: /fresha/online-booking/google-reserve
+            - paragraph [ref=f98e103]: Reserve with Google
+          - link [ref=f98e105] [cursor=pointer]:
+            - /url: /fresha/online-booking/facebook-setup
+            - paragraph [ref=f98e106]: Facebook and Instagram bookings
+          - link [ref=f98e108] [cursor=pointer]:
+            - /url: /fresha/online-booking/buttons-and-links
+            - paragraph [ref=f98e109]: Link builder
+        - separator [ref=f98e111]
+        - generic [ref=f98e112]:
+          - paragraph [ref=f98e113]: Your websites
+          - link [active] [ref=f98e115] [cursor=pointer]:
+            - /url: /fresha/online-booking/smart-website
+            - paragraph [ref=f98e116]: Smart Website

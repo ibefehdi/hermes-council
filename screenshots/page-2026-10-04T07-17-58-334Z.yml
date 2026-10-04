@@ -1,0 +1,78 @@
+- generic [ref=f258e12]:
+  - generic [ref=f258e13]:
+    - link "Fresha" [ref=f258e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f258e16]:
+      - button [ref=f258e128] [cursor=pointer]:
+        - paragraph [ref=f258e130]: Continue setup
+      - button "Search" [ref=f258e18] [cursor=pointer]
+      - button "Performance insights" [ref=f258e20] [cursor=pointer]
+      - button "Notifications" [ref=f258e28] [cursor=pointer]:
+        - generic [ref=f258e29]: "4"
+      - link "Fresha Connect" [ref=f258e33] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f258e35] [cursor=pointer]:
+        - generic [ref=f258e36]: FA
+  - generic [ref=f258e38]:
+    - generic [ref=f258e39]:
+      - generic [ref=f258e42]:
+        - generic [ref=f258e43]:
+          - link [ref=f258e46] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f258e50] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f258e54] [cursor=pointer]
+          - button [ref=f258e58] [cursor=pointer]
+          - button [ref=f258e62] [cursor=pointer]
+          - button [ref=f258e66] [cursor=pointer]
+          - button [ref=f258e70] [cursor=pointer]
+          - button [ref=f258e74] [cursor=pointer]
+          - link [ref=f258e78] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f258e82] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f258e86] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f258e90] [cursor=pointer]
+      - generic [ref=f258e368]:
+        - button "Collapse Navigation Menu" [ref=f258e370] [cursor=pointer]
+        - generic [ref=f258e376]:
+          - generic [ref=f258e377]:
+            - paragraph [ref=f258e378]: Messaging
+            - link [ref=f258e380] [cursor=pointer]:
+              - /url: /marketing/blast-campaigns/home
+              - paragraph [ref=f258e381]: Blast campaigns
+            - link [ref=f258e383] [cursor=pointer]:
+              - /url: /marketing/automated-messages
+              - paragraph [ref=f258e384]: Automations
+            - link [ref=f258e386] [cursor=pointer]:
+              - /url: /marketing/notifications
+              - paragraph [ref=f258e387]: Messages history
+          - separator [ref=f258e389]
+          - generic [ref=f258e390]:
+            - paragraph [ref=f258e391]: Promotion
+            - link [ref=f258e393] [cursor=pointer]:
+              - /url: /marketing/deals
+              - paragraph [ref=f258e394]: Deals
+            - link [active] [ref=f258e396] [cursor=pointer]:
+              - /url: /marketing/peak-pricing
+              - paragraph [ref=f258e397]: Smart pricing
+          - separator [ref=f258e399]
+          - generic [ref=f258e400]:
+            - paragraph [ref=f258e401]: Engage
+            - link [ref=f258e403] [cursor=pointer]:
+              - /url: /clients/online-reputation?tab=all
+              - paragraph [ref=f258e404]: Reviews
+    - generic [ref=f258e1119]:
+      - generic [ref=f258e1120]: Free to use
+      - generic [ref=f258e1123]: Get more sales with surge and off-peak pricing
+      - generic [ref=f258e1124]: Automatically adjust your service prices, charging different amount during more or less busy hours.
+      - generic [ref=f258e1125]:
+        - generic [ref=f258e1126]: Introduce off-peak intervals to offer a discount and get more bookings
+        - generic [ref=f258e1130]: Increase prices on busy hours to maximise sales value
+        - generic [ref=f258e1134]: Track performance to get insights and make informed pricing decisions
+      - generic [ref=f258e1138]:
+        - button "Start now" [ref=f258e1139] [cursor=pointer]
+        - link "Learn more" [ref=f258e1143] [cursor=pointer]:
+          - /url: https://www.fresha.com/help-center/knowledge-base/marketing/101321-enable-smart-pricing

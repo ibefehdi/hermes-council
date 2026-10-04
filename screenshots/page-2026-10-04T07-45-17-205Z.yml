@@ -1,0 +1,178 @@
+- generic [ref=f70e12]:
+  - generic [ref=f70e13]:
+    - link "Fresha" [ref=f70e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f70e16]:
+      - button [ref=f70e18] [cursor=pointer]:
+        - paragraph [ref=f70e20]: Continue setup
+      - button "Search" [ref=f70e22] [cursor=pointer]
+      - button "Performance insights" [ref=f70e24] [cursor=pointer]
+      - button "Notifications" [ref=f70e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f70e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f70e31] [cursor=pointer]:
+        - generic [ref=f70e32]: FA
+  - generic [ref=f70e34]:
+    - generic [ref=f70e38]:
+      - generic [ref=f70e39]:
+        - link [ref=f70e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f70e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f70e50] [cursor=pointer]
+        - button [ref=f70e54] [cursor=pointer]
+        - button [ref=f70e58] [cursor=pointer]
+        - button [ref=f70e62] [cursor=pointer]
+        - button [ref=f70e66] [cursor=pointer]
+        - button [ref=f70e70] [cursor=pointer]
+        - link [ref=f70e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f70e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f70e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f70e86] [cursor=pointer]
+    - generic [ref=f70e94]:
+      - generic [ref=f70e96]:
+        - button "Back" [ref=f70e97] [cursor=pointer]
+        - navigation [ref=f70e102]:
+          - list [ref=f70e103]:
+            - listitem [ref=f70e104]:
+              - link "Workspace settings •" [ref=f70e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f70e106]:
+              - link "Scheduling" [ref=f70e107] [cursor=pointer]:
+                - /url: /setup/scheduling
+      - generic [ref=f70e112]:
+        - paragraph [ref=f70e114]: Scheduling
+        - list [ref=f70e115]:
+          - listitem [ref=f70e116]:
+            - list [ref=f70e117]:
+              - listitem [ref=f70e118] [cursor=pointer]:
+                - link [ref=f70e119]:
+                  - /url: /setup/scheduling/time-and-calendar
+                - generic [ref=f70e120]: Time and calendar
+              - listitem [ref=f70e122] [cursor=pointer]:
+                - link [ref=f70e123]:
+                  - /url: /setup/scheduling/waitlist
+                - generic [ref=f70e124]: Waitlist appointments
+              - listitem [ref=f70e126] [cursor=pointer]:
+                - link [ref=f70e127]:
+                  - /url: /setup/scheduling/blocked-time-types
+                - generic [ref=f70e128]: Blocked time types
+              - listitem [ref=f70e130] [cursor=pointer]:
+                - link [ref=f70e131]:
+                  - /url: /setup/scheduling/resources
+                - generic [ref=f70e132]: Resources
+              - listitem [ref=f70e134] [cursor=pointer]:
+                - link [ref=f70e135]:
+                  - /url: /setup/scheduling/cancellation-reasons
+                - generic [ref=f70e136]: Cancellation reasons
+              - listitem [ref=f70e138] [cursor=pointer]:
+                - link [ref=f70e139]:
+                  - /url: /setup/scheduling/appointment-statuses
+                - generic [ref=f70e140]: Appointment statuses
+              - listitem [ref=f70e142] [cursor=pointer]:
+                - link [ref=f70e143]:
+                  - /url: /setup/scheduling/closed-periods
+                - generic [ref=f70e144]: Closed periods
+            - separator [ref=f70e147]
+          - listitem [ref=f70e148]:
+            - generic [ref=f70e149]: Online booking
+            - list [ref=f70e151]:
+              - listitem [ref=f70e152] [cursor=pointer]:
+                - link [ref=f70e153]:
+                  - /url: /setup/scheduling/dynamic-assignment
+                - generic [ref=f70e154]: Dynamic assignment
+              - listitem [ref=f70e156] [cursor=pointer]:
+                - link [ref=f70e157]:
+                  - /url: /setup/scheduling/availability
+                - generic [ref=f70e158]: Availability
+              - listitem [ref=f70e160] [cursor=pointer]:
+                - link [ref=f70e161]:
+                  - /url: /setup/scheduling/booking-options
+                - generic [ref=f70e162]: Booking options
+        - separator [ref=f70e164]
+        - list [ref=f70e165]:
+          - listitem [ref=f70e166]:
+            - list [ref=f70e167]:
+              - listitem [ref=f70e168] [cursor=pointer]:
+                - button [ref=f70e169]
+                - generic [ref=f70e170]: Marketplace profile
+              - listitem [ref=f70e172] [cursor=pointer]:
+                - button [ref=f70e173]
+                - generic [ref=f70e174]: Service menu
+              - listitem [ref=f70e176] [cursor=pointer]:
+                - button [ref=f70e177]
+                - generic [ref=f70e178]: Scheduled shifts
+      - generic [ref=f70e181]:
+        - generic [ref=f70e183]:
+          - paragraph [ref=f70e185]: Booking options
+          - paragraph [ref=f70e186]:
+            - text: Customize the experience for clients booking online.
+            - link "Learn more" [ref=f70e187] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/calendar/101218-manage-online-bookings-settings
+        - generic [ref=f70e190]:
+          - generic [ref=f70e191]:
+            - generic [ref=f70e192]:
+              - heading "Team members" [level=2] [ref=f70e193]
+              - paragraph [ref=f70e194]: Choose what clients can see and how they can select team members
+            - button "Edit" [ref=f70e195] [cursor=pointer]
+          - list [ref=f70e199]:
+            - listitem [ref=f70e200]:
+              - generic [ref=f70e202]: Clients can book specific team members
+            - listitem [ref=f70e203]:
+              - generic [ref=f70e205]: Clients can view team member profiles
+            - listitem [ref=f70e206]:
+              - generic [ref=f70e208]: Clients can view team member portfolio images
+            - listitem [ref=f70e209]:
+              - generic [ref=f70e211]: Clients can view team member star ratings
+            - listitem [ref=f70e212]:
+              - generic [ref=f70e214]: Clients cannot book by team member gender
+        - generic [ref=f70e217]:
+          - generic [ref=f70e218]:
+            - generic [ref=f70e219]:
+              - heading "Service menu" [level=2] [ref=f70e220]
+              - paragraph [ref=f70e221]: Control how services are presented to clients when booking online
+            - button "Edit" [ref=f70e222] [cursor=pointer]
+          - list [ref=f70e226]:
+            - listitem [ref=f70e227]:
+              - generic [ref=f70e229]: Display images within services
+            - listitem [ref=f70e230]:
+              - generic [ref=f70e232]: Display featured services
+            - listitem [ref=f70e233]:
+              - generic [ref=f70e235]: Display service names in reviews
+        - generic [ref=f70e238]:
+          - generic [ref=f70e239]:
+            - generic [ref=f70e240]:
+              - heading "Group booking" [level=2] [ref=f70e241]
+              - paragraph [ref=f70e242]: Allow clients to book appointments for multiple people at once
+            - button "Edit" [ref=f70e243] [cursor=pointer]
+          - list [ref=f70e247]:
+            - listitem [ref=f70e248]:
+              - generic [ref=f70e250]: Clients can book group appointments
+        - generic [ref=f70e253]:
+          - generic [ref=f70e255]:
+            - heading "Upselling" [level=2] [ref=f70e256]
+            - paragraph [ref=f70e257]: Recommend additional services or memberships to clients when booking online
+          - generic [ref=f70e258]:
+            - generic [ref=f70e259]: Online bookings are not enabled, set up now to upsell services and memberships to clients
+            - link "Set up" [ref=f70e262] [cursor=pointer]:
+              - /url: /fresha/online-booking/locations
+        - generic [ref=f70e269]:
+          - generic [ref=f70e270]:
+            - heading "Important info" [level=2] [ref=f70e271]
+            - paragraph [ref=f70e272]: Optionally display key details to clients before they complete a booking or make a purchase
+          - button "Add" [ref=f70e273] [cursor=pointer]
+        - generic [ref=f70e279]:
+          - generic [ref=f70e280]:
+            - generic [ref=f70e281]:
+              - heading "Email notifications" [level=2] [ref=f70e282]
+              - paragraph [ref=f70e283]: Send emails to team members when clients book, reschedule or cancel appointments online
+            - button "Edit" [ref=f70e284] [cursor=pointer]
+          - list [ref=f70e288]:
+            - listitem [ref=f70e289]:
+              - generic [ref=f70e291]:
+                - text: "Send emails to specific addresses:"
+                - strong [ref=f70e292]: fahad.asad2016@gmail.com

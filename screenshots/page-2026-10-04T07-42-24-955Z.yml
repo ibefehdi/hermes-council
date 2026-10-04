@@ -1,0 +1,114 @@
+- generic [ref=f13e12]:
+  - generic [ref=f13e13]:
+    - link "Fresha" [ref=f13e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f13e16]:
+      - button [ref=f13e18] [cursor=pointer]:
+        - paragraph [ref=f13e20]: Continue setup
+      - button "Search" [ref=f13e22] [cursor=pointer]
+      - button "Performance insights" [ref=f13e24] [cursor=pointer]
+      - button "Notifications" [ref=f13e27] [cursor=pointer]:
+        - generic [ref=f13e28]: "4"
+      - link "Fresha Connect" [ref=f13e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f13e34] [cursor=pointer]:
+        - generic [ref=f13e35]: FA
+  - generic [ref=f13e37]:
+    - generic [ref=f13e41]:
+      - generic [ref=f13e42]:
+        - link [ref=f13e45] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f13e49] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f13e53] [cursor=pointer]
+        - button [ref=f13e57] [cursor=pointer]
+        - button [ref=f13e61] [cursor=pointer]
+        - button [ref=f13e65] [cursor=pointer]
+        - button [ref=f13e69] [cursor=pointer]
+        - button [ref=f13e73] [cursor=pointer]
+        - link [ref=f13e77] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f13e81] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f13e85] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f13e89] [cursor=pointer]
+    - generic [ref=f13e97]:
+      - generic [ref=f13e100]:
+        - generic [ref=f13e101]:
+          - button "Back" [ref=f13e102] [cursor=pointer]
+          - navigation [ref=f13e107]:
+            - list [ref=f13e108]:
+              - listitem [ref=f13e109]:
+                - link "Workspace settings •" [ref=f13e110] [cursor=pointer]:
+                  - /url: /setup
+              - listitem [ref=f13e111]:
+                - link "Locations •" [ref=f13e112] [cursor=pointer]:
+                  - /url: /setup/business-setup/location-details
+              - listitem [ref=f13e113]:
+                - link "Test Salon" [ref=f13e114] [cursor=pointer]:
+                  - /url: /setup/location/3216614
+        - generic [ref=f13e115]:
+          - generic [ref=f13e116]:
+            - paragraph [ref=f13e117]: Test Salon
+            - paragraph [ref=f13e118]: Closed • 3, bneid al gar
+          - button "Options" [ref=f13e122] [cursor=pointer]
+      - generic [ref=f13e131]:
+        - paragraph [ref=f13e132]: Location settings
+        - list [ref=f13e133]:
+          - listitem [ref=f13e134]:
+            - list [ref=f13e135]:
+              - listitem [ref=f13e136] [cursor=pointer]:
+                - link [ref=f13e137]:
+                  - /url: /setup/location/3216614/business-details
+                - generic [ref=f13e138]: Business details
+              - listitem [ref=f13e140] [cursor=pointer]:
+                - link [ref=f13e141]:
+                  - /url: /setup/location/3216614/business-location
+                - generic [ref=f13e142]: Business location
+              - listitem [ref=f13e144] [cursor=pointer]:
+                - link [ref=f13e145]:
+                  - /url: /setup/location/3216614/opening-hours
+                - generic [ref=f13e146]: Opening hours
+              - listitem [ref=f13e148] [cursor=pointer]:
+                - link [ref=f13e149]:
+                  - /url: /setup/location/3216614/sales
+                - generic [ref=f13e150]: Sales
+            - separator [ref=f13e153]
+          - listitem [ref=f13e154]:
+            - list [ref=f13e155]:
+              - listitem [ref=f13e156] [cursor=pointer]:
+                - button [ref=f13e157]
+                - generic [ref=f13e158]: Marketplace profile settings
+              - listitem [ref=f13e160] [cursor=pointer]:
+                - button [ref=f13e161]
+                - generic [ref=f13e162]: Manage billing profiles
+      - generic [ref=f13e165]:
+        - generic [ref=f13e168]:
+          - generic [ref=f13e169]:
+            - paragraph [ref=f13e172]: Location details
+            - link "Edit" [ref=f13e174] [cursor=pointer]:
+              - /url: /setup/location/3216614/business-details/basic-info/edit/
+          - generic [ref=f13e178]:
+            - generic [ref=f13e180]:
+              - paragraph [ref=f13e181]: Name
+              - paragraph [ref=f13e182]: Test Salon
+            - generic [ref=f13e184]:
+              - paragraph [ref=f13e185]: Email
+              - paragraph [ref=f13e186]: fahad.asad2016@gmail.com
+            - generic [ref=f13e188]:
+              - paragraph [ref=f13e189]: Phone number
+              - paragraph [ref=f13e190]: ‎+965 506 10221
+        - generic [ref=f13e193]:
+          - generic [ref=f13e194]:
+            - paragraph [ref=f13e197]: Business types
+            - link "Edit" [ref=f13e199] [cursor=pointer]:
+              - /url: /setup/location/3216614/business-details/business-types/edit/
+          - generic [ref=f13e203]:
+            - generic [ref=f13e205]:
+              - paragraph [ref=f13e206]: Main
+              - paragraph [ref=f13e207]: Hair Salon
+            - generic [ref=f13e209]:
+              - paragraph [ref=f13e210]: Additional
+              - paragraph [ref=f13e211]: Nails, Beauty Salon, Eyebrows & Lashes

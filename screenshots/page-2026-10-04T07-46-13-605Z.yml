@@ -1,0 +1,111 @@
+- generic [ref=f89e12]:
+  - generic [ref=f89e13]:
+    - link "Fresha" [ref=f89e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f89e16]:
+      - button [ref=f89e18] [cursor=pointer]:
+        - paragraph [ref=f89e20]: Continue setup
+      - button "Search" [ref=f89e22] [cursor=pointer]
+      - button "Performance insights" [ref=f89e24] [cursor=pointer]
+      - button "Notifications" [ref=f89e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f89e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f89e31] [cursor=pointer]:
+        - generic [ref=f89e32]: FA
+  - generic [ref=f89e34]:
+    - generic [ref=f89e38]:
+      - generic [ref=f89e39]:
+        - link [ref=f89e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f89e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f89e50] [cursor=pointer]
+        - button [ref=f89e54] [cursor=pointer]
+        - button [ref=f89e58] [cursor=pointer]
+        - button [ref=f89e62] [cursor=pointer]
+        - button [ref=f89e66] [cursor=pointer]
+        - button [ref=f89e70] [cursor=pointer]
+        - link [ref=f89e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f89e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f89e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f89e86] [cursor=pointer]
+    - generic [ref=f89e94]:
+      - generic [ref=f89e96]:
+        - button "Back" [ref=f89e97] [cursor=pointer]
+        - navigation [ref=f89e102]:
+          - list [ref=f89e103]:
+            - listitem [ref=f89e104]:
+              - link "Workspace settings •" [ref=f89e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f89e106]:
+              - link "Sales" [ref=f89e107] [cursor=pointer]:
+                - /url: /setup/sales
+      - generic [ref=f89e112]:
+        - paragraph [ref=f89e114]: Sales
+        - list [ref=f89e115]:
+          - listitem [ref=f89e116]:
+            - list [ref=f89e117]:
+              - listitem [ref=f89e118] [cursor=pointer]:
+                - link [ref=f89e119]:
+                  - /url: /setup/sales/pay-now
+                - generic [ref=f89e120]: Pay now
+              - listitem [ref=f89e122] [cursor=pointer]:
+                - link [ref=f89e123]:
+                  - /url: /setup/sales/tax-rates
+                - generic [ref=f89e124]: Tax rates
+              - listitem [ref=f89e126] [cursor=pointer]:
+                - link [ref=f89e127]:
+                  - /url: /setup/sales/receipts
+                - generic [ref=f89e128]: Receipts
+              - listitem [ref=f89e130] [cursor=pointer]:
+                - link [ref=f89e131]:
+                  - /url: /setup/sales/registers
+                - generic [ref=f89e132]: Registers
+              - listitem [ref=f89e134] [cursor=pointer]:
+                - link [ref=f89e135]:
+                  - /url: /setup/sales/tipping
+                - generic [ref=f89e136]: Tipping
+              - listitem [ref=f89e138] [cursor=pointer]:
+                - link [ref=f89e139]:
+                  - /url: /setup/sales/service-charges
+                - generic [ref=f89e140]: Service charges
+              - listitem [ref=f89e142] [cursor=pointer]:
+                - link [ref=f89e143]:
+                  - /url: /setup/sales/gift-cards
+                - generic [ref=f89e144]: Gift cards
+              - listitem [ref=f89e146] [cursor=pointer]:
+                - link [ref=f89e147]:
+                  - /url: /setup/sales/payment-methods
+                - generic [ref=f89e148]: Custom checkout methods
+        - separator [ref=f89e150]
+        - list [ref=f89e151]:
+          - listitem [ref=f89e152]:
+            - list [ref=f89e153]:
+              - listitem [ref=f89e154] [cursor=pointer]:
+                - button [ref=f89e155]
+                - generic [ref=f89e156]: Payment settings
+      - generic [ref=f89e159]:
+        - generic [ref=f89e161]:
+          - paragraph [ref=f89e163]: Cash registers
+          - paragraph
+        - generic [ref=f89e176]:
+          - generic [ref=f89e177]:
+            - paragraph [ref=f89e178]: Included in your plan
+            - generic [ref=f89e179]:
+              - paragraph [ref=f89e180]: Track cash movements confidently with registers
+              - paragraph [ref=f89e181]: Streamline your sales and payments using registers, with everything you need to handle daily transactions and stay on top of balances.
+            - list [ref=f89e182]:
+              - listitem [ref=f89e183]:
+                - generic [ref=f89e185]: Everything accounted for with daily opening and closing
+              - listitem [ref=f89e186]:
+                - generic [ref=f89e188]: Seamlessly track every cash movement for full visibility
+              - listitem [ref=f89e189]:
+                - generic [ref=f89e191]: Stay on top of petty cash and float balances
+          - generic [ref=f89e192]:
+            - button "Set up now" [ref=f89e193] [cursor=pointer]
+            - link "Learn more" [ref=f89e197] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/sales/104057-set-up-your-register

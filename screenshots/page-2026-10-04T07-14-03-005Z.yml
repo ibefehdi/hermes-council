@@ -1,0 +1,83 @@
+- generic [ref=f197e12]:
+  - generic [ref=f197e13]:
+    - link "Fresha" [ref=f197e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f197e16]:
+      - button [ref=f197e18] [cursor=pointer]:
+        - paragraph [ref=f197e20]: Continue setup
+      - button "Search" [ref=f197e22] [cursor=pointer]
+      - button "Performance insights" [ref=f197e24] [cursor=pointer]
+      - button "Notifications" [ref=f197e27] [cursor=pointer]:
+        - generic [ref=f197e28]: "4"
+      - link "Fresha Connect" [ref=f197e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f197e34] [cursor=pointer]:
+        - generic [ref=f197e35]: FA
+  - generic [ref=f197e37]:
+    - generic [ref=f197e38]:
+      - generic [ref=f197e41]:
+        - generic [ref=f197e42]:
+          - link [ref=f197e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f197e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f197e53] [cursor=pointer]
+          - button [ref=f197e57] [cursor=pointer]
+          - button [ref=f197e61] [cursor=pointer]
+          - button [ref=f197e65] [cursor=pointer]
+          - button [ref=f197e69] [cursor=pointer]
+          - button [ref=f197e73] [cursor=pointer]
+          - link [ref=f197e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f197e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f197e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f197e89] [cursor=pointer]
+      - generic [ref=f197e92]:
+        - button "Collapse Navigation Menu" [ref=f197e94] [cursor=pointer]
+        - generic [ref=f197e100]:
+          - generic [ref=f197e101]:
+            - paragraph [ref=f197e102]: Sales
+            - link [ref=f197e104] [cursor=pointer]:
+              - /url: /sales/daily-sales
+              - paragraph [ref=f197e105]: Daily sales summary
+            - link [ref=f197e107] [cursor=pointer]:
+              - /url: /sales/register
+              - paragraph [ref=f197e108]: Register
+            - link [ref=f197e110] [cursor=pointer]:
+              - /url: /sales/appointments-list
+              - paragraph [ref=f197e111]: Appointments
+            - link [ref=f197e113] [cursor=pointer]:
+              - /url: /sales/sales-list
+              - paragraph [ref=f197e114]: Sales
+            - link [ref=f197e116] [cursor=pointer]:
+              - /url: /sales/payment-transactions
+              - paragraph [ref=f197e117]: Payments
+          - separator [ref=f197e119]
+          - generic [ref=f197e120]:
+            - paragraph [ref=f197e121]: Sold items
+            - link [ref=f197e123] [cursor=pointer]:
+              - /url: /sales/gift-cards
+              - paragraph [ref=f197e124]: Gift cards sold
+            - link [ref=f197e126] [cursor=pointer]:
+              - /url: /sales/packages-sold
+              - paragraph [ref=f197e127]: Packages sold
+            - link [ref=f197e129] [cursor=pointer]:
+              - /url: /sales/paid-plans
+              - paragraph [ref=f197e130]: Memberships sold
+    - generic [ref=f197e136]:
+      - generic [ref=f197e138]:
+        - generic [ref=f197e139]:
+          - paragraph [ref=f197e141]: Memberships sold
+          - paragraph [ref=f197e142]: View and filter memberships purchased by your clients.
+        - button "Export" [ref=f197e146] [cursor=pointer]
+      - generic [ref=f197e152]:
+        - generic [ref=f197e156]:
+          - generic [ref=f197e157]: Search
+          - textbox "Search" [ref=f197e162]:
+            - /placeholder: Search by membership or client
+        - generic [ref=f197e167]:
+          - generic [ref=f197e168]: No memberships sold
+          - generic [ref=f197e169]: When someone purchases a membership they will appear here

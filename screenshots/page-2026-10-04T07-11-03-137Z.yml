@@ -1,0 +1,98 @@
+- generic [ref=f157e12]:
+  - generic [ref=f157e13]:
+    - link "Fresha" [ref=f157e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - button "Open user menu" [ref=f157e18] [cursor=pointer]:
+      - generic [ref=f157e19]: FA
+  - generic [ref=f157e23]:
+    - list [ref=f157e28]:
+      - listitem [ref=f157e29] [cursor=pointer]:
+        - button [ref=f157e30]
+        - generic [ref=f157e31]: Back
+      - listitem [ref=f157e33]:
+        - paragraph [ref=f157e36]: Your account
+        - list [ref=f157e37]:
+          - listitem [ref=f157e38] [cursor=pointer]:
+            - button [ref=f157e39]
+            - generic [ref=f157e40]: My profile
+          - listitem [ref=f157e41] [cursor=pointer]:
+            - button [ref=f157e42]
+            - generic [ref=f157e43]: Portfolio
+          - listitem [ref=f157e45] [cursor=pointer]:
+            - button [ref=f157e46]
+            - generic [ref=f157e47]: Reviews
+          - listitem [ref=f157e49] [cursor=pointer]:
+            - button [ref=f157e50]
+            - generic [ref=f157e51]: Pay runs
+          - listitem [ref=f157e53] [cursor=pointer]:
+            - button [ref=f157e54]
+            - generic [ref=f157e55]: Workspaces
+          - listitem [ref=f157e56] [cursor=pointer]:
+            - button [ref=f157e57]
+            - generic [ref=f157e58]: Personal settings
+    - generic [ref=f157e65]:
+      - generic [ref=f157e68]:
+        - generic [ref=f157e69]:
+          - generic [ref=f157e70]:
+            - paragraph [ref=f157e71]: My profile
+            - generic [ref=f157e72]: Online
+          - paragraph [ref=f157e75]: Edit and manage the content of your online profile
+        - generic [ref=f157e77]:
+          - button "Share profile" [ref=f157e78] [cursor=pointer]
+          - link "View on Fresha" [ref=f157e83] [cursor=pointer]:
+            - /url: https://www.fresha.com/p/fahad-asad-6614369?share=true&pId=3110536
+      - generic [ref=f157e90]:
+        - link "Edit" [ref=f157e92] [cursor=pointer]:
+          - /url: /user-account/profile/edit/personal-details
+        - generic [ref=f157e97]:
+          - generic [ref=f157e101]:
+            - paragraph [ref=f157e103]: Fahad Asad
+            - generic [ref=f157e104]:
+              - paragraph
+              - paragraph [ref=f157e106]: No reviews yet
+              - paragraph [ref=f157e107]: 3, bneid al gar
+          - separator [ref=f157e108]
+          - generic [ref=f157e109]:
+            - paragraph [ref=f157e110]: Languages
+            - generic [ref=f157e111]: English
+      - generic [ref=f157e115]:
+        - generic [ref=f157e118]:
+          - paragraph [ref=f157e121]: Portfolio
+          - generic [ref=f157e124]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img "No images added"
+            - generic [ref=f157e125]:
+              - generic [ref=f157e126]: No images added
+              - generic [ref=f157e127]: Add your images to your online portfolio that best reflect your creativity and work
+            - link "Set up now" [ref=f157e129] [cursor=pointer]:
+              - /url: /user-account/portfolio
+        - generic [ref=f157e135]:
+          - paragraph [ref=f157e138]: Interests
+          - generic [ref=f157e141]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img "No interests illustration"
+            - generic [ref=f157e142]:
+              - generic [ref=f157e143]: No interests
+              - generic [ref=f157e144]: Continue setting up your profile to fill in your interests
+            - link "Set up now" [ref=f157e146] [cursor=pointer]:
+              - /url: /user-account/profile/edit/interests
+        - generic [ref=f157e152]:
+          - paragraph [ref=f157e155]: Social links
+          - generic [ref=f157e158]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img "No social links illustration"
+            - generic [ref=f157e159]:
+              - generic [ref=f157e160]: No social links
+              - generic [ref=f157e161]: Add social links to your profile to help build your discoverability
+            - link "Set up now" [ref=f157e163] [cursor=pointer]:
+              - /url: /user-account/profile/edit/socials

@@ -1,0 +1,126 @@
+- generic [ref=f21e2]:
+  - generic [ref=f21e12]:
+    - generic [ref=f21e13]:
+      - link "Fresha" [ref=f21e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f21e16]:
+        - button [ref=f21e18] [cursor=pointer]:
+          - paragraph [ref=f21e20]: Continue setup
+        - button "Search" [ref=f21e22] [cursor=pointer]
+        - button "Performance insights" [ref=f21e24] [cursor=pointer]
+        - button "Notifications" [ref=f21e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f21e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f21e31] [cursor=pointer]:
+          - generic [ref=f21e32]: FA
+    - generic [ref=f21e34]:
+      - generic [ref=f21e35]:
+        - generic [ref=f21e38]:
+          - generic [ref=f21e39]:
+            - link [ref=f21e42] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f21e46] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f21e50] [cursor=pointer]
+            - button [ref=f21e54] [cursor=pointer]
+            - button [ref=f21e58] [cursor=pointer]
+            - button [ref=f21e62] [cursor=pointer]
+            - button [ref=f21e66] [cursor=pointer]
+            - button [ref=f21e70] [cursor=pointer]
+            - link [ref=f21e74] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f21e78] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f21e82] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f21e86] [cursor=pointer]
+        - generic [ref=f21e89]:
+          - button "Collapse Navigation Menu" [ref=f21e91] [cursor=pointer]
+          - generic [ref=f21e97]:
+            - generic [ref=f21e98]:
+              - paragraph [ref=f21e99]: Catalog
+              - link [ref=f21e101] [cursor=pointer]:
+                - /url: /catalogue/services
+                - paragraph [ref=f21e102]: Service menu
+              - link [ref=f21e104] [cursor=pointer]:
+                - /url: /catalogue/packages
+                - paragraph [ref=f21e105]: Packages
+              - link [ref=f21e107] [cursor=pointer]:
+                - /url: /catalogue/products
+                - paragraph [ref=f21e108]: Products
+            - separator [ref=f21e110]
+            - generic [ref=f21e111]:
+              - paragraph [ref=f21e112]: Inventory
+              - link [ref=f21e114] [cursor=pointer]:
+                - /url: /catalogue/stocktakes
+                - paragraph [ref=f21e115]: Stocktakes
+              - link [ref=f21e117] [cursor=pointer]:
+                - /url: /catalogue/orders
+                - paragraph [ref=f21e118]: Stock orders
+              - link [ref=f21e120] [cursor=pointer]:
+                - /url: /catalogue/suppliers
+                - paragraph [ref=f21e121]: Suppliers
+      - generic [ref=f21e406]:
+        - generic [ref=f21e408]:
+          - generic [ref=f21e409]:
+            - generic [ref=f21e410]:
+              - paragraph [ref=f21e411]: Product list
+              - generic [ref=f21e412]: "1"
+            - paragraph [ref=f21e413]:
+              - paragraph [ref=f21e414]:
+                - text: Add and manage your products in stock.
+                - link "Learn more" [ref=f21e415] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/inventory/153-add-products-to-your-inventory
+          - generic [ref=f21e417]:
+            - button "Options" [ref=f21e420] [cursor=pointer]
+            - button "Add" [ref=f21e425] [cursor=pointer]
+        - generic [ref=f21e430]:
+          - generic [ref=f21e432]:
+            - generic [ref=f21e433]:
+              - generic [ref=f21e434]:
+                - generic [ref=f21e435]: Search
+                - textbox "Search" [ref=f21e440]:
+                  - /placeholder: Search by product name or barcode
+              - button "Filters" [ref=f21e441] [cursor=pointer]
+            - button "Updated (newest first)" [ref=f21e450] [cursor=pointer]
+          - region [ref=f21e455]:
+            - generic [ref=f21e456]:
+              - table [ref=f21e459]:
+                - rowgroup [ref=f21e467]:
+                  - row [ref=f21e468]:
+                    - columnheader "Select all displayed products Select all displayed products" [ref=f21e469]:
+                      - generic [ref=f21e471] [cursor=pointer]:
+                        - paragraph [ref=f21e474]: Select all displayed products
+                        - checkbox "Select all displayed products" [ref=f21e475]
+                    - columnheader [ref=f21e476]:
+                      - button "Product name" [ref=f21e479] [cursor=pointer]
+                    - columnheader [ref=f21e481]:
+                      - button "Category" [ref=f21e484] [cursor=pointer]
+                    - columnheader [ref=f21e486]:
+                      - button "Supplier" [ref=f21e489] [cursor=pointer]
+                    - columnheader [ref=f21e491]:
+                      - button "Quantity" [ref=f21e494] [cursor=pointer]
+                    - columnheader [ref=f21e496]:
+                      - button "Retail price" [ref=f21e499] [cursor=pointer]
+              - table [ref=f21e502]:
+                - rowgroup [ref=f21e510]:
+                  - button [ref=f21e511] [cursor=pointer]:
+                    - cell "Select COUNCIL-TEST Product1 Select COUNCIL-TEST Product1" [ref=f21e512]:
+                      - generic [ref=f21e513]:
+                        - paragraph [ref=f21e516]: Select COUNCIL-TEST Product1
+                        - checkbox "Select COUNCIL-TEST Product1" [ref=f21e517]
+                    - cell [ref=f21e518]:
+                      - paragraph [ref=f21e522]: COUNCIL-TEST Product1
+                    - cell [ref=f21e523]:
+                      - paragraph [ref=f21e524]: "-"
+                    - cell [ref=f21e525]:
+                      - paragraph [ref=f21e526]: "-"
+                    - cell "0" [ref=f21e527]
+                    - cell "-" [ref=f21e528]
+          - generic [ref=f21e530]:
+            - generic [ref=f21e531]: Viewing results 1 to 1 of 1
+            - paragraph [ref=f21e533]: Viewing 1 - 1 of 1 results
+  - status [ref=f21e534]:
+    - paragraph [ref=f21e536]: Product created
+    - button "Close Toast" [ref=f21e538] [cursor=pointer]

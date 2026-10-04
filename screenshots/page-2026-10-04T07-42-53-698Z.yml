@@ -1,0 +1,84 @@
+- generic [ref=e1]:
+  - generic [ref=e1751]:
+    - generic [ref=e1752]:
+      - link "Fresha" [ref=e1754] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - button "Open user menu" [ref=e1757] [cursor=pointer]:
+        - generic [ref=e1758]: FA
+    - generic [ref=e1762]:
+      - list [ref=e1767]:
+        - listitem [ref=e1768] [cursor=pointer]:
+          - button [ref=e1769]
+          - generic [ref=e1770]: Back
+        - listitem [ref=e1772]:
+          - paragraph [ref=e1775]: Your account
+          - list [ref=e1776]:
+            - listitem [ref=e1777] [cursor=pointer]:
+              - button [ref=e1778]
+              - generic [ref=e1779]: My profile
+            - listitem [ref=e1780] [cursor=pointer]:
+              - button [ref=e1781]
+              - generic [ref=e1782]: Portfolio
+            - listitem [ref=e1784] [cursor=pointer]:
+              - button [ref=e1785]
+              - generic [ref=e1786]: Reviews
+            - listitem [ref=e1788] [cursor=pointer]:
+              - button [ref=e1789]
+              - generic [ref=e1790]: Pay runs
+            - listitem [ref=e1792] [cursor=pointer]:
+              - button [ref=e1793]
+              - generic [ref=e1794]: Workspaces
+            - listitem [ref=e1795] [cursor=pointer]:
+              - button [ref=e1796]
+              - generic [ref=e1797]: Personal settings
+      - generic [ref=e1804]:
+        - generic [ref=e1806]:
+          - generic [ref=e1807]:
+            - button "Back" [ref=e1808] [cursor=pointer]
+            - navigation [ref=e1813]:
+              - list [ref=e1814]:
+                - listitem [ref=e1815]:
+                  - link "Workspaces •" [ref=e1816] [cursor=pointer]:
+                    - /url: /user-account/workspaces
+                - listitem [ref=e1817]:
+                  - generic [ref=e1818]: Test Salon
+          - generic [ref=e1820]:
+            - generic [ref=e1821]:
+              - paragraph [ref=e1823]: Test Salon
+              - paragraph [ref=e1824]:
+                - text: Manage your workspace settings.
+                - link "Learn more" [ref=e1825] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/workspace-settings/43-join-a-workspace
+            - button "Actions" [ref=e1828] [cursor=pointer]
+        - generic [ref=e1834]:
+          - generic [ref=e1837]:
+            - heading "Linked calendars" [level=3] [ref=e1841]
+            - paragraph [ref=e1842]:
+              - text: Link your Google or external calendar to keep your Fresha calendar and personal schedule in sync. See your full day in one place and avoid double-bookings.
+              - link "Learn more" [ref=e1843] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/calendar/101373-sync-your-fresha-calendar
+            - generic [ref=e1845]:
+              - generic [ref=e1847]:
+                - separator
+              - generic [ref=e1861]:
+                - separator
+          - generic [ref=e1890]:
+            - generic [ref=e1891]:
+              - heading "Workspace notifications" [level=3] [ref=e1894]
+              - button "Manage" [ref=e1896] [cursor=pointer]
+            - img "spinner" [ref=e1904]
+  - generic [aria-hidden] [ref=e506]: KWD 1
+  - dialog "Notification preferences" [active] [ref=e1911]:
+    - generic [ref=e1912]:
+      - generic [ref=e1914]:
+        - generic [aria-hidden] [ref=e1916]: Notification preferences
+        - button "Close" [ref=e1919] [cursor=pointer]
+      - generic [ref=e1925]:
+        - generic [ref=e1927]:
+          - heading "Notification preferences" [level=1] [ref=e1929]
+          - generic [ref=e1931]:
+            - text: Choose which activity you're notified about and how you receive notifications.
+            - link "Learn more" [ref=e1932] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/personal-account/101231-manage-your-personal-account#manage-your-personal-notifications
+        - img "spinner" [ref=e1936]

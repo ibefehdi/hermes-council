@@ -1,0 +1,335 @@
+- generic [ref=f22e127]:
+  - generic [ref=f22e128]:
+    - link "Fresha" [ref=f22e130] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f22e131]:
+      - button [ref=f22e133] [cursor=pointer]:
+        - paragraph [ref=f22e135]: Continue setup
+      - button "Search" [ref=f22e137] [cursor=pointer]
+      - button "Performance insights" [ref=f22e139] [cursor=pointer]
+      - button "Notifications" [ref=f22e142] [cursor=pointer]:
+        - generic [ref=f22e143]: "4"
+      - link "Fresha Connect" [ref=f22e147] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f22e149] [cursor=pointer]:
+        - generic [ref=f22e150]: FA
+  - generic [ref=f22e152]:
+    - generic [ref=f22e153]:
+      - generic [ref=f22e156]:
+        - generic [ref=f22e157]:
+          - link [ref=f22e160] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f22e164] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f22e168] [cursor=pointer]
+          - button [ref=f22e172] [cursor=pointer]
+          - button [ref=f22e176] [cursor=pointer]
+          - button [ref=f22e180] [cursor=pointer]
+          - button [ref=f22e184] [cursor=pointer]
+          - button [ref=f22e188] [cursor=pointer]
+          - link [ref=f22e192] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f22e196] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f22e200] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f22e204] [cursor=pointer]
+      - generic [ref=f22e207]:
+        - button "Collapse Navigation Menu" [ref=f22e209] [cursor=pointer]
+        - generic [ref=f22e215]:
+          - generic [ref=f22e216]:
+            - paragraph [ref=f22e217]: Messaging
+            - link [ref=f22e219] [cursor=pointer]:
+              - /url: /marketing/blast-campaigns/home
+              - paragraph [ref=f22e220]: Blast campaigns
+            - link [ref=f22e222] [cursor=pointer]:
+              - /url: /marketing/automated-messages
+              - paragraph [ref=f22e223]: Automations
+            - link [ref=f22e225] [cursor=pointer]:
+              - /url: /marketing/notifications
+              - paragraph [ref=f22e226]: Messages history
+          - separator [ref=f22e228]
+          - generic [ref=f22e229]:
+            - paragraph [ref=f22e230]: Promotion
+            - link [ref=f22e232] [cursor=pointer]:
+              - /url: /marketing/deals
+              - paragraph [ref=f22e233]: Deals
+            - link [ref=f22e235] [cursor=pointer]:
+              - /url: /marketing/peak-pricing
+              - paragraph [ref=f22e236]: Smart pricing
+          - separator [ref=f22e238]
+          - generic [ref=f22e239]:
+            - paragraph [ref=f22e240]: Engage
+            - link [ref=f22e242] [cursor=pointer]:
+              - /url: /clients/online-reputation?tab=all
+              - paragraph [ref=f22e243]: Reviews
+    - generic [ref=f22e249]:
+      - generic [ref=f22e251]:
+        - generic [ref=f22e252]:
+          - paragraph [ref=f22e254]: Automations
+          - paragraph [ref=f22e255]:
+            - text: View and manage all automated messages sent to your clients.
+            - link "Learn more" [ref=f22e256] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/marketing/101299-automated-messages-overview
+        - generic [ref=f22e260]:
+          - generic [ref=f22e261]:
+            - paragraph [ref=f22e263]: Communication balance
+            - paragraph [ref=f22e265]: KWD 0
+          - button "Show balance management actions" [ref=f22e267] [cursor=pointer]
+      - generic [ref=f22e273]:
+        - generic [ref=f22e275]:
+          - generic [ref=f22e278]:
+            - paragraph [ref=f22e279]: Make sure your messages always send with automatic top-ups
+            - paragraph [ref=f22e280]: Prevent your balance from reaching zero, and your messages will always reach your clients.
+          - button "Set up now" [ref=f22e282] [cursor=pointer]
+        - generic [ref=f22e287]:
+          - tablist [ref=f22e290]:
+            - tab "Reminders" [selected] [ref=f22e291] [cursor=pointer]
+            - tab "Appointment updates" [ref=f22e293] [cursor=pointer]
+            - tab "Waitlist updates" [ref=f22e295] [cursor=pointer]
+            - tab "Increase bookings" [ref=f22e297] [cursor=pointer]
+            - tab "Celebrate milestones" [ref=f22e299] [cursor=pointer]
+            - tab "Client messages" [ref=f22e301] [cursor=pointer]
+            - tab "Client loyalty" [ref=f22e303] [cursor=pointer]
+          - generic [ref=f22e305]:
+            - button "Scroll left" [disabled]
+            - button "Scroll right" [ref=f22e306] [cursor=pointer]
+        - generic [ref=f22e311]:
+          - generic [ref=f22e313]:
+            - paragraph [ref=f22e314]: Reminders
+            - generic [ref=f22e315]:
+              - generic [ref=f22e316]:
+                - button [ref=f22e317] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "3 days upcoming appointment reminder" [level=3]
+                          - paragraph: Notifies clients reminding them of their upcoming appointment.
+                      - generic: Enabled
+              - generic [ref=f22e318]:
+                - button [ref=f22e319] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "24 hours upcoming appointment reminder" [level=3]
+                          - paragraph: Notifies clients reminding them of their upcoming appointment.
+                      - generic: Enabled
+              - generic [ref=f22e320]:
+                - button [ref=f22e321] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "1 hour upcoming appointment reminder" [level=3]
+                          - paragraph: Notifies clients reminding them of their upcoming appointment.
+                      - generic: Enabled
+          - generic [ref=f22e323]:
+            - paragraph [ref=f22e324]: Appointment updates
+            - generic [ref=f22e325]:
+              - generic [ref=f22e326]:
+                - button [ref=f22e327] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "New appointment" [level=3]
+                          - paragraph: Reach out to clients when their appointment is booked for them.
+                      - generic: Enabled
+              - generic [ref=f22e328]:
+                - button [ref=f22e329] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Rescheduled appointment" [level=3]
+                          - paragraph: Automatically sends to clients when their appointment start time is changed.
+                      - generic: Enabled
+              - generic [ref=f22e330]:
+                - button [ref=f22e331] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Canceled appointment" [level=3]
+                          - paragraph: Automatically sends to clients when their appointment is canceled.
+                      - generic: Enabled
+              - generic [ref=f22e332]:
+                - button [ref=f22e333] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Did not show up" [level=3]
+                          - paragraph: Automatically sends to clients when their appointment is marked as a no-show.
+                      - generic: Enabled
+              - generic [ref=f22e334]:
+                - button [ref=f22e335] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Thank you for visiting" [level=3]
+                          - paragraph: Reach out to clients when their appointment is checked out, with a link to leave a review.
+                      - generic: Enabled
+          - generic [ref=f22e337]:
+            - paragraph [ref=f22e338]: Waitlist updates
+            - generic [ref=f22e339]:
+              - generic [ref=f22e340]:
+                - button [ref=f22e341] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Joined the waitlist" [level=3]
+                          - paragraph: Automatically sends to clients when they join the waitlist.
+                      - generic: Enabled
+              - generic [ref=f22e342]:
+                - button [ref=f22e343] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Time slot available" [level=3]
+                          - paragraph: Automatically sends to clients when a time slot becomes available to book.
+                      - generic: Enabled
+          - generic [ref=f22e345]:
+            - paragraph [ref=f22e346]: Increase bookings
+            - generic [ref=f22e347]:
+              - generic [ref=f22e348]:
+                - button [ref=f22e349] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Reminder to rebook" [level=3]
+                          - paragraph: Remind your clients to rebook a few weeks after their last appointment.
+                      - generic: Enabled
+              - generic [ref=f22e350]:
+                - button [ref=f22e351] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Celebrate birthdays" [level=3]
+                          - paragraph: Surprise clients on their special day, a proven way to boost client loyalty and retention.
+                      - button "Enable" [ref=f22e352] [cursor=pointer]
+              - generic [ref=f22e356]:
+                - button [ref=f22e357] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Win back lapsed clients" [level=3]
+                          - paragraph: Reach clients that you haven't seen for a while and encourage them to book their next appointment.
+                      - button "Enable" [ref=f22e358] [cursor=pointer]
+              - generic [ref=f22e362]:
+                - button [ref=f22e363] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Reward loyal clients" [level=3]
+                          - paragraph: Message top spenders and get them even more engaged with a special offer.
+                      - button "Enable" [ref=f22e364] [cursor=pointer]
+          - generic [ref=f22e369]:
+            - paragraph [ref=f22e370]: Celebrate milestones
+            - generic [ref=f22e371]:
+              - generic [ref=f22e372]:
+                - button [ref=f22e373] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Welcome new clients" [level=3]
+                          - paragraph: Celebrate new clients joining your business by offering them a discount.
+                      - button "Enable" [ref=f22e374] [cursor=pointer]
+              - generic [ref=f22e378]:
+                - button [ref=f22e379] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - paragraph: Create new
+          - generic [ref=f22e381]:
+            - paragraph [ref=f22e382]: Client messages
+            - generic [ref=f22e383]:
+              - generic [ref=f22e384]:
+                - button [ref=f22e385] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "New chat message" [level=3]
+                          - paragraph: Notifies clients when you send them a message via Fresha Connect.
+                      - generic: Enabled
+              - generic [ref=f22e386]:
+                - button [ref=f22e387] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Message received" [level=3]
+                          - paragraph: Notifies clients that you received the message they sent through your contact page
+                      - generic: Enabled
+          - generic [ref=f22e389]:
+            - paragraph [ref=f22e390]: Client loyalty
+            - generic [ref=f22e391]:
+              - generic [ref=f22e392]:
+                - button [ref=f22e393] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Earned points summary" [level=3]
+                          - paragraph: Send clients a summary of points earned
+                      - button "Enable" [ref=f22e394] [cursor=pointer]
+              - generic [ref=f22e398]:
+                - button [ref=f22e399] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Achieved loyalty tier" [level=3]
+                          - paragraph: Notify clients when they achieve a new tier
+                      - button "Enable" [ref=f22e400] [cursor=pointer]
+              - generic [ref=f22e404]:
+                - button [ref=f22e405] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Earned rewards summary" [level=3]
+                          - paragraph: Send clients a summary of their rewards
+                      - button "Enable" [ref=f22e406] [cursor=pointer]
+              - generic [ref=f22e410]:
+                - button [ref=f22e411] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading "Referrer rewards earned" [level=3]
+                          - paragraph: Notify existing clients when their friends complete their first appointments
+                      - button "Enable" [ref=f22e412] [cursor=pointer]

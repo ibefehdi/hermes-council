@@ -1,0 +1,129 @@
+- generic [ref=f79e1]:
+  - generic [ref=f79e12]:
+    - generic [ref=f79e13]:
+      - link "Fresha" [ref=f79e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f79e16]:
+        - button [ref=f79e18] [cursor=pointer]:
+          - paragraph [ref=f79e20]: Continue setup
+        - button "Search" [ref=f79e22] [cursor=pointer]
+        - button "Performance insights" [ref=f79e24] [cursor=pointer]
+        - button "Notifications" [ref=f79e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f79e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f79e31] [cursor=pointer]:
+          - generic [ref=f79e32]: FA
+    - generic [ref=f79e34]:
+      - generic [ref=f79e38]:
+        - generic [ref=f79e39]:
+          - link [ref=f79e42] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f79e46] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f79e50] [cursor=pointer]
+          - button [ref=f79e54] [cursor=pointer]
+          - button [ref=f79e58] [cursor=pointer]
+          - button [ref=f79e62] [cursor=pointer]
+          - button [ref=f79e66] [cursor=pointer]
+          - button [ref=f79e70] [cursor=pointer]
+          - link [ref=f79e74] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f79e78] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f79e82] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f79e86] [cursor=pointer]
+      - generic [ref=f79e94]:
+        - generic [ref=f79e96]:
+          - button "Back" [ref=f79e97] [cursor=pointer]
+          - navigation [ref=f79e102]:
+            - list [ref=f79e103]:
+              - listitem [ref=f79e104]:
+                - link "Workspace settings •" [ref=f79e105] [cursor=pointer]:
+                  - /url: /setup
+              - listitem [ref=f79e106]:
+                - link "Sales" [ref=f79e107] [cursor=pointer]:
+                  - /url: /setup/sales
+        - generic [ref=f79e112]:
+          - paragraph [ref=f79e114]: Sales
+          - list [ref=f79e115]:
+            - listitem [ref=f79e116]:
+              - list [ref=f79e117]:
+                - listitem [ref=f79e118] [cursor=pointer]:
+                  - link [ref=f79e119]:
+                    - /url: /setup/sales/pay-now
+                  - generic [ref=f79e120]: Pay now
+                - listitem [ref=f79e122] [cursor=pointer]:
+                  - link [ref=f79e123]:
+                    - /url: /setup/sales/tax-rates
+                  - generic [ref=f79e124]: Tax rates
+                - listitem [ref=f79e126] [cursor=pointer]:
+                  - link [ref=f79e127]:
+                    - /url: /setup/sales/receipts
+                  - generic [ref=f79e128]: Receipts
+                - listitem [ref=f79e130] [cursor=pointer]:
+                  - link [ref=f79e131]:
+                    - /url: /setup/sales/registers
+                  - generic [ref=f79e132]: Registers
+                - listitem [ref=f79e134] [cursor=pointer]:
+                  - link [ref=f79e135]:
+                    - /url: /setup/sales/tipping
+                  - generic [ref=f79e136]: Tipping
+                - listitem [ref=f79e138] [cursor=pointer]:
+                  - link [ref=f79e139]:
+                    - /url: /setup/sales/service-charges
+                  - generic [ref=f79e140]: Service charges
+                - listitem [ref=f79e142] [cursor=pointer]:
+                  - link [ref=f79e143]:
+                    - /url: /setup/sales/gift-cards
+                  - generic [ref=f79e144]: Gift cards
+                - listitem [ref=f79e146] [cursor=pointer]:
+                  - link [ref=f79e147]:
+                    - /url: /setup/sales/payment-methods
+                  - generic [ref=f79e148]: Custom checkout methods
+          - separator [ref=f79e150]
+          - list [ref=f79e151]:
+            - listitem [ref=f79e152]:
+              - list [ref=f79e153]:
+                - listitem [ref=f79e154] [cursor=pointer]:
+                  - button [ref=f79e155]
+                  - generic [ref=f79e156]: Payment settings
+        - generic [ref=f79e159]:
+          - generic [ref=f79e160]:
+            - generic [ref=f79e161]:
+              - paragraph [ref=f79e163]: Tax rates
+              - paragraph [ref=f79e164]:
+                - text: Set the tax defaults to automatically apply them in appointments and sales.
+                - link "Learn more" [ref=f79e165] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/sales/359-set-up-and-manage-taxes
+                - text: .
+            - button "Add tax" [ref=f79e168] [cursor=pointer]
+          - generic [ref=f79e176]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img "Illustration"
+            - generic [ref=f79e177]:
+              - generic [ref=f79e178]: No tax rates
+              - generic [ref=f79e179]: Add tax rates and use groups for multiple taxes, for example combining city and state taxes.
+  - dialog "Add new tax" [active] [ref=f79e183]:
+    - generic [ref=f79e185]:
+      - generic [ref=f79e186]: Add new tax
+      - generic [ref=f79e189]:
+        - button "Close" [ref=f79e190] [cursor=pointer]
+        - button "Add" [ref=f79e194] [cursor=pointer]
+    - generic [ref=f79e200]:
+      - generic [ref=f79e202]:
+        - heading "Add new tax" [level=1] [ref=f79e204]
+        - paragraph [ref=f79e205]: Set the tax name and percentage rate. To apply this to your products and services, adjust your tax defaults settings.
+      - generic [ref=f79e213]:
+        - generic [ref=f79e214]:
+          - generic [ref=f79e215]: Tax name
+          - textbox "Tax name" [ref=f79e219]
+        - generic [ref=f79e220]:
+          - generic [ref=f79e221]: Tax rate
+          - generic [ref=f79e224]:
+            - generic [ref=f79e225]: "%"
+            - spinbutton "Tax rate" [ref=f79e227]

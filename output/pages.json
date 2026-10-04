@@ -1,0 +1,165 @@
+{
+  "app": "Fresha Partner Dashboard",
+  "base_url": "https://partners.fresha.com",
+  "workspace": "Test Salon",
+  "location_id": 3216614,
+  "currency": "KWD",
+  "mapped_at": "2026-10-04",
+  "global_nav": {
+    "sidebar_sections": ["Dashboard", "Calendar", "Sales", "Clients", "Catalogue", "Fresha (Online bookings)", "Marketing", "Team", "Reports", "Add-ons", "Setup"],
+    "top_bar": ["Continue setup", "Search", "Performance insights", "News", "Notifications", "Fresha Connect", "User menu"],
+    "user_menu": [
+      {"label": "Invite a business to Fresha", "type": "referral"},
+      {"label": "My profile", "url": "/user-account/profile"},
+      {"label": "Personal settings", "url": "/user-account/personal-settings"},
+      {"label": "Help and support", "type": "external-help"},
+      {"label": "Log out", "type": "action"}
+    ]
+  },
+  "pages": [
+    {"id": "dashboard", "name": "Dashboard", "url_pattern": "/dashboard", "nav_path": "Sidebar icon 1", "purpose": "Business overview", "features": [
+      {"name": "Recent sales KPI + chart", "type": "chart", "reads": ["sales", "appointments"], "extra": "Filters button"},
+      {"name": "Upcoming appointments KPI + chart", "type": "chart", "reads": ["appointments"]},
+      {"name": "Appointments activity feed", "type": "list", "links_to": "/dashboard/drawer/appointment/:id"},
+      {"name": "Today's next appointments", "type": "list", "links_to": "/dashboard/drawer/appointment/:id"},
+      {"name": "Top services", "type": "table", "columns": ["Service", "This month", "Last month"]},
+      {"name": "Top team member", "type": "table", "columns": ["Team member", "This month", "Last month"]}
+    ], "api": ["reports.fresha.com/api/json_api_dashboard/recent_sales", "reports.fresha.com/api/json_api_dashboard/upcoming_appointments", "reports.fresha.com/api/json_api_dashboard/bookings_activity", "reports.fresha.com/api/json_api_dashboard/todays_bookings", "reports.fresha.com/api/json_api_dashboard/top_services", "reports.fresha.com/api/json_api_dashboard/top_employees"], "screenshot": "p-dashboard.png"},
+    {"id": "calendar", "name": "Calendar", "url_pattern": "/calendar?date&view&location_id", "nav_path": "Sidebar icon 2", "purpose": "Appointment scheduling calendar", "features": [
+      {"name": "Date navigation", "type": "navigation", "elements": ["Today", "prev/next month", "date picker"]},
+      {"name": "View controls", "type": "filter", "elements": ["Scheduled team", "Reset default view", "Day"]},
+      {"name": "Add", "type": "action-button", "does": "create appointment"},
+      {"name": "Provider columns", "type": "schedule-grid", "reads": ["employees"]},
+      {"name": "Appointment blocks", "type": "list", "links_to": "appointment drawer"}
+    ], "api": ["partners-calendar-api.fresha.com/alpha-graphql", "partners-api.fresha.com/employees/with-deleted", "partners-api.fresha.com/closed-dates"], "screenshot": "p-calendar.png"},
+    {"id": "sales-daily-sales", "name": "Daily sales summary", "url_pattern": "/sales/daily-sales", "nav_path": "Sales > Daily sales summary", "purpose": "Per-day sales breakdown", "features": [
+      {"name": "Export", "type": "export"}, {"name": "Add new", "type": "action-button"},
+      {"name": "Day navigation", "type": "navigation"},
+      {"name": "Sales table", "type": "table", "columns": ["Item type", "Sales qty", "Refund qty", "Gross total"]},
+      {"name": "Payments table", "type": "table", "columns": ["Payment type", "Payments collected", "Refunds paid"]}
+    ], "api": ["reports.fresha.com/api/reports/daily_sales"], "screenshot": "p-sales-daily-sales.png"},
+    {"id": "sales-register", "name": "Register", "url_pattern": "/sales/register", "nav_path": "Sales > Register", "purpose": "POS register (activation page in this workspace)", "features": [{"name": "Start now", "type": "action-button", "does": "activate register feature"}], "api": [], "screenshot": "p-sales-register.png"},
+    {"id": "sales-appointments-list", "name": "Appointments", "url_pattern": "/sales/appointments-list", "nav_path": "Sales > Appointments", "purpose": "All-appointments list", "features": [
+      {"name": "Export", "type": "export"}, {"name": "Month to date preset", "type": "filter"}, {"name": "Filters / sort", "type": "filter"},
+      {"name": "Appointments table", "type": "table", "columns": ["Ref #", "Client", "Service", "Created by", "Created Date", "Scheduled Date", "Duration", "Team member", "Price", "Status"]}
+    ], "api": ["reports.fresha.com/api/reports/appointments_list"], "screenshot": "p-sales-appointments-list.png"},
+    {"id": "sales-sales-list", "name": "Sales", "url_pattern": "/sales/sales-list", "nav_path": "Sales > Sales", "purpose": "Completed sales list", "features": [
+      {"name": "Options / Add new", "type": "action-button"},
+      {"name": "Tabs", "type": "tabs", "values": ["Sales", "Drafts"]},
+      {"name": "Filters / Sort by", "type": "filter"},
+      {"name": "Sales table", "type": "table", "columns": ["Sale #", "Client", "Status", "Sale date", "Tips", "Gross total"]}
+    ], "api": ["reports.fresha.com/api/reports/sales_list"], "screenshot": "p-sales-sales-list.png"},
+    {"id": "sales-payment-transactions", "name": "Payments", "url_pattern": "/sales/payment-transactions", "nav_path": "Sales > Payments", "purpose": "All payment transactions", "features": [
+      {"name": "Options", "type": "action-button"}, {"name": "Date range picker", "type": "filter"}, {"name": "Filters", "type": "filter"},
+      {"name": "Transactions table", "type": "table", "columns": ["Payment date", "Location", "Ref #", "Client", "Team member", "Type", "Method"]}
+    ], "api": [], "screenshot": "p-sales-payment-transactions.png"},
+    {"id": "sales-gift-cards", "name": "Gift cards sold", "url_pattern": "/sales/gift-cards", "nav_path": "Sales > Sold items > Gift cards sold", "purpose": "Gift cards sold list", "features": [{"name": "Options", "type": "action-button"}], "api": ["reports.fresha.com/api/reports/gift_cards", "gift-cards-api.fresha.com/config"], "screenshot": "p-sales-gift-cards.png"},
+    {"id": "sales-packages-sold", "name": "Packages sold", "url_pattern": "/sales/packages-sold", "nav_path": "Sales > Sold items > Packages sold", "purpose": "Packages purchased by clients", "features": [{"name": "Options", "type": "action-button"}, {"name": "All statuses", "type": "filter"}, {"name": "Set up now", "type": "action-button"}], "api": [], "screenshot": "p-sales-packages-sold.png"},
+    {"id": "sales-paid-plans", "name": "Memberships sold", "url_pattern": "/sales/paid-plans (redirects to /sales/memberships)", "nav_path": "Sales > Sold items > Memberships sold", "purpose": "Memberships purchased by clients", "features": [{"name": "Export", "type": "export"}], "api": ["partners-api.fresha.com/paid-plan-management"], "screenshot": "p-sales-paid-plans.png"},
+    {"id": "clients-list", "name": "Clients list", "url_pattern": "/clients/list", "nav_path": "Clients > Clients list", "purpose": "Client profiles CRUD", "features": [
+      {"name": "Options / Add", "type": "action-button"},
+      {"name": "Import your client list", "type": "banner", "action": "Start import"},
+      {"name": "Search", "type": "search", "placeholder": "Name, email or phone"},
+      {"name": "Filters / sort by Created at", "type": "filter"},
+      {"name": "Clients table", "type": "table", "columns": ["select-all", "Client name", "Mobile number", "Reviews", "Sales", "Created at"]},
+      {"name": "Pagination", "type": "pagination"}
+    ], "api": ["customers-api.fresha.com/v2/customer-search", "customers-api.fresha.com/customer-avatars", "customers-api.fresha.com/customer-duplicates/existence-check", "customers-api.fresha.com/customers-merge/auto-status"], "screenshot": "p-clients-list.png"},
+    {"id": "clients-segments", "name": "Client segments", "url_pattern": "/clients/segments", "nav_path": "Clients > Client segments", "purpose": "Standard & custom segments", "features": [
+      {"name": "Options / Add", "type": "action-button"},
+      {"name": "Tabs", "type": "tabs", "values": ["Standard", "Custom"]},
+      {"name": "Standard segments", "type": "cards", "values": ["New clients", "Recent clients", "First visit", "Loyal clients", "Lapsed clients"], "per_card": "Actions menu"}
+    ], "api": [], "screenshot": "p-clients-segments.png"},
+    {"id": "clients-loyalty", "name": "Client loyalty", "url_pattern": "/clients/loyalty", "nav_path": "Clients > Engage > Client loyalty", "purpose": "Loyalty program add-on", "features": [{"name": "Start now (7-day free trial)", "type": "action-button"}], "api": [], "screenshot": "p-clients-loyalty.png"},
+    {"id": "clients-online-reputation", "name": "Online reputation", "url_pattern": "/clients/online-reputation", "nav_path": "Clients > Engage > Online reputation (Marketing > Engage > Reviews)", "purpose": "Ratings & reviews management", "features": [
+      {"name": "Onboarding modal", "type": "modal", "actions": ["Watch now", "Dismiss"]},
+      {"name": "Tabs", "type": "tabs", "values": ["Overview", "All reviews"]},
+      {"name": "Connect", "type": "action-button", "does": "connect review sources"}
+    ], "api": [], "screenshot": "p-clients-online-reputation.png"},
+    {"id": "catalogue-services", "name": "Service menu", "url_pattern": "/catalogue/services", "nav_path": "Catalogue > Service menu", "purpose": "Manage bookable services", "features": [{"name": "Services management", "type": "table", "detail": "UNVERIFIED (data rows not captured)"}], "api": [], "screenshot": "p-catalogue-services.png"},
+    {"id": "catalogue-packages", "name": "Packages", "url_pattern": "/catalogue/packages", "nav_path": "Catalogue > Packages", "purpose": "Sellable service packages", "features": [
+      {"name": "Start now", "type": "action-button"},
+      {"name": "Package cards", "type": "cards", "example": "Spa Package, 6 sessions, KWD 120; Full body massage, 5 sessions"}
+    ], "api": [], "screenshot": "p-catalogue-packages.png"},
+    {"id": "catalogue-products", "name": "Products", "url_pattern": "/catalogue/products", "nav_path": "Catalogue > Products", "purpose": "Retail product catalogue", "features": [{"name": "import many at once", "type": "link"}, {"name": "Start now", "type": "action-button"}], "api": ["inventory-api.fresha.com/inventory"], "screenshot": "p-catalogue-products.png"},
+    {"id": "catalogue-stocktakes", "name": "Stocktakes", "url_pattern": "/catalogue/stocktakes", "nav_path": "Catalogue > Inventory > Stocktakes", "purpose": "Inventory stock counts", "features": [{"name": "Start now", "type": "action-button"}], "api": [], "screenshot": "p-catalogue-stocktakes.png"},
+    {"id": "catalogue-orders", "name": "Stock orders", "url_pattern": "/catalogue/orders", "nav_path": "Catalogue > Inventory > Stock orders", "purpose": "Purchase/stock orders", "features": [{"name": "Options", "type": "action-button"}], "api": [], "screenshot": "p-catalogue-orders.png"},
+    {"id": "catalogue-suppliers", "name": "Suppliers", "url_pattern": "/catalogue/suppliers", "nav_path": "Catalogue > Inventory > Suppliers", "purpose": "Supplier directory", "features": [{"name": "Add", "type": "action-button"}], "api": ["inventory-api.fresha.com/suppliers"], "screenshot": "p-catalogue-suppliers.png"},
+    {"id": "fresha-marketplace", "name": "Marketplace profile", "url_pattern": "/fresha/online-booking/locations", "nav_path": "Fresha > Online bookings > Marketplace profile", "purpose": "Fresha marketplace profile per location", "features": [{"name": "Start now", "type": "action-button"}], "api": ["shopkeeper-api.fresha.com/backoffice/shop", "partners-api.fresha.com/published-location-profiles-check"], "screenshot": "p-fresha-marketplace.png"},
+    {"id": "fresha-google-reserve", "name": "Reserve with Google", "url_pattern": "/fresha/online-booking/google-reserve", "nav_path": "Fresha > Online bookings > Reserve with Google", "purpose": "Google Search/Maps bookings", "features": [{"name": "Setup/connect flow", "type": "form", "detail": "UNVERIFIED - redirects to /add-ons on repeat visit"}], "api": ["google-appt-redirection-api.fresha.com/reserve-with-google-settings"], "screenshot": "p-fresha-google-reserve.png"},
+    {"id": "fresha-facebook", "name": "Facebook and Instagram bookings", "url_pattern": "/fresha/online-booking/facebook-setup", "nav_path": "Fresha > Online bookings > Facebook and Instagram bookings", "purpose": "Social media Book Now button", "features": [{"name": "Set up now", "type": "action-button"}], "api": ["partners-api.fresha.com/facebook-fbe/provider-settings"], "screenshot": "p-fresha-facebook.png"},
+    {"id": "fresha-link-builder", "name": "Link builder", "url_pattern": "/fresha/online-booking/buttons-and-links", "nav_path": "Fresha > Online bookings > Link builder", "purpose": "Shareable booking links & QR codes", "notes": "403 on hard navigation; reach via sidebar", "features": [
+      {"name": "Create link", "type": "action-button"},
+      {"name": "Link types", "type": "cards", "values": ["Link to everything", "Link to services", "(more in page body)"]}
+    ], "api": ["partners-api.fresha.com/user-account/profile"], "screenshot": "p-fresha-link-builder.png"},
+    {"id": "fresha-smart-website", "name": "Smart Website", "url_pattern": "/fresha/online-booking/smart-website", "nav_path": "Fresha > Your websites > Smart Website", "purpose": "Fresha-hosted website add-on", "notes": "403 on hard navigation; reach via sidebar", "features": [{"name": "Continue (setup wizard)", "type": "action-button"}], "api": [], "screenshot": "p-fresha-smart-website.png"},
+    {"id": "marketing-blast-campaigns", "name": "Blast campaigns", "url_pattern": "/marketing/blast-campaigns/home", "nav_path": "Marketing > Messaging > Blast campaigns", "purpose": "Email/SMS blast marketing", "notes": "403 on hard navigation; reach via sidebar", "features": [{"name": "Start now", "type": "action-button"}], "api": ["partners-api.fresha.com/blast-marketing/campaigns"], "screenshot": "p-marketing-blast-campaigns.png"},
+    {"id": "marketing-automations", "name": "Automations", "url_pattern": "/marketing/automated-messages", "nav_path": "Marketing > Messaging > Automations", "purpose": "Automated client messaging", "features": [
+      {"name": "Tabs", "type": "tabs", "values": ["Reminders", "Appointment updates", "Waitlist updates", "Increase bookings", "Celebrate milestones", "Client messages", "Client loyalty"]},
+      {"name": "Automation cards", "type": "cards", "values": ["3 days upcoming appointment reminder", "24 hours upcoming appointment reminder", "1 hour upcoming appointment reminder", "New appointment", "Rescheduled appointment", "Canceled appointment", "Did not show up", "Thank you for visiting", "Joined the waitlist", "Time slot available", "Reminder to rebook", "Celebrate birthdays"], "per_card": "Enable"},
+      {"name": "Show balance management actions", "type": "action-button"}
+    ], "api": ["customer-notifier-api.fresha.com/v3/notification-types", "customer-notifier-api.fresha.com/messages"], "screenshot": "p-marketing-automations.png"},
+    {"id": "marketing-notifications", "name": "Messages history", "url_pattern": "/marketing/notifications", "nav_path": "Marketing > Messaging > Messages history", "purpose": "History of sent messages", "features": [{"name": "Set up now", "type": "action-button"}], "api": ["customer-notifier-api.fresha.com/messages"], "screenshot": "p-marketing-notifications.png"},
+    {"id": "marketing-deals", "name": "Deals", "url_pattern": "/marketing/deals", "nav_path": "Marketing > Promotion > Deals", "purpose": "Discount codes, flash sales, promotions", "features": [{"name": "Start now", "type": "action-button"}], "api": ["deals-api.fresha.com/deals"], "screenshot": "p-marketing-deals.png"},
+    {"id": "marketing-peak-pricing", "name": "Smart pricing", "url_pattern": "/marketing/peak-pricing", "nav_path": "Marketing > Promotion > Smart pricing", "purpose": "Busy/quiet-hour price adjustment", "features": [{"name": "Start now", "type": "action-button"}], "api": ["deals-api.fresha.com/smart-pricing/migration-result"], "screenshot": "p-marketing-peak-pricing.png"},
+    {"id": "team-team-members", "name": "Team members", "url_pattern": "/team/team-members", "nav_path": "Team > Team members", "purpose": "Staff management", "features": [
+      {"name": "Options / Add", "type": "action-button"}, {"name": "Activate plan", "type": "banner"},
+      {"name": "Search / Filters / Custom order", "type": "filter"}
+    ], "api": ["partners-api.fresha.com/employees"], "screenshot": "p-team-team-members.png"},
+    {"id": "team-scheduled-shifts", "name": "Scheduled shifts", "url_pattern": "/team/scheduled-shifts?date&locationId", "nav_path": "Team > Scheduled shifts", "purpose": "Weekly shift scheduling", "features": [
+      {"name": "Options / Add", "type": "action-button"},
+      {"name": "Week navigation", "type": "navigation"}
+    ], "api": ["partners-api.fresha.com/employees"], "screenshot": "p-team-scheduled-shifts.png"},
+    {"id": "team-timesheets", "name": "Timesheets", "url_pattern": "/team/timesheets", "nav_path": "Team > Timesheets", "purpose": "Worked hours (add-on)", "features": [{"name": "Start now", "type": "action-button"}], "api": ["timesheets-api.fresha.com/graphql"], "screenshot": "p-team-timesheets.png"},
+    {"id": "team-payrun", "name": "Pay runs", "url_pattern": "/team/payrun/overview", "nav_path": "Team > Pay runs", "purpose": "Payroll runs (add-on)", "features": [{"name": "Start now", "type": "action-button"}], "api": ["staff-working-hours-api.fresha.com/graphql"], "screenshot": "p-team-payrun.png"},
+    {"id": "reports", "name": "Reports", "url_pattern": "/reports/report-group/:id?category", "nav_path": "Sidebar > Reports", "purpose": "Report catalog (58 reports)", "features": [
+      {"name": "Report cards", "type": "cards", "values": ["Appointments cancellations & no-show summary", "Appointments list", "Appointments summary", "Attendance summary", "Break activity", "Cash flow statement", "Cash flow summary", "Cash register summary", "Client insights", "Client list", "Client summary", "Commission activity", "Commission summary", "Discount summary", "Fee deduction activity", "Fee deduction summary", "Finance summary", "Gift card by time period", "Gift card list", "Liability activity", "Liability summary", "Loyalty dashboard", "Memberships benefits consumption", "Memberships list", "Memberships summary", "Online presence dashboard", "Ordered stock", "Packages benefits consumption", "Packages list", "Packages summary", "Pay summary", "Payment transactions", "Payments summary", "Performance dashboard", "Performance over time", "Performance summary", "Prepayment list", "Prepayments by time period", "Product list", "Sales by time period", "Sales list", "Sales log detail", "Sales summary", "Scheduled shifts", "Service charges", "Stock movement log", "Stock movement summary", "Stock on hand", "Taxes list", "Taxes summary", "Team time off report", "Tips detail", "Tips summary", "Wages detail", "Wages summary", "Waitlist detail", "Waitlist summary", "Working hours activity", "Working hours summary"]},
+      {"name": "Help-center link", "type": "external-link", "url": "https://www.fresha.com/help-center/knowledge-base/reports"}
+    ], "api": ["partners-reporting-api.fresha.com/", "reports.fresha.com/api/reports/*"], "screenshot": "p-reports.png"},
+    {"id": "add-ons", "name": "Add-ons", "url_pattern": "/add-ons", "nav_path": "Sidebar > Add-ons", "purpose": "Add-on & integration marketplace", "features": [
+      {"name": "Add-on cards", "type": "cards", "values": ["Payments", "Premium Support", "Insights", "Google Rating Boost", "Client Loyalty", "Data Connector", "Client Connect", "Smart Website", "Team Connect", "Bookable Resources"]},
+      {"name": "Integrations", "type": "cards", "values": ["Xero Accounting", "QuickBooks Accounting", "Facebook and Instagram bookings", "Meta Pixel Ads", "Google Analytics", "Google Ads"]}
+    ], "api": ["partners-api.fresha.com/facebook-fbe/provider-settings"], "screenshot": "p-add-ons.png"},
+    {"id": "setup", "name": "Setup (Workspace settings)", "url_pattern": "/setup", "nav_path": "Sidebar > Setup", "purpose": "Workspace settings hub", "features": [
+      {"name": "Settings links", "type": "navigation", "links": [
+        {"label": "Business setup", "url": "/setup/business-setup"},
+        {"label": "Scheduling", "url": "/setup/scheduling"},
+        {"label": "Sales", "url": "/setup/sales"},
+        {"label": "Clients", "url": "/setup/clients"},
+        {"label": "Billing", "url": "/legal-entities"},
+        {"label": "Team", "url": "/setup/team"},
+        {"label": "Forms", "url": "/setup/forms-and-notes"},
+        {"label": "Payments", "url": "/setup/payments"}
+      ]},
+      {"name": "Cross-links: Online presence / Marketing / Other", "type": "navigation"}
+    ], "api": [], "screenshot": "p-setup.png"},
+    {"id": "connect", "name": "Fresha Connect", "url_pattern": "/connect", "nav_path": "Top bar > Fresha Connect", "purpose": "Two-way client messaging (Client Connect)", "features": [
+      {"name": "New feature modal", "type": "modal", "actions": ["Go to inbox", "Learn more"]},
+      {"name": "Inbox", "type": "UNVERIFIED (behind modal)"}
+    ], "api": [], "screenshot": "p-connect.png"},
+    {"id": "appointment-drawer", "name": "Appointment drawer", "url_pattern": "/dashboard/drawer/view-appointment/:id?focusedBookingId=:id", "nav_path": "Click appointment anywhere", "purpose": "View/edit single appointment", "features": [
+      {"name": "Client header", "type": "panel", "actions": ["email", "Actions", "View profile"]},
+      {"name": "Date/time/status/repeat controls", "type": "form"},
+      {"name": "Services list", "type": "list", "per_item": ["Edit", "Remove"], "extra": "Add service"},
+      {"name": "Totals & To-pay", "type": "summary"},
+      {"name": "Options / Checkout", "type": "action-button", "does": "open POS checkout"}
+    ], "api": ["partners-api.fresha.com/customers/:id/recently-booked-appointments", "partners-api.fresha.com/customers/:id/paid-plan-instances", "partners-api.fresha.com/customers/:id/ncf-events", "partners-api.fresha.com/location-tip-settings/:locationId"], "screenshot": "p-appointment-drawer.png"},
+    {"id": "user-profile", "name": "My profile", "url_pattern": "/user-account/profile", "nav_path": "User menu > My profile", "purpose": "Personal public profile", "features": [
+      {"name": "Share profile", "type": "action-button"},
+      {"name": "Profile sections", "type": "links", "values": ["personal details", "Portfolio", "Interests", "Social links"]}
+    ], "api": [], "screenshot": "p-user-profile.png"},
+    {"id": "personal-settings", "name": "Personal settings", "url_pattern": "/user-account/personal-settings", "nav_path": "User menu > Personal settings", "purpose": "Account settings", "features": [
+      {"name": "Settings sections", "type": "links", "values": [
+        {"label": "Personal info", "url": "/user-account/personal-settings/personal-info"},
+        {"label": "Login & security", "url": "/user-account/personal-settings/login-security"},
+        {"label": "Appearance", "url": "/user-account/personal-settings/appearance"}
+      ]}
+    ], "api": [], "screenshot": "p-personal-settings.png"}
+  ],
+  "api_hosts": ["partners-api-gateway.fresha.com/graphql", "partners-api.fresha.com", "reports.fresha.com", "customers-api.fresha.com", "deals-api.fresha.com", "inventory-api.fresha.com", "gift-cards-api.fresha.com", "shopkeeper-api.fresha.com", "google-appt-redirection-api.fresha.com", "customer-notifier-api.fresha.com", "staff-notifications.fresha.com", "onboarding-api.fresha.com", "timesheets-api.fresha.com", "staff-working-hours-api.fresha.com", "partners-calendar-api.fresha.com", "partners-app.fresha.com", "partners-reporting-api.fresha.com", "auth-api.fresha.com", "unleash-proxy.fresha.com"],
+  "quirks": [
+    "/sales/paid-plans redirects to /sales/memberships",
+    "/fresha/online-booking/buttons-and-links, /smart-website and all /marketing/* routes return HTTP 403 on hard navigation - client-side routing only",
+    "/fresha/online-booking/google-reserve redirected to /add-ons on second visit",
+    "All amounts in KWD"
+  ]
+}

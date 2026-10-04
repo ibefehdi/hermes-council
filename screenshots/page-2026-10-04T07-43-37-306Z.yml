@@ -1,0 +1,143 @@
+- generic [ref=f40e12]:
+  - generic [ref=f40e13]:
+    - link "Fresha" [ref=f40e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f40e16]:
+      - button [ref=f40e18] [cursor=pointer]:
+        - paragraph [ref=f40e20]: Continue setup
+      - button "Search" [ref=f40e22] [cursor=pointer]
+      - button "Performance insights" [ref=f40e24] [cursor=pointer]
+      - button "Notifications" [ref=f40e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f40e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f40e31] [cursor=pointer]:
+        - generic [ref=f40e32]: FA
+  - generic [ref=f40e34]:
+    - generic [ref=f40e38]:
+      - generic [ref=f40e39]:
+        - link [ref=f40e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f40e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f40e50] [cursor=pointer]
+        - button [ref=f40e54] [cursor=pointer]
+        - button [ref=f40e58] [cursor=pointer]
+        - button [ref=f40e62] [cursor=pointer]
+        - button [ref=f40e66] [cursor=pointer]
+        - button [ref=f40e70] [cursor=pointer]
+        - link [ref=f40e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f40e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f40e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f40e86] [cursor=pointer]
+    - generic [ref=f40e94]:
+      - generic [ref=f40e96]:
+        - button "Back" [ref=f40e97] [cursor=pointer]
+        - navigation [ref=f40e102]:
+          - list [ref=f40e103]:
+            - listitem [ref=f40e104]:
+              - link "Workspace settings •" [ref=f40e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f40e106]:
+              - link "Scheduling" [ref=f40e107] [cursor=pointer]:
+                - /url: /setup/scheduling
+      - generic [ref=f40e112]:
+        - paragraph [ref=f40e114]: Scheduling
+        - list [ref=f40e115]:
+          - listitem [ref=f40e116]:
+            - list [ref=f40e117]:
+              - listitem [ref=f40e118] [cursor=pointer]:
+                - link [ref=f40e119]:
+                  - /url: /setup/scheduling/time-and-calendar
+                - generic [ref=f40e120]: Time and calendar
+              - listitem [ref=f40e122] [cursor=pointer]:
+                - link [ref=f40e123]:
+                  - /url: /setup/scheduling/waitlist
+                - generic [ref=f40e124]: Waitlist appointments
+              - listitem [ref=f40e126] [cursor=pointer]:
+                - link [ref=f40e127]:
+                  - /url: /setup/scheduling/blocked-time-types
+                - generic [ref=f40e128]: Blocked time types
+              - listitem [ref=f40e130] [cursor=pointer]:
+                - link [ref=f40e131]:
+                  - /url: /setup/scheduling/resources
+                - generic [ref=f40e132]: Resources
+              - listitem [ref=f40e134] [cursor=pointer]:
+                - link [ref=f40e135]:
+                  - /url: /setup/scheduling/cancellation-reasons
+                - generic [ref=f40e136]: Cancellation reasons
+              - listitem [ref=f40e138] [cursor=pointer]:
+                - link [ref=f40e139]:
+                  - /url: /setup/scheduling/appointment-statuses
+                - generic [ref=f40e140]: Appointment statuses
+              - listitem [ref=f40e142] [cursor=pointer]:
+                - link [ref=f40e143]:
+                  - /url: /setup/scheduling/closed-periods
+                - generic [ref=f40e144]: Closed periods
+            - separator [ref=f40e147]
+          - listitem [ref=f40e148]:
+            - generic [ref=f40e149]: Online booking
+            - list [ref=f40e151]:
+              - listitem [ref=f40e152] [cursor=pointer]:
+                - link [ref=f40e153]:
+                  - /url: /setup/scheduling/dynamic-assignment
+                - generic [ref=f40e154]: Dynamic assignment
+              - listitem [ref=f40e156] [cursor=pointer]:
+                - link [ref=f40e157]:
+                  - /url: /setup/scheduling/availability
+                - generic [ref=f40e158]: Availability
+              - listitem [ref=f40e160] [cursor=pointer]:
+                - link [ref=f40e161]:
+                  - /url: /setup/scheduling/booking-options
+                - generic [ref=f40e162]: Booking options
+        - separator [ref=f40e164]
+        - list [ref=f40e165]:
+          - listitem [ref=f40e166]:
+            - list [ref=f40e167]:
+              - listitem [ref=f40e168] [cursor=pointer]:
+                - button [ref=f40e169]
+                - generic [ref=f40e170]: Marketplace profile
+              - listitem [ref=f40e172] [cursor=pointer]:
+                - button [ref=f40e173]
+                - generic [ref=f40e174]: Service menu
+              - listitem [ref=f40e176] [cursor=pointer]:
+                - button [ref=f40e177]
+                - generic [ref=f40e178]: Scheduled shifts
+      - generic [ref=f40e181]:
+        - generic [ref=f40e182]:
+          - generic [ref=f40e183]:
+            - paragraph [ref=f40e185]: Blocked time types
+            - paragraph [ref=f40e186]:
+              - text: Create and customize blocked times that can be scheduled in the calendar.
+              - link "Learn more" [ref=f40e187] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/calendar/18-set-up-and-manage-blocked-time
+              - text: .
+          - button "Add" [ref=f40e190] [cursor=pointer]
+        - generic [ref=f40e194]:
+          - generic [ref=f40e195] [cursor=pointer]:
+            - button [ref=f40e196]
+            - generic [ref=f40e197]:
+              - generic [ref=f40e198]: 🥪
+              - button "Actions" [ref=f40e206]
+              - generic [ref=f40e212]:
+                - heading "Lunch" [level=3] [ref=f40e213]
+                - heading "30 min • Unpaid" [level=4] [ref=f40e214]
+          - generic [ref=f40e215] [cursor=pointer]:
+            - button [ref=f40e216]
+            - generic [ref=f40e217]:
+              - generic [ref=f40e218]: 📚
+              - button "Actions" [ref=f40e226]
+              - generic [ref=f40e232]:
+                - heading "Training" [level=3] [ref=f40e233]
+                - heading "1 hr • Paid" [level=4] [ref=f40e234]
+          - generic [ref=f40e235] [cursor=pointer]:
+            - button [ref=f40e236]
+            - generic [ref=f40e237]:
+              - generic [ref=f40e238]: 📆
+              - button "Actions" [ref=f40e246]
+              - generic [ref=f40e252]:
+                - heading "Meeting" [level=3] [ref=f40e253]
+                - heading "1 hr • Paid" [level=4] [ref=f40e254]

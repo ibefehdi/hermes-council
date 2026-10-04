@@ -1,0 +1,145 @@
+- generic [ref=f271e12]:
+  - generic [ref=f271e13]:
+    - link "Fresha" [ref=f271e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f271e16]:
+      - button [ref=f271e18] [cursor=pointer]:
+        - paragraph [ref=f271e20]: Continue setup
+      - button "Search" [ref=f271e22] [cursor=pointer]
+      - button "Performance insights" [ref=f271e24] [cursor=pointer]
+      - button "Notifications" [ref=f271e27] [cursor=pointer]:
+        - generic [ref=f271e28]: "4"
+      - link "Fresha Connect" [ref=f271e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f271e34] [cursor=pointer]:
+        - generic [ref=f271e35]: FA
+  - generic [ref=f271e37]:
+    - generic [ref=f271e38]:
+      - generic [ref=f271e41]:
+        - generic [ref=f271e42]:
+          - link [ref=f271e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f271e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f271e53] [cursor=pointer]
+          - button [ref=f271e57] [cursor=pointer]
+          - button [ref=f271e61] [cursor=pointer]
+          - button [ref=f271e65] [cursor=pointer]
+          - button [ref=f271e69] [cursor=pointer]
+          - button [ref=f271e73] [cursor=pointer]
+          - link [ref=f271e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f271e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f271e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f271e89] [cursor=pointer]
+      - generic [ref=f271e92]:
+        - button "Collapse Navigation Menu" [ref=f271e94] [cursor=pointer]
+        - generic [ref=f271e101]:
+          - paragraph [ref=f271e102]: Team
+          - link [ref=f271e104] [cursor=pointer]:
+            - /url: /team/team-members
+            - paragraph [ref=f271e105]: Team members
+          - link [ref=f271e107] [cursor=pointer]:
+            - /url: /team/scheduled-shifts
+            - paragraph [ref=f271e108]: Scheduled shifts
+          - link [ref=f271e110] [cursor=pointer]:
+            - /url: /team/timesheets
+            - paragraph [ref=f271e111]: Timesheets
+          - link [ref=f271e113] [cursor=pointer]:
+            - /url: /team/payrun/overview
+            - paragraph [ref=f271e114]: Pay runs
+    - generic [ref=f271e120]:
+      - generic [ref=f271e122]:
+        - paragraph [ref=f271e125]: Scheduled shifts
+        - generic [ref=f271e127]:
+          - button "Options" [ref=f271e129] [cursor=pointer]
+          - button "Add" [ref=f271e135] [cursor=pointer]
+      - generic [ref=f271e140]:
+        - generic [ref=f271e147]:
+          - button "This week" [ref=f271e148] [cursor=pointer]
+          - group [ref=f271e152]:
+            - button "Previous week" [ref=f271e153] [cursor=pointer]
+            - button "Oct 3 – 9, 2026" [ref=f271e158] [cursor=pointer]
+            - button "Next week" [ref=f271e162] [cursor=pointer]
+          - paragraph [ref=f271e167]: Button group
+        - table [ref=f271e169]:
+          - rowgroup [ref=f271e179]:
+            - row [ref=f271e180]:
+              - columnheader [ref=f271e181]:
+                - paragraph [ref=f271e185]:
+                  - text: Team member
+                  - button "Change" [ref=f271e186] [cursor=pointer]
+              - columnheader [ref=f271e187] [cursor=pointer]:
+                - button [ref=f271e192]:
+                  - paragraph [ref=f271e193]: Sat, Oct 3
+                  - paragraph [ref=f271e194]: 7 hr
+              - columnheader [ref=f271e195] [cursor=pointer]:
+                - button [ref=f271e200]:
+                  - paragraph [ref=f271e201]: Sun, Oct 4
+                  - paragraph [ref=f271e202]: 0 min
+              - columnheader [ref=f271e203] [cursor=pointer]:
+                - button [ref=f271e208]:
+                  - paragraph [ref=f271e209]: Mon, Oct 5
+                  - paragraph [ref=f271e210]: 9 hr
+              - columnheader [ref=f271e211] [cursor=pointer]:
+                - button [ref=f271e216]:
+                  - paragraph [ref=f271e217]: Tue, Oct 6
+                  - paragraph [ref=f271e218]: 9 hr
+              - columnheader [ref=f271e219] [cursor=pointer]:
+                - button [ref=f271e224]:
+                  - paragraph [ref=f271e225]: Wed, Oct 7
+                  - paragraph [ref=f271e226]: 9 hr
+              - columnheader [ref=f271e227] [cursor=pointer]:
+                - button [ref=f271e232]:
+                  - paragraph [ref=f271e233]: Thu, Oct 8
+                  - paragraph [ref=f271e234]: 9 hr
+              - columnheader [ref=f271e235] [cursor=pointer]:
+                - button [ref=f271e240]:
+                  - paragraph [ref=f271e241]: Fri, Oct 9
+                  - paragraph [ref=f271e242]: 9 hr
+          - rowgroup [ref=f271e243]:
+            - row [ref=f271e244]:
+              - cell [ref=f271e245]:
+                - button "FA Fahad Asad 52 hr Edit" [ref=f271e248] [cursor=pointer]:
+                  - generic [ref=f271e249]:
+                    - generic [ref=f271e250]:
+                      - generic [ref=f271e251]: FA
+                      - generic [ref=f271e254]:
+                        - paragraph [ref=f271e255]: Fahad Asad
+                        - paragraph [ref=f271e256]: 52 hr
+                    - generic [ref=f271e257]: Edit
+              - cell [ref=f271e262]:
+                - generic [ref=f271e263]:
+                  - paragraph [ref=f271e268] [cursor=pointer]: 10:00 - 17:00
+                  - button [ref=f271e272] [cursor=pointer]
+              - cell [ref=f271e273]:
+                - generic [ref=f271e277] [cursor=pointer]:
+                  - button [ref=f271e278]
+                  - generic: Not working
+              - cell [ref=f271e279]:
+                - generic [ref=f271e280]:
+                  - paragraph [ref=f271e285] [cursor=pointer]: 10:00 - 19:00
+                  - button [ref=f271e289] [cursor=pointer]
+              - cell [ref=f271e290]:
+                - generic [ref=f271e291]:
+                  - paragraph [ref=f271e296] [cursor=pointer]: 10:00 - 19:00
+                  - button [ref=f271e300] [cursor=pointer]
+              - cell [ref=f271e301]:
+                - generic [ref=f271e302]:
+                  - paragraph [ref=f271e307] [cursor=pointer]: 10:00 - 19:00
+                  - button [ref=f271e311] [cursor=pointer]
+              - cell [ref=f271e312]:
+                - generic [ref=f271e313]:
+                  - paragraph [ref=f271e318] [cursor=pointer]: 10:00 - 19:00
+                  - button [ref=f271e322] [cursor=pointer]
+              - cell [ref=f271e323]:
+                - generic [ref=f271e324]:
+                  - paragraph [ref=f271e329] [cursor=pointer]: 10:00 - 19:00
+                  - button [ref=f271e333] [cursor=pointer]
+        - generic [ref=f271e338]:
+          - text: The team roster shows your availability for bookings and is not linked to your business standard opening hours. To set your standard opening hours,
+          - link "click here." [ref=f271e339] [cursor=pointer]:
+            - /url: /setup/locations/3216614/opening-hours/edit

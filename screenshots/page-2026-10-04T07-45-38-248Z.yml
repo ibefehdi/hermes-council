@@ -1,0 +1,115 @@
+- generic [ref=f74e12]:
+  - generic [ref=f74e13]:
+    - link "Fresha" [ref=f74e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f74e16]:
+      - button [ref=f74e18] [cursor=pointer]:
+        - paragraph [ref=f74e20]: Continue setup
+      - button "Search" [ref=f74e22] [cursor=pointer]
+      - button "Performance insights" [ref=f74e24] [cursor=pointer]
+      - button "Notifications" [ref=f74e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f74e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f74e31] [cursor=pointer]:
+        - generic [ref=f74e32]: FA
+  - generic [ref=f74e34]:
+    - generic [ref=f74e38]:
+      - generic [ref=f74e39]:
+        - link [ref=f74e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f74e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f74e50] [cursor=pointer]
+        - button [ref=f74e54] [cursor=pointer]
+        - button [ref=f74e58] [cursor=pointer]
+        - button [ref=f74e62] [cursor=pointer]
+        - button [ref=f74e66] [cursor=pointer]
+        - button [ref=f74e70] [cursor=pointer]
+        - link [ref=f74e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f74e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f74e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f74e86] [cursor=pointer]
+    - generic [ref=f74e94]:
+      - generic [ref=f74e96]:
+        - button "Back" [ref=f74e97] [cursor=pointer]
+        - navigation [ref=f74e102]:
+          - list [ref=f74e103]:
+            - listitem [ref=f74e104]:
+              - link "Workspace settings •" [ref=f74e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f74e106]:
+              - link "Sales" [ref=f74e107] [cursor=pointer]:
+                - /url: /setup/sales
+      - generic [ref=f74e112]:
+        - paragraph [ref=f74e114]: Sales
+        - list [ref=f74e115]:
+          - listitem [ref=f74e116]:
+            - list [ref=f74e117]:
+              - listitem [ref=f74e118] [cursor=pointer]:
+                - link [ref=f74e119]:
+                  - /url: /setup/sales/pay-now
+                - generic [ref=f74e120]: Pay now
+              - listitem [ref=f74e122] [cursor=pointer]:
+                - link [ref=f74e123]:
+                  - /url: /setup/sales/tax-rates
+                - generic [ref=f74e124]: Tax rates
+              - listitem [ref=f74e126] [cursor=pointer]:
+                - link [ref=f74e127]:
+                  - /url: /setup/sales/receipts
+                - generic [ref=f74e128]: Receipts
+              - listitem [ref=f74e130] [cursor=pointer]:
+                - link [ref=f74e131]:
+                  - /url: /setup/sales/registers
+                - generic [ref=f74e132]: Registers
+              - listitem [ref=f74e134] [cursor=pointer]:
+                - link [ref=f74e135]:
+                  - /url: /setup/sales/tipping
+                - generic [ref=f74e136]: Tipping
+              - listitem [ref=f74e138] [cursor=pointer]:
+                - link [ref=f74e139]:
+                  - /url: /setup/sales/service-charges
+                - generic [ref=f74e140]: Service charges
+              - listitem [ref=f74e142] [cursor=pointer]:
+                - link [ref=f74e143]:
+                  - /url: /setup/sales/gift-cards
+                - generic [ref=f74e144]: Gift cards
+              - listitem [ref=f74e146] [cursor=pointer]:
+                - link [ref=f74e147]:
+                  - /url: /setup/sales/payment-methods
+                - generic [ref=f74e148]: Custom checkout methods
+        - separator [ref=f74e150]
+        - list [ref=f74e151]:
+          - listitem [ref=f74e152]:
+            - list [ref=f74e153]:
+              - listitem [ref=f74e154] [cursor=pointer]:
+                - button [ref=f74e155]
+                - generic [ref=f74e156]: Payment settings
+      - generic [ref=f74e159]:
+        - generic [ref=f74e161]:
+          - paragraph [ref=f74e163]: Pay now
+          - paragraph [ref=f74e164]:
+            - text: Collect payment in one tap from the appointment panel, skipping the checkout flow entirely.
+            - link "Learn more" [ref=f74e165] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/payments/101717-collect-payments-using-pay-now
+            - text: .
+        - generic [ref=f74e166]:
+          - button [ref=f74e167] [cursor=pointer]
+          - generic [ref=f74e168]:
+            - generic [ref=f74e171]:
+              - generic [ref=f74e172]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "payments"
+                - paragraph [ref=f74e173]: Payments
+              - paragraph [ref=f74e174]: Low cost, safe and simple payments with Fresha
+            - link "View Fresha payments" [ref=f74e175] [cursor=pointer]:
+              - /url: /fresha/card-processing/payment-processing
+          - generic:
+            - generic:
+              - img "payments"

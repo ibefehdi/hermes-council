@@ -1,0 +1,125 @@
+- generic [ref=f150e12]:
+  - generic [ref=f150e13]:
+    - link "Fresha" [ref=f150e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - button "Open user menu" [ref=f150e18] [cursor=pointer]:
+      - generic [ref=f150e19]: FA
+  - generic [ref=f150e23]:
+    - list [ref=f150e28]:
+      - listitem [ref=f150e29] [cursor=pointer]:
+        - button [ref=f150e30]
+        - generic [ref=f150e31]: Back
+      - listitem [ref=f150e33]:
+        - paragraph [ref=f150e36]: Your account
+        - list [ref=f150e37]:
+          - listitem [ref=f150e38] [cursor=pointer]:
+            - button [ref=f150e39]
+            - generic [ref=f150e40]: My profile
+          - listitem [ref=f150e41] [cursor=pointer]:
+            - button [ref=f150e42]
+            - generic [ref=f150e43]: Portfolio
+          - listitem [ref=f150e45] [cursor=pointer]:
+            - button [ref=f150e46]
+            - generic [ref=f150e47]: Reviews
+          - listitem [ref=f150e49] [cursor=pointer]:
+            - button [ref=f150e50]
+            - generic [ref=f150e51]: Pay runs
+          - listitem [ref=f150e53] [cursor=pointer]:
+            - button [ref=f150e54]
+            - generic [ref=f150e55]: Workspaces
+          - listitem [ref=f150e56] [cursor=pointer]:
+            - button [ref=f150e57]
+            - generic [ref=f150e58]: Personal settings
+    - generic [ref=f150e65]:
+      - generic [ref=f150e67]:
+        - generic [ref=f150e68]:
+          - button "Back" [ref=f150e69] [cursor=pointer]
+          - navigation [ref=f150e74]:
+            - list [ref=f150e75]:
+              - listitem [ref=f150e76]:
+                - link "Account settings •" [ref=f150e77] [cursor=pointer]:
+                  - /url: /user-account/personal-settings
+              - listitem [ref=f150e78]:
+                - link "Login & security" [ref=f150e79] [cursor=pointer]:
+                  - /url: /user-account/personal-settings/login-security
+        - generic [ref=f150e81]:
+          - paragraph [ref=f150e83]: Login & security
+          - paragraph [ref=f150e84]:
+            - text: Update your password and secure your account.
+            - link "Learn more." [ref=f150e85] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/personal-account/101229-update-your-account-password-1
+      - generic [ref=f150e87]:
+        - generic [ref=f150e89]:
+          - generic [ref=f150e91]:
+            - paragraph [ref=f150e93]: Login details
+            - paragraph [ref=f150e94]: Password and connected social accounts used for login
+          - generic [ref=f150e96]:
+            - generic [ref=f150e97]:
+              - generic [ref=f150e98]:
+                - generic [ref=f150e99]:
+                  - paragraph [ref=f150e100]: Password
+                  - paragraph [ref=f150e101]: "********"
+                - button "Change password" [ref=f150e102] [cursor=pointer]
+              - separator [ref=f150e106]
+            - generic [ref=f150e108]:
+              - generic [ref=f150e109]:
+                - img "google" [ref=f150e112]
+                - generic [ref=f150e113]:
+                  - paragraph [ref=f150e114]: Google
+                  - paragraph [ref=f150e115]: Not connected
+                - button "Connect" [ref=f150e117] [cursor=pointer]
+              - generic [ref=f150e122]:
+                - img "apple" [ref=f150e125]
+                - generic [ref=f150e126]:
+                  - paragraph [ref=f150e127]: Apple
+                  - paragraph [ref=f150e128]: Not connected
+                - button "Connect" [ref=f150e130] [cursor=pointer]
+        - generic [ref=f150e135]:
+          - generic [ref=f150e137]:
+            - paragraph [ref=f150e139]: Trusted devices
+            - paragraph [ref=f150e140]: Devices that can skip two-factor authentication.
+          - generic [ref=f150e143]:
+            - generic [ref=f150e144]:
+              - generic [ref=f150e145]:
+                - generic [ref=f150e147]:
+                  - paragraph [ref=f150e148]: Chrome • macOS
+                  - paragraph [ref=f150e149]: Added Oct 4, 2026 • Last used Oct 4, 2026
+                - button "Revoke" [ref=f150e150] [cursor=pointer]
+              - separator [ref=f150e154]
+            - generic [ref=f150e156]:
+              - generic [ref=f150e158]:
+                - paragraph [ref=f150e159]: Chrome • macOS
+                - paragraph [ref=f150e160]: Added Oct 4, 2026 • Last used Oct 4, 2026
+              - button "Revoke" [ref=f150e161] [cursor=pointer]
+            - button "Revoke all devices" [ref=f150e166] [cursor=pointer]
+        - generic [ref=f150e171]:
+          - generic [ref=f150e173]:
+            - paragraph [ref=f150e175]: Active sessions
+            - paragraph [ref=f150e176]: Devices where you're currently signed in.
+          - generic [ref=f150e179]:
+            - generic [ref=f150e180]:
+              - generic [ref=f150e183]:
+                - generic [ref=f150e184]:
+                  - paragraph [ref=f150e185]: Chrome • macOS
+                  - paragraph [ref=f150e186]: (This device)
+                - paragraph [ref=f150e187]: Signed in Oct 4, 2026
+              - separator [ref=f150e188]
+            - generic [ref=f150e189]:
+              - generic [ref=f150e190]:
+                - generic [ref=f150e192]:
+                  - paragraph [ref=f150e194]: Chrome • macOS
+                  - paragraph [ref=f150e195]: Signed in Oct 4, 2026
+                - button "Sign Out" [ref=f150e196] [cursor=pointer]
+              - separator [ref=f150e200]
+            - generic [ref=f150e202]:
+              - generic [ref=f150e204]:
+                - paragraph [ref=f150e206]: Chrome • macOS
+                - paragraph [ref=f150e207]: Signed in Oct 4, 2026
+              - button "Sign Out" [ref=f150e208] [cursor=pointer]
+            - button "Sign Out of All Devices" [ref=f150e213] [cursor=pointer]
+        - generic [ref=f150e218]:
+          - generic [ref=f150e220]:
+            - paragraph [ref=f150e222]: Delete account
+            - paragraph [ref=f150e223]: You will delete all your personal info and won't be able to retrieve it. Are you sure you want to delete your account?
+          - button "Delete your account" [ref=f150e226] [cursor=pointer]

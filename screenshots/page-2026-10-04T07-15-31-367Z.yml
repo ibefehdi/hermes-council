@@ -1,0 +1,76 @@
+- generic [ref=f230e12]:
+  - generic [ref=f230e13]:
+    - link "Fresha" [ref=f230e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f230e16]:
+      - button [ref=f230e18] [cursor=pointer]:
+        - paragraph [ref=f230e20]: Continue setup
+      - button "Search" [ref=f230e22] [cursor=pointer]
+      - button "Performance insights" [ref=f230e24] [cursor=pointer]
+      - button "Notifications" [ref=f230e27] [cursor=pointer]:
+        - generic [ref=f230e28]: "4"
+      - link "Fresha Connect" [ref=f230e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f230e34] [cursor=pointer]:
+        - generic [ref=f230e35]: FA
+  - generic [ref=f230e37]:
+    - generic [ref=f230e38]:
+      - generic [ref=f230e41]:
+        - generic [ref=f230e42]:
+          - link [ref=f230e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f230e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f230e53] [cursor=pointer]
+          - button [ref=f230e57] [cursor=pointer]
+          - button [ref=f230e61] [cursor=pointer]
+          - button [ref=f230e65] [cursor=pointer]
+          - button [ref=f230e69] [cursor=pointer]
+          - button [ref=f230e73] [cursor=pointer]
+          - link [ref=f230e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f230e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f230e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f230e89] [cursor=pointer]
+      - generic [ref=f230e92]:
+        - button "Collapse Navigation Menu" [ref=f230e94] [cursor=pointer]
+        - generic [ref=f230e100]:
+          - generic [ref=f230e101]:
+            - paragraph [ref=f230e102]: Catalog
+            - link [ref=f230e104] [cursor=pointer]:
+              - /url: /catalogue/services
+              - paragraph [ref=f230e105]: Service menu
+            - link [ref=f230e107] [cursor=pointer]:
+              - /url: /catalogue/packages
+              - paragraph [ref=f230e108]: Packages
+            - link [ref=f230e110] [cursor=pointer]:
+              - /url: /catalogue/products
+              - paragraph [ref=f230e111]: Products
+          - separator [ref=f230e113]
+          - generic [ref=f230e114]:
+            - paragraph [ref=f230e115]: Inventory
+            - link [ref=f230e117] [cursor=pointer]:
+              - /url: /catalogue/stocktakes
+              - paragraph [ref=f230e118]: Stocktakes
+            - link [ref=f230e120] [cursor=pointer]:
+              - /url: /catalogue/orders
+              - paragraph [ref=f230e121]: Stock orders
+            - link [ref=f230e123] [cursor=pointer]:
+              - /url: /catalogue/suppliers
+              - paragraph [ref=f230e124]: Suppliers
+    - generic [ref=f230e133]:
+      - generic [ref=f230e134]: Free to use
+      - generic [ref=f230e137]: Track and record your product stock
+      - generic [ref=f230e138]: Manage and track your product inventory down to the item, view trends and insights with powerful reports.
+      - generic [ref=f230e139]:
+        - generic [ref=f230e140]: Use your barcode scanner to quickly count products
+        - generic [ref=f230e144]: Pause the stocktake anytime and resume it later
+        - generic [ref=f230e148]: Update your inventory immediately on completion
+        - generic [ref=f230e152]: Add important information with stocktake notes
+      - generic [ref=f230e156]:
+        - button "Start now" [ref=f230e157] [cursor=pointer]
+        - link "Learn more" [ref=f230e161] [cursor=pointer]:
+          - /url: https://www.fresha.com/help-center/knowledge-base/inventory/159-complete-stocktakes

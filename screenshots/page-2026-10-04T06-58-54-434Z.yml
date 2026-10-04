@@ -1,0 +1,174 @@
+- generic [ref=f32e12]:
+  - generic [ref=f32e13]:
+    - link "Fresha" [ref=f32e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f32e16]:
+      - button [ref=f32e18] [cursor=pointer]:
+        - paragraph [ref=f32e20]: Continue setup
+      - button "Search" [ref=f32e22] [cursor=pointer]
+      - button "Performance insights" [ref=f32e24] [cursor=pointer]
+      - button "Notifications" [ref=f32e27] [cursor=pointer]:
+        - generic [ref=f32e28]: "4"
+      - link "Fresha Connect" [ref=f32e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f32e37] [cursor=pointer]:
+        - generic [ref=f32e38]: FA
+  - generic [ref=f32e40]:
+    - generic [ref=f32e41]:
+      - generic [ref=f32e44]:
+        - generic [ref=f32e45]:
+          - link [ref=f32e48] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f32e52] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f32e56] [cursor=pointer]
+          - button [ref=f32e60] [cursor=pointer]
+          - button [ref=f32e64] [cursor=pointer]
+          - button [ref=f32e68] [cursor=pointer]
+          - button [ref=f32e72] [cursor=pointer]
+          - button [ref=f32e76] [cursor=pointer]
+          - link [ref=f32e80] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f32e84] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f32e88] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f32e92] [cursor=pointer]
+      - generic [ref=f32e95]:
+        - button "Collapse Navigation Menu" [ref=f32e97] [cursor=pointer]
+        - generic [ref=f32e103]:
+          - generic [ref=f32e104]:
+            - paragraph [ref=f32e105]: Clients
+            - link [ref=f32e107] [cursor=pointer]:
+              - /url: /clients/list
+              - paragraph [ref=f32e108]: Clients list
+            - link [ref=f32e110] [cursor=pointer]:
+              - /url: /clients/segments
+              - paragraph [ref=f32e111]: Client segments
+          - separator [ref=f32e113]
+          - generic [ref=f32e114]:
+            - paragraph [ref=f32e115]: Engage
+            - link [ref=f32e117] [cursor=pointer]:
+              - /url: /clients/loyalty
+              - paragraph [ref=f32e118]: Client loyalty
+            - link [ref=f32e120] [cursor=pointer]:
+              - /url: /clients/online-reputation
+              - paragraph [ref=f32e121]: Online reputation
+    - generic [ref=f32e128]:
+      - generic [ref=f32e130]:
+        - generic [ref=f32e131]:
+          - generic [ref=f32e132]:
+            - heading "Clients list" [level=1] [ref=f32e133]
+            - generic [ref=f32e134]: "3"
+          - paragraph [ref=f32e135]:
+            - text: View, add, edit and delete your client's details.
+            - link "Learn more" [ref=f32e136] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/clients/320-create-client-profiles
+        - generic [ref=f32e138]:
+          - button "Options" [ref=f32e141] [cursor=pointer]
+          - button "Add" [ref=f32e146] [cursor=pointer]
+      - generic [ref=f32e153]:
+        - generic [ref=f32e154]:
+          - generic [ref=f32e155]:
+            - generic [ref=f32e156]:
+              - paragraph [ref=f32e157]: Import your client list
+              - paragraph [ref=f32e158]: Takes a few minutes and prevents new client fees for existing clients who book online
+            - generic [ref=f32e159]:
+              - button "Start import" [ref=f32e160] [cursor=pointer]
+              - link "Learn more" [ref=f32e164] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/clients/101243-import-your-existing-client-list
+          - img "Import clients" [ref=f32e168]
+        - button "Close" [ref=f32e169] [cursor=pointer]
+      - generic [ref=f32e174]:
+        - generic [ref=f32e176]:
+          - generic [ref=f32e177]:
+            - generic [ref=f32e178]:
+              - generic [ref=f32e179]: Search
+              - textbox "Search" [ref=f32e184]:
+                - /placeholder: Name, email or phone
+            - button "Filters" [ref=f32e185] [cursor=pointer]
+          - button "Created at (newest first)" [ref=f32e194] [cursor=pointer]
+        - region [ref=f32e199]:
+          - generic [ref=f32e200]:
+            - table [ref=f32e203]:
+              - rowgroup [ref=f32e211]:
+                - row [ref=f32e212]:
+                  - columnheader "selectAll selectAll" [ref=f32e213]:
+                    - generic [ref=f32e215] [cursor=pointer]:
+                      - paragraph [ref=f32e218]: selectAll
+                      - checkbox "selectAll" [ref=f32e219]
+                  - columnheader [ref=f32e220]:
+                    - button "Client name" [ref=f32e223] [cursor=pointer]
+                  - columnheader "Mobile number" [ref=f32e225]
+                  - columnheader [ref=f32e229]:
+                    - button "Reviews" [ref=f32e232] [cursor=pointer]
+                  - columnheader [ref=f32e234]:
+                    - button "Sales" [ref=f32e237] [cursor=pointer]
+                  - columnheader [ref=f32e239]:
+                    - button "Created at" [ref=f32e242] [cursor=pointer]
+            - table [ref=f32e245]:
+              - rowgroup [ref=f32e253]:
+                - button [ref=f32e254] [cursor=pointer]:
+                  - cell "select-row-301298884 select-row-301298884" [ref=f32e255]:
+                    - generic [ref=f32e256]:
+                      - paragraph [ref=f32e259]: select-row-301298884
+                      - checkbox "select-row-301298884" [ref=f32e260]
+                  - cell "J Jack Doe jack@example.com" [ref=f32e261]:
+                    - generic [ref=f32e262]:
+                      - generic [ref=f32e263]: J
+                      - generic [ref=f32e266]:
+                        - paragraph [ref=f32e267]: Jack Doe
+                        - paragraph [ref=f32e268]: jack@example.com
+                  - cell [ref=f32e269]:
+                    - paragraph [ref=f32e270]: "-"
+                  - cell [ref=f32e271]:
+                    - paragraph [ref=f32e272]: "-"
+                  - cell "KWD 0" [ref=f32e273]:
+                    - paragraph [ref=f32e274]:
+                      - generic [ref=f32e275]: KWD 0
+                  - cell [ref=f32e276]:
+                    - paragraph [ref=f32e277]: Oct 4, 2026
+                - button [ref=f32e278] [cursor=pointer]:
+                  - cell "select-row-301298878 select-row-301298878" [ref=f32e279]:
+                    - generic [ref=f32e280]:
+                      - paragraph [ref=f32e283]: select-row-301298878
+                      - checkbox "select-row-301298878" [ref=f32e284]
+                  - cell "J Jane Doe jane@example.com" [ref=f32e285]:
+                    - generic [ref=f32e286]:
+                      - generic [ref=f32e287]: J
+                      - generic [ref=f32e290]:
+                        - paragraph [ref=f32e291]: Jane Doe
+                        - paragraph [ref=f32e292]: jane@example.com
+                  - cell [ref=f32e293]:
+                    - paragraph [ref=f32e294]: "-"
+                  - cell [ref=f32e295]:
+                    - paragraph [ref=f32e296]: "-"
+                  - cell "KWD 0" [ref=f32e297]:
+                    - paragraph [ref=f32e298]:
+                      - generic [ref=f32e299]: KWD 0
+                  - cell [ref=f32e300]:
+                    - paragraph [ref=f32e301]: Oct 4, 2026
+                - button [ref=f32e302] [cursor=pointer]:
+                  - cell "select-row-301298877 select-row-301298877" [ref=f32e303]:
+                    - generic [ref=f32e304]:
+                      - paragraph [ref=f32e307]: select-row-301298877
+                      - checkbox "select-row-301298877" [ref=f32e308]
+                  - cell "J John Doe john@example.com" [ref=f32e309]:
+                    - generic [ref=f32e310]:
+                      - generic [ref=f32e311]: J
+                      - generic [ref=f32e314]:
+                        - paragraph [ref=f32e315]: John Doe
+                        - paragraph [ref=f32e316]: john@example.com
+                  - cell [ref=f32e317]:
+                    - paragraph [ref=f32e318]: "-"
+                  - cell [ref=f32e319]:
+                    - paragraph [ref=f32e320]: "-"
+                  - cell "KWD 0" [ref=f32e321]:
+                    - paragraph [ref=f32e322]:
+                      - generic [ref=f32e323]: KWD 0
+                  - cell [ref=f32e324]:
+                    - paragraph [ref=f32e325]: Oct 4, 2026
+        - generic [ref=f32e327]:
+          - generic [ref=f32e328]: Viewing results 1 to 3 of 3
+          - paragraph [ref=f32e330]: Viewing 1 - 3 of 3 results

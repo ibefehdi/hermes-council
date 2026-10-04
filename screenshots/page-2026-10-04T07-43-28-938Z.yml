@@ -1,0 +1,137 @@
+- generic [ref=f36e12]:
+  - generic [ref=f36e13]:
+    - link "Fresha" [ref=f36e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f36e16]:
+      - button [ref=f36e18] [cursor=pointer]:
+        - paragraph [ref=f36e20]: Continue setup
+      - button "Search" [ref=f36e22] [cursor=pointer]
+      - button "Performance insights" [ref=f36e24] [cursor=pointer]
+      - button "Notifications" [ref=f36e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f36e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f36e31] [cursor=pointer]:
+        - generic [ref=f36e32]: FA
+  - generic [ref=f36e34]:
+    - generic [ref=f36e38]:
+      - generic [ref=f36e39]:
+        - link [ref=f36e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f36e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f36e50] [cursor=pointer]
+        - button [ref=f36e54] [cursor=pointer]
+        - button [ref=f36e58] [cursor=pointer]
+        - button [ref=f36e62] [cursor=pointer]
+        - button [ref=f36e66] [cursor=pointer]
+        - button [ref=f36e70] [cursor=pointer]
+        - link [ref=f36e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f36e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f36e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f36e86] [cursor=pointer]
+    - generic [ref=f36e94]:
+      - generic [ref=f36e96]:
+        - button "Back" [ref=f36e97] [cursor=pointer]
+        - navigation [ref=f36e102]:
+          - list [ref=f36e103]:
+            - listitem [ref=f36e104]:
+              - link "Workspace settings •" [ref=f36e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f36e106]:
+              - link "Scheduling" [ref=f36e107] [cursor=pointer]:
+                - /url: /setup/scheduling
+      - generic [ref=f36e112]:
+        - paragraph [ref=f36e114]: Scheduling
+        - list [ref=f36e115]:
+          - listitem [ref=f36e116]:
+            - list [ref=f36e117]:
+              - listitem [ref=f36e118] [cursor=pointer]:
+                - link [ref=f36e119]:
+                  - /url: /setup/scheduling/time-and-calendar
+                - generic [ref=f36e120]: Time and calendar
+              - listitem [ref=f36e122] [cursor=pointer]:
+                - link [ref=f36e123]:
+                  - /url: /setup/scheduling/waitlist
+                - generic [ref=f36e124]: Waitlist appointments
+              - listitem [ref=f36e126] [cursor=pointer]:
+                - link [ref=f36e127]:
+                  - /url: /setup/scheduling/blocked-time-types
+                - generic [ref=f36e128]: Blocked time types
+              - listitem [ref=f36e130] [cursor=pointer]:
+                - link [ref=f36e131]:
+                  - /url: /setup/scheduling/resources
+                - generic [ref=f36e132]: Resources
+              - listitem [ref=f36e134] [cursor=pointer]:
+                - link [ref=f36e135]:
+                  - /url: /setup/scheduling/cancellation-reasons
+                - generic [ref=f36e136]: Cancellation reasons
+              - listitem [ref=f36e138] [cursor=pointer]:
+                - link [ref=f36e139]:
+                  - /url: /setup/scheduling/appointment-statuses
+                - generic [ref=f36e140]: Appointment statuses
+              - listitem [ref=f36e142] [cursor=pointer]:
+                - link [ref=f36e143]:
+                  - /url: /setup/scheduling/closed-periods
+                - generic [ref=f36e144]: Closed periods
+            - separator [ref=f36e147]
+          - listitem [ref=f36e148]:
+            - generic [ref=f36e149]: Online booking
+            - list [ref=f36e151]:
+              - listitem [ref=f36e152] [cursor=pointer]:
+                - link [ref=f36e153]:
+                  - /url: /setup/scheduling/dynamic-assignment
+                - generic [ref=f36e154]: Dynamic assignment
+              - listitem [ref=f36e156] [cursor=pointer]:
+                - link [ref=f36e157]:
+                  - /url: /setup/scheduling/availability
+                - generic [ref=f36e158]: Availability
+              - listitem [ref=f36e160] [cursor=pointer]:
+                - link [ref=f36e161]:
+                  - /url: /setup/scheduling/booking-options
+                - generic [ref=f36e162]: Booking options
+        - separator [ref=f36e164]
+        - list [ref=f36e165]:
+          - listitem [ref=f36e166]:
+            - list [ref=f36e167]:
+              - listitem [ref=f36e168] [cursor=pointer]:
+                - button [ref=f36e169]
+                - generic [ref=f36e170]: Marketplace profile
+              - listitem [ref=f36e172] [cursor=pointer]:
+                - button [ref=f36e173]
+                - generic [ref=f36e174]: Service menu
+              - listitem [ref=f36e176] [cursor=pointer]:
+                - button [ref=f36e177]
+                - generic [ref=f36e178]: Scheduled shifts
+      - generic [ref=f36e181]:
+        - generic [ref=f36e183]:
+          - paragraph [ref=f36e185]: Waitlist
+          - paragraph [ref=f36e186]:
+            - text: Enable a waitlist online and choose how waitlisted clients are offered a time slot.
+            - link "Learn more" [ref=f36e187] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/calendar/259-set-up-and-manage-your-waitlist
+            - text: .
+        - generic [ref=f36e190]:
+          - generic [ref=f36e191]:
+            - heading "Settings" [level=2] [ref=f36e193]
+            - button "Edit" [ref=f36e194] [cursor=pointer]
+          - generic [ref=f36e198]:
+            - generic [ref=f36e200]:
+              - paragraph [ref=f36e201]: Waitlist type
+              - paragraph [ref=f36e202]: Automatically book
+            - generic [ref=f36e204]:
+              - paragraph [ref=f36e205]: Waitlist priority
+              - paragraph [ref=f36e206]: First in line
+            - generic [ref=f36e208]:
+              - paragraph [ref=f36e209]: Waitlist for online bookings
+              - paragraph [ref=f36e210]: Active • Request any preferred time
+          - separator [ref=f36e211]
+          - generic [ref=f36e212]:
+            - paragraph [ref=f36e213]: Client notifications
+            - paragraph [ref=f36e214]:
+              - text: Configure how clients are notified about the waitlist in
+              - link "automated messages" [ref=f36e215] [cursor=pointer]:
+                - /url: /marketing/automated-messages

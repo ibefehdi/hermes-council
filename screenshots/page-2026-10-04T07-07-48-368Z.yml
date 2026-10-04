@@ -1,0 +1,65 @@
+- generic [ref=f105e12]:
+  - generic [ref=f105e13]:
+    - link "Fresha" [ref=f105e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f105e16]:
+      - button [ref=f105e131] [cursor=pointer]:
+        - paragraph [ref=f105e133]: Continue setup
+      - button "Search" [ref=f105e18] [cursor=pointer]
+      - button "Performance insights" [ref=f105e20] [cursor=pointer]
+      - button "Notifications" [ref=f105e28] [cursor=pointer]:
+        - generic [ref=f105e29]: "4"
+      - link "Fresha Connect" [ref=f105e33] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f105e38] [cursor=pointer]:
+        - generic [ref=f105e39]: FA
+  - generic [ref=f105e42]:
+    - generic [ref=f105e45]:
+      - generic [ref=f105e46]:
+        - link [ref=f105e49] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f105e53] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f105e57] [cursor=pointer]
+        - button [ref=f105e61] [cursor=pointer]
+        - button [ref=f105e65] [cursor=pointer]
+        - button [ref=f105e69] [cursor=pointer]
+        - button [ref=f105e73] [cursor=pointer]
+        - button [ref=f105e77] [cursor=pointer]
+        - link [ref=f105e81] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f105e85] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f105e89] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f105e93] [cursor=pointer]
+    - generic [ref=f105e135]:
+      - button "Collapse Navigation Menu" [ref=f105e137] [cursor=pointer]
+      - generic [ref=f105e143]:
+        - generic [ref=f105e144]:
+          - paragraph [ref=f105e145]: Messaging
+          - link [ref=f105e147] [cursor=pointer]:
+            - /url: /marketing/blast-campaigns/home
+            - paragraph [ref=f105e148]: Blast campaigns
+          - link [ref=f105e150] [cursor=pointer]:
+            - /url: /marketing/automated-messages
+            - paragraph [ref=f105e151]: Automations
+          - link [active] [ref=f105e153] [cursor=pointer]:
+            - /url: /marketing/notifications
+            - paragraph [ref=f105e154]: Messages history
+        - separator [ref=f105e156]
+        - generic [ref=f105e157]:
+          - paragraph [ref=f105e158]: Promotion
+          - link [ref=f105e160] [cursor=pointer]:
+            - /url: /marketing/deals
+            - paragraph [ref=f105e161]: Deals
+          - link [ref=f105e163] [cursor=pointer]:
+            - /url: /marketing/peak-pricing
+            - paragraph [ref=f105e164]: Smart pricing
+        - separator [ref=f105e166]
+        - generic [ref=f105e167]:
+          - paragraph [ref=f105e168]: Engage
+          - link [ref=f105e170] [cursor=pointer]:
+            - /url: /clients/online-reputation?tab=all
+            - paragraph [ref=f105e171]: Reviews

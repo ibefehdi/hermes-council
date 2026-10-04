@@ -1,0 +1,127 @@
+- generic [ref=f58e12]:
+  - generic [ref=f58e13]:
+    - link "Fresha" [ref=f58e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f58e16]:
+      - button [ref=f58e18] [cursor=pointer]:
+        - paragraph [ref=f58e20]: Continue setup
+      - button "Search" [ref=f58e22] [cursor=pointer]
+      - button "Performance insights" [ref=f58e24] [cursor=pointer]
+      - button "Notifications" [ref=f58e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f58e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f58e31] [cursor=pointer]:
+        - generic [ref=f58e32]: FA
+  - generic [ref=f58e34]:
+    - generic [ref=f58e38]:
+      - generic [ref=f58e39]:
+        - link [ref=f58e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f58e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f58e50] [cursor=pointer]
+        - button [ref=f58e54] [cursor=pointer]
+        - button [ref=f58e58] [cursor=pointer]
+        - button [ref=f58e62] [cursor=pointer]
+        - button [ref=f58e66] [cursor=pointer]
+        - button [ref=f58e70] [cursor=pointer]
+        - link [ref=f58e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f58e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f58e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f58e86] [cursor=pointer]
+    - generic [ref=f58e94]:
+      - generic [ref=f58e96]:
+        - button "Back" [ref=f58e97] [cursor=pointer]
+        - navigation [ref=f58e102]:
+          - list [ref=f58e103]:
+            - listitem [ref=f58e104]:
+              - link "Workspace settings •" [ref=f58e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f58e106]:
+              - link "Scheduling" [ref=f58e107] [cursor=pointer]:
+                - /url: /setup/scheduling
+      - generic [ref=f58e112]:
+        - paragraph [ref=f58e114]: Scheduling
+        - list [ref=f58e115]:
+          - listitem [ref=f58e116]:
+            - list [ref=f58e117]:
+              - listitem [ref=f58e118] [cursor=pointer]:
+                - link [ref=f58e119]:
+                  - /url: /setup/scheduling/time-and-calendar
+                - generic [ref=f58e120]: Time and calendar
+              - listitem [ref=f58e122] [cursor=pointer]:
+                - link [ref=f58e123]:
+                  - /url: /setup/scheduling/waitlist
+                - generic [ref=f58e124]: Waitlist appointments
+              - listitem [ref=f58e126] [cursor=pointer]:
+                - link [ref=f58e127]:
+                  - /url: /setup/scheduling/blocked-time-types
+                - generic [ref=f58e128]: Blocked time types
+              - listitem [ref=f58e130] [cursor=pointer]:
+                - link [ref=f58e131]:
+                  - /url: /setup/scheduling/resources
+                - generic [ref=f58e132]: Resources
+              - listitem [ref=f58e134] [cursor=pointer]:
+                - link [ref=f58e135]:
+                  - /url: /setup/scheduling/cancellation-reasons
+                - generic [ref=f58e136]: Cancellation reasons
+              - listitem [ref=f58e138] [cursor=pointer]:
+                - link [ref=f58e139]:
+                  - /url: /setup/scheduling/appointment-statuses
+                - generic [ref=f58e140]: Appointment statuses
+              - listitem [ref=f58e142] [cursor=pointer]:
+                - link [ref=f58e143]:
+                  - /url: /setup/scheduling/closed-periods
+                - generic [ref=f58e144]: Closed periods
+            - separator [ref=f58e147]
+          - listitem [ref=f58e148]:
+            - generic [ref=f58e149]: Online booking
+            - list [ref=f58e151]:
+              - listitem [ref=f58e152] [cursor=pointer]:
+                - link [ref=f58e153]:
+                  - /url: /setup/scheduling/dynamic-assignment
+                - generic [ref=f58e154]: Dynamic assignment
+              - listitem [ref=f58e156] [cursor=pointer]:
+                - link [ref=f58e157]:
+                  - /url: /setup/scheduling/availability
+                - generic [ref=f58e158]: Availability
+              - listitem [ref=f58e160] [cursor=pointer]:
+                - link [ref=f58e161]:
+                  - /url: /setup/scheduling/booking-options
+                - generic [ref=f58e162]: Booking options
+        - separator [ref=f58e164]
+        - list [ref=f58e165]:
+          - listitem [ref=f58e166]:
+            - list [ref=f58e167]:
+              - listitem [ref=f58e168] [cursor=pointer]:
+                - button [ref=f58e169]
+                - generic [ref=f58e170]: Marketplace profile
+              - listitem [ref=f58e172] [cursor=pointer]:
+                - button [ref=f58e173]
+                - generic [ref=f58e174]: Service menu
+              - listitem [ref=f58e176] [cursor=pointer]:
+                - button [ref=f58e177]
+                - generic [ref=f58e178]: Scheduled shifts
+      - generic [ref=f58e181]:
+        - generic [ref=f58e182]:
+          - generic [ref=f58e183]:
+            - paragraph [ref=f58e185]: Closed periods
+            - paragraph [ref=f58e186]:
+              - text: Set closed periods for specific locations or your entire business.
+              - link "Learn more" [ref=f58e187] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/calendar/20-set-business-closed-periods
+              - text: .
+          - button "Add" [ref=f58e190] [cursor=pointer]
+        - generic [ref=f58e198]:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Illustration"
+          - generic [ref=f58e199]:
+            - generic [ref=f58e200]: No upcoming closed periods
+            - paragraph [ref=f58e202]: Add closed periods for a single or multiple locations. E.g. Christmas break or a renovation

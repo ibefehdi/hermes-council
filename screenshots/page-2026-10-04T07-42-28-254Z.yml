@@ -1,0 +1,87 @@
+- generic [ref=f4e1]:
+  - generic [ref=f4e12]:
+    - generic [ref=f4e13]:
+      - link "Fresha" [ref=f4e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f4e16]:
+        - button [ref=f4e18] [cursor=pointer]:
+          - paragraph [ref=f4e20]: Continue setup
+        - button "Search" [ref=f4e22] [cursor=pointer]
+        - button "Performance insights" [ref=f4e24] [cursor=pointer]
+        - button "Notifications" [ref=f4e27] [cursor=pointer]:
+          - generic [ref=f4e28]: "4"
+        - link "Fresha Connect" [ref=f4e32] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f4e34] [cursor=pointer]:
+          - generic [ref=f4e35]: FA
+    - generic [ref=f4e38]:
+      - generic [ref=f4e41]:
+        - generic [ref=f4e42]:
+          - link [ref=f4e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f4e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f4e53] [cursor=pointer]
+          - button [ref=f4e57] [cursor=pointer]
+          - button [ref=f4e61] [cursor=pointer]
+          - button [ref=f4e65] [cursor=pointer]
+          - button [ref=f4e69] [cursor=pointer]
+          - button [ref=f4e73] [cursor=pointer]
+          - link [ref=f4e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f4e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f4e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f4e89] [cursor=pointer]
+      - generic [ref=f4e92]:
+        - button "Collapse Navigation Menu" [ref=f4e94] [cursor=pointer]
+        - generic [ref=f4e100]:
+          - generic [ref=f4e101]:
+            - paragraph [ref=f4e102]: Clients
+            - link [ref=f4e104] [cursor=pointer]:
+              - /url: /clients/list
+              - paragraph [ref=f4e105]: Clients list
+            - link [ref=f4e107] [cursor=pointer]:
+              - /url: /clients/segments
+              - paragraph [ref=f4e108]: Client segments
+          - separator [ref=f4e110]
+          - generic [ref=f4e111]:
+            - paragraph [ref=f4e112]: Engage
+            - link [ref=f4e114] [cursor=pointer]:
+              - /url: /clients/loyalty
+              - paragraph [ref=f4e115]: Client loyalty
+            - link [ref=f4e117] [cursor=pointer]:
+              - /url: /clients/online-reputation
+              - paragraph [ref=f4e118]: Online reputation
+  - dialog "Add a new client" [ref=f4e331]:
+    - generic [ref=f4e333]:
+      - generic [ref=f4e334]: Add a new client
+      - generic [ref=f4e337]:
+        - button "Close" [ref=f4e338] [cursor=pointer]
+        - button "Save" [ref=f4e342] [cursor=pointer]
+    - generic [ref=f4e348]:
+      - heading "Add a new client" [level=1] [ref=f4e352]
+      - generic [ref=f4e570]:
+        - generic [ref=f4e572]:
+          - paragraph [ref=f4e574]: Addresses
+          - paragraph [ref=f4e575]: Manage your client's addresses
+        - button "Add new address" [ref=f4e577] [cursor=pointer]
+      - list [ref=f4e533]:
+        - listitem [ref=f4e534]:
+          - generic [ref=f4e535]: Personal
+          - list [ref=f4e537]:
+            - listitem [ref=f4e538] [cursor=pointer]:
+              - button [ref=f4e539]
+              - paragraph [ref=f4e542]: Profile
+            - listitem [ref=f4e543] [cursor=pointer]:
+              - button [active] [ref=f4e544]
+              - paragraph [ref=f4e547]: Addresses
+            - listitem [ref=f4e548] [cursor=pointer]:
+              - button [ref=f4e549]
+              - paragraph [ref=f4e552]: Emergency contacts
+            - separator [ref=f4e554]
+            - listitem [ref=f4e555] [cursor=pointer]:
+              - button [ref=f4e556]
+              - paragraph [ref=f4e559]: Settings

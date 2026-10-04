@@ -1,0 +1,113 @@
+- generic [ref=f105e12]:
+  - generic [ref=f105e13]:
+    - link "Fresha" [ref=f105e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f105e16]:
+      - button [ref=f105e18] [cursor=pointer]:
+        - paragraph [ref=f105e20]: Continue setup
+      - button "Search" [ref=f105e22] [cursor=pointer]
+      - button "Performance insights" [ref=f105e24] [cursor=pointer]
+      - button "Notifications" [ref=f105e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f105e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f105e31] [cursor=pointer]:
+        - generic [ref=f105e32]: FA
+  - generic [ref=f105e34]:
+    - generic [ref=f105e38]:
+      - generic [ref=f105e39]:
+        - link [ref=f105e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f105e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f105e50] [cursor=pointer]
+        - button [ref=f105e54] [cursor=pointer]
+        - button [ref=f105e58] [cursor=pointer]
+        - button [ref=f105e62] [cursor=pointer]
+        - button [ref=f105e66] [cursor=pointer]
+        - button [ref=f105e70] [cursor=pointer]
+        - link [ref=f105e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f105e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f105e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f105e86] [cursor=pointer]
+    - generic [ref=f105e94]:
+      - generic [ref=f105e96]:
+        - button "Back" [ref=f105e97] [cursor=pointer]
+        - navigation [ref=f105e102]:
+          - list [ref=f105e103]:
+            - listitem [ref=f105e104]:
+              - link "Workspace settings •" [ref=f105e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f105e106]:
+              - link "Sales" [ref=f105e107] [cursor=pointer]:
+                - /url: /setup/sales
+      - generic [ref=f105e112]:
+        - paragraph [ref=f105e114]: Sales
+        - list [ref=f105e115]:
+          - listitem [ref=f105e116]:
+            - list [ref=f105e117]:
+              - listitem [ref=f105e118] [cursor=pointer]:
+                - link [ref=f105e119]:
+                  - /url: /setup/sales/pay-now
+                - generic [ref=f105e120]: Pay now
+              - listitem [ref=f105e122] [cursor=pointer]:
+                - link [ref=f105e123]:
+                  - /url: /setup/sales/tax-rates
+                - generic [ref=f105e124]: Tax rates
+              - listitem [ref=f105e126] [cursor=pointer]:
+                - link [ref=f105e127]:
+                  - /url: /setup/sales/receipts
+                - generic [ref=f105e128]: Receipts
+              - listitem [ref=f105e130] [cursor=pointer]:
+                - link [ref=f105e131]:
+                  - /url: /setup/sales/registers
+                - generic [ref=f105e132]: Registers
+              - listitem [ref=f105e134] [cursor=pointer]:
+                - link [ref=f105e135]:
+                  - /url: /setup/sales/tipping
+                - generic [ref=f105e136]: Tipping
+              - listitem [ref=f105e138] [cursor=pointer]:
+                - link [ref=f105e139]:
+                  - /url: /setup/sales/service-charges
+                - generic [ref=f105e140]: Service charges
+              - listitem [ref=f105e142] [cursor=pointer]:
+                - link [ref=f105e143]:
+                  - /url: /setup/sales/gift-cards
+                - generic [ref=f105e144]: Gift cards
+              - listitem [ref=f105e146] [cursor=pointer]:
+                - link [ref=f105e147]:
+                  - /url: /setup/sales/payment-methods
+                - generic [ref=f105e148]: Custom checkout methods
+        - separator [ref=f105e150]
+        - list [ref=f105e151]:
+          - listitem [ref=f105e152]:
+            - list [ref=f105e153]:
+              - listitem [ref=f105e154] [cursor=pointer]:
+                - button [ref=f105e155]
+                - generic [ref=f105e156]: Payment settings
+      - generic [ref=f105e159]:
+        - generic [ref=f105e160]:
+          - generic [ref=f105e161]:
+            - paragraph [ref=f105e163]: Custom checkout methods
+            - paragraph [ref=f105e164]:
+              - text: Manage custom payment methods displayed at checkout.
+              - link "Learn more" [ref=f105e165] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/sales/126-manage-manual-payment-types
+              - text: .
+          - generic [ref=f105e167]:
+            - button "Options" [ref=f105e169] [cursor=pointer]
+            - button "Add" [ref=f105e174] [cursor=pointer]
+        - generic [ref=f105e178]:
+          - generic [ref=f105e180]:
+            - heading "Cash" [level=3] [ref=f105e186]
+            - generic [ref=f105e187]: Active
+          - generic [ref=f105e194] [cursor=pointer]:
+            - button [ref=f105e195]
+            - generic [ref=f105e196]:
+              - heading "Other" [level=3] [ref=f105e202]
+              - generic [ref=f105e205]:
+                - generic [ref=f105e206]: Active
+                - button "Actions" [ref=f105e210]

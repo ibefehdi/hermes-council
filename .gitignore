@@ -1,9 +1,7 @@
 .env
 auth.json
 chrome-profile/
-output/
 runs/
-screenshots/
 node_modules/
 *.log
 .DS_Store

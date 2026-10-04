@@ -1,0 +1,115 @@
+- generic [active] [ref=f56e1]:
+  - generic [ref=f56e12]:
+    - generic [ref=f56e13]:
+      - link "Fresha" [ref=f56e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f56e16]:
+        - button [ref=f56e18] [cursor=pointer]:
+          - paragraph [ref=f56e20]: Continue setup
+        - button "Search" [ref=f56e22] [cursor=pointer]
+        - button "Performance insights" [ref=f56e24] [cursor=pointer]
+        - button "Notifications" [ref=f56e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f56e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f56e31] [cursor=pointer]:
+          - generic [ref=f56e32]: FA
+    - generic [ref=f56e34]:
+      - generic [ref=f56e35]:
+        - generic [ref=f56e38]:
+          - generic [ref=f56e39]:
+            - link [ref=f56e42] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f56e46] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f56e50] [cursor=pointer]
+            - button [ref=f56e54] [cursor=pointer]
+            - button [ref=f56e58] [cursor=pointer]
+            - button [ref=f56e62] [cursor=pointer]
+            - button [ref=f56e66] [cursor=pointer]
+            - button [ref=f56e70] [cursor=pointer]
+            - link [ref=f56e74] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f56e78] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f56e82] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f56e86] [cursor=pointer]
+        - generic [ref=f56e89]:
+          - button "Collapse Navigation Menu" [ref=f56e91] [cursor=pointer]
+          - generic [ref=f56e97]:
+            - generic [ref=f56e98]:
+              - paragraph [ref=f56e99]: Catalog
+              - link [ref=f56e101] [cursor=pointer]:
+                - /url: /catalogue/services
+                - paragraph [ref=f56e102]: Service menu
+              - link [ref=f56e104] [cursor=pointer]:
+                - /url: /catalogue/packages
+                - paragraph [ref=f56e105]: Packages
+              - link [ref=f56e107] [cursor=pointer]:
+                - /url: /catalogue/products
+                - paragraph [ref=f56e108]: Products
+            - separator [ref=f56e110]
+            - generic [ref=f56e111]:
+              - paragraph [ref=f56e112]: Inventory
+              - link [ref=f56e114] [cursor=pointer]:
+                - /url: /catalogue/stocktakes
+                - paragraph [ref=f56e115]: Stocktakes
+              - link [ref=f56e117] [cursor=pointer]:
+                - /url: /catalogue/orders
+                - paragraph [ref=f56e118]: Stock orders
+              - link [ref=f56e120] [cursor=pointer]:
+                - /url: /catalogue/suppliers
+                - paragraph [ref=f56e121]: Suppliers
+      - generic [ref=f56e379]:
+        - generic [ref=f56e381]:
+          - generic [ref=f56e382]:
+            - generic [ref=f56e383]:
+              - paragraph [ref=f56e384]: Suppliers
+              - generic [ref=f56e385]: "1"
+            - paragraph [ref=f56e386]:
+              - paragraph [ref=f56e387]:
+                - text: Add and manage details of your suppliers.
+                - link "Learn more" [ref=f56e388] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/inventory/155-manage-product-suppliers-brands-and-categories
+          - button "Add" [ref=f56e390] [cursor=pointer]
+        - generic [ref=f56e394]:
+          - generic [ref=f56e396]:
+            - generic [ref=f56e398]:
+              - generic [ref=f56e399]: Search
+              - textbox "Search" [ref=f56e404]:
+                - /placeholder: Search by supplier name
+            - button "Updated (newest first)" [ref=f56e409] [cursor=pointer]
+          - table [ref=f56e415]:
+            - rowgroup [ref=f56e422]:
+              - row [ref=f56e423]:
+                - columnheader [ref=f56e424] [cursor=pointer]:
+                  - paragraph [ref=f56e427]: Supplier name
+                - columnheader [ref=f56e429]:
+                  - paragraph [ref=f56e432]: Phone
+                - columnheader [ref=f56e433]:
+                  - paragraph [ref=f56e436]: Email
+                - columnheader [ref=f56e437] [cursor=pointer]:
+                  - paragraph [ref=f56e440]: Products
+                - columnheader [ref=f56e442] [cursor=pointer]:
+                  - paragraph [ref=f56e445]: Updated at
+          - table [ref=f56e447]:
+            - rowgroup [ref=f56e454]:
+              - row [ref=f56e455] [cursor=pointer]:
+                - cell "CS COUNCIL-TEST Supplier1" [ref=f56e456]:
+                  - generic [ref=f56e458]:
+                    - generic [ref=f56e459]: CS
+                    - paragraph [ref=f56e462]: COUNCIL-TEST Supplier1
+                - cell [ref=f56e463]
+                - cell [ref=f56e464]
+                - cell [ref=f56e465]
+                - cell "Oct 4, 2026, 10:45" [ref=f56e466]
+            - rowgroup [ref=f56e468]:
+              - row [ref=f56e469]:
+                - cell [ref=f56e470]:
+                  - generic [ref=f56e473]:
+                    - paragraph [ref=f56e474]: "1"
+                    - paragraph [ref=f56e475]: of 1
+  - generic [ref=f56e477]:
+    - tooltip "Notifications" [ref=f56e478]
+    - button "Dismiss" [ref=f56e481]

@@ -1,0 +1,134 @@
+- generic [ref=f54e12]:
+  - generic [ref=f54e13]:
+    - link "Fresha" [ref=f54e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f54e16]:
+      - button [ref=f54e18] [cursor=pointer]:
+        - paragraph [ref=f54e20]: Continue setup
+      - button "Search" [ref=f54e22] [cursor=pointer]
+      - button "Performance insights" [ref=f54e24] [cursor=pointer]
+      - button "Notifications" [ref=f54e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f54e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f54e31] [cursor=pointer]:
+        - generic [ref=f54e32]: FA
+  - generic [ref=f54e34]:
+    - generic [ref=f54e38]:
+      - generic [ref=f54e39]:
+        - link [ref=f54e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f54e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f54e50] [cursor=pointer]
+        - button [ref=f54e54] [cursor=pointer]
+        - button [ref=f54e58] [cursor=pointer]
+        - button [ref=f54e62] [cursor=pointer]
+        - button [ref=f54e66] [cursor=pointer]
+        - button [ref=f54e70] [cursor=pointer]
+        - link [ref=f54e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f54e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f54e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f54e86] [cursor=pointer]
+    - generic [ref=f54e94]:
+      - generic [ref=f54e96]:
+        - button "Back" [ref=f54e97] [cursor=pointer]
+        - navigation [ref=f54e102]:
+          - list [ref=f54e103]:
+            - listitem [ref=f54e104]:
+              - link "Workspace settings •" [ref=f54e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f54e106]:
+              - link "Scheduling" [ref=f54e107] [cursor=pointer]:
+                - /url: /setup/scheduling
+      - generic [ref=f54e112]:
+        - paragraph [ref=f54e114]: Scheduling
+        - list [ref=f54e115]:
+          - listitem [ref=f54e116]:
+            - list [ref=f54e117]:
+              - listitem [ref=f54e118] [cursor=pointer]:
+                - link [ref=f54e119]:
+                  - /url: /setup/scheduling/time-and-calendar
+                - generic [ref=f54e120]: Time and calendar
+              - listitem [ref=f54e122] [cursor=pointer]:
+                - link [ref=f54e123]:
+                  - /url: /setup/scheduling/waitlist
+                - generic [ref=f54e124]: Waitlist appointments
+              - listitem [ref=f54e126] [cursor=pointer]:
+                - link [ref=f54e127]:
+                  - /url: /setup/scheduling/blocked-time-types
+                - generic [ref=f54e128]: Blocked time types
+              - listitem [ref=f54e130] [cursor=pointer]:
+                - link [ref=f54e131]:
+                  - /url: /setup/scheduling/resources
+                - generic [ref=f54e132]: Resources
+              - listitem [ref=f54e134] [cursor=pointer]:
+                - link [ref=f54e135]:
+                  - /url: /setup/scheduling/cancellation-reasons
+                - generic [ref=f54e136]: Cancellation reasons
+              - listitem [ref=f54e138] [cursor=pointer]:
+                - link [ref=f54e139]:
+                  - /url: /setup/scheduling/appointment-statuses
+                - generic [ref=f54e140]: Appointment statuses
+              - listitem [ref=f54e142] [cursor=pointer]:
+                - link [ref=f54e143]:
+                  - /url: /setup/scheduling/closed-periods
+                - generic [ref=f54e144]: Closed periods
+            - separator [ref=f54e147]
+          - listitem [ref=f54e148]:
+            - generic [ref=f54e149]: Online booking
+            - list [ref=f54e151]:
+              - listitem [ref=f54e152] [cursor=pointer]:
+                - link [ref=f54e153]:
+                  - /url: /setup/scheduling/dynamic-assignment
+                - generic [ref=f54e154]: Dynamic assignment
+              - listitem [ref=f54e156] [cursor=pointer]:
+                - link [ref=f54e157]:
+                  - /url: /setup/scheduling/availability
+                - generic [ref=f54e158]: Availability
+              - listitem [ref=f54e160] [cursor=pointer]:
+                - link [ref=f54e161]:
+                  - /url: /setup/scheduling/booking-options
+                - generic [ref=f54e162]: Booking options
+        - separator [ref=f54e164]
+        - list [ref=f54e165]:
+          - listitem [ref=f54e166]:
+            - list [ref=f54e167]:
+              - listitem [ref=f54e168] [cursor=pointer]:
+                - button [ref=f54e169]
+                - generic [ref=f54e170]: Marketplace profile
+              - listitem [ref=f54e172] [cursor=pointer]:
+                - button [ref=f54e173]
+                - generic [ref=f54e174]: Service menu
+              - listitem [ref=f54e176] [cursor=pointer]:
+                - button [ref=f54e177]
+                - generic [ref=f54e178]: Scheduled shifts
+      - generic [ref=f54e181]:
+        - generic [ref=f54e182]:
+          - generic [ref=f54e183]:
+            - paragraph [ref=f54e185]: Appointment statuses
+            - paragraph [ref=f54e186]:
+              - text: Create and manage custom appointment statuses.
+              - link "Learn more" [ref=f54e187] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/calendar/600-update-appointment-statuses
+              - text: .
+          - button "Add" [ref=f54e190] [cursor=pointer]
+        - generic [ref=f54e194]:
+          - heading "Booked" [level=3] [ref=f54e203]
+          - heading "Confirmed" [level=3] [ref=f54e215]
+          - generic [ref=f54e219] [cursor=pointer]:
+            - button [ref=f54e220]
+            - generic [ref=f54e221]:
+              - heading "Arrived" [level=3] [ref=f54e228]
+              - button "Actions" [ref=f54e232]
+          - generic [ref=f54e237] [cursor=pointer]:
+            - button [ref=f54e238]
+            - generic [ref=f54e239]:
+              - heading "Started" [level=3] [ref=f54e246]
+              - button "Actions" [ref=f54e250]
+          - heading "Completed" [level=3] [ref=f54e263]
+          - heading "Canceled" [level=3] [ref=f54e275]
+          - heading "No-show" [level=3] [ref=f54e287]

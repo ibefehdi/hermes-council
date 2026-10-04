@@ -1,0 +1,78 @@
+- generic [ref=f18e12]:
+  - generic [ref=f18e13]:
+    - link "Fresha" [ref=f18e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f18e16]:
+      - button [ref=f18e18] [cursor=pointer]:
+        - paragraph [ref=f18e20]: Continue setup
+      - button "Search" [ref=f18e22] [cursor=pointer]
+      - button "Performance insights" [ref=f18e24] [cursor=pointer]
+      - button "Notifications" [ref=f18e27] [cursor=pointer]:
+        - generic [ref=f18e28]: "4"
+      - link "Fresha Connect" [ref=f18e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f18e34] [cursor=pointer]:
+        - generic [ref=f18e35]: FA
+  - generic [ref=f18e37]:
+    - generic [ref=f18e38]:
+      - generic [ref=f18e41]:
+        - generic [ref=f18e42]:
+          - link [ref=f18e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f18e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f18e53] [cursor=pointer]
+          - button [ref=f18e57] [cursor=pointer]
+          - button [ref=f18e61] [cursor=pointer]
+          - button [ref=f18e65] [cursor=pointer]
+          - button [ref=f18e69] [cursor=pointer]
+          - button [ref=f18e73] [cursor=pointer]
+          - link [ref=f18e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f18e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f18e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f18e89] [cursor=pointer]
+      - generic [ref=f18e92]:
+        - button "Collapse Navigation Menu" [ref=f18e94] [cursor=pointer]
+        - generic [ref=f18e100]:
+          - generic [ref=f18e101]:
+            - paragraph [ref=f18e102]: Online bookings
+            - link [ref=f18e104] [cursor=pointer]:
+              - /url: /fresha/online-booking/locations
+              - paragraph [ref=f18e105]: Marketplace profile
+            - link [ref=f18e107] [cursor=pointer]:
+              - /url: /fresha/online-booking/google-reserve
+              - paragraph [ref=f18e108]: Reserve with Google
+            - link [ref=f18e110] [cursor=pointer]:
+              - /url: /fresha/online-booking/facebook-setup
+              - paragraph [ref=f18e111]: Facebook and Instagram bookings
+            - link [ref=f18e113] [cursor=pointer]:
+              - /url: /fresha/online-booking/buttons-and-links
+              - paragraph [ref=f18e114]: Link builder
+          - separator [ref=f18e116]
+          - generic [ref=f18e117]:
+            - paragraph [ref=f18e118]: Your websites
+            - link [ref=f18e120] [cursor=pointer]:
+              - /url: /fresha/online-booking/smart-website
+              - paragraph [ref=f18e121]: Smart Website
+    - generic [ref=f18e127]:
+      - generic [ref=f18e130]:
+        - paragraph [ref=f18e132]: Link builder
+        - paragraph [ref=f18e133]:
+          - text: Create shareable links and QR codes for anything that your clients can book or buy online.
+          - link "Learn more" [ref=f18e134] [cursor=pointer]:
+            - /url: https://www.fresha.com/help-center/knowledge-base/online-presence/434-add-a-book-button-to-your-website
+      - generic [ref=f18e135]:
+        - generic [ref=f18e136]:
+          - generic [ref=f18e143]:
+            - paragraph [ref=f18e144]: Link to everything
+            - paragraph [ref=f18e145]: One simple link covering everything your clients can book or buy online.
+          - button "Create link" [ref=f18e148] [cursor=pointer]
+        - generic [ref=f18e152]:
+          - generic [ref=f18e159]:
+            - paragraph [ref=f18e160]: Link to services
+            - paragraph [ref=f18e161]: Booking links for certain services, locations or team members.
+          - button "Create link" [ref=f18e164] [cursor=pointer]

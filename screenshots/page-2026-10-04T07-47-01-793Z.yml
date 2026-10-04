@@ -1,0 +1,101 @@
+- generic [ref=f33e12]:
+  - generic [ref=f33e13]:
+    - link "Fresha" [ref=f33e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f33e16]:
+      - button [ref=f33e18] [cursor=pointer]:
+        - paragraph [ref=f33e20]: Continue setup
+      - button "Search" [ref=f33e22] [cursor=pointer]
+      - button "Performance insights" [ref=f33e24] [cursor=pointer]
+      - button "Notifications" [ref=f33e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f33e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f33e31] [cursor=pointer]:
+        - generic [ref=f33e32]: FA
+  - generic [ref=f33e89]:
+    - generic [ref=f33e304]:
+      - text: Select a time to book
+      - generic [ref=f33e306]:
+        - button "View available times" [ref=f33e307] [cursor=pointer]
+        - button "Close" [ref=f33e311] [cursor=pointer]
+    - generic [ref=f33e91]:
+      - generic [ref=f33e92]:
+        - button "Today" [ref=f33e93] [cursor=pointer]
+        - group [ref=f33e97]:
+          - button "Go to previous month" [ref=f33e98] [cursor=pointer]
+          - button "Sun, Oct 4" [ref=f33e103] [cursor=pointer]
+          - button "Go to next month" [ref=f33e107] [cursor=pointer]
+        - paragraph [ref=f33e112]: Button group
+        - button "Scheduled team" [ref=f33e113] [cursor=pointer]
+        - link "Visibility Filters" [ref=f33e120] [cursor=pointer]:
+          - /url: /calendar/drawer/visibility-filters?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working&appt_startDate=2026-10-04&appt_employeeId=5621666&appt_roomId=&appt_locationId=3216614&appt_customerId=&appt_groupId=&appt_startTime=&resetAppointmentState=true
+      - generic [ref=f33e125]:
+        - link "Calendar Settings" [ref=f33e128] [cursor=pointer]:
+          - /url: /calendar/drawer/settings?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working&appt_startDate=2026-10-04&appt_employeeId=5621666&appt_roomId=&appt_locationId=3216614&appt_customerId=&appt_groupId=&appt_startTime=&resetAppointmentState=true
+        - link "Waitlist" [ref=f33e134] [cursor=pointer]:
+          - /url: /calendar/drawer/waitlist?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working&appt_startDate=2026-10-04&appt_employeeId=5621666&appt_roomId=&appt_locationId=3216614&appt_customerId=&appt_groupId=&appt_startTime=&resetAppointmentState=true
+        - group [ref=f33e139]:
+          - button "Reset calendar to default view" [ref=f33e141] [cursor=pointer]
+          - button "Day" [ref=f33e146] [cursor=pointer]
+        - paragraph [ref=f33e151]: Button group
+        - button "Add" [active] [ref=f33e152] [cursor=pointer]
+    - generic [ref=f33e162]:
+      - generic [ref=f33e164]:
+        - generic [ref=f33e165]: 00:00
+        - generic [ref=f33e167]: 01:00
+        - generic [ref=f33e169]: 02:00
+        - generic [ref=f33e171]: 03:00
+        - generic [ref=f33e173]: 04:00
+        - generic [ref=f33e175]: 05:00
+        - generic [ref=f33e177]: 06:00
+        - generic [ref=f33e179]: 07:00
+        - generic [ref=f33e181]: 08:00
+        - generic [ref=f33e183]: 09:00
+        - generic [ref=f33e185]: 10:00
+        - generic [ref=f33e187]: 11:00
+        - generic [ref=f33e189]: 12:00
+        - generic [ref=f33e191]: 13:00
+        - generic [ref=f33e193]: 14:00
+        - generic [ref=f33e195]: 15:00
+        - generic [ref=f33e197]: 16:00
+        - generic [ref=f33e199]: 17:00
+        - generic [ref=f33e201]: 18:00
+        - generic [ref=f33e203]: 19:00
+        - generic [ref=f33e205]: 20:00
+        - generic [ref=f33e207]: 21:00
+        - generic [ref=f33e209]: 22:00
+        - generic [ref=f33e211]: 23:00
+        - generic [ref=f33e213]: 10:46
+      - button
+      - button
+      - generic [ref=f33e215]:
+        - generic [ref=f33e216]:
+          - button "FA Fahad Asad" [ref=f33e220] [cursor=pointer]:
+            - generic [ref=f33e221]:
+              - generic [ref=f33e222]: FA
+              - paragraph [ref=f33e226]: Fahad Asad
+          - button "FA Fahad Asad" [ref=f33e231] [cursor=pointer]:
+            - generic [ref=f33e232]:
+              - generic [ref=f33e233]: FA
+              - paragraph [ref=f33e237]: Fahad Asad
+          - button "FA Fahad Asad" [ref=f33e242] [cursor=pointer]:
+            - generic [ref=f33e243]:
+              - generic [ref=f33e244]: FA
+              - paragraph [ref=f33e248]: Fahad Asad
+        - generic [ref=f33e255]:
+          - generic:
+            - generic:
+              - generic: 09:00 - 09:45
+              - strong: John Doe
+            - generic: Haircut
+          - generic:
+            - generic:
+              - generic: 10:00 - 10:35
+              - strong: Jack Doe
+            - generic: Blow Dry
+          - generic:
+            - generic:
+              - generic: 11:00 - 12:15
+              - strong: Jane Doe
+            - generic: Hair Color

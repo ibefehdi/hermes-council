@@ -1,0 +1,82 @@
+- generic [ref=f238e12]:
+  - generic [ref=f238e13]:
+    - link "Fresha" [ref=f238e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f238e16]:
+      - button [ref=f238e18] [cursor=pointer]:
+        - paragraph [ref=f238e20]: Continue setup
+      - button "Search" [ref=f238e22] [cursor=pointer]
+      - button "Performance insights" [ref=f238e24] [cursor=pointer]
+      - button "Notifications" [ref=f238e27] [cursor=pointer]:
+        - generic [ref=f238e28]: "4"
+      - link "Fresha Connect" [ref=f238e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f238e34] [cursor=pointer]:
+        - generic [ref=f238e35]: FA
+  - generic [ref=f238e37]:
+    - generic [ref=f238e38]:
+      - generic [ref=f238e41]:
+        - generic [ref=f238e42]:
+          - link [ref=f238e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f238e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f238e53] [cursor=pointer]
+          - button [ref=f238e57] [cursor=pointer]
+          - button [ref=f238e61] [cursor=pointer]
+          - button [ref=f238e65] [cursor=pointer]
+          - button [ref=f238e69] [cursor=pointer]
+          - button [ref=f238e73] [cursor=pointer]
+          - link [ref=f238e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f238e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f238e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f238e89] [cursor=pointer]
+      - generic [ref=f238e92]:
+        - button "Collapse Navigation Menu" [ref=f238e94] [cursor=pointer]
+        - generic [ref=f238e100]:
+          - generic [ref=f238e101]:
+            - paragraph [ref=f238e102]: Catalog
+            - link [ref=f238e104] [cursor=pointer]:
+              - /url: /catalogue/services
+              - paragraph [ref=f238e105]: Service menu
+            - link [ref=f238e107] [cursor=pointer]:
+              - /url: /catalogue/packages
+              - paragraph [ref=f238e108]: Packages
+            - link [ref=f238e110] [cursor=pointer]:
+              - /url: /catalogue/products
+              - paragraph [ref=f238e111]: Products
+          - separator [ref=f238e113]
+          - generic [ref=f238e114]:
+            - paragraph [ref=f238e115]: Inventory
+            - link [ref=f238e117] [cursor=pointer]:
+              - /url: /catalogue/stocktakes
+              - paragraph [ref=f238e118]: Stocktakes
+            - link [ref=f238e120] [cursor=pointer]:
+              - /url: /catalogue/orders
+              - paragraph [ref=f238e121]: Stock orders
+            - link [ref=f238e123] [cursor=pointer]:
+              - /url: /catalogue/suppliers
+              - paragraph [ref=f238e124]: Suppliers
+    - generic [ref=f238e130]:
+      - generic [ref=f238e132]:
+        - generic [ref=f238e133]:
+          - generic [ref=f238e134]:
+            - paragraph [ref=f238e135]: Suppliers
+            - generic [ref=f238e136]: "0"
+          - paragraph [ref=f238e137]:
+            - paragraph [ref=f238e138]:
+              - text: Add and manage details of your suppliers.
+              - link "Learn more" [ref=f238e139] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/inventory/155-manage-product-suppliers-brands-and-categories
+        - button "Add" [ref=f238e141] [cursor=pointer]
+      - generic [ref=f238e147]:
+        - img "Products illustration" [ref=f238e150]
+        - generic [ref=f238e151]:
+          - generic [ref=f238e152]: No suppliers yet
+          - generic [ref=f238e153]:
+            - button "Click here" [ref=f238e154] [cursor=pointer]
+            - text: to add a supplier now.

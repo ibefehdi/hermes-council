@@ -1,0 +1,75 @@
+- generic [active] [ref=f13e1]:
+  - generic [ref=f13e12]:
+    - generic [ref=f13e13]:
+      - img "Fresha Connect logo" [ref=f13e15]
+      - generic [ref=f13e17]:
+        - generic [ref=f13e18]: Search
+        - textbox "Search" [ref=f13e23]
+      - generic [ref=f13e24]:
+        - button "Settings" [ref=f13e27] [cursor=pointer]
+        - button "Close" [ref=f13e32] [cursor=pointer]
+    - generic [ref=f13e36]:
+      - generic [ref=f13e39]:
+        - button "Client Connect" [ref=f13e42] [cursor=pointer]
+        - button "Team Connect" [ref=f13e47] [cursor=pointer]:
+          - generic [ref=f13e48]: "4"
+      - generic [ref=f13e52]:
+        - generic [ref=f13e54]:
+          - generic [ref=f13e56]:
+            - heading "Client messages" [level=2] [ref=f13e59]
+            - button "New message" [ref=f13e61] [cursor=pointer]
+          - generic [ref=f13e66]:
+            - button "Open 1" [ref=f13e67] [cursor=pointer]:
+              - generic [ref=f13e71]:
+                - generic [ref=f13e72]: Open
+                - generic [ref=f13e73]: "1"
+            - button "Closed" [ref=f13e74] [cursor=pointer]
+          - list "Conversations" [ref=f13e78]:
+            - listitem [ref=f13e80] [cursor=pointer]:
+              - button [ref=f13e81]
+              - generic [ref=f13e82]:
+                - generic [ref=f13e83]: JS
+                - generic [ref=f13e88]:
+                  - generic [ref=f13e89]:
+                    - paragraph [ref=f13e91]: Jane Smith (Demo)
+                    - paragraph [ref=f13e94]: Just now
+                  - heading "Hello! Is the street parking usually full?" [level=4] [ref=f13e97]
+        - generic [ref=f13e99]:
+          - generic [ref=f13e100]:
+            - generic [ref=f13e102]:
+              - generic [ref=f13e103]: JS
+              - paragraph [ref=f13e108]: Jane Smith (Demo)
+            - button "Conversation options" [ref=f13e110] [cursor=pointer]
+            - button "Close conversation" [ref=f13e116] [cursor=pointer]
+          - log [ref=f13e122]:
+            - generic [ref=f13e123]:
+              - separator [ref=f13e124]:
+                - paragraph [ref=f13e126]: Today
+              - generic [ref=f13e128]:
+                - generic [ref=f13e129]: Jane Smith (Demo)
+                - generic [ref=f13e134]:
+                  - generic [ref=f13e135]: Hello! Is the street parking usually full?
+                  - generic [ref=f13e137]: 10:23 AM
+                  - generic:
+                    - generic:
+                      - button "Message options"
+          - generic [ref=f13e140]:
+            - generic [ref=f13e141]:
+              - generic [ref=f13e142]: Client contact information required
+              - button "Add details" [ref=f13e143] [cursor=pointer]
+            - generic [ref=f13e144]:
+              - textbox "Type a message" [disabled] [ref=f13e145]
+              - generic [ref=f13e146]:
+                - generic [ref=f13e147]:
+                  - generic [ref=f13e148]:
+                    - button "Attach" [disabled]
+                  - button "Insert emoji" [disabled]
+                  - button "Quick replies" [disabled]
+                - button "Send message" [disabled]
+  - generic [ref=f13e151]:
+    - generic [ref=f13e153]:
+      - paragraph [ref=f13e154]: Step 1 of 3
+      - paragraph [ref=f13e155]: "Just added: accept general inquiry messages via your own public Contact Page with a dedicated link"
+    - generic [ref=f13e156]:
+      - button "Close" [ref=f13e158] [cursor=pointer]
+      - button "Next" [ref=f13e163] [cursor=pointer]

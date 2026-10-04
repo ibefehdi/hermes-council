@@ -1,0 +1,66 @@
+- generic [ref=f158e12]:
+  - generic [ref=f158e13]:
+    - link "Fresha" [ref=f158e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - button "Open user menu" [ref=f158e18] [cursor=pointer]:
+      - generic [ref=f158e19]: FA
+  - generic [ref=f158e23]:
+    - list [ref=f158e28]:
+      - listitem [ref=f158e29] [cursor=pointer]:
+        - button [ref=f158e30]
+        - generic [ref=f158e31]: Back
+      - listitem [ref=f158e33]:
+        - paragraph [ref=f158e36]: Your account
+        - list [ref=f158e37]:
+          - listitem [ref=f158e38] [cursor=pointer]:
+            - button [ref=f158e39]
+            - generic [ref=f158e40]: My profile
+          - listitem [ref=f158e41] [cursor=pointer]:
+            - button [ref=f158e42]
+            - generic [ref=f158e43]: Portfolio
+          - listitem [ref=f158e45] [cursor=pointer]:
+            - button [ref=f158e46]
+            - generic [ref=f158e47]: Reviews
+          - listitem [ref=f158e49] [cursor=pointer]:
+            - button [ref=f158e50]
+            - generic [ref=f158e51]: Pay runs
+          - listitem [ref=f158e53] [cursor=pointer]:
+            - button [ref=f158e54]
+            - generic [ref=f158e55]: Workspaces
+          - listitem [ref=f158e56] [cursor=pointer]:
+            - button [ref=f158e57]
+            - generic [ref=f158e58]: Personal settings
+    - generic [ref=f158e65]:
+      - generic [ref=f158e67]:
+        - generic [ref=f158e68]:
+          - button "Back" [ref=f158e69] [cursor=pointer]
+          - navigation [ref=f158e74]:
+            - list [ref=f158e75]:
+              - listitem [ref=f158e76]:
+                - link "Account settings •" [ref=f158e77] [cursor=pointer]:
+                  - /url: /user-account/personal-settings
+              - listitem [ref=f158e78]:
+                - link "Appearance" [ref=f158e79] [cursor=pointer]:
+                  - /url: /user-account/personal-settings/appearance
+        - paragraph [ref=f158e83]: Appearance
+      - generic [ref=f158e87]:
+        - paragraph [ref=f158e91]: Theme
+        - radiogroup [ref=f158e93]:
+          - paragraph [ref=f158e94]: Set the theme of your platform
+          - generic [ref=f158e95]:
+            - generic [ref=f158e96] [cursor=pointer]:
+              - generic:
+                - generic:
+                  - paragraph: Light
+                - radio "Light" [ref=f158e97]
+            - generic [ref=f158e98] [cursor=pointer]:
+              - generic:
+                - generic:
+                  - paragraph: Dark
+                - radio "Dark" [ref=f158e99]
+            - generic [ref=f158e100] [cursor=pointer]:
+              - generic:
+                - generic:
+                  - paragraph: System
+                - radio "System" [checked] [ref=f158e101]

@@ -1,0 +1,77 @@
+- generic [ref=f77e12]:
+  - generic [ref=f77e13]:
+    - link "Fresha" [ref=f77e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f77e16]:
+      - button [ref=f77e18] [cursor=pointer]:
+        - paragraph [ref=f77e20]: Continue setup
+      - button "Search" [ref=f77e22] [cursor=pointer]
+      - button "Performance insights" [ref=f77e24] [cursor=pointer]
+      - button "Notifications" [ref=f77e27] [cursor=pointer]:
+        - generic [ref=f77e28]: "4"
+      - link "Fresha Connect" [ref=f77e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f77e37] [cursor=pointer]:
+        - generic [ref=f77e38]: FA
+  - generic [ref=f77e40]:
+    - generic [ref=f77e41]:
+      - generic [ref=f77e44]:
+        - generic [ref=f77e45]:
+          - link [ref=f77e48] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f77e52] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f77e56] [cursor=pointer]
+          - button [ref=f77e60] [cursor=pointer]
+          - button [ref=f77e64] [cursor=pointer]
+          - button [ref=f77e68] [cursor=pointer]
+          - button [ref=f77e72] [cursor=pointer]
+          - button [ref=f77e76] [cursor=pointer]
+          - link [ref=f77e80] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f77e84] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f77e88] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f77e92] [cursor=pointer]
+      - generic [ref=f77e95]:
+        - button "Collapse Navigation Menu" [ref=f77e97] [cursor=pointer]
+        - generic [ref=f77e103]:
+          - generic [ref=f77e104]:
+            - paragraph [ref=f77e105]: Messaging
+            - link [ref=f77e107] [cursor=pointer]:
+              - /url: /marketing/blast-campaigns/home
+              - paragraph [ref=f77e108]: Blast campaigns
+            - link [ref=f77e110] [cursor=pointer]:
+              - /url: /marketing/automated-messages
+              - paragraph [ref=f77e111]: Automations
+            - link [ref=f77e113] [cursor=pointer]:
+              - /url: /marketing/notifications
+              - paragraph [ref=f77e114]: Messages history
+          - separator [ref=f77e116]
+          - generic [ref=f77e117]:
+            - paragraph [ref=f77e118]: Promotion
+            - link [ref=f77e120] [cursor=pointer]:
+              - /url: /marketing/deals
+              - paragraph [ref=f77e121]: Deals
+            - link [ref=f77e123] [cursor=pointer]:
+              - /url: /marketing/peak-pricing
+              - paragraph [ref=f77e124]: Smart pricing
+          - separator [ref=f77e126]
+          - generic [ref=f77e127]:
+            - paragraph [ref=f77e128]: Engage
+            - link [ref=f77e130] [cursor=pointer]:
+              - /url: /clients/online-reputation?tab=all
+              - paragraph [ref=f77e131]: Reviews
+    - generic [ref=f77e139]:
+      - generic [ref=f77e140]: Promote your business with blast campaigns
+      - generic [ref=f77e141]: Increase bookings and engage with your clients by sharing special offers and important updates over email and text message.
+      - generic [ref=f77e142]:
+        - generic [ref=f77e143]: Customize the message content to suit your style
+        - generic [ref=f77e147]: Target all clients, specific client groups or individuals
+        - generic [ref=f77e151]: Access powerful real-time campaign reporting
+      - generic [ref=f77e155]:
+        - button "Start now" [ref=f77e156] [cursor=pointer]
+        - link "Learn more" [ref=f77e160] [cursor=pointer]:
+          - /url: https://www.fresha.com/help-center/knowledge-base/marketing/101369-blast-campaigns-overview

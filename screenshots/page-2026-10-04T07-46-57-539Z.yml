@@ -1,0 +1,110 @@
+- generic [active] [ref=f30e1]:
+  - generic [ref=f30e3]:
+    - generic [ref=f30e4]:
+      - link "Fresha" [ref=f30e6] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f30e7]:
+        - button "Search" [ref=f30e9] [cursor=pointer]
+        - button "Performance insights" [ref=f30e11] [cursor=pointer]
+        - button "News" [ref=f30e13] [cursor=pointer]
+        - button "Notifications" [ref=f30e16] [cursor=pointer]
+        - link "Fresha Connect" [ref=f30e18] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f30e20] [cursor=pointer]:
+          - generic [ref=f30e21]: FA
+    - generic [ref=f30e23]:
+      - generic [ref=f30e24]:
+        - generic [ref=f30e27]:
+          - generic [ref=f30e28]:
+            - link [ref=f30e31] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f30e35] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f30e39] [cursor=pointer]
+            - button [ref=f30e43] [cursor=pointer]
+            - button [ref=f30e47] [cursor=pointer]
+            - button [ref=f30e51] [cursor=pointer]
+            - button [ref=f30e55] [cursor=pointer]
+            - button [ref=f30e59] [cursor=pointer]
+            - link [ref=f30e63] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f30e67] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f30e71] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f30e75] [cursor=pointer]
+        - generic [ref=f30e78]:
+          - button "Collapse Navigation Menu" [ref=f30e80] [cursor=pointer]
+          - generic [ref=f30e86]:
+            - generic [ref=f30e87]:
+              - paragraph [ref=f30e88]: Sales
+              - link [ref=f30e90] [cursor=pointer]:
+                - /url: /sales/daily-sales
+                - paragraph [ref=f30e91]: Daily sales summary
+              - link [ref=f30e93] [cursor=pointer]:
+                - /url: /sales/register
+                - paragraph [ref=f30e94]: Register
+              - link [ref=f30e96] [cursor=pointer]:
+                - /url: /sales/appointments-list
+                - paragraph [ref=f30e97]: Appointments
+              - link [ref=f30e99] [cursor=pointer]:
+                - /url: /sales/sales-list
+                - paragraph [ref=f30e100]: Sales
+              - link [ref=f30e102] [cursor=pointer]:
+                - /url: /sales/payment-transactions
+                - paragraph [ref=f30e103]: Payments
+            - separator [ref=f30e105]
+            - generic [ref=f30e106]:
+              - paragraph [ref=f30e107]: Sold items
+              - link [ref=f30e109] [cursor=pointer]:
+                - /url: /sales/gift-cards
+                - paragraph [ref=f30e110]: Gift cards sold
+              - link [ref=f30e112] [cursor=pointer]:
+                - /url: /sales/packages-sold
+                - paragraph [ref=f30e113]: Packages sold
+              - link [ref=f30e115] [cursor=pointer]:
+                - /url: /sales/paid-plans
+                - paragraph [ref=f30e116]: Memberships sold
+      - generic [ref=f30e122]:
+        - generic [ref=f30e124]:
+          - generic [ref=f30e125]:
+            - paragraph [ref=f30e127]: Sales
+            - paragraph [ref=f30e128]:
+              - text: View, filter and export the history of your sales.
+              - link "Learn more" [ref=f30e129] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/sales
+          - button "Add new" [ref=f30e132] [cursor=pointer]
+        - generic [ref=f30e137]:
+          - tablist [ref=f30e142]:
+            - tab "Sales" [selected] [ref=f30e143] [cursor=pointer]
+            - tab "Drafts" [ref=f30e145] [cursor=pointer]
+          - generic [ref=f30e149]:
+            - generic [ref=f30e151]:
+              - generic [ref=f30e152]:
+                - generic [ref=f30e153]: Search
+                - textbox "Search" [ref=f30e158]:
+                  - /placeholder: Search by Sale or Client
+              - button "Today" [ref=f30e159] [cursor=pointer]
+              - button "Filters" [ref=f30e164] [cursor=pointer]
+            - button "Sort by" [ref=f30e173] [cursor=pointer]
+  - dialog [ref=f30e178]:
+    - generic [ref=f30e179]:
+      - button "Close Drawer" [ref=f30e181] [cursor=pointer]
+      - generic [ref=f30e187]:
+        - generic: Summary
+        - generic [ref=f30e194]:
+          - button "Open options" [disabled]
+        - generic [ref=f30e220]:
+          - separator [ref=f30e245]
+          - paragraph [ref=f30e248]: Total
+        - list [ref=f30e251]:
+          - listitem [ref=f30e252]:
+            - button [ref=f30e253] [cursor=pointer]:
+              - paragraph [ref=f30e257]: Summary
+          - listitem [ref=f30e258]:
+            - button [ref=f30e259] [cursor=pointer]:
+              - paragraph [ref=f30e263]: Notes
+          - listitem [ref=f30e264]:
+            - button [ref=f30e265] [cursor=pointer]:
+              - paragraph [ref=f30e269]: Activity

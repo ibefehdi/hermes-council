@@ -1,0 +1,110 @@
+- generic [ref=f101e12]:
+  - generic [ref=f101e13]:
+    - link "Fresha" [ref=f101e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f101e16]:
+      - button [ref=f101e18] [cursor=pointer]:
+        - paragraph [ref=f101e20]: Continue setup
+      - button "Search" [ref=f101e22] [cursor=pointer]
+      - button "Performance insights" [ref=f101e24] [cursor=pointer]
+      - button "Notifications" [ref=f101e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f101e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f101e31] [cursor=pointer]:
+        - generic [ref=f101e32]: FA
+  - generic [ref=f101e34]:
+    - generic [ref=f101e38]:
+      - generic [ref=f101e39]:
+        - link [ref=f101e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f101e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f101e50] [cursor=pointer]
+        - button [ref=f101e54] [cursor=pointer]
+        - button [ref=f101e58] [cursor=pointer]
+        - button [ref=f101e62] [cursor=pointer]
+        - button [ref=f101e66] [cursor=pointer]
+        - button [ref=f101e70] [cursor=pointer]
+        - link [ref=f101e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f101e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f101e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f101e86] [cursor=pointer]
+    - generic [ref=f101e94]:
+      - generic [ref=f101e96]:
+        - button "Back" [ref=f101e97] [cursor=pointer]
+        - navigation [ref=f101e102]:
+          - list [ref=f101e103]:
+            - listitem [ref=f101e104]:
+              - link "Workspace settings •" [ref=f101e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f101e106]:
+              - link "Sales" [ref=f101e107] [cursor=pointer]:
+                - /url: /setup/sales
+      - generic [ref=f101e112]:
+        - paragraph [ref=f101e114]: Sales
+        - list [ref=f101e115]:
+          - listitem [ref=f101e116]:
+            - list [ref=f101e117]:
+              - listitem [ref=f101e118] [cursor=pointer]:
+                - link [ref=f101e119]:
+                  - /url: /setup/sales/pay-now
+                - generic [ref=f101e120]: Pay now
+              - listitem [ref=f101e122] [cursor=pointer]:
+                - link [ref=f101e123]:
+                  - /url: /setup/sales/tax-rates
+                - generic [ref=f101e124]: Tax rates
+              - listitem [ref=f101e126] [cursor=pointer]:
+                - link [ref=f101e127]:
+                  - /url: /setup/sales/receipts
+                - generic [ref=f101e128]: Receipts
+              - listitem [ref=f101e130] [cursor=pointer]:
+                - link [ref=f101e131]:
+                  - /url: /setup/sales/registers
+                - generic [ref=f101e132]: Registers
+              - listitem [ref=f101e134] [cursor=pointer]:
+                - link [ref=f101e135]:
+                  - /url: /setup/sales/tipping
+                - generic [ref=f101e136]: Tipping
+              - listitem [ref=f101e138] [cursor=pointer]:
+                - link [ref=f101e139]:
+                  - /url: /setup/sales/service-charges
+                - generic [ref=f101e140]: Service charges
+              - listitem [ref=f101e142] [cursor=pointer]:
+                - link [ref=f101e143]:
+                  - /url: /setup/sales/gift-cards
+                - generic [ref=f101e144]: Gift cards
+              - listitem [ref=f101e146] [cursor=pointer]:
+                - link [ref=f101e147]:
+                  - /url: /setup/sales/payment-methods
+                - generic [ref=f101e148]: Custom checkout methods
+        - separator [ref=f101e150]
+        - list [ref=f101e151]:
+          - listitem [ref=f101e152]:
+            - list [ref=f101e153]:
+              - listitem [ref=f101e154] [cursor=pointer]:
+                - button [ref=f101e155]
+                - generic [ref=f101e156]: Payment settings
+      - generic [ref=f101e159]:
+        - generic [ref=f101e160]:
+          - generic [ref=f101e161]:
+            - paragraph [ref=f101e163]: Gift cards
+            - paragraph [ref=f101e164]:
+              - text: Choose how you would like to sell your gift cards, and customize their settings.
+              - link "Learn more" [ref=f101e165] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/packages-memberships-and-gift-cards/72-set-up-gift-cards
+              - text: .
+          - button "Options" [ref=f101e169] [cursor=pointer]
+        - generic [ref=f101e178]:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Illustration"
+          - generic [ref=f101e179]:
+            - generic [ref=f101e180]: Gift cards inactive
+            - generic [ref=f101e181]: Let your clients buy personalized gift cards and send to friends & family for your business.
+          - button "Set up" [ref=f101e183] [cursor=pointer]

@@ -1,0 +1,81 @@
+- generic [ref=f173e12]:
+  - generic [ref=f173e13]:
+    - link "Fresha" [ref=f173e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f173e16]:
+      - button [ref=f173e18] [cursor=pointer]:
+        - paragraph [ref=f173e20]: Continue setup
+      - button "Search" [ref=f173e22] [cursor=pointer]
+      - button "Performance insights" [ref=f173e24] [cursor=pointer]
+      - button "Notifications" [ref=f173e27] [cursor=pointer]:
+        - generic [ref=f173e28]: "4"
+      - link "Fresha Connect" [ref=f173e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f173e34] [cursor=pointer]:
+        - generic [ref=f173e35]: FA
+  - generic [ref=f173e37]:
+    - generic [ref=f173e38]:
+      - generic [ref=f173e41]:
+        - generic [ref=f173e42]:
+          - link [ref=f173e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f173e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f173e53] [cursor=pointer]
+          - button [ref=f173e57] [cursor=pointer]
+          - button [ref=f173e61] [cursor=pointer]
+          - button [ref=f173e65] [cursor=pointer]
+          - button [ref=f173e69] [cursor=pointer]
+          - button [ref=f173e73] [cursor=pointer]
+          - link [ref=f173e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f173e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f173e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f173e89] [cursor=pointer]
+      - generic [ref=f173e92]:
+        - button "Collapse Navigation Menu" [ref=f173e94] [cursor=pointer]
+        - generic [ref=f173e100]:
+          - generic [ref=f173e101]:
+            - paragraph [ref=f173e102]: Sales
+            - link [ref=f173e104] [cursor=pointer]:
+              - /url: /sales/daily-sales
+              - paragraph [ref=f173e105]: Daily sales summary
+            - link [ref=f173e107] [cursor=pointer]:
+              - /url: /sales/register
+              - paragraph [ref=f173e108]: Register
+            - link [ref=f173e110] [cursor=pointer]:
+              - /url: /sales/appointments-list
+              - paragraph [ref=f173e111]: Appointments
+            - link [ref=f173e113] [cursor=pointer]:
+              - /url: /sales/sales-list
+              - paragraph [ref=f173e114]: Sales
+            - link [ref=f173e116] [cursor=pointer]:
+              - /url: /sales/payment-transactions
+              - paragraph [ref=f173e117]: Payments
+          - separator [ref=f173e119]
+          - generic [ref=f173e120]:
+            - paragraph [ref=f173e121]: Sold items
+            - link [ref=f173e123] [cursor=pointer]:
+              - /url: /sales/gift-cards
+              - paragraph [ref=f173e124]: Gift cards sold
+            - link [ref=f173e126] [cursor=pointer]:
+              - /url: /sales/packages-sold
+              - paragraph [ref=f173e127]: Packages sold
+            - link [ref=f173e129] [cursor=pointer]:
+              - /url: /sales/paid-plans
+              - paragraph [ref=f173e130]: Memberships sold
+    - generic [ref=f173e139]:
+      - paragraph [ref=f173e142]: Included in your plan
+      - generic [ref=f173e143]: Track cash movements confidently with registers
+      - generic [ref=f173e144]: Streamline your sales and payments using registers, with everything you need to handle daily transactions and stay on top of balances.
+      - generic [ref=f173e145]:
+        - generic [ref=f173e146]: Everything accounted for with daily opening and closing
+        - generic [ref=f173e150]: Seamlessly track every cash movement for full visibility
+        - generic [ref=f173e154]: Stay on top of petty cash and float balances
+      - generic [ref=f173e158]:
+        - button "Start now" [ref=f173e159] [cursor=pointer]
+        - link "Learn more" [ref=f173e163] [cursor=pointer]:
+          - /url: https://www.fresha.com/help-center/knowledge-base/sales/104057-set-up-your-register

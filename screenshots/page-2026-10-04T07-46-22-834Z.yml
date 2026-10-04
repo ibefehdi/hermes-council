@@ -1,0 +1,121 @@
+- generic [ref=f93e12]:
+  - generic [ref=f93e13]:
+    - link "Fresha" [ref=f93e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f93e16]:
+      - button [ref=f93e18] [cursor=pointer]:
+        - paragraph [ref=f93e20]: Continue setup
+      - button "Search" [ref=f93e22] [cursor=pointer]
+      - button "Performance insights" [ref=f93e24] [cursor=pointer]
+      - button "Notifications" [ref=f93e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f93e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f93e31] [cursor=pointer]:
+        - generic [ref=f93e32]: FA
+  - generic [ref=f93e34]:
+    - generic [ref=f93e38]:
+      - generic [ref=f93e39]:
+        - link [ref=f93e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f93e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f93e50] [cursor=pointer]
+        - button [ref=f93e54] [cursor=pointer]
+        - button [ref=f93e58] [cursor=pointer]
+        - button [ref=f93e62] [cursor=pointer]
+        - button [ref=f93e66] [cursor=pointer]
+        - button [ref=f93e70] [cursor=pointer]
+        - link [ref=f93e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f93e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f93e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f93e86] [cursor=pointer]
+    - generic [ref=f93e94]:
+      - generic [ref=f93e96]:
+        - button "Back" [ref=f93e97] [cursor=pointer]
+        - navigation [ref=f93e102]:
+          - list [ref=f93e103]:
+            - listitem [ref=f93e104]:
+              - link "Workspace settings •" [ref=f93e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f93e106]:
+              - link "Sales" [ref=f93e107] [cursor=pointer]:
+                - /url: /setup/sales
+      - generic [ref=f93e112]:
+        - paragraph [ref=f93e114]: Sales
+        - list [ref=f93e115]:
+          - listitem [ref=f93e116]:
+            - list [ref=f93e117]:
+              - listitem [ref=f93e118] [cursor=pointer]:
+                - link [ref=f93e119]:
+                  - /url: /setup/sales/pay-now
+                - generic [ref=f93e120]: Pay now
+              - listitem [ref=f93e122] [cursor=pointer]:
+                - link [ref=f93e123]:
+                  - /url: /setup/sales/tax-rates
+                - generic [ref=f93e124]: Tax rates
+              - listitem [ref=f93e126] [cursor=pointer]:
+                - link [ref=f93e127]:
+                  - /url: /setup/sales/receipts
+                - generic [ref=f93e128]: Receipts
+              - listitem [ref=f93e130] [cursor=pointer]:
+                - link [ref=f93e131]:
+                  - /url: /setup/sales/registers
+                - generic [ref=f93e132]: Registers
+              - listitem [ref=f93e134] [cursor=pointer]:
+                - link [ref=f93e135]:
+                  - /url: /setup/sales/tipping
+                - generic [ref=f93e136]: Tipping
+              - listitem [ref=f93e138] [cursor=pointer]:
+                - link [ref=f93e139]:
+                  - /url: /setup/sales/service-charges
+                - generic [ref=f93e140]: Service charges
+              - listitem [ref=f93e142] [cursor=pointer]:
+                - link [ref=f93e143]:
+                  - /url: /setup/sales/gift-cards
+                - generic [ref=f93e144]: Gift cards
+              - listitem [ref=f93e146] [cursor=pointer]:
+                - link [ref=f93e147]:
+                  - /url: /setup/sales/payment-methods
+                - generic [ref=f93e148]: Custom checkout methods
+        - separator [ref=f93e150]
+        - list [ref=f93e151]:
+          - listitem [ref=f93e152]:
+            - list [ref=f93e153]:
+              - listitem [ref=f93e154] [cursor=pointer]:
+                - button [ref=f93e155]
+                - generic [ref=f93e156]: Payment settings
+      - generic [ref=f93e159]:
+        - generic [ref=f93e161]:
+          - paragraph [ref=f93e163]: Tipping
+          - paragraph [ref=f93e164]:
+            - text: Choose when to ask clients to tip and customize default tipping values.
+            - link "Learn more" [ref=f93e165] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/sales/352-set-up-and-manage-tips
+            - text: .
+        - generic [ref=f93e168]:
+          - heading "Tipping options" [level=2] [ref=f93e171]
+          - generic [ref=f93e173] [cursor=pointer]:
+            - generic [ref=f93e174]:
+              - paragraph [ref=f93e175]: Display a tip option screen at the Point of Sale
+              - paragraph [ref=f93e176]:
+                - link "Learn more" [ref=f93e177]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/sales/352-set-up-and-manage-tips
+            - checkbox "Display a tip option screen at the Point of Sale" [checked] [ref=f93e181]
+          - separator [ref=f93e182]
+          - generic [ref=f93e183]:
+            - generic [ref=f93e184]:
+              - generic [ref=f93e185]:
+                - paragraph [ref=f93e187]: Default values
+                - paragraph [ref=f93e188]: 10% • 18% • 25%
+              - button "Edit" [ref=f93e190] [cursor=pointer]
+            - generic [ref=f93e194]:
+              - generic [ref=f93e195]:
+                - paragraph [ref=f93e197]: Tip calculation
+                - paragraph [ref=f93e198]: All items included
+              - button "Edit" [ref=f93e200] [cursor=pointer]
+          - separator [ref=f93e204]
+          - button "Advanced options" [ref=f93e205] [cursor=pointer]

@@ -1,0 +1,180 @@
+- generic [ref=f133e12]:
+  - generic [ref=f133e13]:
+    - link "Fresha" [ref=f133e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f133e16]:
+      - button [ref=f133e18] [cursor=pointer]:
+        - paragraph [ref=f133e20]: Continue setup
+      - button "Search" [ref=f133e22] [cursor=pointer]
+      - button "Performance insights" [ref=f133e24] [cursor=pointer]
+      - button "Notifications" [ref=f133e27] [cursor=pointer]:
+        - generic [ref=f133e28]: "4"
+      - link "Fresha Connect" [ref=f133e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f133e37] [cursor=pointer]:
+        - generic [ref=f133e38]: FA
+  - generic [ref=f133e40]:
+    - generic [ref=f133e41]:
+      - generic [ref=f133e44]:
+        - generic [ref=f133e45]:
+          - link [ref=f133e48] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f133e52] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f133e56] [cursor=pointer]
+          - button [ref=f133e60] [cursor=pointer]
+          - button [ref=f133e64] [cursor=pointer]
+          - button [ref=f133e68] [cursor=pointer]
+          - button [ref=f133e72] [cursor=pointer]
+          - button [ref=f133e76] [cursor=pointer]
+          - link [ref=f133e80] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f133e84] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f133e88] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f133e92] [cursor=pointer]
+      - generic [ref=f133e95]:
+        - button "Collapse Navigation Menu" [ref=f133e97] [cursor=pointer]
+        - generic [ref=f133e103]:
+          - generic [ref=f133e104]:
+            - paragraph [ref=f133e105]: Sales
+            - link [ref=f133e107] [cursor=pointer]:
+              - /url: /sales/daily-sales
+              - paragraph [ref=f133e108]: Daily sales summary
+            - link [ref=f133e110] [cursor=pointer]:
+              - /url: /sales/register
+              - paragraph [ref=f133e111]: Register
+            - link [ref=f133e113] [cursor=pointer]:
+              - /url: /sales/appointments-list
+              - paragraph [ref=f133e114]: Appointments
+            - link [ref=f133e116] [cursor=pointer]:
+              - /url: /sales/sales-list
+              - paragraph [ref=f133e117]: Sales
+            - link [ref=f133e119] [cursor=pointer]:
+              - /url: /sales/payment-transactions
+              - paragraph [ref=f133e120]: Payments
+          - separator [ref=f133e122]
+          - generic [ref=f133e123]:
+            - paragraph [ref=f133e124]: Sold items
+            - link [ref=f133e126] [cursor=pointer]:
+              - /url: /sales/gift-cards
+              - paragraph [ref=f133e127]: Gift cards sold
+            - link [ref=f133e129] [cursor=pointer]:
+              - /url: /sales/packages-sold
+              - paragraph [ref=f133e130]: Packages sold
+            - link [ref=f133e132] [cursor=pointer]:
+              - /url: /sales/paid-plans
+              - paragraph [ref=f133e133]: Memberships sold
+    - generic [ref=f133e139]:
+      - generic [ref=f133e141]:
+        - generic [ref=f133e142]:
+          - paragraph [ref=f133e144]: Daily sales
+          - paragraph [ref=f133e145]: View, filter and export the transactions and cash movement for the day.
+        - generic [ref=f133e147]:
+          - button "Export" [ref=f133e150] [cursor=pointer]
+          - button "Add new" [ref=f133e155] [cursor=pointer]
+      - generic [ref=f133e159]:
+        - generic [ref=f133e163]:
+          - group [ref=f133e164]:
+            - button "Previous day" [ref=f133e165] [cursor=pointer]
+            - button "Today" [ref=f133e170] [cursor=pointer]
+            - button "Sunday, 4 Oct 2026" [ref=f133e174] [cursor=pointer]
+            - button "Next day" [disabled]
+          - paragraph [ref=f133e178]: Button group
+        - generic [ref=f133e179]:
+          - region [ref=f133e181]:
+            - paragraph [ref=f133e186]: Transaction summary
+            - table [ref=f133e189]:
+              - rowgroup [ref=f133e195]:
+                - row [ref=f133e196]:
+                  - columnheader "Item type" [ref=f133e197]
+                  - columnheader "Sales qty" [ref=f133e201]
+                  - columnheader "Refund qty" [ref=f133e205]
+                  - columnheader "Gross total" [ref=f133e209]
+              - rowgroup [ref=f133e213]:
+                - row [ref=f133e214]:
+                  - cell "Services" [ref=f133e215]
+                  - cell "2" [ref=f133e218]
+                  - cell "0" [ref=f133e221]
+                  - cell "KWD 190.000" [ref=f133e224]
+                - row [ref=f133e227]:
+                  - cell "Service add-ons" [ref=f133e228]
+                  - cell "0" [ref=f133e231]
+                  - cell "0" [ref=f133e234]
+                  - cell "KWD 0.000" [ref=f133e237]
+                - row [ref=f133e240]:
+                  - cell "Products" [ref=f133e241]
+                  - cell "0" [ref=f133e244]
+                  - cell "0" [ref=f133e247]
+                  - cell "KWD 0.000" [ref=f133e250]
+                - row [ref=f133e253]:
+                  - cell "Shipping" [ref=f133e254]
+                  - cell "0" [ref=f133e257]
+                  - cell "0" [ref=f133e260]
+                  - cell "KWD 0.000" [ref=f133e263]
+                - row [ref=f133e266]:
+                  - cell "Gift cards" [ref=f133e267]
+                  - cell "0" [ref=f133e270]
+                  - cell "0" [ref=f133e273]
+                  - cell "KWD 0.000" [ref=f133e276]
+                - row [ref=f133e279]:
+                  - cell "Packages" [ref=f133e280]
+                  - cell "0" [ref=f133e283]
+                  - cell "0" [ref=f133e286]
+                  - cell "KWD 0.000" [ref=f133e289]
+                - row [ref=f133e292]:
+                  - cell "Memberships" [ref=f133e293]
+                  - cell "0" [ref=f133e296]
+                  - cell "0" [ref=f133e299]
+                  - cell "KWD 0.000" [ref=f133e302]
+                - row [ref=f133e305]:
+                  - cell "Late cancellation fees" [ref=f133e306]
+                  - cell "0" [ref=f133e309]
+                  - cell "0" [ref=f133e312]
+                  - cell "KWD 0.000" [ref=f133e315]
+                - row [ref=f133e318]:
+                  - cell "No-show fees" [ref=f133e319]
+                  - cell "0" [ref=f133e322]
+                  - cell "0" [ref=f133e325]
+                  - cell "KWD 0.000" [ref=f133e328]
+                - row [ref=f133e331]:
+                  - cell "Refund amount" [ref=f133e332]
+                  - cell "0" [ref=f133e335]
+                  - cell "0" [ref=f133e338]
+                  - cell "KWD 0.000" [ref=f133e341]
+                - row [ref=f133e344]:
+                  - cell "Total Sales" [ref=f133e345]
+                  - cell "2" [ref=f133e348]
+                  - cell "0" [ref=f133e351]
+                  - cell "KWD 190.000" [ref=f133e354]
+          - region [ref=f133e358]:
+            - paragraph [ref=f133e363]: Cash movement summary
+            - table [ref=f133e366]:
+              - rowgroup [ref=f133e371]:
+                - row [ref=f133e372]:
+                  - columnheader "Payment type" [ref=f133e373]
+                  - columnheader "Payments collected" [ref=f133e377]
+                  - columnheader "Refunds paid" [ref=f133e381]
+              - rowgroup [ref=f133e385]:
+                - row [ref=f133e386]:
+                  - cell "Cash" [ref=f133e387]
+                  - cell "KWD 190.000" [ref=f133e390]
+                  - cell "KWD 0.000" [ref=f133e393]
+                - row [ref=f133e396]:
+                  - cell "Other" [ref=f133e397]
+                  - cell "KWD 0.000" [ref=f133e400]
+                  - cell "KWD 0.000" [ref=f133e403]
+                - row [ref=f133e406]:
+                  - cell "Gift card redemptions" [ref=f133e407]
+                  - cell "KWD 0.000" [ref=f133e410]
+                  - cell "KWD 0.000" [ref=f133e413]
+                - row [ref=f133e416]:
+                  - cell "Payments collected" [ref=f133e417]
+                  - cell "KWD 190.000" [ref=f133e420]
+                  - cell "KWD 0.000" [ref=f133e423]
+                - row [ref=f133e426]:
+                  - cell "Of which tips" [ref=f133e427]
+                  - cell "KWD 0.000" [ref=f133e430]
+                  - cell "KWD 0.000" [ref=f133e433]

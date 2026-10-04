@@ -1,0 +1,83 @@
+- generic [ref=f8e12]:
+  - generic [ref=f8e13]:
+    - link "Fresha" [ref=f8e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f8e16]:
+      - button [ref=f8e18] [cursor=pointer]:
+        - paragraph [ref=f8e20]: Continue setup
+      - button "Search" [ref=f8e22] [cursor=pointer]
+      - button "Performance insights" [ref=f8e24] [cursor=pointer]
+      - button "Notifications" [ref=f8e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f8e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f8e31] [cursor=pointer]:
+        - generic [ref=f8e32]: FA
+  - generic [ref=f8e34]:
+    - generic [ref=f8e35]:
+      - generic [ref=f8e38]:
+        - generic [ref=f8e39]:
+          - link [ref=f8e42] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f8e46] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f8e50] [cursor=pointer]
+          - button [ref=f8e54] [cursor=pointer]
+          - button [ref=f8e58] [cursor=pointer]
+          - button [ref=f8e62] [cursor=pointer]
+          - button [ref=f8e66] [cursor=pointer]
+          - button [ref=f8e70] [cursor=pointer]
+          - link [ref=f8e74] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f8e78] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f8e82] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f8e86] [cursor=pointer]
+      - generic [ref=f8e89]:
+        - button "Collapse Navigation Menu" [ref=f8e91] [cursor=pointer]
+        - generic [ref=f8e97]:
+          - generic [ref=f8e98]:
+            - paragraph [ref=f8e99]: Sales
+            - link [ref=f8e101] [cursor=pointer]:
+              - /url: /sales/daily-sales
+              - paragraph [ref=f8e102]: Daily sales summary
+            - link [ref=f8e104] [cursor=pointer]:
+              - /url: /sales/register
+              - paragraph [ref=f8e105]: Register
+            - link [ref=f8e107] [cursor=pointer]:
+              - /url: /sales/appointments-list
+              - paragraph [ref=f8e108]: Appointments
+            - link [ref=f8e110] [cursor=pointer]:
+              - /url: /sales/sales-list
+              - paragraph [ref=f8e111]: Sales
+            - link [ref=f8e113] [cursor=pointer]:
+              - /url: /sales/payment-transactions
+              - paragraph [ref=f8e114]: Payments
+          - separator [ref=f8e116]
+          - generic [ref=f8e117]:
+            - paragraph [ref=f8e118]: Sold items
+            - link [ref=f8e120] [cursor=pointer]:
+              - /url: /sales/gift-cards
+              - paragraph [ref=f8e121]: Gift cards sold
+            - link [ref=f8e123] [cursor=pointer]:
+              - /url: /sales/packages-sold
+              - paragraph [ref=f8e124]: Packages sold
+            - link [ref=f8e126] [cursor=pointer]:
+              - /url: /sales/paid-plans
+              - paragraph [ref=f8e127]: Memberships sold
+    - generic [ref=f8e133]:
+      - generic [ref=f8e136]:
+        - paragraph [ref=f8e138]: Appointments
+        - paragraph [ref=f8e139]: View, filter and export appointments booked by your clients.
+      - generic [ref=f8e141]:
+        - generic [ref=f8e144]:
+          - generic [ref=f8e146]:
+            - generic [ref=f8e147]:
+              - generic [ref=f8e148]: Search
+              - textbox "Search" [ref=f8e153]:
+                - /placeholder: Search by Reference or Client
+            - button "Month to date" [ref=f8e154] [cursor=pointer]
+            - button "Filters" [ref=f8e159] [cursor=pointer]
+          - button "Scheduled Date (newest first)" [ref=f8e168] [cursor=pointer]
+        - img "spinner" [ref=f8e175]

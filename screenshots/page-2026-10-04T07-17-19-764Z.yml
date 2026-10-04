@@ -1,0 +1,62 @@
+- generic [ref=f251e12]:
+  - generic [ref=f251e13]:
+    - link "Fresha" [ref=f251e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f251e16]:
+      - button [ref=f251e18] [cursor=pointer]:
+        - paragraph [ref=f251e20]: Continue setup
+      - button "Search" [ref=f251e22] [cursor=pointer]
+      - button "Performance insights" [ref=f251e24] [cursor=pointer]
+      - button "Notifications" [ref=f251e27] [cursor=pointer]:
+        - generic [ref=f251e28]: "4"
+      - link "Fresha Connect" [ref=f251e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f251e34] [cursor=pointer]:
+        - generic [ref=f251e35]: FA
+  - generic [ref=f251e37]:
+    - generic [ref=f251e38]:
+      - generic [ref=f251e41]:
+        - generic [ref=f251e42]:
+          - link [ref=f251e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f251e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f251e53] [cursor=pointer]
+          - button [ref=f251e57] [cursor=pointer]
+          - button [ref=f251e61] [cursor=pointer]
+          - button [ref=f251e65] [cursor=pointer]
+          - button [ref=f251e69] [cursor=pointer]
+          - button [ref=f251e73] [cursor=pointer]
+          - link [ref=f251e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f251e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f251e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f251e89] [cursor=pointer]
+      - generic [ref=f251e92]:
+        - button "Collapse Navigation Menu" [ref=f251e94] [cursor=pointer]
+        - generic [ref=f251e100]:
+          - generic [ref=f251e101]:
+            - paragraph [ref=f251e102]: Online bookings
+            - link [ref=f251e104] [cursor=pointer]:
+              - /url: /fresha/online-booking/locations
+              - paragraph [ref=f251e105]: Marketplace profile
+            - link [ref=f251e107] [cursor=pointer]:
+              - /url: /fresha/online-booking/google-reserve
+              - paragraph [ref=f251e108]: Reserve with Google
+            - link [ref=f251e110] [cursor=pointer]:
+              - /url: /fresha/online-booking/facebook-setup
+              - paragraph [ref=f251e111]: Facebook and Instagram bookings
+            - link [ref=f251e113] [cursor=pointer]:
+              - /url: /fresha/online-booking/buttons-and-links
+              - paragraph [ref=f251e114]: Link builder
+          - separator [ref=f251e116]
+          - generic [ref=f251e117]:
+            - paragraph [ref=f251e118]: Your websites
+            - link [active] [ref=f251e120] [cursor=pointer]:
+              - /url: /fresha/online-booking/smart-website
+              - paragraph [ref=f251e121]: Smart Website
+    - status "Loading your website" [ref=f251e207]:
+      - img "spinner" [ref=f251e209]

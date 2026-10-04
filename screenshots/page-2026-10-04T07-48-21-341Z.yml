@@ -1,0 +1,91 @@
+- generic [ref=f142e12]:
+  - generic [ref=f142e13]:
+    - link "Fresha" [ref=f142e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f142e16]:
+      - button [ref=f142e18] [cursor=pointer]:
+        - paragraph [ref=f142e20]: Continue setup
+      - button "Search" [ref=f142e22] [cursor=pointer]
+      - button "Performance insights" [ref=f142e24] [cursor=pointer]
+      - button "Notifications" [ref=f142e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f142e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f142e31] [cursor=pointer]:
+        - generic [ref=f142e32]: FA
+  - generic [ref=f142e34]:
+    - generic [ref=f142e38]:
+      - generic [ref=f142e39]:
+        - link [ref=f142e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f142e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f142e50] [cursor=pointer]
+        - button [ref=f142e54] [cursor=pointer]
+        - button [ref=f142e58] [cursor=pointer]
+        - button [ref=f142e62] [cursor=pointer]
+        - button [ref=f142e66] [cursor=pointer]
+        - button [ref=f142e70] [cursor=pointer]
+        - link [ref=f142e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f142e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f142e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f142e86] [cursor=pointer]
+    - generic [ref=f142e94]:
+      - generic [ref=f142e96]:
+        - button "Back" [ref=f142e97] [cursor=pointer]
+        - navigation [ref=f142e102]:
+          - list [ref=f142e103]:
+            - listitem [ref=f142e104]:
+              - link "Workspace settings •" [ref=f142e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f142e106]:
+              - link "Payments" [ref=f142e107] [cursor=pointer]:
+                - /url: /setup/payments
+      - generic [ref=f142e112]:
+        - paragraph [ref=f142e114]: Payments
+        - list [ref=f142e115]:
+          - listitem [ref=f142e116]:
+            - list [ref=f142e117]:
+              - listitem [ref=f142e118] [cursor=pointer]:
+                - link [ref=f142e119]:
+                  - /url: /setup/payments/payment-policy
+                - generic [ref=f142e120]: Payment policy
+              - listitem [ref=f142e122] [cursor=pointer]:
+                - link [ref=f142e123]:
+                  - /url: /setup/payments/payment-methods
+                - generic [ref=f142e124]: Payment methods
+        - separator [ref=f142e126]
+        - list [ref=f142e127]:
+          - listitem [ref=f142e128]:
+            - list [ref=f142e129]:
+              - listitem [ref=f142e130] [cursor=pointer]:
+                - button [ref=f142e131]
+                - generic [ref=f142e132]: Sales settings
+      - generic [ref=f142e135]:
+        - generic [ref=f142e137]:
+          - paragraph [ref=f142e139]: Payment methods
+          - paragraph [ref=f142e140]: Manage payment methods shown to clients when paying online or at point of sale
+        - generic [ref=f142e141]:
+          - generic [ref=f142e142]:
+            - generic [ref=f142e145]:
+              - generic [ref=f142e146]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img "payments"
+                - paragraph [ref=f142e147]: Payments
+              - paragraph [ref=f142e148]: Low cost, safe and simple payments
+              - generic [ref=f142e149]:
+                - paragraph [ref=f142e151]: Get paid by clients online and securely save card details on file.
+                - paragraph [ref=f142e153]: Protect against no shows and cancellations
+                - paragraph [ref=f142e155]: Receive funds directly to your connected bank account
+            - generic [ref=f142e156]:
+              - link "Start now" [ref=f142e157] [cursor=pointer]:
+                - /url: /fresha/card-processing/payment-processing
+              - link "Learn more" [ref=f142e161] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/payments
+          - img "payments" [ref=f142e165]

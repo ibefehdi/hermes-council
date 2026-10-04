@@ -1,0 +1,544 @@
+- generic [ref=f8e12]:
+  - generic [ref=f8e13]:
+    - link "Fresha" [ref=f8e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f8e16]:
+      - button [ref=f8e18] [cursor=pointer]:
+        - paragraph [ref=f8e20]: Continue setup
+      - button "Search" [ref=f8e22] [cursor=pointer]
+      - button "Performance insights" [ref=f8e24] [cursor=pointer]
+      - button "Notifications" [ref=f8e27] [cursor=pointer]:
+        - generic [ref=f8e28]: "4"
+      - link "Fresha Connect" [ref=f8e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f8e34] [cursor=pointer]:
+        - generic [ref=f8e35]: FA
+  - generic [ref=f8e37]:
+    - generic [ref=f8e41]:
+      - generic [ref=f8e42]:
+        - link [ref=f8e45] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f8e49] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f8e53] [cursor=pointer]
+        - button [ref=f8e57] [cursor=pointer]
+        - button [ref=f8e61] [cursor=pointer]
+        - button [ref=f8e65] [cursor=pointer]
+        - button [ref=f8e69] [cursor=pointer]
+        - button [ref=f8e73] [cursor=pointer]
+        - link [ref=f8e77] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f8e81] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f8e85] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f8e89] [cursor=pointer]
+    - generic [ref=f8e94]:
+      - list [ref=f8e99]:
+        - listitem [ref=f8e100]:
+          - paragraph [ref=f8e103]: Reports
+          - list [ref=f8e104]:
+            - listitem [ref=f8e105] [cursor=pointer]:
+              - button [ref=f8e106]
+              - generic [ref=f8e107]: All reports
+              - generic: "59"
+            - listitem [ref=f8e109] [cursor=pointer]:
+              - button [ref=f8e110]
+              - generic [ref=f8e111]: Favourites
+              - generic: "0"
+            - listitem [ref=f8e113] [cursor=pointer]:
+              - button [ref=f8e114]
+              - generic [ref=f8e115]: Dashboards
+              - generic: "3"
+            - listitem [ref=f8e117] [cursor=pointer]:
+              - button [ref=f8e118]
+              - generic [ref=f8e119]: Standard
+              - generic: "49"
+            - listitem [ref=f8e121] [cursor=pointer]:
+              - button [ref=f8e122]
+              - generic [ref=f8e123]: Premium
+              - generic: "10"
+            - listitem [ref=f8e125] [cursor=pointer]:
+              - button [ref=f8e126]
+              - generic [ref=f8e127]: Custom
+              - generic: "0"
+          - separator [ref=f8e130]
+        - listitem [ref=f8e131]:
+          - generic [ref=f8e132]: Folders
+          - list [ref=f8e134]:
+            - listitem [ref=f8e135] [cursor=pointer]:
+              - button [ref=f8e136]
+              - generic [ref=f8e137]: Add folder
+          - separator [ref=f8e140]
+        - listitem [ref=f8e141]:
+          - list [ref=f8e142]:
+            - listitem [ref=f8e143] [cursor=pointer]:
+              - button [ref=f8e144]
+              - generic:
+                - generic:
+                  - img "Data connector addon"
+              - generic [ref=f8e145]: Data connector
+      - generic [ref=f8e148]:
+        - generic [ref=f8e149]:
+          - generic [ref=f8e150]:
+            - generic [ref=f8e151]:
+              - paragraph [ref=f8e152]: Reporting and analytics
+              - generic [ref=f8e153]: "59"
+            - paragraph [ref=f8e154]:
+              - text: Access all of your Fresha reports.
+              - link "Learn more" [ref=f8e155] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/reports
+          - button "Add" [ref=f8e158] [cursor=pointer]
+        - generic [ref=f8e162]:
+          - generic [ref=f8e165]:
+            - generic [ref=f8e167]:
+              - generic [ref=f8e168]: Search
+              - textbox "Search" [ref=f8e173]:
+                - /placeholder: Search by report name or description
+            - generic [ref=f8e176]:
+              - button "Created by" [ref=f8e178] [cursor=pointer]
+              - button "Category" [ref=f8e184] [cursor=pointer]
+          - tablist [ref=f8e193]:
+            - tab "All reports" [selected] [ref=f8e194] [cursor=pointer]
+            - tab "Sales" [ref=f8e196] [cursor=pointer]
+            - tab "Finance" [ref=f8e198] [cursor=pointer]
+            - tab "Appointments" [ref=f8e200] [cursor=pointer]
+            - tab "Team" [ref=f8e202] [cursor=pointer]
+            - tab "Clients" [ref=f8e204] [cursor=pointer]
+            - tab "Inventory" [ref=f8e206] [cursor=pointer]
+            - tab "Other" [ref=f8e208] [cursor=pointer]
+          - generic [ref=f8e210]:
+            - generic [ref=f8e211] [cursor=pointer]:
+              - button [ref=f8e212]
+              - generic [ref=f8e213]:
+                - generic [ref=f8e222]:
+                  - heading "Performance dashboard" [level=3] [ref=f8e223]
+                  - heading "Dashboard of your business performance." [level=4] [ref=f8e224]
+                - button "Add to favorites" [ref=f8e227]
+            - generic [ref=f8e232] [cursor=pointer]:
+              - button [ref=f8e233]
+              - generic [ref=f8e234]:
+                - generic [ref=f8e243]:
+                  - heading "Online presence dashboard" [level=3] [ref=f8e244]
+                  - heading "Online sales and online client performance" [level=4] [ref=f8e245]
+                - button "Add to favorites" [ref=f8e248]
+            - generic [ref=f8e253] [cursor=pointer]:
+              - button [ref=f8e254]
+              - generic [ref=f8e255]:
+                - generic [ref=f8e264]:
+                  - heading "Loyalty dashboard" [level=3] [ref=f8e265]
+                  - heading "Dashboard of your loyalty program performance." [level=4] [ref=f8e266]
+                - button "Add to favorites" [ref=f8e269]
+            - generic [ref=f8e274] [cursor=pointer]:
+              - button [ref=f8e275]
+              - generic [ref=f8e276]:
+                - generic [ref=f8e285]:
+                  - heading "Performance summary" [level=3] [ref=f8e286]
+                  - heading "Overview of business performance by team or location" [level=4] [ref=f8e287]
+                - generic [ref=f8e288]:
+                  - generic [ref=f8e289]: Premium
+                  - button "Add to favorites" [ref=f8e293]
+            - generic [ref=f8e298] [cursor=pointer]:
+              - button [ref=f8e299]
+              - generic [ref=f8e300]:
+                - generic [ref=f8e309]:
+                  - heading "Performance over time" [level=3] [ref=f8e310]
+                  - heading "View of key business metrics by Location or Team Member over time" [level=4] [ref=f8e311]
+                - generic [ref=f8e312]:
+                  - generic [ref=f8e313]: Premium
+                  - button "Add to favorites" [ref=f8e317]
+            - generic [ref=f8e322] [cursor=pointer]:
+              - button [ref=f8e323]
+              - generic [ref=f8e324]:
+                - generic [ref=f8e333]:
+                  - heading "Sales summary" [level=3] [ref=f8e334]
+                  - heading "Sales quantities and value, excluding tips and gift card sales." [level=4] [ref=f8e335]
+                - button "Add to favorites" [ref=f8e338]
+            - generic [ref=f8e343] [cursor=pointer]:
+              - button [ref=f8e344]
+              - generic [ref=f8e345]:
+                - generic [ref=f8e354]:
+                  - heading "Sales by time period" [level=3] [ref=f8e355]
+                  - heading "Detailed sales data based on selected time periods." [level=4] [ref=f8e356]
+                - generic [ref=f8e357]:
+                  - generic [ref=f8e358]: Premium
+                  - button "Add to favorites" [ref=f8e362]
+            - generic [ref=f8e367] [cursor=pointer]:
+              - button [ref=f8e368]
+              - generic [ref=f8e369]:
+                - generic [ref=f8e378]:
+                  - heading "Sales list" [level=3] [ref=f8e379]
+                  - heading "Complete listing of all sales transactions." [level=4] [ref=f8e380]
+                - button "Add to favorites" [ref=f8e383]
+            - generic [ref=f8e388] [cursor=pointer]:
+              - button [ref=f8e389]
+              - generic [ref=f8e390]:
+                - generic [ref=f8e399]:
+                  - heading "Sales log detail" [level=3] [ref=f8e400]
+                  - heading "In-depth view into each sale transaction." [level=4] [ref=f8e401]
+                - button "Add to favorites" [ref=f8e404]
+            - generic [ref=f8e409] [cursor=pointer]:
+              - button [ref=f8e410]
+              - generic [ref=f8e411]:
+                - generic [ref=f8e420]:
+                  - heading "Gift card by time period" [level=3] [ref=f8e421]
+                  - heading "Gift card sales and usage data based on selected time periods." [level=4] [ref=f8e422]
+                - generic [ref=f8e423]:
+                  - generic [ref=f8e424]: Premium
+                  - button "Add to favorites" [ref=f8e428]
+            - generic [ref=f8e433] [cursor=pointer]:
+              - button [ref=f8e434]
+              - generic [ref=f8e435]:
+                - generic [ref=f8e444]:
+                  - heading "Gift card list" [level=3] [ref=f8e445]
+                  - heading "Full list of issued and outstanding gift cards." [level=4] [ref=f8e446]
+                - button "Add to favorites" [ref=f8e449]
+            - generic [ref=f8e454] [cursor=pointer]:
+              - button [ref=f8e455]
+              - generic [ref=f8e456]:
+                - generic [ref=f8e465]:
+                  - heading "Memberships list" [level=3] [ref=f8e466]
+                  - heading "Operational details of your memberships including benefits and financials." [level=4] [ref=f8e467]
+                - button "Add to favorites" [ref=f8e470]
+            - generic [ref=f8e475] [cursor=pointer]:
+              - button [ref=f8e476]
+              - generic [ref=f8e477]:
+                - generic [ref=f8e486]:
+                  - heading "Memberships summary" [level=3] [ref=f8e487]
+                  - heading "Membership performance including benefits and financials." [level=4] [ref=f8e488]
+                - button "Add to favorites" [ref=f8e491]
+            - generic [ref=f8e496] [cursor=pointer]:
+              - button [ref=f8e497]
+              - generic [ref=f8e498]:
+                - generic [ref=f8e507]:
+                  - heading "Memberships benefits consumption" [level=3] [ref=f8e508]
+                  - heading "Benefit-level membership redemptions and recognized revenue." [level=4] [ref=f8e509]
+                - generic [ref=f8e510]:
+                  - generic [ref=f8e511]: Premium
+                  - button "Add to favorites" [ref=f8e515]
+            - generic [ref=f8e520] [cursor=pointer]:
+              - button [ref=f8e521]
+              - generic [ref=f8e522]:
+                - generic [ref=f8e531]:
+                  - heading "Packages list" [level=3] [ref=f8e532]
+                  - heading "Operational details of your packages including benefits and financials." [level=4] [ref=f8e533]
+                - button "Add to favorites" [ref=f8e536]
+            - generic [ref=f8e541] [cursor=pointer]:
+              - button [ref=f8e542]
+              - generic [ref=f8e543]:
+                - generic [ref=f8e552]:
+                  - heading "Packages summary" [level=3] [ref=f8e553]
+                  - heading "Aggregated view of packages performance." [level=4] [ref=f8e554]
+                - button "Add to favorites" [ref=f8e557]
+            - generic [ref=f8e562] [cursor=pointer]:
+              - button [ref=f8e563]
+              - generic [ref=f8e564]:
+                - generic [ref=f8e573]:
+                  - heading "Packages benefits consumption" [level=3] [ref=f8e574]
+                  - heading "Benefit-level package redemptions and recognized revenue, for packages accounting. Unlimited packages are recognized by duration rather than per benefit." [level=4] [ref=f8e575]
+                - generic [ref=f8e576]:
+                  - generic [ref=f8e577]: Premium
+                  - button "Add to favorites" [ref=f8e581]
+            - generic [ref=f8e586] [cursor=pointer]:
+              - button [ref=f8e587]
+              - generic [ref=f8e588]:
+                - generic [ref=f8e597]:
+                  - heading "Cash register summary" [level=3] [ref=f8e598]
+                  - heading "Overview of register activities. Excludes online purchases." [level=4] [ref=f8e599]
+                - button "Add to favorites" [ref=f8e602]
+            - generic [ref=f8e607] [cursor=pointer]:
+              - button [ref=f8e608]
+              - generic [ref=f8e609]:
+                - generic [ref=f8e618]:
+                  - heading "Discount summary" [level=3] [ref=f8e619]
+                  - heading "Overview of discounts granted and their impact on sales." [level=4] [ref=f8e620]
+                - button "Add to favorites" [ref=f8e623]
+            - generic [ref=f8e628] [cursor=pointer]:
+              - button [ref=f8e629]
+              - generic [ref=f8e630]:
+                - generic [ref=f8e639]:
+                  - heading "Taxes summary" [level=3] [ref=f8e640]
+                  - heading "Summary of all tax-related transactions." [level=4] [ref=f8e641]
+                - button "Add to favorites" [ref=f8e644]
+            - generic [ref=f8e649] [cursor=pointer]:
+              - button [ref=f8e650]
+              - generic [ref=f8e651]:
+                - generic [ref=f8e660]:
+                  - heading "Finance summary" [level=3] [ref=f8e661]
+                  - heading "High-level summary of sales, payments and liabilities" [level=4] [ref=f8e662]
+                - button "Add to favorites" [ref=f8e665]
+            - generic [ref=f8e670] [cursor=pointer]:
+              - button [ref=f8e671]
+              - generic [ref=f8e672]:
+                - generic [ref=f8e681]:
+                  - heading "Payments summary" [level=3] [ref=f8e682]
+                  - heading "Payments split by payment methods." [level=4] [ref=f8e683]
+                - button "Add to favorites" [ref=f8e686]
+            - generic [ref=f8e691] [cursor=pointer]:
+              - button [ref=f8e692]
+              - generic [ref=f8e693]:
+                - generic [ref=f8e702]:
+                  - heading "Payment transactions" [level=3] [ref=f8e703]
+                  - heading "Detailed view of all payment transactions." [level=4] [ref=f8e704]
+                - button "Add to favorites" [ref=f8e707]
+            - generic [ref=f8e712] [cursor=pointer]:
+              - button [ref=f8e713]
+              - generic [ref=f8e714]:
+                - generic [ref=f8e723]:
+                  - heading "Cash flow summary" [level=3] [ref=f8e724]
+                  - heading "Overview of funds inflow and outflows." [level=4] [ref=f8e725]
+                - button "Add to favorites" [ref=f8e728]
+            - generic [ref=f8e733] [cursor=pointer]:
+              - button [ref=f8e734]
+              - generic [ref=f8e735]:
+                - generic [ref=f8e744]:
+                  - heading "Cash flow statement" [level=3] [ref=f8e745]
+                  - heading "Detailed record of cash flow over a selected period." [level=4] [ref=f8e746]
+                - button "Add to favorites" [ref=f8e749]
+            - generic [ref=f8e754] [cursor=pointer]:
+              - button [ref=f8e755]
+              - generic [ref=f8e756]:
+                - generic [ref=f8e765]:
+                  - heading "Service charges" [level=3] [ref=f8e766]
+                  - heading "Breakdown of service charge revenue." [level=4] [ref=f8e767]
+                - button "Add to favorites" [ref=f8e770]
+            - generic [ref=f8e775] [cursor=pointer]:
+              - button [ref=f8e776]
+              - generic [ref=f8e777]:
+                - generic [ref=f8e786]:
+                  - heading "Liability summary" [level=3] [ref=f8e787]
+                  - heading "Overview of company liabilities by type. This report excludes unpaid and voided gift cards." [level=4] [ref=f8e788]
+                - button "Add to favorites" [ref=f8e791]
+            - generic [ref=f8e796] [cursor=pointer]:
+              - button [ref=f8e797]
+              - generic [ref=f8e798]:
+                - generic [ref=f8e807]:
+                  - heading "Liability activity" [level=3] [ref=f8e808]
+                  - heading "Detailed view of liability-related transactions." [level=4] [ref=f8e809]
+                - button "Add to favorites" [ref=f8e812]
+            - generic [ref=f8e817] [cursor=pointer]:
+              - button [ref=f8e818]
+              - generic [ref=f8e819]:
+                - generic [ref=f8e828]:
+                  - heading "Prepayments by time period" [level=3] [ref=f8e829]
+                  - heading "Analysis of prepayments over a selected time period." [level=4] [ref=f8e830]
+                - generic [ref=f8e831]:
+                  - generic [ref=f8e832]: Premium
+                  - button "Add to favorites" [ref=f8e836]
+            - generic [ref=f8e841] [cursor=pointer]:
+              - button [ref=f8e842]
+              - generic [ref=f8e843]:
+                - generic [ref=f8e852]:
+                  - heading "Prepayment list" [level=3] [ref=f8e853]
+                  - heading "Complete record of all prepayments." [level=4] [ref=f8e854]
+                - button "Add to favorites" [ref=f8e857]
+            - generic [ref=f8e862] [cursor=pointer]:
+              - button [ref=f8e863]
+              - generic [ref=f8e864]:
+                - generic [ref=f8e873]:
+                  - heading "Taxes list" [level=3] [ref=f8e874]
+                  - heading "Complete listing of all taxes transactions." [level=4] [ref=f8e875]
+                - button "Add to favorites" [ref=f8e878]
+            - generic [ref=f8e883] [cursor=pointer]:
+              - button [ref=f8e884]
+              - generic [ref=f8e885]:
+                - generic [ref=f8e894]:
+                  - heading "Appointments summary" [level=3] [ref=f8e895]
+                  - heading "General overview of appointment trends and patterns, including cancellations and no-shows." [level=4] [ref=f8e896]
+                - button "Add to favorites" [ref=f8e899]
+            - generic [ref=f8e904] [cursor=pointer]:
+              - button [ref=f8e905]
+              - generic [ref=f8e906]:
+                - generic [ref=f8e915]:
+                  - heading "Appointments list" [level=3] [ref=f8e916]
+                  - heading "Full list of scheduled appointments." [level=4] [ref=f8e917]
+                - button "Add to favorites" [ref=f8e920]
+            - generic [ref=f8e925] [cursor=pointer]:
+              - button [ref=f8e926]
+              - generic [ref=f8e927]:
+                - generic [ref=f8e936]:
+                  - heading "Appointments cancellations & no-show summary" [level=3] [ref=f8e937]
+                  - heading "Insight into appointment cancellations and no-shows." [level=4] [ref=f8e938]
+                - button "Add to favorites" [ref=f8e941]
+            - generic [ref=f8e946] [cursor=pointer]:
+              - button [ref=f8e947]
+              - generic [ref=f8e948]:
+                - generic [ref=f8e957]:
+                  - heading "Waitlist detail" [level=3] [ref=f8e958]
+                  - heading "Detailed view of waitlist entries" [level=4] [ref=f8e959]
+                - button "Add to favorites" [ref=f8e962]
+            - generic [ref=f8e967] [cursor=pointer]:
+              - button [ref=f8e968]
+              - generic [ref=f8e969]:
+                - generic [ref=f8e978]:
+                  - heading "Waitlist summary" [level=3] [ref=f8e979]
+                  - heading "Overview of waitlist trends and patterns, including appointments booked and expired waitlist entries" [level=4] [ref=f8e980]
+                - generic [ref=f8e981]:
+                  - generic [ref=f8e982]: Premium
+                  - button "Add to favorites" [ref=f8e986]
+            - generic [ref=f8e991] [cursor=pointer]:
+              - button [ref=f8e992]
+              - generic [ref=f8e993]:
+                - generic [ref=f8e1002]:
+                  - heading "Working hours activity" [level=3] [ref=f8e1003]
+                  - heading "Detailed view of team members worked hours, shifts, and timesheets" [level=4] [ref=f8e1004]
+                - button "Add to favorites" [ref=f8e1007]
+            - generic [ref=f8e1012] [cursor=pointer]:
+              - button [ref=f8e1013]
+              - generic [ref=f8e1014]:
+                - generic [ref=f8e1023]:
+                  - heading "Break activity" [level=3] [ref=f8e1024]
+                  - heading "Detailed view of team members' breaks" [level=4] [ref=f8e1025]
+                - button "Add to favorites" [ref=f8e1028]
+            - generic [ref=f8e1033] [cursor=pointer]:
+              - button [ref=f8e1034]
+              - generic [ref=f8e1035]:
+                - generic [ref=f8e1044]:
+                  - heading "Attendance summary" [level=3] [ref=f8e1045]
+                  - heading "Overview of team members' punctuality and attendance for their shifts" [level=4] [ref=f8e1046]
+                - button "Add to favorites" [ref=f8e1049]
+            - generic [ref=f8e1054] [cursor=pointer]:
+              - button [ref=f8e1055]
+              - generic [ref=f8e1056]:
+                - generic [ref=f8e1065]:
+                  - heading "Wages detail" [level=3] [ref=f8e1066]
+                  - heading "Detailed view of wages earned by team members across locations" [level=4] [ref=f8e1067]
+                - button "Add to favorites" [ref=f8e1070]
+            - generic [ref=f8e1075] [cursor=pointer]:
+              - button [ref=f8e1076]
+              - generic [ref=f8e1077]:
+                - generic [ref=f8e1086]:
+                  - heading "Wages summary" [level=3] [ref=f8e1087]
+                  - heading "Overview of wages earned by team members" [level=4] [ref=f8e1088]
+                - button "Add to favorites" [ref=f8e1091]
+            - generic [ref=f8e1096] [cursor=pointer]:
+              - button [ref=f8e1097]
+              - generic [ref=f8e1098]:
+                - generic [ref=f8e1107]:
+                  - heading "Fee deduction activity" [level=3] [ref=f8e1108]
+                  - heading "Complete list of fees applied to team member earnings" [level=4] [ref=f8e1109]
+                - button "Add to favorites" [ref=f8e1112]
+            - generic [ref=f8e1117] [cursor=pointer]:
+              - button [ref=f8e1118]
+              - generic [ref=f8e1119]:
+                - generic [ref=f8e1128]:
+                  - heading "Fee deduction summary" [level=3] [ref=f8e1129]
+                  - heading "Overview of fees applied to earnings by team member, locations and sale items" [level=4] [ref=f8e1130]
+                - button "Add to favorites" [ref=f8e1133]
+            - generic [ref=f8e1138] [cursor=pointer]:
+              - button [ref=f8e1139]
+              - generic [ref=f8e1140]:
+                - generic [ref=f8e1149]:
+                  - heading "Pay summary" [level=3] [ref=f8e1150]
+                  - heading "Overview of team member compensation" [level=4] [ref=f8e1151]
+                - button "Add to favorites" [ref=f8e1154]
+            - generic [ref=f8e1159] [cursor=pointer]:
+              - button [ref=f8e1160]
+              - generic [ref=f8e1161]:
+                - generic [ref=f8e1170]:
+                  - heading "Scheduled shifts" [level=3] [ref=f8e1171]
+                  - heading "Detailed view of team members scheduled shifts" [level=4] [ref=f8e1172]
+                - button "Add to favorites" [ref=f8e1175]
+            - generic [ref=f8e1180] [cursor=pointer]:
+              - button [ref=f8e1181]
+              - generic [ref=f8e1182]:
+                - generic [ref=f8e1191]:
+                  - heading "Working hours summary" [level=3] [ref=f8e1192]
+                  - heading "Overview of operational hours and productivity" [level=4] [ref=f8e1193]
+                - button "Add to favorites" [ref=f8e1196]
+            - generic [ref=f8e1201] [cursor=pointer]:
+              - button [ref=f8e1202]
+              - generic [ref=f8e1203]:
+                - generic [ref=f8e1212]:
+                  - heading "Team time off report" [level=3] [ref=f8e1213]
+                  - heading "Detailed view of team time off." [level=4] [ref=f8e1214]
+                - button "Add to favorites" [ref=f8e1217]
+            - generic [ref=f8e1222] [cursor=pointer]:
+              - button [ref=f8e1223]
+              - generic [ref=f8e1224]:
+                - generic [ref=f8e1233]:
+                  - heading "Tips summary" [level=3] [ref=f8e1234]
+                  - heading "Analysis of gratuity income." [level=4] [ref=f8e1235]
+                - button "Add to favorites" [ref=f8e1238]
+            - generic [ref=f8e1243] [cursor=pointer]:
+              - button [ref=f8e1244]
+              - generic [ref=f8e1245]:
+                - generic [ref=f8e1254]:
+                  - heading "Tips detail" [level=3] [ref=f8e1255]
+                  - heading "Comprehensive breakdown of all tips received." [level=4] [ref=f8e1256]
+                - button "Add to favorites" [ref=f8e1259]
+            - generic [ref=f8e1264] [cursor=pointer]:
+              - button [ref=f8e1265]
+              - generic [ref=f8e1266]:
+                - generic [ref=f8e1275]:
+                  - heading "Commission activity" [level=3] [ref=f8e1276]
+                  - heading "Full list of all sales with commissions payable." [level=4] [ref=f8e1277]
+                - button "Add to favorites" [ref=f8e1280]
+            - generic [ref=f8e1285] [cursor=pointer]:
+              - button [ref=f8e1286]
+              - generic [ref=f8e1287]:
+                - generic [ref=f8e1296]:
+                  - heading "Commission summary" [level=3] [ref=f8e1297]
+                  - heading "Overview of commission earned by team members, locations and sale items." [level=4] [ref=f8e1298]
+                - button "Add to favorites" [ref=f8e1301]
+            - generic [ref=f8e1306] [cursor=pointer]:
+              - button [ref=f8e1307]
+              - generic [ref=f8e1308]:
+                - generic [ref=f8e1317]:
+                  - heading "Client summary" [level=3] [ref=f8e1318]
+                  - heading "Overview of new, returning and walk-in clients with appointments in the chosen timeframe" [level=4] [ref=f8e1319]
+                - generic [ref=f8e1320]:
+                  - generic [ref=f8e1321]: Premium
+                  - button "Add to favorites" [ref=f8e1325]
+            - generic [ref=f8e1330] [cursor=pointer]:
+              - button [ref=f8e1331]
+              - generic [ref=f8e1332]:
+                - generic [ref=f8e1341]:
+                  - heading "Client list" [level=3] [ref=f8e1342]
+                  - heading "Comprehensive list of all active clients." [level=4] [ref=f8e1343]
+                - button "Add to favorites" [ref=f8e1346]
+            - generic [ref=f8e1351] [cursor=pointer]:
+              - button [ref=f8e1352]
+              - generic [ref=f8e1353]:
+                - generic [ref=f8e1362]:
+                  - heading "Client insights" [level=3] [ref=f8e1363]
+                  - heading "Deep dive into individual client behaviour and preferences." [level=4] [ref=f8e1364]
+                - generic [ref=f8e1365]:
+                  - generic [ref=f8e1366]: Premium
+                  - button "Add to favorites" [ref=f8e1370]
+            - generic [ref=f8e1375] [cursor=pointer]:
+              - button [ref=f8e1376]
+              - generic [ref=f8e1377]:
+                - generic [ref=f8e1386]:
+                  - heading "Stock on hand" [level=3] [ref=f8e1387]
+                  - heading "Current status and quantity of stock items." [level=4] [ref=f8e1388]
+                - button "Add to favorites" [ref=f8e1391]
+            - generic [ref=f8e1396] [cursor=pointer]:
+              - button [ref=f8e1397]
+              - generic [ref=f8e1398]:
+                - generic [ref=f8e1407]:
+                  - heading "Stock movement summary" [level=3] [ref=f8e1408]
+                  - heading "Summary of stock inflow and outflow." [level=4] [ref=f8e1409]
+                - button "Add to favorites" [ref=f8e1412]
+            - generic [ref=f8e1417] [cursor=pointer]:
+              - button [ref=f8e1418]
+              - generic [ref=f8e1419]:
+                - generic [ref=f8e1428]:
+                  - heading "Stock movement log" [level=3] [ref=f8e1429]
+                  - heading "Detailed record of all stock movements." [level=4] [ref=f8e1430]
+                - button "Add to favorites" [ref=f8e1433]
+            - generic [ref=f8e1438] [cursor=pointer]:
+              - button [ref=f8e1439]
+              - generic [ref=f8e1440]:
+                - generic [ref=f8e1449]:
+                  - heading "Product list" [level=3] [ref=f8e1450]
+                  - heading "Comprehensive list of all products." [level=4] [ref=f8e1451]
+                - button "Add to favorites" [ref=f8e1454]
+            - generic [ref=f8e1459] [cursor=pointer]:
+              - button [ref=f8e1460]
+              - generic [ref=f8e1461]:
+                - generic [ref=f8e1470]:
+                  - heading "Ordered stock" [level=3] [ref=f8e1471]
+                  - heading "Detailed record of all stock orders." [level=4] [ref=f8e1472]
+                - button "Add to favorites" [ref=f8e1475]

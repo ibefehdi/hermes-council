@@ -1,0 +1,327 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "Fresha" [ref=e6] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=e7]:
+        - button [ref=e9] [cursor=pointer]:
+          - paragraph [ref=e11]: Continue setup
+        - button "Search" [ref=e13] [cursor=pointer]
+        - button "Performance insights" [ref=e15] [cursor=pointer]
+        - button "Notifications" [ref=e18] [cursor=pointer]
+        - link "Fresha Connect" [ref=e20] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: FA
+    - generic [ref=e25]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - link [ref=e33] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=e37] [cursor=pointer]:
+            - /url: /calendar?date=2026-10-04&view=day&location_id=3216614&calendar_selected_resources=e-working
+          - button [ref=e41] [cursor=pointer]
+          - button [ref=e45] [cursor=pointer]
+          - button [ref=e49] [cursor=pointer]
+          - button [ref=e53] [cursor=pointer]
+          - button [ref=e57] [cursor=pointer]
+          - button [ref=e61] [cursor=pointer]
+          - link [ref=e65] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=e69] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=e73] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=e77] [cursor=pointer]
+      - generic [ref=e80]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - button "Today" [ref=e84] [cursor=pointer]
+            - group [ref=e88]:
+              - button "Go to previous month" [ref=e89] [cursor=pointer]
+              - button "Mon, Oct 5" [ref=e686] [cursor=pointer]
+              - button "Go to next month" [active] [ref=e98] [cursor=pointer]
+            - paragraph [ref=e103]: Button group
+            - button "Scheduled team" [ref=e104] [cursor=pointer]
+            - link "Visibility Filters" [ref=e111] [cursor=pointer]:
+              - /url: /calendar/drawer/visibility-filters?date=2026-10-05&view=day&location_id=3216614&calendar_selected_resources=e-working
+          - generic [ref=e116]:
+            - link "Calendar Settings" [ref=e119] [cursor=pointer]:
+              - /url: /calendar/drawer/settings?date=2026-10-05&view=day&location_id=3216614&calendar_selected_resources=e-working
+            - link "Waitlist" [ref=e125] [cursor=pointer]:
+              - /url: /calendar/drawer/waitlist?date=2026-10-05&view=day&location_id=3216614&calendar_selected_resources=e-working
+            - group [ref=e130]:
+              - button "Reset calendar to default view" [ref=e132] [cursor=pointer]
+              - button "Day" [ref=e137] [cursor=pointer]
+            - paragraph [ref=e142]: Button group
+            - button "Add" [ref=e143] [cursor=pointer]
+        - generic [ref=e153]:
+          - generic [ref=e155]:
+            - generic [ref=e156]: 00:00
+            - generic [ref=e158]: 01:00
+            - generic [ref=e160]: 02:00
+            - generic [ref=e162]: 03:00
+            - generic [ref=e164]: 04:00
+            - generic [ref=e166]: 05:00
+            - generic [ref=e168]: 06:00
+            - generic [ref=e170]: 07:00
+            - generic [ref=e172]: 08:00
+            - generic [ref=e174]: 09:00
+            - generic [ref=e176]: 10:00
+            - generic [ref=e178]: 11:00
+            - generic [ref=e180]: 12:00
+            - generic [ref=e182]: 13:00
+            - generic [ref=e184]: 14:00
+            - generic [ref=e186]: 15:00
+            - generic [ref=e188]: 16:00
+            - generic [ref=e190]: 17:00
+            - generic [ref=e192]: 18:00
+            - generic [ref=e194]: 19:00
+            - generic [ref=e196]: 20:00
+            - generic [ref=e198]: 21:00
+            - generic [ref=e200]: 22:00
+            - generic [ref=e202]: 23:00
+          - button
+          - button
+          - generic [ref=e206]:
+            - generic [ref=e207]:
+              - button "FA Fahad Asad" [ref=e222] [cursor=pointer]:
+                - generic [ref=e223]:
+                  - generic [ref=e224]: FA
+                  - paragraph [ref=e228]: Fahad Asad
+              - button "FA Fahad Asad" [ref=e233] [cursor=pointer]:
+                - generic [ref=e234]:
+                  - generic [ref=e235]: FA
+                  - paragraph [ref=e239]: Fahad Asad
+              - button "FA Fahad Asad" [ref=e690] [cursor=pointer]:
+                - generic [ref=e691]:
+                  - generic [ref=e692]: FA
+                  - paragraph [ref=e696]: Fahad Asad
+            - generic [ref=e242]:
+              - generic [ref=e698]:
+                - generic [ref=e699] [cursor=pointer]:
+                  - generic [ref=e700]:
+                    - generic [ref=e701]: 09:00 - 09:45
+                    - strong [ref=e702]: John Doe
+                  - generic [ref=e703]: Haircut
+                - generic [ref=e704] [cursor=pointer]:
+                  - generic [ref=e705]:
+                    - generic [ref=e706]: 10:00 - 10:35
+                    - strong [ref=e707]: Jack Doe
+                  - generic [ref=e708]: Blow Dry
+                - generic [ref=e709] [cursor=pointer]:
+                  - generic [ref=e710]:
+                    - generic [ref=e711]: 11:00 - 12:15
+                    - strong [ref=e712]: Jane Doe
+                  - generic [ref=e713]: Hair Color
+              - generic [ref=e715] [cursor=pointer]:
+                - generic [ref=e716]:
+                  - generic [ref=e717]: 10:00 - 11:00
+                  - strong [ref=e718]: COUNCIL-TEST Client1
+                - generic [ref=e719]: COUNCIL-TEST Service1
+              - generic [ref=e720]:
+                - generic [ref=e721] [cursor=pointer]: 14:00 - 16:30
+                - generic [ref=e726] [cursor=pointer]: 16:30 - 17:15
+  - generic [ref=e268]:
+    - generic [ref=e270]:
+      - generic [ref=e274]:
+        - generic [ref=e731]:
+          - button "Previous month" [ref=e732] [cursor=pointer]
+          - button "Next month" [ref=e737] [cursor=pointer]
+        - generic [ref=e286]:
+          - grid [ref=e287]:
+            - heading "October 2026" [level=3] [ref=e742]
+            - rowgroup [ref=e289]:
+              - row [ref=e290]:
+                - columnheader "Sat" [ref=e291]:
+                  - generic "Saturday" [ref=e292]: Sat
+                - columnheader "Sun" [ref=e293]:
+                  - generic "Sunday" [ref=e294]: Sun
+                - columnheader "Mon" [ref=e295]:
+                  - generic "Monday" [ref=e296]: Mon
+                - columnheader "Tue" [ref=e297]:
+                  - generic "Tuesday" [ref=e298]: Tue
+                - columnheader "Wed" [ref=e299]:
+                  - generic "Wednesday" [ref=e300]: Wed
+                - columnheader "Thu" [ref=e301]:
+                  - generic "Thursday" [ref=e302]: Thu
+                - columnheader "Fri" [ref=e303]:
+                  - generic "Friday" [ref=e304]: Fri
+            - rowgroup [ref=e305]:
+              - row [ref=e306]:
+                - generic [ref=e307] [cursor=pointer]
+                - generic [ref=e308] [cursor=pointer]
+                - generic [ref=e309] [cursor=pointer]
+                - generic [ref=e310] [cursor=pointer]
+                - generic [ref=e311] [cursor=pointer]
+                - button [ref=e312] [cursor=pointer]:
+                  - gridcell "1" [ref=e313]
+                - button [ref=e317] [cursor=pointer]:
+                  - gridcell "2" [ref=e318]
+              - row [ref=e322]:
+                - button [ref=e323] [cursor=pointer]:
+                  - gridcell "3" [ref=e324]
+                - button [ref=e328] [cursor=pointer]:
+                  - gridcell "4" [ref=e329]
+                - button [ref=e333] [cursor=pointer]:
+                  - gridcell "5" [ref=e334]
+                - button [ref=e338] [cursor=pointer]:
+                  - gridcell "6" [ref=e339]
+                - button [ref=e343] [cursor=pointer]:
+                  - gridcell "7" [ref=e344]
+                - button [ref=e348] [cursor=pointer]:
+                  - gridcell "8" [ref=e349]
+                - button [ref=e353] [cursor=pointer]:
+                  - gridcell "9" [ref=e354]
+              - row [ref=e358]:
+                - button [ref=e359] [cursor=pointer]:
+                  - gridcell "10" [ref=e360]
+                - button [ref=e364] [cursor=pointer]:
+                  - gridcell "11" [ref=e365]
+                - button [ref=e369] [cursor=pointer]:
+                  - gridcell "12" [ref=e370]
+                - button [ref=e374] [cursor=pointer]:
+                  - gridcell "13" [ref=e375]
+                - button [ref=e379] [cursor=pointer]:
+                  - gridcell "14" [ref=e380]
+                - button [ref=e384] [cursor=pointer]:
+                  - gridcell "15" [ref=e385]
+                - button [ref=e389] [cursor=pointer]:
+                  - gridcell "16" [ref=e390]
+              - row [ref=e394]:
+                - button [ref=e395] [cursor=pointer]:
+                  - gridcell "17" [ref=e396]
+                - button [ref=e400] [cursor=pointer]:
+                  - gridcell "18" [ref=e401]
+                - button [ref=e405] [cursor=pointer]:
+                  - gridcell "19" [ref=e406]
+                - button [ref=e410] [cursor=pointer]:
+                  - gridcell "20" [ref=e411]
+                - button [ref=e415] [cursor=pointer]:
+                  - gridcell "21" [ref=e416]
+                - button [ref=e420] [cursor=pointer]:
+                  - gridcell "22" [ref=e421]
+                - button [ref=e425] [cursor=pointer]:
+                  - gridcell "23" [ref=e426]
+              - row [ref=e430]:
+                - button [ref=e431] [cursor=pointer]:
+                  - gridcell "24" [ref=e432]
+                - button [ref=e436] [cursor=pointer]:
+                  - gridcell "25" [ref=e437]
+                - button [ref=e441] [cursor=pointer]:
+                  - gridcell "26" [ref=e442]
+                - button [ref=e446] [cursor=pointer]:
+                  - gridcell "27" [ref=e447]
+                - button [ref=e451] [cursor=pointer]:
+                  - gridcell "28" [ref=e452]
+                - button [ref=e456] [cursor=pointer]:
+                  - gridcell "29" [ref=e457]
+                - button [ref=e461] [cursor=pointer]:
+                  - gridcell "30" [ref=e462]
+              - row [ref=e466]:
+                - button [ref=e467] [cursor=pointer]:
+                  - gridcell "31" [ref=e468]
+                - generic [ref=e472] [cursor=pointer]
+                - generic [ref=e473] [cursor=pointer]
+                - generic [ref=e474] [cursor=pointer]
+                - generic [ref=e475] [cursor=pointer]
+                - generic [ref=e476] [cursor=pointer]
+                - generic [ref=e477] [cursor=pointer]
+          - grid [ref=e478]:
+            - heading "November 2026" [level=3] [ref=e743]
+            - rowgroup [ref=e480]:
+              - row [ref=e481]:
+                - columnheader "Sat" [ref=e482]:
+                  - generic "Saturday" [ref=e483]: Sat
+                - columnheader "Sun" [ref=e484]:
+                  - generic "Sunday" [ref=e485]: Sun
+                - columnheader "Mon" [ref=e486]:
+                  - generic "Monday" [ref=e487]: Mon
+                - columnheader "Tue" [ref=e488]:
+                  - generic "Tuesday" [ref=e489]: Tue
+                - columnheader "Wed" [ref=e490]:
+                  - generic "Wednesday" [ref=e491]: Wed
+                - columnheader "Thu" [ref=e492]:
+                  - generic "Thursday" [ref=e493]: Thu
+                - columnheader "Fri" [ref=e494]:
+                  - generic "Friday" [ref=e495]: Fri
+            - rowgroup [ref=e496]:
+              - row [ref=e497]:
+                - generic [ref=e498] [cursor=pointer]
+                - button [ref=e499] [cursor=pointer]:
+                  - gridcell "1" [ref=e500]
+                - button [ref=e504] [cursor=pointer]:
+                  - gridcell "2" [ref=e505]
+                - button [ref=e509] [cursor=pointer]:
+                  - gridcell "3" [ref=e510]
+                - button [ref=e514] [cursor=pointer]:
+                  - gridcell "4" [ref=e515]
+                - button [ref=e519] [cursor=pointer]:
+                  - gridcell "5" [ref=e520]
+                - button [ref=e524] [cursor=pointer]:
+                  - gridcell "6" [ref=e525]
+              - row [ref=e529]:
+                - button [ref=e530] [cursor=pointer]:
+                  - gridcell "7" [ref=e531]
+                - button [ref=e535] [cursor=pointer]:
+                  - gridcell "8" [ref=e536]
+                - button [ref=e540] [cursor=pointer]:
+                  - gridcell "9" [ref=e541]
+                - button [ref=e545] [cursor=pointer]:
+                  - gridcell "10" [ref=e546]
+                - button [ref=e550] [cursor=pointer]:
+                  - gridcell "11" [ref=e551]
+                - button [ref=e555] [cursor=pointer]:
+                  - gridcell "12" [ref=e556]
+                - button [ref=e560] [cursor=pointer]:
+                  - gridcell "13" [ref=e561]
+              - row [ref=e565]:
+                - button [ref=e566] [cursor=pointer]:
+                  - gridcell "14" [ref=e567]
+                - button [ref=e571] [cursor=pointer]:
+                  - gridcell "15" [ref=e572]
+                - button [ref=e576] [cursor=pointer]:
+                  - gridcell "16" [ref=e577]
+                - button [ref=e581] [cursor=pointer]:
+                  - gridcell "17" [ref=e582]
+                - button [ref=e586] [cursor=pointer]:
+                  - gridcell "18" [ref=e587]
+                - button [ref=e591] [cursor=pointer]:
+                  - gridcell "19" [ref=e592]
+                - button [ref=e596] [cursor=pointer]:
+                  - gridcell "20" [ref=e597]
+              - row [ref=e601]:
+                - button [ref=e602] [cursor=pointer]:
+                  - gridcell "21" [ref=e603]
+                - button [ref=e607] [cursor=pointer]:
+                  - gridcell "22" [ref=e608]
+                - button [ref=e612] [cursor=pointer]:
+                  - gridcell "23" [ref=e613]
+                - button [ref=e617] [cursor=pointer]:
+                  - gridcell "24" [ref=e618]
+                - button [ref=e622] [cursor=pointer]:
+                  - gridcell "25" [ref=e623]
+                - button [ref=e627] [cursor=pointer]:
+                  - gridcell "26" [ref=e628]
+                - button [ref=e632] [cursor=pointer]:
+                  - gridcell "27" [ref=e633]
+              - row [ref=e637]:
+                - button [ref=e638] [cursor=pointer]:
+                  - gridcell "28" [ref=e639]
+                - button [ref=e643] [cursor=pointer]:
+                  - gridcell "29" [ref=e644]
+                - button [ref=e648] [cursor=pointer]:
+                  - gridcell "30" [ref=e649]
+                - generic [ref=e653] [cursor=pointer]
+                - generic [ref=e654] [cursor=pointer]
+                - generic [ref=e655] [cursor=pointer]
+                - generic [ref=e656] [cursor=pointer]
+      - generic [ref=e657]:
+        - button "In 1 week" [ref=e658] [cursor=pointer]
+        - button "In 2 weeks" [ref=e662] [cursor=pointer]
+        - button "In 3 weeks" [ref=e666] [cursor=pointer]
+        - button "In 4 weeks" [ref=e670] [cursor=pointer]
+        - button "In 5 weeks" [ref=e674] [cursor=pointer]
+        - button "More" [ref=e679] [cursor=pointer]
+    - button "Dismiss" [ref=e685]

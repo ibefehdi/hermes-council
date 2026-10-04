@@ -1,0 +1,334 @@
+- generic [active] [ref=f152e1]:
+  - generic [ref=f152e12]:
+    - generic [ref=f152e13]:
+      - link "Fresha" [ref=f152e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f152e16]:
+        - button [ref=f152e18] [cursor=pointer]:
+          - paragraph [ref=f152e20]: Continue setup
+        - button "Search" [ref=f152e22] [cursor=pointer]
+        - button "Performance insights" [ref=f152e24] [cursor=pointer]
+        - button "Notifications" [ref=f152e27] [cursor=pointer]:
+          - generic [ref=f152e28]: "4"
+        - link "Fresha Connect" [ref=f152e32] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f152e34] [cursor=pointer]:
+          - generic [ref=f152e35]: FA
+    - generic [ref=f152e37]:
+      - generic [ref=f152e41]:
+        - generic [ref=f152e42]:
+          - link [ref=f152e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f152e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f152e53] [cursor=pointer]
+          - button [ref=f152e57] [cursor=pointer]
+          - button [ref=f152e61] [cursor=pointer]
+          - button [ref=f152e65] [cursor=pointer]
+          - button [ref=f152e69] [cursor=pointer]
+          - button [ref=f152e73] [cursor=pointer]
+          - link [ref=f152e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f152e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f152e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f152e89] [cursor=pointer]
+      - generic [ref=f152e95]:
+        - generic [ref=f152e98]:
+          - generic [ref=f152e99]:
+            - generic [ref=f152e100]:
+              - paragraph [ref=f152e101]: Recent sales
+              - paragraph [ref=f152e102]: Last 7 days
+            - button "Filters" [ref=f152e103] [cursor=pointer]
+          - generic [ref=f152e108]:
+            - paragraph [ref=f152e110]:
+              - generic [ref=f152e111]: KWD 190
+            - generic [ref=f152e112]:
+              - generic [ref=f152e113]: Appointments
+              - generic [ref=f152e114]: "3"
+            - generic [ref=f152e115]:
+              - generic [ref=f152e116]: Appointments value
+              - generic [ref=f152e117]: KWD 132
+          - generic [ref=f152e120]:
+            - generic [ref=f152e122]:
+              - paragraph [ref=f152e125]: Sales
+              - paragraph [ref=f152e128]: Appointments
+            - application [ref=f152e129]:
+              - generic [ref=f152e165]:
+                - generic [ref=f152e166]:
+                  - generic [ref=f152e167]: 27 Sun
+                  - generic [ref=f152e170]: 28 Mon
+                  - generic [ref=f152e173]: 29 Tue
+                  - generic [ref=f152e176]: 30 Wed
+                  - generic [ref=f152e179]: 1 Thu
+                  - generic [ref=f152e182]: 2 Fri
+                  - generic [ref=f152e185]: 3 Sat
+                  - generic [ref=f152e188]: 4 Sun
+                - generic [ref=f152e191]:
+                  - generic [ref=f152e192]: KWD 0
+                  - generic [ref=f152e194]: KWD 50
+                  - generic [ref=f152e196]: KWD 100
+                  - generic [ref=f152e198]: KWD 150
+                  - generic [ref=f152e200]: KWD 200
+        - generic [ref=f152e204]:
+          - generic [ref=f152e205]:
+            - generic [ref=f152e206]:
+              - paragraph [ref=f152e207]: Upcoming appointments
+              - paragraph [ref=f152e208]: Next 7 days
+            - button "Filters" [ref=f152e209] [cursor=pointer]
+          - generic [ref=f152e214]:
+            - paragraph [ref=f152e216]: 2 booked
+            - generic [ref=f152e217]:
+              - generic [ref=f152e218]: Confirmed appointments
+              - generic [ref=f152e219]: "2"
+            - generic [ref=f152e220]:
+              - generic [ref=f152e221]: Canceled appointments
+              - generic [ref=f152e222]: "0"
+          - generic [ref=f152e224]:
+            - generic [ref=f152e226]:
+              - paragraph [ref=f152e229]: Confirmed
+              - paragraph [ref=f152e232]: Canceled
+            - application [ref=f152e233]:
+              - generic [ref=f152e250]:
+                - generic [ref=f152e251]:
+                  - generic [ref=f152e252]: 5 Mon
+                  - generic [ref=f152e255]: 6 Tue
+                  - generic [ref=f152e258]: 7 Wed
+                  - generic [ref=f152e261]: 8 Thu
+                  - generic [ref=f152e264]: 9 Fri
+                  - generic [ref=f152e267]: 10 Sat
+                  - generic [ref=f152e270]: 11 Sun
+                - generic [ref=f152e273]:
+                  - generic [ref=f152e274]: "0"
+                  - generic [ref=f152e276]: "1"
+                  - generic [ref=f152e278]: "2"
+                  - generic [ref=f152e280]: "3"
+                  - generic [ref=f152e282]: "4"
+        - generic [ref=f152e286]:
+          - paragraph [ref=f152e288]: Appointments activity
+          - generic [ref=f152e291]:
+            - generic [ref=f152e292] [cursor=pointer]:
+              - link "Tue, 6 Oct 2026 14:00 Booked Balayage Jack Doe, 2h 30min with Fahad" [ref=f152e293]:
+                - /url: /dashboard/drawer/appointment/1782589848?resetAppointmentState=true
+              - generic [ref=f152e294]:
+                - generic [aria-hidden] [ref=f152e297]:
+                  - paragraph [ref=f152e298]: "06"
+                  - paragraph [ref=f152e299]: Oct
+                - generic [aria-hidden] [ref=f152e301]:
+                  - paragraph [ref=f152e302]:
+                    - text: Tue, 6 Oct 2026 14:00
+                    - generic [ref=f152e303]: Booked
+                  - generic [ref=f152e305]:
+                    - paragraph [ref=f152e306]: Balayage
+                    - paragraph [ref=f152e307]: Jack Doe, 2h 30min with Fahad
+                - separator
+            - generic [ref=f152e308] [cursor=pointer]:
+              - link "Tue, 6 Oct 2026 16:30 Booked Haircut Jack Doe, 45min with Fahad" [ref=f152e309]:
+                - /url: /dashboard/drawer/appointment/1782589908?resetAppointmentState=true
+              - generic [ref=f152e310]:
+                - generic [aria-hidden] [ref=f152e313]:
+                  - paragraph [ref=f152e314]: "06"
+                  - paragraph [ref=f152e315]: Oct
+                - generic [aria-hidden] [ref=f152e317]:
+                  - paragraph [ref=f152e318]:
+                    - text: Tue, 6 Oct 2026 16:30
+                    - generic [ref=f152e319]: Booked
+                  - generic [ref=f152e321]:
+                    - paragraph [ref=f152e322]: Haircut
+                    - paragraph [ref=f152e323]: Jack Doe, 45min with Fahad
+                - separator
+            - generic [ref=f152e324] [cursor=pointer]:
+              - link "Sun, 4 Oct 2026 10:00 Booked Blow Dry Jack Doe, 35min with Fahad" [ref=f152e325]:
+                - /url: /dashboard/drawer/appointment/1782588347?resetAppointmentState=true
+              - generic [ref=f152e326]:
+                - generic [aria-hidden] [ref=f152e329]:
+                  - paragraph [ref=f152e330]: "04"
+                  - paragraph [ref=f152e331]: Oct
+                - generic [aria-hidden] [ref=f152e333]:
+                  - paragraph [ref=f152e334]:
+                    - text: Sun, 4 Oct 2026 10:00
+                    - generic [ref=f152e335]: Booked
+                  - generic [ref=f152e337]:
+                    - paragraph [ref=f152e338]: Blow Dry
+                    - paragraph [ref=f152e339]: Jack Doe, 35min with Fahad
+                - separator
+            - generic [ref=f152e340] [cursor=pointer]:
+              - link "Sun, 4 Oct 2026 11:00 Booked Hair Color Jane Doe, 1h 15min with Fahad" [ref=f152e341]:
+                - /url: /dashboard/drawer/appointment/1782588308?resetAppointmentState=true
+              - generic [ref=f152e342]:
+                - generic [aria-hidden] [ref=f152e345]:
+                  - paragraph [ref=f152e346]: "04"
+                  - paragraph [ref=f152e347]: Oct
+                - generic [aria-hidden] [ref=f152e349]:
+                  - paragraph [ref=f152e350]:
+                    - text: Sun, 4 Oct 2026 11:00
+                    - generic [ref=f152e351]: Booked
+                  - generic [ref=f152e353]:
+                    - paragraph [ref=f152e354]: Hair Color
+                    - paragraph [ref=f152e355]: Jane Doe, 1h 15min with Fahad
+                - separator
+            - generic [ref=f152e356] [cursor=pointer]:
+              - link "Sun, 4 Oct 2026 09:00 Booked Haircut John Doe, 45min with Fahad" [ref=f152e357]:
+                - /url: /dashboard/drawer/appointment/1782588304?resetAppointmentState=true
+              - generic [ref=f152e358]:
+                - generic [aria-hidden] [ref=f152e361]:
+                  - paragraph [ref=f152e362]: "04"
+                  - paragraph [ref=f152e363]: Oct
+                - generic [aria-hidden] [ref=f152e365]:
+                  - paragraph [ref=f152e366]:
+                    - text: Sun, 4 Oct 2026 09:00
+                    - generic [ref=f152e367]: Booked
+                  - generic [ref=f152e369]:
+                    - paragraph [ref=f152e370]: Haircut
+                    - paragraph [ref=f152e371]: John Doe, 45min with Fahad
+        - generic [ref=f152e374]:
+          - paragraph [ref=f152e376]: Today's next appointments
+          - generic [ref=f152e379]:
+            - generic [ref=f152e380] [cursor=pointer]:
+              - link "Sun 10:00 Booked Blow Dry Jack Doe, 35min with Fahad" [ref=f152e381]:
+                - /url: /dashboard/drawer/appointment/1782588347?resetAppointmentState=true
+              - generic [ref=f152e382]:
+                - generic [aria-hidden] [ref=f152e385]:
+                  - paragraph [ref=f152e386]: "04"
+                  - paragraph [ref=f152e387]: Oct
+                - generic [aria-hidden] [ref=f152e389]:
+                  - paragraph [ref=f152e390]:
+                    - text: Sun 10:00
+                    - generic [ref=f152e391]: Booked
+                  - generic [ref=f152e393]:
+                    - paragraph [ref=f152e394]: Blow Dry
+                    - paragraph [ref=f152e395]: Jack Doe, 35min with Fahad
+                - separator
+            - generic [ref=f152e396] [cursor=pointer]:
+              - link "Sun 11:00 Booked Hair Color Jane Doe, 1h 15min with Fahad" [ref=f152e397]:
+                - /url: /dashboard/drawer/appointment/1782588308?resetAppointmentState=true
+              - generic [ref=f152e398]:
+                - generic [aria-hidden] [ref=f152e401]:
+                  - paragraph [ref=f152e402]: "04"
+                  - paragraph [ref=f152e403]: Oct
+                - generic [aria-hidden] [ref=f152e405]:
+                  - paragraph [ref=f152e406]:
+                    - text: Sun 11:00
+                    - generic [ref=f152e407]: Booked
+                  - generic [ref=f152e409]:
+                    - paragraph [ref=f152e410]: Hair Color
+                    - paragraph [ref=f152e411]: Jane Doe, 1h 15min with Fahad
+        - region [ref=f152e414]:
+          - paragraph [ref=f152e416]: Top services
+          - table [ref=f152e419]:
+            - rowgroup [ref=f152e424]:
+              - row [ref=f152e425]:
+                - columnheader "Service" [ref=f152e426]
+                - columnheader "This month" [ref=f152e431]
+                - columnheader "Last month" [ref=f152e435]
+            - rowgroup [ref=f152e440]:
+              - row [ref=f152e441]:
+                - cell "Haircut" [ref=f152e442]
+                - cell "2" [ref=f152e445]
+                - cell "0" [ref=f152e447]
+              - row [ref=f152e450]:
+                - cell "Balayage" [ref=f152e451]
+                - cell "1" [ref=f152e454]
+                - cell "0" [ref=f152e456]
+              - row [ref=f152e459]:
+                - cell "Blow Dry" [ref=f152e460]
+                - cell "1" [ref=f152e463]
+                - cell "0" [ref=f152e465]
+              - row [ref=f152e468]:
+                - cell "Hair Color" [ref=f152e469]
+                - cell "1" [ref=f152e472]
+                - cell "0" [ref=f152e474]
+        - region [ref=f152e479]:
+          - paragraph [ref=f152e481]: Top team member
+          - table [ref=f152e484]:
+            - rowgroup [ref=f152e489]:
+              - row [ref=f152e490]:
+                - columnheader "Team member" [ref=f152e491]
+                - columnheader "This month" [ref=f152e496]
+                - columnheader "Last month" [ref=f152e500]
+            - rowgroup [ref=f152e505]:
+              - row [ref=f152e506]:
+                - cell "Fahad Asad" [ref=f152e507]
+                - cell "KWD 190.000" [ref=f152e510]
+                - cell "KWD 0.000" [ref=f152e512]
+  - generic [aria-hidden] [ref=f152e515]: "50"
+  - dialog [ref=f152e516]:
+    - generic [ref=f152e517]:
+      - generic [ref=f152e518]:
+        - button "Close Drawer" [ref=f152e519] [cursor=pointer]
+        - button "Focus appointment" [ref=f152e524] [cursor=pointer]
+      - generic [ref=f152e531]:
+        - generic [ref=f152e533]:
+          - generic [ref=f152e534]:
+            - generic [ref=f152e535]: J
+            - paragraph [ref=f152e539]: John Doe
+            - paragraph [ref=f152e541]:
+              - button "john@example.com" [ref=f152e542] [cursor=pointer]
+          - generic [ref=f152e544]:
+            - button "Actions" [ref=f152e546] [cursor=pointer]
+            - button "View profile" [ref=f152e551] [cursor=pointer]
+        - separator [ref=f152e555]
+        - generic [ref=f152e557]:
+          - paragraph [ref=f152e560]:
+            - link "Add pronouns" [ref=f152e561] [cursor=pointer]:
+              - /url: /clients/list/301298877/edit?focus=pronoun
+          - paragraph [ref=f152e564]:
+            - link "Add date of birth" [ref=f152e565] [cursor=pointer]:
+              - /url: /clients/list/301298877/edit?focus=birthday
+          - paragraph [ref=f152e569]: Created Oct 4, 2026
+      - generic [ref=f152e571]:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - button "Sun 4 Oct":
+                  - generic:
+                    - generic:
+                      - paragraph: Sun 4 Oct
+              - generic:
+                - generic:
+                  - button "Booked"
+        - generic [ref=f152e575]:
+          - button "Booked" [ref=f152e578] [cursor=pointer]
+          - button [ref=f152e585] [cursor=pointer]:
+            - heading [level=1] [ref=f152e586]:
+              - paragraph [ref=f152e588]: Sun 4 Oct
+          - generic [ref=f152e591]:
+            - button "09:00" [ref=f152e593] [cursor=pointer]
+            - generic [ref=f152e594]: •
+            - button "Doesn't repeat" [ref=f152e595] [cursor=pointer]
+        - generic [ref=f152e599]:
+          - paragraph [ref=f152e600]: Services
+          - generic [ref=f152e602]:
+            - button "Haircut" [ref=f152e603] [cursor=pointer]
+            - generic [ref=f152e607]:
+              - generic [ref=f152e608]:
+                - generic [ref=f152e609]:
+                  - paragraph [ref=f152e610]: Haircut
+                  - paragraph [ref=f152e611]: 09:00 • 45min • Fahad Asad
+                - generic [ref=f152e612]:
+                  - generic [ref=f152e613]: KWD 40
+                  - generic [ref=f152e616]:
+                    - button "Edit" [ref=f152e618] [cursor=pointer]
+                    - button "Remove" [ref=f152e624] [cursor=pointer]
+              - generic [ref=f152e629]: Team member is not available
+          - button "Add service" [ref=f152e638] [cursor=pointer]
+        - generic [ref=f152e647]:
+          - generic [ref=f152e648]:
+            - generic:
+              - button "Collapse"
+            - generic [ref=f152e649]:
+              - generic [ref=f152e651]:
+                - generic [ref=f152e652]:
+                  - paragraph [ref=f152e654]: Total
+                  - paragraph [ref=f152e655]: KWD 40
+                - separator [ref=f152e657]
+              - button "Toggle" [ref=f152e659] [cursor=pointer]:
+                - generic [ref=f152e660]:
+                  - paragraph [ref=f152e662]: To pay
+                  - paragraph [ref=f152e664]: KWD 40
+          - generic [ref=f152e665]:
+            - button "Options" [ref=f152e667] [cursor=pointer]
+            - button "Checkout" [ref=f152e673] [cursor=pointer]

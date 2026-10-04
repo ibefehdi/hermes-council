@@ -1,0 +1,71 @@
+- generic [ref=f242e12]:
+  - generic [ref=f242e13]:
+    - link "Fresha" [ref=f242e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f242e16]:
+      - button [ref=f242e18] [cursor=pointer]:
+        - paragraph [ref=f242e20]: Continue setup
+      - button "Search" [ref=f242e22] [cursor=pointer]
+      - button "Performance insights" [ref=f242e24] [cursor=pointer]
+      - button "Notifications" [ref=f242e27] [cursor=pointer]:
+        - generic [ref=f242e28]: "4"
+      - link "Fresha Connect" [ref=f242e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f242e34] [cursor=pointer]:
+        - generic [ref=f242e35]: FA
+  - generic [ref=f242e37]:
+    - generic [ref=f242e38]:
+      - generic [ref=f242e41]:
+        - generic [ref=f242e42]:
+          - link [ref=f242e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f242e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f242e53] [cursor=pointer]
+          - button [ref=f242e57] [cursor=pointer]
+          - button [ref=f242e61] [cursor=pointer]
+          - button [ref=f242e65] [cursor=pointer]
+          - button [ref=f242e69] [cursor=pointer]
+          - button [ref=f242e73] [cursor=pointer]
+          - link [ref=f242e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f242e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f242e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f242e89] [cursor=pointer]
+      - generic [ref=f242e92]:
+        - button "Collapse Navigation Menu" [ref=f242e94] [cursor=pointer]
+        - generic [ref=f242e100]:
+          - generic [ref=f242e101]:
+            - paragraph [ref=f242e102]: Online bookings
+            - link [ref=f242e104] [cursor=pointer]:
+              - /url: /fresha/online-booking/locations
+              - paragraph [ref=f242e105]: Marketplace profile
+            - link [ref=f242e107] [cursor=pointer]:
+              - /url: /fresha/online-booking/google-reserve
+              - paragraph [ref=f242e108]: Reserve with Google
+            - link [ref=f242e110] [cursor=pointer]:
+              - /url: /fresha/online-booking/facebook-setup
+              - paragraph [ref=f242e111]: Facebook and Instagram bookings
+            - link [ref=f242e113] [cursor=pointer]:
+              - /url: /fresha/online-booking/buttons-and-links
+              - paragraph [ref=f242e114]: Link builder
+          - separator [ref=f242e116]
+          - generic [ref=f242e117]:
+            - paragraph [ref=f242e118]: Your websites
+            - link [ref=f242e120] [cursor=pointer]:
+              - /url: /fresha/online-booking/smart-website
+              - paragraph [ref=f242e121]: Smart Website
+    - generic [ref=f242e130]:
+      - generic [ref=f242e131]: Attract new clients with online bookings
+      - generic [ref=f242e132]: Join the world's largest beauty and wellness marketplace
+      - generic [ref=f242e133]:
+        - generic [ref=f242e134]: Get your business listed on the Fresha app
+        - generic [ref=f242e138]: Reach thousands of new clients who visit Fresha every day
+        - generic [ref=f242e142]: Free up time and get your clients self-booking online 24/7
+      - generic [ref=f242e146]:
+        - button "Start now" [ref=f242e147] [cursor=pointer]
+        - link "Learn more" [ref=f242e151] [cursor=pointer]:
+          - /url: https://www.fresha.com/help-center/knowledge-base/online-presence/597-fresha-marketplace-overview

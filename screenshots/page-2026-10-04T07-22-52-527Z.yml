@@ -1,0 +1,228 @@
+- generic [ref=f4e12]:
+  - generic [ref=f4e13]:
+    - link "Fresha" [ref=f4e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f4e16]:
+      - button [ref=f4e18] [cursor=pointer]:
+        - paragraph [ref=f4e20]: Continue setup
+      - button "Search" [ref=f4e22] [cursor=pointer]
+      - button "Performance insights" [ref=f4e24] [cursor=pointer]
+      - button "Notifications" [ref=f4e27] [cursor=pointer]:
+        - generic [ref=f4e28]: "4"
+      - link "Fresha Connect" [ref=f4e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f4e34] [cursor=pointer]:
+        - generic [ref=f4e35]: FA
+  - generic [ref=f4e37]:
+    - generic [ref=f4e41]:
+      - generic [ref=f4e42]:
+        - link [ref=f4e45] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f4e49] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f4e53] [cursor=pointer]
+        - button [ref=f4e57] [cursor=pointer]
+        - button [ref=f4e61] [cursor=pointer]
+        - button [ref=f4e65] [cursor=pointer]
+        - button [ref=f4e69] [cursor=pointer]
+        - button [ref=f4e73] [cursor=pointer]
+        - link [ref=f4e77] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f4e81] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f4e85] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f4e89] [cursor=pointer]
+    - generic [ref=f4e98]:
+      - generic [ref=f4e101]:
+        - heading "Workspace settings" [level=1] [ref=f4e103]
+        - paragraph [ref=f4e104]: Manage settings for Test Salon.
+      - tablist [ref=f4e109]:
+        - tab "Settings" [selected] [ref=f4e110] [cursor=pointer]
+        - tab "Online presence" [ref=f4e112] [cursor=pointer]
+        - tab "Marketing" [ref=f4e114] [cursor=pointer]
+        - tab "Other" [ref=f4e116] [cursor=pointer]
+      - generic [ref=f4e118]:
+        - generic [ref=f4e120]:
+          - generic [ref=f4e121]:
+            - link [ref=f4e122] [cursor=pointer]:
+              - /url: /setup/business-setup
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Business setup
+                  - paragraph: Customize business details and manage locations.
+          - generic [ref=f4e123]:
+            - link [ref=f4e124] [cursor=pointer]:
+              - /url: /setup/scheduling
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Scheduling
+                  - paragraph: Set your availability, manage bookable resources and online booking preferences.
+          - generic [ref=f4e125]:
+            - link [ref=f4e126] [cursor=pointer]:
+              - /url: /setup/sales
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Sales
+                  - paragraph: Configure payment methods, taxes, receipts, service charges and gift cards.
+          - generic [ref=f4e127]:
+            - link [ref=f4e128] [cursor=pointer]:
+              - /url: /setup/clients
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Clients
+                  - paragraph: Customize client sources and manage client tags
+          - generic [ref=f4e129]:
+            - link [ref=f4e130] [cursor=pointer]:
+              - /url: /legal-entities
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Billing
+                  - paragraph: Manage Fresha invoices, text messages, add-ons and billing.
+          - generic [ref=f4e131]:
+            - link [ref=f4e132] [cursor=pointer]:
+              - /url: /setup/team
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Team
+                  - paragraph: Manage permissions, compensation and time-off.
+          - generic [ref=f4e133]:
+            - link [ref=f4e134] [cursor=pointer]:
+              - /url: /setup/forms-and-notes
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Forms
+                  - paragraph: Configure templates for client forms.
+          - generic [ref=f4e135]:
+            - link [ref=f4e136] [cursor=pointer]:
+              - /url: /setup/payments
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Payments
+                  - paragraph: Configure payment methods, terminals and your payment policy.
+        - generic [ref=f4e137]:
+          - heading "Online presence" [level=2] [ref=f4e138]
+          - generic [ref=f4e139]:
+            - generic [ref=f4e140]:
+              - button [ref=f4e141] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Marketplace profile
+                    - paragraph: Attract new clients with online bookings.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f4e142]:
+              - button [ref=f4e143] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Reserve with Google
+                    - paragraph: Get online bookings from Google Search and Maps.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f4e144]:
+              - button [ref=f4e145] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Book with Facebook and Instagram
+                    - paragraph: Get online bookings from your social media pages.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f4e146]:
+              - button [ref=f4e147] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Link builder
+                    - paragraph: Create shareable booking links and QR codes.
+                  - generic:
+                    - paragraph: View
+        - generic [ref=f4e148]:
+          - heading "Marketing" [level=2] [ref=f4e149]
+          - generic [ref=f4e150]:
+            - generic [ref=f4e151]:
+              - button [ref=f4e152] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Blast marketing
+                    - paragraph: Share special offers and important updates over email and text message.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f4e153]:
+              - button [ref=f4e154] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Automations
+                    - paragraph: Engage with your clients and keep them up to date with automations.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f4e155]:
+              - button [ref=f4e156] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Deals
+                    - paragraph: Reward and retain clients with discount codes, flash sales and promotion offers.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f4e157]:
+              - button [ref=f4e158] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Smart pricing
+                    - paragraph: Adjust your prices to charge different amounts during more or less busy hours.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f4e159]:
+              - button [ref=f4e160] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Sent messages
+                    - paragraph: View the list of all email, text and push messages sent to your clients.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f4e161]:
+              - button [ref=f4e162] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Ratings and reviews
+                    - paragraph: View star ratings and reviews left by clients after their visit.
+                  - generic:
+                    - paragraph: View
+        - generic [ref=f4e163]:
+          - heading "Other" [level=2] [ref=f4e164]
+          - generic [ref=f4e165]:
+            - generic [ref=f4e166]:
+              - button [ref=f4e167] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Add-ons
+                    - paragraph: Take your business to the next level with Fresha add-ons.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f4e168]:
+              - button [ref=f4e169] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Integrations
+                    - paragraph: Integrate Fresha with third party applications.
+                  - generic:
+                    - paragraph: View

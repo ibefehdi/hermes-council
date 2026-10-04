@@ -1,0 +1,17 @@
+- generic [ref=f143e12]:
+  - button "Close modal icon" [ref=f143e15] [cursor=pointer]
+  - generic [ref=f143e23]:
+    - paragraph [ref=f143e26]: New feature
+    - generic [ref=f143e27]: Connect to clients with two-way messaging
+    - generic [ref=f143e28]: Introducing a whole new inbox that makes connecting with clients a breeze. Let your clients reach out to you, and let you and your team easily respond. Plus, it's all included in your plan.
+    - list [ref=f143e29]:
+      - listitem [ref=f143e30]:
+        - generic [ref=f143e32]: Let clients message you directly in Fresha
+      - listitem [ref=f143e33]:
+        - generic [ref=f143e35]: See every unread message at a glance so you can easily see what needs a response
+      - listitem [ref=f143e36]:
+        - generic [ref=f143e38]: Seamlessly access client profiles and past conversations from every chat
+    - generic [ref=f143e40]:
+      - button "Go to inbox" [ref=f143e41] [cursor=pointer]
+      - link "Learn more" [ref=f143e45] [cursor=pointer]:
+        - /url: https://www.fresha.com/help-center/knowledge-base/messaging/101840-chat-with-clients-using-client-connect

@@ -1,0 +1,135 @@
+- generic [ref=f26e1]:
+  - generic [ref=f26e12]:
+    - generic [ref=f26e13]:
+      - link "Fresha" [ref=f26e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f26e16]:
+        - button [ref=f26e18] [cursor=pointer]:
+          - paragraph [ref=f26e20]: Continue setup
+        - button "Search" [ref=f26e22] [cursor=pointer]
+        - button "Performance insights" [ref=f26e24] [cursor=pointer]
+        - button "Notifications" [ref=f26e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f26e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f26e31] [cursor=pointer]:
+          - generic [ref=f26e32]: FA
+    - generic [ref=f26e34]:
+      - generic [ref=f26e35]:
+        - generic [ref=f26e38]:
+          - generic [ref=f26e39]:
+            - link [ref=f26e42] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f26e46] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f26e50] [cursor=pointer]
+            - button [ref=f26e54] [cursor=pointer]
+            - button [ref=f26e58] [cursor=pointer]
+            - button [ref=f26e62] [cursor=pointer]
+            - button [ref=f26e66] [cursor=pointer]
+            - button [ref=f26e70] [cursor=pointer]
+            - link [ref=f26e74] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f26e78] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f26e82] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f26e86] [cursor=pointer]
+        - generic [ref=f26e89]:
+          - button "Collapse Navigation Menu" [ref=f26e91] [cursor=pointer]
+          - generic [ref=f26e97]:
+            - generic [ref=f26e98]:
+              - paragraph [ref=f26e99]: Sales
+              - link [ref=f26e101] [cursor=pointer]:
+                - /url: /sales/daily-sales
+                - paragraph [ref=f26e102]: Daily sales summary
+              - link [ref=f26e104] [cursor=pointer]:
+                - /url: /sales/register
+                - paragraph [ref=f26e105]: Register
+              - link [ref=f26e107] [cursor=pointer]:
+                - /url: /sales/appointments-list
+                - paragraph [ref=f26e108]: Appointments
+              - link [ref=f26e110] [cursor=pointer]:
+                - /url: /sales/sales-list
+                - paragraph [ref=f26e111]: Sales
+              - link [ref=f26e113] [cursor=pointer]:
+                - /url: /sales/payment-transactions
+                - paragraph [ref=f26e114]: Payments
+            - separator [ref=f26e116]
+            - generic [ref=f26e117]:
+              - paragraph [ref=f26e118]: Sold items
+              - link [ref=f26e120] [cursor=pointer]:
+                - /url: /sales/gift-cards
+                - paragraph [ref=f26e121]: Gift cards sold
+              - link [ref=f26e123] [cursor=pointer]:
+                - /url: /sales/packages-sold
+                - paragraph [ref=f26e124]: Packages sold
+              - link [ref=f26e126] [cursor=pointer]:
+                - /url: /sales/paid-plans
+                - paragraph [ref=f26e127]: Memberships sold
+      - generic [ref=f26e133]:
+        - generic [ref=f26e135]:
+          - generic [ref=f26e136]:
+            - paragraph [ref=f26e138]: Sales
+            - paragraph [ref=f26e139]:
+              - text: View, filter and export the history of your sales.
+              - link "Learn more" [ref=f26e140] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/sales
+          - generic [ref=f26e142]:
+            - button "Options" [expanded] [ref=f26e145] [cursor=pointer]
+            - button "Add new" [ref=f26e150] [cursor=pointer]
+        - generic [ref=f26e155]:
+          - tablist [ref=f26e160]:
+            - tab "Sales" [selected] [ref=f26e161] [cursor=pointer]
+            - tab "Drafts" [ref=f26e163] [cursor=pointer]
+          - generic [ref=f26e167]:
+            - generic [ref=f26e169]:
+              - generic [ref=f26e170]:
+                - generic [ref=f26e171]: Search
+                - textbox "Search" [ref=f26e176]:
+                  - /placeholder: Search by Sale or Client
+              - button "Today" [ref=f26e177] [cursor=pointer]
+              - button "Filters" [ref=f26e182] [cursor=pointer]
+            - button "Sort by" [ref=f26e191] [cursor=pointer]
+          - generic [ref=f26e196]:
+            - region [ref=f26e197]:
+              - generic [ref=f26e198]:
+                - table [ref=f26e201]:
+                  - rowgroup [ref=f26e209]:
+                    - row [ref=f26e210]:
+                      - columnheader [ref=f26e211]:
+                        - 'button "Sale #" [ref=f26e214] [cursor=pointer]'
+                      - columnheader [ref=f26e216]:
+                        - button "Client" [ref=f26e219] [cursor=pointer]
+                      - columnheader "Status" [ref=f26e221]
+                      - columnheader [ref=f26e225]:
+                        - button "Sale date" [ref=f26e228] [cursor=pointer]
+                      - columnheader [ref=f26e230]:
+                        - button "Tips" [ref=f26e233] [cursor=pointer]
+                      - columnheader [ref=f26e235]:
+                        - button "Gross total" [ref=f26e238] [cursor=pointer]
+                - table [ref=f26e241]:
+                  - rowgroup [ref=f26e249]:
+                    - row [ref=f26e250]:
+                      - cell [ref=f26e251]:
+                        - link "1" [ref=f26e253] [cursor=pointer]:
+                          - /url: /sales/sales-list/drawer/invoice/567884984
+                      - cell "Walk-In" [ref=f26e255]
+                      - cell "Completed" [ref=f26e258]
+                      - cell "4 Oct 2026, 09:02" [ref=f26e262]
+                      - cell "KWD 0.000" [ref=f26e265]
+                      - cell "KWD 190.000" [ref=f26e268]
+            - generic [ref=f26e272]:
+              - generic [ref=f26e273]: Viewing results 1 to 1 of 1
+              - paragraph [ref=f26e275]: Viewing 1 - 1 of 1 results
+  - generic [ref=f26e277]:
+    - menu [active] [ref=f26e279]:
+      - group [ref=f26e280]:
+        - menuitem "Sales settings" [ref=f26e281] [cursor=pointer]
+        - separator [ref=f26e285]
+      - paragraph [ref=f26e287]: Export
+      - group "Export" [ref=f26e288]:
+        - menuitem "PDF" [ref=f26e289] [cursor=pointer]
+        - menuitem "CSV" [ref=f26e292] [cursor=pointer]
+        - menuitem "Excel" [ref=f26e295] [cursor=pointer]
+    - button "Dismiss" [ref=f26e299]

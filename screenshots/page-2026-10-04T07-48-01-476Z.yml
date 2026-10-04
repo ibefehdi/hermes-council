@@ -1,0 +1,72 @@
+- generic [ref=f132e12]:
+  - generic [ref=f132e13]:
+    - link "Fresha" [ref=f132e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f132e16]:
+      - button [ref=f132e18] [cursor=pointer]:
+        - paragraph [ref=f132e20]: Continue setup
+      - button "Search" [ref=f132e22] [cursor=pointer]
+      - button "Performance insights" [ref=f132e24] [cursor=pointer]
+      - button "Notifications" [ref=f132e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f132e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f132e31] [cursor=pointer]:
+        - generic [ref=f132e32]: FA
+  - generic [ref=f132e34]:
+    - generic [ref=f132e38]:
+      - generic [ref=f132e39]:
+        - link [ref=f132e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f132e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f132e50] [cursor=pointer]
+        - button [ref=f132e54] [cursor=pointer]
+        - button [ref=f132e58] [cursor=pointer]
+        - button [ref=f132e62] [cursor=pointer]
+        - button [ref=f132e66] [cursor=pointer]
+        - button [ref=f132e70] [cursor=pointer]
+        - link [ref=f132e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f132e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f132e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f132e86] [cursor=pointer]
+    - generic [ref=f132e94]:
+      - generic [ref=f132e96]:
+        - button "Back" [ref=f132e97] [cursor=pointer]
+        - navigation [ref=f132e102]:
+          - list [ref=f132e103]:
+            - listitem [ref=f132e104]:
+              - link "Workspace settings •" [ref=f132e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f132e106]:
+              - link "Forms" [ref=f132e107] [cursor=pointer]:
+                - /url: /setup/forms-and-notes
+      - generic [ref=f132e112]:
+        - paragraph [ref=f132e114]: Forms
+        - list [ref=f132e115]:
+          - listitem [ref=f132e116]:
+            - list [ref=f132e117]:
+              - listitem [ref=f132e118] [cursor=pointer]:
+                - link [ref=f132e119]:
+                  - /url: /setup/forms-and-notes/form-templates
+                - generic [ref=f132e120]: Form templates
+      - generic [ref=f132e123]:
+        - generic [ref=f132e124]:
+          - generic [ref=f132e125]:
+            - paragraph [ref=f132e127]: Form templates
+            - paragraph [ref=f132e128]:
+              - text: Create and manage form templates to be added to clients or appointments.
+              - link "Learn more" [ref=f132e129] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/clients/61-create-a-basic-form-template
+              - text: .
+          - button "Add" [ref=f132e132] [cursor=pointer]
+        - generic [ref=f132e137] [cursor=pointer]:
+          - button [ref=f132e138]
+          - generic [ref=f132e139]:
+            - generic [ref=f132e140]:
+              - heading "COVID 19" [level=3] [ref=f132e141]
+              - heading "Inactive" [level=4] [ref=f132e142]
+            - button "Actions" [ref=f132e146]

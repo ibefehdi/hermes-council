@@ -1,0 +1,153 @@
+- generic [ref=f22e12]:
+  - generic [ref=f22e13]:
+    - link "Fresha" [ref=f22e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f22e16]:
+      - button [ref=f22e18] [cursor=pointer]:
+        - paragraph [ref=f22e20]: Continue setup
+      - button "Search" [ref=f22e22] [cursor=pointer]
+      - button "Performance insights" [ref=f22e24] [cursor=pointer]
+      - button "Notifications" [ref=f22e27] [cursor=pointer]:
+        - generic [ref=f22e28]: "4"
+      - link "Fresha Connect" [ref=f22e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f22e34] [cursor=pointer]:
+        - generic [ref=f22e35]: FA
+  - generic [ref=f22e37]:
+    - generic [ref=f22e41]:
+      - generic [ref=f22e42]:
+        - link [ref=f22e45] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f22e49] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f22e53] [cursor=pointer]
+        - button [ref=f22e57] [cursor=pointer]
+        - button [ref=f22e61] [cursor=pointer]
+        - button [ref=f22e65] [cursor=pointer]
+        - button [ref=f22e69] [cursor=pointer]
+        - button [ref=f22e73] [cursor=pointer]
+        - link [ref=f22e77] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f22e81] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f22e85] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f22e89] [cursor=pointer]
+    - generic [ref=f22e97]:
+      - generic [ref=f22e100]:
+        - generic [ref=f22e101]:
+          - button "Back" [ref=f22e102] [cursor=pointer]
+          - navigation [ref=f22e107]:
+            - list [ref=f22e108]:
+              - listitem [ref=f22e109]:
+                - link "Workspace settings •" [ref=f22e110] [cursor=pointer]:
+                  - /url: /setup
+              - listitem [ref=f22e111]:
+                - link "Locations •" [ref=f22e112] [cursor=pointer]:
+                  - /url: /setup/business-setup/location-details
+              - listitem [ref=f22e113]:
+                - link "Test Salon" [ref=f22e114] [cursor=pointer]:
+                  - /url: /setup/location/3216614
+        - generic [ref=f22e115]:
+          - generic [ref=f22e116]:
+            - paragraph [ref=f22e117]: Test Salon
+            - paragraph [ref=f22e118]: Closed • 3, bneid al gar
+          - button "Options" [ref=f22e122] [cursor=pointer]
+      - generic [ref=f22e131]:
+        - paragraph [ref=f22e132]: Location settings
+        - list [ref=f22e133]:
+          - listitem [ref=f22e134]:
+            - list [ref=f22e135]:
+              - listitem [ref=f22e136] [cursor=pointer]:
+                - link [ref=f22e137]:
+                  - /url: /setup/location/3216614/business-details
+                - generic [ref=f22e138]: Business details
+              - listitem [ref=f22e140] [cursor=pointer]:
+                - link [ref=f22e141]:
+                  - /url: /setup/location/3216614/business-location
+                - generic [ref=f22e142]: Business location
+              - listitem [ref=f22e144] [cursor=pointer]:
+                - link [ref=f22e145]:
+                  - /url: /setup/location/3216614/opening-hours
+                - generic [ref=f22e146]: Opening hours
+              - listitem [ref=f22e148] [cursor=pointer]:
+                - link [ref=f22e149]:
+                  - /url: /setup/location/3216614/sales
+                - generic [ref=f22e150]: Sales
+            - separator [ref=f22e153]
+          - listitem [ref=f22e154]:
+            - list [ref=f22e155]:
+              - listitem [ref=f22e156] [cursor=pointer]:
+                - button [ref=f22e157]
+                - generic [ref=f22e158]: Marketplace profile settings
+              - listitem [ref=f22e160] [cursor=pointer]:
+                - button [ref=f22e161]
+                - generic [ref=f22e162]: Manage billing profiles
+      - generic [ref=f22e165]:
+        - generic [ref=f22e168]:
+          - generic [ref=f22e169]:
+            - paragraph [ref=f22e172]: Receipt sequencing
+            - link "Edit" [ref=f22e174] [cursor=pointer]:
+              - /url: /setup/location/3216614/sales/receipt-sequencing/edit/
+          - generic [ref=f22e178]:
+            - generic [ref=f22e180]:
+              - paragraph [ref=f22e181]: Receipt No. Prefix
+              - paragraph [ref=f22e182]: "-"
+            - generic [ref=f22e184]:
+              - paragraph [ref=f22e185]: Next receipt number
+              - paragraph [ref=f22e186]: "2"
+        - generic [ref=f22e189]:
+          - generic [ref=f22e190]:
+            - generic [ref=f22e191]:
+              - paragraph [ref=f22e193]: Tax defaults
+              - paragraph [ref=f22e194]: Location tax settings for services and products.
+            - link "Edit" [ref=f22e196] [cursor=pointer]:
+              - /url: /setup/location/3216614/sales/tax-defaults/edit/
+          - generic [ref=f22e200]:
+            - generic [ref=f22e202]:
+              - paragraph [ref=f22e203]: Services
+              - paragraph [ref=f22e204]: No tax
+            - generic [ref=f22e206]:
+              - paragraph [ref=f22e207]: Products
+              - paragraph [ref=f22e208]: No tax
+        - generic [ref=f22e210]:
+          - paragraph [ref=f22e214]: This setting is using workspace defaults
+          - generic [ref=f22e215]:
+            - generic [ref=f22e216]:
+              - generic [ref=f22e217]:
+                - paragraph [ref=f22e219]: Tipping
+                - paragraph [ref=f22e220]:
+                  - text: Choose when to ask clients to tip and suggested values for online and in-store.
+                  - link "Learn more" [ref=f22e221] [cursor=pointer]:
+                    - /url: https://www.fresha.com/help-center/knowledge-base/sales/352-set-up-and-manage-tips
+                  - text: .
+              - link "Edit" [ref=f22e223] [cursor=pointer]:
+                - /url: /setup/location/3216614/sales/edit-tipping/
+            - generic [ref=f22e227]:
+              - generic [ref=f22e229]:
+                - paragraph [ref=f22e230]: Tipping options
+                - paragraph [ref=f22e231]: All options enabled
+              - generic [ref=f22e233]:
+                - paragraph [ref=f22e234]: Default values
+                - paragraph [ref=f22e235]: 10% • 18% • 25%
+              - generic [ref=f22e237]:
+                - paragraph [ref=f22e238]: Tip calculation
+                - paragraph [ref=f22e239]: All items included
+        - generic [ref=f22e242]:
+          - generic [ref=f22e243]:
+            - generic [ref=f22e244]:
+              - paragraph [ref=f22e246]: Receipt details
+              - paragraph [ref=f22e247]: Customize the content displayed on sales receipts issued to your clients
+            - link "Edit" [ref=f22e249] [cursor=pointer]:
+              - /url: /setup/location/3216614/sales/edit-receipt-details/
+          - generic [ref=f22e253]:
+            - generic [ref=f22e255]:
+              - paragraph [ref=f22e256]: Company name
+              - paragraph [ref=f22e257]: Test Salon
+            - generic [ref=f22e259]:
+              - paragraph [ref=f22e260]: Address
+              - paragraph [ref=f22e261]: 3, Bneid al gar, bneid al gar, 83006
+            - generic [ref=f22e263]:
+              - paragraph [ref=f22e264]: Receipt note
+              - paragraph [ref=f22e265]: "-"

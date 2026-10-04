@@ -1,0 +1,37 @@
+- generic [ref=f143e51]:
+  - generic [ref=f143e52]:
+    - link "Fresha" [ref=f143e54] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f143e55]:
+      - button [ref=f143e57] [cursor=pointer]:
+        - paragraph [ref=f143e59]: Continue setup
+      - button "Search" [ref=f143e61] [cursor=pointer]
+      - button "Performance insights" [ref=f143e63] [cursor=pointer]
+      - button "Notifications" [ref=f143e66] [cursor=pointer]:
+        - generic [ref=f143e67]: "4"
+      - link "Fresha Connect" [ref=f143e71] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f143e73] [cursor=pointer]:
+        - generic [ref=f143e74]: FA
+  - generic [ref=f143e76]:
+    - generic [ref=f143e80]:
+      - generic [ref=f143e81]:
+        - link [ref=f143e84] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f143e88] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f143e92] [cursor=pointer]
+        - button [ref=f143e96] [cursor=pointer]
+        - button [ref=f143e100] [cursor=pointer]
+        - button [ref=f143e104] [cursor=pointer]
+        - button [ref=f143e108] [cursor=pointer]
+        - button [ref=f143e112] [cursor=pointer]
+        - link [ref=f143e116] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f143e120] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f143e124] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f143e128] [cursor=pointer]
+    - img "spinner" [ref=f143e133]

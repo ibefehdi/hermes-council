@@ -1,0 +1,82 @@
+- generic [ref=f98e2]:
+  - generic [ref=f98e12]:
+    - generic [ref=f98e13]:
+      - link "Fresha" [ref=f98e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f98e16]:
+        - button "Search" [ref=f98e18] [cursor=pointer]
+        - button "Performance insights" [ref=f98e20] [cursor=pointer]
+        - button "News" [ref=f98e22] [cursor=pointer]
+        - button "Notifications" [ref=f98e25] [cursor=pointer]
+        - link "Fresha Connect" [ref=f98e27] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f98e29] [cursor=pointer]:
+          - generic [ref=f98e30]: FA
+    - generic [ref=f98e32]:
+      - generic [ref=f98e33]:
+        - generic [ref=f98e36]:
+          - generic [ref=f98e37]:
+            - link [ref=f98e40] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f98e44] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f98e48] [cursor=pointer]
+            - button [ref=f98e52] [cursor=pointer]
+            - button [ref=f98e56] [cursor=pointer]
+            - button [ref=f98e60] [cursor=pointer]
+            - button [ref=f98e64] [cursor=pointer]
+            - button [ref=f98e68] [cursor=pointer]
+            - link [ref=f98e72] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f98e76] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f98e80] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f98e84] [cursor=pointer]
+        - generic [ref=f98e87]:
+          - button "Collapse Navigation Menu" [ref=f98e89] [cursor=pointer]
+          - generic [ref=f98e95]:
+            - generic [ref=f98e96]:
+              - paragraph [ref=f98e97]: Online bookings
+              - link [ref=f98e99] [cursor=pointer]:
+                - /url: /fresha/online-booking/locations
+                - paragraph [ref=f98e100]: Marketplace profile
+              - link [ref=f98e102] [cursor=pointer]:
+                - /url: /fresha/online-booking/google-reserve
+                - paragraph [ref=f98e103]: Reserve with Google
+              - link [ref=f98e105] [cursor=pointer]:
+                - /url: /fresha/online-booking/facebook-setup
+                - paragraph [ref=f98e106]: Facebook and Instagram bookings
+              - link [active] [ref=f98e108] [cursor=pointer]:
+                - /url: /fresha/online-booking/buttons-and-links
+                - paragraph [ref=f98e109]: Link builder
+            - separator [ref=f98e111]
+            - generic [ref=f98e112]:
+              - paragraph [ref=f98e113]: Your websites
+              - link [ref=f98e115] [cursor=pointer]:
+                - /url: /fresha/online-booking/smart-website
+                - paragraph [ref=f98e116]: Smart Website
+      - generic [ref=f98e197]:
+        - generic [ref=f98e200]:
+          - paragraph [ref=f98e202]: Link builder
+          - paragraph [ref=f98e203]:
+            - text: Create shareable links and QR codes for anything that your clients can book or buy online.
+            - link "Learn more" [ref=f98e204] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/online-presence/434-add-a-book-button-to-your-website
+        - generic [ref=f98e205]:
+          - generic [ref=f98e206]:
+            - generic [ref=f98e213]:
+              - paragraph [ref=f98e214]: Link to everything
+              - paragraph [ref=f98e215]: One simple link covering everything your clients can book or buy online.
+            - button "Create link" [ref=f98e218] [cursor=pointer]
+          - generic [ref=f98e222]:
+            - generic [ref=f98e229]:
+              - paragraph [ref=f98e230]: Link to services
+              - paragraph [ref=f98e231]: Booking links for certain services, locations or team members.
+            - button "Create link" [ref=f98e234] [cursor=pointer]
+  - alert [ref=f98e182]:
+    - paragraph [ref=f98e184]: Something went wrong when trying to load your details
+    - generic [ref=f98e185]:
+      - button "Try again" [ref=f98e186] [cursor=pointer]
+      - button "Close Toast" [ref=f98e190] [cursor=pointer]

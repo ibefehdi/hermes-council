@@ -1,0 +1,91 @@
+- generic [ref=f193e12]:
+  - generic [ref=f193e13]:
+    - link "Fresha" [ref=f193e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f193e16]:
+      - button [ref=f193e18] [cursor=pointer]:
+        - paragraph [ref=f193e20]: Continue setup
+      - button "Search" [ref=f193e22] [cursor=pointer]
+      - button "Performance insights" [ref=f193e24] [cursor=pointer]
+      - button "Notifications" [ref=f193e27] [cursor=pointer]:
+        - generic [ref=f193e28]: "4"
+      - link "Fresha Connect" [ref=f193e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f193e34] [cursor=pointer]:
+        - generic [ref=f193e35]: FA
+  - generic [ref=f193e37]:
+    - generic [ref=f193e38]:
+      - generic [ref=f193e41]:
+        - generic [ref=f193e42]:
+          - link [ref=f193e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f193e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f193e53] [cursor=pointer]
+          - button [ref=f193e57] [cursor=pointer]
+          - button [ref=f193e61] [cursor=pointer]
+          - button [ref=f193e65] [cursor=pointer]
+          - button [ref=f193e69] [cursor=pointer]
+          - button [ref=f193e73] [cursor=pointer]
+          - link [ref=f193e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f193e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f193e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f193e89] [cursor=pointer]
+      - generic [ref=f193e92]:
+        - button "Collapse Navigation Menu" [ref=f193e94] [cursor=pointer]
+        - generic [ref=f193e100]:
+          - generic [ref=f193e101]:
+            - paragraph [ref=f193e102]: Sales
+            - link [ref=f193e104] [cursor=pointer]:
+              - /url: /sales/daily-sales
+              - paragraph [ref=f193e105]: Daily sales summary
+            - link [ref=f193e107] [cursor=pointer]:
+              - /url: /sales/register
+              - paragraph [ref=f193e108]: Register
+            - link [ref=f193e110] [cursor=pointer]:
+              - /url: /sales/appointments-list
+              - paragraph [ref=f193e111]: Appointments
+            - link [ref=f193e113] [cursor=pointer]:
+              - /url: /sales/sales-list
+              - paragraph [ref=f193e114]: Sales
+            - link [ref=f193e116] [cursor=pointer]:
+              - /url: /sales/payment-transactions
+              - paragraph [ref=f193e117]: Payments
+          - separator [ref=f193e119]
+          - generic [ref=f193e120]:
+            - paragraph [ref=f193e121]: Sold items
+            - link [ref=f193e123] [cursor=pointer]:
+              - /url: /sales/gift-cards
+              - paragraph [ref=f193e124]: Gift cards sold
+            - link [ref=f193e126] [cursor=pointer]:
+              - /url: /sales/packages-sold
+              - paragraph [ref=f193e127]: Packages sold
+            - link [ref=f193e129] [cursor=pointer]:
+              - /url: /sales/paid-plans
+              - paragraph [ref=f193e130]: Memberships sold
+    - generic [ref=f193e136]:
+      - generic [ref=f193e138]:
+        - generic [ref=f193e139]:
+          - paragraph [ref=f193e141]: Packages sold
+          - paragraph [ref=f193e142]:
+            - text: View and filter packages purchased by your clients.
+            - link "Learn more" [ref=f193e143] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/packages-memberships-and-gift-cards/100670-packages-overview
+        - button "Options" [ref=f193e147] [cursor=pointer]
+      - generic [ref=f193e153]:
+        - generic [ref=f193e157]:
+          - generic [ref=f193e158]:
+            - generic [ref=f193e159]: Search
+            - textbox "Search" [ref=f193e164]:
+              - /placeholder: Search by package or client
+          - button "All statuses" [ref=f193e166] [cursor=pointer]
+        - generic [ref=f193e175]:
+          - img "No packages created yet" [ref=f193e178]
+          - generic [ref=f193e179]:
+            - generic [ref=f193e180]: No packages created yet
+            - generic [ref=f193e181]: Add packages in minutes and start selling them online and via your store.
+          - button "Set up now" [ref=f193e183] [cursor=pointer]

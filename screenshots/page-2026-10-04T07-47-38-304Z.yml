@@ -1,0 +1,150 @@
+- generic [ref=f41e1]:
+  - generic [ref=f41e12]:
+    - generic [ref=f41e13]:
+      - link "Fresha" [ref=f41e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f41e16]:
+        - button [ref=f41e18] [cursor=pointer]:
+          - paragraph [ref=f41e20]: Continue setup
+        - button "Search" [ref=f41e22] [cursor=pointer]
+        - button "Performance insights" [ref=f41e24] [cursor=pointer]
+        - button "Notifications" [ref=f41e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f41e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f41e31] [cursor=pointer]:
+          - generic [ref=f41e32]: FA
+    - generic [ref=f41e34]:
+      - generic [ref=f41e35]:
+        - generic [ref=f41e38]:
+          - generic [ref=f41e39]:
+            - link [ref=f41e42] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f41e46] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f41e50] [cursor=pointer]
+            - button [ref=f41e54] [cursor=pointer]
+            - button [ref=f41e58] [cursor=pointer]
+            - button [ref=f41e62] [cursor=pointer]
+            - button [ref=f41e66] [cursor=pointer]
+            - button [ref=f41e70] [cursor=pointer]
+            - link [ref=f41e74] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f41e78] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f41e82] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f41e86] [cursor=pointer]
+        - generic [ref=f41e89]:
+          - button "Collapse Navigation Menu" [ref=f41e91] [cursor=pointer]
+          - generic [ref=f41e97]:
+            - generic [ref=f41e98]:
+              - paragraph [ref=f41e99]: Sales
+              - link [ref=f41e101] [cursor=pointer]:
+                - /url: /sales/daily-sales
+                - paragraph [ref=f41e102]: Daily sales summary
+              - link [ref=f41e104] [cursor=pointer]:
+                - /url: /sales/register
+                - paragraph [ref=f41e105]: Register
+              - link [ref=f41e107] [cursor=pointer]:
+                - /url: /sales/appointments-list
+                - paragraph [ref=f41e108]: Appointments
+              - link [ref=f41e110] [cursor=pointer]:
+                - /url: /sales/sales-list
+                - paragraph [ref=f41e111]: Sales
+              - link [ref=f41e113] [cursor=pointer]:
+                - /url: /sales/payment-transactions
+                - paragraph [ref=f41e114]: Payments
+            - separator [ref=f41e116]
+            - generic [ref=f41e117]:
+              - paragraph [ref=f41e118]: Sold items
+              - link [ref=f41e120] [cursor=pointer]:
+                - /url: /sales/gift-cards
+                - paragraph [ref=f41e121]: Gift cards sold
+              - link [ref=f41e123] [cursor=pointer]:
+                - /url: /sales/packages-sold
+                - paragraph [ref=f41e124]: Packages sold
+              - link [ref=f41e126] [cursor=pointer]:
+                - /url: /sales/paid-plans
+                - paragraph [ref=f41e127]: Memberships sold
+      - generic [ref=f41e133]:
+        - generic [ref=f41e135]:
+          - generic [ref=f41e136]:
+            - paragraph [ref=f41e138]: Payment transactions
+            - paragraph [ref=f41e139]: View, filter and export the history of your payments.
+          - button "Options" [ref=f41e143] [cursor=pointer]
+        - generic [ref=f41e149]:
+          - generic [ref=f41e152]:
+            - generic [ref=f41e153]:
+              - generic [ref=f41e154]: Search
+              - textbox "Search" [ref=f41e159]:
+                - /placeholder: Search by Sale or Client
+            - button "Sep 4, 2026 - Oct 4, 2026" [ref=f41e160] [cursor=pointer]
+            - button "Filters" [ref=f41e165] [cursor=pointer]
+          - generic [ref=f41e172]:
+            - region [ref=f41e173]:
+              - generic [ref=f41e174]:
+                - table [ref=f41e177]:
+                  - rowgroup [ref=f41e188]:
+                    - row [ref=f41e189]:
+                      - columnheader [ref=f41e190]:
+                        - button "Payment date" [ref=f41e193] [cursor=pointer]
+                      - columnheader [ref=f41e195]:
+                        - button "Location" [ref=f41e198] [cursor=pointer]
+                      - columnheader [ref=f41e200]:
+                        - 'button "Ref #" [ref=f41e203] [cursor=pointer]'
+                      - columnheader [ref=f41e205]:
+                        - button "Client" [ref=f41e208] [cursor=pointer]
+                      - columnheader [ref=f41e210]:
+                        - button "Team member" [ref=f41e213] [cursor=pointer]
+                      - columnheader [ref=f41e215]:
+                        - button "Type" [ref=f41e218] [cursor=pointer]
+                      - columnheader [ref=f41e220]:
+                        - button "Method" [ref=f41e223] [cursor=pointer]
+                      - columnheader [ref=f41e225]:
+                        - button "Amount" [ref=f41e228] [cursor=pointer]
+                      - columnheader [ref=f41e230]
+                - table [ref=f41e234]:
+                  - rowgroup [ref=f41e245]:
+                    - row [ref=f41e246]:
+                      - cell [ref=f41e247]:
+                        - paragraph [ref=f41e248]: Total
+                      - cell [ref=f41e249]
+                      - cell [ref=f41e250]
+                      - cell [ref=f41e251]
+                      - cell [ref=f41e252]
+                      - cell [ref=f41e253]
+                      - cell [ref=f41e254]
+                      - cell [ref=f41e255]:
+                        - paragraph [ref=f41e256]: KWD 190.000
+                      - cell [ref=f41e257]
+                    - row [ref=f41e258]:
+                      - cell [ref=f41e259]:
+                        - paragraph [ref=f41e260]: 4 Oct 2026
+                      - cell [ref=f41e261]:
+                        - paragraph [ref=f41e262]: Test Salon
+                      - cell [ref=f41e263]:
+                        - link "1" [ref=f41e265] [cursor=pointer]:
+                          - /url: /sales/payment-transactions/drawer/invoice/567884984
+                      - cell [ref=f41e268]:
+                        - paragraph [ref=f41e269]: Walk-In
+                      - cell [ref=f41e270]:
+                        - link "Fahad Asad" [ref=f41e272] [cursor=pointer]:
+                          - /url: /sales/payment-transactions/drawer/team-member/5621666/
+                      - cell [ref=f41e275]:
+                        - paragraph [ref=f41e276]: Sale
+                      - cell [ref=f41e277]:
+                        - paragraph [ref=f41e278]: Cash
+                      - cell [ref=f41e279]:
+                        - paragraph [ref=f41e280]: KWD 190.000
+                      - cell [ref=f41e281]:
+                        - button "Actions" [expanded] [ref=f41e283] [cursor=pointer]
+            - generic [ref=f41e289]:
+              - generic [ref=f41e290]: Viewing results 1 to 1 of 1
+              - paragraph [ref=f41e292]: Viewing 1 - 1 of 1 results
+  - generic [ref=f41e294]:
+    - menu [active] [ref=f41e296]:
+      - group [ref=f41e297]:
+        - menuitemradio "View Sale" [ref=f41e298] [cursor=pointer]
+        - menuitemradio "Refund" [ref=f41e301] [cursor=pointer]
+    - button "Dismiss" [ref=f41e305]

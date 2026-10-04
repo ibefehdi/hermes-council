@@ -1,0 +1,395 @@
+- generic [ref=f56e1]:
+  - generic [ref=f56e12]:
+    - generic [ref=f56e13]:
+      - link "Fresha" [ref=f56e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f56e16]:
+        - button [ref=f56e18] [cursor=pointer]:
+          - paragraph [ref=f56e20]: Continue setup
+        - button "Search" [ref=f56e22] [cursor=pointer]
+        - button "Performance insights" [ref=f56e24] [cursor=pointer]
+        - button "Notifications" [ref=f56e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f56e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f56e31] [cursor=pointer]:
+          - generic [ref=f56e32]: FA
+    - generic [ref=f56e35]:
+      - generic [ref=f56e38]:
+        - generic [ref=f56e39]:
+          - link [ref=f56e42] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f56e46] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f56e50] [cursor=pointer]
+          - button [ref=f56e54] [cursor=pointer]
+          - button [ref=f56e58] [cursor=pointer]
+          - button [ref=f56e62] [cursor=pointer]
+          - button [ref=f56e66] [cursor=pointer]
+          - button [ref=f56e70] [cursor=pointer]
+          - link [ref=f56e74] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f56e78] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f56e82] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f56e86] [cursor=pointer]
+      - generic [ref=f56e89]:
+        - button "Collapse Navigation Menu" [ref=f56e91] [cursor=pointer]
+        - generic [ref=f56e97]:
+          - generic [ref=f56e98]:
+            - paragraph [ref=f56e99]: Catalog
+            - link [ref=f56e101] [cursor=pointer]:
+              - /url: /catalogue/services
+              - paragraph [ref=f56e102]: Service menu
+            - link [ref=f56e104] [cursor=pointer]:
+              - /url: /catalogue/packages
+              - paragraph [ref=f56e105]: Packages
+            - link [ref=f56e107] [cursor=pointer]:
+              - /url: /catalogue/products
+              - paragraph [ref=f56e108]: Products
+          - separator [ref=f56e110]
+          - generic [ref=f56e111]:
+            - paragraph [ref=f56e112]: Inventory
+            - link [ref=f56e114] [cursor=pointer]:
+              - /url: /catalogue/stocktakes
+              - paragraph [ref=f56e115]: Stocktakes
+            - link [ref=f56e117] [cursor=pointer]:
+              - /url: /catalogue/orders
+              - paragraph [ref=f56e118]: Stock orders
+            - link [ref=f56e120] [cursor=pointer]:
+              - /url: /catalogue/suppliers
+              - paragraph [ref=f56e121]: Suppliers
+  - dialog "Add a new supplier" [active] [ref=f56e227]:
+    - generic [ref=f56e229]:
+      - generic [ref=f56e230]: Add a new supplier
+      - generic [ref=f56e233]:
+        - button "Close" [ref=f56e234] [cursor=pointer]
+        - button "Save" [ref=f56e238] [cursor=pointer]
+    - generic [ref=f56e244]:
+      - paragraph [ref=f56e248]: Add a new supplier
+      - generic [ref=f56e250]:
+        - generic [ref=f56e251]:
+          - paragraph [ref=f56e255]: Supplier details
+          - generic [ref=f56e256]:
+            - generic [ref=f56e257]:
+              - generic [ref=f56e258]: Supplier name
+              - textbox "Supplier name" [ref=f56e262]:
+                - /placeholder: e.g. L'Oreal
+            - generic [ref=f56e263]:
+              - generic [ref=f56e264]: Supplier description
+              - textbox "Supplier description" [ref=f56e267]:
+                - /placeholder: e.g. Local provider of hair products
+        - separator [ref=f56e268]
+        - generic [ref=f56e269]:
+          - paragraph [ref=f56e273]: Contact info
+          - generic [ref=f56e274]:
+            - generic [ref=f56e275]:
+              - generic [ref=f56e276]: First name
+              - textbox "First name" [ref=f56e280]:
+                - /placeholder: e.g. John
+            - generic [ref=f56e281]:
+              - generic [ref=f56e282]: Last name
+              - textbox "Last name" [ref=f56e286]:
+                - /placeholder: e.g. Doe
+            - generic [ref=f56e287]:
+              - generic [ref=f56e288]: Mobile number
+              - combobox [ref=f56e292]
+              - generic [ref=f56e293]:
+                - button "+965" [ref=f56e294] [cursor=pointer]
+                - generic "Country code" [ref=f56e298]:
+                  - textbox "Country code" [ref=f56e299]
+            - generic [ref=f56e300]:
+              - generic [ref=f56e301]: Telephone
+              - combobox [ref=f56e305]
+              - generic [ref=f56e306]:
+                - button "+965" [ref=f56e307] [cursor=pointer]
+                - generic "Country code" [ref=f56e311]:
+                  - textbox "Country code" [ref=f56e312]
+            - generic [ref=f56e313]:
+              - generic [ref=f56e314]: Email
+              - textbox "Email" [ref=f56e318]:
+                - /placeholder: mail@example.com
+            - generic [ref=f56e319]:
+              - generic [ref=f56e320]: Website
+              - textbox "Website" [ref=f56e324]:
+                - /placeholder: www.google.com
+        - separator [ref=f56e325]
+        - generic [ref=f56e326]:
+          - paragraph [ref=f56e330]: Physical address
+          - generic [ref=f56e331]:
+            - generic [ref=f56e332]:
+              - generic [ref=f56e333]: Street
+              - textbox "Street" [ref=f56e337]:
+                - /placeholder: e.g. 12 Main Street
+            - generic [ref=f56e338]:
+              - generic [ref=f56e339]: Suburb
+              - textbox "Suburb" [ref=f56e343]
+            - generic [ref=f56e344]:
+              - generic [ref=f56e345]: City
+              - textbox "City" [ref=f56e349]
+            - generic [ref=f56e350]:
+              - generic [ref=f56e351]: State
+              - textbox "State" [ref=f56e355]
+            - generic [ref=f56e356]:
+              - generic [ref=f56e357]: Zip / Postal Code
+              - textbox "Zip / Postal Code" [ref=f56e361]
+            - generic [ref=f56e362]:
+              - generic [ref=f56e363]: Country
+              - generic [ref=f56e365]:
+                - generic [ref=f56e366]: Kuwait
+                - combobox "Country" [ref=f56e368] [cursor=pointer]:
+                  - option "United States"
+                  - option "United Kingdom"
+                  - option "Canada"
+                  - option "United Arab Emirates"
+                  - option "Afghanistan"
+                  - option "Åland Islands"
+                  - option "Albania"
+                  - option "Algeria"
+                  - option "American Samoa"
+                  - option "Andorra"
+                  - option "Angola"
+                  - option "Anguilla"
+                  - option "Antarctica"
+                  - option "Antigua And Barbuda"
+                  - option "Argentina"
+                  - option "Armenia"
+                  - option "Aruba"
+                  - option "Ascension Island"
+                  - option "Australia"
+                  - option "Austria"
+                  - option "Azerbaijan"
+                  - option "Bahamas"
+                  - option "Bahrain"
+                  - option "Bangladesh"
+                  - option "Barbados"
+                  - option "Belarus"
+                  - option "Belgium"
+                  - option "Belize"
+                  - option "Benin"
+                  - option "Bermuda"
+                  - option "Bhutan"
+                  - option "Bolivia, Plurinational State Of"
+                  - option "Bonaire, Saint Eustatius And Saba"
+                  - option "Bosnia & Herzegovina"
+                  - option "Botswana"
+                  - option "Brazil"
+                  - option "British Indian Ocean Territory"
+                  - option "Brunei Darussalam"
+                  - option "Bulgaria"
+                  - option "Burkina Faso"
+                  - option "Burundi"
+                  - option "Cabo Verde"
+                  - option "Cambodia"
+                  - option "Cameroon"
+                  - option "Cayman Islands"
+                  - option "Central African Republic"
+                  - option "Chad"
+                  - option "Chile"
+                  - option "China"
+                  - option "Christmas Island"
+                  - option "Cocos (Keeling) Islands"
+                  - option "Colombia"
+                  - option "Comoros"
+                  - option "Cook Islands"
+                  - option "Costa Rica"
+                  - option "Côte d'Ivoire"
+                  - option "Croatia"
+                  - option "Cuba"
+                  - option "Curacao"
+                  - option "Cyprus"
+                  - option "Czech Republic"
+                  - option "Democratic Republic Of Congo"
+                  - option "Denmark"
+                  - option "Djibouti"
+                  - option "Dominica"
+                  - option "Dominican Republic"
+                  - option "Ecuador"
+                  - option "Egypt"
+                  - option "El Salvador"
+                  - option "Equatorial Guinea"
+                  - option "Eritrea"
+                  - option "Estonia"
+                  - option "Ethiopia"
+                  - option "European Union"
+                  - option "Falkland Islands"
+                  - option "Faroe Islands"
+                  - option "Fiji"
+                  - option "Finland"
+                  - option "France"
+                  - option "France, Metropolitan"
+                  - option "French Guiana"
+                  - option "French Polynesia"
+                  - option "Gabon"
+                  - option "Gambia"
+                  - option "Georgia"
+                  - option "Germany"
+                  - option "Ghana"
+                  - option "Gibraltar"
+                  - option "Greece"
+                  - option "Greenland"
+                  - option "Grenada"
+                  - option "Guadeloupe"
+                  - option "Guam"
+                  - option "Guatemala"
+                  - option "Guernsey"
+                  - option "Guinea"
+                  - option "Guinea-bissau"
+                  - option "Guyana"
+                  - option "Haiti"
+                  - option "Honduras"
+                  - option "Hong Kong"
+                  - option "Hungary"
+                  - option "Iceland"
+                  - option "India"
+                  - option "Indonesia"
+                  - option "Iran, Islamic Republic Of"
+                  - option "Iraq"
+                  - option "Ireland"
+                  - option "Isle Of Man"
+                  - option "Israel"
+                  - option "Italy"
+                  - option "Jamaica"
+                  - option "Japan"
+                  - option "Jersey"
+                  - option "Jordan"
+                  - option "Kazakhstan"
+                  - option "Kenya"
+                  - option "Kiribati"
+                  - option "Korea, Democratic People's Republic Of"
+                  - option "Korea, Republic Of"
+                  - option "Kosovo"
+                  - option "Kuwait" [selected]
+                  - option "Kyrgyzstan"
+                  - option "Lao People's Democratic Republic"
+                  - option "Latvia"
+                  - option "Lebanon"
+                  - option "Lesotho"
+                  - option "Liberia"
+                  - option "Libya"
+                  - option "Liechtenstein"
+                  - option "Lithuania"
+                  - option "Luxembourg"
+                  - option "Macao"
+                  - option "Macedonia, The Former Yugoslav Republic Of"
+                  - option "Madagascar"
+                  - option "Malawi"
+                  - option "Malaysia"
+                  - option "Maldives"
+                  - option "Mali"
+                  - option "Malta"
+                  - option "Marshall Islands"
+                  - option "Martinique"
+                  - option "Mauritania"
+                  - option "Mauritius"
+                  - option "Mayotte"
+                  - option "Mexico"
+                  - option "Micronesia, Federated States Of"
+                  - option "Moldova"
+                  - option "Monaco"
+                  - option "Mongolia"
+                  - option "Montenegro"
+                  - option "Montserrat"
+                  - option "Morocco"
+                  - option "Mozambique"
+                  - option "Myanmar"
+                  - option "Namibia"
+                  - option "Nauru"
+                  - option "Nepal"
+                  - option "Netherlands"
+                  - option "New Caledonia"
+                  - option "New Zealand"
+                  - option "Nicaragua"
+                  - option "Niger"
+                  - option "Nigeria"
+                  - option "Niue"
+                  - option "Norfolk Island"
+                  - option "Northern Mariana Islands"
+                  - option "Norway"
+                  - option "Oman"
+                  - option "Pakistan"
+                  - option "Palau"
+                  - option "Palestinian Territory, Occupied"
+                  - option "Panama"
+                  - option "Papua New Guinea"
+                  - option "Paraguay"
+                  - option "Peru"
+                  - option "Philippines"
+                  - option "Pitcairn"
+                  - option "Poland"
+                  - option "Portugal"
+                  - option "Puerto Rico"
+                  - option "Qatar"
+                  - option "Republic Of Congo"
+                  - option "Reunion"
+                  - option "Romania"
+                  - option "Russian Federation"
+                  - option "Rwanda"
+                  - option "Saint Barthélemy"
+                  - option "Saint Helena, Ascension And Tristan Da Cunha"
+                  - option "Saint Kitts And Nevis"
+                  - option "Saint Lucia"
+                  - option "Saint Martin"
+                  - option "Saint Pierre And Miquelon"
+                  - option "Saint Vincent And The Grenadines"
+                  - option "Samoa"
+                  - option "San Marino"
+                  - option "Sao Tome and Principe"
+                  - option "Saudi Arabia"
+                  - option "Senegal"
+                  - option "Serbia"
+                  - option "Seychelles"
+                  - option "Sierra Leone"
+                  - option "Singapore"
+                  - option "Sint Maarten"
+                  - option "Slovakia"
+                  - option "Slovenia"
+                  - option "Solomon Islands"
+                  - option "Somalia"
+                  - option "South Africa"
+                  - option "South Sudan"
+                  - option "Spain"
+                  - option "Sri Lanka"
+                  - option "Sudan"
+                  - option "Suriname"
+                  - option "Svalbard And Jan Mayen"
+                  - option "Swaziland"
+                  - option "Sweden"
+                  - option "Switzerland"
+                  - option "Syrian Arab Republic"
+                  - option "Taiwan"
+                  - option "Tajikistan"
+                  - option "Tanzania, United Republic Of"
+                  - option "Thailand"
+                  - option "Timor-Leste, Democratic Republic of"
+                  - option "Togo"
+                  - option "Tokelau"
+                  - option "Tonga"
+                  - option "Trinidad And Tobago"
+                  - option "Tristan de Cunha"
+                  - option "Tunisia"
+                  - option "Turkey"
+                  - option "Turkmenistan"
+                  - option "Turks And Caicos Islands"
+                  - option "Tuvalu"
+                  - option "Uganda"
+                  - option "Ukraine"
+                  - option "United States Minor Outlying Islands"
+                  - option "Uruguay"
+                  - option "Uzbekistan"
+                  - option "Vanuatu"
+                  - option "Vatican City State"
+                  - option "Venezuela, Bolivarian Republic Of"
+                  - option "Viet Nam"
+                  - option "Virgin Islands (British)"
+                  - option "Virgin Islands (US)"
+                  - option "Wallis And Futuna"
+                  - option "Western Sahara"
+                  - option "Yemen"
+                  - option "Zambia"
+                  - option "Zimbabwe"
+                - generic [ref=f56e369] [cursor=pointer]
+            - generic [ref=f56e370] [cursor=pointer]:
+              - paragraph [ref=f56e376]: Same as postal address
+              - checkbox "Same as postal address" [checked] [ref=f56e377]

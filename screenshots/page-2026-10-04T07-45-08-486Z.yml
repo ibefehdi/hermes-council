@@ -1,0 +1,146 @@
+- generic [ref=f66e12]:
+  - generic [ref=f66e13]:
+    - link "Fresha" [ref=f66e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f66e16]:
+      - button [ref=f66e18] [cursor=pointer]:
+        - paragraph [ref=f66e20]: Continue setup
+      - button "Search" [ref=f66e22] [cursor=pointer]
+      - button "Performance insights" [ref=f66e24] [cursor=pointer]
+      - button "Notifications" [ref=f66e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f66e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f66e31] [cursor=pointer]:
+        - generic [ref=f66e32]: FA
+  - generic [ref=f66e34]:
+    - generic [ref=f66e38]:
+      - generic [ref=f66e39]:
+        - link [ref=f66e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f66e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f66e50] [cursor=pointer]
+        - button [ref=f66e54] [cursor=pointer]
+        - button [ref=f66e58] [cursor=pointer]
+        - button [ref=f66e62] [cursor=pointer]
+        - button [ref=f66e66] [cursor=pointer]
+        - button [ref=f66e70] [cursor=pointer]
+        - link [ref=f66e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f66e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f66e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f66e86] [cursor=pointer]
+    - generic [ref=f66e94]:
+      - generic [ref=f66e96]:
+        - button "Back" [ref=f66e97] [cursor=pointer]
+        - navigation [ref=f66e102]:
+          - list [ref=f66e103]:
+            - listitem [ref=f66e104]:
+              - link "Workspace settings •" [ref=f66e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f66e106]:
+              - link "Scheduling" [ref=f66e107] [cursor=pointer]:
+                - /url: /setup/scheduling
+      - generic [ref=f66e112]:
+        - paragraph [ref=f66e114]: Scheduling
+        - list [ref=f66e115]:
+          - listitem [ref=f66e116]:
+            - list [ref=f66e117]:
+              - listitem [ref=f66e118] [cursor=pointer]:
+                - link [ref=f66e119]:
+                  - /url: /setup/scheduling/time-and-calendar
+                - generic [ref=f66e120]: Time and calendar
+              - listitem [ref=f66e122] [cursor=pointer]:
+                - link [ref=f66e123]:
+                  - /url: /setup/scheduling/waitlist
+                - generic [ref=f66e124]: Waitlist appointments
+              - listitem [ref=f66e126] [cursor=pointer]:
+                - link [ref=f66e127]:
+                  - /url: /setup/scheduling/blocked-time-types
+                - generic [ref=f66e128]: Blocked time types
+              - listitem [ref=f66e130] [cursor=pointer]:
+                - link [ref=f66e131]:
+                  - /url: /setup/scheduling/resources
+                - generic [ref=f66e132]: Resources
+              - listitem [ref=f66e134] [cursor=pointer]:
+                - link [ref=f66e135]:
+                  - /url: /setup/scheduling/cancellation-reasons
+                - generic [ref=f66e136]: Cancellation reasons
+              - listitem [ref=f66e138] [cursor=pointer]:
+                - link [ref=f66e139]:
+                  - /url: /setup/scheduling/appointment-statuses
+                - generic [ref=f66e140]: Appointment statuses
+              - listitem [ref=f66e142] [cursor=pointer]:
+                - link [ref=f66e143]:
+                  - /url: /setup/scheduling/closed-periods
+                - generic [ref=f66e144]: Closed periods
+            - separator [ref=f66e147]
+          - listitem [ref=f66e148]:
+            - generic [ref=f66e149]: Online booking
+            - list [ref=f66e151]:
+              - listitem [ref=f66e152] [cursor=pointer]:
+                - link [ref=f66e153]:
+                  - /url: /setup/scheduling/dynamic-assignment
+                - generic [ref=f66e154]: Dynamic assignment
+              - listitem [ref=f66e156] [cursor=pointer]:
+                - link [ref=f66e157]:
+                  - /url: /setup/scheduling/availability
+                - generic [ref=f66e158]: Availability
+              - listitem [ref=f66e160] [cursor=pointer]:
+                - link [ref=f66e161]:
+                  - /url: /setup/scheduling/booking-options
+                - generic [ref=f66e162]: Booking options
+        - separator [ref=f66e164]
+        - list [ref=f66e165]:
+          - listitem [ref=f66e166]:
+            - list [ref=f66e167]:
+              - listitem [ref=f66e168] [cursor=pointer]:
+                - button [ref=f66e169]
+                - generic [ref=f66e170]: Marketplace profile
+              - listitem [ref=f66e172] [cursor=pointer]:
+                - button [ref=f66e173]
+                - generic [ref=f66e174]: Service menu
+              - listitem [ref=f66e176] [cursor=pointer]:
+                - button [ref=f66e177]
+                - generic [ref=f66e178]: Scheduled shifts
+      - generic [ref=f66e181]:
+        - generic [ref=f66e183]:
+          - paragraph [ref=f66e185]: Availability
+          - paragraph [ref=f66e186]:
+            - text: Choose when clients can book and change appointments online.
+            - link "Learn more" [ref=f66e187] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/calendar/101218-manage-online-bookings-settings
+        - generic [ref=f66e190]:
+          - generic [ref=f66e191]:
+            - generic [ref=f66e192]:
+              - heading "Booking window" [level=2] [ref=f66e193]
+              - paragraph [ref=f66e194]: Control when clients can book, cancel and reschedule appointments online
+            - button "Edit" [ref=f66e195] [cursor=pointer]
+          - list [ref=f66e199]:
+            - listitem [ref=f66e200]:
+              - generic [ref=f66e202]:
+                - text: Clients can book from
+                - strong [ref=f66e203]: 12 months
+                - text: in advance until
+                - strong [ref=f66e204]: immediately
+                - text: before their appointment starts
+            - listitem [ref=f66e205]:
+              - generic [ref=f66e207]:
+                - text: Clients are allowed to cancel or reschedule
+                - strong [ref=f66e208]: anytime
+        - generic [ref=f66e211]:
+          - generic [ref=f66e212]:
+            - generic [ref=f66e213]:
+              - heading "Schedule optimization" [level=2] [ref=f66e214]
+              - paragraph [ref=f66e215]: Choose which available times are offered to clients, to strategically reduce gaps between separate appointments
+            - button "Edit" [ref=f66e216] [cursor=pointer]
+          - list [ref=f66e220]:
+            - listitem [ref=f66e221]:
+              - generic [ref=f66e223]:
+                - text: Clients are shown appointment time options in increments of
+                - strong [ref=f66e224]: 15 minutes
+            - listitem [ref=f66e225]:
+              - generic [ref=f66e227]: Clients can book any available appointment time

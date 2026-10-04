@@ -1,0 +1,164 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "Fresha" [ref=e6] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=e7]:
+        - button [ref=e9] [cursor=pointer]:
+          - paragraph [ref=e11]: Continue setup
+        - button "Search" [ref=e13] [cursor=pointer]
+        - button "Performance insights" [ref=e15] [cursor=pointer]
+        - button "Notifications" [ref=e18] [cursor=pointer]
+        - link "Fresha Connect" [ref=e23] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=e25] [cursor=pointer]:
+          - generic [ref=e26]: FA
+    - generic [ref=e28]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - link [ref=e36] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=e40] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=e44] [cursor=pointer]
+          - button [ref=e48] [cursor=pointer]
+          - button [ref=e52] [cursor=pointer]
+          - button [ref=e56] [cursor=pointer]
+          - button [ref=e60] [cursor=pointer]
+          - button [ref=e64] [cursor=pointer]
+          - link [ref=e68] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=e72] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=e76] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=e80] [cursor=pointer]
+      - generic [ref=e1473]:
+        - generic [ref=e1475]:
+          - generic [ref=e1476]:
+            - button "Back" [ref=e1477] [cursor=pointer]
+            - navigation [ref=e1482]:
+              - list [ref=e1483]:
+                - listitem [ref=e1484]:
+                  - link "All reports •" [ref=e1485] [cursor=pointer]:
+                    - /url: /reports
+                - listitem [ref=e1486]:
+                  - link "Sales •" [ref=e1487] [cursor=pointer]:
+                    - /url: /reports/report-group/1?category=salesPerformance
+                - listitem [ref=e1488]:
+                  - generic [ref=e1489]: Sales summary
+          - generic [ref=e1490]:
+            - generic [ref=e1491]:
+              - generic [ref=e1492]:
+                - paragraph [ref=e1493]: Sales summary
+                - button "Add to favorites" [ref=e1496] [cursor=pointer]
+              - paragraph [ref=e1501]:
+                - text: Sales quantities and value, excluding tips and gift card sales.
+                - generic [ref=e1579]: Data from 22 mins ago
+            - button "Options" [expanded] [ref=e1506] [cursor=pointer]
+        - generic [ref=e1511]:
+          - generic [ref=e1513]:
+            - generic [ref=e1514]:
+              - button "Type" [ref=e1516] [cursor=pointer]
+              - button "Month to date" [ref=e1521] [cursor=pointer]
+              - button "Filters" [ref=e1526] [cursor=pointer]
+              - button "Advanced filters" [ref=e1531] [cursor=pointer]
+            - button "Customize" [ref=e1538] [cursor=pointer]
+          - generic [ref=e1581]:
+            - region [ref=e1582]:
+              - generic [ref=e1583]:
+                - table [ref=e1586]:
+                  - rowgroup [ref=e1597]:
+                    - row [ref=e1598]:
+                      - columnheader [ref=e1599]:
+                        - button "Type" [ref=e1604] [cursor=pointer]
+                      - button [ref=e1606] [cursor=pointer]:
+                        - button "Sales qty" [ref=e1611]
+                      - button [ref=e1613] [cursor=pointer]:
+                        - button "Items sold" [ref=e1618]
+                      - button [ref=e1620] [cursor=pointer]:
+                        - button "Gross sales" [ref=e1625]
+                      - button [ref=e1627] [cursor=pointer]:
+                        - button "Total discounts" [ref=e1632]
+                      - button [ref=e1634] [cursor=pointer]:
+                        - button "Refunds" [ref=e1639]
+                      - button [ref=e1641] [cursor=pointer]:
+                        - button "Net sales" [ref=e1646]
+                      - button [ref=e1648] [cursor=pointer]:
+                        - button "Taxes" [ref=e1652]
+                      - button [ref=e1654] [cursor=pointer]:
+                        - button "Total sales" [ref=e1659]
+                - table [ref=e1662]:
+                  - rowgroup [ref=e1673]:
+                    - row [ref=e1674]:
+                      - cell [ref=e1675]:
+                        - paragraph [ref=e1676]: Total
+                      - cell [ref=e1677]:
+                        - paragraph [ref=e1678]:
+                          - paragraph [ref=e1679]: "1"
+                      - cell [ref=e1680]:
+                        - paragraph [ref=e1681]:
+                          - paragraph [ref=e1682]: "2"
+                      - cell [ref=e1683]:
+                        - paragraph [ref=e1684]:
+                          - paragraph [ref=e1685]: KWD 190.000
+                      - cell [ref=e1686]:
+                        - paragraph [ref=e1687]:
+                          - paragraph [ref=e1688]: KWD 0.000
+                      - cell [ref=e1689]:
+                        - paragraph [ref=e1690]:
+                          - paragraph [ref=e1691]: KWD 0.000
+                      - cell [ref=e1692]:
+                        - paragraph [ref=e1693]:
+                          - paragraph [ref=e1694]: KWD 190.000
+                      - cell [ref=e1695]:
+                        - paragraph [ref=e1696]:
+                          - paragraph [ref=e1697]: KWD 0.000
+                      - cell [ref=e1698]:
+                        - paragraph [ref=e1699]:
+                          - paragraph [ref=e1700]: KWD 190.000
+                    - row [ref=e1701]:
+                      - cell [ref=e1702]:
+                        - link "Service" [ref=e1704] [cursor=pointer]:
+                          - /url: /reports/table/sales-summary?groupBy=item_name&item_type=service&shortcut=month_to_date
+                      - cell [ref=e1706]:
+                        - paragraph [ref=e1707]:
+                          - paragraph [ref=e1708]: "1"
+                      - cell [ref=e1709]:
+                        - paragraph [ref=e1710]:
+                          - paragraph [ref=e1711]: "2"
+                      - cell [ref=e1712]:
+                        - paragraph [ref=e1713]:
+                          - paragraph [ref=e1714]: KWD 190.000
+                      - cell [ref=e1715]:
+                        - paragraph [ref=e1716]:
+                          - paragraph [ref=e1717]: KWD 0.000
+                      - cell [ref=e1718]:
+                        - paragraph [ref=e1719]:
+                          - paragraph [ref=e1720]: KWD 0.000
+                      - cell [ref=e1721]:
+                        - paragraph [ref=e1722]:
+                          - paragraph [ref=e1723]: KWD 190.000
+                      - cell [ref=e1724]:
+                        - paragraph [ref=e1725]:
+                          - paragraph [ref=e1726]: KWD 0.000
+                      - cell [ref=e1727]:
+                        - paragraph [ref=e1728]:
+                          - paragraph [ref=e1729]: KWD 190.000
+            - status [ref=e1730]
+            - generic [ref=e1732]:
+              - generic [ref=e1733]: Viewing results 1 to 1 of 1
+              - paragraph [ref=e1735]: Viewing 1 - 1 of 1 results
+  - generic [ref=e1737]:
+    - menu [active] [ref=e1739]:
+      - group [ref=e1740]:
+        - menuitem "Duplicate" [ref=e1741] [cursor=pointer]
+        - menuitem "Add to favorites" [ref=e1744] [cursor=pointer]
+        - separator [ref=e1748]
+      - paragraph [ref=e1750]: Export
+      - group "Export" [ref=e1751]:
+        - menuitem "CSV" [ref=e1752] [cursor=pointer]
+        - menuitem "Excel" [ref=e1755] [cursor=pointer]
+        - menuitem "PDF" [ref=e1758] [cursor=pointer]
+    - button "Dismiss" [ref=e1762]

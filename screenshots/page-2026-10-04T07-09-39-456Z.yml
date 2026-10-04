@@ -1,0 +1,165 @@
+- generic [ref=f139e12]:
+  - generic [ref=f139e13]:
+    - link "Fresha" [ref=f139e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f139e16]:
+      - button [ref=f139e18] [cursor=pointer]:
+        - paragraph [ref=f139e20]: Continue setup
+      - button "Search" [ref=f139e22] [cursor=pointer]
+      - button "Performance insights" [ref=f139e24] [cursor=pointer]
+      - button "Notifications" [ref=f139e27] [cursor=pointer]:
+        - generic [ref=f139e28]: "4"
+      - link "Fresha Connect" [ref=f139e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f139e37] [cursor=pointer]:
+        - generic [ref=f139e38]: FA
+  - generic [ref=f139e40]:
+    - generic [ref=f139e44]:
+      - generic [ref=f139e45]:
+        - link [ref=f139e48] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f139e52] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f139e56] [cursor=pointer]
+        - button [ref=f139e60] [cursor=pointer]
+        - button [ref=f139e64] [cursor=pointer]
+        - button [ref=f139e68] [cursor=pointer]
+        - button [ref=f139e72] [cursor=pointer]
+        - button [ref=f139e76] [cursor=pointer]
+        - link [ref=f139e80] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f139e84] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f139e88] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f139e92] [cursor=pointer]
+    - generic [ref=f139e101]:
+      - generic [ref=f139e104]:
+        - heading "Workspace settings" [level=1] [ref=f139e106]
+        - paragraph [ref=f139e107]: Manage settings for Test Salon.
+      - tablist [ref=f139e112]:
+        - tab "Settings" [selected] [ref=f139e113] [cursor=pointer]
+        - tab "Add-ons" [ref=f139e115] [cursor=pointer]
+        - tab "Online presence" [ref=f139e117] [cursor=pointer]
+        - tab "Marketing" [ref=f139e119] [cursor=pointer]
+        - tab "Other" [ref=f139e121] [cursor=pointer]
+      - generic [ref=f139e123]:
+        - heading "Add-ons" [level=2] [ref=f139e135]
+        - generic [ref=f139e141]:
+          - heading "Online presence" [level=2] [ref=f139e142]
+          - generic [ref=f139e143]:
+            - generic [ref=f139e144]:
+              - button [ref=f139e145] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Marketplace profile
+                    - paragraph: Attract new clients with online bookings.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f139e146]:
+              - button [ref=f139e147] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Reserve with Google
+                    - paragraph: Get online bookings from Google Search and Maps.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f139e148]:
+              - button [ref=f139e149] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Book with Facebook and Instagram
+                    - paragraph: Get online bookings from your social media pages.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f139e150]:
+              - button [ref=f139e151] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Link builder
+                    - paragraph: Create shareable booking links and QR codes.
+                  - generic:
+                    - paragraph: View
+        - generic [ref=f139e152]:
+          - heading "Marketing" [level=2] [ref=f139e153]
+          - generic [ref=f139e154]:
+            - generic [ref=f139e155]:
+              - button [ref=f139e156] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Blast marketing
+                    - paragraph: Share special offers and important updates over email and text message.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f139e157]:
+              - button [ref=f139e158] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Automations
+                    - paragraph: Engage with your clients and keep them up to date with automations.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f139e159]:
+              - button [ref=f139e160] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Deals
+                    - paragraph: Reward and retain clients with discount codes, flash sales and promotion offers.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f139e161]:
+              - button [ref=f139e162] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Smart pricing
+                    - paragraph: Adjust your prices to charge different amounts during more or less busy hours.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f139e163]:
+              - button [ref=f139e164] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Sent messages
+                    - paragraph: View the list of all email, text and push messages sent to your clients.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f139e165]:
+              - button [ref=f139e166] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Ratings and reviews
+                    - paragraph: View star ratings and reviews left by clients after their visit.
+                  - generic:
+                    - paragraph: View
+        - generic [ref=f139e167]:
+          - heading "Other" [level=2] [ref=f139e168]
+          - generic [ref=f139e169]:
+            - generic [ref=f139e170]:
+              - button [ref=f139e171] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Add-ons
+                    - paragraph: Take your business to the next level with Fresha add-ons.
+                  - generic:
+                    - paragraph: View
+            - generic [ref=f139e172]:
+              - button [ref=f139e173] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Integrations
+                    - paragraph: Integrate Fresha with third party applications.
+                  - generic:
+                    - paragraph: View

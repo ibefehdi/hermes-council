@@ -1,0 +1,83 @@
+- generic [ref=f189e12]:
+  - generic [ref=f189e13]:
+    - link "Fresha" [ref=f189e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f189e16]:
+      - button [ref=f189e18] [cursor=pointer]:
+        - paragraph [ref=f189e20]: Continue setup
+      - button "Search" [ref=f189e22] [cursor=pointer]
+      - button "Performance insights" [ref=f189e24] [cursor=pointer]
+      - button "Notifications" [ref=f189e27] [cursor=pointer]:
+        - generic [ref=f189e28]: "4"
+      - link "Fresha Connect" [ref=f189e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f189e34] [cursor=pointer]:
+        - generic [ref=f189e35]: FA
+  - generic [ref=f189e37]:
+    - generic [ref=f189e38]:
+      - generic [ref=f189e41]:
+        - generic [ref=f189e42]:
+          - link [ref=f189e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f189e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f189e53] [cursor=pointer]
+          - button [ref=f189e57] [cursor=pointer]
+          - button [ref=f189e61] [cursor=pointer]
+          - button [ref=f189e65] [cursor=pointer]
+          - button [ref=f189e69] [cursor=pointer]
+          - button [ref=f189e73] [cursor=pointer]
+          - link [ref=f189e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f189e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f189e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f189e89] [cursor=pointer]
+      - generic [ref=f189e92]:
+        - button "Collapse Navigation Menu" [ref=f189e94] [cursor=pointer]
+        - generic [ref=f189e100]:
+          - generic [ref=f189e101]:
+            - paragraph [ref=f189e102]: Sales
+            - link [ref=f189e104] [cursor=pointer]:
+              - /url: /sales/daily-sales
+              - paragraph [ref=f189e105]: Daily sales summary
+            - link [ref=f189e107] [cursor=pointer]:
+              - /url: /sales/register
+              - paragraph [ref=f189e108]: Register
+            - link [ref=f189e110] [cursor=pointer]:
+              - /url: /sales/appointments-list
+              - paragraph [ref=f189e111]: Appointments
+            - link [ref=f189e113] [cursor=pointer]:
+              - /url: /sales/sales-list
+              - paragraph [ref=f189e114]: Sales
+            - link [ref=f189e116] [cursor=pointer]:
+              - /url: /sales/payment-transactions
+              - paragraph [ref=f189e117]: Payments
+          - separator [ref=f189e119]
+          - generic [ref=f189e120]:
+            - paragraph [ref=f189e121]: Sold items
+            - link [ref=f189e123] [cursor=pointer]:
+              - /url: /sales/gift-cards
+              - paragraph [ref=f189e124]: Gift cards sold
+            - link [ref=f189e126] [cursor=pointer]:
+              - /url: /sales/packages-sold
+              - paragraph [ref=f189e127]: Packages sold
+            - link [ref=f189e129] [cursor=pointer]:
+              - /url: /sales/paid-plans
+              - paragraph [ref=f189e130]: Memberships sold
+    - generic [ref=f189e136]:
+      - generic [ref=f189e138]:
+        - generic [ref=f189e139]:
+          - paragraph [ref=f189e141]: Gift cards sold
+          - paragraph [ref=f189e142]:
+            - text: View, filter and export gift cards purchased by your clients.
+            - link "Learn more" [ref=f189e143] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/packages-memberships-and-gift-cards/82-manage-gift-cards#viewing-gift-card-sales
+        - button "Options" [ref=f189e148] [cursor=pointer]
+      - generic [ref=f189e158]:
+        - img "Gift illustration" [ref=f189e161]
+        - generic [ref=f189e162]:
+          - generic [ref=f189e163]: No results found
+          - generic [ref=f189e164]: Try adjusting your search and filters.

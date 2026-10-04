@@ -1,0 +1,196 @@
+- generic [ref=f30e1]:
+  - generic [ref=f30e270]:
+    - generic [ref=f30e271]:
+      - link "Fresha" [ref=f30e273] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f30e274]:
+        - button [ref=f30e276] [cursor=pointer]:
+          - paragraph [ref=f30e278]: Continue setup
+        - button "Search" [ref=f30e280] [cursor=pointer]
+        - button "Performance insights" [ref=f30e282] [cursor=pointer]
+        - button "Notifications" [ref=f30e285] [cursor=pointer]
+        - link "Fresha Connect" [ref=f30e287] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f30e289] [cursor=pointer]:
+          - generic [ref=f30e290]: FA
+    - generic [ref=f30e292]:
+      - generic [ref=f30e293]:
+        - generic [ref=f30e296]:
+          - generic [ref=f30e297]:
+            - link [ref=f30e300] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f30e304] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f30e308] [cursor=pointer]
+            - button [ref=f30e312] [cursor=pointer]
+            - button [ref=f30e316] [cursor=pointer]
+            - button [ref=f30e320] [cursor=pointer]
+            - button [ref=f30e324] [cursor=pointer]
+            - button [ref=f30e328] [cursor=pointer]
+            - link [ref=f30e332] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f30e336] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f30e340] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f30e344] [cursor=pointer]
+        - generic [ref=f30e347]:
+          - button "Collapse Navigation Menu" [ref=f30e349] [cursor=pointer]
+          - generic [ref=f30e355]:
+            - generic [ref=f30e356]:
+              - paragraph [ref=f30e357]: Sales
+              - link [ref=f30e359] [cursor=pointer]:
+                - /url: /sales/daily-sales
+                - paragraph [ref=f30e360]: Daily sales summary
+              - link [ref=f30e362] [cursor=pointer]:
+                - /url: /sales/register
+                - paragraph [ref=f30e363]: Register
+              - link [ref=f30e365] [cursor=pointer]:
+                - /url: /sales/appointments-list
+                - paragraph [ref=f30e366]: Appointments
+              - link [ref=f30e368] [cursor=pointer]:
+                - /url: /sales/sales-list
+                - paragraph [ref=f30e369]: Sales
+              - link [ref=f30e371] [cursor=pointer]:
+                - /url: /sales/payment-transactions
+                - paragraph [ref=f30e372]: Payments
+            - separator [ref=f30e374]
+            - generic [ref=f30e375]:
+              - paragraph [ref=f30e376]: Sold items
+              - link [ref=f30e378] [cursor=pointer]:
+                - /url: /sales/gift-cards
+                - paragraph [ref=f30e379]: Gift cards sold
+              - link [ref=f30e381] [cursor=pointer]:
+                - /url: /sales/packages-sold
+                - paragraph [ref=f30e382]: Packages sold
+              - link [ref=f30e384] [cursor=pointer]:
+                - /url: /sales/paid-plans
+                - paragraph [ref=f30e385]: Memberships sold
+      - generic [ref=f30e391]:
+        - generic [ref=f30e393]:
+          - generic [ref=f30e394]:
+            - paragraph [ref=f30e396]: Sales
+            - paragraph [ref=f30e397]:
+              - text: View, filter and export the history of your sales.
+              - link "Learn more" [ref=f30e398] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/sales
+          - generic [ref=f30e400]:
+            - button "Options" [ref=f30e403] [cursor=pointer]
+            - button "Add new" [ref=f30e408] [cursor=pointer]
+        - generic [ref=f30e413]:
+          - tablist [ref=f30e418]:
+            - tab "Sales" [selected] [ref=f30e419] [cursor=pointer]
+            - tab "Drafts" [ref=f30e421] [cursor=pointer]
+          - generic [ref=f30e425]:
+            - generic [ref=f30e427]:
+              - generic [ref=f30e428]:
+                - generic [ref=f30e429]: Search
+                - textbox "Search" [ref=f30e434]:
+                  - /placeholder: Search by Sale or Client
+              - button "Today" [ref=f30e435] [cursor=pointer]
+              - button "Filters" [ref=f30e440] [cursor=pointer]
+            - button "Sort by" [ref=f30e449] [cursor=pointer]
+          - generic [ref=f30e454]:
+            - region [ref=f30e455]:
+              - generic [ref=f30e456]:
+                - table [ref=f30e459]:
+                  - rowgroup [ref=f30e467]:
+                    - row [ref=f30e468]:
+                      - columnheader [ref=f30e469]:
+                        - 'button "Sale #" [ref=f30e472] [cursor=pointer]'
+                      - columnheader [ref=f30e474]:
+                        - button "Client" [ref=f30e477] [cursor=pointer]
+                      - columnheader "Status" [ref=f30e479]
+                      - columnheader [ref=f30e483]:
+                        - button "Sale date" [ref=f30e486] [cursor=pointer]
+                      - columnheader [ref=f30e488]:
+                        - button "Tips" [ref=f30e491] [cursor=pointer]
+                      - columnheader [ref=f30e493]:
+                        - button "Gross total" [ref=f30e496] [cursor=pointer]
+                - table [ref=f30e499]:
+                  - rowgroup [ref=f30e507]:
+                    - row [ref=f30e508]:
+                      - cell [ref=f30e509]:
+                        - link "1" [ref=f30e511] [cursor=pointer]:
+                          - /url: /sales/sales-list/drawer/invoice/567884984
+                      - cell "Walk-In" [ref=f30e513]
+                      - cell "Completed" [ref=f30e516]
+                      - cell "4 Oct 2026, 09:02" [ref=f30e520]
+                      - cell "KWD 0.000" [ref=f30e523]
+                      - cell "KWD 190.000" [ref=f30e526]
+            - generic [ref=f30e530]:
+              - generic [ref=f30e531]: Viewing results 1 to 1 of 1
+              - paragraph [ref=f30e533]: Viewing 1 - 1 of 1 results
+  - dialog [ref=f30e534]:
+    - generic [ref=f30e535]:
+      - button "Close Drawer" [ref=f30e537] [cursor=pointer]
+      - generic [ref=f30e543]:
+        - generic: Summary
+        - generic [ref=f30e547]:
+          - generic [ref=f30e549]:
+            - button "Rebook" [ref=f30e550] [cursor=pointer]
+            - button "Open options" [expanded] [ref=f30e555] [cursor=pointer]
+          - generic [ref=f30e562]:
+            - paragraph [ref=f30e563]: Sale
+            - paragraph [ref=f30e564]: Sun, Oct 4, 2026 • Test Salon
+          - generic [ref=f30e565]: Completed
+        - generic [ref=f30e569]:
+          - paragraph [ref=f30e574]: Walk-In
+          - generic [ref=f30e578]:
+            - generic [ref=f30e579]:
+              - paragraph [ref=f30e580]: "Sale #1"
+              - paragraph [ref=f30e581]: Sun, Oct 4, 2026
+            - generic [ref=f30e582]:
+              - generic [ref=f30e584]:
+                - generic [ref=f30e585]:
+                  - paragraph [ref=f30e586]: Balayage
+                  - paragraph [ref=f30e587]: 14:00, 6 Oct 2026 • 2h 30min • Fahad Asad
+                - generic [ref=f30e588]: KWD 150
+              - generic [ref=f30e593]:
+                - generic [ref=f30e594]:
+                  - paragraph [ref=f30e595]: Haircut
+                  - paragraph [ref=f30e596]: 16:30, 6 Oct 2026 • 45min • Fahad Asad
+                - generic [ref=f30e597]: KWD 40
+            - separator [ref=f30e601]
+            - generic [ref=f30e603]:
+              - generic [ref=f30e604]:
+                - paragraph [ref=f30e605]: Subtotal
+                - generic [ref=f30e606]: KWD 190
+              - generic [ref=f30e607]:
+                - paragraph [ref=f30e608]: Total
+                - generic [ref=f30e609]: KWD 190
+            - separator [ref=f30e610]
+            - generic [ref=f30e613]:
+              - generic [ref=f30e614]:
+                - generic [ref=f30e616]:
+                  - paragraph [ref=f30e617]: Payment
+                  - paragraph [ref=f30e618]: Cash
+                - generic [ref=f30e619]: Sun 4 Oct 2026 at 09:02
+              - generic [ref=f30e620]: KWD 190
+        - list [ref=f30e623]:
+          - listitem [ref=f30e624]:
+            - button [ref=f30e625] [cursor=pointer]:
+              - paragraph [ref=f30e629]: Summary
+          - listitem [ref=f30e630]:
+            - button [ref=f30e631] [cursor=pointer]:
+              - paragraph [ref=f30e635]: Notes
+          - listitem [ref=f30e636]:
+            - button [ref=f30e637] [cursor=pointer]:
+              - paragraph [ref=f30e641]: Activity
+  - generic [ref=f30e643]:
+    - menu [active] [ref=f30e645]:
+      - paragraph [ref=f30e647]: Quick actions
+      - group "Quick actions" [ref=f30e648]:
+        - menuitem "Refund sale" [ref=f30e649] [cursor=pointer]
+        - menuitem "Edit sale details" [ref=f30e652] [cursor=pointer]
+        - menuitem "Add a note" [ref=f30e655] [cursor=pointer]
+        - separator [ref=f30e659]
+      - group [ref=f30e660]:
+        - menuitem "Email" [ref=f30e661] [cursor=pointer]
+        - menuitem "Print" [ref=f30e664] [cursor=pointer]
+        - menuitem "Download PDF" [ref=f30e667] [cursor=pointer]
+        - separator [ref=f30e671]
+      - group [ref=f30e672]:
+        - menuitem "Void sale" [ref=f30e673] [cursor=pointer]
+    - button "Dismiss" [ref=f30e677]

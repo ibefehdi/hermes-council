@@ -1,0 +1,65 @@
+- generic [ref=f275e12]:
+  - generic [ref=f275e13]:
+    - link "Fresha" [ref=f275e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f275e16]:
+      - button [ref=f275e18] [cursor=pointer]:
+        - paragraph [ref=f275e20]: Continue setup
+      - button "Search" [ref=f275e22] [cursor=pointer]
+      - button "Performance insights" [ref=f275e24] [cursor=pointer]
+      - button "Notifications" [ref=f275e27] [cursor=pointer]:
+        - generic [ref=f275e28]: "4"
+      - link "Fresha Connect" [ref=f275e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f275e34] [cursor=pointer]:
+        - generic [ref=f275e35]: FA
+  - generic [ref=f275e37]:
+    - generic [ref=f275e38]:
+      - generic [ref=f275e41]:
+        - generic [ref=f275e42]:
+          - link [ref=f275e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f275e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f275e53] [cursor=pointer]
+          - button [ref=f275e57] [cursor=pointer]
+          - button [ref=f275e61] [cursor=pointer]
+          - button [ref=f275e65] [cursor=pointer]
+          - button [ref=f275e69] [cursor=pointer]
+          - button [ref=f275e73] [cursor=pointer]
+          - link [ref=f275e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f275e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f275e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f275e89] [cursor=pointer]
+      - generic [ref=f275e92]:
+        - button "Collapse Navigation Menu" [ref=f275e94] [cursor=pointer]
+        - generic [ref=f275e101]:
+          - paragraph [ref=f275e102]: Team
+          - link [ref=f275e104] [cursor=pointer]:
+            - /url: /team/team-members
+            - paragraph [ref=f275e105]: Team members
+          - link [ref=f275e107] [cursor=pointer]:
+            - /url: /team/scheduled-shifts
+            - paragraph [ref=f275e108]: Scheduled shifts
+          - link [ref=f275e110] [cursor=pointer]:
+            - /url: /team/timesheets
+            - paragraph [ref=f275e111]: Timesheets
+          - link [ref=f275e113] [cursor=pointer]:
+            - /url: /team/payrun/overview
+            - paragraph [ref=f275e114]: Pay runs
+    - generic [ref=f275e123]:
+      - generic [ref=f275e124]: Free to use
+      - generic [ref=f275e127]: Simplify time tracking and attendance
+      - generic [ref=f275e128]: Track your team's working hours and make pay calculations straightforward with Fresha timesheets
+      - generic [ref=f275e129]:
+        - generic [ref=f275e130]: Track worked hours and breaks in real time
+        - generic [ref=f275e134]: Fully integrated with Fresha Pay Runs
+        - generic [ref=f275e138]: Detailed reporting to monitor attendance and punctuality
+      - generic [ref=f275e142]:
+        - button "Start now" [ref=f275e143] [cursor=pointer]
+        - link "Learn more" [ref=f275e147] [cursor=pointer]:
+          - /url: https://www.fresha.com/help-center/knowledge-base/personal-account/38-clock-in-and-out-of-your-shifts

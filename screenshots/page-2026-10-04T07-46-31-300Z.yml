@@ -1,0 +1,109 @@
+- generic [ref=f97e12]:
+  - generic [ref=f97e13]:
+    - link "Fresha" [ref=f97e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f97e16]:
+      - button [ref=f97e18] [cursor=pointer]:
+        - paragraph [ref=f97e20]: Continue setup
+      - button "Search" [ref=f97e22] [cursor=pointer]
+      - button "Performance insights" [ref=f97e24] [cursor=pointer]
+      - button "Notifications" [ref=f97e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f97e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f97e31] [cursor=pointer]:
+        - generic [ref=f97e32]: FA
+  - generic [ref=f97e34]:
+    - generic [ref=f97e38]:
+      - generic [ref=f97e39]:
+        - link [ref=f97e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f97e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f97e50] [cursor=pointer]
+        - button [ref=f97e54] [cursor=pointer]
+        - button [ref=f97e58] [cursor=pointer]
+        - button [ref=f97e62] [cursor=pointer]
+        - button [ref=f97e66] [cursor=pointer]
+        - button [ref=f97e70] [cursor=pointer]
+        - link [ref=f97e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f97e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f97e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f97e86] [cursor=pointer]
+    - generic [ref=f97e94]:
+      - generic [ref=f97e96]:
+        - button "Back" [ref=f97e97] [cursor=pointer]
+        - navigation [ref=f97e102]:
+          - list [ref=f97e103]:
+            - listitem [ref=f97e104]:
+              - link "Workspace settings •" [ref=f97e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f97e106]:
+              - link "Sales" [ref=f97e107] [cursor=pointer]:
+                - /url: /setup/sales
+      - generic [ref=f97e112]:
+        - paragraph [ref=f97e114]: Sales
+        - list [ref=f97e115]:
+          - listitem [ref=f97e116]:
+            - list [ref=f97e117]:
+              - listitem [ref=f97e118] [cursor=pointer]:
+                - link [ref=f97e119]:
+                  - /url: /setup/sales/pay-now
+                - generic [ref=f97e120]: Pay now
+              - listitem [ref=f97e122] [cursor=pointer]:
+                - link [ref=f97e123]:
+                  - /url: /setup/sales/tax-rates
+                - generic [ref=f97e124]: Tax rates
+              - listitem [ref=f97e126] [cursor=pointer]:
+                - link [ref=f97e127]:
+                  - /url: /setup/sales/receipts
+                - generic [ref=f97e128]: Receipts
+              - listitem [ref=f97e130] [cursor=pointer]:
+                - link [ref=f97e131]:
+                  - /url: /setup/sales/registers
+                - generic [ref=f97e132]: Registers
+              - listitem [ref=f97e134] [cursor=pointer]:
+                - link [ref=f97e135]:
+                  - /url: /setup/sales/tipping
+                - generic [ref=f97e136]: Tipping
+              - listitem [ref=f97e138] [cursor=pointer]:
+                - link [ref=f97e139]:
+                  - /url: /setup/sales/service-charges
+                - generic [ref=f97e140]: Service charges
+              - listitem [ref=f97e142] [cursor=pointer]:
+                - link [ref=f97e143]:
+                  - /url: /setup/sales/gift-cards
+                - generic [ref=f97e144]: Gift cards
+              - listitem [ref=f97e146] [cursor=pointer]:
+                - link [ref=f97e147]:
+                  - /url: /setup/sales/payment-methods
+                - generic [ref=f97e148]: Custom checkout methods
+        - separator [ref=f97e150]
+        - list [ref=f97e151]:
+          - listitem [ref=f97e152]:
+            - list [ref=f97e153]:
+              - listitem [ref=f97e154] [cursor=pointer]:
+                - button [ref=f97e155]
+                - generic [ref=f97e156]: Payment settings
+      - generic [ref=f97e159]:
+        - generic [ref=f97e160]:
+          - generic [ref=f97e161]:
+            - paragraph [ref=f97e163]: Service charges
+            - paragraph [ref=f97e164]:
+              - text: Manage extra charges that you can automatically or manually add during checkout.
+              - link "Learn more" [ref=f97e165] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/sales/360-set-up-and-manage-service-charges
+              - text: .
+          - button "Add" [ref=f97e168] [cursor=pointer]
+        - generic [ref=f97e176]:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Illustration"
+          - generic [ref=f97e177]:
+            - generic [ref=f97e178]: No service charges
+            - generic [ref=f97e179]: Add service charges that you can automatically or manually add during checkout

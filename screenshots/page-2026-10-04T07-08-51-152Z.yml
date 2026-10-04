@@ -1,0 +1,212 @@
+- generic [ref=f129e3]:
+  - generic [ref=f129e4]:
+    - link "Fresha" [ref=f129e6] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f129e7]:
+      - button [ref=f129e9] [cursor=pointer]:
+        - paragraph [ref=f129e11]: Continue setup
+      - link "Search" [ref=f129e13] [cursor=pointer]:
+        - /url: /search
+      - button "Performance insights" [ref=f129e15] [cursor=pointer]
+      - button "Notifications" [ref=f129e18] [cursor=pointer]:
+        - generic [ref=f129e19]: "4"
+      - link "Fresha Connect" [ref=f129e23] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f129e28] [cursor=pointer]:
+        - generic [ref=f129e29]: FA
+  - generic [ref=f129e31]:
+    - generic [ref=f129e32]:
+      - generic [ref=f129e35]:
+        - generic [ref=f129e36]:
+          - link [ref=f129e39] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f129e43] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f129e47] [cursor=pointer]
+          - button [ref=f129e51] [cursor=pointer]
+          - button [ref=f129e55] [cursor=pointer]
+          - button [ref=f129e59] [cursor=pointer]
+          - button [ref=f129e63] [cursor=pointer]
+          - button [ref=f129e67] [cursor=pointer]
+          - link [ref=f129e71] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f129e75] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f129e79] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f129e83] [cursor=pointer]
+      - generic [ref=f129e86]:
+        - button "Collapse Navigation Menu" [ref=f129e88] [cursor=pointer]
+        - generic [ref=f129e94]:
+          - generic [ref=f129e95]:
+            - paragraph [ref=f129e96]: Clients
+            - link [ref=f129e98] [cursor=pointer]:
+              - /url: /clients/list
+              - paragraph [ref=f129e99]: Clients list
+            - link [ref=f129e101] [cursor=pointer]:
+              - /url: /clients/segments
+              - paragraph [ref=f129e102]: Client segments
+          - separator [ref=f129e104]
+          - generic [ref=f129e105]:
+            - paragraph [ref=f129e106]: Engage
+            - link [ref=f129e108] [cursor=pointer]:
+              - /url: /clients/loyalty
+              - paragraph [ref=f129e109]: Client loyalty
+            - link [ref=f129e111] [cursor=pointer]:
+              - /url: /clients/online-reputation
+              - paragraph [ref=f129e112]: Online reputation
+    - generic [ref=f129e119]:
+      - generic [ref=f129e121]:
+        - generic [ref=f129e122]:
+          - generic [ref=f129e123]:
+            - heading "Clients list" [level=1] [ref=f129e124]
+            - generic [ref=f129e125]: "0"
+          - paragraph [ref=f129e126]:
+            - text: View, add, edit and delete your client's details.
+            - link "Learn more" [ref=f129e127] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/clients/320-create-client-profiles
+        - generic [ref=f129e129]:
+          - button "Options" [ref=f129e132] [cursor=pointer]
+          - button "Add" [ref=f129e137] [cursor=pointer]
+      - generic [ref=f129e144]:
+        - generic [ref=f129e145]:
+          - generic [ref=f129e146]:
+            - generic [ref=f129e147]:
+              - paragraph [ref=f129e148]: Import your client list
+              - paragraph [ref=f129e149]: Takes a few minutes and prevents new client fees for existing clients who book online
+            - generic [ref=f129e150]:
+              - button "Start import" [ref=f129e151] [cursor=pointer]
+              - link "Learn more" [ref=f129e155] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/clients/101243-import-your-existing-client-list
+          - img "Import clients" [ref=f129e159]
+        - button "Close" [ref=f129e160] [cursor=pointer]
+      - generic [ref=f129e165]:
+        - generic [ref=f129e167]:
+          - generic [ref=f129e168]:
+            - generic [ref=f129e169]:
+              - generic [ref=f129e170]: Search
+              - textbox "Search" [ref=f129e175]:
+                - /placeholder: Name, email or phone
+            - button "Filters" [ref=f129e176] [cursor=pointer]
+          - button "Created at (newest first)" [ref=f129e185] [cursor=pointer]
+        - region [ref=f129e190]:
+          - generic [ref=f129e191]:
+            - table [ref=f129e194]:
+              - rowgroup [ref=f129e202]:
+                - row [ref=f129e203]:
+                  - columnheader "selectAll selectAll" [ref=f129e204]:
+                    - generic [ref=f129e206] [cursor=pointer]:
+                      - paragraph [ref=f129e209]: selectAll
+                      - checkbox "selectAll" [ref=f129e210]
+                  - columnheader [ref=f129e211]:
+                    - button "Client name" [ref=f129e214] [cursor=pointer]
+                  - columnheader "Mobile number" [ref=f129e216]
+                  - columnheader [ref=f129e220]:
+                    - button "Reviews" [ref=f129e223] [cursor=pointer]
+                  - columnheader [ref=f129e225]:
+                    - button "Sales" [ref=f129e228] [cursor=pointer]
+                  - columnheader [ref=f129e230]:
+                    - button "Created at" [ref=f129e233] [cursor=pointer]
+            - table [ref=f129e236]:
+              - rowgroup [ref=f129e244]:
+                - button [ref=f129e245] [cursor=pointer]:
+                  - cell "select-row-0 select-row-0" [ref=f129e246]:
+                    - generic [ref=f129e247]:
+                      - paragraph [ref=f129e250]: select-row-0
+                      - checkbox "select-row-0" [ref=f129e251]
+                  - cell [ref=f129e252]
+                  - cell [ref=f129e256]
+                  - cell [ref=f129e260]
+                  - cell [ref=f129e264]
+                  - cell [ref=f129e268]
+                - button [ref=f129e272] [cursor=pointer]:
+                  - cell "select-row-1 select-row-1" [ref=f129e273]:
+                    - generic [ref=f129e274]:
+                      - paragraph [ref=f129e277]: select-row-1
+                      - checkbox "select-row-1" [ref=f129e278]
+                  - cell [ref=f129e279]
+                  - cell [ref=f129e283]
+                  - cell [ref=f129e287]
+                  - cell [ref=f129e291]
+                  - cell [ref=f129e295]
+                - button [ref=f129e299] [cursor=pointer]:
+                  - cell "select-row-2 select-row-2" [ref=f129e300]:
+                    - generic [ref=f129e301]:
+                      - paragraph [ref=f129e304]: select-row-2
+                      - checkbox "select-row-2" [ref=f129e305]
+                  - cell [ref=f129e306]
+                  - cell [ref=f129e310]
+                  - cell [ref=f129e314]
+                  - cell [ref=f129e318]
+                  - cell [ref=f129e322]
+                - button [ref=f129e326] [cursor=pointer]:
+                  - cell "select-row-3 select-row-3" [ref=f129e327]:
+                    - generic [ref=f129e328]:
+                      - paragraph [ref=f129e331]: select-row-3
+                      - checkbox "select-row-3" [ref=f129e332]
+                  - cell [ref=f129e333]
+                  - cell [ref=f129e337]
+                  - cell [ref=f129e341]
+                  - cell [ref=f129e345]
+                  - cell [ref=f129e349]
+                - button [ref=f129e353] [cursor=pointer]:
+                  - cell "select-row-4 select-row-4" [ref=f129e354]:
+                    - generic [ref=f129e355]:
+                      - paragraph [ref=f129e358]: select-row-4
+                      - checkbox "select-row-4" [ref=f129e359]
+                  - cell [ref=f129e360]
+                  - cell [ref=f129e364]
+                  - cell [ref=f129e368]
+                  - cell [ref=f129e372]
+                  - cell [ref=f129e376]
+                - button [ref=f129e380] [cursor=pointer]:
+                  - cell "select-row-5 select-row-5" [ref=f129e381]:
+                    - generic [ref=f129e382]:
+                      - paragraph [ref=f129e385]: select-row-5
+                      - checkbox "select-row-5" [ref=f129e386]
+                  - cell [ref=f129e387]
+                  - cell [ref=f129e391]
+                  - cell [ref=f129e395]
+                  - cell [ref=f129e399]
+                  - cell [ref=f129e403]
+                - button [ref=f129e407] [cursor=pointer]:
+                  - cell "select-row-6 select-row-6" [ref=f129e408]:
+                    - generic [ref=f129e409]:
+                      - paragraph [ref=f129e412]: select-row-6
+                      - checkbox "select-row-6" [ref=f129e413]
+                  - cell [ref=f129e414]
+                  - cell [ref=f129e418]
+                  - cell [ref=f129e422]
+                  - cell [ref=f129e426]
+                  - cell [ref=f129e430]
+                - button [ref=f129e434] [cursor=pointer]:
+                  - cell "select-row-7 select-row-7" [ref=f129e435]:
+                    - generic [ref=f129e436]:
+                      - paragraph [ref=f129e439]: select-row-7
+                      - checkbox "select-row-7" [ref=f129e440]
+                  - cell [ref=f129e441]
+                  - cell [ref=f129e445]
+                  - cell [ref=f129e449]
+                  - cell [ref=f129e453]
+                  - cell [ref=f129e457]
+                - button [ref=f129e461] [cursor=pointer]:
+                  - cell "select-row-8 select-row-8" [ref=f129e462]:
+                    - generic [ref=f129e463]:
+                      - paragraph [ref=f129e466]: select-row-8
+                      - checkbox "select-row-8" [ref=f129e467]
+                  - cell [ref=f129e468]
+                  - cell [ref=f129e472]
+                  - cell [ref=f129e476]
+                  - cell [ref=f129e480]
+                  - cell [ref=f129e484]
+                - button [ref=f129e488] [cursor=pointer]:
+                  - cell "select-row-9 select-row-9" [ref=f129e489]:
+                    - generic [ref=f129e490]:
+                      - paragraph [ref=f129e493]: select-row-9
+                      - checkbox "select-row-9" [ref=f129e494]
+                  - cell [ref=f129e495]
+                  - cell [ref=f129e499]
+                  - cell [ref=f129e503]
+                  - cell [ref=f129e507]
+                  - cell [ref=f129e511]

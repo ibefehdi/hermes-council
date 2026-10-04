@@ -1,0 +1,133 @@
+- generic [ref=f44e12]:
+  - generic [ref=f44e13]:
+    - link "Fresha" [ref=f44e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f44e16]:
+      - button [ref=f44e18] [cursor=pointer]:
+        - paragraph [ref=f44e20]: Continue setup
+      - button "Search" [ref=f44e22] [cursor=pointer]
+      - button "Performance insights" [ref=f44e24] [cursor=pointer]
+      - button "Notifications" [ref=f44e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f44e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f44e31] [cursor=pointer]:
+        - generic [ref=f44e32]: FA
+  - generic [ref=f44e34]:
+    - generic [ref=f44e38]:
+      - generic [ref=f44e39]:
+        - link [ref=f44e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f44e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f44e50] [cursor=pointer]
+        - button [ref=f44e54] [cursor=pointer]
+        - button [ref=f44e58] [cursor=pointer]
+        - button [ref=f44e62] [cursor=pointer]
+        - button [ref=f44e66] [cursor=pointer]
+        - button [ref=f44e70] [cursor=pointer]
+        - link [ref=f44e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f44e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f44e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f44e86] [cursor=pointer]
+    - generic [ref=f44e94]:
+      - generic [ref=f44e96]:
+        - button "Back" [ref=f44e97] [cursor=pointer]
+        - navigation [ref=f44e102]:
+          - list [ref=f44e103]:
+            - listitem [ref=f44e104]:
+              - link "Workspace settings •" [ref=f44e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f44e106]:
+              - link "Scheduling" [ref=f44e107] [cursor=pointer]:
+                - /url: /setup/scheduling
+      - generic [ref=f44e112]:
+        - paragraph [ref=f44e114]: Scheduling
+        - list [ref=f44e115]:
+          - listitem [ref=f44e116]:
+            - list [ref=f44e117]:
+              - listitem [ref=f44e118] [cursor=pointer]:
+                - link [ref=f44e119]:
+                  - /url: /setup/scheduling/time-and-calendar
+                - generic [ref=f44e120]: Time and calendar
+              - listitem [ref=f44e122] [cursor=pointer]:
+                - link [ref=f44e123]:
+                  - /url: /setup/scheduling/waitlist
+                - generic [ref=f44e124]: Waitlist appointments
+              - listitem [ref=f44e126] [cursor=pointer]:
+                - link [ref=f44e127]:
+                  - /url: /setup/scheduling/blocked-time-types
+                - generic [ref=f44e128]: Blocked time types
+              - listitem [ref=f44e130] [cursor=pointer]:
+                - link [ref=f44e131]:
+                  - /url: /setup/scheduling/resources
+                - generic [ref=f44e132]: Resources
+              - listitem [ref=f44e134] [cursor=pointer]:
+                - link [ref=f44e135]:
+                  - /url: /setup/scheduling/cancellation-reasons
+                - generic [ref=f44e136]: Cancellation reasons
+              - listitem [ref=f44e138] [cursor=pointer]:
+                - link [ref=f44e139]:
+                  - /url: /setup/scheduling/appointment-statuses
+                - generic [ref=f44e140]: Appointment statuses
+              - listitem [ref=f44e142] [cursor=pointer]:
+                - link [ref=f44e143]:
+                  - /url: /setup/scheduling/closed-periods
+                - generic [ref=f44e144]: Closed periods
+            - separator [ref=f44e147]
+          - listitem [ref=f44e148]:
+            - generic [ref=f44e149]: Online booking
+            - list [ref=f44e151]:
+              - listitem [ref=f44e152] [cursor=pointer]:
+                - link [ref=f44e153]:
+                  - /url: /setup/scheduling/dynamic-assignment
+                - generic [ref=f44e154]: Dynamic assignment
+              - listitem [ref=f44e156] [cursor=pointer]:
+                - link [ref=f44e157]:
+                  - /url: /setup/scheduling/availability
+                - generic [ref=f44e158]: Availability
+              - listitem [ref=f44e160] [cursor=pointer]:
+                - link [ref=f44e161]:
+                  - /url: /setup/scheduling/booking-options
+                - generic [ref=f44e162]: Booking options
+        - separator [ref=f44e164]
+        - list [ref=f44e165]:
+          - listitem [ref=f44e166]:
+            - list [ref=f44e167]:
+              - listitem [ref=f44e168] [cursor=pointer]:
+                - button [ref=f44e169]
+                - generic [ref=f44e170]: Marketplace profile
+              - listitem [ref=f44e172] [cursor=pointer]:
+                - button [ref=f44e173]
+                - generic [ref=f44e174]: Service menu
+              - listitem [ref=f44e176] [cursor=pointer]:
+                - button [ref=f44e177]
+                - generic [ref=f44e178]: Scheduled shifts
+      - generic [ref=f44e181]:
+        - generic [ref=f44e183]:
+          - paragraph [ref=f44e185]: Resource list
+          - paragraph [ref=f44e186]:
+            - text: Add rooms, equipment, and other resources needed for your services.
+            - link "Learn more" [ref=f44e187] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/calendar/101215-create-and-manage-resources
+        - generic [ref=f44e190]:
+          - generic [ref=f44e192]:
+            - generic [ref=f44e193]: Included in your plan
+            - paragraph [ref=f44e195]: Manage your resources, rooms and equipment
+            - generic [ref=f44e196]:
+              - paragraph [ref=f44e198]: Assign one or more resources to your services
+              - paragraph [ref=f44e200]: Book appointments with no team members
+              - paragraph [ref=f44e202]: Reporting and insights on resource utilization
+            - generic [ref=f44e203]:
+              - button "Start now" [ref=f44e204] [cursor=pointer]
+              - link "Learn more" [ref=f44e208] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/calendar/101215-create-and-manage-resources
+          - generic [ref=f44e216]:
+            - generic [ref=f44e217]: Chair
+            - generic [ref=f44e218]: Table
+            - generic [ref=f44e219]: Bed
+            - generic [ref=f44e220]: Room
+            - generic [ref=f44e221]: Equipment

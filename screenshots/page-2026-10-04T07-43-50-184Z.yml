@@ -1,0 +1,160 @@
+- generic [active] [ref=f15e1]:
+  - generic [ref=f15e12]:
+    - generic [ref=f15e13]:
+      - link "Fresha" [ref=f15e15] [cursor=pointer]:
+        - /url: /calendar
+        - img "Fresha"
+      - generic [ref=f15e16]:
+        - button [ref=f15e18] [cursor=pointer]:
+          - paragraph [ref=f15e20]: Continue setup
+        - button "Search" [ref=f15e22] [cursor=pointer]
+        - button "Performance insights" [ref=f15e24] [cursor=pointer]
+        - button "Notifications" [ref=f15e27] [cursor=pointer]
+        - link "Fresha Connect" [ref=f15e29] [cursor=pointer]:
+          - /url: /connect
+        - button "Open user menu" [ref=f15e31] [cursor=pointer]:
+          - generic [ref=f15e32]: FA
+    - generic [ref=f15e34]:
+      - generic [ref=f15e35]:
+        - generic [ref=f15e38]:
+          - generic [ref=f15e39]:
+            - link [ref=f15e42] [cursor=pointer]:
+              - /url: /dashboard
+            - link [ref=f15e46] [cursor=pointer]:
+              - /url: /calendar
+            - button [ref=f15e50] [cursor=pointer]
+            - button [ref=f15e54] [cursor=pointer]
+            - button [ref=f15e58] [cursor=pointer]
+            - button [ref=f15e62] [cursor=pointer]
+            - button [ref=f15e66] [cursor=pointer]
+            - button [ref=f15e70] [cursor=pointer]
+            - link [ref=f15e74] [cursor=pointer]:
+              - /url: /reports
+            - link [ref=f15e78] [cursor=pointer]:
+              - /url: /add-ons
+            - link [ref=f15e82] [cursor=pointer]:
+              - /url: /setup
+          - button [ref=f15e86] [cursor=pointer]
+        - generic [ref=f15e89]:
+          - button "Collapse Navigation Menu" [ref=f15e91] [cursor=pointer]
+          - generic [ref=f15e97]:
+            - generic [ref=f15e98]:
+              - paragraph [ref=f15e99]: Catalog
+              - link [ref=f15e101] [cursor=pointer]:
+                - /url: /catalogue/services
+                - paragraph [ref=f15e102]: Service menu
+              - link [ref=f15e104] [cursor=pointer]:
+                - /url: /catalogue/packages
+                - paragraph [ref=f15e105]: Packages
+              - link [ref=f15e107] [cursor=pointer]:
+                - /url: /catalogue/products
+                - paragraph [ref=f15e108]: Products
+            - separator [ref=f15e110]
+            - generic [ref=f15e111]:
+              - paragraph [ref=f15e112]: Inventory
+              - link [ref=f15e114] [cursor=pointer]:
+                - /url: /catalogue/stocktakes
+                - paragraph [ref=f15e115]: Stocktakes
+              - link [ref=f15e117] [cursor=pointer]:
+                - /url: /catalogue/orders
+                - paragraph [ref=f15e118]: Stock orders
+              - link [ref=f15e120] [cursor=pointer]:
+                - /url: /catalogue/suppliers
+                - paragraph [ref=f15e121]: Suppliers
+      - generic [ref=f15e131]:
+        - generic [ref=f15e133]:
+          - generic [ref=f15e134]:
+            - paragraph [ref=f15e136]: Service menu
+            - paragraph [ref=f15e137]:
+              - text: View and manage the services offered by your business.
+              - link "Learn more" [ref=f15e138] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/catalog
+          - generic [ref=f15e140]:
+            - button "Options" [ref=f15e142] [cursor=pointer]
+            - button "Add" [ref=f15e149] [cursor=pointer]
+        - generic [ref=f15e155]:
+          - generic [ref=f15e159]:
+            - generic [ref=f15e161]:
+              - textbox [ref=f15e167]:
+                - /placeholder: Search service name
+              - button "Filters" [ref=f15e168] [cursor=pointer]
+            - button "Manage order" [ref=f15e175] [cursor=pointer]
+          - list [ref=f15e184]:
+            - listitem [ref=f15e185]:
+              - generic [ref=f15e186]: Categories
+              - list [ref=f15e188]:
+                - listitem [ref=f15e189] [cursor=pointer]:
+                  - button [ref=f15e190]
+                  - generic [ref=f15e191]: All categories
+                  - generic: "5"
+                - listitem [ref=f15e193] [cursor=pointer]:
+                  - button [ref=f15e194]
+                  - generic [ref=f15e195]: Hair & styling
+                  - generic: "4"
+                - listitem [ref=f15e197] [cursor=pointer]:
+                  - button [ref=f15e198]
+                  - generic [ref=f15e199]: Eyebrows & eyelashes
+                  - generic: "1"
+                - listitem [ref=f15e201] [cursor=pointer]:
+                  - button [ref=f15e202]
+                  - generic [ref=f15e203]: Add category
+          - generic [ref=f15e207]:
+            - button [ref=f15e209]:
+              - generic [ref=f15e212]:
+                - paragraph [ref=f15e215]: Hair & styling
+                - button "Actions" [ref=f15e218] [cursor=pointer]
+            - button "Haircut 45 min KWD 40 More" [ref=f15e224]:
+              - generic [ref=f15e230]:
+                - button "Haircut" [ref=f15e231] [cursor=pointer]
+                - generic [ref=f15e237]:
+                  - generic [ref=f15e239]:
+                    - paragraph [ref=f15e240]: Haircut
+                    - paragraph [ref=f15e241]: 45 min
+                  - generic [ref=f15e242]:
+                    - generic [ref=f15e243]: KWD 40
+                    - button "More" [ref=f15e246] [cursor=pointer]
+            - button "Hair Color 1 hr, 15 min KWD 57 More" [ref=f15e254]:
+              - generic [ref=f15e260]:
+                - button "Hair Color" [ref=f15e261] [cursor=pointer]
+                - generic [ref=f15e267]:
+                  - generic [ref=f15e269]:
+                    - paragraph [ref=f15e270]: Hair Color
+                    - paragraph [ref=f15e271]: 1 hr, 15 min
+                  - generic [ref=f15e272]:
+                    - generic [ref=f15e273]: KWD 57
+                    - button "More" [ref=f15e276] [cursor=pointer]
+            - button "Blow Dry 35 min KWD 35 More" [ref=f15e284]:
+              - generic [ref=f15e290]:
+                - button "Blow Dry" [ref=f15e291] [cursor=pointer]
+                - generic [ref=f15e297]:
+                  - generic [ref=f15e299]:
+                    - paragraph [ref=f15e300]: Blow Dry
+                    - paragraph [ref=f15e301]: 35 min
+                  - generic [ref=f15e302]:
+                    - generic [ref=f15e303]: KWD 35
+                    - button "More" [ref=f15e306] [cursor=pointer]
+            - button "Balayage 2 hr, 30 min KWD 150 More" [ref=f15e314]:
+              - generic [ref=f15e320]:
+                - button "Balayage" [ref=f15e321] [cursor=pointer]
+                - generic [ref=f15e327]:
+                  - generic [ref=f15e329]:
+                    - paragraph [ref=f15e330]: Balayage
+                    - paragraph [ref=f15e331]: 2 hr, 30 min
+                  - generic [ref=f15e332]:
+                    - generic [ref=f15e333]: KWD 150
+                    - button "More" [ref=f15e336] [cursor=pointer]
+            - button [ref=f15e344]:
+              - generic [ref=f15e347]:
+                - paragraph [ref=f15e350]: Eyebrows & eyelashes
+                - button "Actions" [ref=f15e353] [cursor=pointer]
+            - button "Classic Fill 1 hr KWD 60 More" [ref=f15e359]:
+              - generic [ref=f15e365]:
+                - button "Classic Fill" [ref=f15e366] [cursor=pointer]
+                - generic [ref=f15e372]:
+                  - generic [ref=f15e374]:
+                    - paragraph [ref=f15e375]: Classic Fill
+                    - paragraph [ref=f15e376]: 1 hr
+                  - generic [ref=f15e377]:
+                    - generic [ref=f15e378]: KWD 60
+                    - button "More" [ref=f15e381] [cursor=pointer]
+  - status [ref=f15e388]

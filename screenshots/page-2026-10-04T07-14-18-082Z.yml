@@ -1,0 +1,183 @@
+- generic [ref=f206e12]:
+  - generic [ref=f206e13]:
+    - link "Fresha" [ref=f206e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f206e16]:
+      - button [ref=f206e18] [cursor=pointer]:
+        - paragraph [ref=f206e20]: Continue setup
+      - button "Search" [ref=f206e22] [cursor=pointer]
+      - button "Performance insights" [ref=f206e24] [cursor=pointer]
+      - button "Notifications" [ref=f206e27] [cursor=pointer]:
+        - generic [ref=f206e28]: "4"
+      - link "Fresha Connect" [ref=f206e32] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f206e34] [cursor=pointer]:
+        - generic [ref=f206e35]: FA
+  - generic [ref=f206e37]:
+    - generic [ref=f206e38]:
+      - generic [ref=f206e41]:
+        - generic [ref=f206e42]:
+          - link [ref=f206e45] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f206e49] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f206e53] [cursor=pointer]
+          - button [ref=f206e57] [cursor=pointer]
+          - button [ref=f206e61] [cursor=pointer]
+          - button [ref=f206e65] [cursor=pointer]
+          - button [ref=f206e69] [cursor=pointer]
+          - button [ref=f206e73] [cursor=pointer]
+          - link [ref=f206e77] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f206e81] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f206e85] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f206e89] [cursor=pointer]
+      - generic [ref=f206e92]:
+        - button "Collapse Navigation Menu" [ref=f206e94] [cursor=pointer]
+        - generic [ref=f206e100]:
+          - generic [ref=f206e101]:
+            - paragraph [ref=f206e102]: Clients
+            - link [ref=f206e104] [cursor=pointer]:
+              - /url: /clients/list
+              - paragraph [ref=f206e105]: Clients list
+            - link [ref=f206e107] [cursor=pointer]:
+              - /url: /clients/segments
+              - paragraph [ref=f206e108]: Client segments
+          - separator [ref=f206e110]
+          - generic [ref=f206e111]:
+            - paragraph [ref=f206e112]: Engage
+            - link [ref=f206e114] [cursor=pointer]:
+              - /url: /clients/loyalty
+              - paragraph [ref=f206e115]: Client loyalty
+            - link [ref=f206e117] [cursor=pointer]:
+              - /url: /clients/online-reputation
+              - paragraph [ref=f206e118]: Online reputation
+    - generic [ref=f206e125]:
+      - generic [ref=f206e127]:
+        - generic [ref=f206e128]:
+          - generic [ref=f206e129]:
+            - paragraph [ref=f206e130]: Client segments
+            - generic [ref=f206e131]: "11"
+          - paragraph [ref=f206e132]:
+            - text: Create and manage automated segments you can easily use across the Fresha platform including marketing tools, reporting, and calendar.
+            - link "Learn more" [ref=f206e133] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/clients/100685-segment-your-clients
+        - generic [ref=f206e135]:
+          - button "Options" [ref=f206e137] [cursor=pointer]
+          - button "Add" [ref=f206e142] [cursor=pointer]
+      - generic [ref=f206e148]:
+        - generic [ref=f206e149]:
+          - tablist [ref=f206e154]:
+            - tab "Standard" [selected] [ref=f206e155] [cursor=pointer]
+            - tab "Custom" [ref=f206e157] [cursor=pointer]
+          - textbox [ref=f206e164]:
+            - /placeholder: Search by name
+        - generic [ref=f206e165]:
+          - generic [ref=f206e167]:
+            - generic [ref=f206e168] [cursor=pointer]:
+              - button [ref=f206e169]
+              - generic [ref=f206e170]:
+                - generic [ref=f206e176]:
+                  - generic [ref=f206e177]:
+                    - heading "New clients" [level=3] [ref=f206e178]
+                    - generic: "3"
+                  - heading "Clients added in the last 30 days" [level=4] [ref=f206e179]
+                - button "Actions" [ref=f206e183]
+            - generic [ref=f206e188] [cursor=pointer]:
+              - button [ref=f206e189]
+              - generic [ref=f206e190]:
+                - generic [ref=f206e196]:
+                  - generic [ref=f206e197]:
+                    - heading "Recent clients" [level=3] [ref=f206e198]
+                    - generic: "0"
+                  - heading "Clients with appointments in the last 30 days" [level=4] [ref=f206e199]
+                - button "Actions" [ref=f206e203]
+            - generic [ref=f206e208] [cursor=pointer]:
+              - button [ref=f206e209]
+              - generic [ref=f206e210]:
+                - generic [ref=f206e216]:
+                  - generic [ref=f206e217]:
+                    - heading "First visit" [level=3] [ref=f206e218]
+                    - generic: "1"
+                  - heading "Clients with no appointments in the past, and with appointments in the future" [level=4] [ref=f206e219]
+                - button "Actions" [ref=f206e223]
+            - generic [ref=f206e228] [cursor=pointer]:
+              - button [ref=f206e229]
+              - generic [ref=f206e230]:
+                - generic [ref=f206e236]:
+                  - generic [ref=f206e237]:
+                    - heading "Loyal clients" [level=3] [ref=f206e238]
+                    - generic: "0"
+                  - heading "Clients with 2 or more sales in the last 5 months" [level=4] [ref=f206e239]
+                - button "Actions" [ref=f206e243]
+            - generic [ref=f206e248] [cursor=pointer]:
+              - button [ref=f206e249]
+              - generic [ref=f206e250]:
+                - generic [ref=f206e256]:
+                  - generic [ref=f206e257]:
+                    - heading "Lapsed clients" [level=3] [ref=f206e258]
+                    - generic: "0"
+                  - heading "Clients with 3 or more sales in the last 12 months, and with no sales in the last 2 months" [level=4] [ref=f206e259]
+                - button "Actions" [ref=f206e263]
+            - generic [ref=f206e268] [cursor=pointer]:
+              - button [ref=f206e269]
+              - generic [ref=f206e270]:
+                - generic [ref=f206e276]:
+                  - generic [ref=f206e277]:
+                    - heading "High spenders" [level=3] [ref=f206e278]
+                    - generic: "0"
+                  - heading "Clients with more than KWD 500 in sales in the last 12 months" [level=4] [ref=f206e279]
+                - button "Actions" [ref=f206e283]
+            - generic [ref=f206e288] [cursor=pointer]:
+              - button [ref=f206e289]
+              - generic [ref=f206e290]:
+                - generic [ref=f206e296]:
+                  - generic [ref=f206e297]:
+                    - heading "Upcoming birthdays" [level=3] [ref=f206e298]
+                    - generic: "0"
+                  - heading "Clients with birthdays in the next 30 days" [level=4] [ref=f206e299]
+                - button "Actions" [ref=f206e303]
+          - generic [ref=f206e309]:
+            - paragraph [ref=f206e310]: Custom client segments
+            - generic [ref=f206e311]:
+              - generic [ref=f206e312]:
+                - generic [ref=f206e313] [cursor=pointer]:
+                  - button [ref=f206e314]
+                  - generic [ref=f206e315]:
+                    - generic [ref=f206e321]:
+                      - generic [ref=f206e322]:
+                        - heading "Clients who booked online" [level=3] [ref=f206e323]
+                        - generic: "0"
+                      - heading "Clients with appointments, excluding channel Offline" [level=4] [ref=f206e324]
+                    - button "Actions" [ref=f206e328]
+                - generic [ref=f206e333] [cursor=pointer]:
+                  - button [ref=f206e334]
+                  - generic [ref=f206e335]:
+                    - generic [ref=f206e341]:
+                      - generic [ref=f206e342]:
+                        - heading "Clients with upcoming appointments" [level=3] [ref=f206e343]
+                        - generic: "1"
+                      - heading "Clients with appointments in the future" [level=4] [ref=f206e344]
+                    - button "Actions" [ref=f206e348]
+                - generic [ref=f206e353] [cursor=pointer]:
+                  - button [ref=f206e354]
+                  - generic [ref=f206e355]:
+                    - generic [ref=f206e361]:
+                      - generic [ref=f206e362]:
+                        - heading "Clients with sales" [level=3] [ref=f206e363]
+                        - generic: "0"
+                      - heading "Clients with sales in the last 30 days" [level=4] [ref=f206e364]
+                    - button "Actions" [ref=f206e368]
+                - generic [ref=f206e373] [cursor=pointer]:
+                  - button [ref=f206e374]
+                  - generic [ref=f206e375]:
+                    - generic [ref=f206e381]:
+                      - generic [ref=f206e382]:
+                        - heading "Imported clients" [level=3] [ref=f206e383]
+                        - generic: "0"
+                      - heading "Clients with selected client source" [level=4] [ref=f206e384]
+                    - button "Actions" [ref=f206e388]
+              - button "Add segment" [ref=f206e394] [cursor=pointer]

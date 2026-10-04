@@ -1,0 +1,144 @@
+- generic [ref=f127e12]:
+  - generic [ref=f127e13]:
+    - link "Fresha" [ref=f127e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f127e16]:
+      - button [ref=f127e18] [cursor=pointer]:
+        - paragraph [ref=f127e20]: Continue setup
+      - button "Search" [ref=f127e22] [cursor=pointer]
+      - button "Performance insights" [ref=f127e24] [cursor=pointer]
+      - button "Notifications" [ref=f127e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f127e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f127e31] [cursor=pointer]:
+        - generic [ref=f127e32]: FA
+  - generic [ref=f127e34]:
+    - generic [ref=f127e38]:
+      - generic [ref=f127e39]:
+        - link [ref=f127e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f127e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f127e50] [cursor=pointer]
+        - button [ref=f127e54] [cursor=pointer]
+        - button [ref=f127e58] [cursor=pointer]
+        - button [ref=f127e62] [cursor=pointer]
+        - button [ref=f127e66] [cursor=pointer]
+        - button [ref=f127e70] [cursor=pointer]
+        - link [ref=f127e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f127e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f127e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f127e86] [cursor=pointer]
+    - generic [ref=f127e94]:
+      - generic [ref=f127e96]:
+        - button "Back" [ref=f127e97] [cursor=pointer]
+        - navigation [ref=f127e102]:
+          - list [ref=f127e103]:
+            - listitem [ref=f127e104]:
+              - link "Workspace settings •" [ref=f127e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f127e106]:
+              - link "Team" [ref=f127e107] [cursor=pointer]:
+                - /url: /setup/team
+      - generic [ref=f127e112]:
+        - paragraph [ref=f127e114]: Team
+        - list [ref=f127e115]:
+          - listitem [ref=f127e116]:
+            - list [ref=f127e117]:
+              - listitem [ref=f127e118] [cursor=pointer]:
+                - link [ref=f127e119]:
+                  - /url: /setup/team/permissions
+                - generic [ref=f127e120]: Permission roles
+              - listitem [ref=f127e122] [cursor=pointer]:
+                - link [ref=f127e123]:
+                  - /url: /setup/team/time-off
+                - generic [ref=f127e124]: Time off types
+              - listitem [ref=f127e126] [cursor=pointer]:
+                - link [ref=f127e127]:
+                  - /url: /setup/team/timesheets
+                - generic [ref=f127e128]: Timesheets
+              - listitem [ref=f127e130] [cursor=pointer]:
+                - link [ref=f127e131]:
+                  - /url: /setup/team/shifts
+                - generic [ref=f127e132]: Shifts
+              - listitem [ref=f127e134] [cursor=pointer]:
+                - link [ref=f127e135]:
+                  - /url: /setup/team/pay-runs
+                - generic [ref=f127e136]: Pay runs
+              - listitem [ref=f127e138] [cursor=pointer]:
+                - link [ref=f127e139]:
+                  - /url: /setup/team/comissions
+                - generic [ref=f127e140]: Commissions
+              - listitem [ref=f127e142] [cursor=pointer]:
+                - link [ref=f127e143]:
+                  - /url: /setup/team/pin-switching
+                - generic [ref=f127e144]: PIN switching
+        - separator [ref=f127e146]
+        - list [ref=f127e147]:
+          - listitem [ref=f127e148]:
+            - list [ref=f127e149]:
+              - listitem [ref=f127e150] [cursor=pointer]:
+                - button [ref=f127e151]
+                - generic [ref=f127e152]: Team members
+              - listitem [ref=f127e154] [cursor=pointer]:
+                - button [ref=f127e155]
+                - generic [ref=f127e156]: Scheduled shifts
+      - generic [ref=f127e159]:
+        - generic [ref=f127e160]:
+          - generic [ref=f127e161]:
+            - paragraph [ref=f127e163]: Permission roles
+            - paragraph [ref=f127e164]:
+              - text: Choose what areas are accessible to each permission role.
+              - link "Learn more" [ref=f127e165] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/team/100687-create-permission-roles
+          - generic [ref=f127e167]:
+            - button "Options" [ref=f127e169] [cursor=pointer]
+            - button "Add" [ref=f127e174] [cursor=pointer]
+        - generic [ref=f127e178]:
+          - generic [ref=f127e179] [cursor=pointer]:
+            - button [ref=f127e180]
+            - generic [ref=f127e181]:
+              - generic [ref=f127e184]:
+                - heading "Basic" [level=3] [ref=f127e185]
+                - heading "Partial access to Calendar, Sales, and Reports." [level=4] [ref=f127e187]
+              - button "Actions" [ref=f127e192]
+          - generic [ref=f127e197] [cursor=pointer]:
+            - button [ref=f127e198]
+            - generic [ref=f127e199]:
+              - generic [ref=f127e202]:
+                - heading "Low" [level=3] [ref=f127e203]
+                - heading "Partial access to Calendar, Sales, Clients, Online profile, Marketing, Team, Reports, and Workspace." [level=4] [ref=f127e205]
+              - button "Actions" [ref=f127e209]
+          - generic [ref=f127e214] [cursor=pointer]:
+            - button [ref=f127e215]
+            - generic [ref=f127e216]:
+              - generic [ref=f127e219]:
+                - heading "Medium" [level=3] [ref=f127e220]
+                - heading "Partial access to Calendar, Sales, Clients, Catalog, Online profile, Marketing, Team, Reports, and Workspace." [level=4] [ref=f127e224]
+              - button "Actions" [ref=f127e228]
+          - generic [ref=f127e233] [cursor=pointer]:
+            - button [ref=f127e234]
+            - generic [ref=f127e235]:
+              - generic [ref=f127e238]:
+                - heading "High" [level=3] [ref=f127e239]
+                - heading "Full access to Clients, Online profile, Marketing, and Workspace. Partial access to Calendar, Sales, Catalog, Team, Reports, and Payments and wallet." [level=4] [ref=f127e241]
+              - button "Actions" [ref=f127e245]
+        - generic [ref=f127e250]:
+          - heading "Other" [level=2] [ref=f127e253]
+          - generic [ref=f127e254]:
+            - generic [ref=f127e256]:
+              - generic [ref=f127e258]:
+                - generic [ref=f127e259]:
+                  - heading "Workspace owner" [level=3] [ref=f127e260]
+                  - heading "Full access to all areas." [level=4] [ref=f127e262]
+                - generic [ref=f127e263]: FA
+              - button "Actions" [ref=f127e272] [cursor=pointer]
+            - generic [ref=f127e278]:
+              - generic [ref=f127e281]:
+                - heading "No access" [level=3] [ref=f127e282]
+                - heading "No access to workspace features." [level=4] [ref=f127e284]
+              - button "Actions" [ref=f127e289] [cursor=pointer]

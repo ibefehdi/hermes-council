@@ -1,0 +1,183 @@
+- generic [ref=f105e12]:
+  - generic [ref=f105e13]:
+    - link "Fresha" [ref=f105e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f105e16]:
+      - button [ref=f105e131] [cursor=pointer]:
+        - paragraph [ref=f105e133]: Continue setup
+      - button "Search" [ref=f105e18] [cursor=pointer]
+      - button "Performance insights" [ref=f105e20] [cursor=pointer]
+      - button "Notifications" [ref=f105e28] [cursor=pointer]:
+        - generic [ref=f105e29]: "4"
+      - link "Fresha Connect" [ref=f105e33] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f105e38] [cursor=pointer]:
+        - generic [ref=f105e39]: FA
+  - generic [ref=f105e41]:
+    - generic [ref=f105e42]:
+      - generic [ref=f105e45]:
+        - generic [ref=f105e46]:
+          - link [ref=f105e49] [cursor=pointer]:
+            - /url: /dashboard
+          - link [ref=f105e53] [cursor=pointer]:
+            - /url: /calendar
+          - button [ref=f105e57] [cursor=pointer]
+          - button [ref=f105e61] [cursor=pointer]
+          - button [ref=f105e65] [cursor=pointer]
+          - button [ref=f105e69] [cursor=pointer]
+          - button [active] [ref=f105e73] [cursor=pointer]
+          - button [ref=f105e77] [cursor=pointer]
+          - link [ref=f105e81] [cursor=pointer]:
+            - /url: /reports
+          - link [ref=f105e85] [cursor=pointer]:
+            - /url: /add-ons
+          - link [ref=f105e89] [cursor=pointer]:
+            - /url: /setup
+        - button [ref=f105e93] [cursor=pointer]
+      - generic [ref=f105e135]:
+        - button "Collapse Navigation Menu" [ref=f105e137] [cursor=pointer]
+        - generic [ref=f105e143]:
+          - generic [ref=f105e144]:
+            - paragraph [ref=f105e145]: Messaging
+            - link [ref=f105e147] [cursor=pointer]:
+              - /url: /marketing/blast-campaigns/home
+              - paragraph [ref=f105e148]: Blast campaigns
+            - link [ref=f105e150] [cursor=pointer]:
+              - /url: /marketing/automated-messages
+              - paragraph [ref=f105e151]: Automations
+            - link [ref=f105e153] [cursor=pointer]:
+              - /url: /marketing/notifications
+              - paragraph [ref=f105e154]: Messages history
+          - separator [ref=f105e156]
+          - generic [ref=f105e157]:
+            - paragraph [ref=f105e158]: Promotion
+            - link [ref=f105e160] [cursor=pointer]:
+              - /url: /marketing/deals
+              - paragraph [ref=f105e161]: Deals
+            - link [ref=f105e163] [cursor=pointer]:
+              - /url: /marketing/peak-pricing
+              - paragraph [ref=f105e164]: Smart pricing
+          - separator [ref=f105e166]
+          - generic [ref=f105e167]:
+            - paragraph [ref=f105e168]: Engage
+            - link [ref=f105e170] [cursor=pointer]:
+              - /url: /clients/online-reputation?tab=all
+              - paragraph [ref=f105e171]: Reviews
+    - generic [ref=f105e177]:
+      - generic [ref=f105e179]:
+        - generic [ref=f105e180]:
+          - generic [ref=f105e181]:
+            - heading "Clients list" [level=1] [ref=f105e182]
+            - generic [ref=f105e183]: "3"
+          - paragraph [ref=f105e184]:
+            - text: View, add, edit and delete your client's details.
+            - link "Learn more" [ref=f105e185] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/clients/320-create-client-profiles
+        - generic [ref=f105e187]:
+          - button "Options" [ref=f105e190] [cursor=pointer]
+          - button "Add" [ref=f105e195] [cursor=pointer]
+      - generic [ref=f105e202]:
+        - generic [ref=f105e203]:
+          - generic [ref=f105e204]:
+            - generic [ref=f105e205]:
+              - paragraph [ref=f105e206]: Import your client list
+              - paragraph [ref=f105e207]: Takes a few minutes and prevents new client fees for existing clients who book online
+            - generic [ref=f105e208]:
+              - button "Start import" [ref=f105e209] [cursor=pointer]
+              - link "Learn more" [ref=f105e213] [cursor=pointer]:
+                - /url: https://www.fresha.com/help-center/knowledge-base/clients/101243-import-your-existing-client-list
+          - img "Import clients" [ref=f105e217]
+        - button "Close" [ref=f105e218] [cursor=pointer]
+      - generic [ref=f105e223]:
+        - generic [ref=f105e225]:
+          - generic [ref=f105e226]:
+            - generic [ref=f105e227]:
+              - generic [ref=f105e228]: Search
+              - textbox "Search" [ref=f105e233]:
+                - /placeholder: Name, email or phone
+            - button "Filters" [ref=f105e234] [cursor=pointer]
+          - button "Created at (newest first)" [ref=f105e243] [cursor=pointer]
+        - region [ref=f105e248]:
+          - generic [ref=f105e249]:
+            - table [ref=f105e252]:
+              - rowgroup [ref=f105e260]:
+                - row [ref=f105e261]:
+                  - columnheader "selectAll selectAll" [ref=f105e262]:
+                    - generic [ref=f105e264] [cursor=pointer]:
+                      - paragraph [ref=f105e267]: selectAll
+                      - checkbox "selectAll" [ref=f105e268]
+                  - columnheader [ref=f105e269]:
+                    - button "Client name" [ref=f105e272] [cursor=pointer]
+                  - columnheader "Mobile number" [ref=f105e274]
+                  - columnheader [ref=f105e278]:
+                    - button "Reviews" [ref=f105e281] [cursor=pointer]
+                  - columnheader [ref=f105e283]:
+                    - button "Sales" [ref=f105e286] [cursor=pointer]
+                  - columnheader [ref=f105e288]:
+                    - button "Created at" [ref=f105e291] [cursor=pointer]
+            - table [ref=f105e294]:
+              - rowgroup [ref=f105e302]:
+                - button [ref=f105e303] [cursor=pointer]:
+                  - cell "select-row-301298884 select-row-301298884" [ref=f105e304]:
+                    - generic [ref=f105e305]:
+                      - paragraph [ref=f105e308]: select-row-301298884
+                      - checkbox "select-row-301298884" [ref=f105e309]
+                  - cell "J Jack Doe jack@example.com" [ref=f105e310]:
+                    - generic [ref=f105e311]:
+                      - generic [ref=f105e312]: J
+                      - generic [ref=f105e315]:
+                        - paragraph [ref=f105e316]: Jack Doe
+                        - paragraph [ref=f105e317]: jack@example.com
+                  - cell [ref=f105e318]:
+                    - paragraph [ref=f105e319]: "-"
+                  - cell [ref=f105e320]:
+                    - paragraph [ref=f105e321]: "-"
+                  - cell "KWD 0" [ref=f105e322]:
+                    - paragraph [ref=f105e323]:
+                      - generic [ref=f105e324]: KWD 0
+                  - cell [ref=f105e325]:
+                    - paragraph [ref=f105e326]: Oct 4, 2026
+                - button [ref=f105e327] [cursor=pointer]:
+                  - cell "select-row-301298878 select-row-301298878" [ref=f105e328]:
+                    - generic [ref=f105e329]:
+                      - paragraph [ref=f105e332]: select-row-301298878
+                      - checkbox "select-row-301298878" [ref=f105e333]
+                  - cell "J Jane Doe jane@example.com" [ref=f105e334]:
+                    - generic [ref=f105e335]:
+                      - generic [ref=f105e336]: J
+                      - generic [ref=f105e339]:
+                        - paragraph [ref=f105e340]: Jane Doe
+                        - paragraph [ref=f105e341]: jane@example.com
+                  - cell [ref=f105e342]:
+                    - paragraph [ref=f105e343]: "-"
+                  - cell [ref=f105e344]:
+                    - paragraph [ref=f105e345]: "-"
+                  - cell "KWD 0" [ref=f105e346]:
+                    - paragraph [ref=f105e347]:
+                      - generic [ref=f105e348]: KWD 0
+                  - cell [ref=f105e349]:
+                    - paragraph [ref=f105e350]: Oct 4, 2026
+                - button [ref=f105e351] [cursor=pointer]:
+                  - cell "select-row-301298877 select-row-301298877" [ref=f105e352]:
+                    - generic [ref=f105e353]:
+                      - paragraph [ref=f105e356]: select-row-301298877
+                      - checkbox "select-row-301298877" [ref=f105e357]
+                  - cell "J John Doe john@example.com" [ref=f105e358]:
+                    - generic [ref=f105e359]:
+                      - generic [ref=f105e360]: J
+                      - generic [ref=f105e363]:
+                        - paragraph [ref=f105e364]: John Doe
+                        - paragraph [ref=f105e365]: john@example.com
+                  - cell [ref=f105e366]:
+                    - paragraph [ref=f105e367]: "-"
+                  - cell [ref=f105e368]:
+                    - paragraph [ref=f105e369]: "-"
+                  - cell "KWD 0" [ref=f105e370]:
+                    - paragraph [ref=f105e371]:
+                      - generic [ref=f105e372]: KWD 0
+                  - cell [ref=f105e373]:
+                    - paragraph [ref=f105e374]: Oct 4, 2026
+        - generic [ref=f105e376]:
+          - generic [ref=f105e377]: Viewing results 1 to 3 of 3
+          - paragraph [ref=f105e379]: Viewing 1 - 3 of 3 results

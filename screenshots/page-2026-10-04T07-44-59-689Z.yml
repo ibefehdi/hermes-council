@@ -1,0 +1,141 @@
+- generic [ref=f62e12]:
+  - generic [ref=f62e13]:
+    - link "Fresha" [ref=f62e15] [cursor=pointer]:
+      - /url: /calendar
+      - img "Fresha"
+    - generic [ref=f62e16]:
+      - button [ref=f62e18] [cursor=pointer]:
+        - paragraph [ref=f62e20]: Continue setup
+      - button "Search" [ref=f62e22] [cursor=pointer]
+      - button "Performance insights" [ref=f62e24] [cursor=pointer]
+      - button "Notifications" [ref=f62e27] [cursor=pointer]
+      - link "Fresha Connect" [ref=f62e29] [cursor=pointer]:
+        - /url: /connect
+      - button "Open user menu" [ref=f62e31] [cursor=pointer]:
+        - generic [ref=f62e32]: FA
+  - generic [ref=f62e34]:
+    - generic [ref=f62e38]:
+      - generic [ref=f62e39]:
+        - link [ref=f62e42] [cursor=pointer]:
+          - /url: /dashboard
+        - link [ref=f62e46] [cursor=pointer]:
+          - /url: /calendar
+        - button [ref=f62e50] [cursor=pointer]
+        - button [ref=f62e54] [cursor=pointer]
+        - button [ref=f62e58] [cursor=pointer]
+        - button [ref=f62e62] [cursor=pointer]
+        - button [ref=f62e66] [cursor=pointer]
+        - button [ref=f62e70] [cursor=pointer]
+        - link [ref=f62e74] [cursor=pointer]:
+          - /url: /reports
+        - link [ref=f62e78] [cursor=pointer]:
+          - /url: /add-ons
+        - link [ref=f62e82] [cursor=pointer]:
+          - /url: /setup
+      - button [ref=f62e86] [cursor=pointer]
+    - generic [ref=f62e94]:
+      - generic [ref=f62e96]:
+        - button "Back" [ref=f62e97] [cursor=pointer]
+        - navigation [ref=f62e102]:
+          - list [ref=f62e103]:
+            - listitem [ref=f62e104]:
+              - link "Workspace settings •" [ref=f62e105] [cursor=pointer]:
+                - /url: /setup
+            - listitem [ref=f62e106]:
+              - link "Scheduling" [ref=f62e107] [cursor=pointer]:
+                - /url: /setup/scheduling
+      - generic [ref=f62e112]:
+        - paragraph [ref=f62e114]: Scheduling
+        - list [ref=f62e115]:
+          - listitem [ref=f62e116]:
+            - list [ref=f62e117]:
+              - listitem [ref=f62e118] [cursor=pointer]:
+                - link [ref=f62e119]:
+                  - /url: /setup/scheduling/time-and-calendar
+                - generic [ref=f62e120]: Time and calendar
+              - listitem [ref=f62e122] [cursor=pointer]:
+                - link [ref=f62e123]:
+                  - /url: /setup/scheduling/waitlist
+                - generic [ref=f62e124]: Waitlist appointments
+              - listitem [ref=f62e126] [cursor=pointer]:
+                - link [ref=f62e127]:
+                  - /url: /setup/scheduling/blocked-time-types
+                - generic [ref=f62e128]: Blocked time types
+              - listitem [ref=f62e130] [cursor=pointer]:
+                - link [ref=f62e131]:
+                  - /url: /setup/scheduling/resources
+                - generic [ref=f62e132]: Resources
+              - listitem [ref=f62e134] [cursor=pointer]:
+                - link [ref=f62e135]:
+                  - /url: /setup/scheduling/cancellation-reasons
+                - generic [ref=f62e136]: Cancellation reasons
+              - listitem [ref=f62e138] [cursor=pointer]:
+                - link [ref=f62e139]:
+                  - /url: /setup/scheduling/appointment-statuses
+                - generic [ref=f62e140]: Appointment statuses
+              - listitem [ref=f62e142] [cursor=pointer]:
+                - link [ref=f62e143]:
+                  - /url: /setup/scheduling/closed-periods
+                - generic [ref=f62e144]: Closed periods
+            - separator [ref=f62e147]
+          - listitem [ref=f62e148]:
+            - generic [ref=f62e149]: Online booking
+            - list [ref=f62e151]:
+              - listitem [ref=f62e152] [cursor=pointer]:
+                - link [ref=f62e153]:
+                  - /url: /setup/scheduling/dynamic-assignment
+                - generic [ref=f62e154]: Dynamic assignment
+              - listitem [ref=f62e156] [cursor=pointer]:
+                - link [ref=f62e157]:
+                  - /url: /setup/scheduling/availability
+                - generic [ref=f62e158]: Availability
+              - listitem [ref=f62e160] [cursor=pointer]:
+                - link [ref=f62e161]:
+                  - /url: /setup/scheduling/booking-options
+                - generic [ref=f62e162]: Booking options
+        - separator [ref=f62e164]
+        - list [ref=f62e165]:
+          - listitem [ref=f62e166]:
+            - list [ref=f62e167]:
+              - listitem [ref=f62e168] [cursor=pointer]:
+                - button [ref=f62e169]
+                - generic [ref=f62e170]: Marketplace profile
+              - listitem [ref=f62e172] [cursor=pointer]:
+                - button [ref=f62e173]
+                - generic [ref=f62e174]: Service menu
+              - listitem [ref=f62e176] [cursor=pointer]:
+                - button [ref=f62e177]
+                - generic [ref=f62e178]: Scheduled shifts
+      - generic [ref=f62e181]:
+        - generic [ref=f62e183]:
+          - paragraph [ref=f62e185]: Dynamic assignment
+          - paragraph [ref=f62e186]:
+            - text: Choose how appointments are assigned or reassigned when clients book online.
+            - link "Learn more" [ref=f62e187] [cursor=pointer]:
+              - /url: https://www.fresha.com/help-center/knowledge-base/calendar/101218-manage-online-bookings-settings
+        - generic [ref=f62e190]:
+          - generic [ref=f62e191]:
+            - generic [ref=f62e192]:
+              - heading "New appointment assignment" [level=2] [ref=f62e193]
+              - paragraph [ref=f62e194]: Choose how new appointments are assigned when multiple team members are available for clients who don't select a specific person.
+            - button "Edit" [ref=f62e195] [cursor=pointer]
+          - list [ref=f62e199]:
+            - listitem [ref=f62e200]:
+              - generic [ref=f62e202]: Assign the team member with most availability on the day booked
+        - generic [ref=f62e205]:
+          - generic [ref=f62e206]:
+            - generic [ref=f62e207]:
+              - heading "Booked appointment reassignment" [level=2] [ref=f62e208]
+              - paragraph [ref=f62e209]:
+                - text: Choose whether appointments for clients with no preferred team member can be reassigned to accommodate clients who select a specific person.
+                - link "Learn more" [ref=f62e210] [cursor=pointer]:
+                  - /url: https://www.fresha.com/help-center/knowledge-base/calendar/101735-set-up-dynamic-reassignment-for-appointments
+            - button "Edit" [ref=f62e211] [cursor=pointer]
+          - list [ref=f62e215]:
+            - listitem [ref=f62e216]:
+              - generic [ref=f62e218]: Appointments that were booked online can be reassigned
+            - listitem [ref=f62e219]:
+              - generic [ref=f62e221]:
+                - text: Reassignment is possible up to
+                - strong [ref=f62e222]: 15 minutes
+                - text: before the appointment's start time
