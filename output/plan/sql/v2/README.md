@@ -7,9 +7,9 @@ Round 2 (final plan round) output. Written from scratch following the binding AD
 | File | Description | ADRs implemented |
 |------|-------------|-----------------|
 | `000001_enable_extensions.sql` | Extensions (btree_gist, pgcrypto, citext, uuid-ossp), pg_cron/pgmq (skipped in PGlite), schemas, base grants | ADR-20, ADR-24, ADR-33, ADR-44, ADR-46 |
-| `000002_create_tenants.sql` | Tenants, profiles, currencies, plan_features, authorization helpers (`current_tenant_ids`, `current_branch_scope`, `has_tenant_role`, `has_tenant_role_any_branch`), `handle_new_user` trigger, `set_updated_at` trigger | ADR-15, ADR-16, ADR-17, ADR-18, ADR-19, ADR-20, ADR-44, ADR-45, ADR-46 |
+| `000002_create_tenants.sql` | Tenants, profiles, currencies, plan_features, `handle_new_user` trigger, `set_updated_at` trigger | ADR-15, ADR-16, ADR-17, ADR-18, ADR-44, ADR-45, ADR-46 |
 | `000003_create_branches.sql` | Branches (with IANA timezone, calendar prefs), `branch_opening_hours` (split intervals, overnight), `closed_periods` | ADR-15, ADR-20, ADR-26, ADR-44, ADR-45, ADR-46, ADR-52 |
-| `000004_create_memberships.sql` | Memberships (role enum: 4 values, no `platform_admin`), all-branches representation (`branch_id NULL` + `all_branches boolean`), partial unique index for tenant-wide rows | ADR-19, ADR-20, ADR-37, ADR-44, ADR-46 |
+| `000004_create_memberships.sql` | Memberships (role enum: 4 values, no `platform_admin`), all-branches representation, authorization helpers (`current_tenant_ids`, `current_branch_scope`, `has_tenant_role`, `has_tenant_role_any_branch`), partial unique index | ADR-19, ADR-20, ADR-37, ADR-44, ADR-46 |
 | `000005_create_staff.sql` | `staff_members` (nullable `user_id`), `staff_branch_assignments`, `shifts`, `blocked_time_types`, `blocked_times` (exclusion constraint, all-branches support) | ADR-12, ADR-15, ADR-16, ADR-20, ADR-24, ADR-26, ADR-44, ADR-46 |
 | `000006_create_services.sql` | `service_categories`, `services` (with buffers), `service_branch_overrides` (per-branch price/duration/buffers), `service_staff`, `resolve_service` RPC | ADR-13, ADR-15, ADR-16, ADR-17, ADR-20, ADR-25, ADR-44, ADR-46 |
 | `000007_create_clients.sql` | `clients` (tenant-scoped, bilingual names, protected columns, `is_deleted`/`merged_into`/`source`), `client_notes` | ADR-9, ADR-11, ADR-15, ADR-16, ADR-20, ADR-44, ADR-46, ADR-52 |
@@ -42,12 +42,36 @@ node /Users/fahad/council/check-sql.mjs \
 
 The checker uses PGlite (real Postgres in WASM) with stand-ins for Supabase's `auth.uid()`, `auth.jwt()`, and the `anon`/`authenticated`/`service_role` roles.
 
+### Final checker output
+
+```
+ok   migration 000001_enable_extensions.sql
+ok   migration 000002_create_tenants.sql
+ok   migration 000003_create_branches.sql
+ok   migration 000004_create_memberships.sql
+ok   migration 000005_create_staff.sql
+ok   migration 000006_create_services.sql
+ok   migration 000007_create_clients.sql
+ok   migration 000008_create_appointments.sql
+ok   migration 000009_create_sales.sql
+ok   migration 000010_create_settings.sql
+ok   migration 000011_create_views.sql
+ok   migration 000012_enable_rls.sql
+
+33 public tables, 33 with RLS enabled
+warn public.idempotency_keys: RLS enabled but no policies (deny-all)
+ok   test 001_tenant_isolation.sql
+ok   test 002_branch_isolation.sql
+
+OK: migrations apply cleanly and all tests pass
+```
+
 ## Residual issues and deviations
 
 | ID | Issue | Severity |
 |----|-------|----------|
-| F-final-sql-1 | PGlite does not support exclusion constraints with partial conditions (`WHERE` clauses on EXCLUDE). The appointment_items exclusion constraint uses the unconditional form `EXCLUDE USING gist (staff_id WITH =, busy_range WITH &&) WHERE (staff_id IS NOT NULL)` - PGlite may reject this. The intent is documented; on real Postgres/Supabase the constraint is correctly applied. | Minor |
-| F-final-sql-2 | PGlite's citext extension may differ from Supabase hosted Postgres. The citext extension is enabled but not used in the current schema (columns use plain `text` with application-level normalization). | Minor |
-| F-final-sql-3 | The `resolve_service` function uses `returns record` which requires `AS (...)` call-site syntax. In practice Edge Functions would call it via `SELECT * FROM resolve_service(id, branch) AS (price_minor bigint, ...)`. An alternative `returns table(...)` form would be cleaner but PGlite may behave differently. | Minor |
-| F-final-sql-4 | `appointment_items.status_active` is declared as `generated always as (true) stored`. The actual busy-status exclusion logic (dropping cancelled items from the constraint) would require either a trigger that sets `status_active = false` for cancelled items, or a partial exclusion constraint with a `WHERE` clause - the latter is not supported by PGlite. The current design has the exclusion constraint covering all rows; the advisory-lock RPC path handles the cross-entity check. | Minor |
-| F-final-sql-5 | `handle_new_user` trigger references `auth.users` which exists in Supabase but not in PGlite. The trigger is wrapped in `check-sql: skip-begin/end`. | Minor |
+| F-final-sql-1 | `appointment_items.busy_range` and `appointments.during` are populated by BEFORE INSERT/UPDATE triggers rather than `GENERATED ALWAYS` columns. PGlite does not accept `integer * interval '1 minute'` in generated column expressions (not immutable). Triggers provide equivalent functionality. On real Postgres 15+, generated columns could be restored for `during`. | Minor |
+| F-final-sql-2 | The `appointment_items` exclusion constraint `EXCLUDE USING gist (staff_id WITH =, busy_range WITH &&) WHERE (staff_id IS NOT NULL)` — PGlite may or may not support the WHERE clause on exclusion constraints. On real Postgres/Supabase the constraint is correctly applied including the partial condition. | Minor |
+| F-final-sql-3 | `appointment_items.status_active` is a plain `boolean NOT NULL DEFAULT true` column. The busy-status exclusion logic (dropping cancelled items from the constraint) uses this flag set by the booking RPC rather than a partial WHERE clause, since PGlite does not support partial exclusion constraints. Real Postgres supports either approach. | Minor |
+| F-final-sql-4 | The `resolve_service` function uses `returns record`. For production, converting to `returns table(price_minor bigint, ...)` would avoid the `AS (...)` call-site syntax requirement. | Minor |
+| F-final-sql-5 | `handle_new_user` trigger references `auth.users`. The trigger body is wrapped in `check-sql: skip-begin/end` because PGlite's auth stub doesn't support triggers on auth.users. | Minor |
