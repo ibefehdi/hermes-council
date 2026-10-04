@@ -44,7 +44,7 @@ After a survey, run a second pass that builds on it:
 ./run-council.sh deep "Extra focus for this pass"
 ```
 
-Five workers run in parallel, each with a brief in `briefs/deep/`: Setup and every settings page, every report, everything the survey missed, create/edit flows with `COUNCIL-TEST` data, and architecture (API catalogue, data model, page connectivity). Each brief asks for full technical detail and Mermaid UML diagrams (class, ER, sequence, state, flowchart), validated with `node check-mermaid.mjs <file.md>`. Worker outputs go to `output/technical/`, the verifier checks them against the live dashboard, and the chair writes `output/TECHNICAL_REPORT.md`. The survey's `FINAL_REPORT.md` and its source files are made read-only and backed up to `runs/` first; they are never changed.
+A seed task first fills the account with a realistic `COUNCIL-TEST` data set (clients, services, products, appointments with cash checkouts, quick sales) so lists and reports have content. Then five workers run in parallel, each with a brief in `briefs/deep/`: Setup and every settings page, every report, everything the survey missed, create/edit flows with `COUNCIL-TEST` data, and architecture (API catalogue, data model, page connectivity). Each brief asks for full technical detail and Mermaid UML diagrams (class, ER, sequence, state, flowchart), validated with `node check-mermaid.mjs <file.md>`. Worker outputs go to `output/technical/`, the verifier checks them against the live dashboard, and the chair writes `output/TECHNICAL_REPORT.md`. The survey's `FINAL_REPORT.md` and its source files are made read-only and backed up to `runs/` first; they are never changed.
 
 ## Safety
 

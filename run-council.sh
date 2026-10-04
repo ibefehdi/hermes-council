@@ -82,7 +82,23 @@ else
 fi
 
 hermes kanban init >/dev/null
-hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier verifier --synthesizer chair
+if [[ $MODE == survey ]]; then
+  hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier verifier --synthesizer chair
+else
+  # Seed data first; workers depend on it. Dispatch is paused while dependencies are wired so nothing starts early.
+  hermes pause --reason "wiring council dependencies" >/dev/null
+  trap 'hermes resume >/dev/null 2>&1' EXIT
+  json_field() { python3 -c "import json,sys; d=json.load(sys.stdin); v=d$1; print(' '.join(v) if isinstance(v, list) else v)"; }
+  SEED=$(hermes kanban create "Seed realistic COUNCIL-TEST data - follow briefs $B/common.md and $B/seed.md" \
+    --assignee linker --body-file "$B/seed.md" --json | json_field '["id"]')
+  SWARM=$(hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier verifier --synthesizer chair --json)
+  for w in ${=$(print -r -- "$SWARM" | json_field '["worker_ids"]')}; do
+    hermes kanban link "$SEED" "$w" >/dev/null
+  done
+  print "Seed: $SEED  Workers: $(print -r -- "$SWARM" | json_field '["worker_ids"]')  Verifier: $(print -r -- "$SWARM" | json_field '["verifier_id"]')  Chair: $(print -r -- "$SWARM" | json_field '["synthesizer_id"]')"
+  hermes resume >/dev/null
+  trap - EXIT
+fi
 
 hermes config set kanban.dispatch_interval_seconds 15 >/dev/null
 hermes config set kanban.failure_limit 4 >/dev/null
