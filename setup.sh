@@ -36,8 +36,8 @@ if [[ ! -f .env ]]; then
   if [[ -t 0 ]]; then
     print "==> Dashboard login (stored only in $DIR/.env)"
     read "url?Dashboard URL: "
-    read "user?Dashboard username/email: "
-    read -s "pass?Dashboard password: " && print
+    read "user?Dashboard username/email/phone (optional, pre-fills the login form): "
+    read -s "pass?Dashboard password (leave empty for OTP/SSO login): " && print
     set_env .env DASHBOARD_URL "$url"
     set_env .env DASHBOARD_USER "$user"
     set_env .env DASHBOARD_PASS "$pass"

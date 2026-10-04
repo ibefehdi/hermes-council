@@ -31,9 +31,9 @@ git clone git@github.com:ibefehdi/hermes-council.git ~/council && cd ~/council
 ./run-council.sh "Focus on billing and reports"   # narrower run
 ```
 
-The script logs in, saves the session to `auth.json` (agents reuse it, so the password never reaches the models), starts the Hermes gateway if needed, and launches the swarm. The report lands in `output/FINAL_REPORT.md`; previous runs are moved to `runs/`.
+The script checks the saved session in `auth.json`. If it's missing or expired, it logs in: automatically when `DASHBOARD_PASS` is set, otherwise (OTP, SSO, 2FA, CAPTCHA) it opens a browser where you log in yourself and saves the session as soon as the dashboard loads. Every agent reuses that session, so neither the password nor the OTP ever reaches the models. It then starts the Hermes gateway if needed and launches the swarm. The report lands in `output/FINAL_REPORT.md`; previous runs are moved to `runs/`.
 
-If the login page needs SSO, 2FA, or a CAPTCHA, log in manually once with `npm run login:headed`.
+To refresh the session by hand: `npm run login:headed`. To test it: `node login.mjs --check`.
 
 ## Safety
 

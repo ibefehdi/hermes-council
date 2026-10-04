@@ -7,7 +7,10 @@ cd "$DIR"
 DASHBOARD_URL=$(grep '^DASHBOARD_URL=' "$DIR/.env" 2>/dev/null | tail -1 | cut -d= -f2- | tr -d "\"'")
 : "${DASHBOARD_URL:?Set DASHBOARD_URL in $DIR/.env}"
 
-node "$DIR/login.mjs"
+if ! node "$DIR/login.mjs" --check; then
+  print "A browser window will open: log in (enter your OTP). The session is saved automatically."
+  node "$DIR/login.mjs"
+fi
 
 mkdir -p runs
 if [[ -d output && -n "$(ls -A output 2>/dev/null)" ]]; then
