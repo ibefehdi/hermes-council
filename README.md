@@ -70,6 +70,10 @@ The council turns the reverse-engineering reports into a clean-room plan for a m
 
 An adversarial cross-review of the plan. Each reviewer audits work it didn't write: the linker checks feature coverage against the reverse-engineering reports, the requirements (including a simulated week at a multi-branch spa), the frontend, and every decision; the cartographer checks the data model, SQL, tenant isolation, booking integrity, money handling, the Edge Functions design, the implementation plan and the skills. Findings go to `output/plan/review2/`, the verifier accepts or rejects each one in `adjudication.md`, and the chair applies the accepted fixes in place and logs every change in `output/plan/REVISION_LOG.md`. Round 1 versions are kept in `output/plan/round1/`. If the plan's chair is still working, the review waits for it automatically.
 
+### Auto-push
+
+Every run starts `autopush.sh`, which commits and pushes `output/` and `screenshots/` whenever a file is added or changes (once it has been unchanged for 30 seconds, so files aren't pushed half-written). It refuses to commit anything that looks like an OpenRouter key. Control it with `./autopush.sh start|stop|status`; the log is `autopush.log`. Set `AUTOPUSH=0` to skip it for a run, or `AUTOPUSH_INTERVAL=<seconds>` to change the interval.
+
 ### Final plan
 
 ```sh

@@ -207,5 +207,6 @@ if ! hermes gateway status 2>&1 | grep -q "is running"; then
   sleep 10
 fi
 
+[[ ${AUTOPUSH:-1} == 1 ]] && "$DIR/autopush.sh" start
 echo "Council started ($MODE). Report will be at: $REPORT (Ctrl-C stops watching, not the council)"
 hermes kanban watch

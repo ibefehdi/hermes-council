@@ -5,3 +5,4 @@ runs/
 node_modules/
 *.log
 .DS_Store
+.autopush.pid
