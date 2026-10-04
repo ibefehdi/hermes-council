@@ -2,6 +2,7 @@
 # Usage:
 #   ./run-council.sh ["optional focus"]        survey: map pages/features/links -> output/FINAL_REPORT.md
 #   ./run-council.sh deep ["optional focus"]   deep technical pass on top of the survey -> output/TECHNICAL_REPORT.md
+#   ./run-council.sh plan ["optional focus"]   design council: phase plan, decisions, conventions, Cursor/Claude skills -> output/plan/
 [ -n "${ZSH_VERSION:-}" ] || exec zsh "$0" "$@"
 set -euo pipefail
 
@@ -9,11 +10,12 @@ DIR="${0:A:h}"
 cd "$DIR"
 
 MODE=survey
-if [[ ${1:-} == deep ]]; then
-  MODE=deep
+if [[ ${1:-} == (deep|plan) ]]; then
+  MODE=$1
   shift
 fi
 FOCUS="${1:-Cover the entire dashboard.}"
+[[ $MODE == plan && -z ${1:-} ]] && FOCUS="Plan the full product, MVP first."
 OUT="$DIR/output"
 TS=$(date +%Y%m%d-%H%M%S)
 
@@ -35,7 +37,12 @@ if [[ $MODE == deep && ! -f "$OUT/FINAL_REPORT.md" ]]; then
   exit 1
 fi
 
-if ! node "$DIR/login.mjs" --check; then
+if [[ $MODE == plan && ! -f "$OUT/TECHNICAL_REPORT.md" ]]; then
+  print "Plan mode builds on the deep pass. Run ./run-council.sh deep first to produce $OUT/TECHNICAL_REPORT.md."
+  exit 1
+fi
+
+if [[ $MODE != plan ]] && ! node "$DIR/login.mjs" --check; then
   print "A browser window will open: log in (enter your OTP). The session is saved automatically."
   node "$DIR/login.mjs"
 fi
@@ -54,6 +61,29 @@ if [[ $MODE == survey ]]; then
   WORKERS=(
     --worker "cartographer:Inventory every page and feature of the dashboard into $OUT/pages.md and pages.json"
     --worker "linker:Map how features connect (navigation, shared entities, data flows, shared APIs) into $OUT/links.md"
+  )
+elif [[ $MODE == plan ]]; then
+  mkdir -p "runs/$TS-before-plan"
+  if [[ -d output/plan ]]; then
+    chmod -R u+w output/plan
+    mv output/plan "runs/$TS-before-plan/plan-previous"
+  fi
+  chmod -R a-w output/*.md output/*.json output/technical 2>/dev/null || true
+
+  P="$OUT/plan"
+  B="$P/briefs"
+  mkdir -p "$B" "$P/skill-drafts" "$P/sql" "$P/skills/.cursor/skills" "$P/skills/.claude/skills"
+  for f in briefs/plan/*.md; do
+    sed "s|{{COUNCIL_DIR}}|$DIR|g" "$f" > "$B/${f:t}"
+  done
+
+  REPORT="$P/IMPLEMENTATION_PLAN.md"
+  GOAL="Design council for a new multi-tenant spa/salon SaaS (first tenant SpaCorner, multiple branches with their own staff and services) on Supabase + Edge Functions (Deno) + React/TypeScript, using the reverse-engineering reports in $OUT as read-only input. Every member reads $B/common.md and $B/skill-format.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md. $FOCUS Final deliverables: $P/decisions.md, $REPORT, $P/CONVENTIONS.md, and the skills in $P/skills/."
+  WORKERS=(
+    --worker "cartographer:Product requirements, scope and roles - follow briefs $B/common.md and $B/requirements.md"
+    --worker "linker:Data model, multi-tenancy and database conventions - follow briefs $B/common.md and $B/data-model.md"
+    --worker "linker:Edge Functions backend architecture and conventions - follow briefs $B/common.md and $B/backend.md"
+    --worker "cartographer:Frontend architecture, i18n and RTL conventions - follow briefs $B/common.md and $B/frontend.md"
   )
 else
   mkdir -p "runs/$TS-before-deep"
@@ -84,7 +114,7 @@ else
 fi
 
 hermes kanban init >/dev/null
-if [[ $MODE == survey ]]; then
+if [[ $MODE != deep ]]; then
   hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier verifier --synthesizer chair
 else
   # Seed data first; workers depend on it. Dispatch is paused while dependencies are wired so nothing starts early.

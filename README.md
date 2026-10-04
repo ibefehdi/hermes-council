@@ -46,6 +46,24 @@ After a survey, run a second pass that builds on it:
 
 A seed task first fills the account with a realistic `COUNCIL-TEST` data set (clients, services, products, appointments with cash checkouts, quick sales) so lists and reports have content. Then five workers run in parallel, each with a brief in `briefs/deep/`: Setup and every settings page, every report, everything the survey missed, create/edit flows with `COUNCIL-TEST` data, and architecture (API catalogue, data model, page connectivity). Each brief asks for full technical detail and Mermaid UML diagrams (class, ER, sequence, state, flowchart), validated with `node check-mermaid.mjs <file.md>`. Worker outputs go to `output/technical/`, the verifier checks them against the live dashboard, and the chair writes `output/TECHNICAL_REPORT.md`. The survey's `FINAL_REPORT.md` and its source files are made read-only and backed up to `runs/` first; they are never changed.
 
+### Implementation plan (design council)
+
+Needs `output/TECHNICAL_REPORT.md` from the deep pass. No browser or login is used.
+
+```sh
+./run-council.sh plan
+./run-council.sh plan "Extra focus for this pass"
+```
+
+The council turns the reverse-engineering reports into a clean-room plan for a multi-tenant spa/salon SaaS on Supabase, with all server logic in Edge Functions (Deno) and a React + TypeScript frontend. The product definition, MVP scope, stack and output formats are in `briefs/plan/`. Four workers run in parallel: product requirements, data model and multi-tenancy (including SQL migration drafts), Edge Functions backend, and frontend architecture with English/Arabic RTL. Each one proposes decisions and drafts the conventions skills for its area. The verifier reviews every proposed decision, and the chair writes:
+
+- `output/plan/decisions.md`: architecture decision records
+- `output/plan/IMPLEMENTATION_PLAN.md`: phases, backlog, dependencies, gantt chart, risks
+- `output/plan/CONVENTIONS.md`
+- `output/plan/skills/.cursor/skills/<name>/SKILL.md` and identical `output/plan/skills/.claude/skills/<name>/SKILL.md`, checked with `node check-skills.mjs output/plan/skills`
+
+To use the skills, copy both trees into the app repo: `cp -R output/plan/skills/.cursor output/plan/skills/.claude /path/to/app/`. Visual design is left to your own design skill.
+
 ## Safety
 
 Agents are told the target is staging: they may click anything, but created records are prefixed `COUNCIL-TEST`, existing records are never modified or deleted, and the final report lists everything to clean up. Do not point it at production.
