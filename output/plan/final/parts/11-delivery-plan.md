@@ -1758,7 +1758,11 @@ Post-MVP phases are expanded here to match the MVP phase depth. Each phase was p
 - [Frontend] Booking-site branding editor (logo, cover image)
 - [DB] Avatar/logo URL columns
 - [Ops] CDN caching configuration for booking site
-- [Frontend] Basic booking analytics dashboard## Phase 10: Online payments & deposits
+- [Frontend] Basic booking analytics dashboard
+
+---
+
+### Phase 10: Online payments & deposits
 
 **Goal**: KNET + cards online at booking and checkout; deposits and no-show fees.
 
