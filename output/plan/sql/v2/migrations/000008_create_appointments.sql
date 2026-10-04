@@ -50,7 +50,8 @@ create table public.appointments (
   foreign key (branch_id, tenant_id) references public.branches(id, tenant_id),
   foreign key (client_id, tenant_id) references public.clients(id, tenant_id),
   -- ADR-14: per-branch unique ref_number
-  unique (branch_id, ref_number)
+  unique (branch_id, ref_number),
+  unique (id, tenant_id)
 );
 
 create index idx_appointments_tenant on public.appointments(tenant_id);

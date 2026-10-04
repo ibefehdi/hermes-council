@@ -5,7 +5,7 @@
 -- ============================================================================
 
 -- ---------- helpers ----------
-create or replace function tests.assert(condition boolean, msg text) returns void as $$
+create or replace function public.assert(condition boolean, msg text) returns void as $$
 begin
   if not condition then
     raise exception 'ASSERT FAILED: %', msg;
@@ -13,41 +13,54 @@ begin
 end;
 $$ language plpgsql;
 
--- ---------- fixtures ----------
+-- ---------- fixtures (idempotent across test files) ----------
 
--- Create two test users in auth.users
+-- Create two test users in auth.users (skip if exist)
 insert into auth.users (id, email) values
   ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'user-a@test.local'),
-  ('bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', 'user-b@test.local');
+  ('bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', 'user-b@test.local')
+on conflict (id) do nothing;
 
--- Create two tenants
+-- Create two tenants (skip if exist)
 insert into public.tenants (id, display_name_en, slug) values
   ('11111111-1111-1111-1111-111111111111', 'Tenant A', 'tenant-a'),
-  ('22222222-2222-2222-2222-222222222222', 'Tenant B', 'tenant-b');
+  ('22222222-2222-2222-2222-222222222222', 'Tenant B', 'tenant-b')
+on conflict (id) do nothing;
 
--- Create branches (one per tenant)
+-- Create branches (one per tenant) - skip if exist
 insert into public.branches (id, tenant_id, name_en, invoice_prefix) values
-  ('aaaa1111-aaaa-1111-aaaa-111111111111', '11111111-1111-1111-1111-111111111111', 'Branch A1', 'A1'),
-  ('bbbb2222-bbbb-2222-bbbb-222222222222', '22222222-2222-2222-2222-222222222222', 'Branch B1', 'B1');
+  ('aaaa1111-aaaa-1111-aaaa-111111111111', '11111111-1111-1111-1111-111111111111', 'Branch A1', 'A1')
+on conflict (id) do nothing;
+insert into public.branches (id, tenant_id, name_en, invoice_prefix) values
+  ('bbbb2222-bbbb-2222-bbbb-222222222222', '22222222-2222-2222-2222-222222222222', 'Branch B1', 'B1')
+on conflict (id) do nothing;
 
--- Create memberships
+-- Create memberships (skip if exist)
 insert into public.memberships (tenant_id, user_id, role, all_branches, is_active) values
   ('11111111-1111-1111-1111-111111111111', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'tenant_owner', true, true),
-  ('22222222-2222-2222-2222-222222222222', 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', 'tenant_owner', true, true);
+  ('22222222-2222-2222-2222-222222222222', 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', 'tenant_owner', true, true)
+on conflict (tenant_id, user_id, branch_id, role) do nothing;
 
--- Create staff for each tenant
+-- Create staff for each tenant (skip if exist)
 insert into public.staff_members (id, tenant_id, full_name_en) values
-  ('5555aaaa-5555-aaaa-5555-aaaaaaaaaaaa', '11111111-1111-1111-1111-111111111111', 'Staff A'),
-  ('5555bbbb-5555-bbbb-5555-bbbbbbbbbbbb', '22222222-2222-2222-2222-222222222222', 'Staff B');
+  ('5555aaaa-5555-aaaa-5555-aaaaaaaaaaaa', '11111111-1111-1111-1111-111111111111', 'Staff A')
+on conflict (id) do nothing;
+insert into public.staff_members (id, tenant_id, full_name_en) values
+  ('5555bbbb-5555-bbbb-5555-bbbbbbbbbbbb', '22222222-2222-2222-2222-222222222222', 'Staff B')
+on conflict (id) do nothing;
 
--- Create clients for each tenant
+-- Create clients for each tenant (skip if exist)
 insert into public.clients (id, tenant_id, first_name) values
-  ('ccccaaaa-cccc-aaaa-cccc-aaaaaaaaaaaa', '11111111-1111-1111-1111-111111111111', 'Client A'),
-  ('ccccbbbb-cccc-bbbb-cccc-bbbbbbbbbbbb', '22222222-2222-2222-2222-222222222222', 'Client B');
+  ('ccccaaaa-cccc-aaaa-cccc-aaaaaaaaaaaa', '11111111-1111-1111-1111-111111111111', 'Client A')
+on conflict (id) do nothing;
+insert into public.clients (id, tenant_id, first_name) values
+  ('ccccbbbb-cccc-bbbb-cccc-bbbbbbbbbbbb', '22222222-2222-2222-2222-222222222222', 'Client B')
+on conflict (id) do nothing;
 
--- Create a service for tenant A
+-- Create a service for tenant A (skip if exist)
 insert into public.services (id, tenant_id, name_en, duration_minutes, price_minor) values
-  ('ssssaaaa-ssss-aaaa-ssss-aaaaaaaaaaaa', '11111111-1111-1111-1111-111111111111', 'Service A', 60, 15000);
+  ('0000aaaa-0000-aaaa-0000-aaaaaaaaaaaa', '11111111-1111-1111-1111-111111111111', 'Service A', 60, 15000)
+on conflict (id) do nothing;
 
 -- ---------- test: cross-tenant SELECT (clients) ----------
 do $$
@@ -57,13 +70,13 @@ begin
   set role authenticated;
 
   -- User A should see client A
-  perform tests.assert(
+  perform public.assert(
     exists (select 1 from public.clients where first_name = 'Client A'),
     'T1.1: user A should see their own client'
   );
 
   -- User A should NOT see client B
-  perform tests.assert(
+  perform public.assert(
     not exists (select 1 from public.clients where first_name = 'Client B'),
     'T1.2: user A should NOT see client B'
   );
@@ -73,13 +86,13 @@ begin
   set role authenticated;
 
   -- User B should see client B
-  perform tests.assert(
+  perform public.assert(
     exists (select 1 from public.clients where first_name = 'Client B'),
     'T1.3: user B should see their own client'
   );
 
   -- User B should NOT see client A
-  perform tests.assert(
+  perform public.assert(
     not exists (select 1 from public.clients where first_name = 'Client A'),
     'T1.4: user B should NOT see client A'
   );
@@ -97,7 +110,7 @@ begin
 
   begin
     insert into public.clients (id, tenant_id, first_name)
-    values ('ccccfail-cccc-fail-cccc-cccccccccccc', '22222222-2222-2222-2222-222222222222', 'Sneaky Client');
+    values ('cccc0000-cccc-0000-cccc-cccccccccccc', '22222222-2222-2222-2222-222222222222', 'Sneaky Client');
     raise exception 'T2.1 FAIL: expected insert to be blocked by RLS';
   exception when others then
     -- Expected: the insert should be rejected
@@ -135,12 +148,12 @@ begin
   perform set_config('request.jwt.claims', '{"sub":"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa","role":"authenticated"}', true);
   set role authenticated;
 
-  perform tests.assert(
+  perform public.assert(
     exists (select 1 from public.staff_members where full_name_en = 'Staff A'),
     'T4.1: user A sees own staff'
   );
 
-  perform tests.assert(
+  perform public.assert(
     not exists (select 1 from public.staff_members where full_name_en = 'Staff B'),
     'T4.2: user A does NOT see tenant B staff'
   );
@@ -155,7 +168,7 @@ begin
   perform set_config('request.jwt.claims', '{"sub":"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa","role":"authenticated"}', true);
   set role authenticated;
 
-  perform tests.assert(
+  perform public.assert(
     exists (select 1 from public.services where name_en = 'Service A'),
     'T5.1: user A sees own service'
   );
@@ -170,18 +183,18 @@ begin
   set role anon;
 
   -- Anon should not see any tenant-specific data
-  perform tests.assert(
+  perform public.assert(
     not exists (select 1 from public.clients limit 1),
     'T6.1: anon cannot see clients'
   );
 
-  perform tests.assert(
+  perform public.assert(
     not exists (select 1 from public.tenants limit 1),
     'T6.2: anon cannot see tenants'
   );
 
   -- Anon CAN see currencies (global reference data)
-  perform tests.assert(
+  perform public.assert(
     exists (select 1 from public.currencies where code = 'KWD'),
     'T6.3: anon can see currencies'
   );

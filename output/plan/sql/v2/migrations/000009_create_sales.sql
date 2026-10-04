@@ -63,16 +63,12 @@ create table public.register_sessions (
   expected_cash_minor  bigint,
   difference_minor     bigint,
   notes           text,
-  opened_by       uuid references auth.users(id),
-  closed_by       uuid references auth.users(id),
-  -- ADR-20 rule 5: composite FK
-  foreign key (branch_id, tenant_id) references public.branches(id, tenant_id),
-  -- ADR-6: one open session per branch (unique index below)
+  opened_by       uuid,
+  closed_by       uuid,
+  foreign key (branch_id, tenant_id) references public.branches(id, tenant_id)
 );
 
 create index idx_rs_branch on public.register_sessions(branch_id);
-create index idx_rs_open on public.register_sessions(branch_id) where closed_at is null;
--- ADR-6: one open session per branch
 create unique index idx_rs_one_open on public.register_sessions(branch_id) where closed_at is null;
 
 -- ============================================================================
@@ -102,7 +98,8 @@ create table public.sales (
   foreign key (branch_id, tenant_id) references public.branches(id, tenant_id),
   foreign key (client_id, tenant_id) references public.clients(id, tenant_id),
   -- ADR-14: per-branch unique invoice_seq
-  unique (branch_id, invoice_seq)
+  unique (branch_id, invoice_seq),
+  unique (id, tenant_id)
 );
 
 create index idx_sales_tenant on public.sales(tenant_id);
@@ -188,7 +185,8 @@ create table public.payments (
   foreign key (branch_id, tenant_id) references public.branches(id, tenant_id),
   foreign key (sale_id, tenant_id) references public.sales(id, tenant_id),
   foreign key (client_id, tenant_id) references public.clients(id, tenant_id),
-  foreign key (refunds_payment_id, tenant_id) references public.payments(id, tenant_id)
+  foreign key (refunds_payment_id, tenant_id) references public.payments(id, tenant_id),
+  unique (id, tenant_id)
 );
 
 create index idx_payments_sale on public.payments(sale_id);

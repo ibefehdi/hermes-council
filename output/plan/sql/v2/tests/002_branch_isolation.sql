@@ -3,29 +3,36 @@
 --   money integrity, cross-tenant FK attack prevention
 -- ============================================================================
 
--- ---------- fixtures (extend from test 001) ----------
+-- ---------- fixtures (extend from test 001; all idempotent) ----------
 
--- Add a second branch for tenant A
+-- Add a second branch for tenant A (skip if exists)
 insert into public.branches (id, tenant_id, name_en, invoice_prefix) values
-  ('aaaa2222-aaaa-2222-aaaa-222222222222', '11111111-1111-1111-1111-111111111111', 'Branch A2', 'A2');
+  ('aaaa2222-aaaa-2222-aaaa-222222222222', '11111111-1111-1111-1111-111111111111', 'Branch A2', 'A2')
+on conflict (id) do nothing;
 
--- Add a branch manager for branch A1
+-- Add a branch manager for branch A1 (skip if exists)
 insert into public.memberships (tenant_id, user_id, role, branch_id) values
-  ('11111111-1111-1111-1111-111111111111', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'branch_manager', 'aaaa1111-aaaa-1111-aaaa-111111111111');
+  ('11111111-1111-1111-1111-111111111111', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'branch_manager', 'aaaa1111-aaaa-1111-aaaa-111111111111')
+on conflict (tenant_id, user_id, branch_id, role) do nothing;
 
--- Add receptionist user for branch A1
+-- Add receptionist user for branch A1 (skip if exists)
 insert into auth.users (id, email) values
-  ('cccccccc-cccc-cccc-cccc-cccccccccccc', 'receptionist-a@test.local');
+  ('cccccccc-cccc-cccc-cccc-cccccccccccc', 'receptionist-a@test.local')
+on conflict (id) do nothing;
 insert into public.memberships (tenant_id, user_id, role, branch_id) values
-  ('11111111-1111-1111-1111-111111111111', 'cccccccc-cccc-cccc-cccc-cccccccccccc', 'receptionist', 'aaaa1111-aaaa-1111-aaaa-111111111111');
+  ('11111111-1111-1111-1111-111111111111', 'cccccccc-cccc-cccc-cccc-cccccccccccc', 'receptionist', 'aaaa1111-aaaa-1111-aaaa-111111111111')
+on conflict (tenant_id, user_id, branch_id, role) do nothing;
 
--- Add staff user for branch A1
+-- Add staff user for branch A1 (skip if exists)
 insert into auth.users (id, email) values
-  ('dddddddd-dddd-dddd-dddd-dddddddddddd', 'staff-a@test.local');
+  ('dddddddd-dddd-dddd-dddd-dddddddddddd', 'staff-a@test.local')
+on conflict (id) do nothing;
 insert into public.staff_members (id, tenant_id, user_id, full_name_en) values
-  ('5555dddd-5555-dddd-5555-dddddddddddd', '11111111-1111-1111-1111-111111111111', 'dddddddd-dddd-dddd-dddd-dddddddddddd', 'Staff A2');
+  ('5555dddd-5555-dddd-5555-dddddddddddd', '11111111-1111-1111-1111-111111111111', 'dddddddd-dddd-dddd-dddd-dddddddddddd', 'Staff A2')
+on conflict (id) do nothing;
 insert into public.memberships (tenant_id, user_id, role, branch_id) values
-  ('11111111-1111-1111-1111-111111111111', 'dddddddd-dddd-dddd-dddd-dddddddddddd', 'staff', 'aaaa1111-aaaa-1111-aaaa-111111111111');
+  ('11111111-1111-1111-1111-111111111111', 'dddddddd-dddd-dddd-dddd-dddddddddddd', 'staff', 'aaaa1111-aaaa-1111-aaaa-111111111111')
+on conflict (tenant_id, user_id, branch_id, role) do nothing;
 
 -- ---------- test: branch manager cannot see another branch ----------
 do $$
@@ -39,13 +46,13 @@ begin
   set role authenticated;
 
   -- Receptionist should see branch A1
-  perform tests.assert(
+  perform public.assert(
     exists (select 1 from public.branches where name_en = 'Branch A1'),
     'B1.1: receptionist sees own branch'
   );
 
   -- Receptionist should NOT see branch A2 (no membership there)
-  perform tests.assert(
+  perform public.assert(
     not exists (select 1 from public.branches where name_en = 'Branch A2'),
     'B1.2: receptionist does NOT see other branch'
   );
@@ -133,19 +140,19 @@ begin
   -- Verify the money columns are bigint, not numeric
   -- We'll test by creating a valid sale (via direct insert, skipping RLS for type check)
   -- Instead just verify column types
-  perform tests.assert(
+  perform public.assert(
     (select data_type from information_schema.columns
      where table_name = 'sales' and column_name = 'total_minor') = 'bigint',
     'B4.1: sales.total_minor is bigint'
   );
 
-  perform tests.assert(
+  perform public.assert(
     (select data_type from information_schema.columns
      where table_name = 'payments' and column_name = 'amount_minor') = 'bigint',
     'B4.2: payments.amount_minor is bigint'
   );
 
-  perform tests.assert(
+  perform public.assert(
     (select data_type from information_schema.columns
      where table_name = 'appointment_items' and column_name = 'price_minor') = 'bigint',
     'B4.3: appointment_items.price_minor is bigint'
@@ -180,7 +187,7 @@ begin
   set role authenticated;
 
   -- Staff role should NOT see sales (F-DB-5)
-  perform tests.assert(
+  perform public.assert(
     not exists (select 1 from public.sales limit 1),
     'B6.1: staff role cannot see sales directly'
   );
@@ -209,7 +216,7 @@ begin
   end;
 
   -- Test that views have security_invoker
-  perform tests.assert(
+  perform public.assert(
     exists (
       select 1 from pg_class c
       join pg_namespace n on n.oid = c.relnamespace
@@ -236,7 +243,7 @@ begin
     v_count int;
   begin
     select count(*) into v_count from public.profiles;
-    perform tests.assert(v_count <= 1, 'B8.1: user sees at most 1 profile (own)');
+    perform public.assert(v_count <= 1, 'B8.1: user sees at most 1 profile (own)');
   end;
 
   raise notice 'B8 profiles isolation: PASS';
@@ -281,7 +288,7 @@ begin
   values ('11111111-1111-1111-1111-111111111111', null, true, 'test.b10', 'value');
 
   -- Verify it was inserted
-  perform tests.assert(
+  perform public.assert(
     exists (select 1 from public.settings where key = 'test.b10' and branch_id is null and all_branches = true),
     'B10.1: all_branches setting stored correctly'
   );
