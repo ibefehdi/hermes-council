@@ -3,6 +3,9 @@
 --   money integrity, cross-tenant FK attack prevention
 -- ============================================================================
 
+-- Ensure we start as the default user (superuser) for fixture inserts
+reset role;
+
 -- ---------- fixtures (extend from test 001; all idempotent) ----------
 
 -- Add a second branch for tenant A (skip if exists)
@@ -324,3 +327,6 @@ begin
   raise notice 'B11 settings partial unique index: PASS';
 end;
 $$;
+
+-- Reset to default role
+reset role;
