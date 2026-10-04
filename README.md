@@ -2,12 +2,14 @@
 
 A council of [Hermes Agent](https://hermes-agent.nousresearch.com) profiles that explores a web dashboard with Playwright, maps every page and feature, and explains how the features link together. Members work independently, a verifier cross-checks them against the live dashboard, and a chair writes the final report.
 
-| Member | Default model | Job |
+Each member runs on a different model family (set in `council.conf`) so no single model's blind spots dominate.
+
+| Member | Model (OpenRouter) | Job |
 |---|---|---|
-| cartographer | local Qwen if reachable, else `deepseek/deepseek-v4-flash` | Inventory every page and feature |
+| cartographer | `z-ai/glm-5.3-flash` | Inventory every page and feature |
 | linker | `deepseek/deepseek-v4-pro` | Map relationships: navigation, shared entities, data flows, shared APIs |
 | verifier | `moonshotai/kimi-k3` | Cross-check both reports in the live dashboard, rule on disagreements |
-| chair | `deepseek/deepseek-v4-pro` | Write `output/FINAL_REPORT.md` |
+| chair | `qwen/qwen3.8-max-0902` | Write `output/FINAL_REPORT.md` |
 
 ## Requirements
 
