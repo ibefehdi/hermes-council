@@ -74,6 +74,12 @@ The implementation covers 4 of 5 subphases substantively, but a **blocker** (no 
 
 ---
 
+## Re-verification (run t_a36d5e03)
+
+This report was independently re-verified by the current auditor run. All findings from the initial audit are confirmed. No additional findings discovered.
+
+---
+
 ## What was done well
 
 1. **Tenancy skeleton is thorough.** 10 migrations covering extensions, tenants, profiles, memberships, branches, audit log, settings, idempotency keys, colleague read, and provisioning. The all-branches representation (no sentinel UUID) is correctly implemented. pgTAP harness with 7-user fixture matrix and 190-line test suite covering 26+ assertions including cross-tenant FK attack tests.

@@ -298,6 +298,7 @@ Note: This subphase is primarily frontend-scoped, but backend-relevant items are
   - `zod@4.6.5`
   - `@std/assert@1.0.19`
   - `deno.lock` file present for integrity verification
+- **DONE**: All function subdirectories (health/, onboarding/, _template/) have their own `deno.json` and `deno.lock` using the same pinned versions.
 
 ### Request ID propagation
 - **DONE**: `REQUEST_ID_HEADER = "x-request-id"`. Inbound IDs are echoed if well-formed;
@@ -416,7 +417,26 @@ Note: This subphase is primarily frontend-scoped, but backend-relevant items are
 - Plan item: Subphase 0.2 onboarding function, ADR-20 rule 3 (tenant creation is
   platform-admin only, but must not orphan users)
 
-### F-BE-6: packages/validation has no Deno-compatible import file test from a function's perspective
+### F-BE-8: Testing files reference hardcoded JWT secrets in source code
+- Severity: **minor**
+- Location: `supabase/functions/_shared/testing.ts:7-11`, `supabase/functions/onboarding/onboarding_test.ts:8-11`
+- Problem: The test helper files contain hardcoded fallback values for `SUPABASE_ANON_KEY` and `SUPABASE_SERVICE_ROLE_KEY` JWT tokens. While these are the standard Supabase local dev keys (not production secrets) and are documented in the Supabase CLI output, committed hardcoded JWTs in source code are a security anti-pattern. They could be accidentally copied into production configs, or a casual reader may not realize these are only valid for the local dev stack.
+- Evidence: 
+  - `testing.ts:7-11`:
+    ```
+    SUPABASE_ANON_KEY: "eyJhbG...n_I0",
+    SUPABASE_SERVICE_ROLE_KEY: "eyJhbG...81IU",
+    ```
+  - `onboarding_test.ts:8-11`: Same truncated keys as fallback.
+  - The actual keys are set by `supabase start` and exposed in the console; these fallbacks match the local CLI defaults.
+- Fix: Replace hardcoded JWTs with `Deno.env.get()` calls and remove the fallback strings, or add a clear comment that these are local-dev-only defaults:
+  ```
+  // Local dev default — see `supabase status` output.
+  // Never use these values in staging or production.
+  ```
+- Plan item: CONVENTIONS §8 (secrets), Phase 0 testing infrastructure
+
+### F-BE-9: Deno validation contract test naming ambiguity
 - Severity: **minor**
 - Location: `supabase/functions/_shared/validation_contract_test.ts`
 - Problem: The contract test imports `@repo/validation` from `_shared/` and validates schema
@@ -487,6 +507,7 @@ Note: This subphase is primarily frontend-scoped, but backend-relevant items are
 | F-BE-7 | major | INTERNAL_FUNCTION_SECRET undocumented in .env.example |
 | F-BE-2 | minor | Idempotency per-function test comment clarity |
 | F-BE-4 | minor | Uptime monitor config exists but no monitor service wired |
-| F-BE-6 | minor | Deno validation contract test naming ambiguity |
+| F-BE-8 | minor | Testing files hardcode JWT secrets fallbacks |
+| F-BE-9 | minor | Deno validation contract test naming ambiguity |
 
-Severity counts: 1 blocker, 3 major, 3 minor, 0 partial
+Severity counts: 1 blocker, 3 major, 4 minor, 0 partial

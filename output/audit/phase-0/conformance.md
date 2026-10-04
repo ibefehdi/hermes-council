@@ -306,6 +306,25 @@ Items the next phases need from Phase 0 that are MISSING or PARTIAL:
 
 ---
 
+## Re-verification note
+
+This audit was independently re-verified by auditor run t_a36d5e03 (2026-10-04 22:13+03). All findings from the initial run t_8b814311 were confirmed by independent evidence collection:
+
+- **F-CONFORM-1 (blocker)**: Confirmed — no `.github/workflows/` directory exists
+- **F-CONFORM-2 (major)**: Confirmed — no Sentry SDK, no `captureException` wiring; `logging.ts` has a Sentry seam placeholder only
+- **F-CONFORM-3 (major)**: Confirmed — `diff -rq .cursor/skills .claude/skills` shows 3 differing files
+- **F-CONFORM-4 (minor)**: Confirmed — `packages/db/src/database.types.ts` committed but no CI runs drift check
+- **F-CONFORM-5 (minor)**: Confirmed — `nobody@spacorner.test` seed user exists (line 11 seed.sql) but no Playwright test exercises the no-access path
+
+Additional verification performed:
+- `plan/evidence/0.5/` contains 23 evidence files (perf traces, screenshots, JSON results) confirming the ADR-41 spike verdict
+- 149 pgTAP tests pass (cross-tenant isolation, role tests, all-branches representation)
+- 79 Vitest tests pass (money, API, i18n, UI, validation)
+- 20 Playwright tests pass (en+ar, covering login, shell, language switch, theme, tenant/branch switch, scope)
+- 35/35 Deno _shared tests pass; 3/3 _template tests pass; 2 health tests fail only because functions server not started (not a code defect)
+
+No additional findings discovered beyond the initial audit.
+
 ## Summary table
 
 | Finding | Severity | Title |
