@@ -10,7 +10,7 @@ Flows (in this order, since later ones reuse earlier records):
 2. Service: create a COUNCIL-TEST service (category, duration, price, team assignment), edit price.
 3. Product and stock: create a COUNCIL-TEST supplier and product, adjust stock, create a stock order (do not send it to a real supplier email).
 4. Team member: create a COUNCIL-TEST team member with services and a shift. If the UI says this changes billing or subscription cost, stop and document instead.
-5. Appointment: book the COUNCIL-TEST client for the COUNCIL-TEST service with a team member; edit time/service; reschedule by drag or edit; add a note; then check out with a cash/other manual payment type (never a card terminal or payment link). Also create a second appointment and cancel it with a reason; mark a third as no-show if available.
+5. Appointment: book the COUNCIL-TEST client for the COUNCIL-TEST service with a team member; edit time/service; reschedule by drag or edit; add a note; then check out with a cash/other manual payment type (never a card terminal or payment link). The checkout is REQUIRED: a manual cash payment on this test account is explicitly allowed by the safety rules, and the propagation checks depend on it. Also create a second appointment and cancel it with a reason; mark a third as no-show if available.
 6. Sale without appointment: quick sale of the COUNCIL-TEST product, manual payment.
 7. Promotion: create a COUNCIL-TEST deal/discount; create a blast campaign DRAFT only (never send/schedule); inspect automations without enabling sending.
 
