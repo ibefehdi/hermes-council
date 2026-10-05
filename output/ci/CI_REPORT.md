@@ -66,7 +66,7 @@ flowchart LR
   aggregate --> merge["Merge allowed only when successful"]
 ```
 
-The final draft contains the CI workflow and ruleset; the deployment workflow was moved to `output/ci/rejected/.github/workflows/deploy.yml` per the owner's scope instruction. The static validator passed with `ci-passed` as the required check (`adjudication.md:23, 41-45, 62-64`). A passing validator checks draft structure; it does not establish G-8/G-10 coverage or prove a GitHub PR run.
+The final draft contains the CI workflow and ruleset; the deployment workflow was moved to `output/ci/rejected/.github/workflows/deploy.yml` per the owner's scope instruction. The final validator rerun for this report passed with one workflow and `ci-passed` as the required check. It warned that actionlint did not run because neither actionlint nor Docker was available. The earlier adjudication records actionlint and ruleset validation as passing (`adjudication.md:23, 41-45, 62-64, 95`); this final rerun could not independently reproduce actionlint. A passing static validator checks draft structure; it does not establish G-8/G-10 coverage or prove a GitHub PR run.
 
 ## 4. Traceability and guard tests
 
