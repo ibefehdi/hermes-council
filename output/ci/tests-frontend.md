@@ -74,8 +74,8 @@ The codebase uses `<bdi>` elements for bilingual names and external text (confir
 - Proves: Phase 2.1 (Staff records) — staff member view of their own day
 - Closes gap: G-8
 - Result at 07e2a10526bfb5d9f17ebac82bb47d4a5376c4bb: PASSES (expected — feature and seed data exist)
-- Mutation check: Remove the `StaffBoundary` wrapper in MyDayPage.tsx, test fails to find assignment data → RESTORED
-- Runtime: TBD (runs in CI)
+- Mutation check: Remove the `StaffBoundary` wrapper in MyDayPage.tsx, test fails to find assignment data → RESTORED. Also MUTATION DEFERRED (served code): change heading text in MyDayPage.tsx line 21 (`<Trans>My day</Trans>` to `<Trans>My schedule</Trans>`). Test asserts `s.myDay` so it would fail until strings.ts and PO catalogs are updated. Restore: revert MyDayPage.tsx.
+- Runtime: TBD (requires CI Playwright run)
 
 #### T-FE-2: staff member views /my-day, empty states render
 
