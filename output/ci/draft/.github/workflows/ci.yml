@@ -322,7 +322,7 @@ jobs:
     needs: [static, backend, e2e]
     # Run even when a needed job was cancelled or skipped, so a developer
     # green can never come from a missing check.
-    if: ${{ !cancelled() }}
+    if: ${{ always() }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
