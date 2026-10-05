@@ -1,0 +1,23 @@
+- generic [ref=e2]:
+  - generic [ref=e16]:
+    - banner [ref=e17]:
+      - generic [ref=e18]: GlowDesk
+      - button "العربية" [active] [ref=e41] [cursor=pointer]
+    - main [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - heading "Sign in" [level=1] [ref=e42]
+          - paragraph [ref=e24]: Welcome back. Sign in to manage your spa.
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e28]: Email
+            - textbox "Email" [ref=e43]
+          - generic [ref=e30]:
+            - generic [ref=e31]: Password
+            - textbox "Password" [ref=e44]
+          - button "Sign in" [ref=e45] [cursor=pointer]
+        - link "Forgot your password?" [ref=e46] [cursor=pointer]:
+          - /url: /forgot-password
+  - generic:
+    - status
+    - alert

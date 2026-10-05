@@ -1,0 +1,314 @@
+- generic [ref=e2]:
+  - generic [ref=e49]:
+    - link "الانتقال إلى المحتوى الرئيسي" [ref=e434] [cursor=pointer]:
+      - /url: "#main"
+    - complementary [ref=e51]:
+      - navigation "القائمة الرئيسية" [ref=e435]:
+        - list [ref=e53]:
+          - listitem [ref=e54]:
+            - link "الرئيسية" [ref=e436] [cursor=pointer]:
+              - /url: /?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=e56]:
+            - link "يومي" [ref=e437] [cursor=pointer]:
+              - /url: /my-day?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=e58]:
+            - generic [ref=e59]: التقويم
+          - listitem [ref=e60]:
+            - link "العملاء" [ref=e438] [cursor=pointer]:
+              - /url: /clients?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=e62]:
+            - link "الفريق" [ref=e439] [cursor=pointer]:
+              - /url: /team?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=e64]:
+            - link "قائمة الخدمات" [ref=e440] [cursor=pointer]:
+              - /url: /catalogue?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=e66]:
+            - generic [ref=e67]: المبيعات
+          - listitem [ref=e68]:
+            - generic [ref=e69]: التقارير
+    - banner [ref=e70]:
+      - generic [ref=e71]:
+        - paragraph [ref=e72]: سبا كورنر
+        - generic [ref=e73]: موظف الاستقبال
+        - group "الفرع (مقفل)" [ref=e441]:
+          - paragraph [ref=e78]: السالمية
+      - generic [ref=e79]:
+        - button "البحث عن عميل" [ref=e442] [cursor=pointer]:
+          - generic [ref=e85]: ⌘K
+        - button "English" [active] [ref=e443] [cursor=pointer]
+        - button "Rana Reception" [ref=e88] [cursor=pointer]:
+          - text: Rana Reception
+          - generic [aria-hidden] [ref=e89]: ▾
+    - main [ref=e90]:
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - heading "العملاء" [level=1] [ref=e444]
+            - link "عميل جديد" [ref=e445] [cursor=pointer]:
+              - /url: /clients/new?branch=00000000-0000-4000-a000-000000000001
+          - paragraph [ref=e117]: كل من يحجز لدى نشاطك، في أي فرع.
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - generic [ref=e120]: البحث عن عميل
+            - searchbox "البحث عن عميل" [ref=e446]
+            - generic [ref=e122]: الاسم أو الهاتف أو البريد الإلكتروني، بالعربية أو الإنجليزية.
+          - generic [ref=e123]:
+            - generic [ref=e124]: الوسم
+            - combobox "الوسم" [ref=e447] [cursor=pointer]:
+              - option "كل الوسوم" [selected]
+              - option "expat"
+              - option "family"
+              - option "regular"
+              - option "vip"
+          - generic [ref=e126]:
+            - generic [ref=e127]: الحالة
+            - combobox "الحالة" [ref=e448] [cursor=pointer]:
+              - option "كل العملاء" [selected]
+              - option "يمكن الحجز له"
+              - option "محظور"
+        - generic [ref=e129]:
+          - table [ref=e449]:
+            - caption [ref=e133]: العملاء
+            - rowgroup [ref=e134]:
+              - row [ref=e450]:
+                - columnheader "الاسم" [ref=e451]
+                - columnheader "التواصل" [ref=e452]
+                - columnheader "الوسوم" [ref=e453]
+                - columnheader "تنبيهات السلامة" [ref=e454]
+            - rowgroup [ref=e140]:
+              - row [ref=e455]:
+                - cell [ref=e456]:
+                  - generic [ref=e143]:
+                    - link "أحمد الصباح" [ref=e457] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000003?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e145]: Ahmad Al-Sabah
+                - cell "+96550010003" [ref=e146]
+                - cell [ref=e149]
+                - cell [ref=e150]
+              - row [ref=e458]:
+                - cell [ref=e459]:
+                  - generic [ref=e153]:
+                    - link "عائشة حسن" [ref=e460] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000005?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e155]: Aisha Hassan
+                - cell "+96550010005" [ref=e156]
+                - cell [ref=e159]
+                - cell [ref=e160]
+              - row [ref=e461]:
+                - cell [ref=e462]:
+                  - generic [ref=e163]:
+                    - link "آمنة يوسف" [ref=e463] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000012?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e165]: Amna Yousef
+                - cell "+96550010012" [ref=e166]
+                - cell [ref=e169]
+                - cell [ref=e170]
+              - row [ref=e464]:
+                - cell [ref=e465]:
+                  - generic [ref=e173]:
+                    - link "أسماء الحربي" [ref=e466] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000023?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e175]: Asma Al-Harbi
+                - cell "+96550010023" [ref=e176]
+                - cell [ref=e179]
+                - cell [ref=e180]
+              - row [ref=e467]:
+                - cell [ref=e468]:
+                  - generic [ref=e183]:
+                    - link "بدر الكندري" [ref=e469] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000020?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e185]: Bader Al-Kandari
+                - cell "+96550010020" [ref=e186]
+                - cell [ref=e189]
+                - cell [ref=e190]
+              - row [ref=e470]:
+                - cell [ref=e471]:
+                  - generic [ref=e193]:
+                    - link "دلال العجمي" [ref=e472] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000010?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e195]: Dalal Al-Ajmi
+                - cell "+96550010010" [ref=e196]
+                - cell "regular" [ref=e199]
+                - cell [ref=e203]
+              - row [ref=e204]:
+                - cell [ref=e205]:
+                  - link "Emily Carter" [ref=e207] [cursor=pointer]:
+                    - /url: /clients/00000000-0000-4000-8300-000000000018?branch=00000000-0000-4000-a000-000000000001
+                - cell "+96550010018 emily.carter@example.com" [ref=e208]:
+                  - generic [ref=e209]:
+                    - generic [ref=e210]: "+96550010018"
+                    - paragraph [ref=e211]: emily.carter@example.com
+                - cell "expat" [ref=e212]
+                - cell [ref=e216]
+              - row [ref=e473]:
+                - cell [ref=e474]:
+                  - generic [ref=e219]:
+                    - link "فاطِمة العلي" [ref=e475] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000001?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e221]: Fatima Al-Ali
+                - cell "+96550010001 fatima.alali@example.com" [ref=e222]:
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: "+96550010001"
+                    - paragraph [ref=e225]: fatima.alali@example.com
+                - cell "vip" [ref=e226]
+                - cell "حساسية" [ref=e476]
+              - row [ref=e477]:
+                - cell [ref=e478]:
+                  - generic [ref=e236]:
+                    - link "حنان القطان" [ref=e479] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000025?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e238]: Hanan Al-Qattan
+                - cell "+96550010025" [ref=e239]
+                - cell [ref=e242]
+                - cell [ref=e480]:
+                  - generic [ref=e244]:
+                    - generic [ref=e245]: حساسية
+                    - generic [ref=e247]: تنبيه
+              - row [ref=e481]:
+                - cell [ref=e482]:
+                  - generic [ref=e251]:
+                    - link "حصة المطيري" [ref=e483] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000009?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e253]: Hessa Al-Mutairi
+                - cell "+96550010009" [ref=e254]
+                - cell [ref=e257]
+                - cell [ref=e258]
+              - row [ref=e484]:
+                - cell [ref=e485]:
+                  - generic [ref=e261]:
+                    - link "هُدى كريم" [ref=e486] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000015?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e263]: Huda Kareem
+                - cell "+96550010015" [ref=e264]
+                - cell "regular" [ref=e267]
+                - cell [ref=e271]
+              - row [ref=e487]:
+                - cell [ref=e488]:
+                  - generic [ref=e274]:
+                    - link "إيمان الرشيد" [ref=e489] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000004?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e276]: Iman Al-Rashid
+                - cell "+96550010004" [ref=e277]
+                - cell "vip" [ref=e280]
+                - cell "تنبيه" [ref=e490]
+              - row [ref=e491]:
+                - cell [ref=e492]:
+                  - generic [ref=e290]:
+                    - link "خالد الفهد" [ref=e493] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000021?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e292]: Khalid Al-Fahad
+                - cell "+96550010021" [ref=e293]
+                - cell "regular" [ref=e296]
+                - cell [ref=e300]
+              - row [ref=e494]:
+                - cell [ref=e495]:
+                  - generic [ref=e303]:
+                    - link "ليلى منصور" [ref=e496] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000008?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e305]: Layla Mansour
+                - cell "+96550010008" [ref=e306]
+                - cell [ref=e309]
+                - cell "حساسية" [ref=e497]
+              - row [ref=e498]:
+                - cell [ref=e499]:
+                  - generic [ref=e316]:
+                    - link "لولوة الصالح" [ref=e500] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000017?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e318]: Lulwa Al-Saleh
+                - cell "+96550010017" [ref=e319]
+                - cell [ref=e322]
+                - cell [ref=e323]
+              - row [ref=e501]:
+                - cell [ref=e502]:
+                  - generic [ref=e326]:
+                    - link "مها العتيبي" [ref=e503] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000016?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e328]: Maha Al-Otaibi
+                - cell "+96550010016" [ref=e329]
+                - cell [ref=e332]
+                - cell [ref=e333]
+              - row [ref=e504]:
+                - cell [ref=e505]:
+                  - generic [ref=e336]:
+                    - link "مريم العلي" [ref=e506] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000002?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e338]: Mariam Al-Ali
+                - cell "+96550010001" [ref=e339]
+                - cell "family" [ref=e342]
+                - cell [ref=e346]
+              - row [ref=e507]:
+                - cell [ref=e508]:
+                  - generic [ref=e349]:
+                    - link "نادية سالم" [ref=e509] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000024?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e351]: Nadia Salem
+                - cell "+96550010024" [ref=e352]
+                - cell [ref=e355]
+                - cell "محظور" [ref=e510]
+              - row [ref=e511]:
+                - cell [ref=e512]:
+                  - generic [ref=e362]:
+                    - link "نور الهدى" [ref=e513] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000007?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e364]: Noor Al-Huda
+                - cell "+96550010007" [ref=e365]
+                - cell [ref=e368]
+                - cell [ref=e369]
+              - row [ref=e370]:
+                - cell [ref=e371]:
+                  - link "Priya Nair" [ref=e373] [cursor=pointer]:
+                    - /url: /clients/00000000-0000-4000-8300-000000000019?branch=00000000-0000-4000-a000-000000000001
+                - cell "+96550010019" [ref=e374]
+                - cell [ref=e377]
+                - cell [ref=e378]
+              - row [ref=e514]:
+                - cell [ref=e515]:
+                  - generic [ref=e381]:
+                    - link "ريم خالد" [ref=e516] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000011?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e383]: Reem Khalid
+                - cell "+96550010011" [ref=e384]
+                - cell [ref=e387]
+                - cell [ref=e388]
+              - row [ref=e389]:
+                - cell [ref=e390]:
+                  - link "Sara Johnson" [ref=e392] [cursor=pointer]:
+                    - /url: /clients/00000000-0000-4000-8300-000000000006?branch=00000000-0000-4000-a000-000000000001
+                - cell "+96550010006 sara.j@example.com" [ref=e393]:
+                  - generic [ref=e394]:
+                    - generic [ref=e395]: "+96550010006"
+                    - paragraph [ref=e396]: sara.j@example.com
+                - cell "expat" [ref=e397]
+                - cell [ref=e401]
+              - row [ref=e517]:
+                - cell [ref=e518]:
+                  - generic [ref=e404]:
+                    - link "شيخة العنزي" [ref=e519] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000013?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e406]: Shaikha Al-Enezi
+                - cell "+96550010013" [ref=e407]
+                - cell [ref=e410]
+                - cell [ref=e411]
+              - row [ref=e520]:
+                - cell [ref=e521]:
+                  - generic [ref=e414]:
+                    - link "يوسف الشمري" [ref=e522] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000022?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e416]: Yousef Al-Shammari
+                - cell "+96550010022" [ref=e417]
+                - cell [ref=e420]
+                - cell [ref=e421]
+              - row [ref=e523]:
+                - cell [ref=e524]:
+                  - generic [ref=e424]:
+                    - link "زينب علي" [ref=e525] [cursor=pointer]:
+                      - /url: /clients/00000000-0000-4000-8300-000000000014?branch=00000000-0000-4000-a000-000000000001
+                    - paragraph [ref=e426]: Zainab Ali
+                - cell "+96550010014" [ref=e427]
+                - cell [ref=e430]
+                - cell [ref=e431]
+          - navigation "الصفحات" [ref=e526]:
+            - paragraph [ref=e433]: عرض 1–25 من 25 عميلًا
+  - generic:
+    - status
+    - alert

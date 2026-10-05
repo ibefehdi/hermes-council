@@ -1,0 +1,65 @@
+- generic [ref=e2]:
+  - generic [ref=e49]:
+    - link "Skip to main content" [ref=e50] [cursor=pointer]:
+      - /url: "#main"
+    - complementary [ref=e51]:
+      - navigation "Main" [ref=e52]:
+        - list [ref=e53]:
+          - listitem [ref=e54]:
+            - link "Home" [ref=e55] [cursor=pointer]:
+              - /url: /?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=e56]:
+            - link "My day" [ref=e57] [cursor=pointer]:
+              - /url: /my-day?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=e58]:
+            - generic [ref=e59]: Calendar
+          - listitem [ref=e60]:
+            - link "Clients" [ref=e61] [cursor=pointer]:
+              - /url: /clients?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=e62]:
+            - link "Team" [ref=e63] [cursor=pointer]:
+              - /url: /team?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=e64]:
+            - link "Catalogue" [ref=e65] [cursor=pointer]:
+              - /url: /catalogue?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=e66]:
+            - generic [ref=e67]: Sales
+          - listitem [ref=e68]:
+            - generic [ref=e69]: Reports
+    - banner [ref=e70]:
+      - generic [ref=e71]:
+        - paragraph [ref=e72]: SpaCorner
+        - generic [ref=e73]: Receptionist
+        - group "Branch (locked)" [ref=e74]:
+          - paragraph [ref=e78]: Salmiya
+      - generic [ref=e79]:
+        - button "Search clients" [ref=e80] [cursor=pointer]:
+          - generic [ref=e85]: ⌘K
+        - button "العربية" [ref=e86] [cursor=pointer]
+        - button "Rana Reception" [ref=e88] [cursor=pointer]:
+          - text: Rana Reception
+          - generic [aria-hidden] [ref=e89]: ▾
+    - main [ref=e90]:
+      - generic [ref=e91]:
+        - heading "Welcome, Rana Reception" [level=1] [ref=e92]
+        - generic [ref=e93]:
+          - heading "Your access" [level=2] [ref=e94]
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - paragraph [ref=e97]: Company
+              - paragraph [ref=e98]: SpaCorner
+            - generic [ref=e99]:
+              - paragraph [ref=e100]: Role
+              - paragraph [ref=e101]: Receptionist
+            - generic [ref=e102]:
+              - paragraph [ref=e103]: Branches
+              - paragraph [ref=e104]: Salmiya
+            - generic [ref=e105]:
+              - paragraph [ref=e106]: Current branch
+              - paragraph [ref=e107]: Salmiya
+            - generic [ref=e108]:
+              - paragraph [ref=e109]: Today
+              - paragraph [ref=e110]: Monday, October 5
+  - generic:
+    - status
+    - alert

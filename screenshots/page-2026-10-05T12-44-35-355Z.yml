@@ -1,0 +1,23 @@
+- generic [ref=e2]:
+  - generic [ref=e16]:
+    - banner [ref=e17]:
+      - generic [ref=e18]: GlowDesk
+      - button "English" [active] [ref=e35] [cursor=pointer]
+    - main [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - heading "تسجيل الدخول" [level=1] [ref=e36]
+          - paragraph [ref=e24]: مرحبًا بعودتك. سجّل الدخول لإدارة السبا.
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e28]: البريد الإلكتروني
+            - textbox "البريد الإلكتروني" [ref=e37]
+          - generic [ref=e30]:
+            - generic [ref=e31]: كلمة المرور
+            - textbox "كلمة المرور" [ref=e38]
+          - button "تسجيل الدخول" [ref=e39] [cursor=pointer]
+        - link "نسيت كلمة المرور؟" [ref=e40] [cursor=pointer]:
+          - /url: /forgot-password
+  - generic:
+    - status
+    - alert
