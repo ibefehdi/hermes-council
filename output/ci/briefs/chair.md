@@ -47,3 +47,7 @@ Write for the product owner first and the coding agent second: full sentences, n
     If the verdict is `READY`, the prompt only covers committing the files and opening the PR.
 
 Keep the report under about 600 lines; link to the worker files for detail rather than copying them.
+
+## Note from the owner
+
+`deploy.yml` was moved to `rejected/` on purpose. Deployment is out of scope for the merge gates, so list G-2 under future gates rather than as a defect. Use the `## Rerun` section at the top of `adjudication.md` as the authoritative verdict.
