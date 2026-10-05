@@ -1,0 +1,109 @@
+# Deploy workflow for GlowDesk
+# Deploys migrations, Edge Functions, and the frontend from main to
+# production (or staging, when that branch exists).
+#
+# Triggered on push to main (the production branch per CONVENTIONS §8)
+# and via workflow_dispatch for manual deploys.
+#
+# Requirements before first use
+# =============================
+# 1. A Supabase production project must be linked:
+#    `supabase link --project-ref <project-ref>`
+#    (the project-ref is set as an org secret: SUPABASE_PROJECT_REF)
+# 2. The project's DB migrations must be in sync with main.
+# 3. Frontend static assets are deployed to the hosting provider
+#    (uploaded as an artifact for the ops pipeline).
+#
+# If any of these are not set up, the deploy steps are skipped with a
+# warning — the build artifact is still produced.
+---
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CI: "true"
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          fetch-depth: 0
+
+      - name: Install Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "26.10.0"
+          cache: pnpm
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@d9184bf108216479bc5a137cc391f4d7b14c870b # v6.1.0
+        with:
+          packageManager: pnpm@11.24.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Install Supabase CLI
+        uses: supabase/setup-cli@45a513f8c64c0bc8e0e3dfe572b5c95be85f6359 # v3.0.1
+        with:
+          cli-version: "2.119.0"
+
+      # -----------------------------------------------------------------------
+      # Build the frontend
+      # -----------------------------------------------------------------------
+      - name: Build back-office
+        run: pnpm --filter @repo/back-office build
+
+      # -----------------------------------------------------------------------
+      # Deploy to Supabase (only when linked)
+      # -----------------------------------------------------------------------
+      - name: Check Supabase project link
+        id: check-link
+        run: |
+          if supabase status 2>/dev/null | grep -q 'Project ID'; then
+            echo "linked=true" >> $GITHUB_OUTPUT
+          else
+            echo "linked=false" >> $GITHUB_OUTPUT
+            echo "WARNING: No Supabase project linked. Run 'supabase link' first."
+          fi
+
+      - name: Deploy database migrations
+        if: steps.check-link.outputs.linked == 'true'
+        run: supabase db push
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+      - name: Deploy Edge Functions
+        if: steps.check-link.outputs.linked == 'true'
+        run: supabase functions deploy --use-api
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+      # Upload the built frontend as an artifact so an external deploy
+      # pipeline (or a human) can publish it.
+      - name: Upload frontend build artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: back-office-build-${{ github.sha }}
+          path: apps/back-office/dist/
+          retention-days: 7

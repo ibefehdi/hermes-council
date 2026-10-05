@@ -1,0 +1,331 @@
+# CI pipeline for GlowDesk
+# Runs on every pull request into main (and staging if it ever exists),
+# on push to main to keep main's status visible, and on workflow_dispatch.
+# No paths filter: the required checks must *always* report so the ruleset
+# can require them (GitHub never sees a check run when a paths filter skips
+# the whole workflow).
+#
+# Required check for the ruleset: ci-passed (the aggregator job below).
+# Matrix jobs are never required directly because their names contain the
+# matrix values in parentheses, making them fragile as required-status names.
+# Instead ci-passed depends on every job and inspects each result.
+#
+# Design rationale
+# ================
+# - static:       No stack needed; runs the full pnpm verify chain. Fast
+#                 feedback on lint/type/test/build failures (~22 s from
+#                 baseline). Developer: `pnpm verify`.
+# - backend:      Needs the Supabase stack; runs the clean-migration gate
+#                 (db:reset → pgTAP → type drift → fn:check → sql/drafts-v1/
+#                 gate) and the Deno function tests against the same shared
+#                 stack. Developer: `pnpm db:reset && pnpm db:lint && pnpm db:test
+#                 && pnpm fn:check && pnpm fn:test`.
+# - e2e:          Needs the stack + Playwright browser; runs the full E2E
+#                 suite in both en and ar (sharded by project for parallelism).
+#                 Developer: `pnpm e2e` (requires a running stack and dev
+#                 server with E2E_REUSE_SERVER=1).
+# - ci-passed:    Aggregator — the only check the ruleset requires for main.
+#                 It passes only if every needed job's result is 'success'.
+#
+# Minutes per PR estimate
+# =======================
+# static:   22 s (baseline pnpm verify)
+# backend:  60 s (stack start 15 + db:reset 26 + db:lint 1 + type drift 3
+#                 + fn:check 4 + db:test 4 + fn:test 11 + grep 1)
+# e2e:      5 min (stack start + Playwright en + ar, with retries)
+# Overhead: ~1 min (checkout, install, setup per job)
+# Total:    ~7 min wall time, ~15 min billed (3 parallel jobs each running
+#           on their own runner, with stack-start and install overhead)
+# Target:   well under 20 min on ubuntu-latest.
+#
+# Cache strategy
+# ==============
+# - pnpm store:  cached by pnpm/action-setup via the lockfile hash.
+# - Deno cache:  DENO_DIR is cached between runs; saves ~3 s on fn:check/fn:test.
+# - Playwright:  browsers are installed on-demand (not cached); install time
+#                is ~15 s with --with-deps chromium.
+---
+name: CI
+on:
+  pull_request:
+    branches: [main, staging]
+  push:
+    branches: [main]
+  workflow_dispatch:
+  merge_group:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref_name != 'main' && github.ref_name != 'staging' }}
+
+env:
+  # Supabase stack — use the reduced set that excludes services not needed
+  # by any test suite (studio, imgproxy, logflare, vector, supavisor).
+  SUPABASE_EXCLUDE: studio,imgproxy,logflare,vector
+  CI: "true"
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # static — no stack; fast lint/type/test/build/size checks
+  # ---------------------------------------------------------------------------
+  static:
+    name: static
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          fetch-depth: 0
+
+      - name: Install Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "26.10.0"
+          cache: pnpm
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@d9184bf108216479bc5a137cc391f4d7b14c870b # v6.1.0
+        with:
+          packageManager: pnpm@11.24.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+        env:
+          CI: "true"
+
+      - name: Skills check
+        run: pnpm skills:check
+
+      - name: i18n compile (strict — missing Arabic keys fail)
+        run: pnpm i18n:compile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Lint (ESLint)
+        run: pnpm lint
+
+      - name: Lint CSS (logical properties only)
+        run: pnpm lint:css
+
+      - name: Test (Vitest)
+        run: pnpm test
+
+      - name: Build back-office
+        run: pnpm --filter @repo/back-office build
+
+      - name: Size budgets
+        run: pnpm size
+
+  # ---------------------------------------------------------------------------
+  # backend — clean-migration gate + Deno function tests (share one stack)
+  # ---------------------------------------------------------------------------
+  backend:
+    name: backend
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          fetch-depth: 0
+
+      - name: Install Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "26.10.0"
+          cache: pnpm
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@d9184bf108216479bc5a137cc391f4d7b14c870b # v6.1.0
+        with:
+          packageManager: pnpm@11.24.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+        env:
+          CI: "true"
+
+      - name: Install Supabase CLI
+        uses: supabase/setup-cli@45a513f8c64c0bc8e0e3dfe572b5c95be85f6359 # v3.0.1
+        with:
+          cli-version: "2.119.0"
+
+      - name: Install Deno
+        uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        with:
+          deno-version: "2.9.6"
+
+      # The exposed .env.example provides the placeholder secrets the Deno
+      # tests expect (local secrets only, never production values).
+      - name: Prepare Edge Function .env
+        run: cp supabase/functions/.env.example supabase/functions/.env
+
+      # -----------------------------------------------------------------------
+      # Clean-migration gate (CONVENTIONS §7)
+      # -----------------------------------------------------------------------
+
+      - name: Start Supabase stack (excluded services skipped)
+        run: supabase start --exclude $SUPABASE_EXCLUDE
+
+      - name: db:reset — apply all 43 migrations from empty
+        run: pnpm db:reset
+
+      - name: Check no sql/drafts-v1/ references in the active migration path
+        run: |
+          if grep -rn 'sql/drafts-v1/' supabase/migrations/; then
+            echo "FAIL: active migration path references quarantined sql/drafts-v1/"
+            exit 1
+          fi
+          echo "OK: no sql/drafts-v1/ references"
+
+      - name: db:lint — schema lint
+        run: pnpm db:lint
+
+      - name: db:test — pgTAP (923 tests across 19 files)
+        run: pnpm db:test
+
+      # Type drift check: regenerate types, diff against committed file
+      - name: Type drift check
+        run: |
+          supabase gen types typescript --local > /tmp/database.types.generated.ts
+          if ! diff packages/db/src/database.types.ts /tmp/database.types.generated.ts; then
+            echo "FAIL: type drift detected — generated types differ from committed types"
+            echo "Run: supabase gen types typescript --local > packages/db/src/database.types.ts"
+            exit 1
+          fi
+          echo "OK: no type drift"
+
+      # -----------------------------------------------------------------------
+      # Edge Function checks
+      # -----------------------------------------------------------------------
+
+      - name: fn:check — type-check all Edge Functions
+        run: pnpm fn:check
+
+      - name: fn:test — Deno test suite
+        run: pnpm fn:test
+        timeout-minutes: 5
+        env:
+          CI: "true"
+
+  # ---------------------------------------------------------------------------
+  # e2e — Playwright end-to-end tests in both en and ar
+  # Sharded by project using the Playwright --shard flag behind a matrix.
+  # The "e2e" job name with the project suffix is NOT required directly;
+  # ci-passed depends on e2e.
+  # ---------------------------------------------------------------------------
+  e2e:
+    name: e2e (${{ matrix.project }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [en, ar]
+    steps:
+      - name: Checkout
+        uses: 11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          fetch-depth: 0
+
+      - name: Install Node
+        uses: 49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "26.10.0"
+          cache: pnpm
+
+      - name: Install pnpm
+        uses: d9184bf108216479bc5a137cc391f4d7b14c870b # v6.1.0
+        with:
+          packageManager: pnpm@11.24.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+        env:
+          CI: "true"
+
+      - name: Install Supabase CLI
+        uses: 45a513f8c64c0bc8e0e3dfe572b5c95be85f6359 # v3.0.1
+        with:
+          cli-version: "2.119.0"
+
+      - name: Start Supabase stack
+        run: supabase start --exclude $SUPABASE_EXCLUDE
+
+      - name: Seed the database
+        run: pnpm db:reset
+
+      - name: Install Playwright Chromium browser
+        working-directory: apps/back-office
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Run E2E tests (${{ matrix.project }})
+        working-directory: apps/back-office
+        run: pnpm exec playwright test --project=${{ matrix.project }}
+        env:
+          CI: "true"
+          GLOWDESK_E2E: "1"
+
+      - name: Upload Playwright report (on failure)
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: playwright-report-${{ matrix.project }}-${{ github.run_id }}
+          path: apps/back-office/test-results/
+          retention-days: 5
+
+  # ---------------------------------------------------------------------------
+  # ci-passed — aggregator required by the ruleset for main
+  # ---------------------------------------------------------------------------
+  ci-passed:
+    name: ci-passed
+    needs: [static, backend, e2e]
+    # Run even when a needed job was cancelled or skipped, so a developer
+    # green can never come from a missing check.
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check needed job results
+        env:
+          STATIC_RESULT: ${{ needs.static.result }}
+          BACKEND_RESULT: ${{ needs.backend.result }}
+          E2E_RESULT: ${{ needs.e2e.result }}
+        run: |
+          failed=false
+          for job in static backend e2e; do
+            result_var="${job}_RESULT"
+            result="${!result_var}"
+            case "$result" in
+              success)
+                echo "  PASS $job"
+                ;;
+              skipped)
+                # A job that runs unconditionally on PR triggers should not
+                # be skipped. If we deliberately skip on some events, list
+                # those jobs here.
+                echo "  SKIP $job — unexpected skip on a pull_request trigger"
+                failed=true
+                ;;
+              *)
+                echo "  FAIL $job — result=$result"
+                failed=true
+                ;;
+            esac
+          done
+          if [ "$failed" = "true" ]; then
+            echo ""
+            echo "One or more required jobs did not pass. Merge blocked."
+            exit 1
+          fi
+          echo ""
+          echo "All required jobs passed. Merge allowed."
