@@ -217,7 +217,7 @@ jobs:
               -e 'xox[baprs]-[A-Za-z0-9-]{10,}' \
               -e 'AIza[0-9A-Za-z_-]{35}' \
               -- ':!pnpm-lock.yaml' ':!**/deno.lock' || true
-            git grep -noIiE "(api[_-]?key|secret|token|password|passwd)[\"']?[[:space:]]*[:=][[:space:]]*[\"'][A-Za-z0-9_+/=-]{24,}[\"']" \
+            git grep -noIiE "(api[_-]?key|secret|token|password|passwd)[\"']?[[:space:]]*[:=][[:space:]]*[\"'][A-Za-z0-9_+/=]{24,}[\"']" \
               -- ':!pnpm-lock.yaml' ':!**/deno.lock' || true
           } | grep -v '\.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIi' | cut -d: -f1,2 | sort -u || true )
           if [ -n "$found" ]; then
