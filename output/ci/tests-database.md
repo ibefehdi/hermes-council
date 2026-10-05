@@ -23,4 +23,22 @@ Before writing tests I verified every table, policy, SECURITY DEFINER function, 
 
 ---
 
-## Test files
+## Test records
+
+### T-db-1: Appointments and appointment_items RLS matrix
+
+- File: draft/supabase/tests/019_appointments_matrix.test.sql (new)
+- Proves: ADR-24 (appointments schema), ADR-28 (no direct-write policies), ADR-20 rule 5 (composite FKs), ADR-22 (audit), ADR-7 (status enum)
+- Closes gap: G-4 (P1) — pgTAP for appointments/appointment_items
+- Result at 07e2a10526bfb5d9f17ebac82bb47d4a5376c4bb: PASSES
+- Mutation check: Disabled RLS on appointments (`alter table public.appointments disable row level security`) — 7 tests failed (tests 2, 16, 18, 20, 23, 25-26), including RLS checks, role isolation, cross-tenant denial. Restored and passing again.
+- Runtime: <1s (part of 3s full suite)
+
+### T-db-2: cancellation_reasons RLS matrix
+
+- File: supabase/tests/020_cancellation_reasons.test.sql (new)
+- Proves: CONVENTIONS §7 (pgTAP per table with RLS matrix), CONVENTIONS §3.2 (tables have RLS)
+- Closes gap: G-7 (P3)
+- Result at 07e2a10526bfb5d9f17ebac82bb47d4a5376c4bb: PASSES
+- Mutation check:
+- Runtime:

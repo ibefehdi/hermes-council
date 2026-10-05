@@ -101,6 +101,20 @@ jobs:
         env:
           CI: "true"
 
+      - name: Check Conventional Commits PR title
+        if: github.event_name == 'pull_request'
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          if ! echo "$TITLE" | grep -qE '^(feat|fix|db|fn|refactor|test|docs|chore|i18n)(\([a-z0-9_-]+\))?!?:\s.+'; then
+            echo "FAIL: PR title does not follow Conventional Commits"
+            echo "Expected: type(scope): description"
+            echo "Types: feat, fix, db, fn, refactor, test, docs, chore, i18n"
+            echo "Got: $TITLE"
+            exit 1
+          fi
+          echo "OK: PR title follows Conventional Commits"
+
       - name: Skills check
         run: pnpm skills:check
 
@@ -179,6 +193,23 @@ jobs:
       - name: db:reset — apply all 43 migrations from empty
         run: pnpm db:reset
 
+      - name: Check no secrets or local-only files in committed code
+        run: |
+          failures=0
+          patterns=('.env$' 'supabase/\.temp' 'id_rsa' 'id_ed25519' 'private_key' '-----BEGIN.*PRIVATE KEY-----')
+          for pattern in "${patterns[@]}"; do
+            if git grep -q -E "$pattern" -- ':!*.example' ':!*.test.*' ':!*.spec.*' ':!pnpm-lock.yaml' 2>/dev/null; then
+              echo "FAIL: Found pattern '$pattern' in committed files"
+              git grep -E "$pattern" -- ':!*.example' ':!*.test.*' ':!*.spec.*' ':!pnpm-lock.yaml'
+              failures=$((failures + 1))
+            fi
+          done
+          if [ "$failures" -gt 0 ]; then
+            echo "Secrets or local-only files committed - $failures violation(s)"
+            exit 1
+          fi
+          echo "OK: No secrets or local-only files detected"
+
       - name: Check no sql/drafts-v1/ references in the active migration path
         run: |
           if grep -rn 'sql/drafts-v1/' supabase/migrations/; then
@@ -233,18 +264,18 @@ jobs:
         project: [en, ar]
     steps:
       - name: Checkout
-        uses: 11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
 
       - name: Install Node
-        uses: 49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: "26.10.0"
           cache: pnpm
 
       - name: Install pnpm
-        uses: d9184bf108216479bc5a137cc391f4d7b14c870b # v6.1.0
+        uses: pnpm/action-setup@d9184bf108216479bc5a137cc391f4d7b14c870b # v6.1.0
         with:
           packageManager: pnpm@11.24.0
 
@@ -254,7 +285,7 @@ jobs:
           CI: "true"
 
       - name: Install Supabase CLI
-        uses: 45a513f8c64c0bc8e0e3dfe572b5c95be85f6359 # v3.0.1
+        uses: supabase/setup-cli@45a513f8c64c0bc8e0e3dfe572b5c95be85f6359 # v3.0.1
         with:
           cli-version: "2.119.0"
 
