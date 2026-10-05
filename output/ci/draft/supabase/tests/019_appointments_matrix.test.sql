@@ -4,9 +4,11 @@
 -- manager of A2, receptionist, staff, cross-tenant owner, outsider, anon),
 -- and the ADR-28 absence of direct-write policies (write through RPCs only).
 -- appointment_items inherits branch scope through the parent appointment.
--- Fixtures: 000_harness.sql (seed_clients_matrix creates fixture rows).
+-- Fixtures: 000_harness.sql (seed_clients_matrix creates the appointments: appt_a1
+-- and appt_a4 at A2, appt_a2 at A1, appt_b1 at B1). This file adds one item per
+-- appointment so the item matrix is proven with real rows.
 begin;
-select plan(35);
+select plan(40);
 select tests.seed_tenancy_matrix();
 select tests.seed_staff_matrix();
 select tests.seed_clients_matrix();
@@ -15,7 +17,17 @@ create function tests.visible_appts() returns text[] language sql
 as $$ select coalesce(array_agg(id::text order by scheduled_start), '{}') from public.appointments $$;
 
 create function tests.visible_appt_items() returns text[] language sql
-as $$ select coalesce(array_agg(id::text order by effective_start), '{}') from public.appointment_items $$;
+as $$ select coalesce(array_agg(id::text order by id), '{}') from public.appointment_items $$;
+
+insert into public.appointment_items (id, tenant_id, appointment_id, effective_start, effective_end) values
+  ('73000000-0000-0000-0000-0000000000a1', tests.fixture('tenant_a'), tests.fixture('appt_a1'),
+   '2026-12-01 09:00+03', '2026-12-01 10:00+03'),
+  ('73000000-0000-0000-0000-0000000000a2', tests.fixture('tenant_a'), tests.fixture('appt_a2'),
+   '2026-12-01 11:00+03', '2026-12-01 12:00+03'),
+  ('73000000-0000-0000-0000-0000000000a4', tests.fixture('tenant_a'), tests.fixture('appt_a4'),
+   '2026-12-01 13:00+03', '2026-12-01 14:00+03'),
+  ('73000000-0000-0000-0000-0000000000b1', tests.fixture('tenant_b'), tests.fixture('appt_b1'),
+   '2026-12-01 09:00+03', '2026-12-01 10:00+03');
 
 -- Schema and grants ----------------------------------------------------------------------
 select ok(to_regclass('public.appointments') is not null
@@ -179,33 +191,42 @@ select throws_ok(
 select tests.logout();
 
 -- 2. Appointment_items SELECT matrix ----------------------------------------------------
--- Deleted client (client_a4) has an appointment, so appointment_items should be visible
--- to the branch's roles.
-
--- Owner A sees all appointment_items for tenant A.
+-- An item is visible exactly when its appointment is (branch scope through the parent).
 select tests.login_as('owner_a');
-select is(
-  (select count(*) from public.appointment_items
-    inner join public.appointments a on a.id = appointment_items.appointment_id
-    where a.tenant_id = tests.fixture('tenant_a')),
-  0::bigint,
-  'owner_a sees 0 appointment_items (none seeded in fixtures)'
-);
+select is(tests.visible_appt_items(),
+  array['73000000-0000-0000-0000-0000000000a1', '73000000-0000-0000-0000-0000000000a2',
+        '73000000-0000-0000-0000-0000000000a4'],
+  'owner_a sees the three tenant A items and not the tenant B item');
 
--- The fixture data seeds appointments but not appointment_items, so the item
--- tests check that the RLS admits the same roles as appointments does.
--- Cross-tenant isolation via the EXISTS(subquery on appointments) pattern:
-select ok(
-  (select count(*) = 0 from public.appointment_items
-    where appointment_id = tests.fixture('appt_b1')),
-  'owner_a cannot see tenant B appointment_items (cross-tenant)'
-);
+select tests.login_as('manager_a_all');
+select is(tests.visible_appt_items(),
+  array['73000000-0000-0000-0000-0000000000a1', '73000000-0000-0000-0000-0000000000a2',
+        '73000000-0000-0000-0000-0000000000a4'],
+  'manager_a_all sees the three tenant A items');
+
+select tests.login_as('manager_a1');
+select is(tests.visible_appt_items(), array['73000000-0000-0000-0000-0000000000a2'],
+  'manager_a1 sees only the item of the A1 appointment (no cross-branch items)');
+
+select tests.login_as('manager_a2');
+select is(tests.visible_appt_items(),
+  array['73000000-0000-0000-0000-0000000000a1', '73000000-0000-0000-0000-0000000000a4'],
+  'manager_a2 sees only the items of the A2 appointments');
+
+select tests.login_as('reception_a1');
+select is(tests.visible_appt_items(), array['73000000-0000-0000-0000-0000000000a2'],
+  'reception_a1 sees only the item of the A1 appointment');
+
+select tests.login_as('staff_a2');
+select is(tests.visible_appt_items(), '{}'::text[],
+  'staff_a2 sees no items (staff cannot see appointments)');
+
+select tests.login_as('owner_b');
+select is(tests.visible_appt_items(), array['73000000-0000-0000-0000-0000000000b1'],
+  'owner_b sees only the tenant B item (no cross-tenant items)');
 
 select tests.login_as('outsider');
-select is_empty(
-  $$select id::text from public.appointment_items$$,
-  'outsider sees no appointment_items'
-);
+select is(tests.visible_appt_items(), '{}'::text[], 'outsider sees no appointment_items');
 
 select tests.login_as_anon();
 select throws_ok(

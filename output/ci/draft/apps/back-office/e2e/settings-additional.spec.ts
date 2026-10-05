@@ -2,9 +2,15 @@ import { expect, expectDocumentLocale, signIn, test } from "./fixtures";
 
 const HAWALLY = "00000000-0000-4000-a000-000000000004";
 
+// A single-day closure on a random future date, so repeated runs and the en/ar projects don't overlap.
+function randomFutureDay(): string {
+  const offsetDays = Math.floor(Math.random() * 1400);
+  return new Date(Date.UTC(2027, 0, 1) + offsetDays * 86_400_000).toISOString().slice(0, 10);
+}
+
 test("owner manages branch closures", async ({ page, s, appLocale }) => {
-  const suffix = `${appLocale}-${Date.now().toString(36)}`;
-  const closureName = `${suffix}`;
+  const closureName = `closure-${appLocale}-${Date.now().toString(36)}`;
+  const day = randomFutureDay();
 
   await page.goto("/login");
   await signIn(page, s, "setup-owner@spacorner.test");
@@ -24,24 +30,21 @@ test("owner manages branch closures", async ({ page, s, appLocale }) => {
   await expect(drawer).toBeVisible();
 
   // Fill closure name and dates.
-  const nameField = drawer.getByLabel("Name (English)");
-  await nameField.fill(closureName);
-  const firstDayField = drawer.getByLabel("First day closed");
-  await firstDayField.fill("2026-12-25");
-  const lastDayField = drawer.getByLabel("Last day closed");
-  await lastDayField.fill("2026-12-26");
+  await drawer.getByLabel(s.closureNameEn).fill(closureName);
+  await drawer.getByLabel(s.firstDayClosed).fill(day);
+  await drawer.getByLabel(s.lastDayClosed).fill(day);
 
   // Save the closure.
   await drawer.getByRole("button", { name: s.saveClosure }).click();
   await expect(page.getByText(s.closureSaved)).toBeVisible();
 
-  // The closure appears in the table.
+  // The closure is still listed after a reload.
   await page.reload();
   const table = page.getByRole("table");
   await expect(table.getByRole("row", { name: new RegExp(closureName) })).toBeVisible();
 });
 
-test("owner visits cancellation reasons page", async ({ page, s, appLocale }) => {
+test("owner visits cancellation reasons page", async ({ page, s }) => {
   await page.goto("/login");
   await signIn(page, s, "setup-owner@spacorner.test");
   await expect(page).not.toHaveURL(/\/login/);
