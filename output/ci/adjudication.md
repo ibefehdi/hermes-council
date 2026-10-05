@@ -1,5 +1,53 @@
 # Verifier adjudication
 
+## Rerun
+
+Verdict: NOT READY.
+
+This pass follows the owner's rerun instruction and rechecks only the changed draft items. The deployment workflow is now under `output/ci/rejected/`; deployment is out of merge-gate scope for this round, so G-2 is excluded from this verdict. The previously verified results for unchanged jobs and tests remain as recorded below. The product repository stayed read-only; its working tree was clean again after restoring the local Supabase stack.
+
+### Changed-item verification
+
+| Changed item | Verification and evidence | Ruling |
+|---|---|---|
+| `draft/supabase/tests/019_appointments_matrix.test.sql` | The full `supabase test db` suite passes 23 files / 1,018 tests. The targeted test passes 40/40. With `appointment_items_select` changed to `USING (false)`, assertions 28–32 and 34 fail (6/40). With a tenant-only policy, assertions 30–33 fail (4/40). The fixture inserts four actual items at lines 22–30, and the role-specific exact-item assertions are at lines 193–235. | ACCEPT. G-4 (P1) is closed: authorized roles see the expected item rows, and both policy weakenings are detected. |
+| `draft/.github/workflows/ci.yml` secret scan | The first clean-tree replay exposed two defects: the Supabase-demo JWT allowlist did not match the intended issuer, and the generic assignment pattern falsely matched the deliberately invalid long auth-header fixture in `route_guard_test.ts:140`. I corrected the allowlist and narrowed the generic value pattern in the workflow at lines 207–229. The final clean-tree scan passes. After staging harmless canaries, the scanner failed on `.env`, a fake AWS key in a `*_test.ts`, a non-demo JWT in a `*.spec.ts`, and a 24+ character `api_key` assignment; it emitted only paths and line numbers, never the values. All canaries were removed and the clean scan passed again. | ACCEPT WITH THE RECORDED WORKFLOW CORRECTION. F-verifier-3 is resolved for the specified canaries and committed test/spec files. |
+| `draft/.github/workflows/ci.yml` local Vite configuration | The first browser replay showed a blank page; the browser console reported that `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` were unset. I added an E2E-job step at workflow lines 316–325 that reads `supabase status -o env` at runtime and exports `API_URL` and `ANON_KEY` through `GITHUB_ENV`, without printing them. Replaying with those runtime values allowed the app and auth screens to load. | ACCEPT. This fixes a workflow defect exposed by the changed E2E replay and follows the common brief's no-hardcoded-key rule. |
+| `draft/apps/back-office/e2e/settings-additional.spec.ts` | Both projects, three repeats each: all 12 test instances passed. Mutation check: changing the closure button handler from opening the form to doing nothing made `owner manages branch closures` fail at its dialog assertion; after restoring the source, the same test passed 1/1. | ACCEPT for G-9's closures and cancellation-reasons coverage. |
+| `draft/apps/back-office/e2e/my-day.spec.ts` | The six positive staff-journey instances failed across `en`/`ar` and three repeats. The snapshot shows the `Where you work` card contains a table with two branch rows, but the test looks for a `region` landmark at lines 21–23; the `Card` renders a generic container, and `MyDayPage.tsx:197–237` exposes the table caption `Your branches`. The same invalid `region` assumption is used for the shifts and blocked-time cards at lines 26–31. | REJECT and move to `output/ci/rejected/apps/back-office/e2e/my-day.spec.ts`. G-8 remains open; fix the locators to use the accessible table captions (and rerun both locale projects three times). |
+
+### Rerun replay table
+
+| Job / step | Result | Duration / evidence |
+|---|---|---|
+| Draft static validator | PASS; no `FAIL` lines, required check is `ci-passed` | 5.65 s; `node /Users/fahad/council/check-ci.mjs /Users/fahad/council/output/ci/draft /Users/fahad/GlowDesk` |
+| `pnpm lint` | PASS | 4.41 s |
+| Back-office typecheck | PASS | `pnpm --filter @repo/back-office typecheck`, exit 0 |
+| Full pgTAP suite | PASS; 23 files / 1,018 tests | 4.84 s wall time; detailed output in `output/ci/scratch/verifier-rerun-db-test.log` (lines 22–28) |
+| Secret scan clean tree | PASS | Clean after canary removal; final output was `OK: no secrets or local-only files committed` |
+| Secret scan canaries | Expected FAIL on all four canary classes | Output contained `.env` and canary file/line locations only; no matched values |
+| New E2E specs, both projects, `--repeat-each=3` | 18 passed / 6 failed; all 12 settings-spec runs passed; the six failed instances are the positive `/my-day` journey | About 1.4 min. The missing Vite environment was fixed before the final run; remaining failure is the test's invalid landmark locator, not a port conflict. |
+| Closure-flow mutation and restore | Mutation FAIL at the expected dialog assertion; restored test PASS 1/1 | Evidence from `settings-additional.spec.ts:28–30` |
+| Stack / repository restoration | PASS; verifier stack stopped, developer stack started and reset; `GlowDesk` porcelain status empty at `9efb74bf24303ed3a7302d6fa0f5da871b5720d2` | `supabase start` and `pnpm db:reset` both exited 0; local auth health returned HTTP 200 |
+
+### Updated gap ruling and remaining work
+
+- G-4 (P1) is closed by the accepted row-backed test and both mutation checks.
+- G-2 is explicitly out of scope as a deployment workflow, per the owner's rerun direction.
+- G-8 remains open because the proposed `/my-day` test was rejected after the replay demonstrated its landmark locator is invalid.
+- G-10 remains open from the first pass: traceability.md:418–421 records the missing axe-core accessibility checks. No change in this rerun addressed it.
+- The validator, lint, typecheck, pgTAP suite, secret-canary checks, and accepted settings E2E coverage pass; however, the built-plan E2E gaps G-8 and G-10 are not proven by an accepted test. The merge gate therefore cannot be marked ready.
+
+### Draft changes made in this rerun
+
+- Corrected the local-demo JWT allowlist and generic inline-value matching in `draft/.github/workflows/ci.yml:207–229` after the clean-tree replay exposed false positives.
+- Added runtime local Supabase environment export for the E2E dev server in `draft/.github/workflows/ci.yml:316–325`; no key is hardcoded or printed.
+- Moved the rejected `my-day.spec.ts` from the draft to `output/ci/rejected/apps/back-office/e2e/my-day.spec.ts`.
+- No files in `/Users/fahad/GlowDesk` were changed. The only product-code mutation used for verification was in the verifier sandbox and was restored with `git checkout`.
+
+---
+
+
 Verdict: NOT READY
 
 The draft passes `check-ci.mjs` with no `FAIL` lines after the verifier's workflow and ruleset corrections. The local static checks, clean migration tests, Edge Function suites, and the accepted database tests pass. The merge gate is still not ready: the P1 deployment gap G-2 is not actually implemented, and the P1 appointment-item RLS gap G-4 remains open because the proposed test passes even when the appointment-item SELECT policy is broken. The new frontend tests were rejected after the PR lint command failed on them; local Playwright execution also could not proceed because an unrelated process owns port 5173.
