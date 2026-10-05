@@ -188,7 +188,7 @@ jobs:
       # -----------------------------------------------------------------------
 
       - name: Start Supabase stack (excluded services skipped)
-        run: supabase start --exclude $SUPABASE_EXCLUDE
+        run: supabase start --exclude "$SUPABASE_EXCLUDE"
 
       - name: db:reset — apply all 43 migrations from empty
         run: pnpm db:reset
@@ -290,7 +290,7 @@ jobs:
           cli-version: "2.119.0"
 
       - name: Start Supabase stack
-        run: supabase start --exclude $SUPABASE_EXCLUDE
+        run: supabase start --exclude "$SUPABASE_EXCLUDE"
 
       - name: Seed the database
         run: pnpm db:reset

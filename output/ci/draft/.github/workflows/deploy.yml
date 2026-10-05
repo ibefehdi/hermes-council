@@ -81,9 +81,9 @@ jobs:
         id: check-link
         run: |
           if supabase status 2>/dev/null | grep -q 'Project ID'; then
-            echo "linked=true" >> $GITHUB_OUTPUT
+            echo "linked=true" >> "$GITHUB_OUTPUT"
           else
-            echo "linked=false" >> $GITHUB_OUTPUT
+            echo "linked=false" >> "$GITHUB_OUTPUT"
             echo "WARNING: No Supabase project linked. Run 'supabase link' first."
           fi
 
