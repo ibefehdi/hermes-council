@@ -193,22 +193,40 @@ jobs:
       - name: db:reset — apply all 43 migrations from empty
         run: pnpm db:reset
 
-      - name: Check no secrets or local-only files in committed code
+      - name: Check no secrets or local-only files are committed
         run: |
-          failures=0
-          patterns=('.env$' 'supabase/\.temp' 'id_rsa' 'id_ed25519' 'private_key' '-----BEGIN.*PRIVATE KEY-----')
-          for pattern in "${patterns[@]}"; do
-            if git grep -q -E "$pattern" -- ':!*.example' ':!*.test.*' ':!*.spec.*' ':!pnpm-lock.yaml' 2>/dev/null; then
-              echo "FAIL: Found pattern '$pattern' in committed files"
-              git grep -E "$pattern" -- ':!*.example' ':!*.test.*' ':!*.spec.*' ':!pnpm-lock.yaml'
-              failures=$((failures + 1))
-            fi
-          done
-          if [ "$failures" -gt 0 ]; then
-            echo "Secrets or local-only files committed - $failures violation(s)"
-            exit 1
+          status=0
+          # Local-only and key files, by path (.env.example files are the committed templates).
+          if git ls-files | grep -E '(^|/)\.env(\..+)?$|(^|/)supabase/\.(temp|branches)/|(^|/)id_(rsa|ed25519|ecdsa)$|\.(pem|p12|pfx|key)$' | grep -vE '\.example$'; then
+            echo "FAIL: local-only or key files are committed (listed above)"
+            status=1
           fi
-          echo "OK: No secrets or local-only files detected"
+          # Secret values in every tracked file, tests included. The only tokens allowed are the
+          # Supabase local demo JWTs (iss "supabase-demo"), which are identical on every machine.
+          # Only file:line is printed, never the value.
+          found=$( {
+            git grep -noIE \
+              -e '-----BEGIN [A-Z ]*PRIVATE KEY-----' \
+              -e 'eyJ[A-Za-z0-9_-]{10,}\.eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}' \
+              -e 'sb_secret_[A-Za-z0-9_-]{20,}' \
+              -e '(sk|rk)_live_[A-Za-z0-9]{16,}' \
+              -e 'sk-or-v1-[A-Za-z0-9]{16,}' \
+              -e 'AKIA[0-9A-Z]{16}' \
+              -e 'gh[pousr]_[A-Za-z0-9]{36}' \
+              -e 'github_pat_[A-Za-z0-9_]{40,}' \
+              -e 'xox[baprs]-[A-Za-z0-9-]{10,}' \
+              -e 'AIza[0-9A-Za-z_-]{35}' \
+              -- ':!pnpm-lock.yaml' ':!**/deno.lock' || true
+            git grep -noIiE "(api[_-]?key|secret|token|password|passwd)[\"']?[[:space:]]*[:=][[:space:]]*[\"'][A-Za-z0-9_+/=-]{24,}[\"']" \
+              -- ':!pnpm-lock.yaml' ':!**/deno.lock' || true
+          } | grep -v '\.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIi' | cut -d: -f1,2 | sort -u || true )
+          if [ -n "$found" ]; then
+            echo "FAIL: secret-like values are committed at:"
+            echo "$found"
+            status=1
+          fi
+          [ "$status" -eq 0 ] && echo "OK: no secrets or local-only files committed"
+          exit "$status"
 
       - name: Check no sql/drafts-v1/ references in the active migration path
         run: |
