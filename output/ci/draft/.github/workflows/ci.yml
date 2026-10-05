@@ -313,6 +313,17 @@ jobs:
       - name: Seed the database
         run: pnpm db:reset
 
+      - name: Export local Supabase credentials for Vite
+        run: |
+          supabase status -o env > "$RUNNER_TEMP/supabase.env"
+          set -a
+          source "$RUNNER_TEMP/supabase.env"
+          set +a
+          {
+            printf 'VITE_SUPABASE_URL=%s\n' "$API_URL"
+            printf 'VITE_SUPABASE_ANON_KEY=%s\n' "$ANON_KEY"
+          } >> "$GITHUB_ENV"
+
       - name: Install Playwright Chromium browser
         working-directory: apps/back-office
         run: pnpm exec playwright install --with-deps chromium
