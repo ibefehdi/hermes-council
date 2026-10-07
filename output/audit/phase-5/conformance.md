@@ -225,4 +225,91 @@ No ADR violations found.
 
 ---
 
+## 6. Documentation and skills
+
+### Skills sync
+Both `.cursor/skills/` and `.claude/skills/` directories exist and are **identical** (confirmed by recursive diff). They were updated during Phase 5 work (git log shows Phase 5 commits touching skills: `514365d feat(clients): show appointment history and no-show count`, `d6955e5 feat(calendar): add drag and keyboard reschedule with override confirm`, `aad2da2 fn(bookings): add slots and conflict suggestions`, and several more). Skills that reference booking/appointment/realtime content:
+- `supabase-database/SKILL.md` — covers booking/advisory locks/RLS
+- `spa-domain-glossary/SKILL.md` — glossary naming (appointment, booking as act)
+- `i18n-rtl/reference.md` — RTL/bidi rendering rules
+- `feature-delivery/SKILL.md` — booking/lifecycle/status procedures
+**Status**: DONE. Skills are in sync and reference Phase 5 concepts.
+
+### README
+- README.md covers `pnpm dev`, `pnpm e2e`, `pnpm fn:test`, `pnpm db:test`, `pnpm verify` — all commands needed to run Phase 5 deliverables.
+- The seed users table includes receptionist/staff credentials used by booking flows.
+- No Phase-5-specific README update was needed beyond what already described the project. The calendar is accessed via the back-office SPA; the booking function is exercised via `pnpm fn:test`.
+**Status**: DONE. README is accurate for Phase 5.
+
+### Phase evidence
+Comprehensive evidence exists under `plan/evidence/`:
+- `5.1/` — 10 concurrency test output files + pgTAP excerpt
+- `5.2/` — 8 HTTP test outputs + slot engine evidence
+- `5.3/` — 63 screenshots (EN and AR, light + dark mode) across all calendar features
+- `5.4/` — channel authorization log, slots benchmark, calendar performance benchmark, busy-branch fixture seed
+**Status**: DONE. Evidence is well-organized and complete.
+
 ---
+
+## 7. Dependencies check
+
+### Declared dependencies
+| Dependency | Phase/Subphase | Status | Evidence |
+|------------|---------------|--------|----------|
+| Phase 2 (Staff & Shifts) | Phase 5 | DONE | Staff/shifts/blocked-time tables exist. Conflict engine uses cross-branch staff checking. |
+| Phase 3 (Service catalogue) | Phase 5 | DONE | resolve_service() exists. Service tables with overrides exist. |
+| Phase 4 (Clients) | Phase 5 | DONE | Client tables, blocked flag, appointment history exist. |
+| 5.1 depends on 2.3 | 5.1 | DONE | blocked_time RPC pattern exists (20261006120200_blocked_time_rpcs.sql). |
+| 5.1 depends on 3.1 | 5.1 | DONE | resolve_service exists (20261007100200_catalogue_effective_values.sql). |
+| 5.1 depends on 4.1 | 5.1 | DONE | Client blocked flag exists (clients migration). |
+| 5.2 depends on 2.2 (shifts) | 5.2 | DONE | Shifts table exists. |
+| 5.2 depends on 2.3 (blocked time) | 5.2 | DONE | Blocked time table with exclusion constraint exists. |
+| 5.3 depends on 0.5 | 5.3 | DONE | ADR-41 spike verdict documented. Fallback calendar library used. |
+| 5.4 depends on 5.3 | 5.4 | DONE | Calendar UI exists. |
+| 5.4 depends on 5.1 | 5.4 | DONE | Appointments schema with realtime publication exists. |
+
+### What next phase (Phase 6: Checkout) needs from Phase 5
+Phase 6 depends on:
+1. **Appointments exist to attach sales to** — DONE. Appointments table with id, branch, client, items. A sale can reference an appointment via appointment_id.
+2. **Appointment items snapshotted** — DONE. appointment_items carries price_minor, duration, service names for checkout cart assembly.
+3. **Booking lifecycle creates cancellable/booked appointments** — DONE.
+
+All dependencies for Phase 6 are in place. No gaps.
+
+---
+
+## 8. Summary
+
+### Phase 5 verdict: PASS (with minor concerns)
+
+**Subphase statuses:**
+| Subphase | Status |
+|----------|--------|
+| 5.1 Booking data layer | DONE — all 23 checklist items DONE |
+| 5.2 Slot & conflict engine | DONE — 11/12 DONE, 1 PARTIAL (test location) |
+| 5.3 Calendar UI | DONE — 20/21 DONE, 1 PARTIAL (Playwright reliability) |
+| 5.4 Realtime & performance | DONE — all 13 checklist items DONE |
+
+**Exit criteria:** 13/14 DONE, 1 PARTIAL (EC-12: full RTL — Arabic locale has Playwright reliability issues)
+
+### Findings
+
+| ID | Severity | Title |
+|----|----------|-------|
+| F-CONF-1 | Minor | Slot engine moved from packages/core to SQL (DEVIATED-JUSTIFIED, documented) |
+| F-CONF-2 | Minor | packages/core slot tests only cover ranking, not engine math (coverage moved to pgTAP) |
+| F-CONF-3 | Minor | bookings EF adds attach-client and notes routes beyond spec (harmless extensions) |
+| F-CONF-4 | Major | 8 Playwright failures (6 Arabic, 2 English) — toast visibility timeouts affecting RTL exit criterion EC-12 |
+
+### F-CONF-4: Playwright Arabic reliability
+- Severity: major
+- Location: Gates report, GATES.md:92-99
+- Problem: 8 of 92 Playwright tests fail, predominantly Arabic toast-not-visible timeouts and one session redirect issue. While the core functionality passes (84/92), the Arabic locale has lower reliability affecting the "Full RTL" exit criterion.
+- Evidence: GATES.md failure table — 6 Arabic failures (toast not visible 4x, slot picker not found 1x, session redirect to /login 1x), 2 English failures (toast not visible).
+- Fix: Investigate toast animation/visibility timing in the Arabic locale (toast messages are longer in Arabic causing wrapping/layout issues, or animation durations differ in RTL). Add `waitFor` with higher timeout or change toast strategy. For the session redirect, check Arabic locale session cookie handling.
+- Plan item: EC-12 (Full RTL), Playwright acceptance tests (5.3.20)
+
+### Count per severity
+- Blocker: 0
+- Major: 1
+- Minor: 3
