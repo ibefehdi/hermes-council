@@ -1,283 +1,84 @@
-# Phase 5 recheck report
+# Phase 5 re-check report
 
-## Fix range
+## Verdict
 
-| Attribute | Value |
-|---|---|
-| Audited commit | e552ed4618debb79d4d538ae655abb9db7d9d544 (main) |
-| Current HEAD | cd9e67753498d2d786b6a57e1745595f5fc3fa00 (fix/phase-5-audit-e2e) |
-| Working tree | 2 untracked paths (.pnpm-store/, .seed-pw) — no tracked changes |
-| Commits since audited | 4 |
+Previous verdict: FAIL. Re-check verdict: FAIL, as decided by the verifier in `recheck/adjudication.md:3-5`.
 
-### Commits (e552ed4..cd9e677)
+The fixes resolved six of the eight Playwright failures, including all six Arabic failures, but the required browser gate still fails: 90 of 92 tests pass and two English tests fail. The settings test cannot find the saved tips checkbox after reload, and the staff test times out while looking for the sign-in form's Email field. Two minor accepted findings also remain unchanged: the redundant appointment-item foreign key and inaccurate `busy_range` skill documentation. Phase 5 is not ready for acceptance.
 
-| Commit | Message | Scope |
-|---|---|---|
-| 9b2b80d | test(e2e): retire leftover fixture staff before each run | Fixture cleanup (bookingFixtures.ts, globalSetup.ts) |
-| 45cec54 | fix(calendar): keep the chosen time while the slot picker narrows to one person | SlotPicker.tsx, bookingForm.ts, bookingForm.test.ts |
-| 8e7b15e | test(calendar): assert durable state before transient toasts | 8 E2E spec files + fixtures.ts |
-| cd9e677 | docs(evidence): record the Phase 5 audit re-run | Evidence documentation only |
+## What was re-checked
 
-### git diff --stat (excluded plan/evidence/ binaries and JSON)
+- Repository: `/Users/fahad/GlowDesk`.
+- Previously audited branch and commit: `main`, `e552ed4618debb79d4d538ae655abb9db7d9d544` (previous audit, `AUDIT_REPORT.md:16-27`).
+- Re-check gate branch and commit: `fix/phase-5-audit-e2e`, `cd9e67753498d2d786b6a57e1745595f5fc3fa00` (`recheck/gates/GATES.md:7-12`). The gate report records that commit as its HEAD and records all ten checks (`recheck/gates/GATES.md:73-86`).
+- Fix commits after the audited commit:
+  - `9b2b80d` — `test(e2e): retire leftover fixture staff before each run`.
+  - `45cec54` — `fix(calendar): keep the chosen time while the slot picker narrows to one person`.
+  - `8e7b15e` — `test(calendar): assert durable state before transient toasts`.
+  - `cd9e677` — `docs(evidence): record the Phase 5 audit re-run`.
+  These are listed in `recheck/recheck.md:12-19` and `recheck/gates/GATES.md:14-21`.
+- At gate execution the working tree had untracked `.pnpm-store/` and `.seed-pw`, with no tracked changes recorded before or after the checks (`recheck/gates/GATES.md:12,58-59`).
+- Scope note: when this report was prepared on 2026-10-07, the live checkout was instead on `feat/calendar-now-line` at `594475e976e0f59bc2ea10625c4bf6463d5a5b95`, with the same two untracked paths and no tracked changes (`git status --short --branch`, `git rev-parse HEAD`). That live checkout is not the `cd9e677` gate snapshot. This report's re-check verdict and gate results refer to the tested `cd9e677` fix branch; they do not certify the separate live checkout.
 
-55 files changed, 13123 insertions(+), 11566 deletions(-). The large delta is entirely in `plan/evidence/` (screenshots, benchmark traces, re-run logs). Source-code changes: 13 files, +233/-35 net lines.
+## Gates
 
----
+The previous results below are from the original report's gate table (`AUDIT_REPORT.md:29-46`). Current results are from the re-check gate report (`recheck/gates/GATES.md:73-108`).
 
-## Checklist: accepted findings
-
-### F-TEST-1 (blocker): Required Playwright gate fails
-
-**Previous status:** blocker — 8 of 92 tests fail (2 en, 4 ar toast visibility; ar walk-in slot loading; ar catalogue login)
-
-**Current status: PARTIAL**
-
-**Evidence:**
-- Previous gate: 84 passed, 8 failed, 0 skipped (GATES.md phase-5/gates:82,88-99)
-- Recheck gate: 90 passed, 2 failed, 0 skipped (recheck/gates/GATES.md:84,92-95)
-- All 6 Arabic failures are now passing: ar walk-in, ar catalogue, ar toast visibility, etc.
-- Both `en` and `ar` Playwright projects ran (recheck/gates/GATES.md:107-108)
-- Test count unchanged: 92 tests total (same number of spec files, same test() calls per file verified via git show)
-
-**What was fixed:**
-1. SlotPicker.tsx + bookingForm.ts: keeps the chosen time visible while the slot search narrows to one person (fixes ar walk-in slot loading and ar toast timing)
-2. bookingFixtures.ts: `retireLeftoverStaff()` cleans up leftover fixture staff from earlier runs so per-staff queries don't slow down (fixes cumulative fixture-bloat timeouts)
-3. E2E specs: assert durable state (drawer hidden, appointment card visible) BEFORE checking the transient toast, so the toast check runs while it's still fresh (fixes English and Arabic toast timing)
-4. fixtures.ts: `signIn()` waits for the shell's account menu before proceeding (fixes login session race)
-
-**What remains (2 failures, both en locale):**
-
-| # | Test | Error |
-|---|---|---|
-| 1 | `settings.spec.ts` "owner sets up a branch end to end" | `getByLabel('Ask for a tip at checkout')` not found after page reload at line 91 (recheck/gates/playwright-results/settings-.../error-context.md:121) |
-| 2 | `staff.spec.ts` "an owner adds a staff member..." | `locator.fill` for Email field in sign-in dialog times out (30s) at fixtures.ts:52 (recheck/gates/playwright-results/staff-.../error-context.md:79) |
-
-Failure 1 (settings) is a pre-existing Phase 4 settings spec — the tips checkbox does not render after page reload, possibly a race between the tips tab content and the assertion. Failure 2 (staff) is a pre-existing Phase 4 staff spec — the sign-in dialog does not render the email field, suggesting the staff-add flow's invite dialog needs a wait for the dialog frame to load.
-
-**Neither failure is in a Phase 5 E2E file.** Both are in Phase 4 features (settings, staff). However, they still block the Playwright gate, so the gate remains FAIL.
-
-**Remaining work:**
-- Fix `settings.spec.ts` tips checkbox reload issue (add a wait for the tips tab content before checking the checkbox)
-- Fix `staff.spec.ts` invite dialog — wait for the dialog element to be visible before filling the email field
-
-**Verdict:** 6 of 8 failures fixed. F-TEST-1 is PARTIAL because 2 failures remain and the Playwright gate still fails.
-
----
-
-### F-VERIFIER-1 (major, from adjudication): Exact-head gate evidence missing
-
-**Previous status:** major — the audit gate ran at `ca1f194` while HEAD was `b7038ed`; tree IDs matched but exact-HEAD gate evidence was not produced
-
-**Current status: FIXED**
-
-**Evidence:**
-- Recheck gate ran at commit `cd9e67753498d2d786b6a57e1745595f5fc3fa00` (recheck/gates/GATES.md:9)
-- `cd9e677` IS the current HEAD (git rev-parse HEAD confirms)
-- All 10 gates executed, documented, logs saved to `recheck/gates/`
-- GATES.md includes full toolchain, branch, git status, and test counts
-
----
-
-### F-DB-1 (minor): Redundant appointment-item foreign key
-
-**Previous status:** minor — `appointment_items_appointment_fk` `(appointment_id, tenant_id)` is redundant alongside the newer `appointment_items_appointment_branch_fk` `(appointment_id, branch_id, tenant_id)`
-
-**Required fix:** Add a new cleanup migration dropping `appointment_items_appointment_fk` after confirming no dependent code
-
-**Current status: NOT FIXED**
-
-**Evidence:**
-- `git diff --name-only e552ed4..HEAD -- supabase/migrations/` returns empty — no migration files changed
-- `git diff --name-only e552ed4..HEAD --name-only | grep -i "sql\|migration"` returns empty — no SQL files changed at all
-- The redundant FK still exists at `supabase/migrations/20261006120000_create_appointments.sql:65`
-- The new FK still exists at `supabase/migrations/20261009100000_extend_appointments.sql:40`
-- `grep -r "appointment_items_appointment_fk" .cursor/skills/ .claude/skills/` returns nothing (the FK is only in the migration, not in reusable skill text)
-
-**Remaining work:** Create a new migration file (e.g., `20261012XYZ_cleanup_appointment_items_fk.sql`) that runs `ALTER TABLE appointment_items DROP CONSTRAINT appointment_items_appointment_fk;` after a `DO $$` block checks no dependent view or function references it.
-
----
-
-### F-DB-2 (minor): `busy_range` skill text does not match the approved trigger implementation
-
-**Previous status:** minor — `.cursor/skills/supabase-database/SKILL.md:148-160` describes `busy_range` as `GENERATED ALWAYS AS (…) STORED`, but the migration at `20261006120000_create_appointments.sql:73-93` uses a trigger
-
-**Required fix:** Update both `.cursor/skills/supabase-database/SKILL.md` and `.claude/skills/supabase-database/SKILL.md` to document the trigger as canonical
-
-**Current status: NOT FIXED**
-
-**Evidence:**
-- `git diff --name-only e552ed4..HEAD -- .cursor/skills/ .claude/skills/` returns empty — neither skill file changed
-- `md5sum` of the skill file is identical at both the audited commit and HEAD: `2a24f434214cff2a0e123088b456eec3`
-- Current skill text at line 148-160 still says `GENERATED ALWAYS AS` (recheck verified at `.cursor/skills/supabase-database/SKILL.md:148-160`)
-- Both copies are identical (`diff` returns empty), but neither was corrected
-
-**Remaining work:** Replace the `GENERATED ALWAYS AS` code block in both skill copies with a trigger-based example matching the actual migration, and update the surrounding prose to describe the trigger-maintained range as canonical.
-
----
-
-### F-CONF-1 / F-CONF-2 / F-SLOT-1 (minor, accepted as one): Slot engine in SQL rather than the planned core package
-
-**Previous adjudication:** Accepted as a justified deviation, documented in migration header. No code fix required.
-
-**Current status: FIXED** (no code change needed — status reflects that the deviation justification remains valid, not that anything was changed)
-
-**Evidence:** No code change needed per adjudication.md:30. Migration header at `supabase/migrations/20261010100000_booking_slots.sql:4-11` still documents the branch-RLS rationale. pgTAP 027 parity coverage still exists. No regression observed.
-
----
-
-### F-DESIGN-1 (minor): Calendar library token contains "left" in its name
-
-**Previous adjudication:** Accepted as a minor, no code change needed — it's a third-party schedule-x variable name, not a directional CSS property.
-
-**Current status: FIXED** (no code change needed)
-
-**Evidence:** Unchanged, no regression. The token `--sx-calendar-week-grid-padding-left` at `BookingCalendar.css:34` remains a library variable, not a CSS direction property. No code change required per adjudication.md:31.
-
----
-
-## Checklist: gates that were FAIL or MISSING
-
-### Playwright suite — FAIL (8 of 92) in previous audit
-
-**Previous status:** FAIL (8/92)
-**Current status:** FAIL (2/92) — improved but still failing
-
-As documented under F-TEST-1 above: 90/92 pass, 2 fail. The gate result is still FAIL.
-
-### All other gates — PASS (unchanged)
-
-| Gate | Previous | Current | Change |
+| Gate | Previous result | Re-check result | Key detail |
 |---|---|---|---|
-| `pnpm install --frozen-lockfile` | PASS | PASS | — |
-| `pnpm db:reset` | PASS (48 migrations) | PASS (45 migrations) | 3 seed-only migrations consolidated (no change to phase-5 schema) |
-| `pnpm db:test` (pgTAP) | PASS (1313/1313) | PASS (1313/1313) | — |
-| `pnpm db:lint` | PASS | PASS | — |
-| Type drift check | PASS | PASS | — |
-| `pnpm fn:test` (Deno) | PASS (189/189) | PASS (189/189) | — |
-| `pnpm verify` | PASS (Vitest 447) | PASS (Vitest 449) | +2 tests = new `narrowsStaffOnly` unit tests |
-| Perf benchmark | PASS (p95 36 ms) | PASS (p95 40.4 ms) | Still well under 300 ms budget |
-| Final `pnpm db:reset` | PASS | PASS | — |
+| `pnpm install --frozen-lockfile` | PASS | PASS | Nine workspace projects; already up to date (`GATES.md:77`). |
+| `pnpm db:reset` | PASS | PASS | Current reset applied 45 migrations and seeded the database (`GATES.md:78`). The prior report counted 48 (`AUDIT_REPORT.md:36`); the re-check notes three seed-only migrations were consolidated and no Phase 5 schema migration changed (`recheck/recheck.md:149-161,199-202`). |
+| `pnpm db:test` | PASS, 1,313/1,313 | PASS, 1,313/1,313 | 29 pgTAP files (`GATES.md:79,101`). |
+| `pnpm db:lint` | PASS | PASS | No schema errors (`GATES.md:80`). |
+| Type drift (`supabase gen types typescript --local`) | PASS | PASS | Only CLI banner differences; no type drift (`GATES.md:81`). |
+| `pnpm fn:test` | PASS, 189/189 | PASS, 189/189 | Eight Deno suites, no failures (`GATES.md:82,102`). |
+| `pnpm verify` | PASS; Vitest 447 tests | PASS; Vitest 449 tests | 56 files, zero failures; lint, typecheck, build, coverage, and size checks passed (`GATES.md:83,103`). |
+| Playwright suite | FAIL, 84/92 passed, 8 failed | FAIL, 90/92 passed, 2 failed, 0 skipped | Both English and Arabic projects ran. Remaining English failures are the settings tips checkbox and staff Email-field lookup (`GATES.md:84,90-108`; error contexts listed below). |
+| `scripts/perf/slots-bench.ts` | PASS; p95 36 ms | PASS; p95 40.4 ms | Current maximum was 49.7 ms against a 300 ms budget (`AUDIT_REPORT.md:43`; `GATES.md:85`). |
+| Final `pnpm db:reset` | PASS | PASS | Clean reset completed for downstream consumers (`GATES.md:86`). |
 
-The migration count changed from 48 to 45 — this is because the original audit included seed-only migrations in the count. No phase-5 schema migrations were added or removed (`git diff --name-only supabase/migrations/` is empty).
+The two remaining Playwright errors are specific: `settings.spec.ts` cannot find `getByLabel('Ask for a tip at checkout')` at its post-reload checked assertion (`recheck/gates/playwright-results/settings-owner-sets-up-a-branch-end-to-end-en/error-context.md:14-24,119-123`); `staff.spec.ts` times out waiting for `getByLabel('Email')` during `signIn()` (`recheck/gates/playwright-results/staff-an-owner-adds-a-staf-80e31--lists-and-by-Arabic-search-en/error-context.md:14-23,75-85`). The error evidence does not establish a more specific root cause.
 
----
+## Previous findings
 
-## Checklist: exit/acceptance criteria not DONE
-
-### EC-12: Full RTL — PARTIAL
-
-**Previous status:** PARTIAL
-**Current status:** PARTIAL (improved)
-
-The Arabic Playwright failures that blocked EC-12 are now all fixed (6 Arabic tests now pass). All Arabic E2E journeys (walk-in, catalogue, booking, reschedule, toasts) succeed end-to-end. However, the Playwright gate as a whole still fails due to 2 English failures. EC-12 concerns Arabic/RTL specifically, so the RTL behavior itself now works — but the phase exit criterion requires the full gate to pass, which it does not.
-
-### 5.3.17: Walk-in booking works — PARTIAL
-
-**Previous status:** PARTIAL — Arabic walk-in journey had no available slot radio
-**Current status:** DONE
-
-The Arabic walk-in journey now passes (confirmed by 0 Arabic failures in recheck gate). The SlotPicker fix (45cec54) resolved the "no available slot" issue by keeping the chosen time visible while the slot picker narrows to one person. The walk-in acceptance criterion is now met.
-
-### 5.3.20: Playwright journeys — PARTIAL
-
-**Previous status:** PARTIAL — gate failed 8/92
-**Current status:** PARTIAL — gate fails 2/92
-
-Improved but not DONE. The Playwright gate still fails, blocking this criterion.
-
-### 5.2.10: Slot engine tests location — PARTIAL (justified deviation)
-
-**Previous status:** PARTIAL - justified deviation
-**Current status:** FIXED (no code change needed)
-
-The test-location deviation (SQL instead of `packages/core`) remains documented and justified. No regression.
-
----
-
-## Regression sweep
-
-### Migration integrity
-- No migration file was edited, renamed, or deleted (`git diff --name-only -- supabase/migrations/` is empty)
-- No SQL files changed at all between the audited commit and HEAD
-
-### Security
-- No RLS policy, grant, or SECURITY DEFINER function changed (no SQL changes at all)
-- No new SECURITY DEFINER functions added
-
-### i18n
-- No new user-facing strings were added — the SlotPicker fix uses existing translated strings (`Trans` macro) and a pure utility function (`narrowsStaffOnly`) with no translatable content
-
-### Skill copy parity
-- `.cursor/skills/supabase-database/SKILL.md` and `.claude/skills/supabase-database/SKILL.md` are identical (`diff` returns empty)
-- Both were unchanged from the audited commit (neither was updated, so parity is preserved but F-DB-2 remains unfixed)
-
-### Changes outside findings scope
-- `retireLeftoverStaff()` in `bookingFixtures.ts` — a new fixture-cleanup function called during global setup. This is outside the explicit findings but is a supporting change for the E2E fix. It does not break any rule: it uses the bookings function (not direct DB writes) and runs before workers start. **No fault found.**
-- `drag()` helper in `fixtures.ts` — changed from `event.scrollIntoViewIfNeeded()` to `expect(() => event.scrollIntoViewIfNeeded({ timeout: 1_000 })).toPass({ timeout: 5_000 })`. This is a retry wrapper around scroll-into-view for cards that get redrawn mid-scroll by realtime updates. **Noted:** this adds a retry, but it is a targeted retry for a specific DOM-interaction race condition, not a blanket timeout increase or test-weakening mechanism. The gate would still report a real failure if the card is genuinely absent. Not classified as a fault given the brief's intent (which targets retries that hide real failures or weaken assertions).
-
-### Conventional Commits
-All 4 commits follow Conventional Commits format:
-- `test(e2e): retire leftover fixture staff before each run`
-- `fix(calendar): keep the chosen time while the slot picker narrows to one person`
-- `test(calendar): assert durable state before transient toasts`
-- `docs(evidence): record the Phase 5 audit re-run`
-
-### Test assertion integrity
-- No test file was removed or renamed
-- All changed E2E specs have the same number of `test()` calls before and after
-- No `test.skip`, `.only`, or `fixme` was added
-- No assertion was removed — the commits restructured assertion ORDER (durable state before toast) and ADDED new assertions (e.g., `retireLeftoverStaff` asserts HTTP response OK; `narrowsStaffOnly` unit tests)
-
-### New findings from regression sweep
-
-#### F-RC-1: drag helper retry wraps scroll-into-view
-
-| Field | Value |
-|---|---|
-| Severity | minor |
-| Location | `apps/back-office/e2e/fixtures.ts` (commit 8e7b15e) |
-| Problem | The drag helper wraps `scrollIntoViewIfNeeded` in `expect().toPass()` with a 5-second retry budget. While this is a targeted wait for cards that redraw mid-scroll, it is technically a retry added to a test helper. |
-| Evidence | `await expect(() => event.scrollIntoViewIfNeeded({ timeout: 1_000 })).toPass({ timeout: 5_000 })` at `fixtures.ts` (diff +180) |
-| Fix | None needed — the retry handles realtime-driven card redraws and is not a blanket test-weakening mechanism. Noted for awareness. |
-| Plan item | Common brief rule: no retries to hide races |
-
----
-
-## Summary
-
-### Status table
-
-| Checklist item | Previous severity/status | Current status | Key evidence |
+| Finding | Severity | Status now | Evidence |
 |---|---|---|---|
-| F-TEST-1 (blocker) | blocker | PARTIAL | 6/8 failures fixed; 2 en failures remain; gate still FAIL |
-| F-VERIFIER-1 (major) | major | FIXED | Recheck gates ran on exact HEAD (cd9e677) |
-| F-DB-1 (minor) | minor | NOT FIXED | No cleanup migration added |
-| F-DB-2 (minor) | minor | NOT FIXED | Skill files unchanged (still says GENERATED ALWAYS AS) |
-| F-CONF-1/2/SLOT-1 (minor) | minor | FIXED | Deviation remains justified; no change needed |
-| F-DESIGN-1 (minor) | minor | FIXED | No change needed |
-| EC-12 (phase exit) | PARTIAL | PARTIAL | Arabic RTL journeys now pass but gate still fails |
-| 5.3.17 (walk-in booking) | PARTIAL | DONE | Arabic walk-in now passes |
-| 5.3.20 (Playwright journeys) | PARTIAL | PARTIAL | 2 failures remain |
-| Playwright gate | FAIL | FAIL | Improved to 90/92 passing but still FAIL |
+| F-TEST-1 — required Playwright gate fails | Blocker | PARTIAL | Improved from 84/92 to 90/92, but the gate exits 1 with two English failures and no skips (`recheck/gates/GATES.md:84,90-104`). The settings and staff failures are detailed above. |
+| F-VERIFIER-1 — exact-head gate evidence | Major | FIXED for the tested re-check snapshot | The gate report records `cd9e67753498d2d786b6a57e1745595f5fc3fa00` as the tested HEAD and documents all ten gate results (`recheck/gates/GATES.md:7-10,73-86`). This does not make the Playwright gate pass, and it does not certify the separate live checkout described above (`adjudication.md:11,18`). |
+| F-DB-1 — redundant appointment-item foreign key | Minor | NOT FIXED | No migration changed in the fix range; the older FK remains in `supabase/migrations/20261006120000_create_appointments.sql:64`, alongside the branch-aware FK in `supabase/migrations/20261009100000_extend_appointments.sql:40-46` (`adjudication.md:19`; `recheck/recheck.md:81-96`). Add a new cleanup migration; do not edit an applied migration. |
+| F-DB-2 — inaccurate `busy_range` skill documentation | Minor | NOT FIXED | Neither skill copy changed. `.cursor/skills/supabase-database/SKILL.md:148-160` still describes a generated column, while `supabase/migrations/20261006120000_create_appointments.sql:73-93` maintains the range with triggers (`adjudication.md:20`; `recheck/recheck.md:100-114`). Update both `.cursor` and `.claude` copies and keep them identical. |
+| F-CONF-1 / F-CONF-2 / F-SLOT-1 — SQL slot-engine deviation | Minor | Prior justified ruling retained; no fix required | The branch-RLS rationale and SQL/Deno parity coverage remain in place; the deviation was accepted in the prior adjudication (`adjudication.md:21`; prior `adjudication.md:30`). |
+| F-DESIGN-1 — schedule-x token name | Minor | Prior ruling retained; no fix required | `--sx-calendar-week-grid-padding-left` is a third-party library variable, not a directional CSS property (`adjudication.md:22`; prior `adjudication.md:31`). |
 
-### New findings
+The original accepted SQL test-location item 5.2.10 remains a justified partial-by-location deviation; the equivalent behavior coverage is in pgTAP and Deno tests (`adjudication.md:31`).
 
-| ID | Severity | Title |
-|---|---|---|
-| F-RC-1 | minor | Drag helper adds retry wrapper for scroll-into-view |
+## Criteria not previously rated DONE
 
-### Counts
+| Criterion | Subphase | Status now | Evidence |
+|---|---|---|---|
+| EC-12 — full RTL calendar and drag behavior | Phase exit | DONE | All six previously failing Arabic Playwright cases now pass; both remaining failures are English (`adjudication.md:28`; `recheck/gates/GATES.md:90-108`). EC-12 is specifically the RTL behavior criterion; the overall Playwright gate independently remains failed under F-TEST-1. |
+| 5.3.17 — walk-in booking | 5.3 | DONE | The Arabic walk-in journey now passes after the SlotPicker fix (`adjudication.md:29`; `recheck/gates/GATES.md:90-95`). |
+| 5.3.20 — Playwright journeys | 5.3 | PARTIAL | The required full suite still has two failures, with 90 of 92 tests passing (`adjudication.md:30`; `recheck/gates/GATES.md:84,92-104`). |
+| 5.2.10 — slot-engine test location | 5.2 | PARTIAL by location; justified | Tests are in SQL/Deno rather than `packages/core` following the accepted SQL-engine deviation; equivalent coverage remains (`adjudication.md:31`; prior `adjudication.md:30`). |
 
-| Status | Count |
-|---|---|
-| FIXED | 4 (F-VERIFIER-1, F-CONF-1/2/SLOT-1, F-DESIGN-1, 5.3.17) |
-| PARTIAL | 3 (F-TEST-1, EC-12, 5.3.20) |
-| NOT FIXED | 2 (F-DB-1, F-DB-2) |
+## New findings
 
-| New finding severity | Count |
-|---|---|
-| Minor | 1 (F-RC-1) |
+### Minor
 
-### Final Verdict: FAIL (re-check)
+F-RC-1 — targeted retry around scrolling a calendar card (`apps/back-office/e2e/calendar-reschedule.spec.ts:69-72`, commit `8e7b15e`). The drag helper retries `scrollIntoViewIfNeeded` for up to five seconds because realtime refetches can redraw and detach a card. The durable appointment-state assertions remain in the test, and the previously failing assertions occurred later at toast checks; the verifier found no evidence that this retry hid those failures (`adjudication.md:36`; prior failure locations in `phase-5/gates/GATES.md:92-93`). No mandatory change is warranted on current evidence. Keep this retry limited to the scroll operation and retain the outcome assertions.
 
-The Playwright gate still fails (90/92), so the phase cannot be accepted. Two findings (F-TEST-1 and F-DB-1) were not fully fixed, and one (F-DB-2) was not addressed at all by the fix commits. The team made significant progress — 6 of 8 Playwright failures are resolved, the Arabic slot-picker and walk-in issues are fixed, and the fixture cleanup prevents test-suite bloat — but the remaining 2 English failures (settings tips checkbox, staff invite dialog) and the two database/skill documentation findings must be resolved before the phase is complete.
+No new regression finding was rejected. The prior rejected findings remain rejected because the fix range introduced no relevant SQL/RLS/grant changes, and the previous ADR rulings are unchanged (`adjudication.md:24`). The regression review found no new tenant/branch-isolation or migration-integrity issue in the four fix commits (`adjudication.md:38`).
+
+## Fix prompt
+
+```text
+Fix the remaining Phase 5 findings below in /Users/fahad/GlowDesk, in order.
+Context: @plan/parts/11-delivery-plan.md @plan/decisions.md @plan/CONVENTIONS.md
+Skills: /feature-delivery /spa-domain-glossary /spa-platform-architecture /react-frontend /i18n-rtl /supabase-database
+
+1. F-TEST-1: Fix the English settings journey so the saved "Ask for a tip at checkout" checkbox is present and checked after reload. Fix the English staff journey so the expected sign-in form is available before the Email field is filled; diagnose the missing locator rather than masking it with a broad timeout. Keep all assertions and rerun the full English and Arabic Playwright projects.
+2. F-DB-1: Add a new migration to drop the redundant appointment_items_appointment_fk after checking dependencies. Do not edit an applied migration.
+3. F-DB-2: Correct both .cursor/skills/supabase-database/SKILL.md and .claude/skills/supabase-database/SKILL.md to describe trigger-maintained busy_range as canonical. Keep both copies identical.
+
+Rules: never edit an applied migration; keep both skill copies identical; use Conventional Commits. Do not delete, skip, weaken or broadly retry tests to get a green gate. Done = every gate passes and each fixed acceptance criterion is demonstrated by a test.
+```
