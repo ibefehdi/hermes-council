@@ -1,0 +1,23 @@
+Branch: feat/sales-register-ui
+  backup/main-before-reauthor    d3c2bad chore(bookings): add the Phase 5 gate run and council pack
+  db/bookings                    ce17220 docs(bookings): record Phase 5.1 deviations and pgTAP evidence
+  db/checkout                    9b0855e docs(checkout): add 6.1 evidence and review
+  db/clients                     6b43543 test(clients): cover revocation, second-receptionist notes, merged bookability
+  feat/calendar-now-line         594475e feat(calendar): mark the current time on today's columns
+  feat/calendar-realtime         e551a4c docs(calendar): record Phase 5.4 review
+  feat/calendar-ui               977e85b docs(calendar): record Phase 5.3 evidence and review
+  feat/checkout-ui               6bd52ee docs(checkout): add 6.3 evidence, review and build note (6.3-T6)
+  feat/ci-merge-gates            dcaf3ef test(platform): cover appointment visibility, guards, idempotency and settings for the merge gates
+  feat/clients-ui                af5d24b docs(clients): record the Epic 4.3 deviations
+  feat/phase-4-evidence          585316c docs(evidence): record the Phase 4 gate run on 39062c4 and the exit evidence
+  feat/phase-5-evidence          d3c2bad chore(bookings): add the Phase 5 gate run and council pack
+  feat/phase-6-checkout          925f516 docs(evidence): 6.4-T6 sales and register evidence, review and build note
++ feat/phase-6-evidence          925f516 docs(evidence): 6.4-T6 sales and register evidence, review and build note
+* feat/sales-register-ui         925f516 docs(evidence): 6.4-T6 sales and register evidence, review and build note
+  fix/ci-pin-supabase-cli        4d54e51 fix(ci): pin the Supabase CLI with setup-cli's version input
+  fix/client-import-matcher-plan 05c68bb fix(clients): keep the duplicate matcher on its indexes without fresh statistics
+  fix/phase-5-audit-e2e          cd9e677 docs(evidence): record the Phase 5 audit re-run
+  fn/bookings                    2a38c95 docs(bookings): record Phase 5.2 review
+  fn/checkout                    7e37976 docs(checkout): add 6.2 evidence, review and build note
+  fn/clients                     59dd896 test(clients): keep the import fixture byte-exact
+  main                           a40218b Merge pull request #8 from ibefehdi/fix/ci-pin-supabase-cli
