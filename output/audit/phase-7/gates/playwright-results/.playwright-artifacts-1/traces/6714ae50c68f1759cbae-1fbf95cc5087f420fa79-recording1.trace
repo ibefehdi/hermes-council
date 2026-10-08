@@ -1,1 +1,0 @@
-{"version":9,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.63.0","options":{},"platform":"darwin","wallTime":1791463000866,"monotonicTime":2474.697,"sdkLanguage":"javascript","title":"appointment-search.spec.ts:21 › search finds a client's appointments at the selected branch by Arabic name and by reference"}

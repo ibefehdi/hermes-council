@@ -6,3 +6,6 @@ node_modules/
 *.log
 .DS_Store
 .autopush.pid
+.ci-sandbox/
+output/ci/scratch/
+.playwright-artifacts-*/

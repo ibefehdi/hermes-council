@@ -1,0 +1,7 @@
+1,3d0
+< Connecting to 127.0.0.1 54322
+< Generated TypeScript is unformatted. Format it with:
+<   npx oxfmt <generated-file.ts>
+1801,1802d1797
+< A new version of Supabase CLI is available: v2.120.0 (currently installed v2.119.0)
+< We recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli
