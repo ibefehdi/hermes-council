@@ -1,0 +1,23 @@
+?? .pnpm-store/
+?? .seed-pw
+6920a18 Merge pull request #11 from ibefehdi/fix/main-merge-fallout
+ccecb22 fix(ci): drop the duplicate fn:check script and give the router test Supabase env
+c9bcafe Merge pull request #10 from ibefehdi/phase-7-pre-council
+71b8138 Merge branch 'main' into phase-7-pre-council
+34df814 docs(plan): apply the Phase 7 rulings to the plan text (R2 seven reports, R5 receptionist row, R7 audit read, R16 drill split in ADR-49, ADR-43 export tables) and log them
+6e85a5e test(bookings): run the Realtime matrix's tenant B on a fresh tenant, not SpaCorner's seeded Salmiya team
+1276cdb docs(ops): backup-restore, staging deploy and production project runbooks, restore smoke subset and drill script with a local rehearsal, 7.4 review (7.4-T7)
+fd1ef37 chore(ops): production audit with an expiring allowlist, frozen Deno locks and pin check, ADR-47 function config guard, daily cron history purge, rate-limit review (7.4-T6)
+0cf4190 i18n(rtl): Arabic RTL sweep of the Phase 7 and busiest screens, with Staff member and Walk-in wording and the currency label fixed (7.4-T5)
+03f7f6f test(a11y): axe sweep of every route and dialog, keyboard-only booking and checkout, tablet touch drag, with the contrast and scroll-region fixes (7.4-T4)
+33b7647 fix(reports): sargable day bounds for the instant-range reports, chunked .in() reads and the perf re-run (7.4-T3)
+04619bb  new workflow
+6cf9f9e new workflow
+bb22023 fix(api): resync Realtime reads every 5 s and sweep the Realtime matrix (7.4-T2)
+06c5ef4 test(db): add the pgTAP matrix sweep and the matrix tag check (7.4-T1)
+e1a24d4 feat(exports): add export buttons and the exports page (7.3-T5)
+7a3dbb5 feat(search): add sales to the topbar search and the My sales card (7.2-T6)
+b75b83a feat(audit): add the Activity viewer (7.2-T5)
+4b3dcbb feat(reports): add the appointments, staff, shifts and client list breakdowns (7.2-T4)
+961912b feat(reports): add the sales, payments and taxes breakdowns (7.2-T3)
+6920a18b639906fa925eb20015c95740916b831c
