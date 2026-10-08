@@ -11,6 +11,14 @@
 #                                               audit whether a full plan phase (e.g. 0 or 5, every subphase plus the exit
 #                                               criteria) is properly implemented in a local app repo
 #                                               -> output/audit/phase-<phase>/AUDIT_REPORT.md
+#   ./run-council.sh recheck <phase> <repo> ["optional focus"]
+#                                               after fixing an audit: re-run the gates and check only the previous
+#                                               audit's findings, failed gates and unmet criteria, plus regressions
+#                                               -> output/audit/phase-<phase>/recheck/RECHECK_REPORT.md
+#   ./run-council.sh ci <repo> ["optional focus"]
+#                                               design GitHub merge gates for main from the code and the plan: workflows,
+#                                               a branch ruleset and the missing tests -> output/ci/CI_REPORT.md and
+#                                               output/ci/draft/ (install with ./install-ci.sh <repo>)
 [ -n "${ZSH_VERSION:-}" ] || exec zsh "$0" "$@"
 set -euo pipefail
 
@@ -18,12 +26,12 @@ DIR="${0:A:h}"
 cd "$DIR"
 
 MODE=survey
-if [[ ${1:-} == (deep|plan|review|final|audit) ]]; then
+if [[ ${1:-} == (deep|plan|review|final|audit|recheck|ci) ]]; then
   MODE=$1
   shift
 fi
-if [[ $MODE == audit ]]; then
-  AUDIT_USAGE='Usage: ./run-council.sh audit <phase> <repo-path> ["optional focus"]   e.g. ./run-council.sh audit 0 ~/glowdesk'
+if [[ $MODE == (audit|recheck) ]]; then
+  AUDIT_USAGE="Usage: ./run-council.sh $MODE <phase> <repo-path> [\"optional focus\"]   e.g. ./run-council.sh $MODE 0 ~/glowdesk"
   PHASE="${1:?$AUDIT_USAGE}"
   REPO="${2:?$AUDIT_USAGE}"
   shift 2
@@ -38,13 +46,31 @@ if [[ $MODE == audit ]]; then
   SPEC="$REPO/plan/parts/11-delivery-plan.md"
   [[ -f $SPEC ]] || { print "Missing $SPEC. Copy the plan into the repo first."; exit 1; }
   grep -Eq "^### Phase $PHASE:" "$SPEC" || { print "Phase $PHASE not found in $SPEC (expected a heading '### Phase $PHASE:')."; exit 1; }
-  print "Auditing phase $PHASE: $(grep -E "^#### Subphase $PHASE\." "$SPEC" | sed -E 's/^#### Subphase ([0-9.]+):.*/\1/' | paste -sd ' ' -)"
+  if [[ $MODE == recheck ]]; then
+    [[ -f "$DIR/output/audit/phase-$PHASE/AUDIT_REPORT.md" ]] || { print "No audit to re-check: run ./run-council.sh audit $PHASE $REPO first."; exit 1; }
+    print "Re-checking the phase $PHASE audit findings against $REPO at $(git -C "$REPO" rev-parse --short HEAD)"
+  else
+    print "Auditing phase $PHASE: $(grep -E "^#### Subphase $PHASE\." "$SPEC" | sed -E 's/^#### Subphase ([0-9.]+):.*/\1/' | paste -sd ' ' -)"
+  fi
+fi
+if [[ $MODE == ci ]]; then
+  REPO="${1:?Usage: ./run-council.sh ci <repo-path> [\"optional focus\"]   e.g. ./run-council.sh ci ~/glowdesk}"
+  shift
+  REPO="${REPO:A}"
+  [[ -d $REPO/.git ]] || { print "Not a git repository: $REPO"; exit 1; }
+  [[ -f $REPO/plan/parts/11-delivery-plan.md ]] || { print "Missing $REPO/plan/parts/11-delivery-plan.md. Copy the plan into the repo first."; exit 1; }
+  COMMIT=$(git -C "$REPO" rev-parse HEAD)
+  BRANCH=$(git -C "$REPO" branch --show-current)
+  print "Designing merge gates for $REPO at ${BRANCH:-detached HEAD} ${COMMIT[1,12]}"
+  [[ -n $(git -C "$REPO" status --porcelain) ]] && print "Note: uncommitted changes in $REPO are ignored; CI only sees commits."
 fi
 FOCUS="${1:-Cover the entire dashboard.}"
 [[ $MODE == plan && -z ${1:-} ]] && FOCUS="Plan the full product, MVP first."
 [[ $MODE == review && -z ${1:-} ]] && FOCUS="Leave nothing missed and no wrong decision standing."
 [[ $MODE == final && -z ${1:-} ]] && FOCUS="One document a team can build the whole product from."
 [[ $MODE == audit && -z ${1:-} ]] && FOCUS="Decide whether the phase is complete, correct and safe."
+[[ $MODE == recheck && -z ${1:-} ]] && FOCUS="Decide whether every accepted finding is really fixed and nothing regressed."
+[[ $MODE == ci && -z ${1:-} ]] && FOCUS="Nothing reaches main unless every guarantee of the built plan is proven by a test that can fail."
 OUT="$DIR/output"
 TS=$(date +%Y%m%d-%H%M%S)
 
@@ -56,7 +82,7 @@ OR_KEY=$(grep '^OPENROUTER_API_KEY=' "$DIR/.env" | tail -1 | cut -d= -f2- | tr -
 PROFILES=(cartographer linker verifier chair)
 VERIFIER=verifier
 SYNTHESIZER=chair
-if [[ $MODE == audit ]]; then
+if [[ $MODE == (audit|recheck|ci) ]]; then
   PROFILES=(auditor audit-lead)
   VERIFIER=audit-lead
   SYNTHESIZER=audit-lead
@@ -96,7 +122,7 @@ print(' '.join(t['id'] for t in json.load(sys.stdin)
   fi
 fi
 
-if [[ $MODE != (plan|review|final|audit) ]] && ! node "$DIR/login.mjs" --check; then
+if [[ $MODE != (plan|review|final|audit|recheck|ci) ]] && ! node "$DIR/login.mjs" --check; then
   print "A browser window will open: log in (enter your OTP). The session is saved automatically."
   node "$DIR/login.mjs"
 fi
@@ -205,6 +231,53 @@ elif [[ $MODE == audit ]]; then
     --worker "auditor:Frontend, i18n and RTL audit of phase $PHASE - follow briefs $B/common.md and $B/frontend.md"
     --worker "auditor:Plan conformance audit of phase $PHASE - follow briefs $B/common.md and $B/conformance.md"
   )
+elif [[ $MODE == recheck ]]; then
+  PREV="$OUT/audit/phase-$PHASE"
+  A="$PREV/recheck"
+  if [[ -d "$A" ]]; then
+    mkdir -p "runs/$TS-recheck"
+    mv "$A" "runs/$TS-recheck/phase-$PHASE-recheck-previous"
+  fi
+  B="$A/briefs"
+  mkdir -p "$B" "$A/gates"
+  for f in briefs/recheck/*.md briefs/audit/gates.md; do
+    sed -e "s|{{COUNCIL_DIR}}|$DIR|g" -e "s|{{REPO}}|$REPO|g" -e "s|{{PHASE}}|$PHASE|g" -e "s|{{AUDIT_DIR}}|$A|g" \
+      -e "s|{{PREV_DIR}}|$PREV|g" "$f" > "$B/${f:t}"
+  done
+
+  REPORT="$A/RECHECK_REPORT.md"
+  GOAL="Re-check the phase $PHASE audit of the git repository at $REPO after the team's fixes: only the previous audit's accepted findings, failed gates and unmet criteria in $PREV/AUDIT_REPORT.md, plus regressions from the fix commits. The repository is read-only: never edit, commit, stash or switch branches there. A gates task runs every stateful check first and shares its logs in $A/gates. Every member reads $B/common.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md. $FOCUS Final deliverable: $REPORT."
+  WORKERS=(
+    --worker "auditor:Re-check every finding of the phase $PHASE audit - follow briefs $B/common.md and $B/recheck.md"
+  )
+elif [[ $MODE == ci ]]; then
+  C="$OUT/ci"
+  if [[ -d "$C" ]]; then
+    mkdir -p "runs/$TS-ci"
+    mv "$C" "runs/$TS-ci/ci-previous"
+  fi
+  # Each member works in its own clone at COMMIT so the app repo stays read-only and mutation checks don't collide.
+  SANDBOX="$DIR/.ci-sandbox/${REPO:t}"
+  rm -rf "$SANDBOX"
+  for s in base pipeline database backend frontend verify; do
+    git clone --quiet "$REPO" "$SANDBOX/$s"
+    git -C "$SANDBOX/$s" checkout --quiet --detach "$COMMIT"
+  done
+  B="$C/briefs"
+  mkdir -p "$B" "$C/baseline" "$C/draft" "$C/scratch"
+  for f in briefs/ci/*.md; do
+    sed -e "s|{{COUNCIL_DIR}}|$DIR|g" -e "s|{{REPO}}|$REPO|g" -e "s|{{CI_DIR}}|$C|g" -e "s|{{SANDBOX}}|$SANDBOX|g" \
+      -e "s|{{COMMIT}}|$COMMIT|g" -e "s|{{BRANCH}}|${BRANCH:-detached HEAD}|g" "$f" > "$B/${f:t}"
+  done
+
+  REPORT="$C/CI_REPORT.md"
+  GOAL="Design the GitHub merge gates for the git repository at $REPO (commit $COMMIT) so nothing merges into main unless every guarantee of the plan that is built so far is proven by a test. Deliverables are GitHub Actions workflows, a branch ruleset for main and the missing tests, as files mirroring the repo in $C/draft. The repository is read-only; members work in their own clones under $SANDBOX. A baseline task runs and times every existing check, then a traceability task maps the plan to the tests and assigns the gaps. Every member reads $B/common.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md. $FOCUS Final deliverables: $REPORT and $C/draft."
+  WORKERS=(
+    --worker "auditor:Workflows and the ruleset for main - follow briefs $B/common.md and $B/pipeline.md"
+    --worker "auditor:Database tests and guard tests - follow briefs $B/common.md and $B/tests-database.md"
+    --worker "auditor:Edge Function tests and contract guards - follow briefs $B/common.md and $B/tests-backend.md"
+    --worker "auditor:Frontend, i18n and RTL tests - follow briefs $B/common.md and $B/tests-frontend.md"
+  )
 else
   mkdir -p "runs/$TS-before-deep"
   cp -R output/. "runs/$TS-before-deep/"
@@ -234,10 +307,11 @@ else
 fi
 
 hermes kanban init >/dev/null
-if [[ $MODE != (deep|review|final|audit) ]] || [[ $MODE == (review|final) && ${#PARENTS} -eq 0 ]]; then
+if [[ $MODE != (deep|review|final|audit|recheck|ci) ]] || [[ $MODE == (review|final) && ${#PARENTS} -eq 0 ]]; then
   hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier $VERIFIER --synthesizer $SYNTHESIZER
 else
-  # Workers depend on PARENTS (deep: a seed-data task; audit: the gates task; review/final: the unfinished plan chair).
+  # Workers depend on PARENTS (deep: a seed-data task; audit: the gates task; ci: baseline then traceability;
+  # review/final: the unfinished plan chair).
   # Dispatch is paused while dependencies are wired so nothing starts early.
   hermes pause --reason "wiring council dependencies" >/dev/null
   trap 'hermes resume >/dev/null 2>&1' EXIT
@@ -245,9 +319,15 @@ else
   if [[ $MODE == deep ]]; then
     PARENTS=($(hermes kanban create "Seed realistic COUNCIL-TEST data - follow briefs $B/common.md and $B/seed.md" \
       --assignee linker --body-file "$B/seed.md" --json | json_field '["id"]'))
-  elif [[ $MODE == audit ]]; then
+  elif [[ $MODE == (audit|recheck) ]]; then
     PARENTS=($(hermes kanban create "Run the phase $PHASE gates and capture logs - follow briefs $B/common.md and $B/gates.md" \
       --assignee auditor --body-file "$B/gates.md" --json | json_field '["id"]'))
+  elif [[ $MODE == ci ]]; then
+    BASELINE_ID=$(hermes kanban create "Baseline - pin the toolchain and run and time every existing check - follow briefs $B/common.md and $B/baseline.md" \
+      --assignee auditor --body-file "$B/baseline.md" --json | json_field '["id"]')
+    PARENTS=($(hermes kanban create "Trace the built plan to its tests and assign the gaps - follow briefs $B/common.md and $B/traceability.md" \
+      --assignee auditor --body-file "$B/traceability.md" --json | json_field '["id"]'))
+    hermes kanban link "$BASELINE_ID" "$PARENTS[1]" >/dev/null
   fi
   SWARM=$(hermes kanban swarm "$GOAL" "${WORKERS[@]}" --verifier $VERIFIER --synthesizer $SYNTHESIZER --json)
   for w in ${=$(print -r -- "$SWARM" | json_field '["worker_ids"]')}; do

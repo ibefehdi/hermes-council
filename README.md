@@ -91,6 +91,48 @@ The council goes over the revised plan one last time and produces a single self-
 
 Checks whether a full plan phase is properly implemented in a local app repo: every subphase of it plus the phase's exit criteria. A subphase id such as `0.2` is widened to its whole phase. The repo must contain the plan at `plan/parts/11-delivery-plan.md`, and the local Supabase stack must be able to start there. A gates task runs every check once: install, `db:reset`, `db:test`, `db:lint`, type drift, Deno tests, `verify` and Playwright. Then four auditors work in parallel: database and security (including live attacks on tenant and branch isolation through the local API), Edge Functions, frontend with English and Arabic walkthroughs and screenshots, and conformance to every bullet of the phase and its ADRs. The verifier re-checks their findings and decides the verdict (`PASS`, `PASS WITH FIXES` or `FAIL`), and the chair writes `output/audit/phase-<phase>/AUDIT_REPORT.md`, ending with a ready-to-paste fix prompt for Cursor. To keep a scan-through cheap, the audit runs on its own two profiles instead of the four council members: `auditor` (`AUDITOR_MODEL` in `council.conf`, default `deepseek/deepseek-v4-flash`) runs the gates and all four audit passes, and `audit-lead` (`AUDIT_LEAD_MODEL`, default `openai/gpt-6-luna`) verifies and writes the report. Run `./setup.sh` once to create them. The repo is treated as read-only, but the gates reset and reseed its local database. The audit covers whatever is checked out, so check out the branch you want audited first.
 
+### Re-check after fixes
+
+```sh
+./run-council.sh recheck 5 ~/glowdesk
+```
+
+Once you have applied an audit's fix prompt, this checks only what that audit flagged, without re-running the full audit. A gates task runs every check again, then one auditor rules on each accepted finding, each failed gate and each criterion that was not done in `output/audit/phase-<phase>/AUDIT_REPORT.md` (`FIXED`, `PARTIAL` or `NOT FIXED`), and sweeps the fix commits for regressions: edited migrations, loosened RLS, weakened or skipped tests, missing Arabic strings. The audit lead verifies it, gives a verdict with the same rule as the audit, and writes `output/audit/phase-<phase>/recheck/RECHECK_REPORT.md` with a fix prompt for anything left. The original audit is left untouched; a previous re-check is moved to `runs/`.
+
+### CI merge gates
+
+```sh
+./run-council.sh ci ~/glowdesk
+./run-council.sh ci ~/glowdesk "Extra focus for this pass"
+```
+
+Goes through the app repo's code together with its plan and designs the GitHub merge gates, so nothing is merged into `main` unless the plan's guarantees are proven by tests. The council works on the commit that is checked out; uncommitted changes are ignored because CI never sees them. The repo must contain the plan at `plan/parts/11-delivery-plan.md`.
+
+The repo stays read-only. Each member works in its own clone under `.ci-sandbox/`.
+
+1. A baseline task pins the toolchain versions and runs and times every existing check: database reset, pgTAP, lint, type drift, Deno, `verify` and Playwright in both languages. It also finds the smallest local Supabase stack the suites need.
+2. A traceability task decides which phases are built. It maps every acceptance criterion, Tests bullet, testable ADR and CONVENTIONS §7 rule to the test that proves it, and lists the gaps with owners.
+3. Four workers then run in parallel:
+   - One writes the GitHub Actions workflows and the branch ruleset for `main`.
+   - Three write the missing database (pgTAP), Edge Function (Deno) and frontend (Vitest, Playwright) tests, including guard tests that fail when a future PR breaks a rule (a table without RLS, a route without an auth check, a missing Arabic key).
+4. Every new test must be shown able to fail: the author breaks the guarantee on purpose and the test must catch it.
+5. The audit lead replays the whole pipeline in a fresh clone, re-runs the mutation checks and rules on every test. It then writes `output/ci/CI_REPORT.md`, which ends with install steps and a ready-to-paste Cursor prompt. Tests that fail because the code has a real defect are listed with the fix, so the PR that installs CI can fix them too.
+
+Like `audit`, it runs on the `auditor` and `audit-lead` profiles and resets the local database. When it finishes, it restarts the stack from the app repo.
+
+The workflows, ruleset and tests land in `output/ci/draft/`, mirroring the repo. Check them with `node check-ci.mjs output/ci/draft ~/glowdesk`. Among other things, the check verifies that:
+
+- every action is pinned to a real commit SHA;
+- each required check is a job that actually reports on pull requests into `main`;
+- the aggregating job can't be skipped into a pass;
+- nothing that runs on a PR escapes the required checks;
+- every `pnpm` script the workflows call exists;
+- the draft touches no migrations.
+
+It also runs actionlint, either installed (`brew install actionlint`) or through Docker.
+
+To install, run `./install-ci.sh ~/glowdesk`. It validates the draft and copies it into the repo. Commit the files, open a PR into `main`, and merge once it's green. Then apply the ruleset with the `gh api` command it prints.
+
 To use the skills, install them into the app repo with `./install-skills.sh /path/to/app`. It validates them, then copies them to the app's `.cursor/skills/` and `.claude/skills/`. Visual design is left to your own design skill.
 
 ## Safety

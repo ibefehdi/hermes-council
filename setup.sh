@@ -13,8 +13,8 @@ typeset -A DESC=(
   linker       "Maps how dashboard features connect: navigation paths, shared entities, shared API endpoints, cross-page data flows"
   verifier     "Council reviewer: cross-checks other members' findings against the live dashboard and flags errors, gaps, and disagreements"
   chair        "Council chair: merges verified findings into the final feature map and report"
-  auditor      "Phase audit: runs the gates and audits a local repo against one phase of the implementation plan"
-  audit-lead   "Phase audit lead: verifies the auditors' findings, decides the verdict, and writes the audit report"
+  auditor      "Phase audit and CI: audits a local repo against the implementation plan, or writes its merge-gate workflows and tests"
+  audit-lead   "Phase audit and CI lead: verifies the auditors' work, decides the verdict, and writes the report"
 )
 # council.conf key prefix for a role: audit-lead -> AUDIT_LEAD
 conf_key() { local k=${(U)1}; print -r -- ${k//-/_}; }
@@ -115,7 +115,7 @@ for role in $ROLES; do
 
   hermes -p $role tools enable kanban >/dev/null
   hermes -p $role tools disable browser computer_use >/dev/null
-done
+done </dev/null  # hermes confirmations (e.g. mcp remove) take their default instead of waiting on a hidden prompt
 
 hermes tools enable kanban >/dev/null
 hermes kanban init >/dev/null
