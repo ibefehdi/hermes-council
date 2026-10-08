@@ -1,0 +1,1 @@
+{"version":9,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.63.0","options":{},"platform":"darwin","wallTime":1791463000866,"monotonicTime":2475.262,"sdkLanguage":"javascript","title":"calendar-reschedule.spec.ts:89 › a drag onto a taken time rolls back with a conflict, a suggested time moves it, and Undo puts it back"}

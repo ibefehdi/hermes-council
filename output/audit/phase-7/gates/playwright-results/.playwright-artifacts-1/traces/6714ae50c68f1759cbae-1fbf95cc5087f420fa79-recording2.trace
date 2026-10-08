@@ -1,0 +1,329 @@
+{"version":9,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.63.0","options":{},"platform":"darwin","wallTime":1791463000933,"monotonicTime":2541.732,"sdkLanguage":"javascript","title":"appointment-search.spec.ts:21 › search finds a client's appointments at the selected branch by Arabic name and by reference"}
+{"type":"before","callId":"call@18","startTime":2545.001,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/rest/v1/service_categories?tenant_id=eq.00000000-0000-4000-9000-000000000003&name_en=eq.Booking%20fixtures&select=id&order=created_at&limit=1","method":"GET","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"prefer","value":"return=representation"}]},"stepId":"pw:api@43"}
+{"type":"log","callId":"call@18","time":2547.336,"message":"→ GET http://127.0.0.1:54321/rest/v1/service_categories?tenant_id=eq.00000000-0000-4000-9000-000000000003&name_en=eq.Booking%20fixtures&select=id&order=created_at&limit=1"}
+{"type":"log","callId":"call@18","time":2547.359,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@18","time":2547.364,"message":"  accept: */*"}
+{"type":"log","callId":"call@18","time":2547.367,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@18","time":2547.37,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@18","time":2547.372,"message":"  authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@18","time":2547.375,"message":"  prefer: return=representation"}
+{"type":"log","callId":"call@18","time":2552.158,"message":"← 200 OK"}
+{"type":"log","callId":"call@18","time":2552.163,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@18","time":2552.172,"message":"  content-length: 47"}
+{"type":"log","callId":"call@18","time":2552.176,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@18","time":2552.178,"message":"  date: Thu, 08 Oct 2026 12:36:40 GMT"}
+{"type":"log","callId":"call@18","time":2552.18,"message":"  server: postgrest/14.18"}
+{"type":"log","callId":"call@18","time":2552.181,"message":"  content-range: 0-0/*"}
+{"type":"log","callId":"call@18","time":2552.183,"message":"  content-location: /service_categories?limit=1&name_en=eq.Booking%20fixtures&order=created_at&select=id&tenant_id=eq.00000000-0000-4000-9000-000000000003"}
+{"type":"log","callId":"call@18","time":2552.185,"message":"  content-profile: public"}
+{"type":"log","callId":"call@18","time":2552.186,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@18","time":2552.188,"message":"  x-kong-upstream-latency: 1"}
+{"type":"log","callId":"call@18","time":2552.189,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@18","time":2552.191,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@18","endTime":2552.314,"result":{"response":{"url":"http://127.0.0.1:54321/rest/v1/service_categories?tenant_id=eq.00000000-0000-4000-9000-000000000003&name_en=eq.Booking%20fixtures&select=id&order=created_at&limit=1","status":200,"statusText":"OK","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Content-Length","value":"47"},{"name":"Connection","value":"keep-alive"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:40 GMT"},{"name":"Server","value":"postgrest/14.18"},{"name":"Content-Range","value":"0-0/*"},{"name":"Content-Location","value":"/service_categories?limit=1&name_en=eq.Booking%20fixtures&order=created_at&select=id&tenant_id=eq.00000000-0000-4000-9000-000000000003"},{"name":"Content-Profile","value":"public"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"1"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463000937,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":0,"secureConnectionStart":-1,"connectEnd":2.1710000000002765,"requestStart":2.1710000000002765,"responseStart":5.080000000000382},"responseEndTiming":5.731999999999971,"fetchUid":"e171511bd678286e900a225f250bb76c"}}}
+{"type":"before","callId":"call@22","startTime":2555.304,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/rest/v1/services","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"prefer","value":"return=representation"}],"jsonData":"{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"category_id\":\"b9a02232-6314-4c1d-88c5-86146dcc12b9\",\"name_en\":\"Facial en-muzite929tb\",\"name_ar\":\"تنظيف بشرة en-muzite929tb\",\"duration_minutes\":60,\"price_minor\":5000}"},"stepId":"pw:api@45"}
+{"type":"log","callId":"call@22","time":2555.833,"message":"→ POST http://127.0.0.1:54321/rest/v1/services"}
+{"type":"log","callId":"call@22","time":2555.841,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@22","time":2555.844,"message":"  accept: */*"}
+{"type":"log","callId":"call@22","time":2555.846,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@22","time":2555.848,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@22","time":2555.849,"message":"  authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@22","time":2555.852,"message":"  prefer: return=representation"}
+{"type":"log","callId":"call@22","time":2555.853,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@22","time":2555.855,"message":"  content-length: 227"}
+{"type":"log","callId":"call@22","time":2563.595,"message":"← 201 Created"}
+{"type":"log","callId":"call@22","time":2563.602,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@22","time":2563.605,"message":"  content-length: 605"}
+{"type":"log","callId":"call@22","time":2563.616,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@22","time":2563.618,"message":"  date: Thu, 08 Oct 2026 12:36:40 GMT"}
+{"type":"log","callId":"call@22","time":2563.62,"message":"  server: postgrest/14.18"}
+{"type":"log","callId":"call@22","time":2563.621,"message":"  content-range: */*"}
+{"type":"log","callId":"call@22","time":2563.623,"message":"  preference-applied: return=representation"}
+{"type":"log","callId":"call@22","time":2563.625,"message":"  content-profile: public"}
+{"type":"log","callId":"call@22","time":2563.627,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@22","time":2563.629,"message":"  x-kong-upstream-latency: 6"}
+{"type":"log","callId":"call@22","time":2563.631,"message":"  x-kong-proxy-latency: 1"}
+{"type":"log","callId":"call@22","time":2563.633,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@22","endTime":2563.764,"result":{"response":{"url":"http://127.0.0.1:54321/rest/v1/services","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Content-Length","value":"605"},{"name":"Connection","value":"keep-alive"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:40 GMT"},{"name":"Server","value":"postgrest/14.18"},{"name":"Content-Range","value":"*/*"},{"name":"Preference-Applied","value":"return=representation"},{"name":"Content-Profile","value":"public"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"6"},{"name":"X-Kong-Proxy-Latency","value":"1"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463000947,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.39400000000023283,"responseStart":7.6469999999999345},"responseEndTiming":7.817000000000007,"fetchUid":"4e3571b0ae38a25f63e5956773589d38"}}}
+{"type":"before","callId":"call@26","startTime":2565.652,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/rest/v1/staff_members","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"prefer","value":"return=representation"}],"jsonData":"{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"full_name_en\":\"Mona en-muzite929tb\",\"full_name_ar\":\"منى en-muzite929tb\",\"user_id\":null}"},"stepId":"pw:api@47"}
+{"type":"log","callId":"call@26","time":2565.977,"message":"→ POST http://127.0.0.1:54321/rest/v1/staff_members"}
+{"type":"log","callId":"call@26","time":2565.982,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@26","time":2565.984,"message":"  accept: */*"}
+{"type":"log","callId":"call@26","time":2565.985,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@26","time":2565.986,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@26","time":2565.988,"message":"  authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@26","time":2565.99,"message":"  prefer: return=representation"}
+{"type":"log","callId":"call@26","time":2565.991,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@26","time":2565.992,"message":"  content-length: 143"}
+{"type":"log","callId":"call@26","time":2570.255,"message":"← 201 Created"}
+{"type":"log","callId":"call@26","time":2570.261,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@26","time":2570.263,"message":"  content-length: 481"}
+{"type":"log","callId":"call@26","time":2570.264,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@26","time":2570.266,"message":"  date: Thu, 08 Oct 2026 12:36:40 GMT"}
+{"type":"log","callId":"call@26","time":2570.268,"message":"  server: postgrest/14.18"}
+{"type":"log","callId":"call@26","time":2570.27,"message":"  content-range: */*"}
+{"type":"log","callId":"call@26","time":2570.271,"message":"  preference-applied: return=representation"}
+{"type":"log","callId":"call@26","time":2570.273,"message":"  content-profile: public"}
+{"type":"log","callId":"call@26","time":2570.274,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@26","time":2570.276,"message":"  x-kong-upstream-latency: 3"}
+{"type":"log","callId":"call@26","time":2570.278,"message":"  x-kong-proxy-latency: 1"}
+{"type":"log","callId":"call@26","time":2570.28,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@26","endTime":2570.35,"result":{"response":{"url":"http://127.0.0.1:54321/rest/v1/staff_members","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Content-Length","value":"481"},{"name":"Connection","value":"keep-alive"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:40 GMT"},{"name":"Server","value":"postgrest/14.18"},{"name":"Content-Range","value":"*/*"},{"name":"Preference-Applied","value":"return=representation"},{"name":"Content-Profile","value":"public"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"3"},{"name":"X-Kong-Proxy-Latency","value":"1"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463000957,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.181999999999789,"responseStart":4.0349999999998545},"responseEndTiming":4.210000000000036,"fetchUid":"496fd5e29ac6899b8df1593a0c7ce395"}}}
+{"type":"before","callId":"call@30","startTime":2572.115,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/rest/v1/staff_branch_assignments","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"prefer","value":"return=representation"}],"jsonData":"{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"staff_id\":\"3af992a5-f8f3-4976-be33-65c83f72c503\",\"branch_id\":\"00000000-0000-4000-a000-000000000004\",\"is_default\":true}"},"stepId":"pw:api@49"}
+{"type":"log","callId":"call@30","time":2572.468,"message":"→ POST http://127.0.0.1:54321/rest/v1/staff_branch_assignments"}
+{"type":"log","callId":"call@30","time":2572.477,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@30","time":2572.479,"message":"  accept: */*"}
+{"type":"log","callId":"call@30","time":2572.481,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@30","time":2572.482,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@30","time":2572.484,"message":"  authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@30","time":2572.485,"message":"  prefer: return=representation"}
+{"type":"log","callId":"call@30","time":2572.487,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@30","time":2572.488,"message":"  content-length: 171"}
+{"type":"log","callId":"call@30","time":2577.954,"message":"← 201 Created"}
+{"type":"log","callId":"call@30","time":2577.961,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@30","time":2577.963,"message":"  content-length: 368"}
+{"type":"log","callId":"call@30","time":2577.964,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@30","time":2577.966,"message":"  date: Thu, 08 Oct 2026 12:36:40 GMT"}
+{"type":"log","callId":"call@30","time":2577.967,"message":"  server: postgrest/14.18"}
+{"type":"log","callId":"call@30","time":2577.969,"message":"  content-range: */*"}
+{"type":"log","callId":"call@30","time":2577.97,"message":"  preference-applied: return=representation"}
+{"type":"log","callId":"call@30","time":2577.972,"message":"  content-profile: public"}
+{"type":"log","callId":"call@30","time":2577.974,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@30","time":2577.976,"message":"  x-kong-upstream-latency: 4"}
+{"type":"log","callId":"call@30","time":2577.978,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@30","time":2577.979,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@30","endTime":2578.037,"result":{"response":{"url":"http://127.0.0.1:54321/rest/v1/staff_branch_assignments","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Content-Length","value":"368"},{"name":"Connection","value":"keep-alive"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:40 GMT"},{"name":"Server","value":"postgrest/14.18"},{"name":"Content-Range","value":"*/*"},{"name":"Preference-Applied","value":"return=representation"},{"name":"Content-Profile","value":"public"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"4"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463000963,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.20600000000013097,"responseStart":5.201000000000022},"responseEndTiming":5.351999999999862,"fetchUid":"a1d2ab169a544ea71bf2395901a4530b"}}}
+{"type":"before","callId":"call@34","startTime":2579.788,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/rest/v1/service_staff","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"prefer","value":"return=representation"}],"jsonData":"[{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"service_id\":\"8051deeb-6422-47a1-aa56-33cf243f9298\",\"branch_id\":\"00000000-0000-4000-a000-000000000004\",\"staff_id\":\"3af992a5-f8f3-4976-be33-65c83f72c503\"}]"},"stepId":"pw:api@51"}
+{"type":"log","callId":"call@34","time":2580.18,"message":"→ POST http://127.0.0.1:54321/rest/v1/service_staff"}
+{"type":"log","callId":"call@34","time":2580.194,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@34","time":2580.196,"message":"  accept: */*"}
+{"type":"log","callId":"call@34","time":2580.197,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@34","time":2580.199,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@34","time":2580.2,"message":"  authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@34","time":2580.247,"message":"  prefer: return=representation"}
+{"type":"log","callId":"call@34","time":2580.253,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@34","time":2580.254,"message":"  content-length: 207"}
+{"type":"log","callId":"call@34","time":2585.348,"message":"← 201 Created"}
+{"type":"log","callId":"call@34","time":2585.355,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@34","time":2585.357,"message":"  content-length: 383"}
+{"type":"log","callId":"call@34","time":2585.359,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@34","time":2585.361,"message":"  date: Thu, 08 Oct 2026 12:36:40 GMT"}
+{"type":"log","callId":"call@34","time":2585.362,"message":"  server: postgrest/14.18"}
+{"type":"log","callId":"call@34","time":2585.364,"message":"  content-range: */*"}
+{"type":"log","callId":"call@34","time":2585.366,"message":"  preference-applied: return=representation"}
+{"type":"log","callId":"call@34","time":2585.368,"message":"  content-profile: public"}
+{"type":"log","callId":"call@34","time":2585.37,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@34","time":2585.372,"message":"  x-kong-upstream-latency: 4"}
+{"type":"log","callId":"call@34","time":2585.374,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@34","time":2585.376,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@34","endTime":2585.448,"result":{"response":{"url":"http://127.0.0.1:54321/rest/v1/service_staff","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Content-Length","value":"383"},{"name":"Connection","value":"keep-alive"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:40 GMT"},{"name":"Server","value":"postgrest/14.18"},{"name":"Content-Range","value":"*/*"},{"name":"Preference-Applied","value":"return=representation"},{"name":"Content-Profile","value":"public"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"4"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463000971,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.34999999999990905,"responseStart":4.951999999999771},"responseEndTiming":5.154999999999745,"fetchUid":"9651d1e4068e02f35fffc42a8b01faa6"}}}
+{"type":"before","callId":"call@38","startTime":2587.615,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/rest/v1/shifts","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"prefer","value":"return=representation"}],"jsonData":"[{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"staff_id\":\"3af992a5-f8f3-4976-be33-65c83f72c503\",\"branch_id\":\"00000000-0000-4000-a000-000000000004\",\"starts_at\":\"2026-10-10T09:00:00+03:00\",\"ends_at\":\"2026-10-10T14:00:00+03:00\"}]"},"stepId":"pw:api@53"}
+{"type":"log","callId":"call@38","time":2588.182,"message":"→ POST http://127.0.0.1:54321/rest/v1/shifts"}
+{"type":"log","callId":"call@38","time":2588.193,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@38","time":2588.197,"message":"  accept: */*"}
+{"type":"log","callId":"call@38","time":2588.199,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@38","time":2588.2,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@38","time":2588.202,"message":"  authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@38","time":2588.203,"message":"  prefer: return=representation"}
+{"type":"log","callId":"call@38","time":2588.205,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@38","time":2588.207,"message":"  content-length: 233"}
+{"type":"log","callId":"call@38","time":2592.77,"message":"← 201 Created"}
+{"type":"log","callId":"call@38","time":2592.776,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@38","time":2592.778,"message":"  content-length: 409"}
+{"type":"log","callId":"call@38","time":2592.779,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@38","time":2592.78,"message":"  date: Thu, 08 Oct 2026 12:36:40 GMT"}
+{"type":"log","callId":"call@38","time":2592.781,"message":"  server: postgrest/14.18"}
+{"type":"log","callId":"call@38","time":2592.782,"message":"  content-range: */*"}
+{"type":"log","callId":"call@38","time":2592.783,"message":"  preference-applied: return=representation"}
+{"type":"log","callId":"call@38","time":2592.784,"message":"  content-profile: public"}
+{"type":"log","callId":"call@38","time":2592.786,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@38","time":2592.788,"message":"  x-kong-upstream-latency: 3"}
+{"type":"log","callId":"call@38","time":2592.797,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@38","time":2592.799,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@38","endTime":2592.857,"result":{"response":{"url":"http://127.0.0.1:54321/rest/v1/shifts","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Content-Length","value":"409"},{"name":"Connection","value":"keep-alive"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:40 GMT"},{"name":"Server","value":"postgrest/14.18"},{"name":"Content-Range","value":"*/*"},{"name":"Preference-Applied","value":"return=representation"},{"name":"Content-Profile","value":"public"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"3"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463000979,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.31399999999985084,"responseStart":4.447999999999865},"responseEndTiming":4.6030000000000655,"fetchUid":"ecc61dd680bff55a86ef78c8e1908c65"}}}
+{"type":"before","callId":"call@42","startTime":2594.495,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/rest/v1/staff_branch_assignments","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"prefer","value":"return=representation"}],"jsonData":"{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"staff_id\":\"3af992a5-f8f3-4976-be33-65c83f72c503\",\"branch_id\":\"00000000-0000-4000-a000-000000000005\",\"is_default\":false}"},"stepId":"pw:api@55"}
+{"type":"log","callId":"call@42","time":2594.786,"message":"→ POST http://127.0.0.1:54321/rest/v1/staff_branch_assignments"}
+{"type":"log","callId":"call@42","time":2594.797,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@42","time":2594.8,"message":"  accept: */*"}
+{"type":"log","callId":"call@42","time":2594.801,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@42","time":2594.802,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@42","time":2594.803,"message":"  authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@42","time":2594.804,"message":"  prefer: return=representation"}
+{"type":"log","callId":"call@42","time":2594.805,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@42","time":2594.806,"message":"  content-length: 172"}
+{"type":"log","callId":"call@42","time":2598.808,"message":"← 201 Created"}
+{"type":"log","callId":"call@42","time":2598.812,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@42","time":2598.813,"message":"  content-length: 369"}
+{"type":"log","callId":"call@42","time":2598.814,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@42","time":2598.815,"message":"  date: Thu, 08 Oct 2026 12:36:40 GMT"}
+{"type":"log","callId":"call@42","time":2598.816,"message":"  server: postgrest/14.18"}
+{"type":"log","callId":"call@42","time":2598.817,"message":"  content-range: */*"}
+{"type":"log","callId":"call@42","time":2598.817,"message":"  preference-applied: return=representation"}
+{"type":"log","callId":"call@42","time":2598.818,"message":"  content-profile: public"}
+{"type":"log","callId":"call@42","time":2598.819,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@42","time":2598.82,"message":"  x-kong-upstream-latency: 3"}
+{"type":"log","callId":"call@42","time":2598.821,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@42","time":2598.822,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@42","endTime":2598.923,"result":{"response":{"url":"http://127.0.0.1:54321/rest/v1/staff_branch_assignments","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Content-Length","value":"369"},{"name":"Connection","value":"keep-alive"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:40 GMT"},{"name":"Server","value":"postgrest/14.18"},{"name":"Content-Range","value":"*/*"},{"name":"Preference-Applied","value":"return=representation"},{"name":"Content-Profile","value":"public"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"3"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463000986,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.2139999999999418,"responseStart":3.838999999999942},"responseEndTiming":4.025000000000091,"fetchUid":"d3932a09b1b5fb8b4f6dd06dc2c3e37d"}}}
+{"type":"before","callId":"call@46","startTime":2600.555,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/rest/v1/service_staff","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"prefer","value":"return=representation"}],"jsonData":"[{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"service_id\":\"8051deeb-6422-47a1-aa56-33cf243f9298\",\"branch_id\":\"00000000-0000-4000-a000-000000000005\",\"staff_id\":\"3af992a5-f8f3-4976-be33-65c83f72c503\"}]"},"stepId":"pw:api@57"}
+{"type":"log","callId":"call@46","time":2600.857,"message":"→ POST http://127.0.0.1:54321/rest/v1/service_staff"}
+{"type":"log","callId":"call@46","time":2600.862,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@46","time":2600.863,"message":"  accept: */*"}
+{"type":"log","callId":"call@46","time":2600.864,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@46","time":2600.865,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@46","time":2600.866,"message":"  authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@46","time":2600.867,"message":"  prefer: return=representation"}
+{"type":"log","callId":"call@46","time":2600.868,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@46","time":2600.869,"message":"  content-length: 207"}
+{"type":"log","callId":"call@46","time":2605.657,"message":"← 201 Created"}
+{"type":"log","callId":"call@46","time":2605.662,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@46","time":2605.664,"message":"  content-length: 383"}
+{"type":"log","callId":"call@46","time":2605.665,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@46","time":2605.666,"message":"  date: Thu, 08 Oct 2026 12:36:40 GMT"}
+{"type":"log","callId":"call@46","time":2605.667,"message":"  server: postgrest/14.18"}
+{"type":"log","callId":"call@46","time":2605.668,"message":"  content-range: */*"}
+{"type":"log","callId":"call@46","time":2605.669,"message":"  preference-applied: return=representation"}
+{"type":"log","callId":"call@46","time":2605.669,"message":"  content-profile: public"}
+{"type":"log","callId":"call@46","time":2605.67,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@46","time":2605.671,"message":"  x-kong-upstream-latency: 4"}
+{"type":"log","callId":"call@46","time":2605.672,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@46","time":2605.673,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@46","endTime":2605.735,"result":{"response":{"url":"http://127.0.0.1:54321/rest/v1/service_staff","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Content-Length","value":"383"},{"name":"Connection","value":"keep-alive"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:40 GMT"},{"name":"Server","value":"postgrest/14.18"},{"name":"Content-Range","value":"*/*"},{"name":"Preference-Applied","value":"return=representation"},{"name":"Content-Profile","value":"public"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"4"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463000992,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.1770000000001346,"responseStart":4.5210000000001855},"responseEndTiming":4.7280000000000655,"fetchUid":"0f4499686410d0d633bc7b93577d6a73"}}}
+{"type":"before","callId":"call@50","startTime":2607.187,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/rest/v1/shifts","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"prefer","value":"return=representation"}],"jsonData":"[{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"staff_id\":\"3af992a5-f8f3-4976-be33-65c83f72c503\",\"branch_id\":\"00000000-0000-4000-a000-000000000005\",\"starts_at\":\"2026-10-10T14:00:00+03:00\",\"ends_at\":\"2026-10-10T22:00:00+03:00\"}]"},"stepId":"pw:api@59"}
+{"type":"log","callId":"call@50","time":2607.55,"message":"→ POST http://127.0.0.1:54321/rest/v1/shifts"}
+{"type":"log","callId":"call@50","time":2607.555,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@50","time":2607.557,"message":"  accept: */*"}
+{"type":"log","callId":"call@50","time":2607.558,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@50","time":2607.559,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@50","time":2607.559,"message":"  authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@50","time":2607.56,"message":"  prefer: return=representation"}
+{"type":"log","callId":"call@50","time":2607.561,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@50","time":2607.562,"message":"  content-length: 233"}
+{"type":"log","callId":"call@50","time":2612.198,"message":"← 201 Created"}
+{"type":"log","callId":"call@50","time":2612.201,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@50","time":2612.203,"message":"  content-length: 409"}
+{"type":"log","callId":"call@50","time":2612.204,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@50","time":2612.204,"message":"  date: Thu, 08 Oct 2026 12:36:40 GMT"}
+{"type":"log","callId":"call@50","time":2612.205,"message":"  server: postgrest/14.18"}
+{"type":"log","callId":"call@50","time":2612.206,"message":"  content-range: */*"}
+{"type":"log","callId":"call@50","time":2612.207,"message":"  preference-applied: return=representation"}
+{"type":"log","callId":"call@50","time":2612.207,"message":"  content-profile: public"}
+{"type":"log","callId":"call@50","time":2612.208,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@50","time":2612.209,"message":"  x-kong-upstream-latency: 4"}
+{"type":"log","callId":"call@50","time":2612.21,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@50","time":2612.21,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@50","endTime":2612.258,"result":{"response":{"url":"http://127.0.0.1:54321/rest/v1/shifts","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Content-Length","value":"409"},{"name":"Connection","value":"keep-alive"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:40 GMT"},{"name":"Server","value":"postgrest/14.18"},{"name":"Content-Range","value":"*/*"},{"name":"Preference-Applied","value":"return=representation"},{"name":"Content-Profile","value":"public"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"4"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463000998,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.24200000000018917,"responseStart":4.505000000000109},"responseEndTiming":4.641000000000076,"fetchUid":"0e58e360986a8f9607254effb53aa2b7"}}}
+{"type":"before","callId":"call@54","startTime":2620.926,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/rest/v1/clients","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"},{"name":"prefer","value":"return=representation"}],"jsonData":"{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"first_name\":\"نورة\",\"last_name\":\"العلي en-muzite929tb\",\"first_name_alt\":\"Noura\",\"last_name_alt\":\"en-muzite929tb\",\"allergies\":null}"},"stepId":"pw:api@61"}
+{"type":"log","callId":"call@54","time":2621.747,"message":"→ POST http://127.0.0.1:54321/rest/v1/clients"}
+{"type":"log","callId":"call@54","time":2621.755,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@54","time":2621.757,"message":"  accept: */*"}
+{"type":"log","callId":"call@54","time":2621.758,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@54","time":2621.759,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@54","time":2621.76,"message":"  authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"}
+{"type":"log","callId":"call@54","time":2621.761,"message":"  prefer: return=representation"}
+{"type":"log","callId":"call@54","time":2621.762,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@54","time":2621.763,"message":"  content-length: 191"}
+{"type":"log","callId":"call@54","time":2646.644,"message":"← 201 Created"}
+{"type":"log","callId":"call@54","time":2646.653,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@54","time":2646.656,"message":"  content-length: 714"}
+{"type":"log","callId":"call@54","time":2646.657,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@54","time":2646.658,"message":"  date: Thu, 08 Oct 2026 12:36:40 GMT"}
+{"type":"log","callId":"call@54","time":2646.659,"message":"  server: postgrest/14.18"}
+{"type":"log","callId":"call@54","time":2646.664,"message":"  content-range: */*"}
+{"type":"log","callId":"call@54","time":2646.666,"message":"  preference-applied: return=representation"}
+{"type":"log","callId":"call@54","time":2646.668,"message":"  content-profile: public"}
+{"type":"log","callId":"call@54","time":2646.669,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@54","time":2646.671,"message":"  x-kong-upstream-latency: 20"}
+{"type":"log","callId":"call@54","time":2646.672,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@54","time":2646.673,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@54","endTime":2646.756,"result":{"response":{"url":"http://127.0.0.1:54321/rest/v1/clients","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Content-Length","value":"714"},{"name":"Connection","value":"keep-alive"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:40 GMT"},{"name":"Server","value":"postgrest/14.18"},{"name":"Content-Range","value":"*/*"},{"name":"Preference-Applied","value":"return=representation"},{"name":"Content-Profile","value":"public"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"20"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463001012,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.6130000000002838,"responseStart":24.653999999999996},"responseEndTiming":24.881000000000313,"fetchUid":"35c922626ad53d21b45fa36ea128d312"}}}
+{"type":"before","callId":"call@58","startTime":2651.323,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/auth/v1/token?grant_type=password","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0"}],"jsonData":"{\"email\":\"setup-reception@spacorner.test\",\"password\":\"password123\"}"},"stepId":"pw:api@63"}
+{"type":"log","callId":"call@58","time":2651.684,"message":"→ POST http://127.0.0.1:54321/auth/v1/token?grant_type=password"}
+{"type":"log","callId":"call@58","time":2651.692,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@58","time":2651.693,"message":"  accept: */*"}
+{"type":"log","callId":"call@58","time":2651.694,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@58","time":2651.695,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0"}
+{"type":"log","callId":"call@58","time":2651.696,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@58","time":2651.697,"message":"  content-length: 67"}
+{"type":"log","callId":"call@58","time":2769.63,"message":"← 200 OK"}
+{"type":"log","callId":"call@58","time":2769.637,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@58","time":2769.64,"message":"  content-length: 1920"}
+{"type":"log","callId":"call@58","time":2769.641,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@58","time":2769.642,"message":"  sb-auth-refresh-token-prefix: a75ms"}
+{"type":"log","callId":"call@58","time":2769.646,"message":"  sb-auth-session-id: d5e12922-fdf9-4ef7-b3e9-3e0813b90e64"}
+{"type":"log","callId":"call@58","time":2769.647,"message":"  sb-auth-user-id: 00000000-0000-4000-8000-000000000011"}
+{"type":"log","callId":"call@58","time":2769.648,"message":"  vary: Origin"}
+{"type":"log","callId":"call@58","time":2769.649,"message":"  date: Thu, 08 Oct 2026 12:36:41 GMT"}
+{"type":"log","callId":"call@58","time":2769.65,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@58","time":2769.651,"message":"  x-kong-upstream-latency: 114"}
+{"type":"log","callId":"call@58","time":2769.652,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@58","time":2769.653,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@58","endTime":2769.775,"result":{"response":{"url":"http://127.0.0.1:54321/auth/v1/token?grant_type=password","status":200,"statusText":"OK","headers":[{"name":"Content-Type","value":"application/json"},{"name":"Content-Length","value":"1920"},{"name":"Connection","value":"keep-alive"},{"name":"Sb-Auth-Refresh-Token-Prefix","value":"a75ms"},{"name":"Sb-Auth-Session-Id","value":"d5e12922-fdf9-4ef7-b3e9-3e0813b90e64"},{"name":"Sb-Auth-User-Id","value":"00000000-0000-4000-8000-000000000011"},{"name":"Vary","value":"Origin"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:41 GMT"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"114"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463001043,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.16600000000016735,"responseStart":117.40099999999984},"responseEndTiming":117.71500000000015,"fetchUid":"dedbafb961954d740f167bd477ef0464"}}}
+{"type":"before","callId":"call@62","startTime":2774.157,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/functions/v1/bookings/create","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0"},{"name":"authorization","value":"Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImI4MTI2OWYxLTIxZDgtNGYyZS1iNzE5LWMyMjQwYTg0MGQ5MCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjU0MzIxL2F1dGgvdjEiLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwMTEiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzkxNDY2NjAxLCJpYXQiOjE3OTE0NjMwMDEsImVtYWlsIjoic2V0dXAtcmVjZXB0aW9uQHNwYWNvcm5lci50ZXN0IiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJmdWxsX25hbWUiOiJSZWVtIEhhd2FsbHkifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc5MTQ2MzAwMX1dLCJzZXNzaW9uX2lkIjoiZDVlMTI5MjItZmRmOS00ZWY3LWIzZTktM2UwODEzYjkwZTY0IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Peh5Pz0O9Pd_C4JTVP_sJ25vVXQcsybdO0MoMKW3ioBjGcls3-I66t5BzErPUKUHdsg9i7hPECZkU9eEOVlPSA"},{"name":"idempotency-key","value":"ea70b656-5726-4a20-859c-dfbc4614bebe"}],"jsonData":"{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"branch_id\":\"00000000-0000-4000-a000-000000000004\",\"client_id\":\"98b25903-2409-4458-9233-1f7f6e7ed1ad\",\"items\":[{\"service_id\":\"8051deeb-6422-47a1-aa56-33cf243f9298\",\"staff_id\":\"3af992a5-f8f3-4976-be33-65c83f72c503\",\"starts_at\":\"2026-10-10T10:00:00+03:00\"}]}"},"stepId":"pw:api@65"}
+{"type":"log","callId":"call@62","time":2775.073,"message":"→ POST http://127.0.0.1:54321/functions/v1/bookings/create"}
+{"type":"log","callId":"call@62","time":2775.083,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@62","time":2775.085,"message":"  accept: */*"}
+{"type":"log","callId":"call@62","time":2775.087,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@62","time":2775.091,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0"}
+{"type":"log","callId":"call@62","time":2775.093,"message":"  authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImI4MTI2OWYxLTIxZDgtNGYyZS1iNzE5LWMyMjQwYTg0MGQ5MCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjU0MzIxL2F1dGgvdjEiLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwMTEiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzkxNDY2NjAxLCJpYXQiOjE3OTE0NjMwMDEsImVtYWlsIjoic2V0dXAtcmVjZXB0aW9uQHNwYWNvcm5lci50ZXN0IiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJmdWxsX25hbWUiOiJSZWVtIEhhd2FsbHkifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc5MTQ2MzAwMX1dLCJzZXNzaW9uX2lkIjoiZDVlMTI5MjItZmRmOS00ZWY3LWIzZTktM2UwODEzYjkwZTY0IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Peh5Pz0O9Pd_C4JTVP_sJ25vVXQcsybdO0MoMKW3ioBjGcls3-I66t5BzErPUKUHdsg9i7hPECZkU9eEOVlPSA"}
+{"type":"log","callId":"call@62","time":2775.095,"message":"  idempotency-key: ea70b656-5726-4a20-859c-dfbc4614bebe"}
+{"type":"log","callId":"call@62","time":2775.096,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@62","time":2775.097,"message":"  content-length: 308"}
+{"type":"log","callId":"call@62","time":2855.295,"message":"← 201 Created"}
+{"type":"log","callId":"call@62","time":2855.308,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@62","time":2855.311,"message":"  content-length: 538"}
+{"type":"log","callId":"call@62","time":2855.312,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@62","time":2855.317,"message":"  x-request-id: bb31601e-104b-4eb1-a019-d09ae2459c49"}
+{"type":"log","callId":"call@62","time":2855.319,"message":"  vary: Accept-Encoding"}
+{"type":"log","callId":"call@62","time":2855.32,"message":"  content-encoding: gzip"}
+{"type":"log","callId":"call@62","time":2855.321,"message":"  date: Thu, 08 Oct 2026 12:36:41 GMT"}
+{"type":"log","callId":"call@62","time":2855.322,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@62","time":2855.323,"message":"  x-kong-upstream-latency: 72"}
+{"type":"log","callId":"call@62","time":2855.325,"message":"  x-kong-proxy-latency: 1"}
+{"type":"log","callId":"call@62","time":2855.328,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@62","endTime":2858.23,"result":{"response":{"url":"http://127.0.0.1:54321/functions/v1/bookings/create","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json"},{"name":"Content-Length","value":"538"},{"name":"Connection","value":"keep-alive"},{"name":"x-request-id","value":"bb31601e-104b-4eb1-a019-d09ae2459c49"},{"name":"vary","value":"Accept-Encoding"},{"name":"content-encoding","value":"gzip"},{"name":"date","value":"Thu, 08 Oct 2026 12:36:41 GMT"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"72"},{"name":"X-Kong-Proxy-Latency","value":"1"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463001166,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.6779999999998836,"responseStart":76.7829999999999},"responseEndTiming":82.98399999999992,"fetchUid":"5e296d99564c9f00d87fb90cd7156479"}}}
+{"type":"before","callId":"call@66","startTime":2861.847,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/auth/v1/token?grant_type=password","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0"}],"jsonData":"{\"email\":\"setup-owner@spacorner.test\",\"password\":\"password123\"}"},"stepId":"pw:api@67"}
+{"type":"log","callId":"call@66","time":2862.163,"message":"→ POST http://127.0.0.1:54321/auth/v1/token?grant_type=password"}
+{"type":"log","callId":"call@66","time":2862.169,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@66","time":2862.171,"message":"  accept: */*"}
+{"type":"log","callId":"call@66","time":2862.172,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@66","time":2862.173,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0"}
+{"type":"log","callId":"call@66","time":2862.174,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@66","time":2862.175,"message":"  content-length: 63"}
+{"type":"log","callId":"call@66","time":2974.349,"message":"← 200 OK"}
+{"type":"log","callId":"call@66","time":2974.379,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@66","time":2974.387,"message":"  content-length: 1899"}
+{"type":"log","callId":"call@66","time":2974.388,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@66","time":2974.394,"message":"  sb-auth-refresh-token-prefix: sbdic"}
+{"type":"log","callId":"call@66","time":2974.395,"message":"  sb-auth-session-id: b24967e1-8ffc-4fc5-9708-a33c86186606"}
+{"type":"log","callId":"call@66","time":2974.397,"message":"  sb-auth-user-id: 00000000-0000-4000-8000-000000000009"}
+{"type":"log","callId":"call@66","time":2974.398,"message":"  vary: Origin"}
+{"type":"log","callId":"call@66","time":2974.399,"message":"  date: Thu, 08 Oct 2026 12:36:41 GMT"}
+{"type":"log","callId":"call@66","time":2974.4,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@66","time":2974.401,"message":"  x-kong-upstream-latency: 106"}
+{"type":"log","callId":"call@66","time":2974.404,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@66","time":2974.406,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@66","endTime":2975.009,"result":{"response":{"url":"http://127.0.0.1:54321/auth/v1/token?grant_type=password","status":200,"statusText":"OK","headers":[{"name":"Content-Type","value":"application/json"},{"name":"Content-Length","value":"1899"},{"name":"Connection","value":"keep-alive"},{"name":"Sb-Auth-Refresh-Token-Prefix","value":"sbdic"},{"name":"Sb-Auth-Session-Id","value":"b24967e1-8ffc-4fc5-9708-a33c86186606"},{"name":"Sb-Auth-User-Id","value":"00000000-0000-4000-8000-000000000009"},{"name":"Vary","value":"Origin"},{"name":"Date","value":"Thu, 08 Oct 2026 12:36:41 GMT"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"106"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463001253,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.17599999999993088,"responseStart":111.97599999999966},"responseEndTiming":112.14699999999993,"fetchUid":"2dbe148386ddd5086f64ad20eb2a4f1d"}}}
+{"type":"before","callId":"call@70","startTime":2983.291,"class":"APIRequestContext","method":"fetch","params":{"url":"http://127.0.0.1:54321/functions/v1/bookings/create","method":"POST","headers":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0"},{"name":"authorization","value":"Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImI4MTI2OWYxLTIxZDgtNGYyZS1iNzE5LWMyMjQwYTg0MGQ5MCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjU0MzIxL2F1dGgvdjEiLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwMDkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzkxNDY2NjAxLCJpYXQiOjE3OTE0NjMwMDEsImVtYWlsIjoic2V0dXAtb3duZXJAc3BhY29ybmVyLnRlc3QiLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImZ1bGxfbmFtZSI6IlNhbG1hIFNldHVwIn0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3OTE0NjMwMDF9XSwic2Vzc2lvbl9pZCI6ImIyNDk2N2UxLThmZmMtNGZjNS05NzA4LWEzM2M4NjE4NjYwNiIsImlzX2Fub255bW91cyI6ZmFsc2V9.7YfVx6EG0KstaM_aVyu6Yloxdtc4lhjtr8VmNdhAASpcTrsKKjcLZ_5lGD74j5wwP2r0VPj-g4oJozTEjxCxTA"},{"name":"idempotency-key","value":"4e1e8afa-8b2a-4f2e-ad35-ed2459f61947"}],"jsonData":"{\"tenant_id\":\"00000000-0000-4000-9000-000000000003\",\"branch_id\":\"00000000-0000-4000-a000-000000000005\",\"client_id\":\"98b25903-2409-4458-9233-1f7f6e7ed1ad\",\"items\":[{\"service_id\":\"8051deeb-6422-47a1-aa56-33cf243f9298\",\"staff_id\":\"3af992a5-f8f3-4976-be33-65c83f72c503\",\"starts_at\":\"2026-10-10T16:00:00+03:00\"}]}"},"stepId":"pw:api@69"}
+{"type":"log","callId":"call@70","time":2983.607,"message":"→ POST http://127.0.0.1:54321/functions/v1/bookings/create"}
+{"type":"log","callId":"call@70","time":2983.613,"message":"  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36"}
+{"type":"log","callId":"call@70","time":2983.615,"message":"  accept: */*"}
+{"type":"log","callId":"call@70","time":2983.616,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@70","time":2983.617,"message":"  apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0"}
+{"type":"log","callId":"call@70","time":2983.618,"message":"  authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImI4MTI2OWYxLTIxZDgtNGYyZS1iNzE5LWMyMjQwYTg0MGQ5MCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjU0MzIxL2F1dGgvdjEiLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwMDkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzkxNDY2NjAxLCJpYXQiOjE3OTE0NjMwMDEsImVtYWlsIjoic2V0dXAtb3duZXJAc3BhY29ybmVyLnRlc3QiLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImZ1bGxfbmFtZSI6IlNhbG1hIFNldHVwIn0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3OTE0NjMwMDF9XSwic2Vzc2lvbl9pZCI6ImIyNDk2N2UxLThmZmMtNGZjNS05NzA4LWEzM2M4NjE4NjYwNiIsImlzX2Fub255bW91cyI6ZmFsc2V9.7YfVx6EG0KstaM_aVyu6Yloxdtc4lhjtr8VmNdhAASpcTrsKKjcLZ_5lGD74j5wwP2r0VPj-g4oJozTEjxCxTA"}
+{"type":"log","callId":"call@70","time":2983.619,"message":"  idempotency-key: 4e1e8afa-8b2a-4f2e-ad35-ed2459f61947"}
+{"type":"log","callId":"call@70","time":2983.62,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@70","time":2983.623,"message":"  content-length: 308"}
+{"type":"log","callId":"call@70","time":3100.284,"message":"← 201 Created"}
+{"type":"log","callId":"call@70","time":3100.296,"message":"  content-type: application/json"}
+{"type":"log","callId":"call@70","time":3100.298,"message":"  content-length: 539"}
+{"type":"log","callId":"call@70","time":3100.299,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@70","time":3100.3,"message":"  x-request-id: 3af83375-a282-4506-bc74-043dc3c05ff7"}
+{"type":"log","callId":"call@70","time":3100.301,"message":"  vary: Accept-Encoding"}
+{"type":"log","callId":"call@70","time":3100.329,"message":"  content-encoding: gzip"}
+{"type":"log","callId":"call@70","time":3100.331,"message":"  date: Thu, 08 Oct 2026 12:36:41 GMT"}
+{"type":"log","callId":"call@70","time":3100.332,"message":"  access-control-allow-origin: *"}
+{"type":"log","callId":"call@70","time":3100.333,"message":"  x-kong-upstream-latency: 114"}
+{"type":"log","callId":"call@70","time":3100.334,"message":"  x-kong-proxy-latency: 0"}
+{"type":"log","callId":"call@70","time":3100.335,"message":"  via: kong/2.8.1"}
+{"type":"after","callId":"call@70","endTime":3100.634,"result":{"response":{"url":"http://127.0.0.1:54321/functions/v1/bookings/create","status":201,"statusText":"Created","headers":[{"name":"Content-Type","value":"application/json"},{"name":"Content-Length","value":"539"},{"name":"Connection","value":"keep-alive"},{"name":"x-request-id","value":"3af83375-a282-4506-bc74-043dc3c05ff7"},{"name":"vary","value":"Accept-Encoding"},{"name":"content-encoding","value":"gzip"},{"name":"date","value":"Thu, 08 Oct 2026 12:36:41 GMT"},{"name":"Access-Control-Allow-Origin","value":"*"},{"name":"X-Kong-Upstream-Latency","value":"114"},{"name":"X-Kong-Proxy-Latency","value":"0"},{"name":"Via","value":"kong/2.8.1"}],"serverAddr":{"ipAddress":"127.0.0.1","port":54321},"timing":{"startTime":1791463001375,"domainLookupStart":-1,"domainLookupEnd":-1,"connectStart":-1,"secureConnectionStart":-1,"connectEnd":-1,"requestStart":0.18800000000010186,"responseStart":116.30500000000029},"responseEndTiming":116.98300000000017,"fetchUid":"f6c2ce831765f3906f63aa1311920a7a"}}}

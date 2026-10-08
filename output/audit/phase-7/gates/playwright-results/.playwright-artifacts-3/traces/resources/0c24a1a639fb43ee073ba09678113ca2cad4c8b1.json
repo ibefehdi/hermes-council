@@ -1,0 +1,4 @@
+[{"id":"ea2c160d-7526-41c0-9c34-7bd7f55be62a","name_en":"Break","name_ar":"استراحة","color":"neutral","is_active":true}, 
+ {"id":"50029156-5ff8-4c62-aa2a-4d25fec7bc58","name_en":"Training","name_ar":"تدريب","color":"info","is_active":true}, 
+ {"id":"d0667163-4187-4fb8-ad23-83552a305cd2","name_en":"Meeting","name_ar":"اجتماع","color":"success","is_active":true}, 
+ {"id":"dbd0cc4c-93d2-4c99-8d39-a0487a5eae16","name_en":"Personal","name_ar":"وقت شخصي","color":"warning","is_active":true}]
